@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>English Grammar Notes — PNST 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020818;--bg2:#060e24;--bg3:#0a1628;
+  --card:rgba(255,255,255,0.05);--card-border:rgba(255,255,255,0.1);--card-hover:rgba(255,255,255,0.08);
+  --tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --pink:#ec4899;--blue:#3b82f6;--cyan:#06b6d4;--green:#22c55e;--amber:#f59e0b;--purple:#a855f7;--red:#ef4444;
+  --fn:'Noto Sans',sans-serif;--fn2:'Rajdhani',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#fff0f6;--bg2:#ffe4f0;--bg3:#fff;
+  --card:rgba(255,255,255,.9);--card-border:rgba(236,72,153,.2);--card-hover:#fff;
+  --tx:#1e293b;--tx2:#475569;--tx3:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
+[data-theme="dark"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 22% 20%,rgba(236,72,153,.25) 0%,transparent 100%),
+    radial-gradient(2px 2px at 75% 35%,rgba(168,85,247,.15) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 65%,rgba(255,255,255,.1) 0%,transparent 100%);
+}
+.hdr{
+  background:linear-gradient(135deg,rgba(2,8,24,.96),rgba(6,14,36,.96));
+  backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);
+  padding:10px 16px;display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:100;
+}
+[data-theme="light"] .hdr{background:rgba(255,240,246,.96)}
+.hdr-logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 14px rgba(236,72,153,.35)}
+.hdr-name{font-family:var(--fn2);font-size:1rem;font-weight:700;background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-sub{font-size:.65rem;color:var(--tx2)}
+.hdr-right{display:flex;gap:6px;align-items:center;margin-left:auto;flex-shrink:0}
+.lang-btn,.theme-btn{padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s}
+.lang-btn.active{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border-color:transparent}
+.btn-back{padding:5px 11px;border-radius:8px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);text-decoration:none;display:inline-block;flex-shrink:0}
+.wrap{max-width:520px;margin:0 auto;padding:14px}
+
+/* Hero */
+.eng-hero{
+  background:linear-gradient(135deg,#1a0020,#3d0050,#5a0070);
+  border:1px solid rgba(236,72,153,.25);border-radius:20px;
+  padding:20px 16px;margin-bottom:16px;position:relative;overflow:hidden;
+  box-shadow:0 0 40px rgba(236,72,153,.08);
+}
+.eng-hero::before{content:'';position:absolute;top:-30%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse,rgba(236,72,153,.1) 0%,transparent 65%);pointer-events:none}
+.eng-badge{display:inline-block;background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.35);border-radius:16px;font-size:.65rem;font-weight:700;padding:3px 12px;margin-bottom:10px;color:var(--pink);letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1}
+.eng-h{font-family:var(--fn2);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.eng-h span{background:linear-gradient(90deg,var(--pink),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eng-p{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;position:relative;z-index:1}
+.eng-stats{display:flex;gap:12px;margin-top:14px;position:relative;z-index:1;flex-wrap:wrap}
+.estat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 12px;text-align:center}
+.estat-n{font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:var(--pink)}
+.estat-l{font-size:.6rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+.sec-t{font-size:.7rem;font-weight:800;color:var(--tx2);margin:16px 0 9px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.sec-t::after{content:'';flex:1;height:1px;background:var(--card-border)}
+
+/* Chapters */
+.ch-item{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:16px;margin-bottom:10px;overflow:hidden;transition:all .25s}
+.ch-item.open{border-color:rgba(236,72,153,.4);box-shadow:0 4px 24px rgba(236,72,153,.08)}
+.ch-header{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s;user-select:none}
+.ch-header:hover{background:var(--card-hover)}
+.ch-num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--pink),var(--purple));display:flex;align-items:center;justify-content:center;font-family:var(--fn2);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(236,72,153,.3)}
+.ch-info{flex:1;min-width:0}
+.ch-name{font-family:var(--fn2);font-size:.95rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-tag{font-size:.62rem;color:var(--tx2);margin-top:2px}
+.ch-arr{color:var(--tx2);font-size:.9rem;flex-shrink:0;transition:transform .3s}
+.ch-item.open .ch-arr{transform:rotate(180deg)}
+.ch-body{display:none;border-top:1px solid var(--card-border)}
+.ch-item.open .ch-body{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+/* Tabs */
+.tab-bar{display:flex;border-bottom:1px solid var(--card-border)}
+.tab-btn{flex:1;padding:10px 6px;background:none;border:none;color:var(--tx2);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;border-bottom:2px solid transparent;position:relative;bottom:-1px}
+.tab-btn.active{color:var(--pink);border-bottom-color:var(--pink)}
+.tab-pane{display:none;padding:14px}
+.tab-pane.active{display:block;animation:fadeIn .2s ease}
+
+/* Content Styles */
+.sum-overview{background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;line-height:1.65;color:var(--tx)}
+.sum-h{font-family:var(--fn2);font-size:.82rem;font-weight:700;color:var(--pink);margin:12px 0 6px;display:flex;align-items:center;gap:6px}
+.sum-h::after{content:'';flex:1;height:1px;background:rgba(236,72,153,.2)}
+.sum-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sum-list li{font-size:.8rem;line-height:1.55;color:var(--tx);padding-left:14px;position:relative}
+.sum-list li::before{content:'▸';position:absolute;left:0;color:var(--pink);font-size:.7rem;top:2px}
+.sum-list li b{color:var(--tx);font-weight:700}
+
+/* Grammar Table */
+.gram-table{width:100%;border-collapse:collapse;font-size:.74rem;margin:8px 0;overflow:hidden;border-radius:8px}
+.gram-table th{background:rgba(236,72,153,.15);color:var(--pink);padding:7px 8px;text-align:left;font-weight:700;font-size:.68rem;border-bottom:1px solid rgba(236,72,153,.2)}
+.gram-table td{padding:6px 8px;border-bottom:1px solid var(--card-border);color:var(--tx2);line-height:1.45;vertical-align:top}
+.gram-table tr:last-child td{border-bottom:none}
+.gram-table .hi{color:var(--tx);font-weight:600}
+.gram-table .en{color:var(--cyan);font-size:.7rem}
+.gram-table .ex{color:var(--amber);font-size:.68rem;font-style:italic}
+
+/* Rule box */
+.rule-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:10px;padding:10px 14px;margin:8px 0}
+.rule-box-t{font-family:var(--fn2);font-size:.75rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.rule-box p{font-size:.78rem;color:var(--tx2);line-height:1.55}
+
+/* Example box */
+.eg-box{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.15);border-radius:8px;padding:8px 12px;margin:6px 0;font-size:.78rem}
+.eg-box .eg-hi{color:var(--tx2);margin-bottom:2px}
+.eg-box .eg-en{color:var(--green);font-style:italic}
+
+/* Mind Map */
+.mm-wrap{overflow-x:auto;padding:10px 0}
+.mm{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:280px}
+.mm-center{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff;border-radius:14px;padding:10px 18px;font-family:var(--fn2);font-size:.9rem;font-weight:700;text-align:center;box-shadow:0 4px 18px rgba(236,72,153,.3)}
+.mm-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%}
+.mm-branch{border-radius:12px;padding:8px 10px;font-size:.72rem;font-weight:700;text-align:center;min-width:110px;transition:transform .2s;cursor:pointer}
+.mm-branch:hover{transform:translateY(-2px)}
+.mm-branch-title{font-size:.76rem;font-weight:800;margin-bottom:4px}
+.mm-branch-items{font-size:.65rem;opacity:.85;line-height:1.5}
+.mm-connector{width:2px;height:16px;background:linear-gradient(to bottom,var(--pink),rgba(236,72,153,.3));margin:0 auto}
+
+/* Keywords */
+.kw-grid{display:flex;flex-direction:column;gap:8px}
+.kw-item{background:rgba(255,255,255,.03);border:1px solid var(--card-border);border-radius:10px;padding:10px 12px}
+.kw-term{font-family:var(--fn2);font-size:.84rem;font-weight:700;color:var(--pink);margin-bottom:4px}
+.kw-def{font-size:.76rem;line-height:1.5;color:var(--tx2)}
+.kw-imp{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:.58rem;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+/* PNST Box */
+.pnst-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;margin-top:10px}
+.pnst-box-t{font-family:var(--fn2);font-size:.78rem;font-weight:700;color:var(--cyan);margin-bottom:6px}
+.pnst-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pnst-box ul li{font-size:.75rem;color:var(--tx2);padding-left:14px;position:relative}
+.pnst-box ul li::before{content:'★';position:absolute;left:0;color:var(--amber);font-size:.6rem;top:2px}
+
+/* Compare Box */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}
+.compare-box{border-radius:10px;padding:10px 12px}
+.compare-box-t{font-family:var(--fn2);font-size:.75rem;font-weight:700;margin-bottom:6px}
+.compare-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.compare-box ul li{font-size:.72rem;color:var(--tx2);padding-left:12px;position:relative;line-height:1.4}
+.compare-box ul li::before{content:'•';position:absolute;left:0;font-size:.8rem}
+
+/* Voice/Tense Formula Box */
+.formula-box{background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.2);border-radius:10px;padding:10px 14px;margin:8px 0;font-size:.8rem;color:var(--purple);line-height:1.7;font-family:monospace}
+.formula-box .flabel{font-family:var(--fn);font-size:.72rem;color:var(--tx2);margin-bottom:4px}
+
+.tab-btn{font-size:.65rem;padding:8px 4px}}
+/* ============================================================
+   COMPLETE RESPONSIVE CSS — All Devices
+   Mobile (320-480) | Tablet (481-768) | Desktop (769+)
+   ============================================================ */
+
+/* ---- Fluid base ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,table,video{max-width:100%}
+
+/* ---- Wrap: fluid on all screens ---- */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:14px 12px}
+
+/* ---- Tables: horizontal scroll on small screens ---- */
+.gk-table,.gram-table,.rxn-table,.ptbl{
+  display:block;width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
+}
+.gk-table td,.gram-table td,.rxn-table td{white-space:normal;min-width:80px}
+.gk-table th,.gram-table th,.rxn-table th{white-space:nowrap}
+
+/* ---- Mind map: wrap branches on small screens ---- */
+.mm-branches{justify-content:center}
+.mm-branch{min-width:100px;flex:1 1 100px;max-width:140px}
+.mm-center{padding:9px 14px;font-size:.85rem}
+
+/* ---- Chapter headers: prevent overflow ---- */
+.ch-name{font-size:.92rem;white-space:normal;line-height:1.3}
+.ch-tag{white-space:normal;line-height:1.4}
+
+/* ---- Tab buttons: equal width ---- */
+.tab-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+.tab-btn{flex-shrink:0;min-width:0;padding:10px 8px;font-size:.7rem}
+
+/* ---- Hero sections ---- */
+.bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:18px 14px}
+.bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.35rem}
+.bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:8px}
+.bstat,.cstat,.pstat,.estat,.gstat{padding:6px 10px}
+
+/* ---- Notes/Subject grid ---- */
+.notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:8px}
+.subj-card{padding:12px 10px 10px}
+
+/* ---- Info row ---- */
+.info-row{grid-template-columns:1fr 1fr;gap:8px}
+.info-card{padding:12px}
+
+/* ---- KW grid items ---- */
+.kw-def,.sum-list li{font-size:.78rem;line-height:1.55}
+
+/* ---- Footer ---- */
+.footer-social{gap:10px}
+.footer-links{gap:5px}
+.footer-link{padding:4px 10px;font-size:.65rem}
+.footer-subjects{gap:5px}
+.fs-tag{font-size:.62rem;padding:3px 8px}
+
+/* ---- Header ---- */
+.hdr{padding:8px 12px;gap:8px}
+.hdr-name{font-size:.95rem}
+.hdr-sub{font-size:.6rem}
+.lang-btn,.theme-btn{padding:4px 8px;font-size:.65rem}
+.btn-back{padding:4px 9px;font-size:.68rem}
+
+/* ---- Test interface ---- */
+.test-hdr{padding:10px 12px}
+.q-wrap{padding:0 12px 130px}
+.q-card{padding:14px 12px}
+.q-text{font-size:.84rem}
+.opt{padding:10px 12px;font-size:.8rem}
+.test-bottom{padding:8px 12px}
+.btn-nav{padding:11px 8px;font-size:.75rem}
+
+/* ---- Bottom nav ---- */
+.bottom-nav{padding:7px 0 11px}
+.bnav-btn{padding:3px 12px}
+.bnav-btn span:first-child{font-size:1.2rem}
+.bnav-btn span:last-child{font-size:.58rem}
+
+/* ============================================================
+   SMALL PHONES (max 380px)
+   ============================================================ */
+@media(max-width:380px){
+  .wrap{padding:10px 10px}
+  .hdr{padding:8px 10px;gap:6px}
+  .hdr-logo{width:34px;height:34px;font-size:16px}
+  .hdr-name{font-size:.88rem}
+  .hdr-right{gap:4px}
+  .lang-btn,.theme-btn{padding:3px 7px;font-size:.62rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.2rem}
+  .hero-h{font-size:1.3rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1rem}
+  .hs-l,.bstat-l,.cstat-l,.pstat-l,.estat-l,.gstat-l{font-size:.58rem}
+
+  .ch-num{width:28px;height:28px;font-size:.75rem}
+  .ch-name{font-size:.85rem}
+  .ch-tag{font-size:.58rem}
+  .ch-header{padding:11px 10px;gap:8px}
+
+  .tab-btn{font-size:.65rem;padding:8px 5px}
+  .tab-pane{padding:11px 10px}
+
+  .sum-h{font-size:.78rem}
+  .sum-list li{font-size:.75rem}
+  .sum-overview{font-size:.78rem;padding:10px 11px}
+  .kw-term{font-size:.8rem}
+  .kw-def{font-size:.73rem}
+
+  .mm-branch{min-width:90px;max-width:130px;padding:7px 8px}
+  .mm-branch-title{font-size:.7rem}
+  .mm-branch-items{font-size:.6rem}
+  .mm-center{font-size:.8rem;padding:8px 12px}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .subj-card{padding:10px 9px 9px}
+  .sj-icon{font-size:1.5rem;margin-bottom:5px}
+  .sj-name{font-size:.82rem}
+  .sj-desc{font-size:.62rem}
+  .nc-name{font-size:.85rem}
+  .nc-desc{font-size:.62rem}
+
+  .info-row{gap:7px}
+  .ic-val{font-size:1.1rem}
+  .ic-icon{font-size:1.2rem}
+
+  .hero-stats{gap:0}
+  .hs{padding:8px 0}
+  .btn-start,.btn-hero{padding:12px;font-size:.92rem}
+
+  .pnst-box ul li,.pnst-box-t{font-size:.7rem}
+  .pnst-box{padding:9px 10px}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.68rem;padding:5px 6px}
+
+  .q-card{padding:12px 10px}
+  .q-text{font-size:.8rem}
+  .opt{padding:9px 10px;font-size:.77rem;gap:8px}
+  .opt-letter{width:22px;height:22px;font-size:.65rem}
+
+  .timer-circle{width:40px;height:40px}
+  .timer-num{font-size:.72rem}
+  .test-title{font-size:.9rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .footer-brand .footer-logo{width:42px;height:42px;font-size:18px}
+  .footer-name{font-size:1rem}
+  .footer-tagline{font-size:.65rem}
+  .social-btn{width:40px;height:40px;border-radius:10px}
+  .footer-copy{font-size:.62rem}
+
+  .qn-btn{width:28px;height:28px;font-size:.67rem;border-radius:7px}
+  .q-nav{padding:10px 11px;gap:5px;margin:10px 12px}
+
+  .bottom-nav{padding:6px 0 10px}
+  .bnav-btn{padding:3px 10px}
+  .bnav-btn span:first-child{font-size:1.1rem}
+  .bnav-btn span:last-child{font-size:.55rem}
+
+  .result-hero{padding:22px 14px}
+  .score-ring{width:100px;height:100px}
+  .score-num{font-size:1.75rem}
+  .result-grade{font-size:1.25rem}
+  .analysis-grid{gap:6px}
+  .an-val{font-size:1.1rem}
+  .an-lbl{font-size:.58rem}
+}
+
+/* ============================================================
+   MEDIUM PHONES (381px - 480px)
+   ============================================================ */
+@media(min-width:381px) and (max-width:480px){
+  .wrap{padding:12px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.4rem}
+  .ch-name{font-size:.9rem}
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.7rem;padding:5px 7px}
+}
+
+/* ============================================================
+   TABLETS (481px - 768px)
+   ============================================================ */
+@media(min-width:481px) and (max-width:768px){
+  .wrap{max-width:600px;padding:16px}
+  .hdr{padding:10px 20px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.6rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:14px}
+  .bstat,.cstat,.pstat,.estat,.gstat{padding:9px 16px}
+
+  .hero-h{font-size:1.6rem}
+  .hs-n,.bstat-n,.cstat-n{font-size:1.3rem}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .subj-card{padding:16px 14px 13px}
+  .sj-icon{font-size:2rem}
+  .sj-name{font-size:.95rem}
+
+  .ch-name{font-size:1rem}
+  .ch-num{width:34px;height:34px}
+  .tab-btn{font-size:.75rem;padding:11px 8px}
+  .tab-pane{padding:16px}
+
+  .sum-h{font-size:.85rem}
+  .sum-list li{font-size:.82rem}
+  .kw-term{font-size:.88rem}
+  .kw-def{font-size:.8rem}
+  .sum-overview{font-size:.85rem}
+
+  .mm-branch{min-width:120px;max-width:160px;padding:10px 12px}
+  .mm-branch-title{font-size:.8rem}
+  .mm-branch-items{font-size:.7rem}
+  .mm-center{font-size:.95rem}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.76rem;padding:7px 9px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.9rem}
+  .opt{font-size:.85rem;padding:12px 14px}
+
+  .footer-links{gap:8px}
+  .footer-link{font-size:.72rem}
+  .social-btn{width:48px;height:48px}
+  .footer-subjects .fs-tag{font-size:.68rem}
+
+  .bottom-nav{padding:8px 0 13px}
+  .bnav-btn{padding:4px 20px}
+}
+
+/* ============================================================
+   DESKTOP (769px - 1024px)
+   ============================================================ */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{max-width:680px;padding:20px}
+  .hdr{padding:12px 24px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.7rem}
+  .hero-h{font-size:1.8rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-card{padding:18px 15px}
+  .note-card-full{grid-column:auto}
+
+  .ch-name{font-size:1.02rem}
+  .tab-btn{font-size:.78rem;padding:11px 10px}
+
+  .sum-list li{font-size:.84rem}
+  .kw-def{font-size:.82rem}
+
+  .mm-branch{min-width:130px;max-width:170px}
+  .mm-center{font-size:1rem}
+
+  .gk-table td,.gram-table td{font-size:.78rem}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .footer-social{gap:14px}
+  .social-btn{width:50px;height:50px;font-size:1.3rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.75rem;padding:6px 14px}
+}
+
+/* ============================================================
+   LARGE DESKTOP (1025px+)
+   ============================================================ */
+@media(min-width:1025px){
+  .wrap{max-width:780px;padding:24px}
+  .hdr{padding:12px 32px}
+  .hdr-name{font-size:1.15rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.85rem}
+  .hero-h{font-size:2rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1.6rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .note-card-full{grid-column:auto}
+  .subj-card{padding:20px 16px}
+  .sj-icon{font-size:2.2rem}
+  .sj-name{font-size:1rem}
+  .nc-name{font-size:1rem}
+
+  .ch-name{font-size:1.05rem}
+  .ch-num{width:36px;height:36px;font-size:.88rem}
+  .tab-btn{font-size:.8rem;padding:12px 12px}
+  .tab-pane{padding:18px}
+
+  .sum-list li{font-size:.86rem}
+  .sum-h{font-size:.88rem}
+  .sum-overview{font-size:.88rem}
+  .kw-term{font-size:.92rem}
+  .kw-def{font-size:.84rem}
+
+  .mm-branch{min-width:140px;max-width:180px;padding:11px 13px}
+  .mm-branch-title{font-size:.85rem}
+  .mm-branch-items{font-size:.73rem}
+  .mm-center{font-size:1.05rem}
+
+  .gk-table td,.gram-table td{font-size:.8rem;padding:8px 10px}
+  .gk-table th,.gram-table th{font-size:.75rem;padding:8px 10px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.95rem}
+  .opt{font-size:.88rem}
+  .score-ring{width:130px;height:130px}
+  .score-num{font-size:2.2rem}
+
+  .footer-social{gap:16px}
+  .social-btn{width:52px;height:52px;font-size:1.4rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.78rem;padding:6px 16px}
+  .fs-tag{font-size:.72rem;padding:5px 12px}
+  .footer-tagline{font-size:.78rem}
+  .footer-copy{font-size:.72rem}
+}
+
+/* ============================================================
+   TOUCH DEVICES — Better tap targets
+   ============================================================ */
+@media(hover:none) and (pointer:coarse){
+  .ch-header{min-height:56px}
+  .tab-btn{min-height:44px}
+  .sj-btn,.btn-nav,.lang-btn,.theme-btn,.btn-back{min-height:40px}
+  .bnav-btn{min-height:48px;padding:6px 12px}
+  .opt{min-height:46px}
+  .qn-btn{width:34px;height:34px}
+  .social-btn{width:48px;height:48px}
+  .footer-link{min-height:36px;display:inline-flex;align-items:center}
+  a{-webkit-tap-highlight-color:rgba(59,130,246,.15)}
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print{
+  .hdr,.bottom-nav,.site-footer,.test-bottom,.loading-overlay,
+  .tab-bar,.ch-arr,.bnav-btn,.btn-back{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body,[data-theme="dark"] body::before{background:white!important;color:black!important}
+  .ch-item{border:1px solid #ccc!important;margin-bottom:8px}
+  .wrap{max-width:100%;padding:0}
+}
+
+/* ============================================================
+   LANDSCAPE PHONE
+   ============================================================ */
+@media(max-width:768px) and (orientation:landscape){
+  .hdr{padding:6px 14px}
+  .hdr-logo{width:32px;height:32px;font-size:15px}
+  .bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:14px 14px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.25rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{margin-top:8px}
+  .bottom-nav{padding:5px 0 8px}
+  .bnav-btn span:first-child{font-size:1rem}
+  .bnav-btn span:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="index.html" class="btn-back">← Back</a>
+  <div class="hdr-logo">📝</div>
+  <div>
+    <div class="hdr-name">English Notes</div>
+    <div class="hdr-sub">Grammar + Comprehension | PNST 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="lang-btn active" id="btnHi" onclick="setLang('hi')">हि</button>
+    <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- Hero -->
+  <div class="eng-hero">
+    <div class="eng-badge">✦ GRAMMAR + COMPREHENSION ✦</div>
+    <div class="eng-h">📝 <span>English</span></div>
+    <div class="eng-p" id="engP">PNST 2026 ke liye Complete English Grammar — Tenses, Voice, Narration, Articles, Vocabulary, Comprehension — Hindi + English dono mein!</div>
+    <div class="eng-stats">
+      <div class="estat"><div class="estat-n">12</div><div class="estat-l">Topics</div></div>
+      <div class="estat"><div class="estat-n">20</div><div class="estat-l">Marks</div></div>
+      <div class="estat"><div class="estat-n">767</div><div class="estat-l">PYQ Questions</div></div>
+    </div>
+  </div>
+
+  <!-- ===== CH1: PARTS OF SPEECH ===== -->
+  <div class="ch-item" id="ch1">
+    <div class="ch-header" onclick="toggleCh('ch1')">
+      <div class="ch-num">01</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="भाषा के भाग" data-en="Parts of Speech">भाषा के भाग (Parts of Speech)</div>
+        <div class="ch-tag">Noun | Pronoun | Verb | Adjective | Adverb | Preposition</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch1','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch1','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch1','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch1-sum">
+        <div class="sum-overview">अंग्रेजी में 8 Parts of Speech होते हैं। हर शब्द किसी एक भाग का हिस्सा होता है। इन्हें पहचानना Grammar का आधार है।</div>
+        <div class="sum-h">📚 8 Parts of Speech</div>
+        <table class="gram-table">
+          <tr><th>Part of Speech</th><th>हिंदी नाम</th><th>काम</th><th>Example</th></tr>
+          <tr><td class="hi">Noun (संज्ञा)</td><td>व्यक्ति/स्थान/वस्तु का नाम</td><td>Names people/places/things</td><td class="ex">Joyce, book, love</td></tr>
+          <tr><td class="hi">Pronoun (सर्वनाम)</td><td>संज्ञा के स्थान पर</td><td>Replaces a noun</td><td class="ex">he, she, it, they</td></tr>
+          <tr><td class="hi">Verb (क्रिया)</td><td>कार्य/अवस्था</td><td>Shows action/state</td><td class="ex">write, is, run, were</td></tr>
+          <tr><td class="hi">Adjective (विशेषण)</td><td>संज्ञा की विशेषता</td><td>Describes a noun</td><td class="ex">beautiful, old, tall</td></tr>
+          <tr><td class="hi">Adverb (क्रिया-विशेषण)</td><td>क्रिया की विशेषता</td><td>Modifies verb/adj/adverb</td><td class="ex">quickly, very, often</td></tr>
+          <tr><td class="hi">Preposition (पूर्वसर्ग)</td><td>संज्ञा से पहले</td><td>Shows relationship</td><td class="ex">in, on, at, by, for</td></tr>
+          <tr><td class="hi">Conjunction (समुच्चयबोधक)</td><td>शब्दों को जोड़ना</td><td>Joins words/clauses</td><td class="ex">and, but, although</td></tr>
+          <tr><td class="hi">Interjection (विस्मयादिबोधक)</td><td>भावना व्यक्त करना</td><td>Expresses emotion</td><td class="ex">Oh! Wow! Alas!</td></tr>
+        </table>
+        <div class="sum-h">🔠 Noun के प्रकार | Types of Nouns</div>
+        <ul class="sum-list">
+          <li><b>Proper Noun:</b> किसी विशेष का नाम — Joyce, Dublin, India</li>
+          <li><b>Common Noun:</b> सामान्य नाम — girl, city, book, doctor</li>
+          <li><b>Abstract Noun:</b> जिसे छू न सकें — freedom, love, beauty, fear</li>
+          <li><b>Collective Noun:</b> समूह का नाम — committee, family, team, flock</li>
+          <li><b>Material Noun:</b> पदार्थ का नाम — water, gold, wood, paper</li>
+        </ul>
+        <div class="sum-h">🔧 Verb के प्रकार | Types of Verbs</div>
+        <ul class="sum-list">
+          <li><b>Transitive:</b> Object होता है — She wrote a story.</li>
+          <li><b>Intransitive:</b> Object नहीं — Eveline sat. / He smiled.</li>
+          <li><b>Auxiliary:</b> सहायक — is, was, have, will, do</li>
+          <li><b>Modal:</b> सम्भावना/इच्छा — can, could, may, might, must, should, would</li>
+          <li><b>Phrasal Verb:</b> Verb + Preposition — give up, look into, break down</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Noun के 5 types (Proper, Common, Abstract, Collective, Material)</li>
+            <li>Pronoun: Subjective(I,he,she) | Objective(me,him,her) | Possessive(my,his)</li>
+            <li>Modal verbs → Possibility/Necessity: can, may, must, should</li>
+            <li>Preposition: in (enclosed place), on (surface), at (point)</li>
+            <li>Coordinating Conjunctions: FANBOYS (For, And, Nor, But, Or, Yet, So)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch1-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📚 Parts of Speech</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🏷️ Noun</div>
+              <div class="mm-branch-items">Proper, Common<br>Abstract, Collective<br>Material<br>Names things</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔄 Pronoun</div>
+              <div class="mm-branch-items">He, She, It<br>They, We, I<br>Subjective/Objective<br>Possessive</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚡ Verb</div>
+              <div class="mm-branch-items">Transitive/Intrans.<br>Auxiliary (is/was)<br>Modal (can/must)<br>Phrasal (give up)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🎨 Adjective</div>
+              <div class="mm-branch-items">Describes noun<br>Degrees: Pos/Comp/Sup<br>beautiful, old<br>Tall→Taller→Tallest</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔗 Others</div>
+              <div class="mm-branch-items">Adverb (quickly)<br>Preposition (in/on)<br>Conjunction (and/but)<br>Interjection (Oh!)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch1-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Abstract Noun <span class="kw-imp">★ PNST</span></div><div class="kw-def">जिसे देख या छू नहीं सकते। Feelings, qualities, ideas। Freedom, love, beauty, honesty, justice।</div></div>
+          <div class="kw-item"><div class="kw-term">Modal Verbs <span class="kw-imp">★ PNST</span></div><div class="kw-def">Can (सकना), Could (सका), May (शायद), Might, Must (जरूर), Should (चाहिए), Would, Will।</div></div>
+          <div class="kw-item"><div class="kw-term">Phrasal Verb <span class="kw-imp">★ PNST</span></div><div class="kw-def">Verb + Preposition/Adverb = New meaning। Give up=छोड़ना, Look into=जांच करना, Break down=टूटना।</div></div>
+          <div class="kw-item"><div class="kw-term">Collective Noun</div><div class="kw-def">Group का name। Fleet of ships, Flock of birds, Pack of wolves, Bouquet of flowers।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH2: TENSES ===== -->
+  <div class="ch-item" id="ch2">
+    <div class="ch-header" onclick="toggleCh('ch2')">
+      <div class="ch-num">02</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="काल (Tenses)" data-en="Tenses">काल (Tenses)</div>
+        <div class="ch-tag">Simple | Continuous | Perfect | Perfect Continuous — Past/Present/Future</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch2','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch2','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch2','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch2-sum">
+        <div class="sum-overview">अंग्रेजी में 12 Tenses होते हैं (3 times × 4 aspects)। Tense = वह समय जब कोई कार्य होता है। PNST में Tense सबसे ज़्यादा पूछा जाता है।</div>
+        <div class="sum-h">📋 Tense Chart (12 Tenses)</div>
+        <table class="gram-table">
+          <tr><th>Tense</th><th>Formula</th><th>Example</th></tr>
+          <tr><td class="hi">Simple Present</td><td>V₁ / V₁+s/es</td><td class="ex">She reads every day.</td></tr>
+          <tr><td class="hi">Present Continuous</td><td>is/am/are + V-ing</td><td class="ex">She is reading now.</td></tr>
+          <tr><td class="hi">Present Perfect</td><td>have/has + V₃</td><td class="ex">She has read the book.</td></tr>
+          <tr><td class="hi">Present Perfect Cont.</td><td>have/has been + V-ing</td><td class="ex">She has been reading for 2 hours.</td></tr>
+          <tr><td class="hi">Simple Past</td><td>V₂ / did + V₁</td><td class="ex">She read the book yesterday.</td></tr>
+          <tr><td class="hi">Past Continuous</td><td>was/were + V-ing</td><td class="ex">She was reading when I came.</td></tr>
+          <tr><td class="hi">Past Perfect</td><td>had + V₃</td><td class="ex">She had read before I arrived.</td></tr>
+          <tr><td class="hi">Past Perfect Cont.</td><td>had been + V-ing</td><td class="ex">She had been reading for hours.</td></tr>
+          <tr><td class="hi">Simple Future</td><td>will/shall + V₁</td><td class="ex">She will read tomorrow.</td></tr>
+          <tr><td class="hi">Future Continuous</td><td>will be + V-ing</td><td class="ex">She will be reading at 6 PM.</td></tr>
+          <tr><td class="hi">Future Perfect</td><td>will have + V₃</td><td class="ex">She will have read by evening.</td></tr>
+          <tr><td class="hi">Future Perfect Cont.</td><td>will have been + V-ing</td><td class="ex">She will have been reading for 3 hrs.</td></tr>
+        </table>
+        <div class="sum-h">⚠️ Important Tense Rules</div>
+        <ul class="sum-list">
+          <li><b>He/She/It + Simple Present:</b> Always add -s/-es → She goes, He writes, It runs</li>
+          <li><b>Since vs For:</b> Since = point of time (since 2020) | For = period (for 2 hours)</li>
+          <li><b>Used to:</b> Past habit — She used to walk daily. (अब नहीं करती)</li>
+          <li><b>Would:</b> Past habit (literary) — He would sit by the window every evening.</li>
+          <li><b>Stative verbs:</b> No continuous form — know, believe, love, want, see (wrong: I am knowing)</li>
+          <li><b>Just/Already/Yet:</b> Present Perfect के साथ — I have just eaten. | Have you eaten yet?</li>
+          <li><b>Conditional:</b> If + Past → would + V₁ → If I had money, I would travel.</li>
+        </ul>
+        <div class="eg-box">
+          <div class="eg-hi">जब वह पहुँचा, ट्रेन जा चुकी थी।</div>
+          <div class="eg-en">By the time he arrived, the train had left. → Past Perfect used for earlier event</div>
+        </div>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>He/She/It → Simple Present → always add -s/-es</li>
+            <li>Since = point | For = duration (with Present/Past Perfect)</li>
+            <li>Past Perfect: जब दो past events हों → पहले वाले के लिए had + V₃</li>
+            <li>Stative verbs: No -ing form (know, love, want, see, believe)</li>
+            <li>Conditional: If + Simple Past → would + V₁</li>
+            <li>Just, Already, Yet, Ever, Never → Present Perfect</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch2-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⏰ Tenses (काल)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔵 Present</div>
+              <div class="mm-branch-items">Simple: V₁/V₁+s<br>Cont.: is/am/are+Ving<br>Perfect: have/has+V₃<br>Perf.Cont.: have been+Ving</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🔴 Past</div>
+              <div class="mm-branch-items">Simple: V₂<br>Cont.: was/were+Ving<br>Perfect: had+V₃<br>Perf.Cont.: had been+Ving</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🟢 Future</div>
+              <div class="mm-branch-items">Simple: will+V₁<br>Cont.: will be+Ving<br>Perfect: will have+V₃<br>Perf.Cont.: will have been+Ving</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">⚠️ Key Rules</div>
+              <div class="mm-branch-items">He/She/It +s/es<br>Since=point<br>For=duration<br>Stative: no -ing</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch2-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Simple Present (3rd person) <span class="kw-imp">★ PNST</span></div><div class="kw-def">He/She/It के साथ → V+s/es। She reads, He goes, It runs। यह सबसे common error है।</div></div>
+          <div class="kw-item"><div class="kw-term">Present Perfect <span class="kw-imp">★ PNST</span></div><div class="kw-def">have/has + V₃। Just, already, yet, ever, never के साथ। Life experience, recent past।</div></div>
+          <div class="kw-item"><div class="kw-term">Past Perfect <span class="kw-imp">★ PNST</span></div><td class="kw-def">had + V₃। Two past events → पहले वाले के लिए। By the time he came, she had left।</div></div>
+          <div class="kw-item"><div class="kw-term">Stative Verbs</div><div class="kw-def">Continuous form नहीं होता। Know, love, like, want, see, hear, believe, understand।</div></div>
+          <div class="kw-item"><div class="kw-term">Since vs For <span class="kw-imp">★ PNST</span></div><div class="kw-def">Since = specific time point (since Monday, since 1990)। For = duration (for 3 hours, for 2 years)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH3: NARRATION ===== -->
+  <div class="ch-item" id="ch3">
+    <div class="ch-header" onclick="toggleCh('ch3')">
+      <div class="ch-num">03</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="कथन परिवर्तन" data-en="Narration (Direct & Indirect Speech)">कथन परिवर्तन (Direct & Indirect Speech)</div>
+        <div class="ch-tag">Assertive | Interrogative | Imperative | Tense Backshift | Reporting Verbs</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch3','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch3','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch3','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch3-sum">
+        <div class="sum-overview">Direct Speech = किसी के exact words (inverted commas में)। Indirect Speech = उन्हीं words को अपने शब्दों में (commas हटाकर)।</div>
+        <div class="sum-h">🔄 Tense Backshift Rules</div>
+        <table class="gram-table">
+          <tr><th>Direct Speech</th><th>→</th><th>Indirect Speech</th></tr>
+          <tr><td>Simple Present (V₁)</td><td>→</td><td>Simple Past (V₂)</td></tr>
+          <tr><td>Present Continuous</td><td>→</td><td>Past Continuous</td></tr>
+          <tr><td>Present Perfect</td><td>→</td><td>Past Perfect</td></tr>
+          <tr><td>Simple Past (V₂)</td><td>→</td><td>Past Perfect (had+V₃)</td></tr>
+          <tr><td>will → would</td><td>→</td><td>can → could</td></tr>
+          <tr><td>may → might</td><td>→</td><td>shall → should</td></tr>
+        </table>
+        <div class="sum-h">📍 Time & Place Words Change</div>
+        <table class="gram-table">
+          <tr><th>Direct</th><th>Indirect</th></tr>
+          <tr><td>now</td><td>then</td></tr>
+          <tr><td>today</td><td>that day</td></tr>
+          <tr><td>yesterday</td><td>the previous day / the day before</td></tr>
+          <tr><td>tomorrow</td><td>the next day / the following day</td></tr>
+          <tr><td>here</td><td>there</td></tr>
+          <tr><td>this / these</td><td>that / those</td></tr>
+          <tr><td>ago</td><td>before / previously</td></tr>
+          <tr><td>last night</td><td>the previous night</td></tr>
+        </table>
+        <div class="sum-h">📝 Sentence Type Rules</div>
+        <ul class="sum-list">
+          <li><b>Assertive → that:</b> She said, "I am tired." → She said that she was tired.</li>
+          <li><b>Yes/No Question → if/whether:</b> He asked, "Are you free?" → He asked if she was free.</li>
+          <li><b>Wh-Question → same Wh-word:</b> She asked, "Where do you live?" → She asked where I lived.</li>
+          <li><b>Imperative (order) → to/not to:</b> He said, "Sit down." → He told her to sit down.</li>
+          <li><b>Request → requested to:</b> He said, "Please help me." → He requested her to help him.</li>
+          <li><b>Exclamatory → exclaimed that:</b> She said, "What a beautiful day!" → She exclaimed that it was a beautiful day.</li>
+        </ul>
+        <div class="rule-box">
+          <div class="rule-box-t">⚠️ Important: Reporting Verb PRESENT हो तो tense नहीं बदलता!</div>
+          <p>She says, "I am tired." → She says that she is tired. (No backshift — says = present)</p>
+        </div>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Reporting verb Past हो → Tense backshift होता है</li>
+            <li>Reporting verb Present/Future हो → No backshift</li>
+            <li>Universal truths never backshift: She said, "The sun rises in the east." → Said that the sun rises (not rose)</li>
+            <li>Yes/No Q → if/whether | Wh-Q → same Wh word</li>
+            <li>Imperative: told/ordered/requested + to + V₁</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch3-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">💬 Narration</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">📢 Assertive</div>
+              <div class="mm-branch-items">Said → said that<br>Tense backshift<br>Pronoun change<br>Time words change</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">❓ Interrogative</div>
+              <div class="mm-branch-items">Yes/No → if/whether<br>Wh-Q → same word<br>Inverted → normal order<br>Asked/enquired</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📣 Imperative</div>
+              <div class="mm-branch-items">Told/ordered to<br>Requested to<br>Not to (negative)<br>Advised to</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔄 Backshift</div>
+              <div class="mm-branch-items">Present→Past<br>Past→Past Perfect<br>will→would<br>can→could</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch3-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Backshift <span class="kw-imp">★ PNST</span></div><div class="kw-def">Reporting verb past हो तो tense एक step पीछे जाता है। Present → Past, Past → Past Perfect।</div></div>
+          <div class="kw-item"><div class="kw-term">Universal Truth — No Backshift <span class="kw-imp">★ PNST</span></div><div class="kw-def">Scientific/universal facts का tense नहीं बदलता। "The earth is round" → He said that the earth is round।</div></div>
+          <div class="kw-item"><div class="kw-term">Reporting Verbs</div><div class="kw-def">Said, told, asked, replied, exclaimed, ordered, requested, advised, warned, suggested।</div></div>
+          <div class="kw-item"><div class="kw-term">Exclamatory → Indirect</div><div class="kw-def">Exclaimed with joy/sorrow + that। "What a surprise!" → She exclaimed with surprise that it was wonderful।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH4: ACTIVE & PASSIVE VOICE ===== -->
+  <div class="ch-item" id="ch4">
+    <div class="ch-header" onclick="toggleCh('ch4')">
+      <div class="ch-num">04</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वाच्य परिवर्तन" data-en="Active & Passive Voice">वाच्य परिवर्तन (Active & Passive Voice)</div>
+        <div class="ch-tag">Subject | Object | By | V₃ | All Tenses Passive Forms</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch4','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch4','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch4','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch4-sum">
+        <div class="sum-overview">Active Voice = Subject कार्य करता है। Passive Voice = Subject पर कार्य होता है। Object → Subject बन जाता है। Verb = be + V₃।</div>
+        <div class="rule-box">
+          <div class="rule-box-t">🔑 Golden Rule for Active → Passive</div>
+          <p><b>Step 1:</b> Active का Object → Passive का Subject<br>
+          <b>Step 2:</b> Active का Subject → "by + Object" (end में)<br>
+          <b>Step 3:</b> Verb → Appropriate form of "be" + V₃<br>
+          <b>Step 4:</b> Object Pronoun change: he→him, she→her, they→them, I→me, we→us</p>
+        </div>
+        <div class="sum-h">📋 All Tense Passive Forms</div>
+        <table class="gram-table">
+          <tr><th>Tense</th><th>Active</th><th>Passive Formula</th></tr>
+          <tr><td>Simple Present</td><td>She writes a letter.</td><td class="en">is/am/are + written</td></tr>
+          <tr><td>Present Cont.</td><td>She is writing a letter.</td><td class="en">is/am/are + being + written</td></tr>
+          <tr><td>Present Perfect</td><td>She has written a letter.</td><td class="en">have/has + been + written</td></tr>
+          <tr><td>Simple Past</td><td>She wrote a letter.</td><td class="en">was/were + written</td></tr>
+          <tr><td>Past Continuous</td><td>She was writing.</td><td class="en">was/were + being + written</td></tr>
+          <tr><td>Past Perfect</td><td>She had written.</td><td class="en">had + been + written</td></tr>
+          <tr><td>Simple Future</td><td>She will write.</td><td class="en">will + be + written</td></tr>
+          <tr><td>Future Perfect</td><td>She will have written.</td><td class="en">will + have been + written</td></tr>
+          <tr><td>Modals</td><td>She can write it.</td><td class="en">can + be + written</td></tr>
+        </table>
+        <div class="sum-h">⚠️ Special Cases</div>
+        <ul class="sum-list">
+          <li><b>Imperative Passive:</b> "Open the door." → "Let the door be opened."</li>
+          <li><b>Intransitive verbs:</b> Passive नहीं बनती (no object) — She smiled. / He arrived.</li>
+          <li><b>"by" हटाना:</b> जब doer unknown/obvious हो — The thief was caught. (by police — obvious)</li>
+          <li><b>Double object:</b> Both can become subject — He gave her a book. → She was given a book. / A book was given to her.</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Object → Subject | Subject → by + Object pronoun</li>
+            <li>he→him, she→her, they→them, I→me, we→us</li>
+            <li>Intransitive verbs → Passive possible नहीं</li>
+            <li>Imperative → Let + object + be + V₃</li>
+            <li>Modal passive: can/must/should + be + V₃</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch4-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔄 Active & Passive Voice</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">✅ Active</div>
+              <div class="mm-branch-items">Subject does action<br>She writes.<br>Direct, clear<br>Formal writing</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🔄 Passive</div>
+              <div class="mm-branch-items">be + V₃ + by<br>Object→Subject<br>Action important<br>Doer unknown</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📋 Tense Passive</div>
+              <div class="mm-branch-items">Pres: is/am/are+V₃<br>Past: was/were+V₃<br>Perf: been+V₃<br>Future: will be+V₃</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">⚠️ Special</div>
+              <div class="mm-branch-items">Imperative: Let+be+V₃<br>Intransitive: No passive<br>Double object<br>Pronoun change</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch4-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Passive Voice Formula <span class="kw-imp">★ PNST</span></div><div class="kw-def">Object + be(appropriate) + V₃ + by + Subject। He wrote the book → The book was written by him।</div></div>
+          <div class="kw-item"><div class="kw-term">Pronoun Change in Passive <span class="kw-imp">★ PNST</span></div><div class="kw-def">He→him, She→her, They→them, I→me, We→us, Who→whom। Subject case → Object case।</div></div>
+          <div class="kw-item"><div class="kw-term">Intransitive Verb</div><div class="kw-def">Passive बना नहीं सकते। She laughed, He slept, Birds fly — No object = No passive।</div></div>
+          <div class="kw-item"><div class="kw-term">Modal Passive <span class="kw-imp">★ PNST</span></div><div class="kw-def">Modal + be + V₃। You must do it → It must be done। She can write it → It can be written।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH5: ARTICLES ===== -->
+  <div class="ch-item" id="ch5">
+    <div class="ch-header" onclick="toggleCh('ch5')">
+      <div class="ch-num">05</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="Articles (A, An, The)" data-en="Articles (A, An, The)">Articles (A, An, The)</div>
+        <div class="ch-tag">Definite | Indefinite | Zero Article | Vowel Sound | Unique Nouns</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch5','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch5','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch5','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch5-sum">
+        <div class="sum-overview">Articles तीन होते हैं: A, An (Indefinite), The (Definite)। A/An = पहली बार mention। The = already known/specific। Some nouns के साथ article नहीं।</div>
+        <div class="sum-h">📌 A vs An — Vowel Sound Rule</div>
+        <div class="compare">
+          <div class="compare-box" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)">
+            <div class="compare-box-t" style="color:var(--green)">✅ "An" use करो when:</div>
+            <ul>
+              <li style="color:var(--tx2)">Vowel SOUND से शुरू हो</li>
+              <li>an apple, an egg</li>
+              <li>an hour (/aʊər/ = vowel)</li>
+              <li>an MP (/em/ = vowel)</li>
+              <li>an honest man</li>
+              <li>an umbrella</li>
+            </ul>
+          </div>
+          <div class="compare-box" style="background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.2)">
+            <div class="compare-box-t" style="color:var(--pink)">⚠️ "A" use करो when:</div>
+            <ul>
+              <li style="color:var(--tx2)">Consonant SOUND से शुरू हो</li>
+              <li>a book, a table</li>
+              <li>a university (/ju:/ = consonant)</li>
+              <li>a union, a unique</li>
+              <li>a one-rupee coin</li>
+              <li>a European</li>
+            </ul>
+          </div>
+        </div>
+        <div class="sum-h">📌 "The" Use करो when:</div>
+        <ul class="sum-list">
+          <li><b>Already mentioned:</b> I saw a dog. The dog was black.</li>
+          <li><b>Unique/One of a kind:</b> The sun, the moon, the earth, the sky</li>
+          <li><b>Superlatives:</b> The best, the tallest, the most beautiful</li>
+          <li><b>Rivers, Seas, Oceans:</b> The Ganga, The Pacific, The Nile, The Bay of Bengal</li>
+          <li><b>Mountain ranges:</b> The Himalayas, The Alps (but: Mount Everest — no the)</li>
+          <li><b>Countries (plural/union):</b> The USA, The UK, The UAE</li>
+          <li><b>Newspapers:</b> The Hindu, The Times of India</li>
+          <li><b>Musical instruments:</b> She plays the guitar, He plays the sitar</li>
+          <li><b>Ordinal numbers:</b> The first, the second, the last</li>
+        </ul>
+        <div class="sum-h">🚫 No Article (Zero Article) when:</div>
+        <ul class="sum-list">
+          <li><b>Proper nouns:</b> India, Delhi, Joyce, Shakespeare (generally)</li>
+          <li><b>Languages:</b> She speaks Hindi. (not "the Hindi")</li>
+          <li><b>Meals:</b> I had breakfast/lunch/dinner.</li>
+          <li><b>Uncountable nouns:</b> Water is essential. Gold is precious.</li>
+          <li><b>Plural common nouns (general):</b> Books are important. Dogs bark.</li>
+          <li><b>Diseases (usually):</b> She has fever/malaria. (but: the flu)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>An = vowel SOUND (not letter): an hour, an honest, an MP</li>
+            <li>A = consonant SOUND: a university, a union, a European</li>
+            <li>The = rivers, seas, mountain ranges, newspapers, unique nouns</li>
+            <li>No article: Languages, meals, proper nouns, uncountable (general)</li>
+            <li>Musical instruments → always "the": plays the piano</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch5-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📰 Articles (A / An / The)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔤 A</div>
+              <div class="mm-branch-items">Consonant sound<br>First mention<br>a university<br>a one rupee</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔤 An</div>
+              <div class="mm-branch-items">Vowel sound<br>an hour, an honest<br>an MP, an LLB<br>an umbrella</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🔤 The</div>
+              <div class="mm-branch-items">Specific/known<br>Rivers/seas/ranges<br>Superlatives<br>The sun/moon</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🚫 No Article</div>
+              <div class="mm-branch-items">Proper nouns<br>Languages (Hindi)<br>Meals (lunch)<br>Uncountable (general)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch5-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">A vs An — Sound Rule <span class="kw-imp">★ PNST</span></div><div class="kw-def">Letter नहीं, SOUND देखो। An hour (h silent, vowel sound)। A university (u = /ju/ = consonant sound)।</div></div>
+          <div class="kw-item"><div class="kw-term">Definite Article "The" <span class="kw-imp">★ PNST</span></div><div class="kw-def">Specific/already known। Rivers (the Ganga), seas (the Pacific), newspapers (the Hindu), unique (the sun)।</div></div>
+          <div class="kw-item"><div class="kw-term">Zero Article</div><div class="kw-def">Languages, games, meals, abstract nouns (general sense), proper nouns में article नहीं।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH6: ERROR CORRECTION ===== -->
+  <div class="ch-item" id="ch6">
+    <div class="ch-header" onclick="toggleCh('ch6')">
+      <div class="ch-num">06</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="Error Correction (त्रुटि सुधार)" data-en="Error Correction">Error Correction (त्रुटि सुधार)</div>
+        <div class="ch-tag">Subject-Verb Agreement | Pronoun | Preposition | Article | Common Errors</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch6','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch6','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch6','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch6-sum">
+        <div class="sum-overview">PNST में Error Correction बहुत पूछी जाती है। सबसे common errors: Subject-Verb Agreement, Wrong tense, Preposition, Article errors।</div>
+        <div class="sum-h">⚖️ Subject-Verb Agreement Rules</div>
+        <ul class="sum-list">
+          <li><b>"A number of" → Plural verb:</b> A number of students ARE present. (not is)</li>
+          <li><b>"The number of" → Singular verb:</b> The number of students IS increasing.</li>
+          <li><b>Each/Every/Either/Neither → Singular:</b> Each of them HAS a book.</li>
+          <li><b>None → Singular (strict) / Plural (informal):</b> None of them IS ready.</li>
+          <li><b>Collective nouns → Singular:</b> The team IS playing well.</li>
+          <li><b>"As well as" → First subject decides:</b> She as well as her friends IS happy.</li>
+          <li><b>"Either...or / Neither...nor" → Nearest subject:</b> Neither he nor I AM wrong.</li>
+        </ul>
+        <div class="sum-h">🔠 Common Word Confusions</div>
+        <table class="gram-table">
+          <tr><th>Wrong ❌</th><th>Right ✅</th><th>Rule</th></tr>
+          <tr><td>Its very hot.</td><td>It's very hot.</td><td>Its=possession | It's=it is</td></tr>
+          <tr><td>There bags are here.</td><td>Their bags are here.</td><td>Their=possession</td></tr>
+          <tr><td>She is more taller.</td><td>She is taller.</td><td>No "more" with -er</td></tr>
+          <tr><td>He is elder than me.</td><td>He is older than me.</td><td>Elder = family only</td></tr>
+          <tr><td>I met him yesterday night.</td><td>I met him last night.</td><td>Last night, not yesterday night</td></tr>
+          <tr><td>She returned back home.</td><td>She returned home.</td><td>Return = already means back</td></tr>
+          <tr><td>He is my cousin brother.</td><td>He is my cousin.</td><td>Cousin itself = cousin</td></tr>
+          <tr><td>I am having a pen.</td><td>I have a pen.</td><td>Have (possession) = stative</td></tr>
+          <tr><td>She is knowing the answer.</td><td>She knows the answer.</td><td>Know = stative verb</td></tr>
+          <tr><td>He did not went.</td><td>He did not go.</td><td>Did + V₁ (base form)</td></tr>
+        </table>
+        <div class="sum-h">🔗 Preposition Errors</div>
+        <ul class="sum-list">
+          <li>Married <b>to</b> (not with): She is married to him.</li>
+          <li>Interested <b>in</b>: I am interested in reading.</li>
+          <li>Good <b>at</b>: She is good at maths.</li>
+          <li>Angry <b>with</b> (person) / <b>at</b> (thing): Angry with him / angry at the situation.</li>
+          <li>Die <b>of</b> (disease): He died of cancer. (not from)</li>
+          <li>Arrive <b>at</b> (small place) / <b>in</b> (large place): at station, in Mumbai.</li>
+          <li>Discuss (no preposition): We discussed the matter. (not discussed about)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>"A number of" → Plural | "The number of" → Singular</li>
+            <li>Did/Does/Do + V₁ (base form) — never V₂</li>
+            <li>More + comparative = Wrong (more taller ❌)</li>
+            <li>Stative verbs: No -ing (knowing ❌, having for possession ❌)</li>
+            <li>Its = possession | It's = it is | Their ≠ There ≠ They're</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch6-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">✏️ Error Correction</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚖️ S-V Agreement</div>
+              <div class="mm-branch-items">A number of → plural<br>Each/Every → singular<br>Collective → singular<br>Neither...nor nearest</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔠 Confusions</div>
+              <div class="mm-branch-items">Its vs It's<br>Their/There/They're<br>Effect/Affect<br>Accept/Except</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔗 Prepositions</div>
+              <div class="mm-branch-items">Married to<br>Good at<br>Die of (disease)<br>Discuss (no prep)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔴 Common Errors</div>
+              <div class="mm-branch-items">Did+V₁ (not V₂)<br>No more+-er<br>Stative: no -ing<br>Return=back already</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch6-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Subject-Verb Agreement <span class="kw-imp">★ PNST</span></div><div class="kw-def">Subject singular → verb singular। "A number of" = plural। "The number of" = singular। Each/Every/Either = singular।</div></div>
+          <div class="kw-item"><div class="kw-term">Double Comparative Error</div><div class="kw-def">More + er = Wrong। More taller ❌ → Taller ✅। Most + est = Wrong। Most tallest ❌ → Tallest ✅।</div></div>
+          <div class="kw-item"><div class="kw-term">Redundancy Errors <span class="kw-imp">★ PNST</span></div><div class="kw-def">Unnecessary words। Return back❌, Repeat again❌, Revert back❌, Cousin brother❌, Past history❌।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH7: READING COMPREHENSION ===== -->
+  <div class="ch-item" id="ch7">
+    <div class="ch-header" onclick="toggleCh('ch7')">
+      <div class="ch-num">07</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="गद्यांश पठन" data-en="Reading Comprehension">गद्यांश पठन (Reading Comprehension)</div>
+        <div class="ch-tag">Skimming | Scanning | Inference | Vocabulary in Context | Tone</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch7','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch7','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch7','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch7-sum">
+        <div class="sum-overview">Reading Comprehension = Passage पढ़कर questions का answer देना। PNST में 4-5 questions passage से पूछे जाते हैं।</div>
+        <div class="sum-h">📖 Reading Strategies</div>
+        <ul class="sum-list">
+          <li><b>Skimming:</b> Quickly पढ़ना main idea के लिए — title, headings, first sentences पर focus</li>
+          <li><b>Scanning:</b> Specific information ढूंढना — names, dates, numbers, keywords</li>
+          <li><b>Inference:</b> Directly न कहा हो तो context से समझना — "Read between the lines"</li>
+          <li><b>Vocabulary in context:</b> Passage के आसपास के words से meaning निकालना</li>
+          <li><b>Tone/Attitude:</b> Author का attitude — Critical, Sarcastic, Neutral, Appreciative</li>
+        </ul>
+        <div class="sum-h">❓ Question Types & How to Answer</div>
+        <table class="gram-table">
+          <tr><th>Question Type</th><th>Strategy</th><th>Example</th></tr>
+          <tr><td>Factual (Where/Who/When)</td><td>Direct answer from passage</td><td>Where was Eveline sitting?</td></tr>
+          <tr><td>Inferential</td><td>Conclusion से निकालो</td><td>What does 'invade' suggest?</td></tr>
+          <tr><td>Vocabulary</td><td>Context clues use करो</td><td>What does 'melancholy' mean here?</td></tr>
+          <tr><td>Title/Theme</td><td>Main idea summarize करो</td><td>Suitable title for the passage?</td></tr>
+          <tr><td>Antonym/Synonym</td><td>Opposite/similar meaning</td><td>Opposite of 'alienation'?</td></tr>
+        </table>
+        <div class="sum-h">✍️ Answer Writing Tips</div>
+        <ul class="sum-list">
+          <li>Answer Complete sentence में दो, না सिर्फ words में</li>
+          <li>Passage के words use कर सकते हो — अपने words में भी OK</li>
+          <li>Answer passage के order में आता है (usually)</li>
+          <li>"According to the passage" phrase use करो factual answers में</li>
+          <li>Inference questions में reasoning दो — "This suggests that..."</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Skimming = Main idea | Scanning = Specific info</li>
+            <li>Inferential = Not directly stated, conclusion निकालो</li>
+            <li>Always answer in complete sentences</li>
+            <li>Vocabulary: context से meaning निकालो, dictionary rely मत करो</li>
+            <li>Tone words: Critical, Sarcastic, Ironic, Appreciative, Neutral, Melancholic</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch7-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📖 Reading Comprehension</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">📚 Strategies</div>
+              <div class="mm-branch-items">Skimming (main idea)<br>Scanning (specific)<br>Inference<br>Vocabulary in context</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">❓ Q Types</div>
+              <div class="mm-branch-items">Factual (direct)<br>Inferential (indirect)<br>Vocabulary<br>Title/Theme</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">✍️ Answer Tips</div>
+              <div class="mm-branch-items">Complete sentences<br>Passage words OK<br>Follow order<br>Give reasoning</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch7-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Inference <span class="kw-imp">★ PNST</span></div><div class="kw-def">Directly stated नहीं है लेकिन context से समझ सकते हैं। "Reading between the lines।"</div></div>
+          <div class="kw-item"><div class="kw-term">Tone of the Author</div><div class="kw-def">Author का attitude: Sarcastic, Critical, Appreciative, Neutral, Melancholic, Ironic, Humorous।</div></div>
+          <div class="kw-item"><div class="kw-term">Skimming vs Scanning</div><div class="kw-def">Skimming = Overall main idea (fast read)। Scanning = Specific detail ढूंढना (e.g., date, name)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH8: LITERARY DEVICES ===== -->
+  <div class="ch-item" id="ch8">
+    <div class="ch-header" onclick="toggleCh('ch8')">
+      <div class="ch-num">08</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="Literary/Poetic Devices (काव्य-उपकरण)" data-en="Literary & Poetic Devices">Literary & Poetic Devices</div>
+        <div class="ch-tag">Simile | Metaphor | Personification | Alliteration | Imagery | Symbolism</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch8','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch8','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch8','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch8-sum">
+        <div class="sum-overview">Literary devices = लेखक अपनी बात को प्रभावशाली ढंग से कहने के लिए use करता है। इन्हें पहचानना और उनका effect बताना जरूरी है।</div>
+        <div class="sum-h">🎭 Main Literary Devices</div>
+        <table class="gram-table">
+          <tr><th>Device</th><th>परिभाषा</th><th>Example</th></tr>
+          <tr><td class="hi">Simile (उपमा)</td><td>like/as से तुलना</td><td class="ex">"Trees like Tassels" — Dickinson</td></tr>
+          <tr><td class="hi">Metaphor (रूपक)</td><td>Direct comparison (no like/as)</td><td class="ex">"Time, thou devourer" — Milton</td></tr>
+          <tr><td class="hi">Personification</td><td>निर्जीव को सजीव गुण</td><td class="ex">"Evening invade the avenue" — Joyce</td></tr>
+          <tr><td class="hi">Alliteration</td><td>Same initial consonant repeat</td><td class="ex">"Fly envious Time" — Milton (F, T)</td></tr>
+          <tr><td class="hi">Imagery (बिम्ब)</td><td>Senses appeal करे</td><td class="ex">"sunless sea, caverns" — Coleridge</td></tr>
+          <tr><td class="hi">Symbolism (प्रतीक)</td><td>Objects represent ideas</td><td class="ex">Wild Swans = eternal beauty — Yeats</td></tr>
+          <tr><td class="hi">Irony (व्यंग्य)</td><td>Opposite of what meant</td><td class="ex">Saying "What lovely weather!" in a storm</td></tr>
+          <tr><td class="hi">Oxymoron</td><td>Contradictory terms together</td><td class="ex">Living death, Bittersweet, Deafening silence</td></tr>
+          <tr><td class="hi">Hyperbole (अतिशयोक्ति)</td><td>Extreme exaggeration</td><td class="ex">I've told you a million times!</td></tr>
+          <tr><td class="hi">Onomatopoeia</td><td>Sound imitating words</td><td class="ex">Buzz, Hiss, Crash, Murmur, Sizzle</td></tr>
+          <tr><td class="hi">Enjambment</td><td>Line continues across break</td><td class="ex">Coleridge, Yeats की कविताओं में</td></tr>
+          <tr><td class="hi">Refrain (अनुध्रुव)</td><td>Lines repeat in poem</td><td class="ex">"Mercy, Pity, Peace and Love" — Blake</td></tr>
+        </table>
+        <div class="sum-h">🔍 Simile vs Metaphor — EASY TRICK</div>
+        <div class="compare">
+          <div class="compare-box" style="background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2)">
+            <div class="compare-box-t" style="color:var(--green)">Simile</div>
+            <ul>
+              <li>like या as होता है</li>
+              <li>He is <b>like</b> a lion.</li>
+              <li>She runs <b>as</b> fast as a deer.</li>
+              <li>Comparison = indirect</li>
+            </ul>
+          </div>
+          <div class="compare-box" style="background:rgba(236,72,153,.08);border:1px solid rgba(236,72,153,.2)">
+            <div class="compare-box-t" style="color:var(--pink)">Metaphor</div>
+            <ul>
+              <li>like/as नहीं होता</li>
+              <li>He <b>is</b> a lion.</li>
+              <li>Life is a journey.</li>
+              <li>Comparison = direct</li>
+            </ul>
+          </div>
+        </div>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Simile = like/as | Metaphor = direct comparison</li>
+            <li>Personification = non-living gets human qualities</li>
+            <li>Alliteration = same initial consonant (not vowel)</li>
+            <li>Oxymoron = contradictory terms (deafening silence)</li>
+            <li>Hyperbole = exaggeration for effect (not literal)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch8-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🎭 Literary Devices</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🔄 Comparison</div>
+              <div class="mm-branch-items">Simile (like/as)<br>Metaphor (direct)<br>Personification<br>Hyperbole</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔊 Sound</div>
+              <div class="mm-branch-items">Alliteration<br>Onomatopoeia<br>Assonance<br>Refrain</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🖼️ Meaning</div>
+              <div class="mm-branch-items">Imagery (senses)<br>Symbolism<br>Irony<br>Oxymoron</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📖 Structure</div>
+              <div class="mm-branch-items">Enjambment<br>Stanza<br>Rhyme scheme<br>Narrative</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch8-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Personification <span class="kw-imp">★ PNST</span></div><div class="kw-def">Non-living को human qualities। "Evening invade" (evening = human invader)। "Fortune smiled"।</div></div>
+          <div class="kw-item"><div class="kw-term">Alliteration <span class="kw-imp">★ PNST</span></div><div class="kw-def">Same initial consonant repeat। "Peter Piper picked peppers।" Vowel की repetition = Assonance।</div></div>
+          <div class="kw-item"><div class="kw-term">Oxymoron <span class="kw-imp">★ PNST</span></div><div class="kw-def">दो opposite words एक साथ। Deafening silence, Living death, Sweet sorrow, Bittersweet।</div></div>
+          <div class="kw-item"><div class="kw-term">Imagery</div><div class="kw-def">5 senses (sight, sound, smell, touch, taste) appeal। Vivid description। "Sunless sea" = visual imagery।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH9: VOCABULARY ===== -->
+  <div class="ch-item" id="ch9">
+    <div class="ch-header" onclick="toggleCh('ch9')">
+      <div class="ch-num">09</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="शब्द भंडार (Vocabulary)" data-en="Vocabulary Building">शब्द भंडार (Vocabulary)</div>
+        <div class="ch-tag">Synonyms | Antonyms | Idioms | Word Formation | One-Word Substitution</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch9','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch9','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch9','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch9-sum">
+        <div class="sum-overview">Vocabulary PNST में synonym, antonym, one-word substitution, और idiom के रूप में पूछी जाती है।</div>
+        <div class="sum-h">🔡 Important Synonyms & Antonyms</div>
+        <table class="gram-table">
+          <tr><th>Word</th><th>Synonym</th><th>Antonym</th><th>Hindi</th></tr>
+          <tr><td class="hi">Alienation</td><td>isolation, estrangement</td><td>belonging, inclusion</td><td>अलगाव</td></tr>
+          <tr><td class="hi">Melancholy</td><td>sadness, gloom, sorrow</td><td>joy, happiness</td><td>उदासी</td></tr>
+          <tr><td class="hi">Eloquence</td><td>fluency, expressiveness</td><td>inarticulateness</td><td>वाकपटुता</td></tr>
+          <tr><td class="hi">Contemplate</td><td>ponder, consider, reflect</td><td>ignore, overlook</td><td>विचार करना</td></tr>
+          <tr><td class="hi">Diligent</td><td>hardworking, assiduous</td><td>lazy, idle</td><td>परिश्रमी</td></tr>
+          <tr><td class="hi">Benevolent</td><td>kind, generous, charitable</td><td>malevolent, cruel</td><td>दयालु</td></tr>
+          <tr><td class="hi">Ephemeral</td><td>temporary, transient</td><td>permanent, eternal</td><td>क्षणिक</td></tr>
+          <tr><td class="hi">Taciturn</td><td>silent, uncommunicative</td><td>talkative, loquacious</td><td>मितभाषी</td></tr>
+          <tr><td class="hi">Ambiguous</td><td>unclear, vague</td><td>clear, definite</td><td>अस्पष्ट</td></tr>
+          <tr><td class="hi">Conspicuous</td><td>obvious, prominent</td><td>inconspicuous, hidden</td><td>स्पष्ट/प्रमुख</td></tr>
+        </table>
+        <div class="sum-h">💬 Important Idioms & Phrases</div>
+        <table class="gram-table">
+          <tr><th>Idiom</th><th>Meaning</th><th>Hindi</th></tr>
+          <tr><td>Break the ice</td><td>Start conversation</td><td>बातचीत शुरू करना</td></tr>
+          <tr><td>In the long run</td><td>Eventually / over time</td><td>अंत में / दीर्घकाल में</td></tr>
+          <tr><td>Burn the midnight oil</td><td>Work very late at night</td><td>देर रात तक काम करना</td></tr>
+          <tr><td>A blessing in disguise</td><td>Good that seems bad initially</td><td>छिपा हुआ वरदान</td></tr>
+          <tr><td>Hit the nail on the head</td><td>Say exactly right thing</td><td>सटीक बात कहना</td></tr>
+          <tr><td>Once in a blue moon</td><td>Very rarely</td><td>कभी-कभार</td></tr>
+          <tr><td>Let the cat out of the bag</td><td>Reveal a secret</td><td>राज़ खोल देना</td></tr>
+          <tr><td>Bite the bullet</td><td>Endure a painful situation</td><td>कठिनाई सहना</td></tr>
+          <tr><td>Cost an arm and a leg</td><td>Very expensive</td><td>बहुत महंगा</td></tr>
+          <tr><td>Piece of cake</td><td>Very easy</td><td>बहुत आसान</td></tr>
+        </table>
+        <div class="sum-h">🔤 One-Word Substitution</div>
+        <table class="gram-table">
+          <tr><th>Phrase</th><th>One Word</th></tr>
+          <tr><td>One who loves books</td><td>Bibliophile</td></tr>
+          <tr><td>Fear of water</td><td>Hydrophobia</td></tr>
+          <tr><td>One who eats only plants</td><td>Vegetarian / Herbivore</td></tr>
+          <tr><td>Science of insects</td><td>Entomology</td></tr>
+          <tr><td>Study of stars</td><td>Astronomy</td></tr>
+          <tr><td>One who can speak two languages</td><td>Bilingual</td></tr>
+          <tr><td>Words written on a tomb</td><td>Epitaph</td></tr>
+          <tr><td>That which cannot be corrected</td><td>Incorrigible</td></tr>
+          <tr><td>Science of the human mind</td><td>Psychology</td></tr>
+          <tr><td>One who does good to others</td><td>Philanthropist</td></tr>
+        </table>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Ephemeral = short-lived (antonym = permanent)</li>
+            <li>Benevolent = kind (antonym = malevolent)</li>
+            <li>Break the ice = start conversation</li>
+            <li>Bibliophile = book lover | Hydrophobia = fear of water</li>
+            <li>Taciturn = silent/not talkative (antonym = loquacious)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch9-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📖 Vocabulary</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">↔️ Synonyms</div>
+              <div class="mm-branch-items">Melancholy=sadness<br>Eloquence=fluency<br>Diligent=hardworking<br>Ephemeral=temporary</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">↕️ Antonyms</div>
+              <div class="mm-branch-items">Benevolent↔Malevolent<br>Taciturn↔Loquacious<br>Ephemeral↔Eternal<br>Ambiguous↔Clear</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">💬 Idioms</div>
+              <div class="mm-branch-items">Break the ice<br>Blue moon (rarely)<br>Burn midnight oil<br>Blessing in disguise</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔠 One-Word</div>
+              <div class="mm-branch-items">Bibliophile (books)<br>Hydrophobia (water)<br>Epitaph (tomb)<br>Philanthropist</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch9-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Ephemeral <span class="kw-imp">★ PNST</span></div><div class="kw-def">Short-lived, temporary। Synonyms: transient, fleeting। Antonym: permanent, eternal। Youth is ephemeral।</div></div>
+          <div class="kw-item"><div class="kw-term">Loquacious vs Taciturn <span class="kw-imp">★ PNST</span></div><div class="kw-def">Loquacious = बहुत बोलने वाला (talkative)। Taciturn = कम बोलने वाला (silent)। ये antonyms हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Idiom vs Phrase</div><div class="kw-def">Idiom = Fixed expression जिसका literal meaning अलग है। "Break a leg" = Good luck (not literally break!)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH10: SENTENCE STRUCTURE ===== -->
+  <div class="ch-item" id="ch10">
+    <div class="ch-header" onclick="toggleCh('ch10')">
+      <div class="ch-num">10</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वाक्य संरचना" data-en="Sentence Structure">वाक्य संरचना (Sentence Structure)</div>
+        <div class="ch-tag">Simple | Compound | Complex | Clauses | Conjunctions</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch10','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch10','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch10','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch10-sum">
+        <div class="sum-overview">Sentence Structure grammar का important part है। Simple, Compound, Complex sentences को identify करना और बनाना आना चाहिए।</div>
+        <div class="sum-h">📐 Types of Sentences</div>
+        <ul class="sum-list">
+          <li><b>Simple Sentence:</b> एक Subject + एक Predicate (1 independent clause) — She was tired.</li>
+          <li><b>Compound Sentence:</b> 2 Independent clauses + Coordinating conjunction (FANBOYS) — She was tired, <b>but</b> she continued.</li>
+          <li><b>Complex Sentence:</b> 1 Main clause + 1 Subordinate clause — <b>Although</b> she was tired, she continued.</li>
+          <li><b>Compound-Complex:</b> Compound + Complex combined — She sat and watched, although she was tired.</li>
+        </ul>
+        <div class="sum-h">🔗 Types of Clauses</div>
+        <ul class="sum-list">
+          <li><b>Noun Clause:</b> Sentence में noun का काम करे — <b>That she was tired</b> is clear. (Subject)</li>
+          <li><b>Adjective Clause:</b> Noun को modify करे (who, which, that) — The book <b>that I read</b> was excellent.</li>
+          <li><b>Adverb Clause:</b> Verb को modify करे — She left <b>before he arrived</b>.</li>
+        </ul>
+        <div class="sum-h">🔗 Conjunctions की Categories</div>
+        <table class="gram-table">
+          <tr><th>Type</th><th>Conjunctions</th><th>Use</th></tr>
+          <tr><td>Time</td><td>when, while, after, before, since, until, as soon as</td><td>Time relation</td></tr>
+          <tr><td>Reason</td><td>because, since, as, for</td><td>Cause/reason</td></tr>
+          <tr><td>Contrast</td><td>although, though, even though, whereas, while</td><td>Opposition</td></tr>
+          <tr><td>Condition</td><td>if, unless, provided, as long as</td><td>Condition</td></tr>
+          <tr><td>Purpose</td><td>so that, in order that, lest</td><td>Purpose/aim</td></tr>
+          <tr><td>Result</td><td>so, therefore, consequently, thus, hence</td><td>Result</td></tr>
+        </table>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>FANBOYS = For, And, Nor, But, Or, Yet, So (Coordinating conjunctions)</li>
+            <li>Although/Though = Contrast (two clauses present)</li>
+            <li>Because/Since/As = Reason</li>
+            <li>Unless = If...not (condition)</li>
+            <li>Adjective clause = who, which, that (relative pronouns)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch10-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📐 Sentence Structure</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">📝 Types</div>
+              <div class="mm-branch-items">Simple (1 clause)<br>Compound (FANBOYS)<br>Complex (subordinate)<br>Compound-Complex</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔑 Clauses</div>
+              <div class="mm-branch-items">Noun clause<br>Adjective clause<br>Adverb clause<br>who/which/that</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔗 Conjunctions</div>
+              <div class="mm-branch-items">FANBOYS (coord.)<br>although (contrast)<br>because (reason)<br>if/unless (condition)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch10-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">FANBOYS <span class="kw-imp">★ PNST</span></div><div class="kw-def">Coordinating Conjunctions: For, And, Nor, But, Or, Yet, So। Independent clauses join करते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Although vs Despite</div><div class="kw-def">Although + Clause: Although she was tired, she worked। Despite/In spite of + Noun/Gerund: Despite her tiredness, she worked।</div></div>
+          <div class="kw-item"><div class="kw-term">Unless = If...not <span class="kw-imp">★ PNST</span></div><div class="kw-def">Unless you work hard, you will fail = If you do not work hard, you will fail। Negative condition।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH11: DEGREES OF COMPARISON ===== -->
+  <div class="ch-item" id="ch11">
+    <div class="ch-header" onclick="toggleCh('ch11')">
+      <div class="ch-num">11</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="तुलना की कोटियाँ" data-en="Degrees of Comparison">तुलना की कोटियाँ (Degrees of Comparison)</div>
+        <div class="ch-tag">Positive | Comparative | Superlative | Transformation</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch11','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch11','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch11','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch11-sum">
+        <div class="sum-overview">Adjectives और Adverbs की 3 degrees होती हैं। PNST में transformation between degrees बहुत पूछी जाती है।</div>
+        <div class="sum-h">📊 Degrees Table</div>
+        <table class="gram-table">
+          <tr><th>Positive</th><th>Comparative</th><th>Superlative</th></tr>
+          <tr><td>tall</td><td>taller</td><td>tallest</td></tr>
+          <tr><td>beautiful</td><td>more beautiful</td><td>most beautiful</td></tr>
+          <tr><td>good</td><td>better</td><td>best</td></tr>
+          <tr><td>bad</td><td>worse</td><td>worst</td></tr>
+          <tr><td>little</td><td>less</td><td>least</td></tr>
+          <tr><td>much/many</td><td>more</td><td>most</td></tr>
+          <tr><td>far</td><td>farther/further</td><td>farthest/furthest</td></tr>
+          <tr><td>old</td><td>older/elder</td><td>oldest/eldest</td></tr>
+        </table>
+        <div class="sum-h">🔄 Transformation Rules</div>
+        <ul class="sum-list">
+          <li><b>Positive → Comparative:</b> No other + Comparative + than — She is taller than any other girl in class.</li>
+          <li><b>Comparative → Superlative:</b> The + Superlative — She is the tallest girl in class.</li>
+          <li><b>Superlative → Positive:</b> No other... as + Positive + as — No other girl is as tall as she.</li>
+        </ul>
+        <div class="eg-box">
+          <div class="eg-hi">Sachin is the greatest cricketer. (Superlative)</div>
+          <div class="eg-en">= No other cricketer is as great as Sachin. (Positive)<br>= Sachin is greater than any other cricketer. (Comparative)</div>
+        </div>
+        <div class="sum-h">⚠️ Common Errors in Comparison</div>
+        <ul class="sum-list">
+          <li>"More taller" / "Most tallest" ❌ — Never use "more/most" with -er/-est forms</li>
+          <li>"Elder" = family members only | "Older" = general comparison</li>
+          <li>"Between" = 2 things | "Among" = 3+ things</li>
+          <li>Adjective + -er + than (not then): She is taller <b>than</b> him (not "then")</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Superlative → "the" + Adjective + est</li>
+            <li>More than 2 syllables → more/most</li>
+            <li>Elder = family only | Older = general</li>
+            <li>Good→Better→Best | Bad→Worse→Worst</li>
+            <li>Between (2) vs Among (3+)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch11-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">📊 Degrees of Comparison</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">1️⃣ Positive</div>
+              <div class="mm-branch-items">No comparison<br>as...as<br>She is tall.<br>No other...as...as</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">2️⃣ Comparative</div>
+              <div class="mm-branch-items">-er/more+adj<br>...than...<br>She is taller.<br>No other...than</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">3️⃣ Superlative</div>
+              <div class="mm-branch-items">the + -est/most<br>She is tallest.<br>Good→Better→Best<br>Bad→Worse→Worst</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch11-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Irregular Comparatives <span class="kw-imp">★ PNST</span></div><div class="kw-def">Good→Better→Best | Bad→Worse→Worst | Little→Less→Least | Many/Much→More→Most।</div></div>
+          <div class="kw-item"><div class="kw-term">Positive as Superlative <span class="kw-imp">★ PNST</span></div><div class="kw-def">No other + Noun + is as + Positive + as। "No other student is as intelligent as Riya" = Riya is the most intelligent।</div></div>
+          <div class="kw-item"><div class="kw-term">Elder vs Older</div><div class="kw-def">Elder = family members के बीच। "My elder brother." Older = general comparison। "She is older than him।"</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH12: QUICK REVISION (PNST SPECIAL) ===== -->
+  <div class="ch-item" id="ch12">
+    <div class="ch-header" onclick="toggleCh('ch12')">
+      <div class="ch-num">12</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="⭐ PNST Quick Revision" data-en="⭐ PNST Quick Revision">⭐ PNST Quick Revision — Most Asked</div>
+        <div class="ch-tag">Most Important | Common Errors | Quick Rules | Exam Tips</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch12','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch12','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch12','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch12-sum">
+        <div class="sum-overview">PNST 2026 English ke liye — yeh 20 rules sabse important hain. Exam se pehle zaroor padho!</div>
+        <div class="sum-h">⚡ Top 20 PNST Grammar Rules</div>
+        <ul class="sum-list">
+          <li><b>1.</b> He/She/It → Simple Present → always add -s/-es</li>
+          <li><b>2.</b> Did/Does/Do + V₁ (base form always) → "He did not went" ❌ → "He did not go" ✅</li>
+          <li><b>3.</b> An = vowel SOUND (an hour ✅, an honest ✅, a university ✅)</li>
+          <li><b>4.</b> Since = point | For = duration (with perfect tenses)</li>
+          <li><b>5.</b> Stative verbs: No -ing form (know, love, want, see, understand)</li>
+          <li><b>6.</b> "A number of" → Plural | "The number of" → Singular</li>
+          <li><b>7.</b> Each/Every/Either/Neither → always Singular verb</li>
+          <li><b>8.</b> More + Comparative ❌ (more taller, most tallest)</li>
+          <li><b>9.</b> Passive: Object Pronoun → he→him, she→her, they→them, I→me, we→us</li>
+          <li><b>10.</b> Universal truth: No backshift in indirect speech</li>
+          <li><b>11.</b> Elder = family | Older = general | Between=2 | Among=3+</li>
+          <li><b>12.</b> Discuss, mention, describe, reach → No preposition after them</li>
+          <li><b>13.</b> Married to (not with) | Die of (disease) | Good at (not in)</li>
+          <li><b>14.</b> Its = possession | It's = it is | Their ≠ There ≠ They're</li>
+          <li><b>15.</b> Redundancy: Return back ❌, Repeat again ❌, Cousin brother ❌</li>
+          <li><b>16.</b> Good→Better→Best | Bad→Worse→Worst | Little→Less→Least</li>
+          <li><b>17.</b> Conditional: If + Simple Past → would + V₁</li>
+          <li><b>18.</b> Imperative Passive: Let + Object + be + V₃</li>
+          <li><b>19.</b> Intransitive verbs → No passive voice</li>
+          <li><b>20.</b> Simile = like/as | Metaphor = direct (no like/as)</li>
+        </ul>
+        <div class="sum-h">📌 Commonly Confused Words</div>
+        <table class="gram-table">
+          <tr><th>Word 1</th><th>Word 2</th><th>Difference</th></tr>
+          <tr><td>Affect (v)</td><td>Effect (n)</td><td>Affect = कार्य करना | Effect = परिणाम</td></tr>
+          <tr><td>Accept</td><td>Except</td><td>Accept = स्वीकार | Except = छोड़कर</td></tr>
+          <tr><td>Advice (n)</td><td>Advise (v)</td><td>Advice = सलाह (noun) | Advise = सलाह देना</td></tr>
+          <tr><td>Principle (n)</td><td>Principal (n/adj)</td><td>Principle = नियम | Principal = मुख्य/प्रधानाचार्य</td></tr>
+          <tr><td>Stationary (adj)</td><td>Stationery (n)</td><td>Stationary = रुका हुआ | Stationery = लेखन सामग्री</td></tr>
+          <tr><td>Complement</td><td>Compliment</td><td>Complement = पूरक | Compliment = तारीफ</td></tr>
+          <tr><td>Lose (v)</td><td>Loose (adj)</td><td>Lose = हारना/खोना | Loose = ढीला</td></tr>
+          <tr><td>Than</td><td>Then</td><td>Than = comparison | Then = time</td></tr>
+        </table>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ Exam Strategy — PNST English</div>
+          <ul>
+            <li>Error Correction: पहले verb check करो (tense + agreement)</li>
+            <li>Comprehension: Questions पहले पढ़ो, फिर passage</li>
+            <li>Vocabulary: Context से meaning guess करो</li>
+            <li>Narration: Reporting verb past है? → Backshift करो</li>
+            <li>Voice: Object को subject बनाओ, verb को be+V₃ करो</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch12-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⭐ PNST English Quick Revision</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚡ Tense Errors</div>
+              <div class="mm-branch-items">He/She/It +s/es<br>Did+V₁ (not V₂)<br>Stative verbs<br>Since/For</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🔄 Voice/Narration</div>
+              <div class="mm-branch-items">Pronoun change<br>Backshift<br>Universal=no shift<br>Imperative passive</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">⚠️ Common Errors</div>
+              <div class="mm-branch-items">More+er ❌<br>Return back ❌<br>Discuss about ❌<br>Cousin brother ❌</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🎯 Exam Tips</div>
+              <div class="mm-branch-items">Check verb first<br>Read Q before passage<br>Context for vocab<br>Complete sentences</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch12-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Affect vs Effect <span class="kw-imp">★ PNST</span></div><div class="kw-def">Affect = Verb (to affect = प्रभावित करना)। Effect = Noun (result = परिणाम)। Smoking affects health. The effect is harmful।</div></div>
+          <div class="kw-item"><div class="kw-term">Stationary vs Stationery <span class="kw-imp">★ PNST</span></div><div class="kw-def">Stationary (adj) = not moving (रुका हुआ)। Stationery (n) = pens, papers (लेखन सामग्री)।</div></div>
+          <div class="kw-item"><div class="kw-term">Principle vs Principal <span class="kw-imp">★ PNST</span></div><div class="kw-def">Principle = rule/belief (सिद्धांत)। Principal = head of school / main (प्रधान)।</div></div>
+          <div class="kw-item"><div class="kw-term">Then vs Than</div><div class="kw-def">Than = comparison में (She is taller than me)। Then = time/sequence (First this, then that)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end wrap -->
+
+<script>
+let lang='hi', isDark=true;
+function setLang(l){
+  lang=l;
+  document.getElementById('btnHi').classList.toggle('active',l==='hi');
+  document.getElementById('btnEn').classList.toggle('active',l==='en');
+  document.querySelectorAll('[data-hi]').forEach(el=>{
+    const v=el.getAttribute('data-'+l); if(v) el.textContent=v;
+  });
+  document.getElementById('engP').textContent=l==='hi'
+    ?'PNST 2026 ke liye Complete English Grammar — Tenses, Voice, Narration, Articles, Vocabulary, Comprehension — Hindi + English dono mein!'
+    :'Complete English Grammar for PNST 2026 — Tenses, Voice, Narration, Articles, Vocabulary & Comprehension!';
+}
+function toggleTheme(){
+  isDark=!isDark;
+  const t=isDark?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  try{localStorage.setItem('pnst_theme',t);}catch(e){}
+}
+function toggleCh(id){
+  const el=document.getElementById(id);
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.ch-item.open').forEach(e=>{if(e.id!==id)e.classList.remove('open');});
+  el.classList.toggle('open',!isOpen);
+  if(!isOpen) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function showTab(chId,tab){
+  const body=document.getElementById(chId).querySelector('.ch-body');
+  body.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelector('#'+chId+'-'+tab).classList.add('active');
+  const idx=['sum','mm','kw'].indexOf(tab);
+  body.querySelectorAll('.tab-btn')[idx].classList.add('active');
+}
+window.addEventListener('load',()=>{
+  let t='dark';
+  try{t=localStorage.getItem('pnst_theme')||'dark';}catch(e){}
+  isDark=t==='dark';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+});
+</script>
+</body>
+</html>

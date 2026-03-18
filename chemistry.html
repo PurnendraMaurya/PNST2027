@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chemistry Notes — PNST 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020818;--bg2:#060e24;--bg3:#0a1628;
+  --card:rgba(255,255,255,0.05);--card-border:rgba(255,255,255,0.1);--card-hover:rgba(255,255,255,0.08);
+  --tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --amber:#f59e0b;--blue:#3b82f6;--cyan:#06b6d4;--green:#22c55e;--purple:#a855f7;--pink:#ec4899;--red:#ef4444;
+  --chem:#f59e0b;
+  --fn:'Noto Sans',sans-serif;--fn2:'Rajdhani',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#fffbf0;--bg2:#fff8e7;--bg3:#fff;
+  --card:rgba(255,255,255,.9);--card-border:rgba(245,158,11,.2);--card-hover:#fff;
+  --tx:#1e293b;--tx2:#475569;--tx3:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
+[data-theme="dark"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 25% 20%,rgba(245,158,11,.25) 0%,transparent 100%),
+    radial-gradient(2px 2px at 75% 40%,rgba(6,182,212,.15) 0%,transparent 100%),
+    radial-gradient(1px 1px at 55% 70%,rgba(255,255,255,.12) 0%,transparent 100%);
+}
+
+.hdr{
+  background:linear-gradient(135deg,rgba(2,8,24,.96),rgba(6,14,36,.96));
+  backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);
+  padding:10px 16px;display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:100;
+}
+[data-theme="light"] .hdr{background:rgba(255,251,240,.96)}
+.hdr-logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--amber),#d97706);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 14px rgba(245,158,11,.35)}
+.hdr-name{font-family:var(--fn2);font-size:1rem;font-weight:700;background:linear-gradient(90deg,var(--amber),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-sub{font-size:.65rem;color:var(--tx2)}
+.hdr-right{display:flex;gap:6px;align-items:center;margin-left:auto;flex-shrink:0}
+.lang-btn,.theme-btn{padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s}
+.lang-btn.active{background:linear-gradient(135deg,var(--amber),var(--cyan));color:#fff;border-color:transparent}
+.btn-back{padding:5px 11px;border-radius:8px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;flex-shrink:0;text-decoration:none;display:inline-block}
+
+.wrap{max-width:520px;margin:0 auto;padding:14px}
+
+.chem-hero{
+  background:linear-gradient(135deg,#1a0f00,#3d2200,#5a3300);
+  border:1px solid rgba(245,158,11,.25);border-radius:20px;
+  padding:20px 16px;margin-bottom:16px;position:relative;overflow:hidden;
+  box-shadow:0 0 40px rgba(245,158,11,.08);
+}
+.chem-hero::before{content:'';position:absolute;top:-30%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse,rgba(245,158,11,.08) 0%,transparent 65%);pointer-events:none}
+.chem-badge{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.35);border-radius:16px;font-size:.65rem;font-weight:700;padding:3px 12px;margin-bottom:10px;color:var(--amber);letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1}
+.chem-h{font-family:var(--fn2);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.chem-h span{background:linear-gradient(90deg,var(--amber),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.chem-p{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;position:relative;z-index:1}
+.chem-stats{display:flex;gap:12px;margin-top:14px;position:relative;z-index:1;flex-wrap:wrap}
+.cstat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 12px;text-align:center}
+.cstat-n{font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:var(--amber)}
+.cstat-l{font-size:.6rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+.sec-t{font-size:.7rem;font-weight:800;color:var(--tx2);margin:16px 0 9px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.sec-t::after{content:'';flex:1;height:1px;background:var(--card-border)}
+
+/* Part divider */
+.part-div{
+  background:linear-gradient(135deg,rgba(245,158,11,.1),rgba(6,182,212,.08));
+  border:1px solid rgba(245,158,11,.2);border-radius:12px;
+  padding:10px 14px;margin-bottom:12px;
+  font-family:var(--fn2);font-size:.88rem;font-weight:700;color:var(--amber);
+  display:flex;align-items:center;gap:8px;
+}
+
+.ch-item{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:16px;margin-bottom:10px;overflow:hidden;transition:all .25s}
+.ch-item.open{border-color:rgba(245,158,11,.4);box-shadow:0 4px 24px rgba(245,158,11,.08)}
+.ch-header{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s;user-select:none}
+.ch-header:hover{background:var(--card-hover)}
+.ch-num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--amber),#d97706);display:flex;align-items:center;justify-content:center;font-family:var(--fn2);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(245,158,11,.3)}
+.ch-info{flex:1;min-width:0}
+.ch-name{font-family:var(--fn2);font-size:.95rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-tag{font-size:.62rem;color:var(--tx2);margin-top:2px}
+.ch-arr{color:var(--tx2);font-size:.9rem;flex-shrink:0;transition:transform .3s}
+.ch-item.open .ch-arr{transform:rotate(180deg)}
+.ch-body{display:none;border-top:1px solid var(--card-border)}
+.ch-item.open .ch-body{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--card-border)}
+.tab-btn{flex:1;padding:10px 6px;background:none;border:none;color:var(--tx2);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;border-bottom:2px solid transparent;position:relative;bottom:-1px}
+.tab-btn.active{color:var(--amber);border-bottom-color:var(--amber)}
+.tab-pane{display:none;padding:14px}
+.tab-pane.active{display:block;animation:fadeIn .2s ease}
+
+.sum-overview{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;line-height:1.65;color:var(--tx)}
+.sum-h{font-family:var(--fn2);font-size:.82rem;font-weight:700;color:var(--amber);margin:12px 0 6px;display:flex;align-items:center;gap:6px}
+.sum-h::after{content:'';flex:1;height:1px;background:rgba(245,158,11,.2)}
+.sum-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sum-list li{font-size:.8rem;line-height:1.55;color:var(--tx);padding-left:14px;position:relative}
+.sum-list li::before{content:'▸';position:absolute;left:0;color:var(--amber);font-size:.7rem;top:2px}
+.sum-list li b{color:var(--tx);font-weight:700}
+
+/* Formula box */
+.formula-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:10px;padding:10px 14px;margin:8px 0;font-family:monospace;font-size:.82rem;color:var(--blue)}
+.formula-box .flabel{font-family:var(--fn2);font-size:.75rem;color:var(--tx2);margin-bottom:4px;font-family:var(--fn)}
+
+.mm-wrap{overflow-x:auto;padding:10px 0}
+.mm{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:280px}
+.mm-center{background:linear-gradient(135deg,var(--amber),#d97706);color:#fff;border-radius:14px;padding:10px 18px;font-family:var(--fn2);font-size:.9rem;font-weight:700;text-align:center;box-shadow:0 4px 18px rgba(245,158,11,.3);position:relative;z-index:2}
+.mm-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%}
+.mm-branch{border-radius:12px;padding:8px 10px;font-size:.72rem;font-weight:700;text-align:center;min-width:110px;transition:transform .2s;cursor:pointer}
+.mm-branch:hover{transform:translateY(-2px)}
+.mm-branch-title{font-size:.76rem;font-weight:800;margin-bottom:4px}
+.mm-branch-items{font-size:.65rem;opacity:.85;line-height:1.5}
+.mm-connector{width:2px;height:16px;background:linear-gradient(to bottom,var(--amber),rgba(245,158,11,.3));margin:0 auto}
+
+.kw-grid{display:flex;flex-direction:column;gap:8px}
+.kw-item{background:rgba(255,255,255,.03);border:1px solid var(--card-border);border-radius:10px;padding:10px 12px}
+.kw-term{font-family:var(--fn2);font-size:.84rem;font-weight:700;color:var(--amber);margin-bottom:4px}
+.kw-def{font-size:.76rem;line-height:1.5;color:var(--tx2)}
+.kw-imp{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:.58rem;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+.pnst-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;margin-top:10px}
+.pnst-box-t{font-family:var(--fn2);font-size:.78rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.pnst-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pnst-box ul li{font-size:.75rem;color:var(--tx2);padding-left:14px;position:relative}
+.pnst-box ul li::before{content:'★';position:absolute;left:0;color:var(--amber);font-size:.6rem;top:2px}
+
+/* Reaction table */
+.rxn-table{width:100%;border-collapse:collapse;font-size:.75rem;margin:8px 0}
+.rxn-table th{background:rgba(245,158,11,.15);color:var(--amber);padding:6px 8px;text-align:left;font-weight:700;font-size:.7rem}
+.rxn-table td{padding:6px 8px;border-bottom:1px solid var(--card-border);color:var(--tx2);line-height:1.4}
+.rxn-table tr:last-child td{border-bottom:none}
+
+.tab-btn{font-size:.65rem;padding:8px 4px}}
+/* ============================================================
+   COMPLETE RESPONSIVE CSS — All Devices
+   Mobile (320-480) | Tablet (481-768) | Desktop (769+)
+   ============================================================ */
+
+/* ---- Fluid base ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,table,video{max-width:100%}
+
+/* ---- Wrap: fluid on all screens ---- */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:14px 12px}
+
+/* ---- Tables: horizontal scroll on small screens ---- */
+.gk-table,.gram-table,.rxn-table,.ptbl{
+  display:block;width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
+}
+.gk-table td,.gram-table td,.rxn-table td{white-space:normal;min-width:80px}
+.gk-table th,.gram-table th,.rxn-table th{white-space:nowrap}
+
+/* ---- Mind map: wrap branches on small screens ---- */
+.mm-branches{justify-content:center}
+.mm-branch{min-width:100px;flex:1 1 100px;max-width:140px}
+.mm-center{padding:9px 14px;font-size:.85rem}
+
+/* ---- Chapter headers: prevent overflow ---- */
+.ch-name{font-size:.92rem;white-space:normal;line-height:1.3}
+.ch-tag{white-space:normal;line-height:1.4}
+
+/* ---- Tab buttons: equal width ---- */
+.tab-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+.tab-btn{flex-shrink:0;min-width:0;padding:10px 8px;font-size:.7rem}
+
+/* ---- Hero sections ---- */
+.bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:18px 14px}
+.bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.35rem}
+.bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:8px}
+.bstat,.cstat,.pstat,.estat,.gstat{padding:6px 10px}
+
+/* ---- Notes/Subject grid ---- */
+.notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:8px}
+.subj-card{padding:12px 10px 10px}
+
+/* ---- Info row ---- */
+.info-row{grid-template-columns:1fr 1fr;gap:8px}
+.info-card{padding:12px}
+
+/* ---- KW grid items ---- */
+.kw-def,.sum-list li{font-size:.78rem;line-height:1.55}
+
+/* ---- Footer ---- */
+.footer-social{gap:10px}
+.footer-links{gap:5px}
+.footer-link{padding:4px 10px;font-size:.65rem}
+.footer-subjects{gap:5px}
+.fs-tag{font-size:.62rem;padding:3px 8px}
+
+/* ---- Header ---- */
+.hdr{padding:8px 12px;gap:8px}
+.hdr-name{font-size:.95rem}
+.hdr-sub{font-size:.6rem}
+.lang-btn,.theme-btn{padding:4px 8px;font-size:.65rem}
+.btn-back{padding:4px 9px;font-size:.68rem}
+
+/* ---- Test interface ---- */
+.test-hdr{padding:10px 12px}
+.q-wrap{padding:0 12px 130px}
+.q-card{padding:14px 12px}
+.q-text{font-size:.84rem}
+.opt{padding:10px 12px;font-size:.8rem}
+.test-bottom{padding:8px 12px}
+.btn-nav{padding:11px 8px;font-size:.75rem}
+
+/* ---- Bottom nav ---- */
+.bottom-nav{padding:7px 0 11px}
+.bnav-btn{padding:3px 12px}
+.bnav-btn span:first-child{font-size:1.2rem}
+.bnav-btn span:last-child{font-size:.58rem}
+
+/* ============================================================
+   SMALL PHONES (max 380px)
+   ============================================================ */
+@media(max-width:380px){
+  .wrap{padding:10px 10px}
+  .hdr{padding:8px 10px;gap:6px}
+  .hdr-logo{width:34px;height:34px;font-size:16px}
+  .hdr-name{font-size:.88rem}
+  .hdr-right{gap:4px}
+  .lang-btn,.theme-btn{padding:3px 7px;font-size:.62rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.2rem}
+  .hero-h{font-size:1.3rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1rem}
+  .hs-l,.bstat-l,.cstat-l,.pstat-l,.estat-l,.gstat-l{font-size:.58rem}
+
+  .ch-num{width:28px;height:28px;font-size:.75rem}
+  .ch-name{font-size:.85rem}
+  .ch-tag{font-size:.58rem}
+  .ch-header{padding:11px 10px;gap:8px}
+
+  .tab-btn{font-size:.65rem;padding:8px 5px}
+  .tab-pane{padding:11px 10px}
+
+  .sum-h{font-size:.78rem}
+  .sum-list li{font-size:.75rem}
+  .sum-overview{font-size:.78rem;padding:10px 11px}
+  .kw-term{font-size:.8rem}
+  .kw-def{font-size:.73rem}
+
+  .mm-branch{min-width:90px;max-width:130px;padding:7px 8px}
+  .mm-branch-title{font-size:.7rem}
+  .mm-branch-items{font-size:.6rem}
+  .mm-center{font-size:.8rem;padding:8px 12px}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .subj-card{padding:10px 9px 9px}
+  .sj-icon{font-size:1.5rem;margin-bottom:5px}
+  .sj-name{font-size:.82rem}
+  .sj-desc{font-size:.62rem}
+  .nc-name{font-size:.85rem}
+  .nc-desc{font-size:.62rem}
+
+  .info-row{gap:7px}
+  .ic-val{font-size:1.1rem}
+  .ic-icon{font-size:1.2rem}
+
+  .hero-stats{gap:0}
+  .hs{padding:8px 0}
+  .btn-start,.btn-hero{padding:12px;font-size:.92rem}
+
+  .pnst-box ul li,.pnst-box-t{font-size:.7rem}
+  .pnst-box{padding:9px 10px}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.68rem;padding:5px 6px}
+
+  .q-card{padding:12px 10px}
+  .q-text{font-size:.8rem}
+  .opt{padding:9px 10px;font-size:.77rem;gap:8px}
+  .opt-letter{width:22px;height:22px;font-size:.65rem}
+
+  .timer-circle{width:40px;height:40px}
+  .timer-num{font-size:.72rem}
+  .test-title{font-size:.9rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .footer-brand .footer-logo{width:42px;height:42px;font-size:18px}
+  .footer-name{font-size:1rem}
+  .footer-tagline{font-size:.65rem}
+  .social-btn{width:40px;height:40px;border-radius:10px}
+  .footer-copy{font-size:.62rem}
+
+  .qn-btn{width:28px;height:28px;font-size:.67rem;border-radius:7px}
+  .q-nav{padding:10px 11px;gap:5px;margin:10px 12px}
+
+  .bottom-nav{padding:6px 0 10px}
+  .bnav-btn{padding:3px 10px}
+  .bnav-btn span:first-child{font-size:1.1rem}
+  .bnav-btn span:last-child{font-size:.55rem}
+
+  .result-hero{padding:22px 14px}
+  .score-ring{width:100px;height:100px}
+  .score-num{font-size:1.75rem}
+  .result-grade{font-size:1.25rem}
+  .analysis-grid{gap:6px}
+  .an-val{font-size:1.1rem}
+  .an-lbl{font-size:.58rem}
+}
+
+/* ============================================================
+   MEDIUM PHONES (381px - 480px)
+   ============================================================ */
+@media(min-width:381px) and (max-width:480px){
+  .wrap{padding:12px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.4rem}
+  .ch-name{font-size:.9rem}
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.7rem;padding:5px 7px}
+}
+
+/* ============================================================
+   TABLETS (481px - 768px)
+   ============================================================ */
+@media(min-width:481px) and (max-width:768px){
+  .wrap{max-width:600px;padding:16px}
+  .hdr{padding:10px 20px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.6rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:14px}
+  .bstat,.cstat,.pstat,.estat,.gstat{padding:9px 16px}
+
+  .hero-h{font-size:1.6rem}
+  .hs-n,.bstat-n,.cstat-n{font-size:1.3rem}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .subj-card{padding:16px 14px 13px}
+  .sj-icon{font-size:2rem}
+  .sj-name{font-size:.95rem}
+
+  .ch-name{font-size:1rem}
+  .ch-num{width:34px;height:34px}
+  .tab-btn{font-size:.75rem;padding:11px 8px}
+  .tab-pane{padding:16px}
+
+  .sum-h{font-size:.85rem}
+  .sum-list li{font-size:.82rem}
+  .kw-term{font-size:.88rem}
+  .kw-def{font-size:.8rem}
+  .sum-overview{font-size:.85rem}
+
+  .mm-branch{min-width:120px;max-width:160px;padding:10px 12px}
+  .mm-branch-title{font-size:.8rem}
+  .mm-branch-items{font-size:.7rem}
+  .mm-center{font-size:.95rem}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.76rem;padding:7px 9px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.9rem}
+  .opt{font-size:.85rem;padding:12px 14px}
+
+  .footer-links{gap:8px}
+  .footer-link{font-size:.72rem}
+  .social-btn{width:48px;height:48px}
+  .footer-subjects .fs-tag{font-size:.68rem}
+
+  .bottom-nav{padding:8px 0 13px}
+  .bnav-btn{padding:4px 20px}
+}
+
+/* ============================================================
+   DESKTOP (769px - 1024px)
+   ============================================================ */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{max-width:680px;padding:20px}
+  .hdr{padding:12px 24px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.7rem}
+  .hero-h{font-size:1.8rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-card{padding:18px 15px}
+  .note-card-full{grid-column:auto}
+
+  .ch-name{font-size:1.02rem}
+  .tab-btn{font-size:.78rem;padding:11px 10px}
+
+  .sum-list li{font-size:.84rem}
+  .kw-def{font-size:.82rem}
+
+  .mm-branch{min-width:130px;max-width:170px}
+  .mm-center{font-size:1rem}
+
+  .gk-table td,.gram-table td{font-size:.78rem}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .footer-social{gap:14px}
+  .social-btn{width:50px;height:50px;font-size:1.3rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.75rem;padding:6px 14px}
+}
+
+/* ============================================================
+   LARGE DESKTOP (1025px+)
+   ============================================================ */
+@media(min-width:1025px){
+  .wrap{max-width:780px;padding:24px}
+  .hdr{padding:12px 32px}
+  .hdr-name{font-size:1.15rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.85rem}
+  .hero-h{font-size:2rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1.6rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .note-card-full{grid-column:auto}
+  .subj-card{padding:20px 16px}
+  .sj-icon{font-size:2.2rem}
+  .sj-name{font-size:1rem}
+  .nc-name{font-size:1rem}
+
+  .ch-name{font-size:1.05rem}
+  .ch-num{width:36px;height:36px;font-size:.88rem}
+  .tab-btn{font-size:.8rem;padding:12px 12px}
+  .tab-pane{padding:18px}
+
+  .sum-list li{font-size:.86rem}
+  .sum-h{font-size:.88rem}
+  .sum-overview{font-size:.88rem}
+  .kw-term{font-size:.92rem}
+  .kw-def{font-size:.84rem}
+
+  .mm-branch{min-width:140px;max-width:180px;padding:11px 13px}
+  .mm-branch-title{font-size:.85rem}
+  .mm-branch-items{font-size:.73rem}
+  .mm-center{font-size:1.05rem}
+
+  .gk-table td,.gram-table td{font-size:.8rem;padding:8px 10px}
+  .gk-table th,.gram-table th{font-size:.75rem;padding:8px 10px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.95rem}
+  .opt{font-size:.88rem}
+  .score-ring{width:130px;height:130px}
+  .score-num{font-size:2.2rem}
+
+  .footer-social{gap:16px}
+  .social-btn{width:52px;height:52px;font-size:1.4rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.78rem;padding:6px 16px}
+  .fs-tag{font-size:.72rem;padding:5px 12px}
+  .footer-tagline{font-size:.78rem}
+  .footer-copy{font-size:.72rem}
+}
+
+/* ============================================================
+   TOUCH DEVICES — Better tap targets
+   ============================================================ */
+@media(hover:none) and (pointer:coarse){
+  .ch-header{min-height:56px}
+  .tab-btn{min-height:44px}
+  .sj-btn,.btn-nav,.lang-btn,.theme-btn,.btn-back{min-height:40px}
+  .bnav-btn{min-height:48px;padding:6px 12px}
+  .opt{min-height:46px}
+  .qn-btn{width:34px;height:34px}
+  .social-btn{width:48px;height:48px}
+  .footer-link{min-height:36px;display:inline-flex;align-items:center}
+  a{-webkit-tap-highlight-color:rgba(59,130,246,.15)}
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print{
+  .hdr,.bottom-nav,.site-footer,.test-bottom,.loading-overlay,
+  .tab-bar,.ch-arr,.bnav-btn,.btn-back{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body,[data-theme="dark"] body::before{background:white!important;color:black!important}
+  .ch-item{border:1px solid #ccc!important;margin-bottom:8px}
+  .wrap{max-width:100%;padding:0}
+}
+
+/* ============================================================
+   LANDSCAPE PHONE
+   ============================================================ */
+@media(max-width:768px) and (orientation:landscape){
+  .hdr{padding:6px 14px}
+  .hdr-logo{width:32px;height:32px;font-size:15px}
+  .bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:14px 14px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.25rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{margin-top:8px}
+  .bottom-nav{padding:5px 0 8px}
+  .bnav-btn span:first-child{font-size:1rem}
+  .bnav-btn span:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="index.html" class="btn-back">← Back</a>
+  <div class="hdr-logo">⚗️</div>
+  <div>
+    <div class="hdr-name">Chemistry Notes</div>
+    <div class="hdr-sub">NCERT Class 12 | PNST 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="lang-btn active" id="btnHi" onclick="setLang('hi')">हि</button>
+    <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="chem-hero">
+    <div class="chem-badge">✦ NCERT CLASS 12 ✦</div>
+    <div class="chem-h">⚗️ <span>Chemistry</span></div>
+    <div class="chem-p" id="chemP">PNST 2026 ke liye poore 10 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!</div>
+    <div class="chem-stats">
+      <div class="cstat"><div class="cstat-n">10</div><div class="cstat-l">Chapters</div></div>
+      <div class="cstat"><div class="cstat-n">20</div><div class="cstat-l">Marks</div></div>
+      <div class="cstat"><div class="cstat-n">469</div><div class="cstat-l">PYQ Questions</div></div>
+    </div>
+  </div>
+
+  <!-- PART 1 -->
+  <div class="part-div">📘 Part I — Chapters 1 to 5</div>
+
+  <!-- ===== CHAPTER 1: SOLUTIONS ===== -->
+  <div class="ch-item" id="ch1">
+    <div class="ch-header" onclick="toggleCh('ch1')">
+      <div class="ch-num">01</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विलयन" data-en="Solutions">विलयन</div>
+        <div class="ch-tag">Concentration | Raoult's Law | Colligative Properties | Osmosis</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch1','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch1','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch1','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch1-sum">
+        <div class="sum-overview">Solution = Homogeneous mixture of two or more components। Solvent (अधिक मात्रा) + Solute (कम मात्रा)। 9 types of solutions possible (solid, liquid, gas में)।</div>
+        <div class="sum-h">📊 सांद्रता की इकाइयां | Concentration Units</div>
+        <ul class="sum-list">
+          <li><b>Mass %:</b> (mass of solute / mass of solution) × 100</li>
+          <li><b>Mole fraction (χ):</b> χA = nA / (nA + nB). Sum = 1</li>
+          <li><b>Molarity (M):</b> Moles of solute per litre of solution। Temperature dependent</li>
+          <li><b>Molality (m):</b> Moles of solute per kg of solvent। Temperature independent ✓</li>
+          <li><b>Normality (N):</b> Gram equivalents per litre</li>
+          <li><b>ppm:</b> Parts per million — very dilute solutions के लिए</li>
+        </ul>
+        <div class="sum-h">💨 Henry's Law & Raoult's Law</div>
+        <ul class="sum-list">
+          <li><b>Henry's Law:</b> p = KH × χ (Gas की solubility pressure के साथ बढ़ती है)</li>
+          <li>Soft drinks, Scuba diving, Bends (N2 bubbles in blood) → Henry's law</li>
+          <li><b>Raoult's Law:</b> p = p° × χsolvent (Volatile solute के लिए: p = p°A·χA + p°B·χB)</li>
+          <li><b>Ideal solution:</b> Obeys Raoult's law। ΔHmix = 0, ΔVmix = 0 (A-A = A-B interaction)</li>
+          <li><b>+ve deviation:</b> A-B < A-A, B-B interactions। Ethanol + Water। Bp < ideal</li>
+          <li><b>-ve deviation:</b> A-B > A-A, B-B interactions। Chloroform + Acetone। Bp > ideal</li>
+          <li><b>Azeotropes:</b> Constant boiling mixtures। Min bp azeotrope (+ve dev) | Max bp (-ve dev)</li>
+        </ul>
+        <div class="sum-h">🌡️ अणुसंख्यक गुण | Colligative Properties</div>
+        <ul class="sum-list">
+          <li>Depend only on NUMBER of solute particles — not on nature</li>
+          <li><b>Relative lowering of VP:</b> Δp/p° = χsolute</li>
+          <li><b>Elevation of BP (ΔTb):</b> ΔTb = Kb × m (Kb = ebullioscopic constant)</li>
+          <li><b>Depression of FP (ΔTf):</b> ΔTf = Kf × m (Kf = cryoscopic constant)</li>
+          <li>Water: Kb = 0.52 K kg/mol | Kf = 1.86 K kg/mol</li>
+          <li><b>Osmosis:</b> Solvent moves from low conc → high conc through semipermeable membrane</li>
+          <li><b>Osmotic pressure (π):</b> π = CRT = (n/V)RT (van't Hoff equation)</li>
+          <li><b>Reverse osmosis:</b> External pressure > osmotic pressure। Water purification</li>
+          <li><b>Isotonic solutions:</b> Same osmotic pressure। 0.9% NaCl = blood plasma</li>
+        </ul>
+        <div class="sum-h">🔢 van't Hoff Factor (i)</div>
+        <ul class="sum-list">
+          <li>i = observed colligative property / normal colligative property</li>
+          <li>Electrolytes (dissociate): i > 1 (NaCl → i = 2, CaCl₂ → i = 3)</li>
+          <li>Association (like acetic acid in benzene): i < 1</li>
+          <li>Non-electrolyte: i = 1</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Molality = Temperature independent (PNST mein sabse preferred)</li>
+            <li>Osmotic pressure = π = CRT (van't Hoff)</li>
+            <li>0.9% NaCl = Normal saline (isotonic with blood)</li>
+            <li>Kf water = 1.86 | Kb water = 0.52 K kg/mol</li>
+            <li>Henry's law — gas solubility ∝ partial pressure</li>
+            <li>i > 1 → dissociation | i < 1 → association</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch1-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚗️ विलयन (Solutions)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📊 Concentration</div>
+              <div class="mm-branch-items">Molarity (M)<br>Molality (m) ✓T<br>Mole fraction<br>ppm</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📉 Raoult's Law</div>
+              <div class="mm-branch-items">p = p°·χ<br>Ideal solution<br>+ve/-ve deviation<br>Azeotropes</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">💨 Henry's Law</div>
+              <div class="mm-branch-items">p = KH × χ<br>Gas solubility<br>Soft drinks<br>Scuba / Bends</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🌡️ Colligative Props</div>
+              <div class="mm-branch-items">VP lowering<br>ΔTb = Kb·m<br>ΔTf = Kf·m<br>π = CRT</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔢 van't Hoff (i)</div>
+              <div class="mm-branch-items">Dissociation i>1<br>Association i&lt;1<br>NaCl: i=2<br>CaCl₂: i=3</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch1-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Molality (m) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Solute के moles per kg of solvent। Temperature independent — thermodynamic calculations के लिए preferred।</div></div>
+          <div class="kw-item"><div class="kw-term">Raoult's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">Volatile solute: p = p°A·χA + p°B·χB। Non-volatile: p = p°solvent × χsolvent। Ideal solution obeys perfectly।</div></div>
+          <div class="kw-item"><div class="kw-term">Osmotic Pressure (π) <span class="kw-imp">★ PNST</span></div><div class="kw-def">π = CRT = (n/V)RT। Dilute solutions में molar mass निकालने के लिए use। Most sensitive colligative property।</div></div>
+          <div class="kw-item"><div class="kw-term">Azeotrope</div><div class="kw-def">Constant boiling mixture। Distillation से separate नहीं होते। EtOH-Water (95.5%: 4.5%) = Min bp azeotrope।</div></div>
+          <div class="kw-item"><div class="kw-term">van't Hoff Factor (i)</div><div class="kw-def">i = actual particles / formula units। Electrolytes: i > 1। Colligative properties = i × normal value।</div></div>
+          <div class="kw-item"><div class="kw-term">Reverse Osmosis</div><div class="kw-def">External pressure > osmotic pressure → pure solvent निकालो। Desalination + Water purification में use।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 2: ELECTROCHEMISTRY ===== -->
+  <div class="ch-item" id="ch2">
+    <div class="ch-header" onclick="toggleCh('ch2')">
+      <div class="ch-num">02</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वैद्युत रसायन" data-en="Electrochemistry">वैद्युत रसायन</div>
+        <div class="ch-tag">Galvanic Cell | EMF | Nernst | Conductance | Electrolysis | Faraday</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch2','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch2','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch2','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch2-sum">
+        <div class="sum-overview">Electrochemistry = Chemical energy ↔ Electrical energy। Galvanic cell (chemical → electrical) | Electrolytic cell (electrical → chemical)।</div>
+        <div class="sum-h">🔋 Galvanic Cell | Daniel Cell</div>
+        <ul class="sum-list">
+          <li>Zn | ZnSO₄ || CuSO₄ | Cu (Daniel Cell)</li>
+          <li><b>Anode (-):</b> Oxidation होती है (Zn → Zn²⁺ + 2e⁻)</li>
+          <li><b>Cathode (+):</b> Reduction होती है (Cu²⁺ + 2e⁻ → Cu)</li>
+          <li><b>Salt bridge:</b> KCl/KNO₃ — electrical neutrality maintain करता है</li>
+          <li>E°cell = E°cathode - E°anode (Standard electrode potentials)</li>
+          <li>ΔG° = -nFE°cell | ΔG° = -RT ln K</li>
+        </ul>
+        <div class="sum-h">⚡ Nernst Equation</div>
+        <div class="formula-box">
+          <div class="flabel">Nernst Equation:</div>
+          E = E° - (RT/nF) ln Q = E° - (0.0591/n) log Q (at 25°C)
+        </div>
+        <ul class="sum-list">
+          <li>Concentration बदलने पर EMF calculate करने के लिए</li>
+          <li>At equilibrium: E = 0, Q = K → E° = (0.0591/n) log K</li>
+          <li><b>Standard Hydrogen Electrode (SHE):</b> E° = 0.00 V (reference electrode)</li>
+        </ul>
+        <div class="sum-h">🔬 Conductance | चालकता</div>
+        <ul class="sum-list">
+          <li><b>Resistance (R):</b> R = ρ × l/A (ρ = resistivity)</li>
+          <li><b>Conductance (G):</b> G = 1/R (unit = Siemens, S)</li>
+          <li><b>Conductivity (κ):</b> κ = 1/ρ (unit = S cm⁻¹)</li>
+          <li><b>Molar conductivity (Λm):</b> Λm = κ × 1000/M (S cm² mol⁻¹)</li>
+          <li>Strong electrolyte: Λm increases as dilution increases (Debye-Hückel-Onsager)</li>
+          <li>Weak electrolyte: Sharp increase at high dilution</li>
+          <li><b>Kohlrausch Law:</b> Λ°m = ν+λ°+ + ν-λ°- (independent migration of ions)</li>
+        </ul>
+        <div class="sum-h">⚡ Electrolysis | Faraday's Laws</div>
+        <ul class="sum-list">
+          <li><b>First law:</b> Mass deposited ∝ quantity of electricity (W = ZQ = ZIt)</li>
+          <li><b>Second law:</b> Same Q → masses deposited ∝ equivalent weights</li>
+          <li><b>1 Faraday = 96500 C</b> (charge of 1 mole of electrons)</li>
+          <li>Electrolysis of water: H₂ at cathode, O₂ at anode</li>
+          <li>Electrolysis of NaCl solution: H₂ + Cl₂ + NaOH (chlor-alkali process)</li>
+        </ul>
+        <div class="sum-h">🔋 Batteries</div>
+        <ul class="sum-list">
+          <li><b>Primary:</b> Non-rechargeable। Dry cell (Leclanche) = Zn-MnO₂</li>
+          <li><b>Secondary:</b> Rechargeable। Lead storage battery (12V car battery)</li>
+          <li><b>Fuel cell:</b> H₂ + O₂ → H₂O + Electricity। 70% efficiency। No pollution</li>
+          <li><b>Corrosion:</b> Fe → Fe²⁺ (anode). O₂ + H₂O → OH⁻ (cathode). Prevention: Galvanization (Zn coating), Cathodic protection</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Anode = Oxidation (-) | Cathode = Reduction (+)</li>
+            <li>1 Faraday = 96500 C = charge of 1 mole electrons</li>
+            <li>E°cell = E°cathode - E°anode</li>
+            <li>ΔG° = -nFE°cell</li>
+            <li>SHE = Standard reference (E° = 0.00 V)</li>
+            <li>Kohlrausch Law → molar conductivity at infinite dilution</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch2-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚡ वैद्युत रसायन (Electrochemistry)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔋 Galvanic Cell</div>
+              <div class="mm-branch-items">Anode(-) Oxidation<br>Cathode(+) Reduction<br>Salt bridge<br>Daniel Cell (Zn/Cu)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📐 Nernst Eq.</div>
+              <div class="mm-branch-items">E = E° - 0.0591/n log Q<br>ΔG° = -nFE°<br>ΔG° = -RT ln K<br>SHE = 0.00V</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔬 Conductance</div>
+              <div class="mm-branch-items">Λm = κ×1000/M<br>Kohlrausch Law<br>Strong/Weak electrolyte<br>Debye-Hückel</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">⚡ Faraday's Laws</div>
+              <div class="mm-branch-items">1F = 96500C<br>W = ZIt<br>Chlor-alkali process<br>Electrolysis</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔋 Batteries</div>
+              <div class="mm-branch-items">Primary: Dry cell<br>Secondary: Lead acid<br>Fuel cell (H₂+O₂)<br>Corrosion+Prevention</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch2-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Faraday (F) <span class="kw-imp">★ PNST</span></div><div class="kw-def">1 F = 96500 C = 1 mole electrons का charge। Electrolysis calculations में fundamental unit।</div></div>
+          <div class="kw-item"><div class="kw-term">Nernst Equation <span class="kw-imp">★ PNST</span></div><div class="kw-def">E = E° - (0.0591/n) log Q (25°C पर)। EMF on concentration change। At eq: E=0, E° = (0.0591/n) log K।</div></div>
+          <div class="kw-item"><div class="kw-term">Standard Hydrogen Electrode</div><div class="kw-def">SHE: H⁺ (1M) + H₂ (1 atm), Pt। E° = 0.00 V। सभी electrode potentials इससे measure होते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Kohlrausch Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">Infinite dilution पर: Λ°m = ν+λ°+ + ν-λ°-। Weak electrolytes की Λ°m निकालने में use।</div></div>
+          <div class="kw-item"><div class="kw-term">Fuel Cell</div><div class="kw-def">H₂ + O₂ → H₂O + Electricity। ~70% efficiency। Non-polluting। Apollo missions में use किया गया।</div></div>
+          <div class="kw-item"><div class="kw-term">Galvanization</div><div class="kw-def">Iron पर Zinc coating। Zinc corrosion से iron protect करता है (sacrificial protection)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 3: CHEMICAL KINETICS ===== -->
+  <div class="ch-item" id="ch3">
+    <div class="ch-header" onclick="toggleCh('ch3')">
+      <div class="ch-num">03</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="रासायनिक बलगतिकी" data-en="Chemical Kinetics">रासायनिक बलगतिकी</div>
+        <div class="ch-tag">Rate of Reaction | Order | Half-life | Arrhenius | Collision Theory</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch3','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch3','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch3','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch3-sum">
+        <div class="sum-overview">Chemical Kinetics = Rate of chemical reactions और उन्हें affect करने वाले factors का अध्ययन।</div>
+        <div class="sum-h">📈 अभिक्रिया दर | Rate of Reaction</div>
+        <ul class="sum-list">
+          <li><b>Average rate:</b> Δ[concentration] / Δtime</li>
+          <li><b>Instantaneous rate:</b> -d[R]/dt = d[P]/dt (tangent to concentration-time graph)</li>
+          <li>Rate = k[A]ˣ[B]ʸ (k = rate constant, x+y = overall order)</li>
+          <li><b>Factors:</b> Concentration, Temperature, Catalyst, Surface area, Light</li>
+        </ul>
+        <div class="sum-h">📊 अभिक्रिया की कोटि | Order of Reaction</div>
+        <ul class="sum-list">
+          <li><b>Zero order:</b> Rate = k। t½ = [R]₀/2k। Example: Decomposition of NH₃ on Pt surface</li>
+          <li><b>First order:</b> Rate = k[A]। t½ = 0.693/k (independent of concentration!)। ln[R]t = ln[R]₀ - kt</li>
+          <li>Example: Radioactive decay, Hydrolysis of sucrose in acidic solution</li>
+          <li><b>Second order:</b> Rate = k[A]²। t½ = 1/k[A]₀</li>
+          <li><b>Pseudo-first order:</b> Second order reaction → behaves as first order (excess one reactant)</li>
+          <li>Example: Acid hydrolysis of ester (water in excess)</li>
+        </ul>
+        <div class="sum-h">🌡️ Arrhenius Equation</div>
+        <div class="formula-box">
+          <div class="flabel">Arrhenius Equation:</div>
+          k = A·e^(-Ea/RT) → ln k = ln A - Ea/RT
+        </div>
+        <ul class="sum-list">
+          <li><b>Ea = Activation energy</b> — minimum energy required for reaction</li>
+          <li><b>A = Pre-exponential factor / Frequency factor</b></li>
+          <li>Temperature ↑ → k increases exponentially</li>
+          <li>10°C rise → reaction rate doubles (approximately)</li>
+          <li>Catalyst → Ea कम करता है → reaction faster</li>
+        </ul>
+        <div class="sum-h">💥 Collision Theory</div>
+        <ul class="sum-list">
+          <li>Reaction = effective collisions (sufficient energy + proper orientation)</li>
+          <li>Rate = PZABe^(-Ea/RT) (P = steric factor, Z = collision frequency)</li>
+          <li><b>Transition state theory:</b> Activated complex at energy maximum</li>
+          <li>Molecularity = number of molecules in elementary step (1, 2, or 3)</li>
+          <li>Order ≠ Molecularity (Order is experimental, Molecularity is theoretical)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>t½ for first order = 0.693/k (concentration independent)</li>
+            <li>Radioactive decay = First order reaction</li>
+            <li>Pseudo-first order: ester + H₂O (H₂O excess)</li>
+            <li>Arrhenius: k = Ae^(-Ea/RT)</li>
+            <li>Catalyst → Ea कम करता है, ΔG change नहीं</li>
+            <li>Order = experimentally determined, Molecularity = theoretical</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch3-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚗️ रासायनिक बलगतिकी<br><small style="font-weight:400;opacity:.8">Chemical Kinetics</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📈 Rate of Reaction</div>
+              <div class="mm-branch-items">-d[R]/dt<br>Rate = k[A]ˣ[B]ʸ<br>Factors: T, conc, cat<br>Units of k</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📊 Order</div>
+              <div class="mm-branch-items">Zero order: t½=R₀/2k<br>1st order: t½=0.693/k<br>Pseudo 1st order<br>Radioactive decay</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🌡️ Arrhenius</div>
+              <div class="mm-branch-items">k = Ae^(-Ea/RT)<br>Ea = activation energy<br>T↑ → k increases<br>Catalyst ↓ Ea</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">💥 Collision Theory</div>
+              <div class="mm-branch-items">Energy + Orientation<br>Steric factor (P)<br>Activated complex<br>Transition state</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch3-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Rate Constant (k) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Proportionality constant in rate law। Temperature dependent (Arrhenius)। Units depend on order: Zero=[M/s], First=[s⁻¹], Second=[M⁻¹s⁻¹]।</div></div>
+          <div class="kw-item"><div class="kw-term">Half-life (t½) <span class="kw-imp">★ PNST</span></div><div class="kw-def">First order: t½ = 0.693/k (concentration independent)। Zero order: t½ = [R]₀/2k। Radioactive decay में use।</div></div>
+          <div class="kw-item"><div class="kw-term">Activation Energy (Ea)</div><div class="kw-def">Reactants को products में convert होने के लिए minimum energy needed। Catalyst Ea कम करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Pseudo-first Order</div><div class="kw-def">Second order reaction जो first order जैसा behave करे। Ester hydrolysis में water excess → rate = k'[ester]।</div></div>
+          <div class="kw-item"><div class="kw-term">Order vs Molecularity</div><div class="kw-def">Order = experimental (0, 1, 2, fraction)। Molecularity = theoretical (1, 2, 3 only — whole numbers)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 4: d AND f BLOCK ===== -->
+  <div class="ch-item" id="ch4">
+    <div class="ch-header" onclick="toggleCh('ch4')">
+      <div class="ch-num">04</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="d एवं f ब्लॉक के तत्व" data-en="The d and f Block Elements">d एवं f ब्लॉक के तत्व</div>
+        <div class="ch-tag">Transition Metals | Lanthanoids | Actinoids | KMnO₄ | K₂Cr₂O₇</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch4','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch4','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch4','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch4-sum">
+        <div class="sum-overview">d-block = Groups 3-12 (Transition metals)। f-block = Lanthanoids (58-71) + Actinoids (90-103)। (n-1)d orbitals fill होते हैं।</div>
+        <div class="sum-h">🔬 d-Block की सामान्य विशेषताएं | General Properties</div>
+        <ul class="sum-list">
+          <li><b>Electronic config:</b> (n-1)d¹⁻¹⁰ ns⁰⁻²। Exception: Cr=[Ar]3d⁵4s¹, Cu=[Ar]3d¹⁰4s¹</li>
+          <li><b>Variable oxidation states:</b> Multiple OS because d-electrons involved। Mn: +2 to +7</li>
+          <li><b>Coloured compounds:</b> d-d transitions → absorb visible light</li>
+          <li><b>Magnetic properties:</b> Unpaired d electrons → Paramagnetic. Cu²⁺ more paramagnetic than Cu⁺</li>
+          <li><b>Catalytic activity:</b> Variable OS + ability to form complexes → good catalysts</li>
+          <li><b>Interstitial compounds:</b> Small atoms (H, C, N) fit in interstitial voids of metal lattice</li>
+          <li><b>Alloy formation:</b> Similar atomic radii → substitute each other</li>
+          <li>Atomic radii: decreases across period, then roughly constant (lanthanide contraction in 5d)</li>
+          <li>Ionisation enthalpy: higher than s-block, lower than p-block</li>
+        </ul>
+        <div class="sum-h">🔴 KMnO₄ — Potassium Permanganate</div>
+        <ul class="sum-list">
+          <li>Preparation: MnO₂ + KOH + O₂ → K₂MnO₄ → (acidify) → KMnO₄</li>
+          <li>Deep purple/violet colored crystals। Strong oxidising agent</li>
+          <li><b>Acidic medium:</b> MnO₄⁻ → Mn²⁺ (colorless), gain 5e⁻</li>
+          <li><b>Neutral/faintly basic:</b> MnO₄⁻ → MnO₂ (brown ppt), gain 3e⁻</li>
+          <li><b>Strongly basic:</b> MnO₄⁻ → MnO₄²⁻ (manganate), gain 1e⁻</li>
+          <li>Uses: Antiseptic (Dettol alternative), Titration (no indicator needed)</li>
+        </ul>
+        <div class="sum-h">🟡 K₂Cr₂O₇ — Potassium Dichromate</div>
+        <ul class="sum-list">
+          <li>Orange colored crystals। Cr in +6 oxidation state</li>
+          <li>Preparation: Chrome iron ore → Na₂CrO₄ → K₂Cr₂O₇</li>
+          <li>Cr₂O₇²⁻ + H₂O ⇌ 2CrO₄²⁻ + 2H⁺ (acidic = dichromate orange, basic = chromate yellow)</li>
+          <li>Strong oxidising agent in acidic medium: Cr₂O₇²⁻ + 14H⁺ + 6e⁻ → 2Cr³⁺ + 7H₂O</li>
+          <li>Uses: Leather tanning, Textile dyeing, Chrome alum preparation</li>
+        </ul>
+        <div class="sum-h">🌿 f-Block Elements</div>
+        <ul class="sum-list">
+          <li><b>Lanthanoids (La-Lu, 57-71):</b> 4f filling। Ce to Lu</li>
+          <li><b>Lanthanide contraction:</b> Poor shielding of 4f electrons → size decreases across series</li>
+          <li>Lanthanoids mostly show +3 OS। Ce: +4 (stable), Eu: +2</li>
+          <li><b>Actinoids (Ac-Lr, 89-103):</b> 5f filling। Radioactive। U, Pu, Th — nuclear energy</li>
+          <li>Actinoids show more variable OS than lanthanoids (5f more accessible)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Cr = [Ar]3d⁵4s¹, Cu = [Ar]3d¹⁰4s¹ (exceptions)</li>
+            <li>KMnO₄: Acidic → Mn²⁺ (5e⁻) | Basic → MnO₂ (3e⁻)</li>
+            <li>Mn shows maximum oxidation states (+2 to +7)</li>
+            <li>Lanthanide contraction → 5d series similar size to 4d</li>
+            <li>Coloured compounds: d-d transition</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch4-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔬 d & f Block Elements</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 d-Block Properties</div>
+              <div class="mm-branch-items">Variable OS<br>Coloured compounds<br>Magnetic<br>Catalytic activity</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔴 KMnO₄</div>
+              <div class="mm-branch-items">Mn = +7<br>Acidic: Mn²⁺(5e⁻)<br>Basic: MnO₂(3e⁻)<br>Strong oxidiser</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🟡 K₂Cr₂O₇</div>
+              <div class="mm-branch-items">Cr = +6, Orange<br>Strong oxidiser<br>Leather tanning<br>Cr₂O₇²⁻⇌CrO₄²⁻</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🌿 Lanthanoids</div>
+              <div class="mm-branch-items">4f filling, +3 OS<br>Lanthanide contraction<br>Ce: +4, Eu: +2<br>Mostly +3</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">☢️ Actinoids</div>
+              <div class="mm-branch-items">5f filling<br>Radioactive<br>U, Pu, Th<br>Variable OS</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch4-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Lanthanide Contraction <span class="kw-imp">★ PNST</span></div><div class="kw-def">4f electrons की poor shielding → effective nuclear charge increases → radius decreases across lanthanoids। 5d series = similar size as 4d।</div></div>
+          <div class="kw-item"><div class="kw-term">Interstitial Compounds</div><div class="kw-def">Small atoms (H, C, N) transition metal lattice के gaps में। Hard, high melting point। Steel = Fe + C (interstitial)।</div></div>
+          <div class="kw-item"><div class="kw-term">KMnO₄ Reactions <span class="kw-imp">★ PNST</span></div><div class="kw-def">Acidic: MnO₄⁻+8H⁺+5e⁻→Mn²⁺+4H₂O। Neutral: MnO₄⁻+2H₂O+3e⁻→MnO₂+4OH⁻।</div></div>
+          <div class="kw-item"><div class="kw-term">Variable Oxidation States</div><div class="kw-def">d orbitals की similar energy → different electrons lose। Mn: +2,+3,+4,+6,+7। Cr: +2,+3,+6।</div></div>
+          <div class="kw-item"><div class="kw-term">d-d Transition</div><div class="kw-def">Incompletely filled d orbitals में electrons ऊपर jump → visible light absorb → coloured compounds। Cu²⁺=blue, Cr³⁺=green।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 5: COORDINATION COMPOUNDS ===== -->
+  <div class="ch-item" id="ch5">
+    <div class="ch-header" onclick="toggleCh('ch5')">
+      <div class="ch-num">05</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="उपसहसंयोजन यौगिक" data-en="Coordination Compounds">उपसहसंयोजन यौगिक</div>
+        <div class="ch-tag">Werner's Theory | Ligands | IUPAC | Isomerism | Crystal Field Theory</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch5','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch5','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch5','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch5-sum">
+        <div class="sum-overview">Coordination compounds = Central metal atom/ion + Ligands। Alfred Werner (1893) ने theory दी। Nobel Prize 1913।</div>
+        <div class="sum-h">📋 Werner's Theory | Terminology</div>
+        <ul class="sum-list">
+          <li><b>Central atom:</b> Metal ion जो ligands accept करता है</li>
+          <li><b>Ligand:</b> Electron pair donor (Lewis base)। Monodentate (1 donor), Bidentate (2), Polydentate</li>
+          <li><b>Coordination number:</b> Ligand donor atoms की संख्या central metal के around</li>
+          <li><b>Coordination sphere:</b> Square bracket [ ] में — central metal + ligands</li>
+          <li><b>Oxidation number:</b> Central metal का charge (ligand charges से calculate)</li>
+          <li>Example: [Co(NH₃)₆]³⁺ → Co = +3, NH₃ = neutral, CN = 6</li>
+        </ul>
+        <div class="sum-h">🔗 Ligands के प्रकार | Types of Ligands</div>
+        <ul class="sum-list">
+          <li><b>Monodentate:</b> Cl⁻, NH₃, H₂O, CN⁻, NO₂⁻, SCN⁻</li>
+          <li><b>Bidentate:</b> en (ethylenediamine), ox²⁻ (oxalate), acac (acetylacetonate)</li>
+          <li><b>Polydentate/Chelating:</b> EDTA (hexadentate) — 6 donor atoms</li>
+          <li><b>Ambidentate:</b> Two different donor atoms — NO₂⁻ (N or O), SCN⁻ (S or N)</li>
+          <li>Chelate effect: Polydentate > Monodentate in stability (entropy reason)</li>
+        </ul>
+        <div class="sum-h">📝 IUPAC Nomenclature</div>
+        <ul class="sum-list">
+          <li>Order: Ligands alphabetically, then metal, then oxidation state in Roman numerals</li>
+          <li>Cation first, then anion</li>
+          <li>Anionic ligands: -o suffix (Cl⁻=chloro, CN⁻=cyano, NO₂⁻=nitro/nitrito)</li>
+          <li>Neutral ligands: aqua (H₂O), ammine (NH₃), carbonyl (CO), nitrosyl (NO)</li>
+          <li>Example: [Co(NH₃)₄Cl₂]Cl = Tetraamminedichloridocobalt(III) chloride</li>
+        </ul>
+        <div class="sum-h">🔄 Isomerism</div>
+        <ul class="sum-list">
+          <li><b>Structural isomerism:</b> Linkage (NO₂/ONO), Ionisation, Solvate, Coordination</li>
+          <li><b>Stereo isomerism:</b> Geometrical (cis-trans) + Optical (mirror image)</li>
+          <li>cis-[Pt(NH₃)₂Cl₂] = Cisplatin (anti-cancer drug)</li>
+          <li>Square planar: cis-trans possible | Octahedral: cis-trans + optical</li>
+        </ul>
+        <div class="sum-h">💎 Crystal Field Theory (CFT)</div>
+        <ul class="sum-list">
+          <li>Ligands = point charges. d-orbitals split in presence of ligands</li>
+          <li><b>Octahedral:</b> d splits into eg (higher) + t₂g (lower). Δo = crystal field splitting energy</li>
+          <li>Strong field ligands (CO, CN⁻): large Δo → low spin | Weak field (Cl⁻, F⁻): small Δo → high spin</li>
+          <li>Spectrochemical series: I⁻ < Br⁻ < Cl⁻ < F⁻ < OH⁻ < en < CN⁻ < CO</li>
+          <li>Colour = complementary color of absorbed light (d-d transition)</li>
+        </ul>
+        <div class="sum-h">🌟 Important Applications</div>
+        <ul class="sum-list">
+          <li>Cisplatin [Pt(NH₃)₂Cl₂] — Anticancer drug</li>
+          <li>Haemoglobin — Fe²⁺ coordination compound (O₂ transport)</li>
+          <li>Chlorophyll — Mg²⁺ coordination compound (photosynthesis)</li>
+          <li>Vitamin B₁₂ (Cyanocobalamin) — Co³⁺ coordination compound</li>
+          <li>EDTA — Metal poisoning treatment</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Cisplatin = cis-[Pt(NH₃)₂Cl₂] = Anticancer drug</li>
+            <li>EDTA = Hexadentate ligand (6 donor atoms)</li>
+            <li>Haemoglobin = Fe²⁺ complex, Chlorophyll = Mg²⁺ complex</li>
+            <li>Ambidentate ligands: SCN⁻, NO₂⁻</li>
+            <li>Strong field ligands → low spin (CO, CN⁻)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch5-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔮 उपसहसंयोजन यौगिक<br><small style="font-weight:400;opacity:.8">Coordination Compounds</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📋 Werner's Theory</div>
+              <div class="mm-branch-items">Central atom<br>Ligands (donors)<br>Coord. number<br>Coord. sphere [ ]</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔗 Ligands</div>
+              <div class="mm-branch-items">Mono/Bidentate<br>EDTA (hexa)<br>Ambidentate<br>Chelate effect</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📝 IUPAC Names</div>
+              <div class="mm-branch-items">Ligands alphabetical<br>Anionic: -o suffix<br>Neutral: aqua, ammine<br>OS in Roman</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔄 Isomerism</div>
+              <div class="mm-branch-items">Structural<br>Geometrical (cis-trans)<br>Optical<br>Cisplatin (anticancer)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">💎 CFT</div>
+              <div class="mm-branch-items">d-orbital splitting<br>eg + t₂g<br>Strong/weak field<br>Spectrochemical series</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch5-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Chelate Effect <span class="kw-imp">★ PNST</span></div><div class="kw-def">Polydentate ligands से बने complexes ज्यादा stable। Entropy increase (more free molecules)। EDTA = most stable chelate।</div></div>
+          <div class="kw-item"><div class="kw-term">Cisplatin <span class="kw-imp">★ PNST</span></div><div class="kw-def">cis-[Pt(NH₃)₂Cl₂] — Anticancer drug। DNA replication रोकता है। Testicular, ovarian cancer treatment।</div></div>
+          <div class="kw-item"><div class="kw-term">Spectrochemical Series</div><div class="kw-def">I⁻<Br⁻<Cl⁻<F⁻<OH⁻<en<CN⁻<CO। Left = weak field (high spin), Right = strong field (low spin)।</div></div>
+          <div class="kw-item"><div class="kw-term">Ambidentate Ligand</div><div class="kw-def">दो different donor atoms — किसी से भी bond बना सकते हैं। SCN⁻ (S or N), NO₂⁻ (N or O)। Linkage isomerism का कारण।</div></div>
+          <div class="kw-item"><div class="kw-term">Haemoglobin</div><div class="kw-def">Fe²⁺ complex (Porphyrin ligand)। O₂ transport। CO से permanent bond → CO poisoning। Fe³⁺ बनने पर O₂ carry नहीं कर सकता।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part-div">📗 Part II — Chapters 6 to 10</div>
+
+  <!-- ===== CHAPTER 6: HALOALKANES & HALOARENES ===== -->
+  <div class="ch-item" id="ch6">
+    <div class="ch-header" onclick="toggleCh('ch6')">
+      <div class="ch-num">06</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="हैलोऐल्केन तथा हैलोऐरीन" data-en="Haloalkanes and Haloarenes">हैलोऐल्केन तथा हैलोऐरीन</div>
+        <div class="ch-tag">SN1 | SN2 | DDT | Freons | Optical Isomerism</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch6','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch6','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch6','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch6-sum">
+        <div class="sum-overview">Haloalkanes = sp³ C-X bond (alkyl halide)। Haloarenes = sp² C-X bond (aryl halide)। C-X bond polar (δ+C - δ-X) due to electronegativity।</div>
+        <div class="sum-h">🧪 Preparation Methods</div>
+        <ul class="sum-list">
+          <li><b>From alcohols:</b> R-OH + HX → R-X + H₂O (HI > HBr > HCl reactivity)</li>
+          <li><b>Halogenation:</b> Alkane + X₂ (UV light) → Alkyl halide (free radical)</li>
+          <li><b>Sandmeyer reaction:</b> ArN₂⁺ + CuX → ArX (prepare aryl halides)</li>
+          <li><b>Finkelstein:</b> R-Cl + NaI (acetone) → R-I + NaCl (exchange reaction)</li>
+          <li><b>Swarts reaction:</b> R-Cl + AgF → R-F (prepare alkyl fluorides)</li>
+        </ul>
+        <div class="sum-h">⚡ Nucleophilic Substitution</div>
+        <ul class="sum-list">
+          <li><b>SN2 (Bimolecular):</b> One step, Backside attack, Inversion of configuration (Walden inversion). Favoured by: Primary alkyl halides, Polar aprotic solvents</li>
+          <li><b>SN1 (Unimolecular):</b> Two steps, Carbocation intermediate, Racemisation. Favoured by: Tertiary alkyl halides, Polar protic solvents</li>
+          <li>Reactivity order for SN1: 3° > 2° > 1° > Methyl</li>
+          <li>Reactivity order for SN2: Methyl > 1° > 2° > 3°</li>
+        </ul>
+        <div class="sum-h">🔄 Elimination vs Substitution</div>
+        <ul class="sum-list">
+          <li><b>E2 (bimolecular elimination):</b> Strong base, high temperature → Alkene (Saytzeff rule)</li>
+          <li><b>Saytzeff rule:</b> More substituted alkene (stable) preferentially formed</li>
+          <li>Tertiary + strong base → E2 preferred over SN2</li>
+        </ul>
+        <div class="sum-h">🌿 Polyhalogen Compounds</div>
+        <ul class="sum-list">
+          <li><b>Chloroform (CHCl₃):</b> Anaesthetic। Oxidised to COCl₂ (phosgene) — toxic। Store in dark bottles</li>
+          <li><b>Carbon tetrachloride (CCl₄):</b> Fire extinguisher (Pyrene). Non-polar solvent</li>
+          <li><b>DDT:</b> First organic insecticide। Paul Müller — Nobel 1948। Non-biodegradable → biomagnification</li>
+          <li><b>Freons (CFCs):</b> Refrigerants। Ozone depletion। Montreal Protocol (1987) — banned</li>
+          <li><b>Iodoform (CHI₃):</b> Antiseptic। Yellow solid. Iodoform test for CH₃CO- groups</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>SN2 = Inversion (Walden inversion), one step, primary favoured</li>
+            <li>SN1 = Racemisation, two steps, tertiary favoured</li>
+            <li>DDT = Non-biodegradable, biomagnification</li>
+            <li>Freons = CFC → Ozone depletion</li>
+            <li>Iodoform test = CH₃CO- group detection</li>
+            <li>Sandmeyer = Aryl halide from diazonium salt</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch6-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧪 Haloalkanes & Haloarenes</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🧪 Preparation</div>
+              <div class="mm-branch-items">From alcohols (HX)<br>Sandmeyer (ArX)<br>Finkelstein (R-I)<br>Swarts (R-F)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">⚡ SN1 vs SN2</div>
+              <div class="mm-branch-items">SN1: 3°, racemise<br>SN2: 1°, inversion<br>Walden inversion<br>Carbocation</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🌿 Polyhalogen</div>
+              <div class="mm-branch-items">DDT (insecticide)<br>Freons (ozone)<br>Chloroform (anaes.)<br>Iodoform (antisep.)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch6-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">SN2 Reaction <span class="kw-imp">★ PNST</span></div><div class="kw-def">Bimolecular, one step। Backside attack → Inversion (Walden inversion)। Primary alkyl halide + polar aprotic solvent।</div></div>
+          <div class="kw-item"><div class="kw-term">SN1 Reaction <span class="kw-imp">★ PNST</span></div><div class="kw-def">Unimolecular, two steps। Carbocation intermediate। Racemisation। Tertiary alkyl halide + polar protic solvent।</div></div>
+          <div class="kw-item"><div class="kw-term">DDT <span class="kw-imp">★ PNST</span></div><div class="kw-def">Dichlorodiphenyltrichloroethane। First chlorinated insecticide। Paul Müller Nobel 1948। Non-biodegradable → biomagnification → banned।</div></div>
+          <div class="kw-item"><div class="kw-term">Freons (CFCs)</div><div class="kw-def">Chlorofluorocarbons। Refrigerants, Propellants। CFC → Stratosphere → Cl radical → Ozone destruction। Montreal Protocol 1987।</div></div>
+          <div class="kw-item"><div class="kw-term">Sandmeyer Reaction</div><div class="kw-def">ArN₂⁺Cl⁻ + CuCl → ArCl। Diazonium salt से aryl halide। Cu catalyst essential।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 7: ALCOHOLS, PHENOLS, ETHERS ===== -->
+  <div class="ch-item" id="ch7">
+    <div class="ch-header" onclick="toggleCh('ch7')">
+      <div class="ch-num">07</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="ऐल्कोहॉल, फीनॉल एवं ईथर" data-en="Alcohols, Phenols and Ethers">ऐल्कोहॉल, फीनॉल एवं ईथर</div>
+        <div class="ch-tag">Lucas Test | Reimer-Tiemann | Victor-Meyer | Williamson</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch7','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch7','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch7','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch7-sum">
+        <div class="sum-overview">Alcohols = R-OH। Phenols = Ar-OH। Ethers = R-O-R'। O-H bond polar → H-bonding → high BP।</div>
+        <div class="sum-h">🍺 Alcohols — Preparation & Properties</div>
+        <ul class="sum-list">
+          <li>From alkenes: Acid-catalysed hydration (Markovnikov's rule)</li>
+          <li>From Grignard reagent: RMgX + HCHO → 1° alcohol; RMgX + RCHO → 2°; RMgX + R₂CO → 3°</li>
+          <li><b>Acidity order:</b> H₂O > 1° > 2° > 3° (but phenol >> alcohols)</li>
+          <li><b>Lucas test:</b> Distinguish 1°, 2°, 3° alcohols with conc.HCl + ZnCl₂</li>
+          <li>3° = turbidity immediately | 2° = turbidity in 5 min | 1° = no turbidity (at room temp)</li>
+          <li><b>Oxidation:</b> 1° → Aldehyde → Carboxylic acid | 2° → Ketone | 3° = Resistant</li>
+          <li><b>Dehydration:</b> Conc. H₂SO₄, 443K → Alkene (E2) | 413K → Ether</li>
+          <li><b>Victor Meyer test:</b> Distinguish 1°, 2°, 3° using P/I₂ + AgNO₂ + HNO₂</li>
+        </ul>
+        <div class="sum-h">🧪 Phenols — Special Reactions</div>
+        <ul class="sum-list">
+          <li>Phenol more acidic than alcohols (phenoxide ion resonance stabilized)</li>
+          <li><b>Reimer-Tiemann reaction:</b> Phenol + CHCl₃ + NaOH → ortho-hydroxybenzaldehyde (Salicylaldehyde)</li>
+          <li><b>Kolbe's reaction:</b> Sodium phenoxide + CO₂ (300K, 5 atm) → Salicylic acid (Aspirin precursor)</li>
+          <li><b>Diazo coupling:</b> Phenol + ArN₂⁺ → Azo dye (orange-red color)</li>
+          <li>Phenol + Br₂ water → 2,4,6-tribromophenol (white ppt) — test for phenol</li>
+          <li>Phenol + FeCl₃ → Violet color (test for phenol)</li>
+        </ul>
+        <div class="sum-h">🌫️ Ethers</div>
+        <ul class="sum-list">
+          <li><b>Williamson synthesis:</b> R-ONa + R'-X → R-O-R' + NaX (best method)</li>
+          <li>Diethyl ether (C₂H₅OC₂H₅) = Common anaesthetic</li>
+          <li>Ethers — poor nucleophiles, low reactivity। Cleavage with HI/HBr at high temp</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Lucas test: 3°=immediate turbidity, 1°=no turbidity</li>
+            <li>Reimer-Tiemann = Phenol → Salicylaldehyde</li>
+            <li>Kolbe's = Sodium phenoxide → Salicylic acid (Aspirin)</li>
+            <li>Phenol + FeCl₃ = Violet color (test)</li>
+            <li>Phenol + Br₂ water = White ppt (2,4,6-tribromophenol)</li>
+            <li>Williamson synthesis = Best method for ethers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch7-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🍺 Alcohols, Phenols & Ethers</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🍺 Alcohols</div>
+              <div class="mm-branch-items">Lucas test (1°2°3°)<br>Victor Meyer test<br>Oxidation: 1°→CHO<br>Dehydration→alkene</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🧪 Phenols</div>
+              <div class="mm-branch-items">Reimer-Tiemann<br>Kolbe's (Aspirin)<br>FeCl₃ = Violet<br>Br₂ = White ppt</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌫️ Ethers</div>
+              <div class="mm-branch-items">Williamson synthesis<br>R-ONa + R'X<br>Diethyl ether (anaes.)<br>HI cleavage</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch7-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Lucas Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">Conc. HCl + ZnCl₂। 3° = तुरंत turbidity। 2° = 5 min में। 1° = room temp पर नहीं होता। Alcohols distinguish करने के लिए।</div></div>
+          <div class="kw-item"><div class="kw-term">Reimer-Tiemann Reaction <span class="kw-imp">★ PNST</span></div><div class="kw-def">Phenol + CHCl₃ + NaOH → o-hydroxybenzaldehyde (Salicylaldehyde)। Electrophilic substitution। ortho-formylation।</div></div>
+          <div class="kw-item"><div class="kw-term">Kolbe's Reaction <span class="kw-imp">★ PNST</span></div><div class="kw-def">Sodium phenoxide + CO₂ (300K, 5atm) → Salicylic acid। Aspirin बनाने का precursor।</div></div>
+          <div class="kw-item"><div class="kw-term">Williamson Synthesis</div><div class="kw-def">R-ONa + R'X → R-O-R' (ether)। SN2 mechanism। Ethers बनाने का best method।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 8: ALDEHYDES, KETONES & CARBOXYLIC ACIDS ===== -->
+  <div class="ch-item" id="ch8">
+    <div class="ch-header" onclick="toggleCh('ch8')">
+      <div class="ch-num">08</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="ऐल्डिहाइड, कीटोन एवं कार्बोक्सिलिक अम्ल" data-en="Aldehydes, Ketones and Carboxylic Acids">ऐल्डिहाइड, कीटोन एवं कार्बोक्सिलिक अम्ल</div>
+        <div class="ch-tag">Tollens | Fehling | Aldol | Cannizzaro | Hell-Volhard-Zelinsky</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch8','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch8','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch8','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch8-sum">
+        <div class="sum-overview">Aldehydes (R-CHO) और Ketones (R-CO-R') में C=O (carbonyl) group होता है। Nucleophilic addition reactions characteristic हैं।</div>
+        <div class="sum-h">🔬 Preparation</div>
+        <ul class="sum-list">
+          <li><b>Aldehydes from 1° alcohols:</b> PCC (Pyridinium chlorochromate) — mild oxidation</li>
+          <li><b>Rosenmund reduction:</b> Acid chloride + H₂/Pd-BaSO₄ → Aldehyde</li>
+          <li><b>Stephen reaction:</b> Nitrile + SnCl₂/HCl → Aldehyde (after hydrolysis)</li>
+          <li><b>Ketones from 2° alcohols:</b> K₂Cr₂O₇/H₂SO₄ oxidation</li>
+          <li>Ketones from carboxylic acids: Dry distillation of Ca salt</li>
+          <li><b>Ozonolysis:</b> Alkene + O₃ → Aldehyde/Ketone</li>
+        </ul>
+        <div class="sum-h">⚗️ Chemical Tests — Aldehyde vs Ketone</div>
+        <table class="rxn-table">
+          <tr><th>Test</th><th>Aldehyde</th><th>Ketone</th></tr>
+          <tr><td>Tollens' (Silver mirror)</td><td>✅ Silver mirror forms</td><td>❌ No reaction</td></tr>
+          <tr><td>Fehling's (Blue→Red)</td><td>✅ Red/brick ppt</td><td>❌ No reaction</td></tr>
+          <tr><td>Benedict's test</td><td>✅ Red ppt</td><td>❌ No reaction</td></tr>
+          <tr><td>2,4-DNP test</td><td>✅ Yellow ppt</td><td>✅ Yellow ppt</td></tr>
+          <tr><td>Iodoform test</td><td>CH₃CHO only ✅</td><td>CH₃COR ✅</td></tr>
+        </table>
+        <div class="sum-h">🔄 Important Reactions</div>
+        <ul class="sum-list">
+          <li><b>Nucleophilic addition:</b> C=O + Nu⁻ → Tetrahedral intermediate → product</li>
+          <li><b>Aldol condensation:</b> 2 CH₃CHO (dil. NaOH) → Aldol (β-hydroxy aldehyde) → Crotonaldehyde (on heating)</li>
+          <li><b>Cannizzaro reaction:</b> Non-enolizable aldehydes (no α-H) + conc. NaOH → Alcohol + Acid (disproportionation)</li>
+          <li><b>Clemmensen reduction:</b> C=O + Zn-Hg/HCl → CH₂ (acidic)</li>
+          <li><b>Wolff-Kishner reduction:</b> C=O + NH₂-NH₂/KOH → CH₂ (basic)</li>
+        </ul>
+        <div class="sum-h">🔴 Carboxylic Acids</div>
+        <ul class="sum-list">
+          <li>COOH group। Stronger acid than alcohols/phenols। Resonance stabilized carboxylate ion</li>
+          <li>Acidity: HCOOH > CH₃COOH (electron donating CH₃ destabilizes carboxylate)</li>
+          <li>Electron withdrawing groups increase acidity: Cl-CH₂-COOH > CH₃COOH</li>
+          <li><b>Hell-Volhard-Zelinsky (HVZ):</b> RCOOH + Br₂ + red P → α-bromo acid</li>
+          <li><b>Decarboxylation:</b> RCOOH + NaOH (CaO) → R-H (soda lime)</li>
+          <li><b>Fischer esterification:</b> RCOOH + R'OH ⇌ RCOOR' + H₂O (acid catalyst)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Tollens test = Silver mirror (Aldehyde only)</li>
+            <li>Fehling's test = Red ppt (Aldehyde only)</li>
+            <li>Iodoform test = CH₃CHO + CH₃COR (acetaldehyde + methyl ketones)</li>
+            <li>Aldol condensation = α-H required</li>
+            <li>Cannizzaro = No α-H (HCHO, C₆H₅CHO)</li>
+            <li>HVZ reaction = α-bromination of acids</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch8-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚗️ Aldehydes, Ketones & Carboxylic Acids</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 Tests</div>
+              <div class="mm-branch-items">Tollens (silver mirror)<br>Fehling (red ppt)<br>2,4-DNP (yellow)<br>Iodoform (CHI₃)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔄 Reactions</div>
+              <div class="mm-branch-items">Aldol condensation<br>Cannizzaro (no α-H)<br>Clemmensen (acid)<br>Wolff-Kishner (base)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔴 Carboxylic Acids</div>
+              <div class="mm-branch-items">HVZ (α-bromo)<br>Decarboxylation<br>Fischer esterification<br>Acidity order</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch8-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Tollens' Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">Ammoniacal AgNO₃। Aldehyde → Silver mirror (Ag deposited)। Ketone react नहीं करते। Glucose (reducing sugar) भी react करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Fehling's Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">Cu²⁺ (blue) → Cu₂O (red/brick ppt)। Aliphatic aldehydes react। Aromatic aldehydes (benzaldehyde) नहीं। Glucose react करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Aldol Condensation <span class="kw-imp">★ PNST</span></div><div class="kw-def">Dilute NaOH + Aldehyde (with α-H) → β-hydroxy aldehyde। Heat → α,β-unsaturated aldehyde (Crotonaldehyde)।</div></div>
+          <div class="kw-item"><div class="kw-term">Cannizzaro Reaction</div><div class="kw-def">Conc. NaOH + Aldehyde (no α-H, जैसे HCHO) → Alcohol + Acid। Self-oxidation-reduction। HCHO → CH₃OH + HCOONa।</div></div>
+          <div class="kw-item"><div class="kw-term">Iodoform Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">I₂ + NaOH। CH₃CO- group detect करता है। CH₃CHO + Methyl ketones + Ethanol → Yellow CHI₃ (Iodoform) ppt।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 9: AMINES ===== -->
+  <div class="ch-item" id="ch9">
+    <div class="ch-header" onclick="toggleCh('ch9')">
+      <div class="ch-num">09</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="ऐमीन" data-en="Amines">ऐमीन</div>
+        <div class="ch-tag">Gabriel | Hoffmann | Diazonium Salts | Basicity | Coupling</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch9','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch9','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch9','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch9-sum">
+        <div class="sum-overview">Amines = NH₃ से derived compounds। N पर lone pair → Basic character। Primary (1°), Secondary (2°), Tertiary (3°) amines।</div>
+        <div class="sum-h">🔬 Preparation Methods</div>
+        <ul class="sum-list">
+          <li><b>Reduction of nitro compounds:</b> ArNO₂ + Fe/HCl (or H₂/Ni) → ArNH₂</li>
+          <li><b>Gabriel synthesis:</b> Phthalimide + KOH + RX → N-alkylphthalimide → (hydrolysis) → Primary amine</li>
+          <li>Only primary amines। 2° and 3° cannot be prepared</li>
+          <li><b>Hoffmann bromamide degradation:</b> RCONH₂ + Br₂ + NaOH → RNH₂ (one C less)</li>
+          <li><b>Reductive amination:</b> Aldehyde/Ketone + NH₃ + H₂ → Amine</li>
+          <li><b>Reduction of nitriles:</b> R-CN + LiAlH₄ → R-CH₂-NH₂</li>
+        </ul>
+        <div class="sum-h">⚖️ Basicity of Amines</div>
+        <ul class="sum-list">
+          <li><b>Aliphatic amines > NH₃ > Aromatic amines</b> (resonance delocalises lone pair in ArNH₂)</li>
+          <li>In gas phase: 3° > 2° > 1° > NH₃ (inductive effect)</li>
+          <li>In aqueous solution: 2° > 1° > 3° > NH₃ (steric + hydration effects)</li>
+          <li>Electron donating groups (CH₃) increase basicity</li>
+          <li>Electron withdrawing groups (NO₂, Cl) decrease basicity</li>
+          <li>Aniline < p-nitroaniline (NO₂ withdraws e⁻ → less basic)</li>
+        </ul>
+        <div class="sum-h">🧪 Chemical Reactions</div>
+        <ul class="sum-list">
+          <li><b>Carbylamine test (Isocyanide test):</b> 1° amine + CHCl₃ + KOH → Isocyanide (bad smell)</li>
+          <li>Only primary amines give this test</li>
+          <li><b>Hinsberg test:</b> Benzenesulfonyl chloride — distinguish 1°, 2°, 3° amines</li>
+          <li><b>Coupling reaction:</b> ArNH₂ + HNO₂ (0-5°C) → Diazonium salt → Azo dye</li>
+        </ul>
+        <div class="sum-h">🔴 Diazonium Salts (ArN₂⁺X⁻)</div>
+        <ul class="sum-list">
+          <li>Preparation: ArNH₂ + NaNO₂ + HCl (0-5°C) → ArN₂⁺Cl⁻ (Diazotization)</li>
+          <li>Unstable (kept at 0-5°C). Used as intermediates in organic synthesis</li>
+          <li><b>Sandmeyer reaction:</b> ArN₂⁺ + CuX → ArX (X = Cl, Br, CN)</li>
+          <li><b>Gattermann reaction:</b> ArN₂⁺ + Cu/HCl → ArCl (without Cu salt)</li>
+          <li>ArN₂⁺ + H₂O → ArOH (phenol) | ArN₂⁺ + HBF₄ → ArF (Balz-Schiemann)</li>
+          <li><b>Coupling:</b> ArN₂⁺ + Phenol/Aniline → Azo compounds (dyes)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Carbylamine test = 1° amine only (bad smell isocyanide)</li>
+            <li>Gabriel synthesis = Only primary amines</li>
+            <li>Hoffmann bromamide = Product has one less C</li>
+            <li>Basicity: Aliphatic > NH₃ > Aromatic amines</li>
+            <li>Diazonium salts at 0-5°C (unstable)</li>
+            <li>Sandmeyer = CuX needed | Gattermann = Cu metal + HX</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch9-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧬 Amines</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 Preparation</div>
+              <div class="mm-branch-items">Gabriel (1° only)<br>Hoffmann (-1C)<br>Nitro reduction<br>Nitrile reduction</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚖️ Basicity</div>
+              <div class="mm-branch-items">Aliphatic > NH₃<br>NH₃ > Aromatic<br>e⁻ donating ↑<br>e⁻ withdrawing ↓</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🧪 Tests</div>
+              <div class="mm-branch-items">Carbylamine (1° only)<br>Hinsberg test<br>HNO₂ reactions<br>Coupling (dyes)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔴 Diazonium Salts</div>
+              <div class="mm-branch-items">0-5°C (unstable)<br>Sandmeyer (CuX)<br>Gattermann (Cu)<br>Coupling (Azo dyes)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch9-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Carbylamine Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">1° amine + CHCl₃ + alc. KOH → Isocyanide (offensive smell)। Only primary amines react। Identity test for 1° amines।</div></div>
+          <div class="kw-item"><div class="kw-term">Gabriel Synthesis <span class="kw-imp">★ PNST</span></div><div class="kw-def">Phthalimide → KOH → N-alkylphthalimide → hydrolysis → 1° amine। ONLY primary amines। 2° और 3° नहीं बनते।</div></div>
+          <div class="kw-item"><div class="kw-term">Hoffmann Bromamide</div><div class="kw-def">RCONH₂ + Br₂ + NaOH → RNH₂। Product में एक carbon कम होता है। Primary amine बनती है।</div></div>
+          <div class="kw-item"><div class="kw-term">Diazonium Salt</div><div class="kw-def">ArN₂⁺X⁻। Diazotization: ArNH₂ + NaNO₂ + HCl (0-5°C)। Unstable — 0-5°C पर रखते हैं। Synthesis में versatile intermediate।</div></div>
+          <div class="kw-item"><div class="kw-term">Coupling Reaction</div><div class="kw-def">Diazonium salt + Phenol/Amine → Azo compound (bright colored)। pH 9-10 (alkaline)। Dyes बनाने में।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 10: BIOMOLECULES ===== -->
+  <div class="ch-item" id="ch10">
+    <div class="ch-header" onclick="toggleCh('ch10')">
+      <div class="ch-num">10</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जैव अणु" data-en="Biomolecules">जैव अणु</div>
+        <div class="ch-tag">Carbohydrates | Proteins | Enzymes | Vitamins | Nucleic Acids | Hormones</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch10','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch10','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch10','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch10-sum">
+        <div class="sum-overview">Biomolecules = जीवित systems के chemical compounds। Carbohydrates, Proteins, Lipids, Nucleic acids, Vitamins — सब essential।</div>
+        <div class="sum-h">🍬 कार्बोहाइड्रेट | Carbohydrates</div>
+        <ul class="sum-list">
+          <li>Polyhydroxy aldehydes/ketones या compounds जो hydrolysis पर ये देते हैं</li>
+          <li><b>Monosaccharides:</b> Cannot hydrolyse further। Glucose (Aldose), Fructose (Ketose)</li>
+          <li><b>Oligosaccharides:</b> 2-10 monosaccharides। Sucrose (Glucose + Fructose), Maltose (Glucose + Glucose), Lactose (Glucose + Galactose)</li>
+          <li><b>Polysaccharides:</b> Starch (amylose + amylopectin), Cellulose, Glycogen (animal starch)</li>
+          <li><b>Reducing sugars:</b> Free aldehyde/ketone group। Glucose, Fructose, Maltose, Lactose। React with Tollens/Fehling</li>
+          <li><b>Non-reducing:</b> Sucrose (no free OH) — glycosidic bond between C1 of glucose and C2 of fructose</li>
+          <li>Glucose: CHO-CHOH×4-CH₂OH। α-D-Glucose (1,4-glycosidic in starch) | β-D-Glucose (1,4-β in cellulose)</li>
+          <li>Cellulose: β-1,4-glycosidic. Non-digestible by humans (no β-glucosidase)</li>
+        </ul>
+        <div class="sum-h">🥚 प्रोटीन | Proteins</div>
+        <ul class="sum-list">
+          <li>α-Amino acids के polymers — linked by peptide bonds (-CO-NH-)</li>
+          <li>20 essential amino acids। Glycine = simplest (no chiral C)</li>
+          <li><b>Primary structure:</b> Amino acid sequence</li>
+          <li><b>Secondary structure:</b> α-helix (H-bonds within chain) + β-pleated sheet</li>
+          <li><b>Tertiary structure:</b> 3D folding — S-S bonds, H-bonds, hydrophobic</li>
+          <li><b>Quaternary:</b> Multiple polypeptide chains (e.g., Haemoglobin — 4 chains)</li>
+          <li><b>Denaturation:</b> Secondary/tertiary structure disrupted — biological activity lost</li>
+          <li><b>Fibrous proteins:</b> Keratin (hair), Myosin (muscle) — structural</li>
+          <li><b>Globular proteins:</b> Enzymes, Hormones, Antibodies — functional</li>
+        </ul>
+        <div class="sum-h">⚙️ Enzymes</div>
+        <ul class="sum-list">
+          <li>Biological catalysts। Protein in nature (except Ribozyme = RNA)</li>
+          <li><b>Lock and key model (Fischer):</b> Active site exactly fits substrate</li>
+          <li><b>Induced fit model (Koshland):</b> Active site changes shape to fit substrate</li>
+          <li>Coenzyme = Non-protein organic part। Cofactor = Metal ion</li>
+          <li>Vitamins often form coenzymes</li>
+        </ul>
+        <div class="sum-h">💊 Vitamins</div>
+        <ul class="sum-list">
+          <li><b>Fat soluble:</b> A, D, E, K (ADEK)। Stored in liver/adipose</li>
+          <li><b>Water soluble:</b> B complex (B1, B2, B6, B12), C। Not stored — daily needed</li>
+          <li>Vit A — Night blindness। B1 (Thiamine) — Beriberi। B12 — Pernicious anaemia</li>
+          <li>Vit C — Scurvy। D — Rickets। K — Blood clotting</li>
+        </ul>
+        <div class="sum-h">🧬 Nucleic Acids</div>
+        <ul class="sum-list">
+          <li>Nucleotide = Base + Sugar + Phosphate</li>
+          <li>DNA: Deoxyribose + A, T, G, C। Double stranded helix</li>
+          <li>RNA: Ribose + A, U, G, C। Single stranded</li>
+          <li>A-T (2 H-bonds), G-C (3 H-bonds)</li>
+        </ul>
+        <div class="sum-h">🧪 Hormones</div>
+        <ul class="sum-list">
+          <li>Insulin (polypeptide) — Blood glucose regulate। Produced by β cells of islets of Langerhans</li>
+          <li>Adrenaline (amino acid derivative) — Emergency hormone</li>
+          <li>Sex hormones (Testosterone, Estrogen) — Steroid hormones</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Sucrose = Non-reducing sugar (no free aldehyde/ketone)</li>
+            <li>Cellulose = β-1,4-glycosidic bond (non-digestible)</li>
+            <li>Glycogen = Animal starch (liver + muscle)</li>
+            <li>Denaturation = 3D structure destroy → activity loss</li>
+            <li>Vit A = Night blindness | D = Rickets | C = Scurvy | K = Clotting</li>
+            <li>Enzyme = Biological catalyst (protein, except Ribozyme)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch10-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧬 जैव अणु (Biomolecules)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🍬 Carbohydrates</div>
+              <div class="mm-branch-items">Mono/Oligo/Poly<br>Reducing sugars<br>Sucrose (non-red.)<br>Starch/Cellulose</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🥚 Proteins</div>
+              <div class="mm-branch-items">Amino acids<br>1°/2°/3°/4° structure<br>Denaturation<br>Fibrous/Globular</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚙️ Enzymes</div>
+              <div class="mm-branch-items">Biological catalyst<br>Lock & Key (Fischer)<br>Induced fit (Koshland)<br>Coenzyme/Cofactor</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">💊 Vitamins</div>
+              <div class="mm-branch-items">Fat: A,D,E,K<br>Water: B,C<br>A=Night blindness<br>C=Scurvy, D=Rickets</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🧬 Nucleic Acids</div>
+              <div class="mm-branch-items">DNA (deoxyribose)<br>RNA (ribose)<br>A-T(2H), G-C(3H)<br>Uracil in RNA</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch10-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Reducing Sugar <span class="kw-imp">★ PNST</span></div><div class="kw-def">Free aldehyde/ketone group। Tollens + Fehling react। Glucose, Fructose, Maltose, Lactose। Sucrose = Non-reducing।</div></div>
+          <div class="kw-item"><div class="kw-term">Denaturation <span class="kw-imp">★ PNST</span></div><div class="kw-def">Heat/acid से protein की secondary/tertiary structure disrupt। Biological activity loss। Primary structure intact। Reversible sometimes।</div></div>
+          <div class="kw-item"><div class="kw-term">Glycogen</div><div class="kw-def">Animal starch। Glucose polymer — α-1,4 + α-1,6 (branching)। Liver और muscle में store होता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Vitamins <span class="kw-imp">★ PNST</span></div><div class="kw-def">Fat soluble: A(Night blindness), D(Rickets), E(antioxidant), K(clotting)। Water soluble: B₁(Beriberi), B₁₂(Anaemia), C(Scurvy)।</div></div>
+          <div class="kw-item"><div class="kw-term">Peptide Bond</div><div class="kw-def">-CO-NH- linkage between amino acids। Condensation reaction (water निकलता है)। Peptide bond planar और rigid होता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Zwitter Ion</div><div class="kw-def">Amino acid का internal salt। NH₃⁺-CH(R)-COO⁻। Isoelectric point पर electrically neutral।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end wrap -->
+
+<script>
+let lang='hi', isDark=true;
+function setLang(l){
+  lang=l;
+  document.getElementById('btnHi').classList.toggle('active',l==='hi');
+  document.getElementById('btnEn').classList.toggle('active',l==='en');
+  document.querySelectorAll('[data-hi]').forEach(el=>{
+    const v=el.getAttribute('data-'+l); if(v) el.textContent=v;
+  });
+  document.getElementById('chemP').textContent=l==='hi'
+    ?'PNST 2026 ke liye poore 10 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!'
+    :'All 10 chapters — Summary, Mind Maps & Keywords for PNST 2026 preparation!';
+}
+function toggleTheme(){
+  isDark=!isDark;
+  const t=isDark?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  try{localStorage.setItem('pnst_theme',t);}catch(e){}
+}
+function toggleCh(id){
+  const el=document.getElementById(id);
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.ch-item.open').forEach(e=>{if(e.id!==id)e.classList.remove('open');});
+  el.classList.toggle('open',!isOpen);
+  if(!isOpen) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function showTab(chId,tab){
+  const body=document.getElementById(chId).querySelector('.ch-body');
+  body.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelector('#'+chId+'-'+tab).classList.add('active');
+  const idx=['sum','mm','kw'].indexOf(tab);
+  body.querySelectorAll('.tab-btn')[idx].classList.add('active');
+}
+window.addEventListener('load',()=>{
+  let t='dark';
+  try{t=localStorage.getItem('pnst_theme')||'dark';}catch(e){}
+  isDark=t==='dark';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+});
+</script>
+</body>
+</html>

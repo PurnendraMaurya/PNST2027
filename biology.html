@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biology Notes — PNST 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020818;--bg2:#060e24;--bg3:#0a1628;
+  --card:rgba(255,255,255,0.05);--card-border:rgba(255,255,255,0.1);--card-hover:rgba(255,255,255,0.08);
+  --tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --green:#22c55e;--blue:#3b82f6;--cyan:#06b6d4;--amber:#f59e0b;--purple:#a855f7;--pink:#ec4899;--red:#ef4444;
+  --bio:#22c55e;--bio2:rgba(34,197,94,.15);
+  --fn:'Noto Sans',sans-serif;--fn2:'Rajdhani',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f0f4ff;--bg2:#e8eeff;--bg3:#fff;
+  --card:rgba(255,255,255,.9);--card-border:rgba(34,197,94,.2);--card-hover:#fff;
+  --tx:#1e293b;--tx2:#475569;--tx3:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
+[data-theme="dark"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 20% 30%,rgba(34,197,94,.3) 0%,transparent 100%),
+    radial-gradient(2px 2px at 80% 20%,rgba(6,182,212,.2) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 60%,rgba(255,255,255,.15) 0%,transparent 100%);
+}
+
+/* Header */
+.hdr{
+  background:linear-gradient(135deg,rgba(2,8,24,.96),rgba(6,14,36,.96));
+  backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);
+  padding:10px 16px;display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:100;
+}
+[data-theme="light"] .hdr{background:rgba(240,244,255,.96)}
+.hdr-logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--green),#16a34a);display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 14px rgba(34,197,94,.3)}
+.hdr-name{font-family:var(--fn2);font-size:1rem;font-weight:700;background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-sub{font-size:.65rem;color:var(--tx2)}
+.hdr-right{display:flex;gap:6px;align-items:center;margin-left:auto;flex-shrink:0}
+.lang-btn,.theme-btn{padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;backdrop-filter:blur(10px)}
+.lang-btn.active{background:linear-gradient(135deg,var(--green),var(--cyan));color:#fff;border-color:transparent}
+.btn-back{padding:5px 11px;border-radius:8px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;flex-shrink:0}
+.btn-back:hover{background:var(--card-hover)}
+
+/* Wrap */
+.wrap{max-width:520px;margin:0 auto;padding:14px}
+
+/* Hero */
+.bio-hero{
+  background:linear-gradient(135deg,#011a0a,#023d16,#035a20);
+  border:1px solid rgba(34,197,94,.25);border-radius:20px;
+  padding:20px 16px;margin-bottom:16px;position:relative;overflow:hidden;
+  box-shadow:0 0 40px rgba(34,197,94,.08);
+}
+.bio-hero::before{content:'';position:absolute;top:-30%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse,rgba(34,197,94,.08) 0%,transparent 65%);pointer-events:none}
+.bio-badge{display:inline-block;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.35);border-radius:16px;font-size:.65rem;font-weight:700;padding:3px 12px;margin-bottom:10px;color:var(--green);letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1}
+.bio-h{font-family:var(--fn2);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.bio-h span{background:linear-gradient(90deg,var(--green),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bio-p{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;position:relative;z-index:1}
+.bio-stats{display:flex;gap:12px;margin-top:14px;position:relative;z-index:1;flex-wrap:wrap}
+.bstat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 12px;text-align:center}
+.bstat-n{font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:var(--green)}
+.bstat-l{font-size:.6rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+/* Section title */
+.sec-t{font-size:.7rem;font-weight:800;color:var(--tx2);margin:16px 0 9px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.sec-t::after{content:'';flex:1;height:1px;background:var(--card-border)}
+
+/* Chapter accordion */
+.ch-item{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:16px;margin-bottom:10px;overflow:hidden;transition:all .25s}
+.ch-item.open{border-color:rgba(34,197,94,.4);box-shadow:0 4px 24px rgba(34,197,94,.08)}
+.ch-header{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s;user-select:none}
+.ch-header:hover{background:var(--card-hover)}
+.ch-num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--green),#16a34a);display:flex;align-items:center;justify-content:center;font-family:var(--fn2);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(34,197,94,.3)}
+.ch-info{flex:1;min-width:0}
+.ch-name{font-family:var(--fn2);font-size:.95rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-tag{font-size:.62rem;color:var(--tx2);margin-top:2px}
+.ch-arr{color:var(--tx2);font-size:.9rem;flex-shrink:0;transition:transform .3s}
+.ch-item.open .ch-arr{transform:rotate(180deg)}
+
+/* Chapter body */
+.ch-body{display:none;border-top:1px solid var(--card-border)}
+.ch-item.open .ch-body{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+/* Tabs */
+.tab-bar{display:flex;gap:0;border-bottom:1px solid var(--card-border)}
+.tab-btn{flex:1;padding:10px 6px;background:none;border:none;color:var(--tx2);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;border-bottom:2px solid transparent;position:relative;bottom:-1px}
+.tab-btn.active{color:var(--green);border-bottom-color:var(--green)}
+.tab-pane{display:none;padding:14px}
+.tab-pane.active{display:block;animation:fadeIn .2s ease}
+
+/* Summary styles */
+.sum-overview{background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;line-height:1.65;color:var(--tx)}
+.sum-h{font-family:var(--fn2);font-size:.82rem;font-weight:700;color:var(--green);margin:12px 0 6px;display:flex;align-items:center;gap:6px}
+.sum-h::after{content:'';flex:1;height:1px;background:rgba(34,197,94,.2)}
+.sum-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sum-list li{font-size:.8rem;line-height:1.55;color:var(--tx);padding-left:14px;position:relative}
+.sum-list li::before{content:'▸';position:absolute;left:0;color:var(--green);font-size:.7rem;top:2px}
+.sum-list li b{color:var(--tx);font-weight:700}
+
+/* Mind Map */
+.mm-wrap{overflow-x:auto;padding:10px 0}
+.mm{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:280px}
+.mm-center{background:linear-gradient(135deg,var(--green),#16a34a);color:#fff;border-radius:14px;padding:10px 18px;font-family:var(--fn2);font-size:.9rem;font-weight:700;text-align:center;box-shadow:0 4px 18px rgba(34,197,94,.3);position:relative;z-index:2}
+.mm-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%}
+.mm-branch{border-radius:12px;padding:8px 10px;font-size:.72rem;font-weight:700;text-align:center;min-width:110px;position:relative;cursor:pointer;transition:transform .2s}
+.mm-branch:hover{transform:translateY(-2px)}
+.mm-branch-title{font-size:.76rem;font-weight:800;margin-bottom:4px}
+.mm-branch-items{font-size:.65rem;opacity:.85;line-height:1.5}
+.mm-connector{width:2px;height:16px;background:linear-gradient(to bottom,var(--green),rgba(34,197,94,.3));margin:0 auto}
+
+/* Keywords */
+.kw-grid{display:flex;flex-direction:column;gap:8px}
+.kw-item{background:rgba(255,255,255,.03);border:1px solid var(--card-border);border-radius:10px;padding:10px 12px}
+.kw-term{font-family:var(--fn2);font-size:.84rem;font-weight:700;color:var(--green);margin-bottom:4px}
+.kw-def{font-size:.76rem;line-height:1.5;color:var(--tx2)}
+.kw-imp{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:.58rem;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+/* PNST Points box */
+.pnst-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;margin-top:10px}
+.pnst-box-t{font-family:var(--fn2);font-size:.78rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.pnst-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pnst-box ul li{font-size:.75rem;color:var(--tx2);padding-left:14px;position:relative}
+.pnst-box ul li::before{content:'★';position:absolute;left:0;color:var(--amber);font-size:.6rem;top:2px}
+
+.tab-btn{font-size:.65rem;padding:8px 4px}}
+/* ============================================================
+   COMPLETE RESPONSIVE CSS — All Devices
+   Mobile (320-480) | Tablet (481-768) | Desktop (769+)
+   ============================================================ */
+
+/* ---- Fluid base ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,table,video{max-width:100%}
+
+/* ---- Wrap: fluid on all screens ---- */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:14px 12px}
+
+/* ---- Tables: horizontal scroll on small screens ---- */
+.gk-table,.gram-table,.rxn-table,.ptbl{
+  display:block;width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
+}
+.gk-table td,.gram-table td,.rxn-table td{white-space:normal;min-width:80px}
+.gk-table th,.gram-table th,.rxn-table th{white-space:nowrap}
+
+/* ---- Mind map: wrap branches on small screens ---- */
+.mm-branches{justify-content:center}
+.mm-branch{min-width:100px;flex:1 1 100px;max-width:140px}
+.mm-center{padding:9px 14px;font-size:.85rem}
+
+/* ---- Chapter headers: prevent overflow ---- */
+.ch-name{font-size:.92rem;white-space:normal;line-height:1.3}
+.ch-tag{white-space:normal;line-height:1.4}
+
+/* ---- Tab buttons: equal width ---- */
+.tab-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+.tab-btn{flex-shrink:0;min-width:0;padding:10px 8px;font-size:.7rem}
+
+/* ---- Hero sections ---- */
+.bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:18px 14px}
+.bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.35rem}
+.bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:8px}
+.bstat,.cstat,.pstat,.estat,.gstat{padding:6px 10px}
+
+/* ---- Notes/Subject grid ---- */
+.notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:8px}
+.subj-card{padding:12px 10px 10px}
+
+/* ---- Info row ---- */
+.info-row{grid-template-columns:1fr 1fr;gap:8px}
+.info-card{padding:12px}
+
+/* ---- KW grid items ---- */
+.kw-def,.sum-list li{font-size:.78rem;line-height:1.55}
+
+/* ---- Footer ---- */
+.footer-social{gap:10px}
+.footer-links{gap:5px}
+.footer-link{padding:4px 10px;font-size:.65rem}
+.footer-subjects{gap:5px}
+.fs-tag{font-size:.62rem;padding:3px 8px}
+
+/* ---- Header ---- */
+.hdr{padding:8px 12px;gap:8px}
+.hdr-name{font-size:.95rem}
+.hdr-sub{font-size:.6rem}
+.lang-btn,.theme-btn{padding:4px 8px;font-size:.65rem}
+.btn-back{padding:4px 9px;font-size:.68rem}
+
+/* ---- Test interface ---- */
+.test-hdr{padding:10px 12px}
+.q-wrap{padding:0 12px 130px}
+.q-card{padding:14px 12px}
+.q-text{font-size:.84rem}
+.opt{padding:10px 12px;font-size:.8rem}
+.test-bottom{padding:8px 12px}
+.btn-nav{padding:11px 8px;font-size:.75rem}
+
+/* ---- Bottom nav ---- */
+.bottom-nav{padding:7px 0 11px}
+.bnav-btn{padding:3px 12px}
+.bnav-btn span:first-child{font-size:1.2rem}
+.bnav-btn span:last-child{font-size:.58rem}
+
+/* ============================================================
+   SMALL PHONES (max 380px)
+   ============================================================ */
+@media(max-width:380px){
+  .wrap{padding:10px 10px}
+  .hdr{padding:8px 10px;gap:6px}
+  .hdr-logo{width:34px;height:34px;font-size:16px}
+  .hdr-name{font-size:.88rem}
+  .hdr-right{gap:4px}
+  .lang-btn,.theme-btn{padding:3px 7px;font-size:.62rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.2rem}
+  .hero-h{font-size:1.3rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1rem}
+  .hs-l,.bstat-l,.cstat-l,.pstat-l,.estat-l,.gstat-l{font-size:.58rem}
+
+  .ch-num{width:28px;height:28px;font-size:.75rem}
+  .ch-name{font-size:.85rem}
+  .ch-tag{font-size:.58rem}
+  .ch-header{padding:11px 10px;gap:8px}
+
+  .tab-btn{font-size:.65rem;padding:8px 5px}
+  .tab-pane{padding:11px 10px}
+
+  .sum-h{font-size:.78rem}
+  .sum-list li{font-size:.75rem}
+  .sum-overview{font-size:.78rem;padding:10px 11px}
+  .kw-term{font-size:.8rem}
+  .kw-def{font-size:.73rem}
+
+  .mm-branch{min-width:90px;max-width:130px;padding:7px 8px}
+  .mm-branch-title{font-size:.7rem}
+  .mm-branch-items{font-size:.6rem}
+  .mm-center{font-size:.8rem;padding:8px 12px}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .subj-card{padding:10px 9px 9px}
+  .sj-icon{font-size:1.5rem;margin-bottom:5px}
+  .sj-name{font-size:.82rem}
+  .sj-desc{font-size:.62rem}
+  .nc-name{font-size:.85rem}
+  .nc-desc{font-size:.62rem}
+
+  .info-row{gap:7px}
+  .ic-val{font-size:1.1rem}
+  .ic-icon{font-size:1.2rem}
+
+  .hero-stats{gap:0}
+  .hs{padding:8px 0}
+  .btn-start,.btn-hero{padding:12px;font-size:.92rem}
+
+  .pnst-box ul li,.pnst-box-t{font-size:.7rem}
+  .pnst-box{padding:9px 10px}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.68rem;padding:5px 6px}
+
+  .q-card{padding:12px 10px}
+  .q-text{font-size:.8rem}
+  .opt{padding:9px 10px;font-size:.77rem;gap:8px}
+  .opt-letter{width:22px;height:22px;font-size:.65rem}
+
+  .timer-circle{width:40px;height:40px}
+  .timer-num{font-size:.72rem}
+  .test-title{font-size:.9rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .footer-brand .footer-logo{width:42px;height:42px;font-size:18px}
+  .footer-name{font-size:1rem}
+  .footer-tagline{font-size:.65rem}
+  .social-btn{width:40px;height:40px;border-radius:10px}
+  .footer-copy{font-size:.62rem}
+
+  .qn-btn{width:28px;height:28px;font-size:.67rem;border-radius:7px}
+  .q-nav{padding:10px 11px;gap:5px;margin:10px 12px}
+
+  .bottom-nav{padding:6px 0 10px}
+  .bnav-btn{padding:3px 10px}
+  .bnav-btn span:first-child{font-size:1.1rem}
+  .bnav-btn span:last-child{font-size:.55rem}
+
+  .result-hero{padding:22px 14px}
+  .score-ring{width:100px;height:100px}
+  .score-num{font-size:1.75rem}
+  .result-grade{font-size:1.25rem}
+  .analysis-grid{gap:6px}
+  .an-val{font-size:1.1rem}
+  .an-lbl{font-size:.58rem}
+}
+
+/* ============================================================
+   MEDIUM PHONES (381px - 480px)
+   ============================================================ */
+@media(min-width:381px) and (max-width:480px){
+  .wrap{padding:12px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.4rem}
+  .ch-name{font-size:.9rem}
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.7rem;padding:5px 7px}
+}
+
+/* ============================================================
+   TABLETS (481px - 768px)
+   ============================================================ */
+@media(min-width:481px) and (max-width:768px){
+  .wrap{max-width:600px;padding:16px}
+  .hdr{padding:10px 20px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.6rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:14px}
+  .bstat,.cstat,.pstat,.estat,.gstat{padding:9px 16px}
+
+  .hero-h{font-size:1.6rem}
+  .hs-n,.bstat-n,.cstat-n{font-size:1.3rem}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .subj-card{padding:16px 14px 13px}
+  .sj-icon{font-size:2rem}
+  .sj-name{font-size:.95rem}
+
+  .ch-name{font-size:1rem}
+  .ch-num{width:34px;height:34px}
+  .tab-btn{font-size:.75rem;padding:11px 8px}
+  .tab-pane{padding:16px}
+
+  .sum-h{font-size:.85rem}
+  .sum-list li{font-size:.82rem}
+  .kw-term{font-size:.88rem}
+  .kw-def{font-size:.8rem}
+  .sum-overview{font-size:.85rem}
+
+  .mm-branch{min-width:120px;max-width:160px;padding:10px 12px}
+  .mm-branch-title{font-size:.8rem}
+  .mm-branch-items{font-size:.7rem}
+  .mm-center{font-size:.95rem}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.76rem;padding:7px 9px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.9rem}
+  .opt{font-size:.85rem;padding:12px 14px}
+
+  .footer-links{gap:8px}
+  .footer-link{font-size:.72rem}
+  .social-btn{width:48px;height:48px}
+  .footer-subjects .fs-tag{font-size:.68rem}
+
+  .bottom-nav{padding:8px 0 13px}
+  .bnav-btn{padding:4px 20px}
+}
+
+/* ============================================================
+   DESKTOP (769px - 1024px)
+   ============================================================ */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{max-width:680px;padding:20px}
+  .hdr{padding:12px 24px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.7rem}
+  .hero-h{font-size:1.8rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-card{padding:18px 15px}
+  .note-card-full{grid-column:auto}
+
+  .ch-name{font-size:1.02rem}
+  .tab-btn{font-size:.78rem;padding:11px 10px}
+
+  .sum-list li{font-size:.84rem}
+  .kw-def{font-size:.82rem}
+
+  .mm-branch{min-width:130px;max-width:170px}
+  .mm-center{font-size:1rem}
+
+  .gk-table td,.gram-table td{font-size:.78rem}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .footer-social{gap:14px}
+  .social-btn{width:50px;height:50px;font-size:1.3rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.75rem;padding:6px 14px}
+}
+
+/* ============================================================
+   LARGE DESKTOP (1025px+)
+   ============================================================ */
+@media(min-width:1025px){
+  .wrap{max-width:780px;padding:24px}
+  .hdr{padding:12px 32px}
+  .hdr-name{font-size:1.15rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.85rem}
+  .hero-h{font-size:2rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1.6rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .note-card-full{grid-column:auto}
+  .subj-card{padding:20px 16px}
+  .sj-icon{font-size:2.2rem}
+  .sj-name{font-size:1rem}
+  .nc-name{font-size:1rem}
+
+  .ch-name{font-size:1.05rem}
+  .ch-num{width:36px;height:36px;font-size:.88rem}
+  .tab-btn{font-size:.8rem;padding:12px 12px}
+  .tab-pane{padding:18px}
+
+  .sum-list li{font-size:.86rem}
+  .sum-h{font-size:.88rem}
+  .sum-overview{font-size:.88rem}
+  .kw-term{font-size:.92rem}
+  .kw-def{font-size:.84rem}
+
+  .mm-branch{min-width:140px;max-width:180px;padding:11px 13px}
+  .mm-branch-title{font-size:.85rem}
+  .mm-branch-items{font-size:.73rem}
+  .mm-center{font-size:1.05rem}
+
+  .gk-table td,.gram-table td{font-size:.8rem;padding:8px 10px}
+  .gk-table th,.gram-table th{font-size:.75rem;padding:8px 10px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.95rem}
+  .opt{font-size:.88rem}
+  .score-ring{width:130px;height:130px}
+  .score-num{font-size:2.2rem}
+
+  .footer-social{gap:16px}
+  .social-btn{width:52px;height:52px;font-size:1.4rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.78rem;padding:6px 16px}
+  .fs-tag{font-size:.72rem;padding:5px 12px}
+  .footer-tagline{font-size:.78rem}
+  .footer-copy{font-size:.72rem}
+}
+
+/* ============================================================
+   TOUCH DEVICES — Better tap targets
+   ============================================================ */
+@media(hover:none) and (pointer:coarse){
+  .ch-header{min-height:56px}
+  .tab-btn{min-height:44px}
+  .sj-btn,.btn-nav,.lang-btn,.theme-btn,.btn-back{min-height:40px}
+  .bnav-btn{min-height:48px;padding:6px 12px}
+  .opt{min-height:46px}
+  .qn-btn{width:34px;height:34px}
+  .social-btn{width:48px;height:48px}
+  .footer-link{min-height:36px;display:inline-flex;align-items:center}
+  a{-webkit-tap-highlight-color:rgba(59,130,246,.15)}
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print{
+  .hdr,.bottom-nav,.site-footer,.test-bottom,.loading-overlay,
+  .tab-bar,.ch-arr,.bnav-btn,.btn-back{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body,[data-theme="dark"] body::before{background:white!important;color:black!important}
+  .ch-item{border:1px solid #ccc!important;margin-bottom:8px}
+  .wrap{max-width:100%;padding:0}
+}
+
+/* ============================================================
+   LANDSCAPE PHONE
+   ============================================================ */
+@media(max-width:768px) and (orientation:landscape){
+  .hdr{padding:6px 14px}
+  .hdr-logo{width:32px;height:32px;font-size:15px}
+  .bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:14px 14px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.25rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{margin-top:8px}
+  .bottom-nav{padding:5px 0 8px}
+  .bnav-btn span:first-child{font-size:1rem}
+  .bnav-btn span:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="index.html" class="btn-back">← Back</a>
+  <div class="hdr-logo">🌿</div>
+  <div>
+    <div class="hdr-name">Biology Notes</div>
+    <div class="hdr-sub">NCERT Class 12 | PNST 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="lang-btn active" id="btnHi" onclick="setLang('hi')">हि</button>
+    <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <!-- Hero -->
+  <div class="bio-hero">
+    <div class="bio-badge">✦ NCERT CLASS 12 ✦</div>
+    <div class="bio-h">🌿 <span>Biology</span></div>
+    <div class="bio-p" id="bioP">PNST 2026 ke liye poore 13 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!</div>
+    <div class="bio-stats">
+      <div class="bstat"><div class="bstat-n">13</div><div class="bstat-l">Chapters</div></div>
+      <div class="bstat"><div class="bstat-n">20</div><div class="bstat-l">Marks</div></div>
+      <div class="bstat"><div class="bstat-n">745</div><div class="bstat-l">PYQ Questions</div></div>
+    </div>
+  </div>
+
+  <div class="sec-t" id="chapTitle">📚 Chapters</div>
+
+  <!-- ===== CHAPTER 1 ===== -->
+  <div class="ch-item" id="ch1">
+    <div class="ch-header" onclick="toggleCh('ch1')">
+      <div class="ch-num">01</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="पुष्पी पादपों में लैंगिक जनन" data-en="Sexual Reproduction in Flowering Plants">पुष्पी पादपों में लैंगिक जनन</div>
+        <div class="ch-tag">Flower | Pollination | Fertilization | Seed</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch1','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch1','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch1','kw')">🔑 Keywords</button>
+      </div>
+      <!-- SUMMARY -->
+      <div class="tab-pane active" id="ch1-sum">
+        <div class="sum-overview" id="ch1-ov">पुष्पी पादपों में जनन पुष्प के माध्यम से होता है। पुष्प एक रूपांतरित प्ररोह है जिसमें नर (पुंकेसर) और मादा (स्त्रीकेसर) जनन अंग होते हैं। परागण, निषेचन और बीज निर्माण क्रमिक प्रक्रियाएं हैं।</div>
+        <div class="sum-h">🌸 पुष्प की संरचना | Flower Structure</div>
+        <ul class="sum-list" id="ch1-s1">
+          <li><b>बाह्यदलपुंज (Calyx):</b> हरे बाह्यदल — पुष्प की रक्षा करते हैं</li>
+          <li><b>दलपुंज (Corolla):</b> रंगीन पंखुड़ियां — परागणकर्ताओं को आकर्षित करती हैं</li>
+          <li><b>पुंकेसर (Stamen):</b> नर जनन अंग — परागकोष + तंतु। परागकोष में सूक्ष्मबीजाणु बनते हैं</li>
+          <li><b>स्त्रीकेसर (Pistil):</b> मादा जनन अंग — वर्तिकाग्र + वर्तिका + अंडाशय</li>
+          <li><b>अंडाशय (Ovary):</b> अंडप से बना; बीजांड (Ovule) होते हैं जिनमें भ्रूणकोष होता है</li>
+        </ul>
+        <div class="sum-h">🌼 सूक्ष्मबीजाणुजनन | Microsporogenesis</div>
+        <ul class="sum-list" id="ch1-s2">
+          <li><b>परागकोष:</b> Anther में 4 microsporangia होते हैं</li>
+          <li>Microspore mother cells → Meiosis → 4 Microspores (Tetrad)</li>
+          <li><b>परागकण (Pollen grain):</b> Exine (sporopollenin) + Intine। नर युग्मकोद्भिद होता है</li>
+          <li>Pollen में 2 cells — Vegetative cell + Generative cell</li>
+          <li><b>Pollen viability:</b> Wheat/rice में 30 min; members of Poaceae में अधिक</li>
+        </ul>
+        <div class="sum-h">🌺 गुरुबीजाणुजनन | Megasporogenesis</div>
+        <ul class="sum-list" id="ch1-s3">
+          <li>Nucellus में Megaspore mother cell → Meiosis → 4 Megaspores (3 degenerate, 1 functional)</li>
+          <li><b>भ्रूणकोष (Embryo sac):</b> 8 nucleated, 7 celled structure</li>
+          <li>Egg cell (1) + Synergids (2) + Antipodal cells (3) + Central cell (2 polar nuclei)</li>
+          <li>Polygonum type — most common type of embryo sac</li>
+        </ul>
+        <div class="sum-h">🦋 परागण | Pollination</div>
+        <ul class="sum-list" id="ch1-s4">
+          <li><b>Autogamy:</b> Same flower — Cleistogamy (closed flower, e.g., Viola, Commelina)</li>
+          <li><b>Geitonogamy:</b> Different flowers of same plant — genetically same as autogamy</li>
+          <li><b>Xenogamy:</b> Different plant — true cross pollination, genetic variation</li>
+          <li><b>Wind pollination (Anemophily):</b> Light pollen, large stigma, e.g., Grass, Wheat</li>
+          <li><b>Insect pollination (Entomophily):</b> Coloured/scented flowers, sticky pollen</li>
+          <li><b>Water pollination (Hydrophily):</b> Vallisneria, Hydrilla — rare</li>
+          <li><b>Outbreeding devices:</b> Dichogamy, Self-incompatibility, Heterostyly</li>
+        </ul>
+        <div class="sum-h">💥 निषेचन | Fertilization</div>
+        <ul class="sum-list" id="ch1-s5">
+          <li>Pollen tube grows through style → enters ovule → Synergid mein filiform apparatus</li>
+          <li><b>Double Fertilization (S.G. Nawaschin, 1898):</b> Angiosperms की विशेषता</li>
+          <li>Sperm 1 + Egg → Zygote (2n) → Embryo</li>
+          <li>Sperm 2 + Polar nuclei → Primary endosperm nucleus (3n) → Endosperm</li>
+          <li><b>Syngamy:</b> Egg + sperm fusion | <b>Triple fusion:</b> 2 polar nuclei + sperm</li>
+        </ul>
+        <div class="sum-h">🌱 निषेचन के बाद | Post-fertilization</div>
+        <ul class="sum-list" id="ch1-s6">
+          <li>Zygote → Embryo (Embryogenesis) | Ovule → Seed | Ovary → Fruit</li>
+          <li><b>Endosperm types:</b> Nuclear, Cellular, Helobial</li>
+          <li>Coconut milk = Nuclear endosperm (liquid); Coconut meat = Cellular endosperm</li>
+          <li><b>Parthenocarpy:</b> Seedless fruit without fertilization (banana, grapes)</li>
+          <li><b>Apomixis:</b> Seed without fertilization (Citrus, Mango) — genetic uniformity</li>
+          <li><b>Polyembryony:</b> More than one embryo in seed (Citrus, Groundnut)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Double fertilization — Angiosperms की विशेषता</li>
+            <li>Sporopollenin — hardest natural substance, pollen wall में</li>
+            <li>Embryo sac = 7 celled, 8 nucleate</li>
+            <li>Cleistogamy — self pollination, closed flowers</li>
+            <li>Coconut milk = liquid nuclear endosperm</li>
+            <li>Apomixis = no fertilization, seeds form</li>
+          </ul>
+        </div>
+      </div>
+      <!-- MIND MAP -->
+      <div class="tab-pane" id="ch1-mm">
+        <div class="mm-wrap">
+          <div class="mm">
+            <div class="mm-center">🌸 पुष्पी पादपों में लैंगिक जनन<br><small style="font-weight:400;opacity:.8">Sexual Reproduction in Flowering Plants</small></div>
+            <div class="mm-connector"></div>
+            <div class="mm-branches">
+              <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+                <div class="mm-branch-title">🌸 Flower Structure</div>
+                <div class="mm-branch-items">Calyx • Corolla<br>Stamen • Pistil<br>Ovary • Ovule</div>
+              </div>
+              <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+                <div class="mm-branch-title">🔬 Microsporogenesis</div>
+                <div class="mm-branch-items">Anther (4 sporangia)<br>MMC→Meiosis→Tetrad<br>Pollen grain (2 cells)</div>
+              </div>
+              <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+                <div class="mm-branch-title">🌺 Megasporogenesis</div>
+                <div class="mm-branch-items">MMC → 4 Megaspores<br>Embryo sac<br>7 cells, 8 nuclei</div>
+              </div>
+              <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+                <div class="mm-branch-title">🦋 Pollination</div>
+                <div class="mm-branch-items">Autogamy<br>Geitonogamy<br>Xenogamy</div>
+              </div>
+              <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+                <div class="mm-branch-title">💥 Double Fertilization</div>
+                <div class="mm-branch-items">Syngamy → Zygote<br>Triple fusion → Endosperm<br>Angiosperms only!</div>
+              </div>
+              <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+                <div class="mm-branch-title">🌱 Post-Fertilization</div>
+                <div class="mm-branch-items">Ovule→Seed<br>Ovary→Fruit<br>Apomixis•Parthenocarpy</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- KEYWORDS -->
+      <div class="tab-pane" id="ch1-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Sporopollenin <span class="kw-imp">★ PNST</span></div><div class="kw-def">Pollen grain की outer wall (Exine) का hardest natural substance। Acid, alkali, high temperature सब resist करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Double Fertilization <span class="kw-imp">★ PNST</span></div><div class="kw-def">Angiosperms में: Sperm+Egg=Zygote (Syngamy) और Sperm+2 polar nuclei=Endosperm (Triple fusion)। Nawaschin ने 1898 में खोजा।</div></div>
+          <div class="kw-item"><div class="kw-term">Embryo Sac</div><div class="kw-def">7 celled, 8 nucleated मादा युग्मकोद्भिद। 1 Egg + 2 Synergids + 3 Antipodals + 1 Central cell (2 polar nuclei)।</div></div>
+          <div class="kw-item"><div class="kw-term">Cleistogamy</div><div class="kw-def">बंद फूलों में स्वपरागण। e.g., Viola, Oxalis, Commelina। Assured seed set होता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Apomixis <span class="kw-imp">★ PNST</span></div><div class="kw-def">बिना निषेचन के बीज निर्माण। Citrus, Mango में। Genetic uniformity maintain होती है।</div></div>
+          <div class="kw-item"><div class="kw-term">Parthenocarpy</div><div class="kw-def">बिना निषेचन के फल निर्माण। Seedless fruits — Banana, Grapes, Papaya। Auxin treatment से induce होती है।</div></div>
+          <div class="kw-item"><div class="kw-term">Filiform Apparatus</div><div class="kw-def">Synergid cells में specialized structure। Pollen tube को guide करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Homogamy</div><div class="kw-def">Anther और Stigma का साथ-साथ परिपक्व होना (Simultaneous maturation)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 2 ===== -->
+  <div class="ch-item" id="ch2">
+    <div class="ch-header" onclick="toggleCh('ch2')">
+      <div class="ch-num">02</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="मानव जनन" data-en="Human Reproduction">मानव जनन</div>
+        <div class="ch-tag">Gametogenesis | Menstrual Cycle | Fertilization | Embryo</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch2','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch2','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch2','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch2-sum">
+        <div class="sum-overview">मनुष्य लैंगिक रूप से जनन करते हैं। नर में शुक्राणु और मादा में अंडाणु बनते हैं। निषेचन, आरोपण, भ्रूण विकास और प्रसव क्रमिक प्रक्रियाएं हैं।</div>
+        <div class="sum-h">♂ नर जनन तंत्र | Male Reproductive System</div>
+        <ul class="sum-list">
+          <li><b>Testes:</b> Scrotum में स्थित (2-2.5°C कम temperature)। Seminiferous tubules में spermatogenesis</li>
+          <li><b>Leydig cells:</b> Testosterone produce करती हैं (interstitial cells)</li>
+          <li><b>Sertoli cells:</b> Sperm को nutrition प्रदान करती हैं ("Nurse cells")</li>
+          <li><b>Duct system:</b> Rete testis → Vasa efferentia → Epididymis → Vas deferens → Urethra</li>
+          <li><b>Accessory glands:</b> Seminal vesicle (60% semen) + Prostate + Cowper's gland (bulbourethral)</li>
+          <li>Semen में fructose (sperm ko energy) + enzymes + mucus होते हैं</li>
+        </ul>
+        <div class="sum-h">♀ मादा जनन तंत्र | Female Reproductive System</div>
+        <ul class="sum-list">
+          <li><b>Ovaries:</b> Bilateral — Graafian follicle में oocyte develop होता है</li>
+          <li><b>Fallopian tube (Oviduct):</b> Infundibulum (fimbriae) → Ampulla → Isthmus। Fertilization यहीं होती है</li>
+          <li><b>Uterus (Womb):</b> Perimetrium + Myometrium + Endometrium। Implantation यहां होता है</li>
+          <li><b>Vagina:</b> Birth canal — copulation और delivery दोनों के लिए</li>
+        </ul>
+        <div class="sum-h">🔬 युग्मकजनन | Gametogenesis</div>
+        <ul class="sum-list">
+          <li><b>Spermatogenesis:</b> Spermatogonia → Primary spermatocyte → Secondary spermatocyte → Spermatids → Spermatozoa</li>
+          <li><b>Spermiogenesis:</b> Spermatid → Sperm (mature) transformation</li>
+          <li>Sperm: Head (acrosome + nucleus) + Middle piece (mitochondria) + Tail (flagellum)</li>
+          <li><b>Oogenesis:</b> Birth से पहले ही primary oocyte बन जाते हैं; puberty पर complete होते हैं</li>
+          <li>Ovulation — Graafian follicle से secondary oocyte निकलता है (LH surge से)</li>
+        </ul>
+        <div class="sum-h">📅 ऋतुस्राव चक्र | Menstrual Cycle</div>
+        <ul class="sum-list">
+          <li>28 दिन का cycle — Menarche (puberty) से Menopause (45-50 yr) तक</li>
+          <li><b>Menstrual phase (1-5):</b> Endometrium shed होता है — bleeding</li>
+          <li><b>Follicular/Proliferative (6-13):</b> FSH → follicle develop, Estrogen बढ़ता है</li>
+          <li><b>Ovulation (Day 14):</b> LH surge → Graafian follicle rupture → Ovum release</li>
+          <li><b>Luteal phase (15-28):</b> Corpus luteum → Progesterone (pregnancy maintain)</li>
+          <li>Pregnancy में menstrual cycle रुक जाता है</li>
+        </ul>
+        <div class="sum-h">🤰 निषेचन से प्रसव | Fertilization to Parturition</div>
+        <ul class="sum-list">
+          <li>Fertilization: Fallopian tube के Ampulla में — sperm + secondary oocyte</li>
+          <li>Zygote → Cleavage → Morula → Blastocyst → Implantation (Uterus, 7th day)</li>
+          <li><b>Placenta:</b> Embryo-mother के बीच exchange organ। HCG, Progesterone, Estrogen secrete करता है</li>
+          <li><b>Gastrulation:</b> 3 germ layers — Ectoderm, Mesoderm, Endoderm</li>
+          <li>Gestation period = 9 months (38-40 weeks)</li>
+          <li><b>Parturition:</b> Oxytocin द्वारा uterine contractions → Baby delivery</li>
+          <li><b>Colostrum:</b> पहला पीला दूध — IgA antibodies से भरपूर। बच्चे की immunity के लिए जरूरी</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Leydig cells → Testosterone | Sertoli cells → Sperm nutrition</li>
+            <li>Fertilization — Ampulla of Fallopian tube में</li>
+            <li>Placenta → HCG (pregnancy test में), Progesterone, Estrogen</li>
+            <li>Colostrum → IgA antibodies (passive immunity)</li>
+            <li>Cowper's gland = Bulbourethral gland — Lubrication</li>
+            <li>LH surge → Ovulation (Day 14)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch2-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧬 मानव जनन<br><small style="font-weight:400;opacity:.8">Human Reproduction</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">♂ Male System</div>
+              <div class="mm-branch-items">Testes (Scrotum)<br>Leydig → Testosterone<br>Sertoli → Nutrition<br>Cowper's gland</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">♀ Female System</div>
+              <div class="mm-branch-items">Ovary → Oocyte<br>Fallopian tube<br>Uterus (Endometrium)<br>Vagina</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📅 Menstrual Cycle</div>
+              <div class="mm-branch-items">28 days<br>Day 14 = Ovulation<br>LH surge<br>Corpus luteum</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">💥 Fertilization</div>
+              <div class="mm-branch-items">Ampulla में<br>Zygote→Morula<br>→Blastocyst<br>→Implantation</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🤰 Placenta</div>
+              <div class="mm-branch-items">HCG (pregnancy)<br>Progesterone<br>Estrogen<br>Exchange organ</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">👶 Parturition</div>
+              <div class="mm-branch-items">Oxytocin<br>9 months gestation<br>Colostrum (IgA)<br>Lactation</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch2-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Leydig Cells <span class="kw-imp">★ PNST</span></div><div class="kw-def">Testis की interstitial cells। Testosterone (male sex hormone) secrete करती हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Sertoli Cells</div><div class="kw-def">"Nurse cells" — Seminiferous tubules में। Sperm को nutrition और support प्रदान करती हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Acrosome <span class="kw-imp">★ PNST</span></div><div class="kw-def">Sperm के head में। Hyaluronidase enzyme — zona pellucida को dissolve करके fertilization में मदद करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Graafian Follicle</div><div class="kw-def">Ovary में mature follicle। Rupture होकर ovum release करता है (Ovulation)।</div></div>
+          <div class="kw-item"><div class="kw-term">Corpus Luteum</div><div class="kw-def">Ovulation के बाद Graafian follicle से बना। Progesterone secrete करता है — pregnancy maintain करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">HCG <span class="kw-imp">★ PNST</span></div><div class="kw-def">Human Chorionic Gonadotropin — placenta secrete करता है। Pregnancy test में detect होता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Colostrum <span class="kw-imp">★ PNST</span></div><div class="kw-def">Delivery के बाद पहला पीला दूध। IgA antibodies से भरपूर — नवजात को passive immunity देता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Oxytocin</div><div class="kw-def">Posterior pituitary से। Uterine contractions → Parturition। Milk ejection में भी role।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 3 ===== -->
+  <div class="ch-item" id="ch3">
+    <div class="ch-header" onclick="toggleCh('ch3')">
+      <div class="ch-num">03</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जनन स्वास्थ्य" data-en="Reproductive Health">जनन स्वास्थ्य</div>
+        <div class="ch-tag">STD | Birth Control | MTP | Infertility</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch3','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch3','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch3','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch3-sum">
+        <div class="sum-overview">WHO के अनुसार जनन स्वास्थ्य = शारीरिक, भावनात्मक, व्यवहार संबंधी और सामाजिक — सभी पहलुओं में स्वस्थ। भारत सरकार ने 1951 में Family Planning Programme शुरू किया।</div>
+        <div class="sum-h">📊 जनसंख्या विस्फोट | Population Explosion</div>
+        <ul class="sum-list">
+          <li>India — 1900: 25 cr → 1947: 35 cr → 2000: 100 cr → 2011: 121 cr</li>
+          <li><b>कारण:</b> Death rate में कमी, Birth rate अधिक, Medical facilities बेहतर</li>
+          <li><b>RCH (Reproductive and Child Health Care):</b> India का national programme</li>
+        </ul>
+        <div class="sum-h">🚫 जन्म नियंत्रण | Birth Control Methods</div>
+        <ul class="sum-list">
+          <li><b>Natural methods:</b> Periodic abstinence (Safe period: Day 10-17), Coitus interruptus, Lactational amenorrhea (6 months)</li>
+          <li><b>Barriers:</b> Condom (male/female) — STD से भी बचाता है। Diaphragm, Cervical cap, Vault</li>
+          <li><b>IUDs:</b> Non-medicated (Lippes loop), Copper releasing (CuT, Cu7 — 3-5 yr), Hormone releasing (Progestasert, LNG-20)</li>
+          <li><b>Oral pills (Saheli):</b> Estrogen-progesterone combination। Ovulation रोकती हैं। "Saheli" — non-steroidal, India में developed</li>
+          <li><b>Emergency contraception:</b> Unprotected sex के 72 hr के भीतर</li>
+          <li><b>Surgical methods:</b> Vasectomy (male — vas deferens cut) | Tubectomy (female — fallopian tube cut)</li>
+        </ul>
+        <div class="sum-h">⚕️ MTP (Medical Termination of Pregnancy)</div>
+        <ul class="sum-list">
+          <li>India में 1971 से legal (MTP Act)</li>
+          <li>First trimester (0-12 weeks) — relatively safe</li>
+          <li>Second trimester (13-24 weeks) — only special cases</li>
+          <li>Sex-selective MTP illegal है</li>
+        </ul>
+        <div class="sum-h">🦠 यौन संचारित रोग | STDs</div>
+        <ul class="sum-list">
+          <li>Gonorrhea (Neisseria gonorrhoeae — bacteria)</li>
+          <li>Syphilis (Treponema pallidum — bacteria)</li>
+          <li>Genital herpes, Genital warts (virus)</li>
+          <li><b>AIDS:</b> HIV (Retrovirus) — T-lymphocytes destroy करता है। Blood/sexual contact/mother to child से</li>
+          <li>Chlamydiasis, Trichomoniasis (most common STD)</li>
+        </ul>
+        <div class="sum-h">👶 बांझपन | Infertility & ART</div>
+        <ul class="sum-list">
+          <li><b>IVF (In-vitro fertilization):</b> Test tube baby — fertilization lab में, Embryo transfer uterus में</li>
+          <li><b>ZIFT:</b> Zygote Intra Fallopian Transfer</li>
+          <li><b>GIFT:</b> Gamete Intra Fallopian Transfer</li>
+          <li><b>ICSI:</b> Intracytoplasmic Sperm Injection</li>
+          <li><b>AI (Artificial Insemination):</b> Donor sperm — uterus/cervix में</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Saheli — non-steroidal oral contraceptive pill (India)</li>
+            <li>Copper-T → Phagocytosis of sperm, Cervical mucus thick</li>
+            <li>Vasectomy = male, Tubectomy = female sterilization</li>
+            <li>First test tube baby = Louise Brown (1978, UK)</li>
+            <li>Lactational amenorrhea — 6 months effective</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch3-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🏥 जनन स्वास्थ्य<br><small style="font-weight:400;opacity:.8">Reproductive Health</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📊 Population</div>
+              <div class="mm-branch-items">Explosion<br>Death rate ↓<br>Birth rate ↑<br>RCH Programme</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🚫 Birth Control</div>
+              <div class="mm-branch-items">Natural methods<br>Barriers (Condom)<br>IUDs (CuT)<br>Oral pills (Saheli)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">⚕️ MTP</div>
+              <div class="mm-branch-items">Legal (1971)<br>0-12 wk safe<br>Sex-selective illegal</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🦠 STDs</div>
+              <div class="mm-branch-items">Gonorrhea<br>Syphilis<br>AIDS (HIV)<br>Trichomoniasis</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">👶 Infertility/ART</div>
+              <div class="mm-branch-items">IVF (Test tube baby)<br>ZIFT • GIFT • ICSI<br>AI (Artificial Insemination)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch3-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Saheli <span class="kw-imp">★ PNST</span></div><div class="kw-def">India में developed non-steroidal oral contraceptive। CDRI (Lucknow) ने बनाया। हफ्ते में एक बार। Side effects कम।</div></div>
+          <div class="kw-item"><div class="kw-term">IUD (Intrauterine Device)</div><div class="kw-def">Copper-T: Copper ions → sperm motility कम। Hormone releasing IUDs → cervical mucus thick करते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Vasectomy / Tubectomy <span class="kw-imp">★ PNST</span></div><div class="kw-def">Vasectomy = Vas deferens cut (Male). Tubectomy = Fallopian tube cut/ligate (Female). Permanent methods।</div></div>
+          <div class="kw-item"><div class="kw-term">IVF</div><div class="kw-def">In-vitro fertilization = Test tube baby। Lab में fertilization, embryo uterus में transfer। Louise Brown = first (1978, UK)।</div></div>
+          <div class="kw-item"><div class="kw-term">Lactational Amenorrhea</div><div class="kw-def">Delivery के बाद breastfeeding से menstruation नहीं होता। 6 months तक 98% effective contraceptive।</div></div>
+          <div class="kw-item"><div class="kw-term">STD <span class="kw-imp">★ PNST</span></div><div class="kw-def">Sexually Transmitted Diseases। Trichomoniasis (most common), AIDS (most fatal)। Condom — best protection।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 4 ===== -->
+  <div class="ch-item" id="ch4">
+    <div class="ch-header" onclick="toggleCh('ch4')">
+      <div class="ch-num">04</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वंशागति के सिद्धांत एवं विभिन्नता" data-en="Principles of Inheritance and Variation">वंशागति के सिद्धांत एवं विभिन्नता</div>
+        <div class="ch-tag">Mendel | Monohybrid | Dihybrid | Sex Determination | Disorders</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch4','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch4','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch4','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch4-sum">
+        <div class="sum-overview">Gregor Johann Mendel (Father of Genetics) ने 1866 में Pisum sativum (Garden pea) पर प्रयोग करके वंशागति के नियम प्रस्तुत किए।</div>
+        <div class="sum-h">🌱 Mendel के प्रयोग | Mendel's Experiments</div>
+        <ul class="sum-list">
+          <li>7 characteristics — Seed shape, Seed color, Pod shape, Pod color, Flower color, Flower position, Plant height</li>
+          <li><b>Monohybrid cross:</b> F1 = Tall (all), F2 = 3 Tall : 1 Dwarf (3:1 phenotype ratio)</li>
+          <li><b>Dihybrid cross:</b> F2 = 9:3:3:1 ratio</li>
+          <li><b>Test cross:</b> Unknown genotype × Homozygous recessive (tt)</li>
+        </ul>
+        <div class="sum-h">📜 Mendel के नियम | Mendel's Laws</div>
+        <ul class="sum-list">
+          <li><b>Law of Dominance:</b> एक character के दो contrasting forms में से एक dominant होता है</li>
+          <li><b>Law of Segregation (Purity of gametes):</b> Alleles gamete formation पर अलग हो जाते हैं। Universally applicable</li>
+          <li><b>Law of Independent Assortment:</b> Two genes independently separate होते हैं। Linked genes में लागू नहीं होता</li>
+        </ul>
+        <div class="sum-h">🧬 वंशागति के अन्य प्रकार | Other Inheritance Patterns</div>
+        <ul class="sum-list">
+          <li><b>Incomplete dominance:</b> F1 intermediate (e.g., Red × White = Pink Snapdragon). F2 = 1:2:1</li>
+          <li><b>Codominance:</b> Both alleles express equally (e.g., ABO blood group — IA, IB codominant; i recessive)</li>
+          <li><b>Polygenic inheritance:</b> Multiple genes → single trait (e.g., Skin color, Height)</li>
+          <li><b>Pleiotropy:</b> Single gene → multiple effects (e.g., Phenylketonuria)</li>
+          <li><b>Multiple alleles:</b> ABO blood group — IA, IB, i (3 alleles, but 2 per individual)</li>
+        </ul>
+        <div class="sum-h">🧑‍🔬 लिंग निर्धारण | Sex Determination</div>
+        <ul class="sum-list">
+          <li><b>Human:</b> Female = XX, Male = XY। Male determines sex of child</li>
+          <li><b>Drosophila:</b> XX = Female, XY = Male (same as human)</li>
+          <li><b>Grasshopper:</b> XX = Female, XO = Male (no Y chromosome)</li>
+          <li><b>Birds, Butterflies:</b> ZW = Female, ZZ = Male</li>
+          <li><b>Honeybee:</b> Fertilized = Female (diploid), Unfertilized = Male drone (haploid) — Haplodiploidy</li>
+        </ul>
+        <div class="sum-h">🔗 लिंग संबद्ध वंशागति | Sex-linked Inheritance</div>
+        <ul class="sum-list">
+          <li><b>Haemophilia:</b> X-linked recessive। ज्यादातर males affected। Royal disease</li>
+          <li><b>Colour blindness:</b> X-linked recessive। Males more affected</li>
+          <li>Carrier female = XHXh → Pass to sons (50% chance)</li>
+        </ul>
+        <div class="sum-h">🏥 आनुवांशिक विकार | Genetic Disorders</div>
+        <ul class="sum-list">
+          <li><b>Down's syndrome (Trisomy 21):</b> 47 chromosomes। Extra chromosome 21। Mental retardation, characteristic face</li>
+          <li><b>Klinefelter's (47, XXY):</b> Male — Gynaecomastia, sterile</li>
+          <li><b>Turner's (45, XO):</b> Female — Sterile, underdeveloped breasts</li>
+          <li><b>Phenylketonuria:</b> Autosomal recessive — Phenylalanine metabolism defect, Mental retardation</li>
+          <li><b>Sickle cell anaemia:</b> Autosomal recessive — HbS (Valine instead of Glutamic acid in β-globin)</li>
+          <li><b>Thalassemia:</b> Autosomal recessive — αβ globin defect, RBC fragile</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Mendel = Father of Genetics | Garden pea (7 characters)</li>
+            <li>Monohybrid F2 = 3:1 | Dihybrid F2 = 9:3:3:1</li>
+            <li>ABO blood group = Codominance + Multiple alleles</li>
+            <li>Haemophilia = X-linked recessive = Royal disease</li>
+            <li>Down's syndrome = Trisomy 21 (47 chromosomes)</li>
+            <li>Sickle cell — Valine replaces Glutamic acid</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch4-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧬 वंशागति के सिद्धांत<br><small style="font-weight:400;opacity:.8">Principles of Inheritance</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌱 Mendel's Laws</div>
+              <div class="mm-branch-items">Dominance<br>Segregation<br>Indep. Assortment<br>Pisum sativum</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔬 Crosses</div>
+              <div class="mm-branch-items">Monohybrid 3:1<br>Dihybrid 9:3:3:1<br>Test cross (tt)<br>Back cross</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🎨 Special Inheritance</div>
+              <div class="mm-branch-items">Incomplete dominance<br>Codominance (ABO)<br>Polygenic<br>Pleiotropy</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">♀♂ Sex Determination</div>
+              <div class="mm-branch-items">Human: XX/XY<br>Birds: ZW/ZZ<br>Bee: Haplodiploidy<br>Grasshopper: XO</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🏥 Disorders</div>
+              <div class="mm-branch-items">Down's (Tri21)<br>Klinefelter's (XXY)<br>Turner's (XO)<br>Haemophilia</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch4-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Allele</div><div class="kw-def">Homologous chromosomes पर same locus पर alternate forms of a gene। TT, Tt, tt।</div></div>
+          <div class="kw-item"><div class="kw-term">Codominance <span class="kw-imp">★ PNST</span></div><div class="kw-def">दोनों alleles fully express होते हैं। ABO blood group में IA और IB codominant; i recessive।</div></div>
+          <div class="kw-item"><div class="kw-term">Incomplete Dominance</div><div class="kw-def">F1 intermediate phenotype। Red×White=Pink (Snapdragon)। F2=1:2:1 ratio।</div></div>
+          <div class="kw-item"><div class="kw-term">Down's Syndrome <span class="kw-imp">★ PNST</span></div><div class="kw-def">Trisomy 21 — 47 chromosomes। Mental retardation, slanted eyes, palm crease, short stature।</div></div>
+          <div class="kw-item"><div class="kw-term">Sickle Cell Anaemia <span class="kw-imp">★ PNST</span></div><div class="kw-def">Autosomal recessive। β-globin chain में Glutamic acid की जगह Valine। RBC sickle shape।</div></div>
+          <div class="kw-item"><div class="kw-term">Haemophilia</div><div class="kw-def">X-linked recessive। Clotting factor deficiency। "Royal disease" — Queen Victoria से फैला।</div></div>
+          <div class="kw-item"><div class="kw-term">Phenotype vs Genotype</div><div class="kw-def">Genotype = Genetic constitution (TT, Tt). Phenotype = Observable character (Tall, Dwarf)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 5 ===== -->
+  <div class="ch-item" id="ch5">
+    <div class="ch-header" onclick="toggleCh('ch5')">
+      <div class="ch-num">05</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वंशागति का आणविक आधार" data-en="Molecular Basis of Inheritance">वंशागति का आणविक आधार</div>
+        <div class="ch-tag">DNA | Replication | Transcription | Translation | Genetic Code</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch5','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch5','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch5','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch5-sum">
+        <div class="sum-overview">DNA (Deoxyribonucleic acid) अधिकांश जीवों में आनुवांशिक पदार्थ है। Watson और Crick ने 1953 में Double Helix Model प्रस्तुत किया।</div>
+        <div class="sum-h">🧬 DNA संरचना | DNA Structure</div>
+        <ul class="sum-list">
+          <li>Nucleotide = Sugar (Deoxyribose) + Phosphate + Nitrogenous base</li>
+          <li><b>Purines:</b> Adenine (A), Guanine (G) | <b>Pyrimidines:</b> Cytosine (C), Thymine (T)</li>
+          <li><b>Chargaff's rule:</b> A=T, G=C (A+G = T+C, Purines = Pyrimidines)</li>
+          <li>Two strands = Antiparallel (5'→3' and 3'→5')</li>
+          <li>H-bonds: A-T = 2 H-bonds, G-C = 3 H-bonds</li>
+          <li>Pitch = 3.4 nm, 10 base pairs per turn, Width = 2 nm</li>
+          <li><b>RNA:</b> Ribose sugar, Uracil (instead of Thymine), Single stranded</li>
+        </ul>
+        <div class="sum-h">🔬 Genetic Material की खोज | Discovery</div>
+        <ul class="sum-list">
+          <li><b>Griffith (1928):</b> Transformation experiment — S-strain (virulent) + Heat-killed = R-strain virulent हो गई</li>
+          <li><b>Avery, MacLeod, McCarty (1944):</b> DNA = Transforming principle prove किया</li>
+          <li><b>Hershey & Chase (1952):</b> Bacteriophage experiment → DNA = Genetic material</li>
+          <li>Tobacco Mosaic Virus (TMV), QB phage — RNA = Genetic material (exception)</li>
+        </ul>
+        <div class="sum-h">🔁 DNA Replication</div>
+        <ul class="sum-list">
+          <li><b>Semi-conservative:</b> Meselson & Stahl (1958) ने E.coli में prove किया। N15-N14 experiment</li>
+          <li>Replication fork: Helicase (H-bonds तोड़ता है) → SSB proteins (stabilize) → Primase (RNA primer)</li>
+          <li><b>DNA Polymerase III:</b> Leading strand (continuous, 5'→3') + Lagging strand (discontinuous, Okazaki fragments)</li>
+          <li><b>DNA Polymerase I:</b> Primer remove करता है → DNA ligase → Okazaki fragments join</li>
+        </ul>
+        <div class="sum-h">📝 Transcription (DNA → RNA)</div>
+        <ul class="sum-list">
+          <li>Template strand (Antisense) से mRNA बनती है</li>
+          <li><b>Prokaryotes:</b> Translation साथ-साथ होती है (no nuclear membrane)</li>
+          <li><b>Eukaryotes:</b> hnRNA → Splicing → mRNA (Exons join, Introns remove)</li>
+          <li>Types of RNA: mRNA (message), tRNA (adapter/clover leaf), rRNA (structural)</li>
+        </ul>
+        <div class="sum-h">🔤 आनुवांशिक कूट | Genetic Code</div>
+        <ul class="sum-list">
+          <li>Triplet codon — 3 bases = 1 amino acid</li>
+          <li>64 codons total — 61 sense codons + 3 stop codons (UAA, UAG, UGA)</li>
+          <li><b>AUG:</b> Start codon (Methionine) | <b>Degenerate:</b> One AA = multiple codons</li>
+          <li><b>Universal:</b> Same codons in all organisms (almost)</li>
+          <li><b>Wobble hypothesis:</b> Crick — third codon position flexible</li>
+        </ul>
+        <div class="sum-h">⚙️ Translation (mRNA → Protein)</div>
+        <ul class="sum-list">
+          <li>Ribosome (rRNA + protein): 70S (Prokaryote) = 50S + 30S; 80S (Eukaryote) = 60S + 40S</li>
+          <li>tRNA = Adapter molecule, Anticodon loop</li>
+          <li>Steps: Activation → Initiation → Elongation → Termination</li>
+          <li><b>Aminoacyl tRNA synthetase:</b> AA + tRNA attach करता है</li>
+        </ul>
+        <div class="sum-h">🔧 Gene Regulation | Human Genome</div>
+        <ul class="sum-list">
+          <li><b>Lac Operon (Jacob & Monod):</b> Repressible system — Lactose = inducer, Glucose absent = transcription</li>
+          <li><b>Human Genome Project:</b> 1990-2003। 3 billion base pairs, ~30,000 genes</li>
+          <li><b>DNA fingerprinting (Alec Jeffreys):</b> VNTRs — forensic, paternity testing</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Watson & Crick = Double Helix (1953), Nobel Prize 1962</li>
+            <li>A=T (2 H-bonds), G≡C (3 H-bonds) — Chargaff's rule</li>
+            <li>Semi-conservative replication — Meselson & Stahl</li>
+            <li>AUG = Start codon | UAA, UAG, UGA = Stop codons</li>
+            <li>Genetic code — Universal, Degenerate, Non-overlapping</li>
+            <li>Griffith = Transformation | Hershey-Chase = DNA is genetic material</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch5-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧬 वंशागति का आणविक आधार<br><small style="font-weight:400;opacity:.8">Molecular Basis of Inheritance</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🧬 DNA Structure</div>
+              <div class="mm-branch-items">Double Helix (1953)<br>A=T (2H) G≡C (3H)<br>Antiparallel<br>Chargaff's rule</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔁 Replication</div>
+              <div class="mm-branch-items">Semi-conservative<br>Meselson & Stahl<br>Leading+Lagging<br>Okazaki fragments</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📝 Transcription</div>
+              <div class="mm-branch-items">DNA→mRNA<br>Template strand<br>hnRNA→splicing<br>Exon/Intron</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔤 Genetic Code</div>
+              <div class="mm-branch-items">64 codons (triplet)<br>AUG=Start<br>UAA/UAG/UGA=Stop<br>Universal+Degenerate</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">⚙️ Translation</div>
+              <div class="mm-branch-items">mRNA→Protein<br>Ribosome (70S/80S)<br>tRNA (Adapter)<br>4 steps</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔧 Regulation</div>
+              <div class="mm-branch-items">Lac Operon<br>Jacob & Monod<br>HGP (1990-2003)<br>DNA fingerprinting</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch5-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Chargaff's Rule <span class="kw-imp">★ PNST</span></div><div class="kw-def">DNA में A=T और G=C। Purine = Pyrimidine। A+G = T+C।</div></div>
+          <div class="kw-item"><div class="kw-term">Semi-conservative Replication <span class="kw-imp">★ PNST</span></div><div class="kw-def">Meselson & Stahl (1958)। Daughter DNA में एक parent strand + एक new strand।</div></div>
+          <div class="kw-item"><div class="kw-term">Okazaki Fragments</div><div class="kw-def">Lagging strand पर discontinuous छोटे-छोटे DNA fragments। DNA ligase join करता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Codon / Anticodon</div><div class="kw-def">Codon = mRNA पर 3 bases। Anticodon = tRNA loop पर complementary bases।</div></div>
+          <div class="kw-item"><div class="kw-term">Lac Operon <span class="kw-imp">★ PNST</span></div><div class="kw-def">Jacob & Monod ने E.coli में describe किया। Lactose = inducer। Glucose absent होने पर transcription होती है।</div></div>
+          <div class="kw-item"><div class="kw-term">DNA Fingerprinting</div><div class="kw-def">Alec Jeffreys ने develop किया। VNTRs (Variable Number Tandem Repeats) — Forensic + Paternity testing।</div></div>
+          <div class="kw-item"><div class="kw-term">Intron / Exon</div><div class="kw-def">Intron = Non-coding sequences (removed during splicing)। Exon = Coding sequences (expressed)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 6 ===== -->
+  <div class="ch-item" id="ch6">
+    <div class="ch-header" onclick="toggleCh('ch6')">
+      <div class="ch-num">06</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विकास" data-en="Evolution">विकास</div>
+        <div class="ch-tag">Origin of Life | Darwin | Hardy-Weinberg | Evidences</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch6','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch6','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch6','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch6-sum">
+        <div class="sum-overview">Evolution = समय के साथ जीवों में होने वाले परिवर्तन। पृथ्वी पर जीवन की उत्पत्ति लगभग 4 अरब वर्ष पहले हुई।</div>
+        <div class="sum-h">🌍 जीवन की उत्पत्ति | Origin of Life</div>
+        <ul class="sum-list">
+          <li>Oparin (Russia) & Haldane (England) — Abiogenic theory (Chemical evolution)</li>
+          <li><b>Miller-Urey Experiment (1953):</b> CH4, NH3, H2O, H2 → Electric discharge → Amino acids</li>
+          <li>First life forms = Chemoheterotrophs, Anaerobic, 2000 million years ago</li>
+          <li>Cyanobacteria → Oxygen → Ozone layer formation → Aerobic organisms</li>
+        </ul>
+        <div class="sum-h">📚 विकास के प्रमाण | Evidences for Evolution</div>
+        <ul class="sum-list">
+          <li><b>Homologous organs:</b> Same structure, different function. Common ancestry. (Forelimb of whale, bat, cheetah, human)</li>
+          <li><b>Analogous organs:</b> Different structure, same function. Convergent evolution. (Wings of butterfly & bird)</li>
+          <li><b>Vestigial organs:</b> Degenerated organs (Appendix, ear muscles, body hair in humans)</li>
+          <li><b>Fossil record:</b> Past organisms preserved. Connecting links (Archaeopteryx = reptile + bird)</li>
+          <li><b>Biochemical evidence:</b> Cytochrome-c protein — same in all organisms</li>
+        </ul>
+        <div class="sum-h">🧬 Darwin की Theory | Darwin's Theory</div>
+        <ul class="sum-list">
+          <li><b>Natural Selection:</b> Survival of the fittest — Herbert Spencer</li>
+          <li>HMS Beagle voyage → Galapagos islands → Finches (adaptive radiation)</li>
+          <li>Overproduction + Struggle + Variation + Survival → Evolution</li>
+          <li><b>Lamarck:</b> Use & Disuse + Inheritance of acquired characters (Wrong!)</li>
+          <li><b>Hugo de Vries:</b> Mutation theory (Saltation = Macro evolution in single step)</li>
+        </ul>
+        <div class="sum-h">⚖️ Hardy-Weinberg Principle</div>
+        <ul class="sum-list">
+          <li>Allele frequencies in population remain constant generation to generation (if no evolution)</li>
+          <li>p² + 2pq + q² = 1 (p + q = 1)</li>
+          <li><b>Disturbing factors:</b> Gene mutation, Gene migration (Gene flow), Genetic drift (Founder effect, Bottle-neck), Natural selection, Non-random mating</li>
+          <li><b>Genetic drift:</b> Random changes in allele frequency in small populations</li>
+        </ul>
+        <div class="sum-h">🦎 मानव विकास | Human Evolution</div>
+        <ul class="sum-list">
+          <li>Dryopithecus (Ape-like) → Ramapithecus → Australopithecus (4-5 mya, Africa)</li>
+          <li>Homo habilis (2 mya) → Homo erectus (1.5 mya, fire) → Homo sapiens neanderthalensis → Homo sapiens sapiens</li>
+          <li>Cro-magnon man = Modern man precursor (cave paintings)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Miller-Urey experiment = Amino acids from inorganic molecules</li>
+            <li>Homologous = Same structure, Diff function (Common ancestor)</li>
+            <li>Analogous = Diff structure, Same function (Convergent evolution)</li>
+            <li>Archaeopteryx = Connecting link (Reptile + Bird)</li>
+            <li>Hardy-Weinberg = p²+2pq+q²=1</li>
+            <li>Adaptive radiation = Darwin's finches, Marsupials</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch6-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌍 विकास (Evolution)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🧪 Origin of Life</div>
+              <div class="mm-branch-items">Oparin-Haldane<br>Miller-Urey (1953)<br>Amino acids<br>Cyanobacteria</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📚 Evidences</div>
+              <div class="mm-branch-items">Homologous organs<br>Analogous organs<br>Fossils<br>Archaeopteryx</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🌿 Darwin</div>
+              <div class="mm-branch-items">Natural Selection<br>Survival of Fittest<br>Finches (Galapagos)<br>Adaptive Radiation</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">⚖️ Hardy-Weinberg</div>
+              <div class="mm-branch-items">p²+2pq+q²=1<br>Genetic drift<br>Gene flow<br>Natural selection</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🦴 Human Evolution</div>
+              <div class="mm-branch-items">Australopithecus<br>Homo habilis<br>Homo erectus<br>Homo sapiens</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch6-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Adaptive Radiation <span class="kw-imp">★ PNST</span></div><div class="kw-def">एक common ancestor से different environments में different organisms का विकास। Darwin's finches (Galapagos), Australian marsupials।</div></div>
+          <div class="kw-item"><div class="kw-term">Homologous Organs <span class="kw-imp">★ PNST</span></div><div class="kw-def">Same structure, different function → Divergent evolution → Common ancestry। e.g., Whale forelimb, Bat wing, Human arm।</div></div>
+          <div class="kw-item"><div class="kw-term">Analogous Organs <span class="kw-imp">★ PNST</span></div><div class="kw-def">Different structure, same function → Convergent evolution। e.g., Wings of insects & birds, Sweet potato & potato।</div></div>
+          <div class="kw-item"><div class="kw-term">Genetic Drift</div><div class="kw-def">Small population में allele frequencies का random change। Founder effect & Bottle-neck effect।</div></div>
+          <div class="kw-item"><div class="kw-term">Archaeopteryx <span class="kw-imp">★ PNST</span></div><div class="kw-def">Reptile + Bird के features = Connecting link। Feathers (bird) + Teeth, claws, tail (reptile)।</div></div>
+          <div class="kw-item"><div class="kw-term">Industrial Melanism</div><div class="kw-def">Biston betularia (Peppered moth) — pollution से dark moths survive। Natural selection का example।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 7 ===== -->
+  <div class="ch-item" id="ch7">
+    <div class="ch-header" onclick="toggleCh('ch7')">
+      <div class="ch-num">07</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="मानव स्वास्थ्य तथा रोग" data-en="Human Health and Disease">मानव स्वास्थ्य तथा रोग</div>
+        <div class="ch-tag">Pathogens | Immunity | AIDS | Cancer | Drugs</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch7','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch7','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch7','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch7-sum">
+        <div class="sum-overview">WHO के अनुसार स्वास्थ्य = शरीर, मन और समाज की पूर्ण भलाई। रोग = किसी भी कारण से normal functioning में disturbance।</div>
+        <div class="sum-h">🦠 रोगजनक | Common Pathogens</div>
+        <ul class="sum-list">
+          <li><b>Typhoid:</b> Salmonella typhi (bacteria) — contaminated water/food। Widal test</li>
+          <li><b>Pneumonia:</b> Streptococcus pneumoniae / Haemophilus influenzae। Alveoli filled with fluid</li>
+          <li><b>Common cold:</b> Rhino virus। No vaccine</li>
+          <li><b>Malaria:</b> Plasmodium (P. falciparum most dangerous) — Female Anopheles mosquito vector</li>
+          <li><b>Amoebiasis:</b> Entamoeba histolytica — contaminated water, "amoebic dysentery"</li>
+          <li><b>Ascariasis:</b> Ascaris lumbricoides (roundworm) — intestinal infection</li>
+          <li><b>Elephantiasis (Filariasis):</b> Wuchereria bancrofti — lymph vessels block। Female Culex mosquito</li>
+          <li><b>Ringworm:</b> Microsporum, Trichophyton (fungi) — dry scaly lesions</li>
+        </ul>
+        <div class="sum-h">🛡️ प्रतिरक्षा | Immunity</div>
+        <ul class="sum-list">
+          <li><b>Innate immunity:</b> Non-specific, present from birth। Barriers: Physical, Physiological, Cellular, Cytokine</li>
+          <li><b>Acquired immunity:</b> Antigen-specific, memory (Anamnestic response)</li>
+          <li><b>Active immunity:</b> Own antibodies bante hain। Slow, long-lasting. Vaccination</li>
+          <li><b>Passive immunity:</b> Ready-made antibodies दिए जाते हैं। Fast, short-lived। Mother→fetus (IgG), Colostrum (IgA)</li>
+          <li><b>B-lymphocytes:</b> Humoral immunity (antibody-mediated) — IgG, IgA, IgM, IgE, IgD</li>
+          <li><b>T-lymphocytes:</b> Cell-mediated immunity — Cytotoxic T cells, Helper T cells</li>
+          <li><b>Interferon:</b> Cytokines — virus-infected cells release → neighbouring cells protect</li>
+        </ul>
+        <div class="sum-h">🔴 AIDS | HIV</div>
+        <ul class="sum-list">
+          <li><b>HIV:</b> Human Immunodeficiency Virus — Retrovirus (RNA genome)</li>
+          <li><b>Spread:</b> Sexual contact, Blood transfusion, Infected needles, Mother to child</li>
+          <li>HIV → Helper T-cells (CD4+) destroy → Immune system collapse → Opportunistic infections</li>
+          <li><b>ELISA test:</b> Detection | <b>ART (Anti-retroviral therapy):</b> Treatment (not cure)</li>
+        </ul>
+        <div class="sum-h">🦠 Cancer</div>
+        <ul class="sum-list">
+          <li>Uncontrolled cell division — Proto-oncogene → Oncogene (mutation)</li>
+          <li><b>Carcinogens:</b> Tobacco, Radiation, Chemicals, Viruses (Oncogenic viruses)</li>
+          <li><b>Types:</b> Carcinoma (epithelial), Sarcoma (connective), Leukemia (blood), Lymphoma</li>
+          <li><b>Metastasis:</b> Cancer cells spread to other sites via blood/lymph</li>
+          <li><b>Treatment:</b> Surgery, Radiotherapy, Chemotherapy, Immunotherapy</li>
+        </ul>
+        <div class="sum-h">💊 नशीले पदार्थ | Drugs & Alcohol</div>
+        <ul class="sum-list">
+          <li><b>Opioids:</b> Morphine, Heroin (Diacetylmorphine) — Papaver somniferum</li>
+          <li><b>Cannabinoids:</b> THC — Cannabis sativa (hemp plant)</li>
+          <li><b>Cocaine:</b> Erythroxylum coca — Dopamine release</li>
+          <li>Alcohol → CNS depression, liver cirrhosis</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Malaria — Plasmodium falciparum (most dangerous), Female Anopheles</li>
+            <li>Elephantiasis — Wuchereria bancrofti, Female Culex</li>
+            <li>HIV = Retrovirus, attacks CD4+ T-lymphocytes</li>
+            <li>Active immunity = long lasting | Passive = short lived</li>
+            <li>Heroin (Smack) = Diacetylmorphine (Papaver somniferum)</li>
+            <li>ELISA test — AIDS detection</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch7-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🏥 मानव स्वास्थ्य तथा रोग<br><small style="font-weight:400;opacity:.8">Human Health and Disease</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🦠 Diseases</div>
+              <div class="mm-branch-items">Typhoid (Salmonella)<br>Malaria (Plasmodium)<br>Elephantiasis<br>Ringworm (fungi)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🛡️ Immunity</div>
+              <div class="mm-branch-items">Innate (non-specific)<br>Acquired (specific)<br>Active vs Passive<br>B & T cells</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔴 AIDS</div>
+              <div class="mm-branch-items">HIV (Retrovirus)<br>CD4+ T cells destroy<br>ELISA test<br>ART treatment</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🦠 Cancer</div>
+              <div class="mm-branch-items">Oncogene<br>Metastasis<br>Carcinoma/Sarcoma<br>Chemo/Radio therapy</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">💊 Drugs</div>
+              <div class="mm-branch-items">Opioids (Heroin)<br>Cannabinoids (THC)<br>Cocaine<br>Alcohol (Cirrhosis)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch7-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Widal Test <span class="kw-imp">★ PNST</span></div><div class="kw-def">Typhoid (Salmonella typhi) detection test। Fever + antibodies test।</div></div>
+          <div class="kw-item"><div class="kw-term">Plasmodium falciparum <span class="kw-imp">★ PNST</span></div><div class="kw-def">Most dangerous malaria parasite। Malignant tertian malaria। Female Anopheles = Vector।</div></div>
+          <div class="kw-item"><div class="kw-term">Retrovirus <span class="kw-imp">★ PNST</span></div><div class="kw-def">RNA genome + Reverse transcriptase। RNA→DNA synthesis। HIV = Retrovirus।</div></div>
+          <div class="kw-item"><div class="kw-term">Metastasis</div><div class="kw-def">Cancer cells का original site से दूसरी जगह फैलना। Blood/lymph के through।</div></div>
+          <div class="kw-item"><div class="kw-term">Interferon</div><div class="kw-def">Virus-infected cells द्वारा release cytokines। Neighboring cells को viral infection से protect करते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Heroin (Smack) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Diacetylmorphine। Papaver somniferum (opium poppy) से। CNS depressant।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 8 ===== -->
+  <div class="ch-item" id="ch8">
+    <div class="ch-header" onclick="toggleCh('ch8')">
+      <div class="ch-num">08</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="मानव कल्याण में सूक्ष्मजीव" data-en="Microbes in Human Welfare">मानव कल्याण में सूक्ष्मजीव</div>
+        <div class="ch-tag">Household | Industrial | Sewage | Biogas | Biofertilizer</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch8','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch8','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch8','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch8-sum">
+        <div class="sum-overview">सूक्ष्मजीव जैसे bacteria, fungi, protozoa, virus आदि हमारे दैनिक जीवन में उपयोगी हैं — भोजन, दवाइयां, कृषि और पर्यावरण में।</div>
+        <div class="sum-h">🏠 घरेलू उत्पाद | Household Products</div>
+        <ul class="sum-list">
+          <li><b>Dahi (Curd):</b> Lactobacillus — milk का pH कम करता है, Lactic acid बनाता है</li>
+          <li><b>Bread:</b> Saccharomyces cerevisiae (Baker's yeast) — CO2 से bread फूलती है</li>
+          <li><b>Idli/Dosa:</b> Leuconostoc mesenteroides + Streptococcus (fermentation)</li>
+          <li><b>Cheese:</b> Propionibacterium shermanii (Swiss cheese holes + flavor), Penicillium roquefortii (Roquefort)</li>
+          <li><b>Toddy:</b> South India — fermented palm sap</li>
+        </ul>
+        <div class="sum-h">🏭 औद्योगिक उत्पाद | Industrial Products</div>
+        <ul class="sum-list">
+          <li><b>Beverages:</b> Saccharomyces cerevisiae → Ethanol (Beer, Wine, Whisky)</li>
+          <li><b>Antibiotics:</b> Penicillin (Alexander Fleming, 1928, Penicillium notatum) — first antibiotic</li>
+          <li><b>Statins:</b> Monascus purpureus (yeast) → Blood cholesterol कम करते हैं</li>
+          <li><b>Cyclosporin A:</b> Trichoderma polysporum → Immunosuppressant (organ transplant)</li>
+          <li><b>Streptokinase:</b> Streptococcus — "Clot buster" — Heart attack में</li>
+          <li><b>Organic acids:</b> Aspergillus niger → Citric acid; Acetobacter aceti → Acetic acid</li>
+          <li><b>Lipase:</b> Detergent industry में</li>
+        </ul>
+        <div class="sum-h">🚰 जल-मल उपचार | Sewage Treatment</div>
+        <ul class="sum-list">
+          <li><b>Primary treatment:</b> Physical filtering — गंदगी छानी जाती है</li>
+          <li><b>Secondary treatment (Biological):</b> Aerobic bacteria → BOD कम करती हैं</li>
+          <li>Flocs = Bacteria + Fungi filaments का web। Effluent = Clear water (treated)</li>
+          <li>Sludge → Anaerobic digesters → Biogas (CH4, CO2, H2S)</li>
+        </ul>
+        <div class="sum-h">🔥 बायोगैस | Biogas</div>
+        <ul class="sum-list">
+          <li>Methanogens (Methanobacterium) — anaerobic bacteria → CH4 produce करते हैं</li>
+          <li>Biogas plant (Gobar gas plant) — mainly Methane (75%)</li>
+          <li>Slurry = खाद के रूप में उपयोग होती है</li>
+        </ul>
+        <div class="sum-h">🌱 जैव नियंत्रण | Biocontrol & Biofertilizer</div>
+        <ul class="sum-list">
+          <li><b>Bacillus thuringiensis (Bt):</b> Insecticidal protein → Caterpillars को kill करता है</li>
+          <li><b>Trichoderma:</b> Fungal pathogen को control करता है</li>
+          <li><b>Baculoviruses (Nucleopolyhedrovirus):</b> Insects-specific, environment friendly</li>
+          <li><b>Biofertilizers:</b> Rhizobium (legume root nodules — N2 fixation), Azospirillum, Azotobacter, Anabaena (BGA), Mycorrhiza (phosphorus)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Penicillin = Alexander Fleming (1928), Penicillium notatum</li>
+            <li>Streptokinase = "Clot buster" for Heart attack</li>
+            <li>Cyclosporin A = Immunosuppressant (organ transplant)</li>
+            <li>Bt = Bacillus thuringiensis (insect killer)</li>
+            <li>Rhizobium = Legume roots, N2 fixation</li>
+            <li>BOD = Biological Oxygen Demand (water pollution measure)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch8-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🦠 मानव कल्याण में सूक्ष्मजीव<br><small style="font-weight:400;opacity:.8">Microbes in Human Welfare</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🏠 Household</div>
+              <div class="mm-branch-items">Curd (Lactobacillus)<br>Bread (Yeast)<br>Idli/Dosa<br>Cheese</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🏭 Industrial</div>
+              <div class="mm-branch-items">Penicillin (Fleming)<br>Streptokinase<br>Cyclosporin A<br>Statins</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🚰 Sewage Treatment</div>
+              <div class="mm-branch-items">Primary (physical)<br>Secondary (biological)<br>Flocs<br>BOD</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔥 Biogas</div>
+              <div class="mm-branch-items">Methanogens<br>CH4 (75%)<br>Anaerobic<br>Slurry = Manure</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🌱 Biofertilizer</div>
+              <div class="mm-branch-items">Rhizobium (N2 fix)<br>Azotobacter<br>Mycorrhiza (P)<br>Bt (insecticide)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch8-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Penicillin <span class="kw-imp">★ PNST</span></div><div class="kw-def">Alexander Fleming (1928)। Penicillium notatum fungi से। पहला antibiotic। Bacteria की cell wall synthesis रोकता है।</div></div>
+          <div class="kw-item"><div class="kw-term">BOD (Biological Oxygen Demand) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Water में organic matter को oxidize करने के लिए oxygen की मात्रा। BOD अधिक = अधिक प्रदूषण।</div></div>
+          <div class="kw-item"><div class="kw-term">Streptokinase</div><div class="kw-def">Streptococcus bacteria से। Blood clots dissolve करता है। "Clot buster" — Heart attack treatment।</div></div>
+          <div class="kw-item"><div class="kw-term">Mycorrhiza</div><div class="kw-def">Fungi + Plant roots symbiosis। Phosphorus absorption बढ़ाता है। Biofertilizer।</div></div>
+          <div class="kw-item"><div class="kw-term">Bacillus thuringiensis (Bt) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Soil bacteria — Cry proteins (insecticidal) produce। Caterpillars kill। Bt cotton में use।</div></div>
+          <div class="kw-item"><div class="kw-term">Flocs</div><div class="kw-def">Sewage treatment में bacteria + fungi filaments का web। Organic matter decompose करते हैं।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 9 ===== -->
+  <div class="ch-item" id="ch9">
+    <div class="ch-header" onclick="toggleCh('ch9')">
+      <div class="ch-num">09</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जैव प्रौद्योगिकी: सिद्धांत व प्रक्रम" data-en="Biotechnology: Principles and Processes">जैव प्रौद्योगिकी: सिद्धांत व प्रक्रम</div>
+        <div class="ch-tag">Restriction Enzymes | PCR | Recombinant DNA | Vectors</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch9','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch9','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch9','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch9-sum">
+        <div class="sum-overview">Biotechnology = Biology + Technology। EFB (European Federation of Biotechnology) — "New biotechnology": Recombinant DNA technology। Stanley Cohen & Herbert Boyer (1972) = First recombinant DNA।</div>
+        <div class="sum-h">✂️ Restriction Enzymes</div>
+        <ul class="sum-list">
+          <li>"Molecular scissors" — Specific DNA sequences पर cut करते हैं</li>
+          <li><b>EcoRI:</b> 5'-G↓AATTC-3' (First restriction enzyme isolated)</li>
+          <li>Palindromic sequences: 5'→3' पर same as 3'→5' on complementary strand</li>
+          <li>Sticky ends (staggered cuts) — DNA fragments को join करने में आसान</li>
+          <li>DNA Ligase = "Molecular glue" — DNA fragments को join करता है</li>
+        </ul>
+        <div class="sum-h">🔬 Recombinant DNA Technology</div>
+        <ul class="sum-list">
+          <li><b>rDNA:</b> Alien DNA + Vector DNA</li>
+          <li><b>Vectors:</b> Plasmid (pBR322), Bacteriophage, Cosmid, BAC, YAC</li>
+          <li>pBR322: 2 antibiotic resistance genes (Ampicillin + Tetracycline) — Selection markers</li>
+          <li><b>Insertional inactivation:</b> Insert DNA into resistance gene → that resistance lost → white colony</li>
+          <li><b>Blue-white selection:</b> Recombinant = white colonies, Non-recombinant = blue</li>
+        </ul>
+        <div class="sum-h">🖨️ PCR (Polymerase Chain Reaction)</div>
+        <ul class="sum-list">
+          <li>Kary Mullis ने develop किया — Nobel Prize 1993</li>
+          <li>DNA amplification — छोटी मात्रा से millions of copies</li>
+          <li>3 steps: Denaturation (94°C) → Annealing (40-60°C, primers) → Extension (72°C, Taq polymerase)</li>
+          <li>Thermostable Taq polymerase (Thermus aquaticus bacteria से)</li>
+          <li>Applications: Forensic, Genetic testing, COVID detection</li>
+        </ul>
+        <div class="sum-h">🔬 Gel Electrophoresis</div>
+        <ul class="sum-list">
+          <li>DNA fragments size के according separate करना</li>
+          <li>Agarose gel — Ethidium bromide stain (UV light में orange bands)</li>
+          <li>Small fragments → farther migrate | Large → closer to well</li>
+        </ul>
+        <div class="sum-h">🧫 Transformation & Cloning</div>
+        <ul class="sum-list">
+          <li>Competent cells — बने cells जो foreign DNA ले सकती हैं (CaCl2 treatment)</li>
+          <li><b>Bioreactor:</b> Large scale production — Stirred tank, Sparged</li>
+          <li>Downstream processing: Separation → Purification → Formulation</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>EcoRI = First restriction enzyme (Palindromic sequence)</li>
+            <li>PCR = Kary Mullis (Nobel 1993), Taq polymerase</li>
+            <li>pBR322 = First artificial recombinant plasmid</li>
+            <li>Blue-white selection: Recombinant=white, Non-recombinant=blue</li>
+            <li>DNA ligase = Molecular glue</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch9-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔬 जैव प्रौद्योगिकी<br><small style="font-weight:400;opacity:.8">Biotechnology: Principles</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">✂️ Restriction Enzymes</div>
+              <div class="mm-branch-items">Molecular Scissors<br>EcoRI (first)<br>Palindromic seq<br>Sticky ends</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔗 rDNA Technology</div>
+              <div class="mm-branch-items">Vector (pBR322)<br>DNA Ligase<br>Transformation<br>Blue-white selection</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🖨️ PCR</div>
+              <div class="mm-branch-items">Kary Mullis (Nobel)<br>Denaturation<br>Annealing<br>Extension (Taq)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔬 Gel Electrophoresis</div>
+              <div class="mm-branch-items">Agarose gel<br>Ethidium bromide<br>Size-based separation<br>UV bands</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🧫 Bioreactor</div>
+              <div class="mm-branch-items">Large scale<br>Stirred tank<br>Downstream processing<br>Purification</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch9-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Restriction Endonuclease <span class="kw-imp">★ PNST</span></div><div class="kw-def">Molecular scissors। Palindromic sequences पर DNA cut करते हैं। EcoRI = 5'-GAATTC-3'।</div></div>
+          <div class="kw-item"><div class="kw-term">PCR <span class="kw-imp">★ PNST</span></div><div class="kw-def">Polymerase Chain Reaction — DNA amplify करना। Kary Mullis, 1993 Nobel। Taq polymerase (72°C)।</div></div>
+          <div class="kw-item"><div class="kw-term">pBR322</div><div class="kw-def">First artificial recombinant plasmid। Ampicillin + Tetracycline resistance genes। Selection marker।</div></div>
+          <div class="kw-item"><div class="kw-term">Insertional Inactivation</div><div class="kw-def">Insert gene → Antibiotic resistance gene inactivate। Recombinant colonies = sensitive to that antibiotic।</div></div>
+          <div class="kw-item"><div class="kw-term">Sticky Ends</div><div class="kw-def">Restriction enzyme के staggered cuts से बने single stranded overhangs। Complementary sticky ends आसानी से join होते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">Bioreactor</div><div class="kw-def">Large-scale fermentation vessel। Temperature, pH, O2 control। Downstream processing में product purification।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 10 ===== -->
+  <div class="ch-item" id="ch10">
+    <div class="ch-header" onclick="toggleCh('ch10')">
+      <div class="ch-num">10</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जैव प्रौद्योगिकी एवं उसके उपयोग" data-en="Biotechnology and Its Applications">जैव प्रौद्योगिकी एवं उसके उपयोग</div>
+        <div class="ch-tag">GM Crops | Bt Cotton | Insulin | Gene Therapy | Transgenic</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch10','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch10','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch10','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch10-sum">
+        <div class="sum-overview">Biotechnology के तीन मुख्य क्षेत्र: कृषि, चिकित्सा और नैतिकता। GM organisms से human welfare में क्रांति आई है।</div>
+        <div class="sum-h">🌾 कृषि में उपयोग | Agricultural Applications</div>
+        <ul class="sum-list">
+          <li><b>Bt Cotton:</b> Bacillus thuringiensis → cry genes (Cry IAc, Cry IIAb) → Bollworm resistant</li>
+          <li><b>Bt Brinjal:</b> Cry IAb gene → Shoot borer resistant</li>
+          <li><b>Herbicide tolerant plants:</b> Glyphosate resistant crops</li>
+          <li><b>Virus resistant plants:</b> RNA interference (RNAi) — Coat protein gene</li>
+          <li><b>Golden Rice:</b> β-carotene (Vitamin A) — Erwinia uredovora genes + Narcissus tazetta genes</li>
+          <li><b>Nematode resistant tobacco:</b> RNAi — Meloidogyne incognita (tobacco nematode) control</li>
+        </ul>
+        <div class="sum-h">💉 चिकित्सा में उपयोग | Medical Applications</div>
+        <ul class="sum-list">
+          <li><b>Humulin (Human Insulin):</b> E.coli में human insulin gene → 1982 में market</li>
+          <li>A chain + B chain → H-bonds → Mature insulin। C-peptide remove होता है</li>
+          <li><b>Gene Therapy:</b> ADA deficiency (Adenosine deaminase) — First gene therapy</li>
+          <li>SCID (Severe Combined Immunodeficiency) — ADA enzyme की कमी</li>
+          <li><b>Molecular diagnosis:</b> PCR, ELISA — Early detection</li>
+          <li><b>Transgenic animals:</b> Rosie (cow, α-lactalbumin — human protein rich milk)</li>
+        </ul>
+        <div class="sum-h">🐄 Transgenic Animals</div>
+        <ul class="sum-list">
+          <li>Normal physiology studies, Disease models, Biological products</li>
+          <li><b>Dolly (1997):</b> First cloned mammal — Sheep। Ian Wilmut। SCNT (Somatic Cell Nuclear Transfer)</li>
+          <li>Transgenic mice — Cancer research, Vaccine testing</li>
+          <li>Pharming = Transgenic animals से drugs produce करना</li>
+        </ul>
+        <div class="sum-h">⚖️ नैतिक मुद्दे | Ethical Issues (GEAC)</div>
+        <ul class="sum-list">
+          <li>GEAC (Genetic Engineering Appraisal Committee) — India में GM organisms approve करती है</li>
+          <li>Biopiracy = Traditional knowledge का बिना permission उपयोग (Basmati rice, Turmeric)</li>
+          <li>Patent = Novel products का intellectual property right</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Bt Cotton = Cry IAc + Cry IIAb genes (Bollworm resistant)</li>
+            <li>Golden Rice = β-carotene (Vitamin A)</li>
+            <li>Humulin = Human insulin from E.coli (1982)</li>
+            <li>Dolly (1997) = First cloned mammal (Ian Wilmut)</li>
+            <li>ADA deficiency = First gene therapy target</li>
+            <li>GEAC = Approves GM organisms in India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch10-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚗️ जैव प्रौद्योगिकी के उपयोग<br><small style="font-weight:400;opacity:.8">Biotechnology Applications</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌾 Agriculture</div>
+              <div class="mm-branch-items">Bt Cotton (Cry genes)<br>Golden Rice<br>Herbicide tolerant<br>RNAi (nematode)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">💉 Medicine</div>
+              <div class="mm-branch-items">Humulin (Insulin)<br>Gene therapy (ADA)<br>PCR + ELISA<br>Molecular diagnosis</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🐄 Transgenic Animals</div>
+              <div class="mm-branch-items">Dolly (1997)<br>Rosie (cow)<br>Pharming<br>Disease models</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚖️ Ethics</div>
+              <div class="mm-branch-items">GEAC (India)<br>Biopiracy<br>Patent<br>Basmati/Turmeric</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch10-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Bt Cotton <span class="kw-imp">★ PNST</span></div><div class="kw-def">Bacillus thuringiensis के cry genes (CryIAc, CryIIAb) — Bollworm resistant। India में 2002 में approve।</div></div>
+          <div class="kw-item"><div class="kw-term">Golden Rice <span class="kw-imp">★ PNST</span></div><div class="kw-def">β-carotene (Provitamin A) युक्त। Vitamin A deficiency (blindness) दूर करने के लिए।</div></div>
+          <div class="kw-item"><div class="kw-term">Humulin</div><div class="kw-def">E.coli में human insulin gene → Recombinant insulin। 1982 में USA में market। Eli Lilly company।</div></div>
+          <div class="kw-item"><div class="kw-term">Dolly <span class="kw-imp">★ PNST</span></div><div class="kw-def">1997 में पहला cloned mammal। Ian Wilmut। SCNT = Somatic Cell Nuclear Transfer। Sheep।</div></div>
+          <div class="kw-item"><div class="kw-term">RNAi (RNA interference)</div><div class="kw-def">dsRNA → target mRNA destroy। Nematode resistance in plants। Gene silencing mechanism।</div></div>
+          <div class="kw-item"><div class="kw-term">Biopiracy</div><div class="kw-def">Traditional knowledge का without permission patent/commercialization। Basmati rice + Turmeric = India के cases।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 11 ===== -->
+  <div class="ch-item" id="ch11">
+    <div class="ch-header" onclick="toggleCh('ch11')">
+      <div class="ch-num">11</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जीव और समष्टियाँ" data-en="Organisms and Populations">जीव और समष्टियाँ</div>
+        <div class="ch-tag">Adaptations | Population | Interactions | Ecology</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch11','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch11','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch11','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch11-sum">
+        <div class="sum-overview">Ecology = Greek "Oikos" (house) + "logos" (study)। Ernst Haeckel ने term introduce किया। Population = Same species के individuals का group।</div>
+        <div class="sum-h">🌡️ अनुकूलन | Adaptations</div>
+        <ul class="sum-list">
+          <li><b>Temperature:</b> Thermoregulators (endotherms: birds, mammals) vs Conformers (ectotherms: fish, reptiles)</li>
+          <li><b>Desert adaptations:</b> Kangaroo rat — metabolic water, concentrated urine, nocturnal</li>
+          <li><b>Aquatic:</b> Osmoregulation — Marine fish (lose water, drink salt water)</li>
+          <li><b>Altitude sickness:</b> Low O2 → RBC production बढ़ता है (acclimatization)</li>
+          <li>Allen's rule: Cold climates में animals के appendages छोटे होते हैं</li>
+        </ul>
+        <div class="sum-h">📊 Population विशेषताएं | Population Characteristics</div>
+        <ul class="sum-list">
+          <li><b>Birth rate (Natality):</b> Per capita births | <b>Death rate (Mortality):</b> Per capita deaths</li>
+          <li><b>Age structure:</b> Pre-reproductive, Reproductive, Post-reproductive</li>
+          <li><b>Sex ratio:</b> Males : Females</li>
+          <li><b>Exponential growth:</b> dN/dt = rN (unlimited resources) — J-shaped curve</li>
+          <li><b>Logistic growth:</b> dN/dt = rN(K-N)/K — S-shaped curve। K = Carrying capacity</li>
+          <li><b>r-strategists:</b> Small, short life, many offspring | <b>K-strategists:</b> Large, long life, few offspring</li>
+        </ul>
+        <div class="sum-h">🤝 जनसंख्या अंतःक्रिया | Population Interactions</div>
+        <ul class="sum-list">
+          <li><b>Mutualism (+/+):</b> Both benefit — Lichens (Algae+Fungi), Mycorrhiza, Clownfish+Anemone</li>
+          <li><b>Competition (-/-):</b> Both harmed — Gause's competitive exclusion principle</li>
+          <li><b>Predation (+/-):</b> Predator benefits, Prey harmed — Controls prey population</li>
+          <li><b>Parasitism (+/-):</b> Parasite benefits, Host harmed — Cuscuta (Dodder plant)</li>
+          <li><b>Commensalism (+/0):</b> One benefits, other unaffected — Barnacles on whale, Orchid on tree</li>
+          <li><b>Amensalism (-/0):</b> One harmed, other unaffected — Penicillium vs bacteria</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Logistic growth → S-curve → K = Carrying capacity</li>
+            <li>Mutualism = Lichens (Algae + Fungi symbiosis)</li>
+            <li>Gause's principle: Two species same niche में नहीं रह सकते</li>
+            <li>Kangaroo rat — desert adaptation (metabolic water)</li>
+            <li>Commensalism = Barnacle on whale</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch11-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌿 जीव और समष्टियाँ<br><small style="font-weight:400;opacity:.8">Organisms and Populations</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌡️ Adaptations</div>
+              <div class="mm-branch-items">Thermoregulation<br>Desert (Kangaroo rat)<br>Allen's rule<br>Altitudinal</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📊 Population</div>
+              <div class="mm-branch-items">Birth/Death rate<br>Age structure<br>J-curve (exponential)<br>S-curve (logistic)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🤝 Interactions</div>
+              <div class="mm-branch-items">Mutualism (+/+)<br>Predation (+/-)<br>Competition (-/-)<br>Commensalism (+/0)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch11-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Carrying Capacity (K) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Maximum population size जो environment sustain कर सकता है। Logistic growth में K = upper limit।</div></div>
+          <div class="kw-item"><div class="kw-term">Gause's Principle <span class="kw-imp">★ PNST</span></div><div class="kw-def">Competitive Exclusion Principle: Two species जो exact same niche occupy करें — एक extinct हो जाएगी।</div></div>
+          <div class="kw-item"><div class="kw-term">Mutualism</div><div class="kw-def">दोनों species को benefit। Lichens (Algae+Fungi), Mycorrhiza (Fungi+Roots), Fig+Wasp।</div></div>
+          <div class="kw-item"><div class="kw-term">Commensalism</div><div class="kw-def">एक species को benefit, दूसरे को neither benefit nor harm। Barnacles on whale, Orchids on trees।</div></div>
+          <div class="kw-item"><div class="kw-term">Allen's Rule</div><div class="kw-def">Cold climates के animals की body compact, appendages (ears, limbs) छोटे। Heat conservation के लिए।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 12 ===== -->
+  <div class="ch-item" id="ch12">
+    <div class="ch-header" onclick="toggleCh('ch12')">
+      <div class="ch-num">12</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="पारितंत्र" data-en="Ecosystem">पारितंत्र</div>
+        <div class="ch-tag">Productivity | Decomposition | Energy Flow | Nutrient Cycling</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch12','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch12','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch12','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch12-sum">
+        <div class="sum-overview">Ecosystem = Biotic (living) + Abiotic (non-living) components की functional unit। A.G. Tansley ने 1935 में term introduce किया।</div>
+        <div class="sum-h">🌿 उत्पादकता | Productivity</div>
+        <ul class="sum-list">
+          <li><b>GPP (Gross Primary Productivity):</b> Total photosynthesis rate</li>
+          <li><b>NPP (Net Primary Productivity):</b> GPP - Respiration। Available for consumers</li>
+          <li><b>Secondary Productivity:</b> Consumers द्वारा new organic matter बनाना</li>
+          <li>Tropical forests = Maximum productivity | Desert = Minimum</li>
+        </ul>
+        <div class="sum-h">🍂 अपघटन | Decomposition</div>
+        <ul class="sum-list">
+          <li>Detrivores + Decomposers (Bacteria, Fungi) → Organic matter → Inorganic</li>
+          <li>Steps: Fragmentation → Leaching → Catabolism → Humification → Mineralisation</li>
+          <li><b>Humus:</b> Dark colored, colloidal organic matter। Nutrient reservoir</li>
+          <li>Warm+Moist = Fast decomposition | Cold+Dry = Slow</li>
+        </ul>
+        <div class="sum-h">⚡ ऊर्जा प्रवाह | Energy Flow</div>
+        <ul class="sum-list">
+          <li><b>10% rule (Lindeman, 1942):</b> One trophic level से next → only 10% energy transfer</li>
+          <li>Producers → Primary consumers → Secondary → Tertiary</li>
+          <li>Food chain: Grass→Deer→Tiger | Grass→Insects→Frog→Snake→Eagle</li>
+          <li>Detritus food chain: Dead matter → Decomposers (dominant in forest)</li>
+          <li>Energy flow is unidirectional!</li>
+        </ul>
+        <div class="sum-h">📊 पारिस्थितिक पिरामिड | Ecological Pyramids</div>
+        <ul class="sum-list">
+          <li><b>Pyramid of numbers:</b> Inverted in tree ecosystem (1 tree → many insects)</li>
+          <li><b>Pyramid of biomass:</b> Inverted in aquatic (phytoplankton < zooplankton)</li>
+          <li><b>Pyramid of energy:</b> Always upright (10% rule)</li>
+        </ul>
+        <div class="sum-h">🔄 पोषण चक्र | Nutrient Cycling</div>
+        <ul class="sum-list">
+          <li><b>Carbon cycle:</b> Photosynthesis ↔ Respiration + Decomposition + Combustion</li>
+          <li><b>Phosphorus cycle:</b> Sedimentary cycle (no atmospheric phase)</li>
+          <li>Atmosphere → N2 fixation → Nitrification → Denitrification</li>
+          <li><b>Ecosystem services:</b> Pollination, O2, Water purification, Soil formation (Estimated $33 trillion/year)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>10% rule = Lindeman (1942)</li>
+            <li>Pyramid of energy = Always upright</li>
+            <li>NPP = GPP - Respiration</li>
+            <li>A.G. Tansley = Coined "Ecosystem" (1935)</li>
+            <li>Phosphorus cycle = Sedimentary (no gaseous phase)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch12-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌍 पारितंत्र (Ecosystem)</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌿 Productivity</div>
+              <div class="mm-branch-items">GPP = Total photosyn<br>NPP = GPP - Resp<br>Tropical = max<br>Desert = min</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🍂 Decomposition</div>
+              <div class="mm-branch-items">Fragmentation<br>Humification<br>Mineralisation<br>Humus</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚡ Energy Flow</div>
+              <div class="mm-branch-items">10% rule (Lindeman)<br>Unidirectional<br>Food chain/web<br>Trophic levels</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📊 Pyramids</div>
+              <div class="mm-branch-items">Number (inverted in tree)<br>Biomass (inverted aquatic)<br>Energy = Always upright</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔄 Nutrient Cycle</div>
+              <div class="mm-branch-items">Carbon cycle<br>Phosphorus (sedimentary)<br>Nitrogen cycle<br>Ecosystem services</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch12-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">10% Rule <span class="kw-imp">★ PNST</span></div><div class="kw-def">Lindeman (1942)। एक trophic level से अगले में only 10% energy transfer। 90% heat के रूप में loss।</div></div>
+          <div class="kw-item"><div class="kw-term">NPP (Net Primary Productivity) <span class="kw-imp">★ PNST</span></div><div class="kw-def">NPP = GPP - Respiration। Consumers के लिए available biomass।</div></div>
+          <div class="kw-item"><div class="kw-term">Humus</div><div class="kw-def">Dark colored colloidal organic matter। Decomposition का अंतिम product। Nutrient reservoir। Soil fertility।</div></div>
+          <div class="kw-item"><div class="kw-term">Detritus Food Chain</div><div class="kw-def">Dead organic matter → Decomposers। Forests में dominant। Grazing food chain से अधिक महत्वपूर्ण।</div></div>
+          <div class="kw-item"><div class="kw-term">Phosphorus Cycle</div><div class="kw-def">Sedimentary cycle = No gaseous phase। Atmosphere में नहीं जाता। Rocks → Soil → Plants → Animals।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CHAPTER 13 ===== -->
+  <div class="ch-item" id="ch13">
+    <div class="ch-header" onclick="toggleCh('ch13')">
+      <div class="ch-num">13</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="जैव विविधता एवं संरक्षण" data-en="Biodiversity and Conservation">जैव विविधता एवं संरक्षण</div>
+        <div class="ch-tag">Hotspots | Threats | In-situ | Ex-situ | IUCN</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch13','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch13','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch13','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch13-sum">
+        <div class="sum-overview">Biodiversity = Variety of life on Earth। Robert May — Earth पर ~7 million species। Currently known = 1.5 million species। Edward Wilson ने "Biodiversity" term दिया।</div>
+        <div class="sum-h">📊 जैव विविधता के प्रकार | Types of Biodiversity</div>
+        <ul class="sum-list">
+          <li><b>Genetic diversity:</b> Same species में genetic variation। e.g., Rice — 50,000 varieties; Mango — 1000+ varieties in India</li>
+          <li><b>Species diversity:</b> Number of species in an area</li>
+          <li><b>Ecosystem diversity:</b> Different ecosystems (Desert, Rainforest, Mangrove)</li>
+          <li>Tropics में species diversity अधिक होती है (Species area relationship)</li>
+          <li>Alexander von Humboldt: "Species richness increases towards tropics"</li>
+        </ul>
+        <div class="sum-h">📈 Species Area Relationship</div>
+        <ul class="sum-list">
+          <li>log S = log C + Z log A (S=species, A=area, Z=slope, C=y-intercept)</li>
+          <li>Z value: 0.1-0.2 (small areas) → 0.6-1.2 (large areas, continents)</li>
+        </ul>
+        <div class="sum-h">🗺️ Biodiversity Hotspots</div>
+        <ul class="sum-list">
+          <li>Norman Myers ने concept दिया</li>
+          <li>Globally 34 hotspots (previously 25)</li>
+          <li>2 hotspots in India: <b>Western Ghats + Sri Lanka</b> और <b>Himalaya (Eastern)</b></li>
+          <li>Criteria: Endemic species &gt;1500 plants + 70% habitat lost</li>
+        </ul>
+        <div class="sum-h">⚠️ जैव विविधता को खतरे | Threats (HIPPO)</div>
+        <ul class="sum-list">
+          <li><b>H</b>abitat loss (most important!) — Deforestation, urbanization</li>
+          <li><b>I</b>nvasive species — Lantana, Parthenium (Carrot grass), Water hyacinth (Eichhornia)</li>
+          <li><b>P</b>ollution</li>
+          <li><b>P</b>opulation growth + Over exploitation</li>
+          <li><b>O</b>ver exploitation — Hunting, Poaching</li>
+          <li><b>6th Mass Extinction:</b> Present extinction rate 100-1000 times faster</li>
+        </ul>
+        <div class="sum-h">🛡️ संरक्षण | Conservation</div>
+        <ul class="sum-list">
+          <li><b>In-situ conservation (On site):</b> Protected areas — Wildlife sanctuary, National park, Biosphere reserve, Sacred groves</li>
+          <li>India: 14 Biosphere reserves, 90 National parks, 500+ Wildlife sanctuaries</li>
+          <li><b>Ex-situ conservation (Off site):</b> Zoological parks, Botanical gardens, Wildlife safari, Seed banks, Gene banks, Tissue culture</li>
+          <li>Cryopreservation = -196°C में gametes/embryo store</li>
+          <li><b>IUCN Red List:</b> Extinct, Critically Endangered, Endangered, Vulnerable, Near Threatened</li>
+          <li><b>CBD (Convention on Biological Diversity):</b> 1992, Rio de Janeiro ("Earth Summit")</li>
+          <li>World Biodiversity Day: May 22</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Hotspots = 34 globally, 2 in India (Western Ghats, E. Himalaya)</li>
+            <li>Habitat loss = Most important threat to biodiversity</li>
+            <li>In-situ = National Park | Ex-situ = Zoo, Seed bank</li>
+            <li>CBD = 1992, Rio de Janeiro (Earth Summit)</li>
+            <li>Water hyacinth = Eichhornia crassipes (invasive, "Terror of Bengal")</li>
+            <li>Sacred groves = Community protected areas</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch13-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌿 जैव विविधता एवं संरक्षण<br><small style="font-weight:400;opacity:.8">Biodiversity and Conservation</small></div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📊 Types</div>
+              <div class="mm-branch-items">Genetic diversity<br>Species diversity<br>Ecosystem diversity<br>Tropics = max</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🗺️ Hotspots</div>
+              <div class="mm-branch-items">34 globally<br>India: W.Ghats<br>+ E.Himalaya<br>Norman Myers</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚠️ Threats (HIPPO)</div>
+              <div class="mm-branch-items">Habitat loss (main)<br>Invasive species<br>Pollution<br>Over-exploitation</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🏕️ In-situ</div>
+              <div class="mm-branch-items">National Park<br>Wildlife Sanctuary<br>Biosphere Reserve<br>Sacred Groves</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🏛️ Ex-situ</div>
+              <div class="mm-branch-items">Zoo/Botanical garden<br>Seed bank<br>Gene bank<br>Cryopreservation</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch13-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Biodiversity Hotspot <span class="kw-imp">★ PNST</span></div><div class="kw-def">Norman Myers concept। &gt;1500 endemic plants + 70% habitat lost। 34 globally। India: Western Ghats + Eastern Himalaya।</div></div>
+          <div class="kw-item"><div class="kw-term">In-situ Conservation <span class="kw-imp">★ PNST</span></div><div class="kw-def">Natural habitat में conservation। National Park, Wildlife Sanctuary, Biosphere Reserve, Sacred Groves।</div></div>
+          <div class="kw-item"><div class="kw-term">Ex-situ Conservation</div><div class="kw-def">Natural habitat के बाहर conservation। Zoo, Botanical garden, Seed bank, Cryopreservation।</div></div>
+          <div class="kw-item"><div class="kw-term">Water Hyacinth <span class="kw-imp">★ PNST</span></div><div class="kw-def">Eichhornia crassipes — "Terror of Bengal". Invasive species। Eutrophication causes करती है।</div></div>
+          <div class="kw-item"><div class="kw-term">Sacred Groves</div><div class="kw-def">Community द्वारा protected religious forests। Rajasthan में "Orans", Meghalaya में "Law Lyngdoh"।</div></div>
+          <div class="kw-item"><div class="kw-term">IUCN Red List</div><div class="kw-def">International Union for Conservation of Nature। Species को Extinct → Critically Endangered → Endangered → Vulnerable → Near Threatened में categorize।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end wrap -->
+
+<script>
+let lang = 'hi';
+let isDark = true;
+
+function setLang(l){
+  lang = l;
+  document.getElementById('btnHi').classList.toggle('active', l==='hi');
+  document.getElementById('btnEn').classList.toggle('active', l==='en');
+  document.querySelectorAll('[data-hi]').forEach(el=>{
+    const val = el.getAttribute('data-'+l);
+    if(val) el.textContent = val;
+  });
+  document.getElementById('bioP').textContent = l==='hi'
+    ? 'PNST 2026 ke liye poore 13 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!'
+    : 'All 13 chapters — Summary, Mind Maps & Keywords for PNST 2026 preparation!';
+}
+
+function toggleTheme(){
+  isDark = !isDark;
+  const t = isDark ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', t);
+  document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+  try{ localStorage.setItem('pnst_theme', t); }catch(e){}
+}
+
+function toggleCh(id){
+  const el = document.getElementById(id);
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.ch-item.open').forEach(e=>{
+    if(e.id !== id){ e.classList.remove('open'); }
+  });
+  el.classList.toggle('open', !isOpen);
+  if(!isOpen) el.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+function showTab(chId, tab){
+  const body = document.getElementById(chId).querySelector('.ch-body');
+  body.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelector('#'+chId+'-'+tab).classList.add('active');
+  const idx = ['sum','mm','kw'].indexOf(tab);
+  body.querySelectorAll('.tab-btn')[idx].classList.add('active');
+}
+
+window.addEventListener('load',()=>{
+  let savedTheme = 'dark';
+  try{ savedTheme = localStorage.getItem('pnst_theme') || 'dark'; }catch(e){}
+  isDark = savedTheme === 'dark';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  document.getElementById('themeBtn').textContent = isDark ? '🌙' : '☀️';
+});
+</script>
+</body>
+</html>

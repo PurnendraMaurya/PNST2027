@@ -1,0 +1,1882 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Physics Notes — PNST 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020818;--bg2:#060e24;--bg3:#0a1628;
+  --card:rgba(255,255,255,0.05);--card-border:rgba(255,255,255,0.1);--card-hover:rgba(255,255,255,0.08);
+  --tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --blue:#3b82f6;--cyan:#06b6d4;--green:#22c55e;--amber:#f59e0b;--purple:#a855f7;--pink:#ec4899;--red:#ef4444;
+  --phy:#3b82f6;
+  --fn:'Noto Sans',sans-serif;--fn2:'Rajdhani',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f0f4ff;--bg2:#e8eeff;--bg3:#fff;
+  --card:rgba(255,255,255,.9);--card-border:rgba(59,130,246,.2);--card-hover:#fff;
+  --tx:#1e293b;--tx2:#475569;--tx3:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
+[data-theme="dark"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 20% 25%,rgba(59,130,246,.3) 0%,transparent 100%),
+    radial-gradient(2px 2px at 78% 35%,rgba(6,182,212,.2) 0%,transparent 100%),
+    radial-gradient(1px 1px at 50% 65%,rgba(255,255,255,.12) 0%,transparent 100%);
+}
+.hdr{
+  background:linear-gradient(135deg,rgba(2,8,24,.96),rgba(6,14,36,.96));
+  backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);
+  padding:10px 16px;display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:100;
+}
+[data-theme="light"] .hdr{background:rgba(240,244,255,.96)}
+.hdr-logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 14px rgba(59,130,246,.35)}
+.hdr-name{font-family:var(--fn2);font-size:1rem;font-weight:700;background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-sub{font-size:.65rem;color:var(--tx2)}
+.hdr-right{display:flex;gap:6px;align-items:center;margin-left:auto;flex-shrink:0}
+.lang-btn,.theme-btn{padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s}
+.lang-btn.active{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border-color:transparent}
+.btn-back{padding:5px 11px;border-radius:8px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;flex-shrink:0;text-decoration:none;display:inline-block}
+.wrap{max-width:520px;margin:0 auto;padding:14px}
+
+.phy-hero{
+  background:linear-gradient(135deg,#000f2e,#001f5c,#002880);
+  border:1px solid rgba(59,130,246,.25);border-radius:20px;
+  padding:20px 16px;margin-bottom:16px;position:relative;overflow:hidden;
+  box-shadow:0 0 40px rgba(59,130,246,.1);
+}
+.phy-hero::before{content:'';position:absolute;top:-30%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse,rgba(59,130,246,.1) 0%,transparent 65%);pointer-events:none}
+.phy-badge{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.35);border-radius:16px;font-size:.65rem;font-weight:700;padding:3px 12px;margin-bottom:10px;color:var(--blue);letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1}
+.phy-h{font-family:var(--fn2);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.phy-h span{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.phy-p{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;position:relative;z-index:1}
+.phy-stats{display:flex;gap:12px;margin-top:14px;position:relative;z-index:1;flex-wrap:wrap}
+.pstat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 12px;text-align:center}
+.pstat-n{font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:var(--cyan)}
+.pstat-l{font-size:.6rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+.sec-t{font-size:.7rem;font-weight:800;color:var(--tx2);margin:16px 0 9px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+.sec-t::after{content:'';flex:1;height:1px;background:var(--card-border)}
+.part-div{background:linear-gradient(135deg,rgba(59,130,246,.1),rgba(6,182,212,.08));border:1px solid rgba(59,130,246,.2);border-radius:12px;padding:10px 14px;margin-bottom:12px;font-family:var(--fn2);font-size:.88rem;font-weight:700;color:var(--blue);display:flex;align-items:center;gap:8px}
+
+.ch-item{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:16px;margin-bottom:10px;overflow:hidden;transition:all .25s}
+.ch-item.open{border-color:rgba(59,130,246,.4);box-shadow:0 4px 24px rgba(59,130,246,.1)}
+.ch-header{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s;user-select:none}
+.ch-header:hover{background:var(--card-hover)}
+.ch-num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--fn2);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(59,130,246,.3)}
+.ch-info{flex:1;min-width:0}
+.ch-name{font-family:var(--fn2);font-size:.95rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-tag{font-size:.62rem;color:var(--tx2);margin-top:2px}
+.ch-arr{color:var(--tx2);font-size:.9rem;flex-shrink:0;transition:transform .3s}
+.ch-item.open .ch-arr{transform:rotate(180deg)}
+.ch-body{display:none;border-top:1px solid var(--card-border)}
+.ch-item.open .ch-body{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+.tab-bar{display:flex;border-bottom:1px solid var(--card-border)}
+.tab-btn{flex:1;padding:10px 6px;background:none;border:none;color:var(--tx2);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;border-bottom:2px solid transparent;position:relative;bottom:-1px}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab-pane{display:none;padding:14px}
+.tab-pane.active{display:block;animation:fadeIn .2s ease}
+
+.sum-overview{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;line-height:1.65;color:var(--tx)}
+.sum-h{font-family:var(--fn2);font-size:.82rem;font-weight:700;color:var(--blue);margin:12px 0 6px;display:flex;align-items:center;gap:6px}
+.sum-h::after{content:'';flex:1;height:1px;background:rgba(59,130,246,.2)}
+.sum-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sum-list li{font-size:.8rem;line-height:1.55;color:var(--tx);padding-left:14px;position:relative}
+.sum-list li::before{content:'▸';position:absolute;left:0;color:var(--blue);font-size:.7rem;top:2px}
+.sum-list li b{color:var(--tx);font-weight:700}
+
+.formula-box{background:rgba(6,182,212,.08);border:1px solid rgba(6,182,212,.2);border-radius:10px;padding:10px 14px;margin:8px 0;font-family:monospace;font-size:.82rem;color:var(--cyan);line-height:1.6}
+.formula-box .flabel{font-family:var(--fn);font-size:.72rem;color:var(--tx2);margin-bottom:4px}
+
+.mm-wrap{overflow-x:auto;padding:10px 0}
+.mm{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:280px}
+.mm-center{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border-radius:14px;padding:10px 18px;font-family:var(--fn2);font-size:.9rem;font-weight:700;text-align:center;box-shadow:0 4px 18px rgba(59,130,246,.3)}
+.mm-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%}
+.mm-branch{border-radius:12px;padding:8px 10px;font-size:.72rem;font-weight:700;text-align:center;min-width:110px;transition:transform .2s;cursor:pointer}
+.mm-branch:hover{transform:translateY(-2px)}
+.mm-branch-title{font-size:.76rem;font-weight:800;margin-bottom:4px}
+.mm-branch-items{font-size:.65rem;opacity:.85;line-height:1.5}
+.mm-connector{width:2px;height:16px;background:linear-gradient(to bottom,var(--blue),rgba(59,130,246,.3));margin:0 auto}
+
+.kw-grid{display:flex;flex-direction:column;gap:8px}
+.kw-item{background:rgba(255,255,255,.03);border:1px solid var(--card-border);border-radius:10px;padding:10px 12px}
+.kw-term{font-family:var(--fn2);font-size:.84rem;font-weight:700;color:var(--blue);margin-bottom:4px}
+.kw-def{font-size:.76rem;line-height:1.5;color:var(--tx2)}
+.kw-imp{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:.58rem;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+.pnst-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;margin-top:10px}
+.pnst-box-t{font-family:var(--fn2);font-size:.78rem;font-weight:700;color:var(--cyan);margin-bottom:6px}
+.pnst-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pnst-box ul li{font-size:.75rem;color:var(--tx2);padding-left:14px;position:relative}
+.pnst-box ul li::before{content:'★';position:absolute;left:0;color:var(--amber);font-size:.6rem;top:2px}
+.tab-btn{font-size:.65rem;padding:8px 4px}}
+/* ============================================================
+   COMPLETE RESPONSIVE CSS — All Devices
+   Mobile (320-480) | Tablet (481-768) | Desktop (769+)
+   ============================================================ */
+
+/* ---- Fluid base ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,table,video{max-width:100%}
+
+/* ---- Wrap: fluid on all screens ---- */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:14px 12px}
+
+/* ---- Tables: horizontal scroll on small screens ---- */
+.gk-table,.gram-table,.rxn-table,.ptbl{
+  display:block;width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
+}
+.gk-table td,.gram-table td,.rxn-table td{white-space:normal;min-width:80px}
+.gk-table th,.gram-table th,.rxn-table th{white-space:nowrap}
+
+/* ---- Mind map: wrap branches on small screens ---- */
+.mm-branches{justify-content:center}
+.mm-branch{min-width:100px;flex:1 1 100px;max-width:140px}
+.mm-center{padding:9px 14px;font-size:.85rem}
+
+/* ---- Chapter headers: prevent overflow ---- */
+.ch-name{font-size:.92rem;white-space:normal;line-height:1.3}
+.ch-tag{white-space:normal;line-height:1.4}
+
+/* ---- Tab buttons: equal width ---- */
+.tab-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+.tab-btn{flex-shrink:0;min-width:0;padding:10px 8px;font-size:.7rem}
+
+/* ---- Hero sections ---- */
+.bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:18px 14px}
+.bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.35rem}
+.bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:8px}
+.bstat,.cstat,.pstat,.estat,.gstat{padding:6px 10px}
+
+/* ---- Notes/Subject grid ---- */
+.notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:8px}
+.subj-card{padding:12px 10px 10px}
+
+/* ---- Info row ---- */
+.info-row{grid-template-columns:1fr 1fr;gap:8px}
+.info-card{padding:12px}
+
+/* ---- KW grid items ---- */
+.kw-def,.sum-list li{font-size:.78rem;line-height:1.55}
+
+/* ---- Footer ---- */
+.footer-social{gap:10px}
+.footer-links{gap:5px}
+.footer-link{padding:4px 10px;font-size:.65rem}
+.footer-subjects{gap:5px}
+.fs-tag{font-size:.62rem;padding:3px 8px}
+
+/* ---- Header ---- */
+.hdr{padding:8px 12px;gap:8px}
+.hdr-name{font-size:.95rem}
+.hdr-sub{font-size:.6rem}
+.lang-btn,.theme-btn{padding:4px 8px;font-size:.65rem}
+.btn-back{padding:4px 9px;font-size:.68rem}
+
+/* ---- Test interface ---- */
+.test-hdr{padding:10px 12px}
+.q-wrap{padding:0 12px 130px}
+.q-card{padding:14px 12px}
+.q-text{font-size:.84rem}
+.opt{padding:10px 12px;font-size:.8rem}
+.test-bottom{padding:8px 12px}
+.btn-nav{padding:11px 8px;font-size:.75rem}
+
+/* ---- Bottom nav ---- */
+.bottom-nav{padding:7px 0 11px}
+.bnav-btn{padding:3px 12px}
+.bnav-btn span:first-child{font-size:1.2rem}
+.bnav-btn span:last-child{font-size:.58rem}
+
+/* ============================================================
+   SMALL PHONES (max 380px)
+   ============================================================ */
+@media(max-width:380px){
+  .wrap{padding:10px 10px}
+  .hdr{padding:8px 10px;gap:6px}
+  .hdr-logo{width:34px;height:34px;font-size:16px}
+  .hdr-name{font-size:.88rem}
+  .hdr-right{gap:4px}
+  .lang-btn,.theme-btn{padding:3px 7px;font-size:.62rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.2rem}
+  .hero-h{font-size:1.3rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1rem}
+  .hs-l,.bstat-l,.cstat-l,.pstat-l,.estat-l,.gstat-l{font-size:.58rem}
+
+  .ch-num{width:28px;height:28px;font-size:.75rem}
+  .ch-name{font-size:.85rem}
+  .ch-tag{font-size:.58rem}
+  .ch-header{padding:11px 10px;gap:8px}
+
+  .tab-btn{font-size:.65rem;padding:8px 5px}
+  .tab-pane{padding:11px 10px}
+
+  .sum-h{font-size:.78rem}
+  .sum-list li{font-size:.75rem}
+  .sum-overview{font-size:.78rem;padding:10px 11px}
+  .kw-term{font-size:.8rem}
+  .kw-def{font-size:.73rem}
+
+  .mm-branch{min-width:90px;max-width:130px;padding:7px 8px}
+  .mm-branch-title{font-size:.7rem}
+  .mm-branch-items{font-size:.6rem}
+  .mm-center{font-size:.8rem;padding:8px 12px}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .subj-card{padding:10px 9px 9px}
+  .sj-icon{font-size:1.5rem;margin-bottom:5px}
+  .sj-name{font-size:.82rem}
+  .sj-desc{font-size:.62rem}
+  .nc-name{font-size:.85rem}
+  .nc-desc{font-size:.62rem}
+
+  .info-row{gap:7px}
+  .ic-val{font-size:1.1rem}
+  .ic-icon{font-size:1.2rem}
+
+  .hero-stats{gap:0}
+  .hs{padding:8px 0}
+  .btn-start,.btn-hero{padding:12px;font-size:.92rem}
+
+  .pnst-box ul li,.pnst-box-t{font-size:.7rem}
+  .pnst-box{padding:9px 10px}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.68rem;padding:5px 6px}
+
+  .q-card{padding:12px 10px}
+  .q-text{font-size:.8rem}
+  .opt{padding:9px 10px;font-size:.77rem;gap:8px}
+  .opt-letter{width:22px;height:22px;font-size:.65rem}
+
+  .timer-circle{width:40px;height:40px}
+  .timer-num{font-size:.72rem}
+  .test-title{font-size:.9rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .footer-brand .footer-logo{width:42px;height:42px;font-size:18px}
+  .footer-name{font-size:1rem}
+  .footer-tagline{font-size:.65rem}
+  .social-btn{width:40px;height:40px;border-radius:10px}
+  .footer-copy{font-size:.62rem}
+
+  .qn-btn{width:28px;height:28px;font-size:.67rem;border-radius:7px}
+  .q-nav{padding:10px 11px;gap:5px;margin:10px 12px}
+
+  .bottom-nav{padding:6px 0 10px}
+  .bnav-btn{padding:3px 10px}
+  .bnav-btn span:first-child{font-size:1.1rem}
+  .bnav-btn span:last-child{font-size:.55rem}
+
+  .result-hero{padding:22px 14px}
+  .score-ring{width:100px;height:100px}
+  .score-num{font-size:1.75rem}
+  .result-grade{font-size:1.25rem}
+  .analysis-grid{gap:6px}
+  .an-val{font-size:1.1rem}
+  .an-lbl{font-size:.58rem}
+}
+
+/* ============================================================
+   MEDIUM PHONES (381px - 480px)
+   ============================================================ */
+@media(min-width:381px) and (max-width:480px){
+  .wrap{padding:12px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.4rem}
+  .ch-name{font-size:.9rem}
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.7rem;padding:5px 7px}
+}
+
+/* ============================================================
+   TABLETS (481px - 768px)
+   ============================================================ */
+@media(min-width:481px) and (max-width:768px){
+  .wrap{max-width:600px;padding:16px}
+  .hdr{padding:10px 20px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.6rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:14px}
+  .bstat,.cstat,.pstat,.estat,.gstat{padding:9px 16px}
+
+  .hero-h{font-size:1.6rem}
+  .hs-n,.bstat-n,.cstat-n{font-size:1.3rem}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .subj-card{padding:16px 14px 13px}
+  .sj-icon{font-size:2rem}
+  .sj-name{font-size:.95rem}
+
+  .ch-name{font-size:1rem}
+  .ch-num{width:34px;height:34px}
+  .tab-btn{font-size:.75rem;padding:11px 8px}
+  .tab-pane{padding:16px}
+
+  .sum-h{font-size:.85rem}
+  .sum-list li{font-size:.82rem}
+  .kw-term{font-size:.88rem}
+  .kw-def{font-size:.8rem}
+  .sum-overview{font-size:.85rem}
+
+  .mm-branch{min-width:120px;max-width:160px;padding:10px 12px}
+  .mm-branch-title{font-size:.8rem}
+  .mm-branch-items{font-size:.7rem}
+  .mm-center{font-size:.95rem}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.76rem;padding:7px 9px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.9rem}
+  .opt{font-size:.85rem;padding:12px 14px}
+
+  .footer-links{gap:8px}
+  .footer-link{font-size:.72rem}
+  .social-btn{width:48px;height:48px}
+  .footer-subjects .fs-tag{font-size:.68rem}
+
+  .bottom-nav{padding:8px 0 13px}
+  .bnav-btn{padding:4px 20px}
+}
+
+/* ============================================================
+   DESKTOP (769px - 1024px)
+   ============================================================ */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{max-width:680px;padding:20px}
+  .hdr{padding:12px 24px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.7rem}
+  .hero-h{font-size:1.8rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-card{padding:18px 15px}
+  .note-card-full{grid-column:auto}
+
+  .ch-name{font-size:1.02rem}
+  .tab-btn{font-size:.78rem;padding:11px 10px}
+
+  .sum-list li{font-size:.84rem}
+  .kw-def{font-size:.82rem}
+
+  .mm-branch{min-width:130px;max-width:170px}
+  .mm-center{font-size:1rem}
+
+  .gk-table td,.gram-table td{font-size:.78rem}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .footer-social{gap:14px}
+  .social-btn{width:50px;height:50px;font-size:1.3rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.75rem;padding:6px 14px}
+}
+
+/* ============================================================
+   LARGE DESKTOP (1025px+)
+   ============================================================ */
+@media(min-width:1025px){
+  .wrap{max-width:780px;padding:24px}
+  .hdr{padding:12px 32px}
+  .hdr-name{font-size:1.15rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.85rem}
+  .hero-h{font-size:2rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1.6rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .note-card-full{grid-column:auto}
+  .subj-card{padding:20px 16px}
+  .sj-icon{font-size:2.2rem}
+  .sj-name{font-size:1rem}
+  .nc-name{font-size:1rem}
+
+  .ch-name{font-size:1.05rem}
+  .ch-num{width:36px;height:36px;font-size:.88rem}
+  .tab-btn{font-size:.8rem;padding:12px 12px}
+  .tab-pane{padding:18px}
+
+  .sum-list li{font-size:.86rem}
+  .sum-h{font-size:.88rem}
+  .sum-overview{font-size:.88rem}
+  .kw-term{font-size:.92rem}
+  .kw-def{font-size:.84rem}
+
+  .mm-branch{min-width:140px;max-width:180px;padding:11px 13px}
+  .mm-branch-title{font-size:.85rem}
+  .mm-branch-items{font-size:.73rem}
+  .mm-center{font-size:1.05rem}
+
+  .gk-table td,.gram-table td{font-size:.8rem;padding:8px 10px}
+  .gk-table th,.gram-table th{font-size:.75rem;padding:8px 10px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.95rem}
+  .opt{font-size:.88rem}
+  .score-ring{width:130px;height:130px}
+  .score-num{font-size:2.2rem}
+
+  .footer-social{gap:16px}
+  .social-btn{width:52px;height:52px;font-size:1.4rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.78rem;padding:6px 16px}
+  .fs-tag{font-size:.72rem;padding:5px 12px}
+  .footer-tagline{font-size:.78rem}
+  .footer-copy{font-size:.72rem}
+}
+
+/* ============================================================
+   TOUCH DEVICES — Better tap targets
+   ============================================================ */
+@media(hover:none) and (pointer:coarse){
+  .ch-header{min-height:56px}
+  .tab-btn{min-height:44px}
+  .sj-btn,.btn-nav,.lang-btn,.theme-btn,.btn-back{min-height:40px}
+  .bnav-btn{min-height:48px;padding:6px 12px}
+  .opt{min-height:46px}
+  .qn-btn{width:34px;height:34px}
+  .social-btn{width:48px;height:48px}
+  .footer-link{min-height:36px;display:inline-flex;align-items:center}
+  a{-webkit-tap-highlight-color:rgba(59,130,246,.15)}
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print{
+  .hdr,.bottom-nav,.site-footer,.test-bottom,.loading-overlay,
+  .tab-bar,.ch-arr,.bnav-btn,.btn-back{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body,[data-theme="dark"] body::before{background:white!important;color:black!important}
+  .ch-item{border:1px solid #ccc!important;margin-bottom:8px}
+  .wrap{max-width:100%;padding:0}
+}
+
+/* ============================================================
+   LANDSCAPE PHONE
+   ============================================================ */
+@media(max-width:768px) and (orientation:landscape){
+  .hdr{padding:6px 14px}
+  .hdr-logo{width:32px;height:32px;font-size:15px}
+  .bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:14px 14px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.25rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{margin-top:8px}
+  .bottom-nav{padding:5px 0 8px}
+  .bnav-btn span:first-child{font-size:1rem}
+  .bnav-btn span:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="index.html" class="btn-back">← Back</a>
+  <div class="hdr-logo">⚡</div>
+  <div>
+    <div class="hdr-name">Physics Notes</div>
+    <div class="hdr-sub">NCERT Class 12 | PNST 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="lang-btn active" id="btnHi" onclick="setLang('hi')">हि</button>
+    <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="phy-hero">
+    <div class="phy-badge">✦ NCERT CLASS 12 ✦</div>
+    <div class="phy-h">⚡ <span>Physics</span></div>
+    <div class="phy-p" id="phyP">PNST 2026 ke liye poore 14 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!</div>
+    <div class="phy-stats">
+      <div class="pstat"><div class="pstat-n">14</div><div class="pstat-l">Chapters</div></div>
+      <div class="pstat"><div class="pstat-n">20</div><div class="pstat-l">Marks</div></div>
+      <div class="pstat"><div class="pstat-n">429</div><div class="pstat-l">PYQ Questions</div></div>
+    </div>
+  </div>
+
+  <div class="part-div">📘 Part I — Chapters 1 to 8 (Electricity & Magnetism)</div>
+
+  <!-- CH1: ELECTRIC CHARGES AND FIELDS -->
+  <div class="ch-item" id="ch1">
+    <div class="ch-header" onclick="toggleCh('ch1')">
+      <div class="ch-num">01</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विद्युत आवेश तथा क्षेत्र" data-en="Electric Charges and Fields">विद्युत आवेश तथा क्षेत्र</div>
+        <div class="ch-tag">Coulomb's Law | Electric Field | Gauss's Law | Dipole</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch1','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch1','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch1','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch1-sum">
+        <div class="sum-overview">Electric charge — fundamental property of matter। Benjamin Franklin ने positive/negative charge की concept दी। Charge quantized होता है: q = ne (n = integer, e = 1.6×10⁻¹⁹ C)।</div>
+        <div class="sum-h">⚡ Electric Charge के गुण</div>
+        <ul class="sum-list">
+          <li><b>Quantization:</b> q = ne। e = 1.6×10⁻¹⁹ C। Charge smallest unit = charge of electron</li>
+          <li><b>Conservation:</b> Charge create/destroy नहीं होता — isolated system में total charge constant</li>
+          <li><b>Additivity:</b> q_total = q₁ + q₂ + q₃ ... (algebraic sum)</li>
+        </ul>
+        <div class="sum-h">⚡ Coulomb's Law</div>
+        <div class="formula-box">
+          <div class="flabel">Coulomb's Law:</div>
+          F = k·q₁q₂/r² = (1/4πε₀)·q₁q₂/r²
+          k = 9×10⁹ N m² C⁻², ε₀ = 8.85×10⁻¹² C² N⁻¹ m⁻²
+        </div>
+        <ul class="sum-list">
+          <li>Force along line joining two charges। Like charges repel, Unlike attract</li>
+          <li><b>Principle of superposition:</b> Force on q due to multiple charges = vector sum</li>
+          <li>In medium: F_medium = F_vacuum / εr (εr = relative permittivity/dielectric constant)</li>
+        </ul>
+        <div class="sum-h">🌀 Electric Field (E)</div>
+        <ul class="sum-list">
+          <li>E = F/q₀ (force per unit test charge)</li>
+          <li>Point charge: E = kq/r² (radially outward for +ve, inward for -ve)</li>
+          <li><b>Electric field lines:</b> Start from +ve, end at -ve। Never intersect। Density ∝ field strength</li>
+          <li><b>Uniform field:</b> Parallel equidistant lines (e.g., between parallel plates)</li>
+        </ul>
+        <div class="sum-h">🔵 Electric Dipole</div>
+        <ul class="sum-list">
+          <li>Two equal & opposite charges ±q separated by 2a</li>
+          <li><b>Dipole moment:</b> p = q × 2a (from -ve to +ve, direction)</li>
+          <li>Field on axial point: E = 2kp/r³ | Field on equatorial point: E = kp/r³</li>
+          <li>Torque on dipole: τ = p × E = pE sinθ</li>
+        </ul>
+        <div class="sum-h">📐 Gauss's Law</div>
+        <div class="formula-box">
+          <div class="flabel">Gauss's Law:</div>
+          φ = ∮E·dA = q_enclosed / ε₀
+        </div>
+        <ul class="sum-list">
+          <li>Total electric flux through closed surface = q_enclosed / ε₀</li>
+          <li><b>Infinite line charge:</b> E = λ/2πε₀r</li>
+          <li><b>Infinite plane sheet:</b> E = σ/2ε₀ (each side)</li>
+          <li><b>Conducting sphere:</b> E = 0 inside, E = q/4πε₀r² outside</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>e = 1.6×10⁻¹⁹ C | k = 9×10⁹ N m² C⁻²</li>
+            <li>Coulomb's law: F ∝ q₁q₂, F ∝ 1/r²</li>
+            <li>Gauss's law: φ = q/ε₀</li>
+            <li>E inside conductor = 0</li>
+            <li>Electric field lines never intersect</li>
+            <li>Dipole moment p = q×2a (−ve to +ve direction)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch1-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚡ Electric Charges & Fields</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">⚡ Properties</div>
+              <div class="mm-branch-items">Quantization (q=ne)<br>Conservation<br>Additivity<br>e=1.6×10⁻¹⁹C</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">⚖️ Coulomb's Law</div>
+              <div class="mm-branch-items">F=kq₁q₂/r²<br>k=9×10⁹<br>Superposition<br>Medium: εr</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌀 Electric Field</div>
+              <div class="mm-branch-items">E=F/q₀<br>Field lines<br>Uniform field<br>E=kq/r²</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔵 Dipole</div>
+              <div class="mm-branch-items">p=q×2a<br>Axial: 2kp/r³<br>Equatorial: kp/r³<br>τ=pE sinθ</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">📐 Gauss's Law</div>
+              <div class="mm-branch-items">φ=q/ε₀<br>Line charge: λ/2πε₀r<br>Sheet: σ/2ε₀<br>E=0 inside conductor</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch1-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Coulomb's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">F = kq₁q₂/r² = q₁q₂/4πε₀r²। k = 9×10⁹ N m² C⁻²। Force ∝ product of charges, ∝ 1/r²।</div></div>
+          <div class="kw-item"><div class="kw-term">Gauss's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">φ = q_enclosed/ε₀। Symmetric charge distributions में E easily निकालते हैं। Spherical, cylindrical, planar।</div></div>
+          <div class="kw-item"><div class="kw-term">Electric Dipole Moment</div><div class="kw-def">p = q × 2a। Direction: −q से +q की ओर। Unit: C·m। Torque: τ = pE sinθ।</div></div>
+          <div class="kw-item"><div class="kw-term">Charge Quantization</div><div class="kw-def">q = ne। n = integer (±1, ±2...)। e = 1.6×10⁻¹⁹ C। Charge हमेशा e के multiples में होता है।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH2: ELECTROSTATIC POTENTIAL AND CAPACITANCE -->
+  <div class="ch-item" id="ch2">
+    <div class="ch-header" onclick="toggleCh('ch2')">
+      <div class="ch-num">02</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="स्थिरवैद्युत विभव तथा धारिता" data-en="Electrostatic Potential and Capacitance">स्थिरवैद्युत विभव तथा धारिता</div>
+        <div class="ch-tag">Potential | Capacitor | Energy | Dielectric | Series Parallel</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch2','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch2','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch2','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch2-sum">
+        <div class="sum-overview">Electric potential = work done per unit charge to bring test charge from infinity। V = W/q₀। Scalar quantity। Unit = Volt (J/C)।</div>
+        <div class="sum-h">📊 Electric Potential</div>
+        <ul class="sum-list">
+          <li>V = kq/r (point charge)। V ∝ 1/r (unlike E ∝ 1/r²)</li>
+          <li><b>Equipotential surfaces:</b> Same potential → no work done moving along it। ⊥ to field lines</li>
+          <li>E = −dV/dr (E = negative gradient of V)</li>
+          <li><b>Potential due to dipole:</b> V_axial = kp/r², V_equatorial = 0</li>
+          <li>Conductor surface = equipotential। E = 0 inside conductor</li>
+        </ul>
+        <div class="sum-h">🔋 Capacitor & Capacitance</div>
+        <ul class="sum-list">
+          <li>C = Q/V (unit = Farad, F)</li>
+          <li><b>Parallel plate capacitor:</b> C = ε₀A/d (A=plate area, d=separation)</li>
+          <li>With dielectric: C = Kε₀A/d (K = dielectric constant)</li>
+          <li><b>Series:</b> 1/C = 1/C₁ + 1/C₂ + 1/C₃ (same charge, different voltage)</li>
+          <li><b>Parallel:</b> C = C₁ + C₂ + C₃ (same voltage, different charge)</li>
+          <li><b>Energy stored:</b> U = ½CV² = Q²/2C = QV/2</li>
+          <li><b>Energy density:</b> u = ½ε₀E²</li>
+        </ul>
+        <div class="sum-h">🔬 Dielectrics</div>
+        <ul class="sum-list">
+          <li>Polar dielectrics: permanent dipole (H₂O, HCl)</li>
+          <li>Non-polar: induced dipole in E field (O₂, H₂)</li>
+          <li>Dielectric slab inserted → C increases (K times)</li>
+          <li>If battery connected: V same, Q increases, E same</li>
+          <li>If battery disconnected: Q same, V decreases, E decreases</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>C = ε₀A/d | With dielectric: C = Kε₀A/d</li>
+            <li>Energy = ½CV² = Q²/2C</li>
+            <li>Series capacitors: 1/C_total = 1/C₁+1/C₂</li>
+            <li>Parallel capacitors: C_total = C₁+C₂</li>
+            <li>Equipotential ⊥ field lines</li>
+            <li>E = -dV/dr</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch2-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔋 Electrostatic Potential & Capacitance</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📊 Potential (V)</div>
+              <div class="mm-branch-items">V=kq/r<br>Scalar quantity<br>Equipotential ⊥ E<br>E=-dV/dr</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔋 Capacitor</div>
+              <div class="mm-branch-items">C=Q/V (Farad)<br>C=ε₀A/d<br>Series: 1/C=Σ1/Cᵢ<br>Parallel: C=ΣCᵢ</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚡ Energy</div>
+              <div class="mm-branch-items">U=½CV²<br>U=Q²/2C<br>Density=½ε₀E²<br></div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 Dielectric</div>
+              <div class="mm-branch-items">K×C₀<br>Polar/Non-polar<br>Battery on: V same<br>Battery off: Q same</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch2-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Capacitance <span class="kw-imp">★ PNST</span></div><div class="kw-def">C = Q/V। Unit = Farad। Parallel plate: C = ε₀A/d। Dielectric से C = K गुना बढ़ता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Equipotential Surface</div><div class="kw-def">Same potential के सभी points की surface। Electric field lines ⊥ equipotential। Along surface work = 0।</div></div>
+          <div class="kw-item"><div class="kw-term">Energy Stored in Capacitor <span class="kw-imp">★ PNST</span></div><div class="kw-def">U = ½CV² = Q²/2C = QV/2। Energy density = ½ε₀E²।</div></div>
+          <div class="kw-item"><div class="kw-term">Dielectric Constant (K)</div><div class="kw-def">K = C/C₀। Insulating material की property। K>1 हमेशा। Water K=80 (highest common)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH3: CURRENT ELECTRICITY -->
+  <div class="ch-item" id="ch3">
+    <div class="ch-header" onclick="toggleCh('ch3')">
+      <div class="ch-num">03</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विद्युत धारा" data-en="Current Electricity">विद्युत धारा</div>
+        <div class="ch-tag">Ohm's Law | Resistance | Kirchhoff | Wheatstone | Potentiometer</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch3','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch3','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch3','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch3-sum">
+        <div class="sum-overview">Electric current = Rate of flow of charge। I = dQ/dt। Unit = Ampere (A)। Conventional current = +ve charge flow direction।</div>
+        <div class="sum-h">⚡ Ohm's Law & Resistance</div>
+        <ul class="sum-list">
+          <li><b>Ohm's Law:</b> V = IR (V=voltage, I=current, R=resistance)</li>
+          <li>R = ρL/A (ρ=resistivity, L=length, A=cross-section area)</li>
+          <li>R increases with temperature: ρ = ρ₀(1+αT) where α = temperature coefficient</li>
+          <li><b>Series:</b> R = R₁+R₂+R₃ (same current, different voltage)</li>
+          <li><b>Parallel:</b> 1/R = 1/R₁+1/R₂+1/R₃ (same voltage, different current)</li>
+          <li><b>Drift velocity (vd):</b> I = neAvd। Electrons slowly drift in conductor</li>
+          <li>Mobility (μ) = vd/E = eτ/m (τ = relaxation time)</li>
+        </ul>
+        <div class="sum-h">🔋 EMF & Internal Resistance</div>
+        <ul class="sum-list">
+          <li>EMF (ε) = work done per unit charge by source</li>
+          <li>Terminal voltage: V = ε − Ir (during discharge) | V = ε + Ir (during charging)</li>
+          <li>Cells in series: ε_total = ε₁+ε₂, r_total = r₁+r₂</li>
+          <li>Cells in parallel: ε_eq = (ε₁r₂+ε₂r₁)/(r₁+r₂)</li>
+        </ul>
+        <div class="sum-h">📐 Kirchhoff's Laws</div>
+        <ul class="sum-list">
+          <li><b>KCL (Junction rule):</b> ΣI = 0 at junction (charge conservation)</li>
+          <li><b>KVL (Loop rule):</b> ΣV = 0 in closed loop (energy conservation)</li>
+          <li><b>Wheatstone bridge:</b> P/Q = R/S (balanced condition — galvanometer shows zero)</li>
+          <li>Meter bridge: Uses Wheatstone principle। R/S = l/(100-l)</li>
+        </ul>
+        <div class="sum-h">📏 Potentiometer</div>
+        <ul class="sum-list">
+          <li>Uniform wire — potential drops uniformly along length</li>
+          <li>Compare EMFs: ε₁/ε₂ = l₁/l₂</li>
+          <li>Find internal resistance: r = R(l₁-l₂)/l₂</li>
+          <li>Advantage over voltmeter: No current drawn from circuit (ideal voltmeter)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>V = IR | R = ρL/A</li>
+            <li>Series R: add | Parallel R: reciprocal add</li>
+            <li>Wheatstone: P/Q = R/S (balanced)</li>
+            <li>KCL = charge conservation | KVL = energy conservation</li>
+            <li>Terminal V = ε - Ir (discharge)</li>
+            <li>Potentiometer: no current drawn = more accurate</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch3-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚡ Current Electricity</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">⚡ Ohm's Law</div>
+              <div class="mm-branch-items">V=IR<br>R=ρL/A<br>Series/Parallel<br>Drift velocity</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔋 EMF</div>
+              <div class="mm-branch-items">V=ε-Ir<br>Internal resistance<br>Series/Parallel cells<br>Power P=VI</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📐 Kirchhoff's</div>
+              <div class="mm-branch-items">KCL: ΣI=0<br>KVL: ΣV=0<br>Wheatstone bridge<br>P/Q=R/S</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">📏 Potentiometer</div>
+              <div class="mm-branch-items">ε₁/ε₂=l₁/l₂<br>No current drawn<br>r=R(l₁-l₂)/l₂<br>vs Voltmeter</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch3-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Ohm's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">V = IR। Constant temperature पर। R = ρL/A। Ohmic conductors: V-I graph straight line।</div></div>
+          <div class="kw-item"><div class="kw-term">Wheatstone Bridge <span class="kw-imp">★ PNST</span></div><div class="kw-def">P/Q = R/S (balanced)। Galvanometer = zero deflection। Meter bridge इसी principle पर।</div></div>
+          <div class="kw-item"><div class="kw-term">Drift Velocity</div><div class="kw-def">I = neAvd। Electrons का slow net motion (~ mm/s)। Electric signal speed ≠ electron speed।</div></div>
+          <div class="kw-item"><div class="kw-term">Potentiometer <span class="kw-imp">★ PNST</span></div><div class="kw-def">Accurate EMF comparison। ε₁/ε₂ = l₁/l₂। No current drawn → more accurate than voltmeter।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH4: MOVING CHARGES AND MAGNETISM -->
+  <div class="ch-item" id="ch4">
+    <div class="ch-header" onclick="toggleCh('ch4')">
+      <div class="ch-num">04</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="गतिमान आवेश और चुम्बकत्व" data-en="Moving Charges and Magnetism">गतिमान आवेश और चुम्बकत्व</div>
+        <div class="ch-tag">Biot-Savart | Ampere | Lorentz Force | Galvanometer | Cyclotron</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch4','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch4','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch4','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch4-sum">
+        <div class="sum-overview">Moving charges create magnetic field। Hans Christian Oersted (1820) ने पहली बार current-carrying wire से magnetic field देखा।</div>
+        <div class="sum-h">🧲 Biot-Savart Law</div>
+        <div class="formula-box">
+          <div class="flabel">Biot-Savart Law:</div>
+          dB = (μ₀/4π) × (Idl sinθ)/r²
+          μ₀ = 4π×10⁻⁷ T m A⁻¹
+        </div>
+        <ul class="sum-list">
+          <li><b>Circular loop center:</b> B = μ₀I/2R</li>
+          <li><b>Straight infinite wire:</b> B = μ₀I/2πr</li>
+          <li>Direction: Right-hand thumb rule (thumb = current, fingers curl = B)</li>
+        </ul>
+        <div class="sum-h">📐 Ampere's Circuital Law</div>
+        <div class="formula-box">∮B·dl = μ₀I_enclosed</div>
+        <ul class="sum-list">
+          <li><b>Solenoid:</b> B = μ₀nI (n = turns per unit length). Inside uniform, outside ≈ 0</li>
+          <li><b>Toroid:</b> B = μ₀nI (inside), B = 0 (outside)</li>
+        </ul>
+        <div class="sum-h">⚡ Lorentz Force</div>
+        <div class="formula-box">F = q(E + v×B) = qvB sinθ (magnetic part)</div>
+        <ul class="sum-list">
+          <li>Direction: Fleming's Left-hand rule (FBI rule)</li>
+          <li>Magnetic force does NO work (⊥ to velocity)</li>
+          <li>Circular motion in uniform B: r = mv/qB, T = 2πm/qB</li>
+          <li><b>Cyclotron:</b> Accelerates charged particles। Cyclotron frequency: ν = qB/2πm (mass independent)</li>
+        </ul>
+        <div class="sum-h">🔬 Galvanometer & Instruments</div>
+        <ul class="sum-list">
+          <li>Current sensitivity = Nba/k (N=turns, b=breadth, a=length, k=torsion constant)</li>
+          <li><b>Ammeter:</b> Galvanometer + Low resistance shunt (parallel)</li>
+          <li><b>Voltmeter:</b> Galvanometer + High resistance (series)</li>
+          <li>Force between parallel wires: F/L = μ₀I₁I₂/2πd</li>
+          <li>Same direction currents → Attractive | Opposite → Repulsive</li>
+          <li><b>Definition of Ampere:</b> 1A produces force of 2×10⁻⁷ N/m between wires 1m apart</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Solenoid B = μ₀nI | Circular loop B = μ₀I/2R</li>
+            <li>Lorentz force = qvB sinθ (no work done)</li>
+            <li>Cyclotron frequency = qB/2πm (mass independent)</li>
+            <li>Ammeter: shunt parallel | Voltmeter: resistance series</li>
+            <li>Parallel wires same current = attractive force</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch4-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧲 Moving Charges & Magnetism</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🧲 Biot-Savart</div>
+              <div class="mm-branch-items">dB=μ₀Idl sinθ/4πr²<br>Loop: μ₀I/2R<br>Wire: μ₀I/2πr<br>μ₀=4π×10⁻⁷</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">📐 Ampere's Law</div>
+              <div class="mm-branch-items">∮B·dl=μ₀I<br>Solenoid: μ₀nI<br>Toroid: μ₀nI<br>B=0 outside</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">⚡ Lorentz Force</div>
+              <div class="mm-branch-items">F=qvBsinθ<br>No work done<br>Circular motion<br>Cyclotron (ν=qB/2πm)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔬 Instruments</div>
+              <div class="mm-branch-items">Galvanometer<br>Ammeter (shunt)<br>Voltmeter (series R)<br>Parallel wires force</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch4-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Lorentz Force <span class="kw-imp">★ PNST</span></div><div class="kw-def">F = q(v×B) = qvB sinθ। Magnetic force ⊥ velocity → no work done। Fleming's left-hand rule।</div></div>
+          <div class="kw-item"><div class="kw-term">Cyclotron <span class="kw-imp">★ PNST</span></div><div class="kw-def">Charged particles accelerate। ν = qB/2πm (mass-independent frequency)। r = mv/qB। Heavy ion accelerator।</div></div>
+          <div class="kw-item"><div class="kw-term">Solenoid</div><div class="kw-def">B = μ₀nI। n = turns/length। Inside: uniform B। Outside: B ≈ 0। Bar magnet जैसा magnetic field।</div></div>
+          <div class="kw-item"><div class="kw-term">Ammeter vs Voltmeter</div><div class="kw-def">Ammeter: Galvanometer + shunt (low R, parallel)। Voltmeter: Galvanometer + high R (series)। Ideal ammeter R=0, ideal voltmeter R=∞।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH5: MAGNETISM AND MATTER -->
+  <div class="ch-item" id="ch5">
+    <div class="ch-header" onclick="toggleCh('ch5')">
+      <div class="ch-num">05</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="चुम्बकत्व एवं द्रव्य" data-en="Magnetism and Matter">चुम्बकत्व एवं द्रव्य</div>
+        <div class="ch-tag">Bar Magnet | Earth's Magnetism | Dia/Para/Ferro | Curie Law</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch5','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch5','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch5','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch5-sum">
+        <div class="sum-overview">Bar magnet एक magnetic dipole है। Isolated magnetic poles exist नहीं करते। Every magnet has N and S poles together।</div>
+        <div class="sum-h">🧲 Bar Magnet</div>
+        <ul class="sum-list">
+          <li>Magnetic dipole moment: m = M (unit: A m²)</li>
+          <li><b>Axial field:</b> B = μ₀/4π × 2M/r³</li>
+          <li><b>Equatorial field:</b> B = μ₀/4π × M/r³ (direction opposite to M)</li>
+          <li>Torque: τ = MB sinθ | PE: U = -MB cosθ</li>
+          <li>Time period of oscillation: T = 2π√(I/MB)</li>
+        </ul>
+        <div class="sum-h">🌍 Earth's Magnetism</div>
+        <ul class="sum-list">
+          <li><b>Geographic meridian:</b> N-S geographic poles वाला plane</li>
+          <li><b>Magnetic meridian:</b> Magnetic N-S वाला plane</li>
+          <li><b>Declination (α):</b> Angle between magnetic & geographic meridians</li>
+          <li><b>Dip/Inclination (δ):</b> Angle between total B and horizontal plane</li>
+          <li>At magnetic equator: dip = 0°। At poles: dip = 90°</li>
+          <li>BH = B cosδ (horizontal component), BV = B sinδ (vertical)</li>
+        </ul>
+        <div class="sum-h">🔬 Magnetic Properties of Materials</div>
+        <ul class="sum-list">
+          <li><b>Diamagnetic:</b> Weakly repelled by B। χm = small negative। e.g., Bi, Cu, Water, NaCl</li>
+          <li><b>Paramagnetic:</b> Weakly attracted। χm = small positive। e.g., Al, Mn, Pt, O₂</li>
+          <li><b>Ferromagnetic:</b> Strongly attracted। χm = large positive। e.g., Fe, Ni, Co</li>
+          <li><b>Curie's Law:</b> χm = C/T (paramagnetic materials, C=Curie constant)</li>
+          <li><b>Curie temperature:</b> Above this, ferromagnetic → paramagnetic</li>
+          <li>Hysteresis: Lag of B behind H। Soft iron = small loop (transformer core). Steel = large loop (permanent magnet)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Diamagnetic: repelled, χm < 0 (Bismuth best)</li>
+            <li>Paramagnetic: attracted, χm > 0 small</li>
+            <li>Ferromagnetic: strongly attracted (Fe, Ni, Co)</li>
+            <li>Curie temperature: Fe=1043K, Ni=631K, Co=1388K</li>
+            <li>Magnetic equator: dip=0° | Poles: dip=90°</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch5-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🧲 Magnetism and Matter</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🧲 Bar Magnet</div>
+              <div class="mm-branch-items">Magnetic dipole<br>Axial: 2M/r³<br>Equatorial: M/r³<br>τ=MBsinθ</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌍 Earth's Magnetism</div>
+              <div class="mm-branch-items">Declination (α)<br>Dip/Inclination (δ)<br>Equator: dip=0°<br>Poles: dip=90°</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 Materials</div>
+              <div class="mm-branch-items">Dia (repelled, −)<br>Para (attracted, +)<br>Ferro (strongly +)<br>Curie temp.</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch5-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Diamagnetic <span class="kw-imp">★ PNST</span></div><div class="kw-def">Weakly repelled। χm = small negative। Bi, Cu, water, NaCl। Superconductor = perfect diamagnet (χm = -1)।</div></div>
+          <div class="kw-item"><div class="kw-term">Curie's Law</div><div class="kw-def">Paramagnetic: χm = C/T। Temperature बढ़ने पर susceptibility कम होती है। Above Curie temp — ferro → para।</div></div>
+          <div class="kw-item"><div class="kw-term">Magnetic Dip (δ) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Total B और horizontal के बीच angle। Equator पर 0°, poles पर 90°। BH = B cosδ।</div></div>
+          <div class="kw-item"><div class="kw-term">Hysteresis</div><div class="kw-def">Magnetization B lags behind H। Loop area = energy loss per cycle। Soft iron = narrow loop (transformer)। Steel = wide (permanent magnet)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH6: ELECTROMAGNETIC INDUCTION -->
+  <div class="ch-item" id="ch6">
+    <div class="ch-header" onclick="toggleCh('ch6')">
+      <div class="ch-num">06</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वैद्युतचुम्बकीय प्रेरण" data-en="Electromagnetic Induction">वैद्युतचुम्बकीय प्रेरण</div>
+        <div class="ch-tag">Faraday's Law | Lenz's Law | Motional EMF | Self/Mutual Inductance</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch6','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch6','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch6','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch6-sum">
+        <div class="sum-overview">Michael Faraday (1831) — Changing magnetic flux induces EMF। यह electromagnetic induction की खोज थी।</div>
+        <div class="sum-h">⚡ Faraday's Laws</div>
+        <ul class="sum-list">
+          <li><b>First law:</b> जब magnetic flux change होता है, EMF induce होती है</li>
+          <li><b>Second law:</b> ε = -dΦ/dt (induced EMF = rate of change of flux)</li>
+          <li>Magnetic flux: Φ = BA cosθ (unit = Weber = T m²)</li>
+          <li><b>Lenz's Law:</b> Induced current की direction such that it opposes the cause (energy conservation)</li>
+        </ul>
+        <div class="sum-h">🔌 Motional EMF</div>
+        <ul class="sum-list">
+          <li>Conductor moving in magnetic field: ε = Bvl sinθ</li>
+          <li>ε = Blv (when rod ⊥ to B and v)</li>
+          <li>Eddy currents: Induced in solid conductors। Cause heating (useful: induction cooker, brakes)</li>
+          <li>Minimize eddy currents: Laminations (thin sheets) in transformer cores</li>
+        </ul>
+        <div class="sum-h">🔄 Inductance</div>
+        <ul class="sum-list">
+          <li><b>Self inductance (L):</b> Φ = LI → ε = -L(dI/dt)</li>
+          <li>Solenoid: L = μ₀n²Al (n=turns/length, A=area, l=length)</li>
+          <li><b>Mutual inductance (M):</b> Flux in 2 due to current in 1 → ε₂ = -M(dI₁/dt)</li>
+          <li>M depends on geometry, orientation, medium between coils</li>
+          <li>L series: L = L₁+L₂ (no coupling) | L parallel: 1/L = 1/L₁+1/L₂</li>
+          <li>Energy stored in inductor: U = ½LI²</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Faraday: ε = -dΦ/dt</li>
+            <li>Lenz's law = energy conservation (opposes change)</li>
+            <li>Motional EMF = Blv</li>
+            <li>Self inductance energy = ½LI²</li>
+            <li>Eddy currents = minimize with laminations</li>
+            <li>Solenoid: L = μ₀n²Al</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch6-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔌 Electromagnetic Induction</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">⚡ Faraday's Laws</div>
+              <div class="mm-branch-items">ε=-dΦ/dt<br>Φ=BA cosθ<br>Lenz's law<br>Opposes change</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔌 Motional EMF</div>
+              <div class="mm-branch-items">ε=Blv<br>Eddy currents<br>Laminations<br>Induction cooker</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔄 Inductance</div>
+              <div class="mm-branch-items">Self: ε=-L dI/dt<br>Mutual: ε=-M dI/dt<br>U=½LI²<br>Solenoid L=μ₀n²Al</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch6-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Faraday's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">ε = -dΦ/dt। Magnetic flux change → EMF induce। Rate of change ज्यादा → ज्यादा EMF।</div></div>
+          <div class="kw-item"><div class="kw-term">Lenz's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">Induced current ऐसी direction में बहती है जो cause को oppose करे। Energy conservation का magnetic form।</div></div>
+          <div class="kw-item"><div class="kw-term">Self Inductance (L)</div><div class="kw-def">ε = -L(dI/dt)। Solenoid: L = μ₀n²V। Unit = Henry (H)। Energy = ½LI²।</div></div>
+          <div class="kw-item"><div class="kw-term">Eddy Currents</div><div class="kw-def">Changing B → solid conductors में circular induced currents। Heat produce। Laminations से minimize।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH7: ALTERNATING CURRENT -->
+  <div class="ch-item" id="ch7">
+    <div class="ch-header" onclick="toggleCh('ch7')">
+      <div class="ch-num">07</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="प्रत्यावर्ती धारा" data-en="Alternating Current">प्रत्यावर्ती धारा</div>
+        <div class="ch-tag">RMS | Impedance | Resonance | Power Factor | Transformer</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch7','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch7','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch7','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch7-sum">
+        <div class="sum-overview">AC voltage: v = V₀ sinωt। India में: 220V (rms), 50 Hz। AC generators और transformers इसी principle पर।</div>
+        <div class="sum-h">📊 AC Circuits</div>
+        <ul class="sum-list">
+          <li><b>Resistor (R):</b> V and I in phase। V_R = IR</li>
+          <li><b>Inductor (L):</b> Current lags voltage by 90°। X_L = ωL (inductive reactance)</li>
+          <li><b>Capacitor (C):</b> Current leads voltage by 90°। X_C = 1/ωC (capacitive reactance)</li>
+          <li><b>RMS values:</b> I_rms = I₀/√2 = 0.707 I₀ | V_rms = V₀/√2</li>
+        </ul>
+        <div class="sum-h">🔌 Series LCR Circuit</div>
+        <div class="formula-box">
+          <div class="flabel">Impedance & Resonance:</div>
+          Z = √(R² + (X_L - X_C)²)
+          Resonance: ω₀ = 1/√LC → Z = R (minimum)
+        </div>
+        <ul class="sum-list">
+          <li><b>Resonance condition:</b> X_L = X_C → ω₀ = 1/√(LC). Current maximum</li>
+          <li><b>Q-factor (sharpness):</b> Q = ω₀L/R = 1/ω₀CR. Higher Q = sharper resonance</li>
+          <li>Resonance frequency: f₀ = 1/(2π√LC)</li>
+        </ul>
+        <div class="sum-h">⚡ Power in AC Circuits</div>
+        <ul class="sum-list">
+          <li>P = V_rms I_rms cosφ (cosφ = power factor)</li>
+          <li>Pure R: φ=0, P=V_rms × I_rms (maximum)</li>
+          <li>Pure L or C: φ=90°, P=0 (wattless current)</li>
+          <li><b>Wattless current:</b> Component that does no work (90° out of phase)</li>
+        </ul>
+        <div class="sum-h">🔄 Transformer</div>
+        <ul class="sum-list">
+          <li>V_s/V_p = N_s/N_p = I_p/I_s</li>
+          <li>Step-up: N_s > N_p (voltage increases, current decreases)</li>
+          <li>Step-down: N_s < N_p (voltage decreases, current increases)</li>
+          <li>Ideal transformer: V_p I_p = V_s I_s (100% efficiency)</li>
+          <li>Losses: Copper loss (I²R), Iron/Core loss (eddy currents + hysteresis)</li>
+          <li><b>Power transmission:</b> High voltage → low current → low I²R loss</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>I_rms = I₀/√2 | V_rms = V₀/√2</li>
+            <li>Resonance: X_L=X_C, ω₀=1/√LC, Z=R</li>
+            <li>Power factor = cosφ | Pure L,C → P=0 (wattless)</li>
+            <li>Transformer: Vs/Vp = Ns/Np</li>
+            <li>High voltage transmission → less I²R loss</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch7-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚡ Alternating Current</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📊 AC Basics</div>
+              <div class="mm-branch-items">I_rms=I₀/√2<br>R: V,I in phase<br>L: I lags 90°<br>C: I leads 90°</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔌 LCR Series</div>
+              <div class="mm-branch-items">Z=√R²+(XL-XC)²<br>Resonance: ω₀=1/√LC<br>Q-factor<br>Z=R at resonance</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚡ Power</div>
+              <div class="mm-branch-items">P=VIcosφ<br>cosφ=power factor<br>L,C: P=0<br>Wattless current</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔄 Transformer</div>
+              <div class="mm-branch-items">Vs/Vp=Ns/Np<br>Step-up/down<br>I²R → power loss<br>High V transmit</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch7-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">RMS Value <span class="kw-imp">★ PNST</span></div><div class="kw-def">Root Mean Square = I₀/√2 = 0.707 I₀। DC equivalent। India: 220V rms, 50 Hz।</div></div>
+          <div class="kw-item"><div class="kw-term">Resonance <span class="kw-imp">★ PNST</span></div><div class="kw-def">X_L = X_C → ω₀ = 1/√LC। Z = R (minimum) → I maximum। Radio tuning में use।</div></div>
+          <div class="kw-item"><div class="kw-term">Power Factor (cosφ)</div><div class="kw-def">P = V_rms I_rms cosφ। Pure R: cosφ=1। Pure L/C: cosφ=0 (wattless)। LCR at resonance: cosφ=1।</div></div>
+          <div class="kw-item"><div class="kw-term">Transformer <span class="kw-imp">★ PNST</span></div><div class="kw-def">V_s/V_p = N_s/N_p। Mutual inductance principle। Step-up for transmission, step-down for use।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH8: ELECTROMAGNETIC WAVES -->
+  <div class="ch-item" id="ch8">
+    <div class="ch-header" onclick="toggleCh('ch8')">
+      <div class="ch-num">08</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="वैद्युतचुम्बकीय तरंगें" data-en="Electromagnetic Waves">वैद्युतचुम्बकीय तरंगें</div>
+        <div class="ch-tag">Maxwell | EM Spectrum | Speed of Light | Properties</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch8','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch8','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch8','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch8-sum">
+        <div class="sum-overview">Maxwell ने predict किया कि changing electric field creates magnetic field (Displacement current)। EM waves = self-propagating E and B fields। c = 3×10⁸ m/s।</div>
+        <div class="sum-h">🌊 EM Waves की विशेषताएं</div>
+        <ul class="sum-list">
+          <li>Transverse waves। E and B ⊥ to each other AND ⊥ to direction of propagation</li>
+          <li>Speed in vacuum: c = 1/√(μ₀ε₀) = 3×10⁸ m/s</li>
+          <li>No medium required। Travel through vacuum</li>
+          <li>E₀/B₀ = c (ratio of amplitudes)</li>
+          <li><b>Displacement current:</b> I_d = ε₀ dΦ_E/dt (Maxwell's contribution)</li>
+        </ul>
+        <div class="sum-h">🌈 EM Spectrum (increasing wavelength)</div>
+        <ul class="sum-list">
+          <li><b>Gamma rays</b> (λ < 10⁻¹²m) — Nuclear reactions, Cancer treatment</li>
+          <li><b>X-rays</b> (10⁻¹² to 10⁻⁸m) — Medical imaging, Crystallography</li>
+          <li><b>Ultraviolet</b> (10⁻⁸ to 4×10⁻⁷m) — Sterilization, Sun</li>
+          <li><b>Visible light</b> (4×10⁻⁷ to 7×10⁻⁷m) — VIBGYOR (Violet 400nm - Red 700nm)</li>
+          <li><b>Infrared</b> (7×10⁻⁷ to 10⁻³m) — Heat, Night vision, Cooking</li>
+          <li><b>Microwaves</b> (10⁻³ to 0.1m) — Microwave oven, RADAR</li>
+          <li><b>Radio waves</b> (0.1m to 10⁴m) — Radio, TV broadcast</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>c = 3×10⁸ m/s (speed of light in vacuum)</li>
+            <li>EM waves: Transverse, E⊥B⊥direction</li>
+            <li>Gamma rays: highest frequency, shortest λ</li>
+            <li>Radio waves: lowest frequency, longest λ</li>
+            <li>UV rays: ozone layer absorbs them</li>
+            <li>Maxwell = Displacement current → EM wave theory</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch8-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌊 Electromagnetic Waves</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌊 Properties</div>
+              <div class="mm-branch-items">Transverse<br>E⊥B⊥direction<br>c=3×10⁸ m/s<br>No medium needed</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🌈 EM Spectrum</div>
+              <div class="mm-branch-items">γ→X→UV→Visible<br>→IR→Micro→Radio<br>Visible: VIBGYOR<br>400nm-700nm</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">⚡ Maxwell</div>
+              <div class="mm-branch-items">Displacement current<br>Id=ε₀ dΦE/dt<br>E→B→E (self prop.)<br>c=1/√μ₀ε₀</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch8-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Displacement Current <span class="kw-imp">★ PNST</span></div><div class="kw-def">Maxwell's contribution। I_d = ε₀ dΦ_E/dt। Changing electric flux creates magnetic field।</div></div>
+          <div class="kw-item"><div class="kw-term">EM Spectrum <span class="kw-imp">★ PNST</span></div><div class="kw-def">γ rays → X-rays → UV → Visible → IR → Microwaves → Radio। Frequency decreasing, wavelength increasing।</div></div>
+          <div class="kw-item"><div class="kw-term">Speed of Light (c)</div><div class="kw-def">c = 1/√(μ₀ε₀) = 3×10⁸ m/s। All EM waves vacuum में same speed। Medium में c/n (n = refractive index)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PART 2 -->
+  <div class="part-div">📗 Part II — Chapters 9 to 14 (Optics, Modern Physics, Semiconductor)</div>
+
+  <!-- CH9: RAY OPTICS -->
+  <div class="ch-item" id="ch9">
+    <div class="ch-header" onclick="toggleCh('ch9')">
+      <div class="ch-num">09</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="किरण प्रकाशिकी एवं प्रकाशिक यंत्र" data-en="Ray Optics and Optical Instruments">किरण प्रकाशिकी एवं प्रकाशिक यंत्र</div>
+        <div class="ch-tag">Mirrors | Refraction | Lens | Prism | Telescope | Microscope</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch9','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch9','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch9','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch9-sum">
+        <div class="sum-overview">Ray optics: Light travels in straight lines (rays)। Laws of reflection and refraction। Snell's law: n₁ sinθ₁ = n₂ sinθ₂।</div>
+        <div class="sum-h">🪞 Mirrors</div>
+        <ul class="sum-list">
+          <li>Mirror formula: 1/v + 1/u = 1/f | f = R/2</li>
+          <li>Magnification: m = -v/u</li>
+          <li>Sign convention: incident ray direction = +ve</li>
+          <li>Concave: Real inverted image (beyond F) | Virtual erect (inside F)</li>
+          <li>Convex: Always virtual, erect, diminished image</li>
+        </ul>
+        <div class="sum-h">🔬 Refraction & TIR</div>
+        <ul class="sum-list">
+          <li><b>Snell's Law:</b> n₁ sinθ₁ = n₂ sinθ₂ | n = c/v</li>
+          <li><b>Total Internal Reflection (TIR):</b> θ > critical angle, denser to rarer medium</li>
+          <li>sinC = n₂/n₁ = 1/n (if n₂ = air)</li>
+          <li>Applications: Optical fibre, Mirages, Diamonds</li>
+          <li>Refraction at spherical surface: n₁/u + n₂/v = (n₂-n₁)/R</li>
+        </ul>
+        <div class="sum-h">🔍 Lenses</div>
+        <ul class="sum-list">
+          <li>Lens formula: 1/v - 1/u = 1/f</li>
+          <li>Power: P = 1/f (unit = Dioptre, D)</li>
+          <li>Lensmaker's equation: 1/f = (n-1)(1/R₁ - 1/R₂)</li>
+          <li>Combined lenses: 1/f = 1/f₁ + 1/f₂ | P = P₁+P₂</li>
+          <li>Convex lens: Converging (+ve f) | Concave: Diverging (-ve f)</li>
+        </ul>
+        <div class="sum-h">🌈 Prism & Dispersion</div>
+        <ul class="sum-list">
+          <li>δ = (n-1)A (thin prism, minimum deviation)</li>
+          <li>At minimum deviation: r = A/2, i = (A+δm)/2</li>
+          <li>n = sin[(A+δm)/2] / sin(A/2)</li>
+          <li>Dispersion: Violet bends more, Red bends less (VIBGYOR)</li>
+          <li>Rainbow: Primary (red outside, violet inside) | Secondary (reversed)</li>
+        </ul>
+        <div class="sum-h">🔭 Optical Instruments</div>
+        <ul class="sum-list">
+          <li><b>Simple microscope:</b> m = 1 + D/f (D=25cm, least distance of distinct vision)</li>
+          <li><b>Compound microscope:</b> m = m₀ × me = (L/f₀)(1+D/fe)</li>
+          <li><b>Telescope (refracting):</b> m = f₀/fe (angular magnification)</li>
+          <li>Reflecting telescope: Large aperture → high resolution। No chromatic aberration</li>
+          <li><b>Resolving power:</b> RP = 2n sinθ/λ (microscope) | RP = D/1.22λ (telescope)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>1/v + 1/u = 1/f (mirrors) | 1/v - 1/u = 1/f (lens)</li>
+            <li>TIR: θ > critical angle, dense to rare medium</li>
+            <li>P = 1/f (Dioptre) | Combined: P = P₁+P₂</li>
+            <li>Human eye: Near point=25cm, Far point=∞</li>
+            <li>Myopia: concave lens | Hypermetropia: convex lens</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch9-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🔭 Ray Optics</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🪞 Mirrors</div>
+              <div class="mm-branch-items">1/v+1/u=1/f<br>m=-v/u<br>Concave: real inv.<br>Convex: virtual dim.</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(6,182,212,.15);border:1px solid rgba(6,182,212,.3);color:#22d3ee">
+              <div class="mm-branch-title">🔬 Refraction + TIR</div>
+              <div class="mm-branch-items">Snell's law: n₁sinθ₁=n₂sinθ₂<br>TIR: dense→rare<br>sinC=1/n<br>Optical fibre</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔍 Lenses</div>
+              <div class="mm-branch-items">1/v-1/u=1/f<br>P=1/f (D)<br>P_total=P₁+P₂<br>Lensmaker eq.</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔭 Instruments</div>
+              <div class="mm-branch-items">Microscope: m=L/f₀×D/fe<br>Telescope: f₀/fe<br>Simple: 1+D/f<br>Near point=25cm</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch9-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Total Internal Reflection <span class="kw-imp">★ PNST</span></div><div class="kw-def">θ > critical angle, dense → rare medium। sinC = 1/n। Optical fibre, Diamond, Mirages।</div></div>
+          <div class="kw-item"><div class="kw-term">Power of Lens <span class="kw-imp">★ PNST</span></div><div class="kw-def">P = 1/f। Unit = Dioptre (D)। Convex: +ve। Concave: -ve। P_total = P₁+P₂।</div></div>
+          <div class="kw-item"><div class="kw-term">Myopia & Hypermetropia <span class="kw-imp">★ PNST</span></div><div class="kw-def">Myopia (near-sighted): Far point < ∞ → Concave lens। Hypermetropia (far-sighted): Near point > 25cm → Convex lens।</div></div>
+          <div class="kw-item"><div class="kw-term">Optical Fibre</div><div class="kw-def">TIR principle। Light propagates through total internal reflection। Data transmission। Dense glass core + rarer cladding।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH10: WAVE OPTICS -->
+  <div class="ch-item" id="ch10">
+    <div class="ch-header" onclick="toggleCh('ch10')">
+      <div class="ch-num">10</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="तरंग प्रकाशिकी" data-en="Wave Optics">तरंग प्रकाशिकी</div>
+        <div class="ch-tag">Huygens | Interference | Young's Experiment | Diffraction | Polarisation</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch10','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch10','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch10','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch10-sum">
+        <div class="sum-overview">Wave optics: Light as a wave। Huygens' principle, Interference, Diffraction, Polarisation — wave nature prove करते हैं।</div>
+        <div class="sum-h">🌊 Huygens' Principle</div>
+        <ul class="sum-list">
+          <li>Every point on wavefront = new source of secondary wavelets</li>
+          <li>Explains reflection, refraction, diffraction</li>
+          <li>Wavefront: Surface where all points have same phase</li>
+        </ul>
+        <div class="sum-h">🌈 Young's Double Slit Experiment (YDSE)</div>
+        <ul class="sum-list">
+          <li>Conditions: Coherent sources, same frequency</li>
+          <li><b>Path difference:</b> Δx = d sinθ ≈ yd/D</li>
+          <li><b>Bright fringes (maxima):</b> Δx = nλ</li>
+          <li><b>Dark fringes (minima):</b> Δx = (2n-1)λ/2</li>
+          <li><b>Fringe width:</b> β = λD/d (D=screen distance, d=slit separation)</li>
+          <li>In medium (μ): β' = β/μ (fringe width decreases)</li>
+          <li>I = I₀ cos²(δ/2) where δ = phase difference</li>
+        </ul>
+        <div class="sum-h">🔬 Diffraction</div>
+        <ul class="sum-list">
+          <li>Bending of light around obstacles (single slit)</li>
+          <li>Central maximum: widest and brightest</li>
+          <li>Minima: a sinθ = nλ (a = slit width)</li>
+          <li>Central fringe width = 2λD/a (twice other fringes)</li>
+          <li>Resolving power: limit of resolution = 1.22 λ/D (telescope)</li>
+        </ul>
+        <div class="sum-h">🕶️ Polarisation</div>
+        <ul class="sum-list">
+          <li>Only transverse waves polarise (proof that light is transverse)</li>
+          <li><b>Malus's Law:</b> I = I₀ cos²θ (polarizer + analyser at angle θ)</li>
+          <li><b>Polarisation by reflection:</b> Brewster's law: tan i_p = n (i_p = Brewster angle)</li>
+          <li>At Brewster angle: reflected + refracted rays ⊥ to each other</li>
+          <li>Uses: Sunglasses, Photography, LCD screens</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Fringe width β = λD/d</li>
+            <li>Bright fringes: Δx = nλ | Dark: Δx = (2n-1)λ/2</li>
+            <li>Malus's Law: I = I₀ cos²θ</li>
+            <li>Brewster's Law: tan i_p = n</li>
+            <li>Diffraction proves wave nature of light</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch10-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🌊 Wave Optics</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌊 Huygens</div>
+              <div class="mm-branch-items">Secondary wavelets<br>Wavefront<br>Explains reflection<br>Refraction</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌈 YDSE</div>
+              <div class="mm-branch-items">β=λD/d<br>Bright: Δx=nλ<br>Dark: (2n-1)λ/2<br>Coherent sources</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🔬 Diffraction</div>
+              <div class="mm-branch-items">Single slit<br>Central max: widest<br>Minima: a sinθ=nλ<br>Central=2λD/a</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🕶️ Polarisation</div>
+              <div class="mm-branch-items">Malus: I=I₀cos²θ<br>Brewster: tan i=n<br>Transverse wave proof<br>LCD, Sunglasses</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch10-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Fringe Width (β) <span class="kw-imp">★ PNST</span></div><div class="kw-def">β = λD/d। D=screen distance, d=slit separation। Fringe width ∝ λ (violet < red)।</div></div>
+          <div class="kw-item"><div class="kw-term">Malus's Law <span class="kw-imp">★ PNST</span></div><div class="kw-def">I = I₀ cos²θ। Polariser → Analyser at angle θ। θ=0: I=I₀ (max) | θ=90°: I=0।</div></div>
+          <div class="kw-item"><div class="kw-term">Coherent Sources</div><div class="kw-def">Same frequency + constant phase difference। YDSE में single source से दो slits → coherent। Ordinary light sources incoherent।</div></div>
+          <div class="kw-item"><div class="kw-term">Brewster's Law</div><div class="kw-def">tan i_p = n। At Brewster angle: reflected ray completely plane-polarised। Reflected ⊥ refracted।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH11: DUAL NATURE -->
+  <div class="ch-item" id="ch11">
+    <div class="ch-header" onclick="toggleCh('ch11')">
+      <div class="ch-num">11</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विकिरण तथा द्रव्य की द्वैत प्रकृति" data-en="Dual Nature of Radiation and Matter">विकिरण तथा द्रव्य की द्वैत प्रकृति</div>
+        <div class="ch-tag">Photoelectric Effect | Einstein | de Broglie | Davisson-Germer</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch11','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch11','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch11','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch11-sum">
+        <div class="sum-overview">Wave-Particle duality: Light behaves as wave (interference, diffraction) AND as particle (photoelectric effect)। Matter also shows wave nature (de Broglie)।</div>
+        <div class="sum-h">💡 Photoelectric Effect</div>
+        <ul class="sum-list">
+          <li>Heinrich Hertz (1887) — observed। J.J. Thomson — electrons emitted</li>
+          <li><b>Einstein's explanation (1905):</b> Light = photons (quanta of energy)</li>
+          <li>E = hν = hc/λ। h = 6.626×10⁻³⁴ J·s (Planck's constant)</li>
+          <li><b>Threshold frequency (ν₀):</b> Minimum frequency for emission. φ = hν₀ (work function)</li>
+          <li><b>Einstein's equation:</b> hν = φ + ½mv²_max = hν₀ + eV₀</li>
+          <li>Stopping potential V₀: ½mv²_max = eV₀</li>
+          <li>No emission below threshold (intensity doesn't matter!)</li>
+          <li>Instantaneous emission (no time lag)</li>
+          <li>KE_max ∝ frequency (not intensity)</li>
+          <li>Photoelectric current ∝ intensity</li>
+        </ul>
+        <div class="sum-h">🌊 de Broglie Hypothesis</div>
+        <div class="formula-box">
+          <div class="flabel">de Broglie wavelength:</div>
+          λ = h/p = h/mv = h/√(2mKE) = h/√(2meV)
+        </div>
+        <ul class="sum-list">
+          <li>Matter has wave nature! Particles have wavelength</li>
+          <li>Electron: λ = 1.227/√V nm (V = accelerating voltage)</li>
+          <li><b>Davisson-Germer experiment (1927):</b> Electron diffraction → proved wave nature</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>E = hν = hc/λ | h = 6.63×10⁻³⁴ J·s</li>
+            <li>KE_max = hν - φ (Einstein's photoelectric eq.)</li>
+            <li>Threshold frequency: emission stop below it</li>
+            <li>de Broglie: λ = h/mv</li>
+            <li>Davisson-Germer = electron wave nature proved</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch11-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚛️ Dual Nature of Radiation & Matter</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">💡 Photoelectric</div>
+              <div class="mm-branch-items">E=hν<br>KE=hν-φ<br>Threshold freq ν₀<br>Einstein (Nobel 1921)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌊 de Broglie</div>
+              <div class="mm-branch-items">λ=h/p=h/mv<br>Matter waves<br>Davisson-Germer<br>Electron diffraction</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📊 Key Facts</div>
+              <div class="mm-branch-items">h=6.63×10⁻³⁴ J·s<br>Stopping potential<br>Intensity↑→current↑<br>ν↑→KE↑</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch11-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Photoelectric Effect <span class="kw-imp">★ PNST</span></div><div class="kw-def">Light → Electron emission। Einstein = photon theory। KE_max = hν - φ। Nobel Prize 1921।</div></div>
+          <div class="kw-item"><div class="kw-term">Work Function (φ) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Metal से electron निकालने के लिए minimum energy। φ = hν₀। Different for different metals।</div></div>
+          <div class="kw-item"><div class="kw-term">de Broglie Wavelength <span class="kw-imp">★ PNST</span></div><div class="kw-def">λ = h/mv। Every particle has wave nature। Electrons, neutrons, protons — सबके लिए।</div></div>
+          <div class="kw-item"><div class="kw-term">Stopping Potential (V₀)</div><div class="kw-def">Photoelectric current रोकने के लिए minimum retarding potential। eV₀ = KE_max = hν - φ।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH12: ATOMS -->
+  <div class="ch-item" id="ch12">
+    <div class="ch-header" onclick="toggleCh('ch12')">
+      <div class="ch-num">12</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="परमाणु" data-en="Atoms">परमाणु</div>
+        <div class="ch-tag">Rutherford | Bohr Model | Spectral Series | Energy Levels</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch12','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch12','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch12','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch12-sum">
+        <div class="sum-overview">Thomson → Plum pudding model। Rutherford (1911) → Nuclear model। Bohr (1913) → Quantized orbits for Hydrogen atom।</div>
+        <div class="sum-h">🔬 Atomic Models</div>
+        <ul class="sum-list">
+          <li><b>Thomson model:</b> Positive sphere + electrons embedded। "Plum pudding"</li>
+          <li><b>Rutherford's experiment:</b> α-particles on gold foil. Most pass through, few deflect, rare bounce back</li>
+          <li>Conclusion: Small dense positive nucleus। Electrons in orbits। Atom mostly empty</li>
+          <li>Limitation: Accelerating electrons → should radiate → atom should collapse (doesn't explain stability)</li>
+        </ul>
+        <div class="sum-h">⚛️ Bohr's Model (Hydrogen)</div>
+        <ul class="sum-list">
+          <li><b>Postulates:</b> Electrons in specific orbits (stationary states). No radiation in orbit. Radiation during transition</li>
+          <li>Angular momentum quantization: mvr = nh/2π = nħ</li>
+          <li><b>Radius:</b> r_n = n²a₀ (a₀ = 0.529 Å = Bohr radius)</li>
+          <li><b>Energy:</b> E_n = -13.6/n² eV</li>
+          <li>E₁ = -13.6 eV (ground state), E₂ = -3.4 eV, E₃ = -1.51 eV</li>
+          <li>Ionization energy = 13.6 eV (from ground state)</li>
+        </ul>
+        <div class="sum-h">🌈 Spectral Series of Hydrogen</div>
+        <ul class="sum-list">
+          <li><b>Lyman series:</b> n₂ → n₁=1 (UV region)</li>
+          <li><b>Balmer series:</b> n₂ → n₁=2 (Visible region) — H_α (red), H_β, H_γ</li>
+          <li><b>Paschen series:</b> n₂ → n₁=3 (IR region)</li>
+          <li><b>Brackett series:</b> n₂ → n₁=4 (Far IR)</li>
+          <li><b>Pfund series:</b> n₂ → n₁=5 (Far IR)</li>
+          <li>Rydberg formula: 1/λ = R_H(1/n₁² - 1/n₂²) [R_H = 1.097×10⁷ m⁻¹]</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>E_n = -13.6/n² eV | r_n = n²×0.529 Å</li>
+            <li>Ground state: n=1, E=-13.6 eV</li>
+            <li>Lyman=UV, Balmer=Visible, Paschen=IR</li>
+            <li>Ionization energy = 13.6 eV</li>
+            <li>Rutherford: most α-pass through (atom mostly empty)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch12-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⚛️ Atoms</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔬 Models</div>
+              <div class="mm-branch-items">Thomson (plum pudding)<br>Rutherford (nuclear)<br>Gold foil exp.<br>Mostly empty</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">⚛️ Bohr's Model</div>
+              <div class="mm-branch-items">E_n=-13.6/n² eV<br>r_n=n²×0.529Å<br>mvr=nħ<br>IE=13.6 eV</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🌈 Spectral Series</div>
+              <div class="mm-branch-items">Lyman (UV, n→1)<br>Balmer (Visible, n→2)<br>Paschen (IR, n→3)<br>Rydberg formula</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch12-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Bohr's Model <span class="kw-imp">★ PNST</span></div><div class="kw-def">E_n = -13.6/n² eV। r_n = n²×0.529 Å। Quantized angular momentum: mvr = nħ।</div></div>
+          <div class="kw-item"><div class="kw-term">Balmer Series <span class="kw-imp">★ PNST</span></div><div class="kw-def">n → 2 transitions। Visible region। H_α = red (656nm), H_β = blue-green। First discovered।</div></div>
+          <div class="kw-item"><div class="kw-term">Ionization Energy</div><div class="kw-def">Ground state से electron निकालने के लिए energy = 13.6 eV (hydrogen)।</div></div>
+          <div class="kw-item"><div class="kw-term">Rutherford Scattering</div><div class="kw-def">Gold foil + α-particles। Most pass through, few scatter, rare backscatter। Nucleus = small, dense, positive।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH13: NUCLEI -->
+  <div class="ch-item" id="ch13">
+    <div class="ch-header" onclick="toggleCh('ch13')">
+      <div class="ch-num">13</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="नाभिक" data-en="Nuclei">नाभिक</div>
+        <div class="ch-tag">Binding Energy | Radioactivity | Nuclear Fission | Fusion</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch13','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch13','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch13','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch13-sum">
+        <div class="sum-overview">Nucleus = Protons + Neutrons (Nucleons)। Nuclear radius: R = R₀A^(1/3) [R₀ = 1.2 fm]। Nuclear density = constant (independent of A)।</div>
+        <div class="sum-h">⚛️ Nuclear Properties</div>
+        <ul class="sum-list">
+          <li><b>Atomic number (Z):</b> Proton number। <b>Mass number (A):</b> Proton + Neutron (A=Z+N)</li>
+          <li><b>Isotopes:</b> Same Z, different A (e.g., H-1, H-2, H-3)</li>
+          <li><b>Isobars:</b> Same A, different Z (e.g., C-14, N-14)</li>
+          <li><b>Isotones:</b> Same N, different Z</li>
+          <li>Nuclear density ≈ 2.3×10¹⁷ kg/m³ (same for all nuclei)</li>
+        </ul>
+        <div class="sum-h">💥 Binding Energy</div>
+        <ul class="sum-list">
+          <li><b>Mass defect:</b> Δm = Zmp + Nmn - M_nucleus</li>
+          <li><b>Binding energy:</b> BE = Δm × c² (1 amu = 931.5 MeV)</li>
+          <li><b>BE/nucleon:</b> Maximum ≈ 8.8 MeV for Fe-56 (most stable)</li>
+          <li>Fission: Heavy → medium (BE/nucleon increases → energy released)</li>
+          <li>Fusion: Light → medium (BE/nucleon increases → energy released)</li>
+        </ul>
+        <div class="sum-h">☢️ Radioactivity</div>
+        <ul class="sum-list">
+          <li>Henri Becquerel (1896) discovered। Spontaneous emission</li>
+          <li><b>α decay:</b> ₂⁴He emitted → Z-2, A-4। Range: few cm in air</li>
+          <li><b>β decay:</b> Electron/positron emitted → Z±1, A same। n→p+e⁻+ν̄</li>
+          <li><b>γ decay:</b> High energy photon → Z,A same। No change in Z or A</li>
+          <li><b>Radioactive decay law:</b> N = N₀e^(-λt)</li>
+          <li><b>Half-life:</b> T₁/₂ = 0.693/λ (First order = same as chemical kinetics!)</li>
+          <li>Mean life: τ = 1/λ = T₁/₂/0.693</li>
+        </ul>
+        <div class="sum-h">⚡ Nuclear Reactions</div>
+        <ul class="sum-list">
+          <li><b>Fission:</b> ²³⁵U + n → ⁹²Kr + ¹⁴¹Ba + 3n + energy (chain reaction)</li>
+          <li>Critical mass required for sustained chain reaction</li>
+          <li><b>Fusion:</b> ²H + ²H → ³He + n + energy (requires very high temperature)</li>
+          <li>Sun's energy = Fusion। Hydrogen bomb = Uncontrolled fusion</li>
+          <li>Nuclear reactor = Controlled fission</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>T₁/₂ = 0.693/λ | N = N₀e^(-λt)</li>
+            <li>Fe-56 = most stable (max BE/nucleon)</li>
+            <li>α: Z-2,A-4 | β: Z±1,A same | γ: Z,A same</li>
+            <li>Fission: U-235 + n → chain reaction</li>
+            <li>1 amu = 931.5 MeV (mass-energy)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch13-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">☢️ Nuclei</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">⚛️ Nucleus</div>
+              <div class="mm-branch-items">Z,N,A=Z+N<br>Isotopes/Isobars<br>R=R₀A^1/3<br>Density=constant</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">💥 Binding Energy</div>
+              <div class="mm-branch-items">BE=Δm×c²<br>1amu=931.5MeV<br>Fe-56=max BE/A<br>Fission+Fusion</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">☢️ Radioactivity</div>
+              <div class="mm-branch-items">α: Z-2,A-4<br>β: Z±1,A same<br>γ: Z,A same<br>T½=0.693/λ</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">⚡ Reactions</div>
+              <div class="mm-branch-items">Fission: U-235<br>Fusion: H→He<br>Chain reaction<br>Nuclear reactor</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch13-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Half-life (T₁/₂) <span class="kw-imp">★ PNST</span></div><div class="kw-def">T₁/₂ = 0.693/λ। N = N₀e^(-λt)। First order radioactive decay। Radioactive decay = Chemical kinetics first order।</div></div>
+          <div class="kw-item"><div class="kw-term">Binding Energy <span class="kw-imp">★ PNST</span></div><div class="kw-def">BE = Δm×c²। 1 amu = 931.5 MeV। BE/nucleon max at Fe-56 (most stable nucleus)।</div></div>
+          <div class="kw-item"><div class="kw-term">Nuclear Fission</div><div class="kw-def">²³⁵U + n → fragments + 3n + ~200 MeV। Chain reaction। Nuclear reactor में controlled। Bomb में uncontrolled।</div></div>
+          <div class="kw-item"><div class="kw-term">Nuclear Fusion</div><div class="kw-def">Light nuclei → heavier। Very high temperature (10⁷ K)। Sun's energy source। Hydrogen bomb। More energy than fission।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CH14: SEMICONDUCTOR ELECTRONICS -->
+  <div class="ch-item" id="ch14">
+    <div class="ch-header" onclick="toggleCh('ch14')">
+      <div class="ch-num">14</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="अर्धचालक इलेक्ट्रॉनिकी" data-en="Semiconductor Electronics">अर्धचालक इलेक्ट्रॉनिकी</div>
+        <div class="ch-tag">p-n Junction | Diode | Transistor | Logic Gates | LED</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch14','sum')">📝 Summary</button>
+        <button class="tab-btn" onclick="showTab('ch14','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch14','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch14-sum">
+        <div class="sum-overview">Semiconductors: Eg ~ 1 eV (Si=1.1, Ge=0.7 eV)। Conductors: Eg=0। Insulators: Eg>3 eV। Transistor discovered 1948 (Shockley, Bardeen, Brattain) — Nobel 1956।</div>
+        <div class="sum-h">🔬 Types of Semiconductors</div>
+        <ul class="sum-list">
+          <li><b>Intrinsic:</b> Pure semiconductor। n_e = n_h। Si, Ge</li>
+          <li><b>n-type:</b> Pentavalent dopant (P, As, Sb). Electrons = majority carriers</li>
+          <li><b>p-type:</b> Trivalent dopant (B, Al, In). Holes = majority carriers</li>
+          <li>Conductivity: σ = e(n_e μ_e + n_h μ_h)</li>
+          <li>n_e × n_h = n_i² (Law of mass action)</li>
+        </ul>
+        <div class="sum-h">🔌 p-n Junction Diode</div>
+        <ul class="sum-list">
+          <li>Depletion region: No free carriers at junction। Built-in potential barrier</li>
+          <li><b>Forward bias:</b> P → +ve, N → -ve। Barrier decreases → Current flows</li>
+          <li><b>Reverse bias:</b> P → -ve, N → +ve। Barrier increases → No current (small leakage)</li>
+          <li><b>Zener diode:</b> Works in reverse breakdown। Voltage regulator</li>
+          <li><b>LED:</b> Forward bias → recombination → light emission. GaAs, GaP</li>
+          <li><b>Photodiode:</b> Reverse bias → light → current। Photodetector</li>
+          <li><b>Solar cell:</b> p-n junction → photovoltaic effect → generates EMF</li>
+        </ul>
+        <div class="sum-h">📡 Rectifier</div>
+        <ul class="sum-list">
+          <li><b>Half-wave rectifier:</b> One diode। Only positive half cycle passes. η=40.6%</li>
+          <li><b>Full-wave rectifier:</b> 4 diodes (Bridge) or 2 diodes (centre-tap). Both half cycles. η=81.2%</li>
+          <li>Filter capacitor: Smooth DC output</li>
+        </ul>
+        <div class="sum-h">🔧 Transistor</div>
+        <ul class="sum-list">
+          <li>3 layers: Emitter (E), Base (B), Collector (C)। NPN or PNP</li>
+          <li><b>Transistor as amplifier (CE config):</b> Current gain β = I_C/I_B</li>
+          <li>β = 20-200 (typical). Voltage gain = β × R_C/R_in</li>
+          <li><b>Transistor as switch:</b> Saturation (ON) | Cutoff (OFF)</li>
+          <li>I_E = I_C + I_B</li>
+        </ul>
+        <div class="sum-h">🔢 Logic Gates</div>
+        <ul class="sum-list">
+          <li><b>AND gate:</b> Y = A·B (both inputs 1 → output 1)</li>
+          <li><b>OR gate:</b> Y = A+B (any input 1 → output 1)</li>
+          <li><b>NOT gate:</b> Y = Ā (inverts)</li>
+          <li><b>NAND gate:</b> Y = ̄(A·B) = Universal gate</li>
+          <li><b>NOR gate:</b> Y = ̄(A+B) = Universal gate</li>
+          <li>NAND and NOR = Universal gates (any gate can be made)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Si bandgap=1.1eV | Ge=0.7eV</li>
+            <li>n-type: Pentavalent | p-type: Trivalent dopant</li>
+            <li>Zener diode = Voltage regulator</li>
+            <li>LED: Forward bias, recombination → light</li>
+            <li>NAND/NOR = Universal gates</li>
+            <li>Transistor: I_E = I_B + I_C</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch14-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">💻 Semiconductor Electronics</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🔬 Semiconductors</div>
+              <div class="mm-branch-items">Intrinsic (ne=nh)<br>n-type (Pentavalent)<br>p-type (Trivalent)<br>Si=1.1eV, Ge=0.7eV</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🔌 p-n Junction</div>
+              <div class="mm-branch-items">Depletion region<br>Forward: current<br>Reverse: no current<br>Zener (regulator)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">💡 Special Diodes</div>
+              <div class="mm-branch-items">LED (light emit)<br>Photodiode (detect)<br>Solar cell (EMF)<br>Zener (voltage reg)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🔧 Transistor</div>
+              <div class="mm-branch-items">NPN/PNP<br>β=IC/IB<br>IE=IB+IC<br>Amplifier+Switch</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🔢 Logic Gates</div>
+              <div class="mm-branch-items">AND: A·B<br>OR: A+B<br>NOT: Ā<br>NAND/NOR=Universal</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch14-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">p-n Junction <span class="kw-imp">★ PNST</span></div><div class="kw-def">Forward bias → current। Reverse → no current। Depletion region = no free carriers। Rectification में use।</div></div>
+          <div class="kw-item"><div class="kw-term">Zener Diode <span class="kw-imp">★ PNST</span></div><div class="kw-def">Reverse breakdown region में काम करता है। Voltage regulator। Constant voltage maintain।</div></div>
+          <div class="kw-item"><div class="kw-term">Transistor (CE config) <span class="kw-imp">★ PNST</span></div><div class="kw-def">β = I_C/I_B। Common Emitter = maximum gain। I_E = I_B + I_C। Amplifier + Switch।</div></div>
+          <div class="kw-item"><div class="kw-term">Universal Gate <span class="kw-imp">★ PNST</span></div><div class="kw-def">NAND और NOR = Universal gates। इनसे कोई भी logic gate बना सकते हैं।</div></div>
+          <div class="kw-item"><div class="kw-term">LED</div><div class="kw-def">Light Emitting Diode। Forward bias → electron-hole recombination → photon। GaAs, GaP, GaAsP materials।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- end wrap -->
+
+<script>
+let lang='hi', isDark=true;
+function setLang(l){
+  lang=l;
+  document.getElementById('btnHi').classList.toggle('active',l==='hi');
+  document.getElementById('btnEn').classList.toggle('active',l==='en');
+  document.querySelectorAll('[data-hi]').forEach(el=>{
+    const v=el.getAttribute('data-'+l); if(v) el.textContent=v;
+  });
+  document.getElementById('phyP').textContent=l==='hi'
+    ?'PNST 2026 ke liye poore 14 chapters ki summary, mind maps aur keywords — Hindi + English dono mein!'
+    :'All 14 chapters — Summary, Mind Maps & Keywords for PNST 2026 preparation!';
+}
+function toggleTheme(){
+  isDark=!isDark;
+  const t=isDark?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  try{localStorage.setItem('pnst_theme',t);}catch(e){}
+}
+function toggleCh(id){
+  const el=document.getElementById(id);
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.ch-item.open').forEach(e=>{if(e.id!==id)e.classList.remove('open');});
+  el.classList.toggle('open',!isOpen);
+  if(!isOpen) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function showTab(chId,tab){
+  const body=document.getElementById(chId).querySelector('.ch-body');
+  body.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelector('#'+chId+'-'+tab).classList.add('active');
+  const idx=['sum','mm','kw'].indexOf(tab);
+  body.querySelectorAll('.tab-btn')[idx].classList.add('active');
+}
+window.addEventListener('load',()=>{
+  let t='dark';
+  try{t=localStorage.getItem('pnst_theme')||'dark';}catch(e){}
+  isDark=t==='dark';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+});
+</script>
+</body>
+</html>

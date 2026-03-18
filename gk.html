@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="hi" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>General Knowledge — PNST 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Noto+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#020818;--bg2:#060e24;--bg3:#0a1628;
+  --card:rgba(255,255,255,0.05);--card-border:rgba(255,255,255,0.1);--card-hover:rgba(255,255,255,0.08);
+  --tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --purple:#a855f7;--blue:#3b82f6;--cyan:#06b6d4;--green:#22c55e;--amber:#f59e0b;--pink:#ec4899;--red:#ef4444;
+  --fn:'Noto Sans',sans-serif;--fn2:'Rajdhani',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f5f0ff;--bg2:#ede8ff;--bg3:#fff;
+  --card:rgba(255,255,255,.9);--card-border:rgba(168,85,247,.2);--card-hover:#fff;
+  --tx:#1e293b;--tx2:#475569;--tx3:#94a3b8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--fn);background:var(--bg);color:var(--tx);min-height:100vh}
+[data-theme="dark"] body::before{
+  content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(2px 2px at 20% 25%,rgba(168,85,247,.25) 0%,transparent 100%),
+    radial-gradient(2px 2px at 78% 35%,rgba(59,130,246,.15) 0%,transparent 100%),
+    radial-gradient(1px 1px at 55% 70%,rgba(255,255,255,.1) 0%,transparent 100%);
+}
+.hdr{
+  background:linear-gradient(135deg,rgba(2,8,24,.96),rgba(6,14,36,.96));
+  backdrop-filter:blur(24px);border-bottom:1px solid var(--card-border);
+  padding:10px 16px;display:flex;align-items:center;gap:10px;
+  position:sticky;top:0;z-index:100;
+}
+[data-theme="light"] .hdr{background:rgba(245,240,255,.96)}
+.hdr-logo{width:38px;height:38px;border-radius:10px;flex-shrink:0;background:linear-gradient(135deg,var(--purple),var(--blue));display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 0 14px rgba(168,85,247,.35)}
+.hdr-name{font-family:var(--fn2);font-size:1rem;font-weight:700;background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hdr-sub{font-size:.65rem;color:var(--tx2)}
+.hdr-right{display:flex;gap:6px;align-items:center;margin-left:auto;flex-shrink:0}
+.lang-btn,.theme-btn{padding:4px 10px;border-radius:16px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s}
+.lang-btn.active{background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border-color:transparent}
+.btn-back{padding:5px 11px;border-radius:8px;border:1px solid var(--card-border);background:var(--card);color:var(--tx);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);text-decoration:none;display:inline-block;flex-shrink:0}
+.wrap{max-width:520px;margin:0 auto;padding:14px}
+
+.gk-hero{
+  background:linear-gradient(135deg,#0f0020,#250050,#380070);
+  border:1px solid rgba(168,85,247,.25);border-radius:20px;
+  padding:20px 16px;margin-bottom:16px;position:relative;overflow:hidden;
+  box-shadow:0 0 40px rgba(168,85,247,.1);
+}
+.gk-hero::before{content:'';position:absolute;top:-30%;left:-20%;width:140%;height:140%;background:radial-gradient(ellipse,rgba(168,85,247,.1) 0%,transparent 65%);pointer-events:none}
+.gk-badge{display:inline-block;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.35);border-radius:16px;font-size:.65rem;font-weight:700;padding:3px 12px;margin-bottom:10px;color:var(--purple);letter-spacing:.8px;text-transform:uppercase;position:relative;z-index:1}
+.gk-h{font-family:var(--fn2);font-size:1.5rem;font-weight:700;color:#fff;margin-bottom:6px;position:relative;z-index:1}
+.gk-h span{background:linear-gradient(90deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gk-p{font-size:.78rem;color:rgba(255,255,255,.7);line-height:1.5;position:relative;z-index:1}
+.gk-stats{display:flex;gap:12px;margin-top:14px;position:relative;z-index:1;flex-wrap:wrap}
+.gstat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:7px 12px;text-align:center}
+.gstat-n{font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:var(--purple)}
+.gstat-l{font-size:.6rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+.ch-item{background:var(--card);backdrop-filter:blur(20px);border:1px solid var(--card-border);border-radius:16px;margin-bottom:10px;overflow:hidden;transition:all .25s}
+.ch-item.open{border-color:rgba(168,85,247,.4);box-shadow:0 4px 24px rgba(168,85,247,.1)}
+.ch-header{display:flex;align-items:center;gap:10px;padding:14px;cursor:pointer;transition:background .2s;user-select:none}
+.ch-header:hover{background:var(--card-hover)}
+.ch-num{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--purple),var(--blue));display:flex;align-items:center;justify-content:center;font-family:var(--fn2);font-size:.82rem;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(168,85,247,.3)}
+.ch-info{flex:1;min-width:0}
+.ch-name{font-family:var(--fn2);font-size:.95rem;font-weight:700;color:var(--tx);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-tag{font-size:.62rem;color:var(--tx2);margin-top:2px}
+.ch-arr{color:var(--tx2);font-size:.9rem;flex-shrink:0;transition:transform .3s}
+.ch-item.open .ch-arr{transform:rotate(180deg)}
+.ch-body{display:none;border-top:1px solid var(--card-border)}
+.ch-item.open .ch-body{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+
+.tab-bar{display:flex;border-bottom:1px solid var(--card-border)}
+.tab-btn{flex:1;padding:10px 6px;background:none;border:none;color:var(--tx2);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);transition:all .2s;border-bottom:2px solid transparent;position:relative;bottom:-1px}
+.tab-btn.active{color:var(--purple);border-bottom-color:var(--purple)}
+.tab-pane{display:none;padding:14px}
+.tab-pane.active{display:block;animation:fadeIn .2s ease}
+
+.sum-overview{background:rgba(168,85,247,.08);border:1px solid rgba(168,85,247,.2);border-radius:10px;padding:12px 14px;margin-bottom:12px;font-size:.82rem;line-height:1.65;color:var(--tx)}
+.sum-h{font-family:var(--fn2);font-size:.82rem;font-weight:700;color:var(--purple);margin:12px 0 6px;display:flex;align-items:center;gap:6px}
+.sum-h::after{content:'';flex:1;height:1px;background:rgba(168,85,247,.2)}
+.sum-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sum-list li{font-size:.8rem;line-height:1.55;color:var(--tx);padding-left:14px;position:relative}
+.sum-list li::before{content:'▸';position:absolute;left:0;color:var(--purple);font-size:.7rem;top:2px}
+.sum-list li b{color:var(--tx);font-weight:700}
+
+.gk-table{width:100%;border-collapse:collapse;font-size:.74rem;margin:8px 0}
+.gk-table th{background:rgba(168,85,247,.15);color:var(--purple);padding:7px 8px;text-align:left;font-weight:700;font-size:.68rem;border-bottom:1px solid rgba(168,85,247,.2)}
+.gk-table td{padding:6px 8px;border-bottom:1px solid var(--card-border);color:var(--tx2);line-height:1.45;vertical-align:top}
+.gk-table tr:last-child td{border-bottom:none}
+.gk-table .hi{color:var(--tx);font-weight:600}
+.gk-table .imp{color:var(--amber);font-weight:700}
+
+.mm-wrap{overflow-x:auto;padding:10px 0}
+.mm{display:flex;flex-direction:column;align-items:center;gap:8px;min-width:280px}
+.mm-center{background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border-radius:14px;padding:10px 18px;font-family:var(--fn2);font-size:.9rem;font-weight:700;text-align:center;box-shadow:0 4px 18px rgba(168,85,247,.3)}
+.mm-branches{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;width:100%}
+.mm-branch{border-radius:12px;padding:8px 10px;font-size:.72rem;font-weight:700;text-align:center;min-width:110px;transition:transform .2s;cursor:pointer}
+.mm-branch:hover{transform:translateY(-2px)}
+.mm-branch-title{font-size:.76rem;font-weight:800;margin-bottom:4px}
+.mm-branch-items{font-size:.65rem;opacity:.85;line-height:1.5}
+.mm-connector{width:2px;height:16px;background:linear-gradient(to bottom,var(--purple),rgba(168,85,247,.3));margin:0 auto}
+
+.kw-grid{display:flex;flex-direction:column;gap:8px}
+.kw-item{background:rgba(255,255,255,.03);border:1px solid var(--card-border);border-radius:10px;padding:10px 12px}
+.kw-term{font-family:var(--fn2);font-size:.84rem;font-weight:700;color:var(--purple);margin-bottom:4px}
+.kw-def{font-size:.76rem;line-height:1.5;color:var(--tx2)}
+.kw-imp{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:var(--amber);font-size:.58rem;font-weight:700;padding:1px 6px;border-radius:4px;margin-left:6px;vertical-align:middle}
+
+.pnst-box{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:10px;padding:10px 12px;margin-top:10px}
+.pnst-box-t{font-family:var(--fn2);font-size:.78rem;font-weight:700;color:var(--cyan);margin-bottom:6px}
+.pnst-box ul{list-style:none;display:flex;flex-direction:column;gap:3px}
+.pnst-box ul li{font-size:.75rem;color:var(--tx2);padding-left:14px;position:relative}
+.pnst-box ul li::before{content:'★';position:absolute;left:0;color:var(--amber);font-size:.6rem;top:2px}
+
+.mp-box{background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.2);border-radius:10px;padding:10px 12px;margin:8px 0}
+.mp-box-t{font-family:var(--fn2);font-size:.75rem;font-weight:700;color:var(--green);margin-bottom:6px}
+
+.tab-btn{font-size:.65rem;padding:8px 4px}}
+/* ============================================================
+   COMPLETE RESPONSIVE CSS — All Devices
+   Mobile (320-480) | Tablet (481-768) | Desktop (769+)
+   ============================================================ */
+
+/* ---- Fluid base ---- */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img,table,video{max-width:100%}
+
+/* ---- Wrap: fluid on all screens ---- */
+.wrap{width:100%;max-width:520px;margin:0 auto;padding:14px 12px}
+
+/* ---- Tables: horizontal scroll on small screens ---- */
+.gk-table,.gram-table,.rxn-table,.ptbl{
+  display:block;width:100%;overflow-x:auto;
+  -webkit-overflow-scrolling:touch;
+  white-space:nowrap;
+}
+.gk-table td,.gram-table td,.rxn-table td{white-space:normal;min-width:80px}
+.gk-table th,.gram-table th,.rxn-table th{white-space:nowrap}
+
+/* ---- Mind map: wrap branches on small screens ---- */
+.mm-branches{justify-content:center}
+.mm-branch{min-width:100px;flex:1 1 100px;max-width:140px}
+.mm-center{padding:9px 14px;font-size:.85rem}
+
+/* ---- Chapter headers: prevent overflow ---- */
+.ch-name{font-size:.92rem;white-space:normal;line-height:1.3}
+.ch-tag{white-space:normal;line-height:1.4}
+
+/* ---- Tab buttons: equal width ---- */
+.tab-bar{overflow-x:auto;-webkit-overflow-scrolling:touch;flex-wrap:nowrap}
+.tab-btn{flex-shrink:0;min-width:0;padding:10px 8px;font-size:.7rem}
+
+/* ---- Hero sections ---- */
+.bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:18px 14px}
+.bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.35rem}
+.bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:8px}
+.bstat,.cstat,.pstat,.estat,.gstat{padding:6px 10px}
+
+/* ---- Notes/Subject grid ---- */
+.notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:8px}
+.subj-card{padding:12px 10px 10px}
+
+/* ---- Info row ---- */
+.info-row{grid-template-columns:1fr 1fr;gap:8px}
+.info-card{padding:12px}
+
+/* ---- KW grid items ---- */
+.kw-def,.sum-list li{font-size:.78rem;line-height:1.55}
+
+/* ---- Footer ---- */
+.footer-social{gap:10px}
+.footer-links{gap:5px}
+.footer-link{padding:4px 10px;font-size:.65rem}
+.footer-subjects{gap:5px}
+.fs-tag{font-size:.62rem;padding:3px 8px}
+
+/* ---- Header ---- */
+.hdr{padding:8px 12px;gap:8px}
+.hdr-name{font-size:.95rem}
+.hdr-sub{font-size:.6rem}
+.lang-btn,.theme-btn{padding:4px 8px;font-size:.65rem}
+.btn-back{padding:4px 9px;font-size:.68rem}
+
+/* ---- Test interface ---- */
+.test-hdr{padding:10px 12px}
+.q-wrap{padding:0 12px 130px}
+.q-card{padding:14px 12px}
+.q-text{font-size:.84rem}
+.opt{padding:10px 12px;font-size:.8rem}
+.test-bottom{padding:8px 12px}
+.btn-nav{padding:11px 8px;font-size:.75rem}
+
+/* ---- Bottom nav ---- */
+.bottom-nav{padding:7px 0 11px}
+.bnav-btn{padding:3px 12px}
+.bnav-btn span:first-child{font-size:1.2rem}
+.bnav-btn span:last-child{font-size:.58rem}
+
+/* ============================================================
+   SMALL PHONES (max 380px)
+   ============================================================ */
+@media(max-width:380px){
+  .wrap{padding:10px 10px}
+  .hdr{padding:8px 10px;gap:6px}
+  .hdr-logo{width:34px;height:34px;font-size:16px}
+  .hdr-name{font-size:.88rem}
+  .hdr-right{gap:4px}
+  .lang-btn,.theme-btn{padding:3px 7px;font-size:.62rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.2rem}
+  .hero-h{font-size:1.3rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1rem}
+  .hs-l,.bstat-l,.cstat-l,.pstat-l,.estat-l,.gstat-l{font-size:.58rem}
+
+  .ch-num{width:28px;height:28px;font-size:.75rem}
+  .ch-name{font-size:.85rem}
+  .ch-tag{font-size:.58rem}
+  .ch-header{padding:11px 10px;gap:8px}
+
+  .tab-btn{font-size:.65rem;padding:8px 5px}
+  .tab-pane{padding:11px 10px}
+
+  .sum-h{font-size:.78rem}
+  .sum-list li{font-size:.75rem}
+  .sum-overview{font-size:.78rem;padding:10px 11px}
+  .kw-term{font-size:.8rem}
+  .kw-def{font-size:.73rem}
+
+  .mm-branch{min-width:90px;max-width:130px;padding:7px 8px}
+  .mm-branch-title{font-size:.7rem}
+  .mm-branch-items{font-size:.6rem}
+  .mm-center{font-size:.8rem;padding:8px 12px}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:7px}
+  .subj-card{padding:10px 9px 9px}
+  .sj-icon{font-size:1.5rem;margin-bottom:5px}
+  .sj-name{font-size:.82rem}
+  .sj-desc{font-size:.62rem}
+  .nc-name{font-size:.85rem}
+  .nc-desc{font-size:.62rem}
+
+  .info-row{gap:7px}
+  .ic-val{font-size:1.1rem}
+  .ic-icon{font-size:1.2rem}
+
+  .hero-stats{gap:0}
+  .hs{padding:8px 0}
+  .btn-start,.btn-hero{padding:12px;font-size:.92rem}
+
+  .pnst-box ul li,.pnst-box-t{font-size:.7rem}
+  .pnst-box{padding:9px 10px}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.68rem;padding:5px 6px}
+
+  .q-card{padding:12px 10px}
+  .q-text{font-size:.8rem}
+  .opt{padding:9px 10px;font-size:.77rem;gap:8px}
+  .opt-letter{width:22px;height:22px;font-size:.65rem}
+
+  .timer-circle{width:40px;height:40px}
+  .timer-num{font-size:.72rem}
+  .test-title{font-size:.9rem}
+  .btn-back{padding:4px 8px;font-size:.65rem}
+
+  .footer-brand .footer-logo{width:42px;height:42px;font-size:18px}
+  .footer-name{font-size:1rem}
+  .footer-tagline{font-size:.65rem}
+  .social-btn{width:40px;height:40px;border-radius:10px}
+  .footer-copy{font-size:.62rem}
+
+  .qn-btn{width:28px;height:28px;font-size:.67rem;border-radius:7px}
+  .q-nav{padding:10px 11px;gap:5px;margin:10px 12px}
+
+  .bottom-nav{padding:6px 0 10px}
+  .bnav-btn{padding:3px 10px}
+  .bnav-btn span:first-child{font-size:1.1rem}
+  .bnav-btn span:last-child{font-size:.55rem}
+
+  .result-hero{padding:22px 14px}
+  .score-ring{width:100px;height:100px}
+  .score-num{font-size:1.75rem}
+  .result-grade{font-size:1.25rem}
+  .analysis-grid{gap:6px}
+  .an-val{font-size:1.1rem}
+  .an-lbl{font-size:.58rem}
+}
+
+/* ============================================================
+   MEDIUM PHONES (381px - 480px)
+   ============================================================ */
+@media(min-width:381px) and (max-width:480px){
+  .wrap{padding:12px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.4rem}
+  .ch-name{font-size:.9rem}
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:9px}
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.7rem;padding:5px 7px}
+}
+
+/* ============================================================
+   TABLETS (481px - 768px)
+   ============================================================ */
+@media(min-width:481px) and (max-width:768px){
+  .wrap{max-width:600px;padding:16px}
+  .hdr{padding:10px 20px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.6rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{gap:14px}
+  .bstat,.cstat,.pstat,.estat,.gstat{padding:9px 16px}
+
+  .hero-h{font-size:1.6rem}
+  .hs-n,.bstat-n,.cstat-n{font-size:1.3rem}
+
+  .notes-grid,.subj-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .subj-card{padding:16px 14px 13px}
+  .sj-icon{font-size:2rem}
+  .sj-name{font-size:.95rem}
+
+  .ch-name{font-size:1rem}
+  .ch-num{width:34px;height:34px}
+  .tab-btn{font-size:.75rem;padding:11px 8px}
+  .tab-pane{padding:16px}
+
+  .sum-h{font-size:.85rem}
+  .sum-list li{font-size:.82rem}
+  .kw-term{font-size:.88rem}
+  .kw-def{font-size:.8rem}
+  .sum-overview{font-size:.85rem}
+
+  .mm-branch{min-width:120px;max-width:160px;padding:10px 12px}
+  .mm-branch-title{font-size:.8rem}
+  .mm-branch-items{font-size:.7rem}
+  .mm-center{font-size:.95rem}
+
+  .gk-table th,.gk-table td,.gram-table th,.gram-table td{font-size:.76rem;padding:7px 9px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.9rem}
+  .opt{font-size:.85rem;padding:12px 14px}
+
+  .footer-links{gap:8px}
+  .footer-link{font-size:.72rem}
+  .social-btn{width:48px;height:48px}
+  .footer-subjects .fs-tag{font-size:.68rem}
+
+  .bottom-nav{padding:8px 0 13px}
+  .bnav-btn{padding:4px 20px}
+}
+
+/* ============================================================
+   DESKTOP (769px - 1024px)
+   ============================================================ */
+@media(min-width:769px) and (max-width:1024px){
+  .wrap{max-width:680px;padding:20px}
+  .hdr{padding:12px 24px}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.7rem}
+  .hero-h{font-size:1.8rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-card{padding:18px 15px}
+  .note-card-full{grid-column:auto}
+
+  .ch-name{font-size:1.02rem}
+  .tab-btn{font-size:.78rem;padding:11px 10px}
+
+  .sum-list li{font-size:.84rem}
+  .kw-def{font-size:.82rem}
+
+  .mm-branch{min-width:130px;max-width:170px}
+  .mm-center{font-size:1rem}
+
+  .gk-table td,.gram-table td{font-size:.78rem}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .footer-social{gap:14px}
+  .social-btn{width:50px;height:50px;font-size:1.3rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.75rem;padding:6px 14px}
+}
+
+/* ============================================================
+   LARGE DESKTOP (1025px+)
+   ============================================================ */
+@media(min-width:1025px){
+  .wrap{max-width:780px;padding:24px}
+  .hdr{padding:12px 32px}
+  .hdr-name{font-size:1.15rem}
+
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.85rem}
+  .hero-h{font-size:2rem}
+  .hs-n,.bstat-n,.cstat-n,.pstat-n,.estat-n,.gstat-n{font-size:1.6rem}
+
+  .notes-grid{grid-template-columns:1fr 1fr 1fr}
+  .subj-grid{grid-template-columns:1fr 1fr 1fr}
+  .note-card-full{grid-column:auto}
+  .subj-card{padding:20px 16px}
+  .sj-icon{font-size:2.2rem}
+  .sj-name{font-size:1rem}
+  .nc-name{font-size:1rem}
+
+  .ch-name{font-size:1.05rem}
+  .ch-num{width:36px;height:36px;font-size:.88rem}
+  .tab-btn{font-size:.8rem;padding:12px 12px}
+  .tab-pane{padding:18px}
+
+  .sum-list li{font-size:.86rem}
+  .sum-h{font-size:.88rem}
+  .sum-overview{font-size:.88rem}
+  .kw-term{font-size:.92rem}
+  .kw-def{font-size:.84rem}
+
+  .mm-branch{min-width:140px;max-width:180px;padding:11px 13px}
+  .mm-branch-title{font-size:.85rem}
+  .mm-branch-items{font-size:.73rem}
+  .mm-center{font-size:1.05rem}
+
+  .gk-table td,.gram-table td{font-size:.8rem;padding:8px 10px}
+  .gk-table th,.gram-table th{font-size:.75rem;padding:8px 10px}
+
+  .info-row{grid-template-columns:1fr 1fr 1fr 1fr}
+
+  .q-text{font-size:.95rem}
+  .opt{font-size:.88rem}
+  .score-ring{width:130px;height:130px}
+  .score-num{font-size:2.2rem}
+
+  .footer-social{gap:16px}
+  .social-btn{width:52px;height:52px;font-size:1.4rem;border-radius:14px}
+  .footer-links{gap:10px}
+  .footer-link{font-size:.78rem;padding:6px 16px}
+  .fs-tag{font-size:.72rem;padding:5px 12px}
+  .footer-tagline{font-size:.78rem}
+  .footer-copy{font-size:.72rem}
+}
+
+/* ============================================================
+   TOUCH DEVICES — Better tap targets
+   ============================================================ */
+@media(hover:none) and (pointer:coarse){
+  .ch-header{min-height:56px}
+  .tab-btn{min-height:44px}
+  .sj-btn,.btn-nav,.lang-btn,.theme-btn,.btn-back{min-height:40px}
+  .bnav-btn{min-height:48px;padding:6px 12px}
+  .opt{min-height:46px}
+  .qn-btn{width:34px;height:34px}
+  .social-btn{width:48px;height:48px}
+  .footer-link{min-height:36px;display:inline-flex;align-items:center}
+  a{-webkit-tap-highlight-color:rgba(59,130,246,.15)}
+}
+
+/* ============================================================
+   PRINT STYLES
+   ============================================================ */
+@media print{
+  .hdr,.bottom-nav,.site-footer,.test-bottom,.loading-overlay,
+  .tab-bar,.ch-arr,.bnav-btn,.btn-back{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body,[data-theme="dark"] body::before{background:white!important;color:black!important}
+  .ch-item{border:1px solid #ccc!important;margin-bottom:8px}
+  .wrap{max-width:100%;padding:0}
+}
+
+/* ============================================================
+   LANDSCAPE PHONE
+   ============================================================ */
+@media(max-width:768px) and (orientation:landscape){
+  .hdr{padding:6px 14px}
+  .hdr-logo{width:32px;height:32px;font-size:15px}
+  .bio-hero,.chem-hero,.phy-hero,.eng-hero,.gk-hero{padding:14px 14px}
+  .bio-h,.chem-h,.phy-h,.eng-h,.gk-h{font-size:1.25rem}
+  .bio-stats,.chem-stats,.phy-stats,.eng-stats,.gk-stats{margin-top:8px}
+  .bottom-nav{padding:5px 0 8px}
+  .bnav-btn span:first-child{font-size:1rem}
+  .bnav-btn span:last-child{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="index.html" class="btn-back">← Back</a>
+  <div class="hdr-logo">🌍</div>
+  <div>
+    <div class="hdr-name">GK Notes</div>
+    <div class="hdr-sub">General Knowledge | PNST 2026</div>
+  </div>
+  <div class="hdr-right">
+    <button class="lang-btn active" id="btnHi" onclick="setLang('hi')">हि</button>
+    <button class="lang-btn" id="btnEn" onclick="setLang('en')">EN</button>
+    <button class="theme-btn" id="themeBtn" onclick="toggleTheme()">🌙</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="gk-hero">
+    <div class="gk-badge">✦ PNST 2026 ✦</div>
+    <div class="gk-h">🌍 <span>General Knowledge</span></div>
+    <div class="gk-p" id="gkP">Indian History, Geography, Polity, Economy, MP GK, Current Affairs — PNST ke liye complete notes!</div>
+    <div class="gk-stats">
+      <div class="gstat"><div class="gstat-n">8</div><div class="gstat-l">Topics</div></div>
+      <div class="gstat"><div class="gstat-n">20</div><div class="gstat-l">Marks</div></div>
+      <div class="gstat"><div class="gstat-n">942</div><div class="gstat-l">PYQ Questions</div></div>
+    </div>
+  </div>
+
+  <!-- ===== CH1: INDIAN HISTORY ===== -->
+  <div class="ch-item" id="ch1">
+    <div class="ch-header" onclick="toggleCh('ch1')">
+      <div class="ch-num">01</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="भारतीय इतिहास" data-en="Indian History">भारतीय इतिहास</div>
+        <div class="ch-tag">Ancient | Medieval | Modern | Freedom Struggle | Important Dates</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch1','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch1','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch1','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch1-sum">
+        <div class="sum-overview">भारतीय इतिहास को तीन भागों में बांटते हैं: प्राचीन (Ancient), मध्यकालीन (Medieval), और आधुनिक (Modern)। PNST में Modern India और Freedom Struggle सबसे ज़्यादा पूछे जाते हैं।</div>
+        <div class="sum-h">🏺 प्राचीन भारत | Ancient India</div>
+        <ul class="sum-list">
+          <li><b>Indus Valley Civilization (2500 BCE):</b> Harappa, Mohenjo-daro। Town planning, drainage system। Decline: ~1800 BCE</li>
+          <li><b>Vedic Period:</b> Rig Veda — oldest text। 4 Vedas: Rig, Yajur, Sama, Atharva</li>
+          <li><b>Maurya Empire:</b> Chandragupta Maurya (321 BCE) — founder। Ashoka (273-232 BCE) — spread Buddhism after Kalinga war</li>
+          <li><b>Gupta Empire (320-550 CE):</b> "Golden Age of India"। Chandragupta I, Samudragupta, Chandragupta II। Science, art, literature flourished</li>
+          <li><b>Harshavardhana (606-647 CE):</b> Last great Hindu emperor। Chinese traveller Xuanzang visited</li>
+        </ul>
+        <div class="sum-h">🕌 मध्यकालीन भारत | Medieval India</div>
+        <ul class="sum-list">
+          <li><b>Delhi Sultanate (1206-1526):</b> 5 dynasties — Slave, Khilji, Tughlaq, Sayyid, Lodi। Qutub Minar = Qutub-ud-Din Aibak</li>
+          <li><b>Alauddin Khilji:</b> Market reforms। Mongol invasions repelled</li>
+          <li><b>Muhammad Bin Tughlaq:</b> Shifted capital Delhi → Daulatabad। Token currency</li>
+          <li><b>Mughal Empire (1526-1857):</b> Babur (founded, Battle of Panipat 1526) → Humayun → Akbar (1556-1605) → Jahangir → Shah Jahan (Taj Mahal) → Aurangzeb</li>
+          <li><b>Akbar:</b> Din-i-Ilahi, Navratna, Abolish Jizya। Greatest Mughal emperor</li>
+          <li><b>Maratha Empire:</b> Shivaji (1674) — Raigarh capital। Guerrilla warfare</li>
+          <li><b>Vijayanagara Empire:</b> Krishnadeva Raya — greatest ruler। South India</li>
+        </ul>
+        <div class="sum-h">🇮🇳 आधुनिक भारत | Modern India & Freedom Struggle</div>
+        <table class="gk-table">
+          <tr><th>Year</th><th>Event</th></tr>
+          <tr><td class="imp">1757</td><td>Battle of Plassey — British power established</td></tr>
+          <tr><td class="imp">1857</td><td>First War of Independence (Sepoy Mutiny) — Mangal Pandey</td></tr>
+          <tr><td class="imp">1885</td><td>Indian National Congress founded — A.O. Hume</td></tr>
+          <tr><td class="imp">1905</td><td>Partition of Bengal — Lord Curzon. Swadeshi Movement started</td></tr>
+          <tr><td class="imp">1906</td><td>Muslim League founded — Dhaka</td></tr>
+          <tr><td class="imp">1919</td><td>Jallianwala Bagh massacre (13 April) — Gen. Dyer</td></tr>
+          <tr><td class="imp">1920</td><td>Non-Cooperation Movement — Mahatma Gandhi</td></tr>
+          <tr><td class="imp">1930</td><td>Civil Disobedience Movement + Dandi March (Salt Satyagraha)</td></tr>
+          <tr><td class="imp">1942</td><td>Quit India Movement — "Do or Die" — August 8</td></tr>
+          <tr><td class="imp">1947</td><td>Independence — August 15 | Partition (India + Pakistan)</td></tr>
+          <tr><td class="imp">1950</td><td>Constitution enforced — January 26 (Republic Day)</td></tr>
+        </table>
+        <div class="sum-h">👥 Important Leaders</div>
+        <ul class="sum-list">
+          <li><b>Mahatma Gandhi:</b> "Father of the Nation"। Born 2 Oct 1869, Porbandar। Non-violence, Satyagraha</li>
+          <li><b>Jawaharlal Nehru:</b> First PM of India। "Discovery of India" book। Born 14 Nov (Children's Day)</li>
+          <li><b>Subhas Chandra Bose:</b> INA (Indian National Army)। "Netaji"। "Jai Hind" slogan</li>
+          <li><b>B.R. Ambedkar:</b> Father of Indian Constitution। Dalit rights champion</li>
+          <li><b>Bal Gangadhar Tilak:</b> "Lokmanya"। "Swaraj is my birthright" slogan</li>
+          <li><b>Bhagat Singh:</b> Revolutionary। Hanged 23 March 1931</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Battle of Plassey 1757 | Battle of Panipat (1st) 1526</li>
+            <li>INC Founded 1885 by A.O. Hume</li>
+            <li>Dandi March = 12 March 1930 (Salt Satyagraha)</li>
+            <li>Quit India = 8 August 1942</li>
+            <li>Independence = 15 August 1947</li>
+            <li>Republic Day = 26 January 1950</li>
+            <li>Ashoka = Kalinga War → Buddhism</li>
+            <li>Gupta Age = Golden Age of India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch1-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🏛️ Indian History</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🏺 Ancient</div>
+              <div class="mm-branch-items">Indus Valley (2500 BCE)<br>Maurya (Ashoka)<br>Gupta (Golden Age)<br>Harsha</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🕌 Medieval</div>
+              <div class="mm-branch-items">Delhi Sultanate<br>Mughals (1526-1857)<br>Akbar (greatest)<br>Shivaji (Maratha)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🇮🇳 Freedom</div>
+              <div class="mm-branch-items">1857 Revolt<br>Gandhi (Non-violence)<br>Dandi March 1930<br>Quit India 1942</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">👥 Leaders</div>
+              <div class="mm-branch-items">Gandhi (Father)<br>Nehru (1st PM)<br>Bose (INA)<br>Ambedkar (Const.)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch1-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Battle of Panipat (1526) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Babur vs Ibrahim Lodi। Mughal Empire की नींव। भारत में Gunpowder पहली बार use हुआ।</div></div>
+          <div class="kw-item"><div class="kw-term">Dandi March <span class="kw-imp">★ PNST</span></div><div class="kw-def">12 March - 6 April 1930। Gandhi ने 241 miles walk की। Salt Tax का विरोध। Civil Disobedience आंदोलन का हिस्सा।</div></div>
+          <div class="kw-item"><div class="kw-term">Quit India Movement <span class="kw-imp">★ PNST</span></div><div class="kw-def">8 August 1942। "Do or Die" slogan। AICC Bombay session। सबसे बड़ा mass movement।</div></div>
+          <div class="kw-item"><div class="kw-term">Golden Age of India</div><div class="kw-def">Gupta Empire (320-550 CE)। Science (Aryabhatta-zero), Literature (Kalidasa), Art flourished।</div></div>
+          <div class="kw-item"><div class="kw-term">INA (Indian National Army) <span class="kw-imp">★ PNST</span></div><div class="kw-def">Subhas Chandra Bose ने 1943 में बनाई। "Jai Hind" + "Dilli Chalo" slogan। Singapore base।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH2: INDIAN GEOGRAPHY ===== -->
+  <div class="ch-item" id="ch2">
+    <div class="ch-header" onclick="toggleCh('ch2')">
+      <div class="ch-num">02</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="भारतीय भूगोल" data-en="Indian Geography">भारतीय भूगोल</div>
+        <div class="ch-tag">Rivers | Mountains | States | Climate | Soils | Natural Resources</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch2','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch2','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch2','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch2-sum">
+        <div class="sum-overview">भारत — 7th largest country (3.28 million km²)। 29 States + 8 UTs। Population: ~140 crore (2nd largest)। Himalayas — N border, Indian Ocean — S।</div>
+        <div class="sum-h">⛰️ भौतिक विभाग | Physical Features</div>
+        <ul class="sum-list">
+          <li><b>Himalayas:</b> Youngest fold mountains। Highest peak in India = K2 (Pakistan-India border) / Kangchenjunga (India, 8586m)</li>
+          <li><b>Indo-Gangetic Plain:</b> Most fertile plain। World's largest alluvial plain</li>
+          <li><b>Deccan Plateau:</b> Triangular basalt plateau। Oldest landmass</li>
+          <li><b>Thar Desert (Rajasthan):</b> Largest desert in India। Hot desert</li>
+          <li><b>Coastal Plains:</b> Western (narrow, steep) + Eastern (wider, fertile)</li>
+          <li><b>Islands:</b> Andaman & Nicobar (Bay of Bengal) + Lakshadweep (Arabian Sea)</li>
+        </ul>
+        <div class="sum-h">🌊 प्रमुख नदियाँ | Major Rivers</div>
+        <table class="gk-table">
+          <tr><th>River</th><th>Origin</th><th>Flows into</th><th>State</th></tr>
+          <tr><td class="hi">Ganga</td><td>Gangotri glacier</td><td>Bay of Bengal</td><td>UP, Bihar, WB</td></tr>
+          <tr><td class="hi">Yamuna</td><td>Yamunotri glacier</td><td>Meets Ganga (Prayagraj)</td><td>UP, Delhi</td></tr>
+          <tr><td class="hi">Brahmaputra</td><td>Mansarovar lake (Tibet)</td><td>Bay of Bengal</td><td>Assam</td></tr>
+          <tr><td class="hi">Narmada</td><td>Amarkantak (MP)</td><td>Arabian Sea</td><td>MP, Gujarat</td></tr>
+          <tr><td class="hi">Tapti/Tapi</td><td>Satpura range (MP)</td><td>Arabian Sea</td><td>MP, Maharashtra</td></tr>
+          <tr><td class="hi">Godavari</td><td>Trimbakeshwar (Maharashtra)</td><td>Bay of Bengal</td><td>Telangana, AP</td></tr>
+          <tr><td class="hi">Krishna</td><td>Mahabaleshwar</td><td>Bay of Bengal</td><td>Maharashtra, AP</td></tr>
+          <tr><td class="hi">Cauvery</td><td>Coorg (Karnataka)</td><td>Bay of Bengal</td><td>Karnataka, TN</td></tr>
+        </table>
+        <div class="sum-h">🗺️ Important Facts</div>
+        <ul class="sum-list">
+          <li><b>Largest State (area):</b> Rajasthan | <b>Smallest State:</b> Goa</li>
+          <li><b>Most populous state:</b> Uttar Pradesh | <b>Least populous:</b> Sikkim</li>
+          <li><b>Longest river:</b> Ganga (2525 km) | <b>Longest coastline state:</b> Gujarat</li>
+          <li><b>Highest peak:</b> Kangchenjunga (8586m) — in India. K2 (8611m) — disputed</li>
+          <li><b>Largest lake:</b> Wular Lake (J&K) — freshwater | Chilika — saltwater (Odisha)</li>
+          <li><b>Tropic of Cancer (23.5°N):</b> passes through — Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram (8 states)</li>
+          <li><b>Southernmost point:</b> Indira Point (Andaman & Nicobar)</li>
+          <li><b>Western Ghats:</b> Biodiversity hotspot। Highest = Anai Mudi (2695m, Kerala)</li>
+        </ul>
+        <div class="sum-h">🌦️ जलवायु | Climate of India</div>
+        <ul class="sum-list">
+          <li>India = Tropical monsoon climate</li>
+          <li><b>SW Monsoon (June-Sept):</b> Brings 75-80% of India's rainfall</li>
+          <li><b>Mawsynram, Meghalaya:</b> Highest rainfall in world (~11,870 mm/year)</li>
+          <li><b>Leh, Ladakh:</b> Least rainfall — cold desert</li>
+          <li><b>Chennai:</b> NE monsoon from Bay of Bengal (Oct-Dec)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Narmada originates from Amarkantak (MP) → flows West → Arabian Sea</li>
+            <li>Godavari = "Dakshin Ganga" (longest peninsular river)</li>
+            <li>Tropic of Cancer → 8 states (including MP)</li>
+            <li>Mawsynram = highest rainfall | Leh = lowest</li>
+            <li>Largest state = Rajasthan | Smallest = Goa</li>
+            <li>Western Ghats + Eastern Ghats = biodiversity hotspots</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch2-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🗺️ Indian Geography</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">⛰️ Physical</div>
+              <div class="mm-branch-items">Himalayas (N)<br>Deccan Plateau<br>Thar Desert<br>Coastal plains</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌊 Rivers</div>
+              <div class="mm-branch-items">Ganga (Gangotri)<br>Narmada (Amarkantak)<br>Godavari (Deccan)<br>Brahmaputra (Tibet)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📊 Key Facts</div>
+              <div class="mm-branch-items">Largest=Rajasthan<br>Most pop=UP<br>Mawsynram=max rain<br>Tropic Cancer=8 states</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🌦️ Climate</div>
+              <div class="mm-branch-items">Tropical monsoon<br>SW (June-Sept)<br>75-80% rainfall<br>Chennai=NE monsoon</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch2-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Narmada River <span class="kw-imp">★ PNST</span></div><div class="kw-def">Amarkantak (MP) से निकलती है। West में बहती है → Arabian Sea। MP की lifeline। Sardar Sarovar Dam इसी पर।</div></div>
+          <div class="kw-item"><div class="kw-term">Godavari <span class="kw-imp">★ PNST</span></div><div class="kw-def">"Dakshin Ganga" — सबसे लंबी peninsular river। Maharashtra में Trimbakeshwar से निकलती है।</div></div>
+          <div class="kw-item"><div class="kw-term">Tropic of Cancer</div><div class="kw-def">23.5°N। 8 Indian states से गुजरता है: Gujarat, Rajasthan, MP, Chhattisgarh, Jharkhand, WB, Tripura, Mizoram।</div></div>
+          <div class="kw-item"><div class="kw-term">SW Monsoon <span class="kw-imp">★ PNST</span></div><div class="kw-def">June से September। India का 75-80% वर्षा इसी से। Kerala पहले arrive होता है (June 1)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH3: INDIAN POLITY ===== -->
+  <div class="ch-item" id="ch3">
+    <div class="ch-header" onclick="toggleCh('ch3')">
+      <div class="ch-num">03</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="भारतीय राज्यव्यवस्था एवं संविधान" data-en="Indian Polity & Constitution">भारतीय राज्यव्यवस्था एवं संविधान</div>
+        <div class="ch-tag">Constitution | Fundamental Rights | Parliament | President | DPSP</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch3','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch3','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch3','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch3-sum">
+        <div class="sum-overview">भारतीय संविधान — विश्व का सबसे लंबा लिखित संविधान। 26 Nov 1949 को adopted, 26 Jan 1950 को लागू। B.R. Ambedkar = Father of Constitution।</div>
+        <div class="sum-h">📜 संविधान के मुख्य तथ्य | Constitution Facts</div>
+        <ul class="sum-list">
+          <li><b>Adopted:</b> 26 November 1949 (Constitution Day)</li>
+          <li><b>Enforced:</b> 26 January 1950 (Republic Day)</li>
+          <li><b>Originally:</b> 395 Articles, 8 Schedules, 22 Parts</li>
+          <li><b>Currently:</b> 448 Articles, 12 Schedules, 25 Parts</li>
+          <li><b>Amendments:</b> 106 Amendments till 2023</li>
+          <li><b>Preamble:</b> Sovereign, Socialist, Secular, Democratic, Republic</li>
+          <li>Sources: UK (Parliamentary system), USA (Fundamental Rights, Judicial Review), Ireland (DPSP), Canada (Federal structure), Australia (Concurrent list)</li>
+        </ul>
+        <div class="sum-h">🛡️ मूल अधिकार | Fundamental Rights (Part III)</div>
+        <table class="gk-table">
+          <tr><th>Right</th><th>Articles</th><th>Content</th></tr>
+          <tr><td class="hi">Right to Equality</td><td>14-18</td><td>समानता का अधिकार, caste/religion/gender discrimination ban</td></tr>
+          <tr><td class="hi">Right to Freedom</td><td>19-22</td><td>Speech, expression, movement, profession</td></tr>
+          <tr><td class="hi">Right against Exploitation</td><td>23-24</td><td>Forced labour & child labour ban</td></tr>
+          <tr><td class="hi">Right to Religion</td><td>25-28</td><td>Religious freedom</td></tr>
+          <tr><td class="hi">Cultural & Educational Rights</td><td>29-30</td><td>Minority rights</td></tr>
+          <tr><td class="hi">Right to Constitutional Remedies</td><td>32</td><td>Dr. Ambedkar: "Heart and Soul of Constitution"</td></tr>
+        </table>
+        <div class="sum-h">⚖️ महत्वपूर्ण Articles | Important Articles</div>
+        <ul class="sum-list">
+          <li><b>Article 1:</b> Name and territory of India</li>
+          <li><b>Article 14:</b> Equality before law</li>
+          <li><b>Article 15:</b> Prohibition of discrimination</li>
+          <li><b>Article 19:</b> Freedom of speech and expression</li>
+          <li><b>Article 21:</b> Right to life and personal liberty (most important!)</li>
+          <li><b>Article 32:</b> Right to move Supreme Court (constitutional remedy)</li>
+          <li><b>Article 44:</b> Uniform Civil Code (DPSP)</li>
+          <li><b>Article 51A:</b> Fundamental Duties (10+1 duties — 42nd + 86th amendment)</li>
+          <li><b>Article 112:</b> Annual Financial Statement (Budget)</li>
+          <li><b>Article 280:</b> Finance Commission</li>
+          <li><b>Article 324:</b> Election Commission of India</li>
+          <li><b>Article 352:</b> National Emergency</li>
+          <li><b>Article 356:</b> President's Rule in State</li>
+          <li><b>Article 360:</b> Financial Emergency</li>
+          <li><b>Article 370:</b> Special status to J&K (abrogated 2019)</li>
+        </ul>
+        <div class="sum-h">🏛️ संसद | Parliament Structure</div>
+        <ul class="sum-list">
+          <li><b>Lok Sabha:</b> Lower House। Max 552 members। Speaker = presiding officer। Tenure = 5 years</li>
+          <li><b>Rajya Sabha:</b> Upper House। Max 250 members। VP = Chairman। Permanent house (never dissolved)</li>
+          <li><b>President:</b> Constitutional head। Elected by Electoral College। 5-year term। Impeachment by Parliament</li>
+          <li><b>Prime Minister:</b> Real executive head। Leader of Lok Sabha majority party। Art. 75</li>
+          <li><b>Supreme Court:</b> Art. 124। Chief Justice + max 33 judges। Final court of appeal</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Constitution adopted = 26 Nov 1949 | Enforced = 26 Jan 1950</li>
+            <li>Ambedkar = Father of Constitution</li>
+            <li>Article 21 = Right to Life (most interpreted article)</li>
+            <li>Article 32 = "Heart and Soul" = Ambedkar</li>
+            <li>Preamble = Sovereign, Socialist, Secular, Democratic Republic</li>
+            <li>Fundamental Rights = Part III (Articles 12-35)</li>
+            <li>DPSP = Part IV (Articles 36-51) — Non-justiciable</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch3-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🏛️ Indian Polity & Constitution</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">📜 Constitution</div>
+              <div class="mm-branch-items">Adopted 26 Nov 1949<br>Enforced 26 Jan 1950<br>448 Articles<br>Ambedkar (Father)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🛡️ Fundamental Rights</div>
+              <div class="mm-branch-items">Art 14: Equality<br>Art 19: Freedom<br>Art 21: Right to Life<br>Art 32: Remedies</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🏛️ Parliament</div>
+              <div class="mm-branch-items">Lok Sabha (552)<br>Rajya Sabha (250)<br>President (5yr)<br>PM (real head)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">📋 DPSP</div>
+              <div class="mm-branch-items">Part IV (Art 36-51)<br>Non-justiciable<br>Welfare state<br>Uniform Civil Code</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch3-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Article 21 <span class="kw-imp">★ PNST</span></div><div class="kw-def">Right to Life and Personal Liberty। सबसे ज़्यादा interpret हुआ article। Privacy, Education, Health, Livelihood सब इसमें include।</div></div>
+          <div class="kw-item"><div class="kw-term">Preamble <span class="kw-imp">★ PNST</span></div><div class="kw-def">Constitution की "Introduction"। WE THE PEOPLE of India। Sovereign + Socialist + Secular + Democratic + Republic। 42nd Amendment (1976) ने Socialist और Secular add किए।</div></div>
+          <div class="kw-item"><div class="kw-term">DPSP vs Fundamental Rights</div><div class="kw-def">Fundamental Rights = Justiciable (Court में enforce हो सकते हैं)। DPSP = Non-justiciable (moral obligations)।</div></div>
+          <div class="kw-item"><div class="kw-term">Writ Petitions <span class="kw-imp">★ PNST</span></div><div class="kw-def">Habeas Corpus (illegal detention), Mandamus (duty), Prohibition (inferior court), Certiorari (superior court), Quo Warranto (office validity)।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH4: MADHYA PRADESH GK ===== -->
+  <div class="ch-item" id="ch4">
+    <div class="ch-header" onclick="toggleCh('ch4')">
+      <div class="ch-num">04</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="मध्यप्रदेश सामान्य ज्ञान" data-en="Madhya Pradesh GK">मध्यप्रदेश सामान्य ज्ञान (MP GK)</div>
+        <div class="ch-tag">MP Geography | Rivers | National Parks | History | Culture | Famous Personalities</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch4','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch4','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch4','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch4-sum">
+        <div class="sum-overview">मध्यप्रदेश — "Heart of India"। India का दूसरा सबसे बड़ा राज्य (308,252 km²)। Bhopal = Capital। PNST में MP GK बहुत important है।</div>
+        <div class="mp-box">
+          <div class="mp-box-t">🗺️ MP at a Glance</div>
+          <ul class="sum-list">
+            <li><b>Capital:</b> Bhopal | <b>Largest City:</b> Indore</li>
+            <li><b>Area:</b> 308,252 km² (2nd largest state)</li>
+            <li><b>Districts:</b> 55 | <b>Divisions:</b> 10</li>
+            <li><b>Formation:</b> 1 November 1956 (MP Day)</li>
+            <li><b>Borders:</b> UP, Rajasthan, Gujarat, Maharashtra, Chhattisgarh</li>
+          </ul>
+        </div>
+        <div class="sum-h">🌊 MP की नदियाँ | Rivers of MP</div>
+        <table class="gk-table">
+          <tr><th>River</th><th>Origin</th><th>Flows into</th></tr>
+          <tr><td class="hi">Narmada</td><td>Amarkantak (Anuppur)</td><td>Arabian Sea (W)</td></tr>
+          <tr><td class="hi">Tapti/Tapi</td><td>Multai, Betul</td><td>Arabian Sea (W)</td></tr>
+          <tr><td class="hi">Chambal</td><td>Mhow, Indore</td><td>Yamuna (E)</td></tr>
+          <tr><td class="hi">Betwa</td><td>Raisen</td><td>Yamuna (E)</td></tr>
+          <tr><td class="hi">Son</td><td>Amarkantak</td><td>Ganga (E)</td></tr>
+          <tr><td class="hi">Wainganga</td><td>Seoni</td><td>Godavari</td></tr>
+          <tr><td class="hi">Ken</td><td>Katni</td><td>Yamuna</td></tr>
+        </table>
+        <div class="sum-h">🌿 National Parks & Wildlife Sanctuaries</div>
+        <table class="gk-table">
+          <tr><th>National Park</th><th>District</th><th>Famous For</th></tr>
+          <tr><td class="hi">Kanha Tiger Reserve</td><td>Mandla / Balaghat</td><td>Tigers, Barasingha (State Animal)</td></tr>
+          <tr><td class="hi">Bandhavgarh</td><td>Umaria</td><td>Highest tiger density in India</td></tr>
+          <tr><td class="hi">Pench</td><td>Seoni / Chhindwara</td><td>Tigers, Jungle Book inspiration</td></tr>
+          <tr><td class="hi">Satpura</td><td>Hoshangabad</td><td>Walk safaris, leopard</td></tr>
+          <tr><td class="hi">Panna</td><td>Panna</td><td>Tigers (reintroduced), Ken river</td></tr>
+          <tr><td class="hi">Madhav NP</td><td>Shivpuri</td><td>Birds, Cheetah (extinct now)</td></tr>
+          <tr><td class="hi">Sanjay NP</td><td>Sidhi</td><td>Elephants, Tigers</td></tr>
+        </table>
+        <div class="sum-h">🏛️ MP के प्रसिद्ध स्थान | Famous Places</div>
+        <ul class="sum-list">
+          <li><b>Khajuraho (Chhatarpur):</b> UNESCO World Heritage। Chandela Dynasty temples (10th-11th century)</li>
+          <li><b>Sanchi (Raisen):</b> UNESCO World Heritage। Buddhist Stupa — Ashoka ने बनवाया</li>
+          <li><b>Ujjain:</b> Religious city। Mahakaleshwar Jyotirlinga। Kumbh Mela (Simhastha)</li>
+          <li><b>Orchha (Niwari):</b> Bundelkhand heritage। Ram Raja Temple</li>
+          <li><b>Mandu (Dhar):</b> "City of Joy"। Rani Roopmati Pavilion</li>
+          <li><b>Gwalior (Fort):</b> "Gibraltar of India"। Tansen's tomb। Music city</li>
+          <li><b>Bhedaghat (Jabalpur):</b> Marble Rocks। Dhuandhar waterfall. Narmada gorge</li>
+          <li><b>Bhimbetka (Raisen):</b> UNESCO. Prehistoric cave paintings</li>
+        </ul>
+        <div class="sum-h">🎭 MP की संस्कृति | MP Culture</div>
+        <ul class="sum-list">
+          <li><b>Classical Music:</b> Dhrupad, Tansen (Gwalior gharana)</li>
+          <li><b>Folk Dances:</b> Rai (Bundelkhand), Karma, Saila, Matki, Grida</li>
+          <li><b>Tribal Arts:</b> Gond painting, Bhil art, Baiga art</li>
+          <li><b>State Symbols:</b> 🐟 Mahasheer (fish) | 🦌 Barasingha (animal) | 🦢 Dudhraj/Paradise Flycatcher (bird) | 🌸 White Lily (flower) | 🌳 Banyan (tree)</li>
+          <li><b>Major Tribes:</b> Gond (largest), Bhil, Baiga, Korku, Sahariya</li>
+          <li><b>Festivals:</b> Lokrang, Tansen Music Festival, Khajuraho Dance Festival</li>
+        </ul>
+        <div class="sum-h">⚡ MP Government Schemes</div>
+        <ul class="sum-list">
+          <li><b>Ladli Bahna Yojana:</b> महिलाओं को monthly financial assistance</li>
+          <li><b>CM Jan Seva Yojana:</b> Doorstep government services</li>
+          <li><b>Mukhyamantri Kanya Vivah Yojana:</b> Poor girls' marriage assistance</li>
+          <li><b>MP Free Laptop Yojana:</b> 85% marks students को laptop</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points — MP GK</div>
+          <ul>
+            <li>MP Capital = Bhopal | Largest City = Indore</li>
+            <li>Narmada originates = Amarkantak (Anuppur, MP)</li>
+            <li>Bandhavgarh = Highest tiger density India</li>
+            <li>Khajuraho + Sanchi + Bhimbetka = UNESCO World Heritage (MP)</li>
+            <li>State Animal = Barasingha | State Bird = Paradise Flycatcher</li>
+            <li>MP Day = 1 November | 55 districts</li>
+            <li>Mahakaleshwar = Ujjain (12 Jyotirlingas mein se 1)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch4-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🗺️ Madhya Pradesh GK</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌊 Rivers</div>
+              <div class="mm-branch-items">Narmada (Amarkantak)<br>Chambal (Mhow)<br>Tapti (Betul)<br>Betwa, Son</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🌿 National Parks</div>
+              <div class="mm-branch-items">Kanha (Barasingha)<br>Bandhavgarh (Tigers)<br>Pench (Jungle Book)<br>Panna, Satpura</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🏛️ UNESCO Sites</div>
+              <div class="mm-branch-items">Khajuraho (temples)<br>Sanchi (stupa)<br>Bhimbetka (caves)<br>Chanderi (Art)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(236,72,153,.15);border:1px solid rgba(236,72,153,.3);color:#f472b6">
+              <div class="mm-branch-title">🎭 Culture</div>
+              <div class="mm-branch-items">Barasingha (animal)<br>Gond painting<br>Tansen Music<br>Ujjain (Simhastha)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch4-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Kanha Tiger Reserve <span class="kw-imp">★ PNST</span></div><div class="kw-def">Mandla/Balaghat। India का पहला Tiger Reserve (1973)। Barasingha (Hard Ground Swamp Deer) — MP का State Animal यहीं पाया जाता है।</div></div>
+          <div class="kw-item"><div class="kw-term">Sanchi Stupa <span class="kw-imp">★ PNST</span></div><div class="kw-def">Raisen, MP। UNESCO World Heritage। Ashoka ने 3rd century BCE में बनवाया। Buddhist architecture। Great Stupa सबसे प्रसिद्ध।</div></div>
+          <div class="kw-item"><div class="kw-term">Mahakaleshwar Jyotirlinga</div><div class="kw-def">Ujjain, MP। 12 Jyotirlingas में से एक। Dakshinavarta Shivlinga — दुनिया में एकमात्र। Kumbh Mela हर 12 साल।</div></div>
+          <div class="kw-item"><div class="kw-term">Bhimbetka <span class="kw-imp">★ PNST</span></div><div class="kw-def">Raisen, MP। UNESCO World Heritage। 30,000 साल पुरानी Rock cave paintings। Prehistoric human settlement।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH5: INDIAN ECONOMY ===== -->
+  <div class="ch-item" id="ch5">
+    <div class="ch-header" onclick="toggleCh('ch5')">
+      <div class="ch-num">05</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="भारतीय अर्थव्यवस्था" data-en="Indian Economy">भारतीय अर्थव्यवस्था</div>
+        <div class="ch-tag">GDP | Budget | RBI | Banks | Five Year Plans | Government Schemes</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch5','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch5','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch5','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch5-sum">
+        <div class="sum-overview">India = 5th largest economy (GDP $3.7 trillion, 2024)। Mixed economy — Private + Public sector। Agriculture, Industry, Services — three sectors।</div>
+        <div class="sum-h">🏦 RBI — Reserve Bank of India</div>
+        <ul class="sum-list">
+          <li><b>Founded:</b> 1 April 1935। Nationalized: 1949</li>
+          <li><b>HQ:</b> Mumbai। Governor = appointed by central govt</li>
+          <li><b>Functions:</b> Currency issue, Monetary policy, Banker's bank, Foreign exchange</li>
+          <li><b>Repo Rate:</b> Rate at which RBI lends to banks</li>
+          <li><b>Reverse Repo Rate:</b> Rate at which banks deposit with RBI</li>
+          <li><b>CRR (Cash Reserve Ratio):</b> % of deposits banks must keep with RBI</li>
+          <li><b>SLR (Statutory Liquidity Ratio):</b> % banks must maintain in liquid assets</li>
+          <li><b>NITI Aayog:</b> Replaced Planning Commission (2015)। Policy think tank</li>
+        </ul>
+        <div class="sum-h">💰 Major Government Schemes</div>
+        <table class="gk-table">
+          <tr><th>Scheme</th><th>Purpose</th><th>Year</th></tr>
+          <tr><td class="hi">PM Jan Dhan Yojana</td><td>Financial inclusion — bank accounts for all</td><td>2014</td></tr>
+          <tr><td class="hi">PM Awas Yojana</td><td>Housing for all — pucca houses</td><td>2015</td></tr>
+          <tr><td class="hi">Swachh Bharat Abhiyan</td><td>Clean India — toilets + cleanliness</td><td>2014</td></tr>
+          <tr><td class="hi">Ayushman Bharat (PM-JAY)</td><td>Health insurance ₹5 lakh per family</td><td>2018</td></tr>
+          <tr><td class="hi">PM Kisan Samman Nidhi</td><td>₹6000/year to small farmers</td><td>2019</td></tr>
+          <tr><td class="hi">Make in India</td><td>Boost manufacturing sector</td><td>2014</td></tr>
+          <tr><td class="hi">Digital India</td><td>Digital infrastructure + services</td><td>2015</td></tr>
+          <tr><td class="hi">Skill India</td><td>Vocational training to youth</td><td>2015</td></tr>
+          <tr><td class="hi">Atmanirbhar Bharat</td><td>Self-reliant India (COVID package)</td><td>2020</td></tr>
+          <tr><td class="hi">PM Ujjwala Yojana</td><td>LPG connections to BPL women</td><td>2016</td></tr>
+        </table>
+        <div class="sum-h">📊 Key Economic Terms</div>
+        <ul class="sum-list">
+          <li><b>GDP:</b> Gross Domestic Product — total value of goods/services in 1 year</li>
+          <li><b>GNP:</b> GDP + income from abroad - income paid abroad</li>
+          <li><b>Inflation:</b> Increase in price level. CPI = Consumer Price Index</li>
+          <li><b>Union Budget:</b> February 1 every year. Finance Minister presents it</li>
+          <li><b>GST (2017):</b> "One nation, one tax"। Replaced multiple indirect taxes</li>
+          <li><b>SEBI:</b> Securities and Exchange Board of India। Stock market regulator</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>RBI founded = 1 April 1935, HQ = Mumbai</li>
+            <li>Ayushman Bharat = ₹5 lakh health insurance per family</li>
+            <li>PM Jan Dhan = Financial inclusion (2014)</li>
+            <li>GST = 1 July 2017 | "One nation one tax"</li>
+            <li>NITI Aayog = Replaced Planning Commission (2015)</li>
+            <li>Union Budget = February 1 every year</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch5-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">💰 Indian Economy</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🏦 RBI</div>
+              <div class="mm-branch-items">Founded 1935<br>HQ Mumbai<br>Repo/Reverse repo<br>CRR + SLR</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">💊 Schemes</div>
+              <div class="mm-branch-items">PM Jan Dhan (2014)<br>Ayushman Bharat<br>PM Awas<br>Swachh Bharat</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📊 Economy</div>
+              <div class="mm-branch-items">GDP (5th largest)<br>GST (2017)<br>Union Budget<br>SEBI (stocks)</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch5-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Ayushman Bharat (PM-JAY) <span class="kw-imp">★ PNST</span></div><div class="kw-def">2018 में launched। ₹5 lakh per family per year health insurance। World's largest health scheme। 10 crore families cover।</div></div>
+          <div class="kw-item"><div class="kw-term">GST <span class="kw-imp">★ PNST</span></div><div class="kw-def">1 July 2017 से लागू। "One Nation One Tax"। Multiple indirect taxes replace। 4 slabs: 5%, 12%, 18%, 28%।</div></div>
+          <div class="kw-item"><div class="kw-term">Repo Rate</div><div class="kw-def">RBI जिस rate पर commercial banks को loans देती है। Rate बढ़ने पर → EMI बढ़ती है → inflation कम होती है।</div></div>
+          <div class="kw-item"><div class="kw-term">NITI Aayog</div><div class="kw-def">National Institution for Transforming India। Planning Commission replace किया (2015)। PM = Chairperson। Policy think tank।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH6: SCIENCE & TECHNOLOGY + GENERAL SCIENCE ===== -->
+  <div class="ch-item" id="ch6">
+    <div class="ch-header" onclick="toggleCh('ch6')">
+      <div class="ch-num">06</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="विज्ञान एवं प्रौद्योगिकी" data-en="Science & Technology">विज्ञान एवं प्रौद्योगिकी</div>
+        <div class="ch-tag">Space | ISRO | Defence | Inventions | Health | Computer Basics</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch6','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch6','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch6','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch6-sum">
+        <div class="sum-overview">ISRO, Defence, Important Inventions और Computer basics — PNST mein Science & Technology se important questions aate hain।</div>
+        <div class="sum-h">🚀 ISRO — Space Missions</div>
+        <table class="gk-table">
+          <tr><th>Mission</th><th>Year</th><th>Achievement</th></tr>
+          <tr><td class="hi">Chandrayaan-1</td><td>2008</td><td>Water molecules on moon discovered</td></tr>
+          <tr><td class="hi">Chandrayaan-2</td><td>2019</td><td>Orbiter success | Vikram lander crash-landed</td></tr>
+          <tr><td class="hi">Chandrayaan-3</td><td>2023</td><td>Soft landing on Moon's South Pole ✅ (1st ever)</td></tr>
+          <tr><td class="hi">Mangalyaan (MOM)</td><td>2014</td><td>Mars orbiter | 1st Asian mission to Mars</td></tr>
+          <tr><td class="hi">Aditya-L1</td><td>2023</td><td>India's 1st solar mission | L1 point orbit</td></tr>
+          <tr><td class="hi">PSLV</td><td>1994+</td><td>Polar Satellite Launch Vehicle — 100+ successes</td></tr>
+          <tr><td class="hi">GSLV Mark III</td><td>2017+</td><td>Heavy lift rocket | LVM3</td></tr>
+        </table>
+        <div class="sum-h">🛡️ Defence & National Organisations</div>
+        <ul class="sum-list">
+          <li><b>DRDO:</b> Defence Research and Development Organisation। Founded 1958</li>
+          <li><b>ISRO HQ:</b> Bengaluru | Founded: 1969 | Current Chairman: S. Somanath</li>
+          <li><b>Agni Missiles:</b> ICBM। Agni-V range >5000 km (Nuclear capable)</li>
+          <li><b>INS Vikrant:</b> First Made-in-India aircraft carrier (2022)</li>
+          <li><b>Tejas:</b> Made-in-India Light Combat Aircraft (LCA)</li>
+          <li><b>BrahMos:</b> India-Russia joint supersonic cruise missile</li>
+        </ul>
+        <div class="sum-h">💻 Computer Basics (Important for PNST)</div>
+        <ul class="sum-list">
+          <li><b>CPU:</b> Central Processing Unit = Brain of computer</li>
+          <li><b>RAM:</b> Random Access Memory = Temporary memory</li>
+          <li><b>ROM:</b> Read Only Memory = Permanent memory</li>
+          <li><b>Hard Drive (HDD/SSD):</b> Permanent storage</li>
+          <li><b>Input devices:</b> Keyboard, Mouse, Scanner, Microphone</li>
+          <li><b>Output devices:</b> Monitor, Printer, Speaker</li>
+          <li><b>MS Word:</b> Word processing | MS Excel: Spreadsheet | MS PowerPoint: Presentation</li>
+          <li><b>WWW:</b> World Wide Web — Tim Berners-Lee (1989)</li>
+          <li><b>Email:</b> Electronic Mail। @ symbol = Roy Tomlinson (1971)</li>
+          <li><b>Virus:</b> Malware that damages computer. Antivirus software = protection</li>
+          <li><b>URL:</b> Uniform Resource Locator = website address</li>
+          <li><b>HTTP/HTTPS:</b> Hypertext Transfer Protocol (S = Secure)</li>
+        </ul>
+        <div class="sum-h">🏥 Health & Diseases (Important for Nursing)</div>
+        <ul class="sum-list">
+          <li><b>WHO:</b> World Health Organization। HQ = Geneva। "Health for All"</li>
+          <li><b>AIIMS:</b> All India Institute of Medical Sciences। New Delhi</li>
+          <li><b>Polio:</b> Pulse Polio Programme → India Polio-free (2014)</li>
+          <li><b>COVID-19:</b> SARS-CoV-2 virus। WHO declared pandemic March 2020</li>
+          <li><b>Covaxin:</b> Made in India COVID vaccine (Bharat Biotech)</li>
+          <li><b>Covishield:</b> AstraZeneca vaccine made in India (SII)</li>
+          <li><b>NHM:</b> National Health Mission। Maternal + Child health</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>Chandrayaan-3 = South Pole soft landing (2023) — World's first</li>
+            <li>Mangalyaan = 1st Asian mission to Mars (2014)</li>
+            <li>ISRO HQ = Bengaluru | Founded 1969</li>
+            <li>Covaxin = Made in India (Bharat Biotech, Hyderabad)</li>
+            <li>India Polio-free = 2014</li>
+            <li>WWW invented = Tim Berners-Lee (1989)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch6-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🚀 Science & Technology</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🚀 ISRO</div>
+              <div class="mm-branch-items">Chandrayaan-3 (2023)<br>Mangalyaan (2014)<br>Aditya-L1 (2023)<br>PSLV (workhorse)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#f87171">
+              <div class="mm-branch-title">🛡️ Defence</div>
+              <div class="mm-branch-items">DRDO (1958)<br>Tejas (LCA)<br>BrahMos (missile)<br>INS Vikrant</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">💻 Computer</div>
+              <div class="mm-branch-items">CPU=brain<br>RAM=temp memory<br>MS Office basics<br>WWW (1989)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🏥 Health</div>
+              <div class="mm-branch-items">WHO (Geneva)<br>India Polio-free 2014<br>Covaxin (India)<br>NHM</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch6-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Chandrayaan-3 <span class="kw-imp">★ PNST</span></div><div class="kw-def">23 August 2023। Moon के South Pole पर soft landing। दुनिया का पहला mission। Vikram lander + Pragyan rover।</div></div>
+          <div class="kw-item"><div class="kw-term">BrahMos Missile <span class="kw-imp">★ PNST</span></div><div class="kw-def">India + Russia joint venture। Supersonic cruise missile। Speed = Mach 2.8। World's fastest operational cruise missile।</div></div>
+          <div class="kw-item"><div class="kw-term">Covaxin <span class="kw-imp">★ PNST</span></div><div class="kw-def">Bharat Biotech (Hyderabad) + ICMR। Made-in-India COVID-19 vaccine। Whole virion inactivated।</div></div>
+          <div class="kw-item"><div class="kw-term">CPU</div><div class="kw-def">Central Processing Unit = Computer का brain। Arithmetic + Logic + Control unit। Speed = GHz में measure।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH7: SPORTS, AWARDS & IMPORTANT DAYS ===== -->
+  <div class="ch-item" id="ch7">
+    <div class="ch-header" onclick="toggleCh('ch7')">
+      <div class="ch-num">07</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="खेल, पुरस्कार एवं महत्वपूर्ण दिवस" data-en="Sports, Awards & Important Days">खेल, पुरस्कार एवं महत्वपूर्ण दिवस</div>
+        <div class="ch-tag">Olympics | Bharat Ratna | Nobel | National Days | International Days</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch7','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch7','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch7','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch7-sum">
+        <div class="sum-overview">Sports, Awards और Important Days — PNST mein current affairs ke saath in topics se bhi questions aate hain।</div>
+        <div class="sum-h">🏆 India's Highest Awards</div>
+        <table class="gk-table">
+          <tr><th>Award</th><th>Field</th><th>Given by</th></tr>
+          <tr><td class="hi">Bharat Ratna</td><td>Highest civilian honor</td><td>President of India</td></tr>
+          <tr><td class="hi">Padma Vibhushan</td><td>2nd highest civilian</td><td>President</td></tr>
+          <tr><td class="hi">Padma Bhushan</td><td>3rd highest civilian</td><td>President</td></tr>
+          <tr><td class="hi">Padma Shri</td><td>4th highest civilian</td><td>President</td></tr>
+          <tr><td class="hi">Param Vir Chakra</td><td>Highest wartime gallantry</td><td>President</td></tr>
+          <tr><td class="hi">Ashok Chakra</td><td>Highest peacetime gallantry</td><td>President</td></tr>
+          <tr><td class="hi">Nobel Prize</td><td>Science/Peace/Literature</td><td>Swedish Academy</td></tr>
+        </table>
+        <div class="sum-h">🇮🇳 Indian Nobel Prize Winners</div>
+        <ul class="sum-list">
+          <li><b>Rabindranath Tagore (1913):</b> Literature — First Asian Nobel laureate</li>
+          <li><b>C.V. Raman (1930):</b> Physics — Raman Effect</li>
+          <li><b>Mother Teresa (1979):</b> Peace — Albania-born, worked in India</li>
+          <li><b>Amartya Sen (1998):</b> Economics — Welfare economics</li>
+          <li><b>Kailash Satyarthi (2014):</b> Peace — Child rights</li>
+        </ul>
+        <div class="sum-h">📅 Important National & International Days</div>
+        <table class="gk-table">
+          <tr><th>Date</th><th>Day</th></tr>
+          <tr><td>Jan 26</td><td>Republic Day (India)</td></tr>
+          <tr><td>Feb 4</td><td>World Cancer Day</td></tr>
+          <tr><td>Mar 8</td><td>International Women's Day</td></tr>
+          <tr><td>Mar 22</td><td>World Water Day</td></tr>
+          <tr><td>Apr 7</td><td>World Health Day (WHO founded 1948)</td></tr>
+          <tr><td>Apr 22</td><td>Earth Day</td></tr>
+          <tr><td>May 1</td><td>Labour Day / International Workers Day</td></tr>
+          <tr><td>May 12</td><td>International Nurses Day (Florence Nightingale's birthday)</td></tr>
+          <tr><td>Jun 5</td><td>World Environment Day</td></tr>
+          <tr><td>Aug 15</td><td>Independence Day (India)</td></tr>
+          <tr><td>Oct 2</td><td>Gandhi Jayanti / International Non-Violence Day</td></tr>
+          <tr><td>Nov 14</td><td>Children's Day (Nehru's birthday)</td></tr>
+          <tr><td>Dec 10</td><td>Human Rights Day</td></tr>
+        </table>
+        <div class="sum-h">🏅 Sports — Important Facts</div>
+        <ul class="sum-list">
+          <li><b>National Sport of India:</b> Hockey (Field Hockey)</li>
+          <li><b>Olympic Games 2024:</b> Paris, France। India = 6 medals</li>
+          <li><b>Neeraj Chopra:</b> Javelin Throw Gold (Tokyo 2021 + Silver Paris 2024)</li>
+          <li><b>Cricket — Men's T20 World Cup 2024:</b> India won (Barbados)</li>
+          <li><b>FIFA World Cup 2022:</b> Argentina won (Qatar)</li>
+          <li><b>Dronacharya Award:</b> Best coach | Arjuna Award: Best sportsperson</li>
+          <li><b>Rajiv Gandhi Khel Ratna:</b> Renamed "Major Dhyan Chand Khel Ratna" (2021)</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Important Points</div>
+          <ul>
+            <li>International Nurses Day = 12 May (Florence Nightingale's birthday)</li>
+            <li>World Health Day = 7 April (WHO founded 7 April 1948)</li>
+            <li>Bharat Ratna = Highest civilian award</li>
+            <li>First Indian Nobel = Rabindranath Tagore (1913, Literature)</li>
+            <li>National Sport = Hockey | National Animal = Tiger</li>
+            <li>Neeraj Chopra = Javelin Gold (Tokyo 2020 Olympics)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch7-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">🏆 Sports, Awards & Important Days</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">🥇 Awards</div>
+              <div class="mm-branch-items">Bharat Ratna<br>Padma Vibhushan<br>Param Vir Chakra<br>Nobel Prize</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🇮🇳 India Nobel</div>
+              <div class="mm-branch-items">Tagore (1913)<br>C.V. Raman (1930)<br>Mother Teresa (1979)<br>Amartya Sen (1998)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">📅 Important Days</div>
+              <div class="mm-branch-items">May 12 = Nurses Day<br>Apr 7 = Health Day<br>Oct 2 = Gandhi<br>Nov 14 = Children</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🏅 Sports</div>
+              <div class="mm-branch-items">Hockey = Nat. Sport<br>Neeraj (Javelin Gold)<br>T20 WC 2024 India<br>Paris Olympics 2024</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch7-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">International Nurses Day <span class="kw-imp">★ PNST</span></div><div class="kw-def">12 May — Florence Nightingale का जन्मदिन। "Lady with the Lamp"। Modern nursing की founder। Crimean War में nursing।</div></div>
+          <div class="kw-item"><div class="kw-term">Bharat Ratna <span class="kw-imp">★ PNST</span></div><div class="kw-def">India का highest civilian award। 1954 में शुरू। President द्वारा दिया जाता है। Sports में 2014 से eligible।</div></div>
+          <div class="kw-item"><div class="kw-term">Neeraj Chopra <span class="kw-imp">★ PNST</span></div><div class="kw-def">Tokyo 2020 = Gold (87.58m)। Paris 2024 = Silver (89.45m)। India के पहले Olympic Gold medalist in Track & Field।</div></div>
+          <div class="kw-item"><div class="kw-term">Florence Nightingale</div><div class="kw-def">Modern nursing की founder। Crimean War (1853-56) में wounded soldiers की care। Statistics use करने वाली पहली nurse।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CH8: CURRENT AFFAIRS + QUICK REVISION ===== -->
+  <div class="ch-item" id="ch8">
+    <div class="ch-header" onclick="toggleCh('ch8')">
+      <div class="ch-num">08</div>
+      <div class="ch-info">
+        <div class="ch-name" data-hi="⭐ GK Quick Revision + Current Affairs" data-en="⭐ GK Quick Revision">⭐ GK Quick Revision + Important Facts</div>
+        <div class="ch-tag">National Symbols | India Firsts | World Records | International Organisations | Quick Facts</div>
+      </div>
+      <span class="ch-arr">▼</span>
+    </div>
+    <div class="ch-body">
+      <div class="tab-bar">
+        <button class="tab-btn active" onclick="showTab('ch8','sum')">📝 Notes</button>
+        <button class="tab-btn" onclick="showTab('ch8','mm')">🗺️ Mind Map</button>
+        <button class="tab-btn" onclick="showTab('ch8','kw')">🔑 Keywords</button>
+      </div>
+      <div class="tab-pane active" id="ch8-sum">
+        <div class="sum-overview">PNST ke liye sabse important GK facts ek jagah! National symbols, India firsts, International organisations — yeh sab exam mein definitely aate hain।</div>
+        <div class="sum-h">🇮🇳 National Symbols of India</div>
+        <table class="gk-table">
+          <tr><th>Symbol</th><th>Name</th></tr>
+          <tr><td>🐯 National Animal</td><td>Bengal Tiger (Royal Bengal Tiger)</td></tr>
+          <tr><td>🦚 National Bird</td><td>Indian Peacock (Pavo cristatus)</td></tr>
+          <tr><td>🌸 National Flower</td><td>Lotus (Nelumbo nucifera)</td></tr>
+          <tr><td>🌳 National Tree</td><td>Indian Banyan (Ficus benghalensis)</td></tr>
+          <tr><td>🐬 National Aquatic Animal</td><td>Gangetic River Dolphin</td></tr>
+          <tr><td>🦋 National Butterfly</td><td>Orange Oakleaf (Kallima inachus)</td></tr>
+          <tr><td>🏏 National Sport</td><td>Hockey (Field Hockey)</td></tr>
+          <tr><td>🎵 National Song</td><td>Vande Mataram (Bankim Chandra Chattopadhyay)</td></tr>
+          <tr><td>🎶 National Anthem</td><td>Jana Gana Mana (Rabindranath Tagore)</td></tr>
+          <tr><td>📅 National Calendar</td><td>Saka Calendar (Chaitra = 1st month)</td></tr>
+          <tr><td>🪙 National Currency</td><td>Indian Rupee (₹) — D. Udaya Kumar designed</td></tr>
+        </table>
+        <div class="sum-h">🌐 International Organisations</div>
+        <table class="gk-table">
+          <tr><th>Organisation</th><th>HQ</th><th>India joins</th></tr>
+          <tr><td class="hi">UN (United Nations)</td><td>New York</td><td>1945 (founding member)</td></tr>
+          <tr><td class="hi">WHO</td><td>Geneva</td><td>1948</td></tr>
+          <tr><td class="hi">IMF</td><td>Washington DC</td><td>1945</td></tr>
+          <tr><td class="hi">World Bank</td><td>Washington DC</td><td>1945</td></tr>
+          <tr><td class="hi">WTO</td><td>Geneva</td><td>1995</td></tr>
+          <tr><td class="hi">UNESCO</td><td>Paris</td><td>1946</td></tr>
+          <tr><td class="hi">SAARC</td><td>Kathmandu</td><td>1985</td></tr>
+          <tr><td class="hi">G20</td><td>No permanent HQ</td><td>Founding member</td></tr>
+          <tr><td class="hi">SCO</td><td>Beijing</td><td>2017</td></tr>
+          <tr><td class="hi">BRICS</td><td>No HQ</td><td>Founding member</td></tr>
+        </table>
+        <div class="sum-h">🏆 India Firsts</div>
+        <ul class="sum-list">
+          <li><b>First President:</b> Dr. Rajendra Prasad | <b>First PM:</b> Jawaharlal Nehru</li>
+          <li><b>First Woman President:</b> Pratibha Patil (2007)</li>
+          <li><b>First Woman PM:</b> Indira Gandhi (1966)</li>
+          <li><b>First Woman CJI:</b> Not yet (2024)</li>
+          <li><b>First Indian in Space:</b> Rakesh Sharma (1984, Soviet Soyuz T-11)</li>
+          <li><b>First Indian Oscar:</b> Bhanu Athaiya (Costume Design, Gandhi 1983)</li>
+          <li><b>First Indian Nobel:</b> Rabindranath Tagore (1913)</li>
+          <li><b>First IIT:</b> IIT Kharagpur (1951)</li>
+          <li><b>First Railway:</b> Mumbai to Thane (1853)</li>
+        </ul>
+        <div class="sum-h">📋 Important Committees & Commissions</div>
+        <ul class="sum-list">
+          <li><b>Election Commission:</b> Art. 324। Chief Election Commissioner</li>
+          <li><b>Finance Commission:</b> Art. 280। Every 5 years। Centre-State funds distribution</li>
+          <li><b>UPSC:</b> Art. 315। Civil services exam। All India Services</li>
+          <tr><td class="hi"><b>NHRC:</b> National Human Rights Commission। Protect human rights</td></tr>
+          <li><b>CAG:</b> Comptroller and Auditor General। Art. 148। Audit public expenditure</li>
+          <li><b>Lokpal:</b> Anti-corruption Ombudsman। Central government। Jan Lokpal Bill led to it</li>
+        </ul>
+        <div class="pnst-box">
+          <div class="pnst-box-t">⭐ PNST Must Know Facts</div>
+          <ul>
+            <li>National Animal = Tiger | National Bird = Peacock | National Flower = Lotus</li>
+            <li>Jana Gana Mana = National Anthem (Tagore) | Vande Mataram = National Song</li>
+            <li>First PM = Nehru | First President = Rajendra Prasad</li>
+            <li>First Indian in Space = Rakesh Sharma (1984)</li>
+            <li>UN HQ = New York | WHO HQ = Geneva | UNESCO HQ = Paris</li>
+            <li>India's 1st Railway = Mumbai to Thane (1853)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-pane" id="ch8-mm">
+        <div class="mm-wrap"><div class="mm">
+          <div class="mm-center">⭐ GK Quick Revision</div>
+          <div class="mm-connector"></div>
+          <div class="mm-branches">
+            <div class="mm-branch" style="background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.3);color:#c084fc">
+              <div class="mm-branch-title">🇮🇳 Nat. Symbols</div>
+              <div class="mm-branch-items">Tiger (animal)<br>Peacock (bird)<br>Lotus (flower)<br>Banyan (tree)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);color:#60a5fa">
+              <div class="mm-branch-title">🌐 Int. Orgs</div>
+              <div class="mm-branch-items">UN (New York)<br>WHO (Geneva)<br>UNESCO (Paris)<br>SAARC (Kathmandu)</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.3);color:#4ade80">
+              <div class="mm-branch-title">🏆 India Firsts</div>
+              <div class="mm-branch-items">1st PM = Nehru<br>1st President = Rajendra Prasad<br>1st Space = Rakesh Sharma<br>1st Nobel = Tagore</div>
+            </div>
+            <div class="mm-branch" style="background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.3);color:#fbbf24">
+              <div class="mm-branch-title">📋 Commissions</div>
+              <div class="mm-branch-items">Election Comm.<br>Finance Comm.<br>UPSC<br>CAG + Lokpal</div>
+            </div>
+          </div>
+        </div></div>
+      </div>
+      <div class="tab-pane" id="ch8-kw">
+        <div class="kw-grid">
+          <div class="kw-item"><div class="kw-term">Jana Gana Mana <span class="kw-imp">★ PNST</span></div><div class="kw-def">राष्ट्रगान। Rabindranath Tagore ने लिखा। 24 January 1950 को National Anthem घोषित। Duration = 52 seconds।</div></div>
+          <div class="kw-item"><div class="kw-term">Vande Mataram <span class="kw-imp">★ PNST</span></div><div class="kw-def">राष्ट्रगीत। Bankim Chandra Chattopadhyay। "Anandamath" novel से। 1896 में Congress session में गाया गया।</div></div>
+          <div class="kw-item"><div class="kw-term">Rakesh Sharma <span class="kw-imp">★ PNST</span></div><div class="kw-def">First Indian in Space। 3 April 1984। Soviet Soyuz T-11। Indira Gandhi ने पूछा "देश कैसा लगता है?" → "सारे जहाँ से अच्छा"।</div></div>
+          <div class="kw-item"><div class="kw-term">G20 India 2023 <span class="kw-imp">★ PNST</span></div><div class="kw-def">India hosted G20 Summit September 2023 | New Delhi। "Vasudhaiva Kutumbakam" theme। 83 countries participated।</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let lang='hi', isDark=true;
+function setLang(l){
+  lang=l;
+  document.getElementById('btnHi').classList.toggle('active',l==='hi');
+  document.getElementById('btnEn').classList.toggle('active',l==='en');
+  document.querySelectorAll('[data-hi]').forEach(el=>{
+    const v=el.getAttribute('data-'+l); if(v) el.textContent=v;
+  });
+  document.getElementById('gkP').textContent=l==='hi'
+    ?'Indian History, Geography, Polity, Economy, MP GK, Current Affairs — PNST ke liye complete notes!'
+    :'Indian History, Geography, Polity, Economy, MP GK, Current Affairs — Complete notes for PNST 2026!';
+}
+function toggleTheme(){
+  isDark=!isDark;
+  const t=isDark?'dark':'light';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+  try{localStorage.setItem('pnst_theme',t);}catch(e){}
+}
+function toggleCh(id){
+  const el=document.getElementById(id);
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.ch-item.open').forEach(e=>{if(e.id!==id)e.classList.remove('open');});
+  el.classList.toggle('open',!isOpen);
+  if(!isOpen) el.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function showTab(chId,tab){
+  const body=document.getElementById(chId).querySelector('.ch-body');
+  body.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  body.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  body.querySelector('#'+chId+'-'+tab).classList.add('active');
+  const idx=['sum','mm','kw'].indexOf(tab);
+  body.querySelectorAll('.tab-btn')[idx].classList.add('active');
+}
+window.addEventListener('load',()=>{
+  let t='dark';
+  try{t=localStorage.getItem('pnst_theme')||'dark';}catch(e){}
+  isDark=t==='dark';
+  document.documentElement.setAttribute('data-theme',t);
+  document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
+});
+</script>
+</body>
+</html>

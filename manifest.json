@@ -1,0 +1,92 @@
+{
+  "name": "PNST Mock Test 2026 — Purnendra Maurya",
+  "short_name": "PNST 2026",
+  "description": "MP Pre Nursing Selection Test Mock Test Series — Free Practice App",
+  "start_url": "/PNST2027/",
+  "scope": "/PNST2027/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#020818",
+  "theme_color": "#3b82f6",
+  "lang": "hi",
+  "categories": ["education", "medical"],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Full Mock Test",
+      "short_name": "Test",
+      "description": "100 Questions Full Mock Test",
+      "url": "/PNST2027/#home",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Study Notes",
+      "short_name": "Notes",
+      "description": "NCERT Study Notes",
+      "url": "/PNST2027/#notes",
+      "icons": [{ "src": "icons/icon-96.png", "sizes": "96x96" }]
+    }
+  ]
+}

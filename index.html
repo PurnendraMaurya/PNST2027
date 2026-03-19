@@ -2,7 +2,7 @@
 <html lang="hi" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>PNST Mock Test 2026 — Purnendra Maurya</title>
 <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#3b82f6">
@@ -150,8 +150,7 @@ try {
   firebase.initializeApp(FIREBASE_CONFIG);
   db     = firebase.firestore();
   fbAuth = firebase.auth();
-  console.log('✅ Firebase connected!');
-} catch(e) { console.warn('Firebase error:', e.message); }
+} catch(e) { }
 
 // Firebase helpers
 async function fbSet(col, id, data)   { if(!db)return; try{ await db.collection(col).doc(id).set(data,{merge:true}); }catch(e){} }
@@ -246,7 +245,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 .hdr-name    { font-family:var(--fn2); font-size:.96rem; font-weight:700; background:linear-gradient(90deg,var(--blue),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
 .hdr-sub     { font-size:.58rem; color:var(--tx2); }
 .hdr-btns    { display:flex; gap:5px; align-items:center; flex-shrink:0; }
-.hbtn        { width:34px; height:34px; border-radius:9px; border:1px solid var(--card-border); background:var(--card); color:var(--tx); display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:.95rem; font-weight:700; transition:all .2s; flex-shrink:0; }
+.hbtn        { width:34px; height:34px; border-radius:9px; border:1px solid var(--card-border); background:var(--card); color:var(--tx); display:flex; align-items:center; justify-content:center; cursor:pointer; font-size:.95rem; font-weight:700; transition:all .2s; flex-shrink:0; touch-action:manipulation; }
 .hbtn.menu-btn { background:linear-gradient(135deg,var(--blue),var(--cyan)); border:none; color:#fff; }
 
 /* SIDE MENU */
@@ -307,7 +306,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 
 /* SUBJECT CARDS */
 .subj-grid    { display:grid; grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:9px; margin-bottom:14px; }
-.scard        { background:var(--card); border:1px solid var(--card-border); border-radius:15px; padding:13px 12px 11px; position:relative; overflow:hidden; transition:all .22s; }
+.scard        { background:var(--card); border:1px solid var(--card-border); border-radius:15px; padding:13px 12px 11px; position:relative; overflow:hidden; transition:all .22s; touch-action:manipulation; }
 .scard::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--sc,var(--blue)); }
 .scard:hover  { transform:translateY(-3px); border-color:var(--sc,var(--blue)); }
 .scard-icon   { font-size:1.75rem; margin-bottom:6px; display:block; }
@@ -342,7 +341,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 
 /* BOTTOM NAVIGATION */
 .bottom-nav  { position:fixed; bottom:0; left:0; right:0; height:62px; background:var(--bg2); border-top:1px solid var(--card-border); display:flex; justify-content:space-around; align-items:center; z-index:150; backdrop-filter:blur(20px); }
-.bnav        { display:flex; flex-direction:column; align-items:center; gap:3px; padding:4px 0; background:none; border:none; cursor:pointer; color:var(--tx3); font-family:var(--fn); transition:color .2s; flex:1; position:relative; }
+.bnav        { display:flex; flex-direction:column; align-items:center; gap:3px; padding:4px 0; background:none; border:none; cursor:pointer; color:var(--tx3); font-family:var(--fn); transition:color .2s; flex:1; position:relative; touch-action:manipulation; -webkit-user-select:none; user-select:none; }
 .bnav.on     { color:var(--blue); }
 .bnav.on::before { content:''; position:absolute; top:-1px; left:50%; transform:translateX(-50%); width:24px; height:3px; background:var(--blue); border-radius:0 0 3px 3px; }
 .bnav-ic     { font-size:1.2rem; line-height:1; }
@@ -393,7 +392,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 .ex-subj-tag      { font-size:.68rem; font-weight:700; padding:3px 10px; border-radius:6px; }
 .ex-qtxt          { font-size:.95rem; font-weight:600; line-height:1.65; color:var(--tx); margin-bottom:14px; }
 .ex-opts          { display:flex; flex-direction:column; gap:8px; margin-bottom:12px; }
-.ex-opt           { display:flex; align-items:flex-start; gap:10px; padding:11px 13px; border-radius:11px; border:1.5px solid var(--card-border); background:var(--card); cursor:pointer; transition:all .18s; font-size:.88rem; color:var(--tx); font-family:var(--fn); text-align:left; }
+.ex-opt           { display:flex; align-items:flex-start; gap:10px; padding:11px 13px; border-radius:11px; border:1.5px solid var(--card-border); background:var(--card); cursor:pointer; transition:all .18s; font-size:.88rem; color:var(--tx); font-family:var(--fn); text-align:left; touch-action:manipulation; }
 .ex-opt:hover     { border-color:rgba(59,130,246,.5); background:rgba(59,130,246,.07); }
 .ex-opt.sel       { border-color:var(--blue); background:rgba(59,130,246,.12); color:var(--blue); }
 .ex-opt-dot       { width:26px; height:26px; border-radius:50%; border:2px solid currentColor; display:flex; align-items:center; justify-content:center; font-size:.72rem; font-weight:800; flex-shrink:0; opacity:.7; }
@@ -467,7 +466,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 .pstat-n            { font-family:var(--fn2); font-size:1.2rem; font-weight:700; }
 .pstat-l            { font-size:.6rem; color:var(--tx2); margin-top:2px; }
 .streak-card        { background:linear-gradient(135deg,rgba(245,158,11,.12),rgba(239,68,68,.08)); border:1px solid rgba(245,158,11,.3); border-radius:14px; padding:14px; margin-bottom:14px; display:flex; align-items:center; gap:14px; }
-.prof-row           { background:var(--card); border:1px solid var(--card-border); border-radius:12px; padding:13px 14px; margin-bottom:8px; display:flex; align-items:center; gap:12px; cursor:pointer; transition:all .2s; }
+.prof-row           { background:var(--card); border:1px solid var(--card-border); border-radius:12px; padding:13px 14px; margin-bottom:8px; display:flex; align-items:center; gap:12px; cursor:pointer; transition:all .2s; touch-action:manipulation; }
 .prof-row:hover     { background:var(--card-hover); }
 .prof-row-ic        { font-size:1.2rem; width:28px; text-align:center; flex-shrink:0; }
 .prof-row-info      { flex:1; }
@@ -486,7 +485,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 
 /* LEADERBOARD */
 .lb-card      { background:var(--card); border:1px solid var(--card-border); border-radius:14px; overflow:hidden; margin-bottom:12px; }
-.lb-row       { display:flex; align-items:center; gap:10px; padding:12px 14px; border-bottom:1px solid var(--card-border); transition:background .2s; }
+.lb-row       { display:flex; align-items:center; gap:10px; padding:12px 14px; border-bottom:1px solid var(--card-border); transition:background .2s; cursor:pointer; }
 .lb-row:last-child { border-bottom:none; }
 .lb-row:hover { background:var(--card-hover); }
 .lb-rank      { font-family:var(--fn2); font-size:1rem; font-weight:700; width:28px; text-align:center; flex-shrink:0; }
@@ -575,7 +574,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 .nlp-skip       { text-align:center; margin-top:16px; }
 .nlp-skip-btn   { background:none; border:none; color:rgba(255,255,255,.2); font-size:.7rem; cursor:pointer; font-family:var(--fn); transition:color .2s; padding:6px 12px; border-radius:8px; }
 .nlp-skip-btn:hover { color:rgba(255,255,255,.5); background:rgba(255,255,255,.04); }
-.nlp-btn        { width:100%; padding:14px; border:none; border-radius:13px; font-family:var(--fn2); font-size:1rem; font-weight:700; cursor:pointer; transition:all .25s; position:relative; overflow:hidden; letter-spacing:.4px; }
+.nlp-btn        { width:100%; padding:14px; border:none; border-radius:13px; font-family:var(--fn2); font-size:1rem; font-weight:700; cursor:pointer; transition:all .25s; position:relative; overflow:hidden; letter-spacing:.4px; touch-action:manipulation; }
 .nlp-btn-reg    { background:linear-gradient(135deg,#16a34a,#059669); color:#fff; box-shadow:0 5px 20px rgba(22,163,74,.35); }
 .nlp-btn-reg:hover { transform:translateY(-2px); }
 .nlp-btn-login  { background:linear-gradient(135deg,#2563eb,#0891b2); color:#fff; box-shadow:0 5px 20px rgba(37,99,235,.35); }
@@ -1201,8 +1200,21 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
         <!-- SCREEN: MAIN (Register + Login) -->
         <div class="lscreen active" id="ls-main">
           <div class="nlp-tabs">
-            <button class="nlp-tab on" id="nlpTabReg"   onclick="nlpSwitch('register')">✨ New Register</button>
-            <button class="nlp-tab"    id="nlpTabLogin" onclick="nlpSwitch('login')">🔑 Login करें</button>
+            <button class="nlp-tab on" id="nlpTabReg"   onclick="nlpSwitch('register')">✨ Register</button>
+            <button class="nlp-tab"    id="nlpTabLogin" onclick="nlpSwitch('login')">🔑 Login</button>
+          </div>
+
+          <!-- ── Google Login Button ── -->
+          <button onclick="googleLogin()" style="width:100%;padding:13px;border-radius:13px;border:1.5px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);color:#fff;font-family:var(--fn2);font-size:.95rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:14px;transition:all .2s" onmouseover="this.style.background='rgba(255,255,255,.1)'" onmouseout="this.style.background='rgba(255,255,255,.05)'">
+            <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
+            Google se Login karo
+          </button>
+
+          <!-- ── Divider ── -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
+            <div style="flex:1;height:1px;background:rgba(255,255,255,.1)"></div>
+            <span style="font-size:.65rem;color:rgba(255,255,255,.25)">ya Mobile/Email se</span>
+            <div style="flex:1;height:1px;background:rgba(255,255,255,.1)"></div>
           </div>
 
           <!-- Register Form -->
@@ -1217,10 +1229,10 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
               </div>
             </div>
             <div class="nlp-field">
-              <div class="nlp-lbl">📱 Mobile Number <span class="nlp-lbl-req">*</span></div>
+              <div class="nlp-lbl">📱 Mobile / 📧 Email <span class="nlp-lbl-req">*</span></div>
               <div class="nlp-input-box">
-                <span class="nlp-input-icon">📱</span>
-                <input class="nlp-inp" type="tel" id="rPhone" placeholder="9876543210" maxlength="10" oninput="nlpCheckReg()">
+                <span class="nlp-input-icon" id="rPhoneIcon">📱</span>
+                <input class="nlp-inp" type="text" id="rPhone" placeholder="9876543210 ya email@gmail.com" oninput="nlpCheckReg();detectInputType('rPhone','rPhoneIcon')">
               </div>
             </div>
             <div class="nlp-field">
@@ -1264,12 +1276,12 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
           <!-- Login Form -->
           <div id="nlpLoginForm" style="display:none">
             <div class="nlp-form-title">वापस स्वागत है! 👋</div>
-            <div class="nlp-form-sub">Apna registered mobile aur password daalo</div>
+            <div class="nlp-form-sub">Mobile number / Email aur password daalo</div>
             <div class="nlp-field">
-              <div class="nlp-lbl">📱 Mobile Number <span class="nlp-lbl-req">*</span></div>
+              <div class="nlp-lbl">📱 Mobile / 📧 Email <span class="nlp-lbl-req">*</span></div>
               <div class="nlp-input-box">
-                <span class="nlp-input-icon">📱</span>
-                <input class="nlp-inp" type="tel" id="lPhone" placeholder="9876543210" maxlength="10" oninput="nlpCheckLogin()">
+                <span class="nlp-input-icon" id="lPhoneIcon">📱</span>
+                <input class="nlp-inp" type="text" id="lPhone" placeholder="9876543210 ya email@gmail.com" oninput="nlpCheckLogin();detectInputType('lPhone','lPhoneIcon')">
               </div>
             </div>
             <div class="nlp-field">
@@ -1524,6 +1536,14 @@ function showLoad(v,msg){var l=$('loading');if(l)l.style.display=v?'flex':'none'
 function shuf(a){var b=a.slice();for(var i=b.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=b[i];b[i]=b[j];b[j]=t;}return b;}
 function nlpHash(str){var h=0;for(var i=0;i<str.length;i++){h=((h<<5)-h)+str.charCodeAt(i);h|=0;}return Math.abs(h).toString(36);}
 
+/* ── User-specific localStorage key helper ──
+   Har user ka data uski apni ID se save hota hai
+   Ek phone pe 2 users ka data ALAG rahega ✅        */
+function uKey(base){
+  var uid = currentUser && currentUser.id ? currentUser.id : 'guest';
+  return base + '_' + uid;
+}
+
 /* SECTION 6: MODALS */
 function openModal(id){var m=$(id);if(m)m.classList.add('open');}
 function closeModal(id){var m=$(id);if(m)m.classList.remove('open');}
@@ -1665,7 +1685,7 @@ function renderQ(){
   if($('exQnum'))$('exQnum').textContent='Q '+(qi+1)+'/'+Qs.length;
   updatePalette();
 }
-function selAns(i){if(ans[qi]!==undefined)return;ans[qi]=i;var opts=document.querySelectorAll('#qArea .ex-opt');opts.forEach(function(btn,j){btn.className='ex-opt'+(j===i?' sel':'');});updatePalette();}
+function selAns(i){ans[qi]=i;var opts=document.querySelectorAll('#qArea .ex-opt');opts.forEach(function(btn,j){btn.className='ex-opt'+(j===i?' sel':'');});updatePalette();}
 function goQ(d){qi=Math.max(0,Math.min(Qs.length-1,qi+d));renderQ();}
 function jumpQ(i){qi=i;renderQ();}
 function buildPalette(){var g=$('palGrid');if(!g)return;g.innerHTML='';var lastSub=null;Qs.forEach(function(q,i){var s=q._sub;if(s!==lastSub){var lbl=document.createElement('div');lbl.className='pal-sub-lbl';lbl.textContent=(SINFO[s]&&SINFO[s].icon?SINFO[s].icon+' ':'')+s.charAt(0).toUpperCase()+s.slice(1);g.appendChild(lbl);lastSub=s;}var b=document.createElement('button');b.id='pb'+i;b.className='pbn'+(ans[i]!==undefined?' ans':'')+(i===qi?' cur':'');b.textContent=i+1;(function(x){b.onclick=function(){jumpQ(x);};})(i);g.appendChild(b);});updatePalCnt();}
@@ -1695,6 +1715,16 @@ function voiceRead(idx){
 function voiceReadText(idx, text){
   if(!voiceSynth){ toast('❌ Voice support nahi hai'); return; }
   if(voiceSynth.speaking){ voiceSynth.cancel(); if(currentVoiceBtn){ currentVoiceBtn.textContent='🔊 सुनो'; currentVoiceBtn.classList.remove('speaking'); currentVoiceBtn=null; } return; }
+  speakText(text, null);
+}
+
+function voiceReadIdx(idx){
+  if(!voiceSynth){ toast('❌ Voice support nahi hai'); return; }
+  if(voiceSynth.speaking){ voiceSynth.cancel(); return; }
+  var q=Qs[idx]; if(!q) return;
+  var ltrs=['A','B','C','D'];
+  var qOpts=q.options||q.o||[];
+  var text=(q.q||q.question||'')+'. Vikalp: '+qOpts.map(function(o,i){ return ltrs[i]+') '+o; }).join('. ');
   speakText(text, null);
 }
 
@@ -1752,21 +1782,80 @@ function doSubmit(){
   var pct=Math.round(cr/Qs.length*100);
   var tt=totalTime-timeLeft,tm=Math.floor(tt/60),ts=tt%60;
   var entry={mn:mockNo,label:subject==='full'?'🎯 Full Mock Test #'+mockNo:(SINFO[subject]?SINFO[subject].icon+' '+SINFO[subject].name+' Test #'+mockNo:subject+' Test #'+mockNo),subject:subject,cr:cr,wr:wr,sk:sk,total:Qs.length,pct:pct,sd:sd,timeTaken:tm+'m '+ts+'s',date:new Date().toLocaleDateString('hi-IN'),time:new Date().toLocaleTimeString('hi-IN',{hour:'2-digit',minute:'2-digit'})};
-  try{var h=JSON.parse(localStorage.getItem('pnst_history')||'[]');h.unshift(entry);if(h.length>100)h=h.slice(0,100);localStorage.setItem('pnst_history',JSON.stringify(h));}catch(e){}
+  try{var h=JSON.parse(localStorage.getItem(uKey('pnst_hist'))||'[]');h.unshift(entry);if(h.length>100)h=h.slice(0,100);localStorage.setItem(uKey('pnst_hist'),JSON.stringify(h));}catch(e){}
   if(currentUser&&db){fbAdd('test_results',{uid:currentUser.id,subject:entry.subject,score:entry.pct,correct:entry.cr,wrong:entry.wr,skipped:entry.sk,total:entry.total,date:entry.date,timeTaken:entry.timeTaken});var nT=(userProfile&&userProfile.total_tests||0)+1;var nB=Math.max(userProfile&&userProfile.best_score||0,pct);fbUpdate('users',currentUser.id,{total_tests:nT,best_score:nB,total_score:(userProfile&&userProfile.total_score||0)+pct});if(userProfile){userProfile.total_tests=nT;userProfile.best_score=nB;try{localStorage.setItem('pnst_guest_profile',JSON.stringify(userProfile));}catch(e){}}}
   showResult(cr,wr,sk,pct,sd,tm,ts);
 }
 
 /* SECTION 14: HISTORY */
-function renderHistory(){var c=$('histArea');if(!c)return;try{var hist=JSON.parse(localStorage.getItem('pnst_history')||'[]');if(!hist.length){c.innerHTML='<div style="text-align:center;padding:50px 20px;color:var(--tx2)"><div style="font-size:3.5rem;margin-bottom:12px">📭</div><div style="font-size:.92rem;font-weight:700;color:var(--tx)">कोई history नहीं</div><button onclick="beginTest(\'full\')" style="margin-top:16px;padding:11px 22px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;font-family:var(--fn2);font-size:.88rem;font-weight:700;cursor:pointer">🎯 Test दो अभी</button></div>';return;}var html='<div class="sec-t" style="margin-top:8px">📋 '+hist.length+' Tests Complete</div>';hist.forEach(function(h){var rc=h.pct>=60?'#22c55e':h.pct>=40?'#f59e0b':'#ef4444';html+='<div class="hist-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div style="font-size:.84rem;font-weight:700">'+h.label+'</div><div style="font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:'+rc+'">'+h.pct+'%</div></div><div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:.65rem;color:#22c55e">✅ '+h.cr+'</span><span style="font-size:.65rem;color:#ef4444">❌ '+h.wr+'</span><span style="font-size:.65rem;color:var(--tx3)">⬜ '+h.sk+'</span><span style="font-size:.65rem;color:var(--tx3)">⏱ '+(h.timeTaken||'--')+'</span><span style="font-size:.65rem;color:var(--tx3)">📅 '+h.date+'</span></div></div>';});c.innerHTML=html;}catch(e){c.innerHTML='<div style="padding:20px;color:var(--tx2)">History load nahi hui</div>';}}
-function clearHistory(){if(!confirm('Saari history delete karein?'))return;try{localStorage.removeItem('pnst_history');}catch(e){}renderHistory();toast('🗑️ History delete ho gayi');}
+function renderHistory(){var c=$('histArea');if(!c)return;try{var hist=JSON.parse(localStorage.getItem(uKey('pnst_hist'))||'[]');if(!hist.length){c.innerHTML='<div style="text-align:center;padding:50px 20px;color:var(--tx2)"><div style="font-size:3.5rem;margin-bottom:12px">📭</div><div style="font-size:.92rem;font-weight:700;color:var(--tx)">कोई history नहीं</div><button onclick="beginTest(\'full\')" style="margin-top:16px;padding:11px 22px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;border:none;font-family:var(--fn2);font-size:.88rem;font-weight:700;cursor:pointer">🎯 Test दो अभी</button></div>';return;}var html='<div class="sec-t" style="margin-top:8px">📋 '+hist.length+' Tests Complete</div>';hist.forEach(function(h){var rc=h.pct>=60?'#22c55e':h.pct>=40?'#f59e0b':'#ef4444';html+='<div class="hist-card"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px"><div style="font-size:.84rem;font-weight:700">'+h.label+'</div><div style="font-family:var(--fn2);font-size:1.1rem;font-weight:700;color:'+rc+'">'+h.pct+'%</div></div><div style="display:flex;gap:8px;flex-wrap:wrap"><span style="font-size:.65rem;color:#22c55e">✅ '+h.cr+'</span><span style="font-size:.65rem;color:#ef4444">❌ '+h.wr+'</span><span style="font-size:.65rem;color:var(--tx3)">⬜ '+h.sk+'</span><span style="font-size:.65rem;color:var(--tx3)">⏱ '+(h.timeTaken||'--')+'</span><span style="font-size:.65rem;color:var(--tx3)">📅 '+h.date+'</span></div></div>';});c.innerHTML=html;}catch(e){c.innerHTML='<div style="padding:20px;color:var(--tx2)">History load nahi hui</div>';}}
+function clearHistory(){if(!confirm('Saari history delete karein?'))return;try{localStorage.removeItem(uKey('pnst_hist'));}catch(e){}renderHistory();toast('🗑️ History delete ho gayi');}
 
 /* SECTION 15: LEADERBOARD */
-async function renderLeaderboard(){var c=$('lbArea');if(!c)return;c.innerHTML='<div style="text-align:center;padding:30px;color:var(--tx2)"><div style="font-size:2rem;margin-bottom:8px">⏳</div><div style="font-size:.84rem">Loading...</div></div>';try{var entries=[];if(db)entries=await fbQuery('users',null,null,'best_score',20);if(!entries||!entries.length){var users=JSON.parse(localStorage.getItem('pnst_users')||'{}');entries=Object.values(users).sort(function(a,b){return(b.best_score||0)-(a.best_score||0);}).slice(0,10);}if(!entries.length){c.innerHTML='<div style="text-align:center;padding:40px;color:var(--tx2)"><div style="font-size:3rem">🏆</div><div style="margin-top:10px;font-size:.9rem;font-weight:700;color:var(--tx)">Abhi koi nahi!</div><div style="font-size:.78rem;margin-top:6px">Register karo aur leaderboard pe aao!</div></div>';return;}var medals=['🥇','🥈','🥉'];var html='<div class="lb-card">';entries.forEach(function(e,i){var isMe=currentUser&&e.uid===currentUser.id;var photo=e.photo||'';var av=photo?'<img src="'+photo+'" style="width:36px;height:36px;border-radius:50%;object-fit:cover">':'<div class="lb-avatar">'+(e.name||'U').charAt(0).toUpperCase()+'</div>';var sc=e.best_score>=80?'#22c55e':e.best_score>=60?'#06b6d4':e.best_score>=40?'#f59e0b':'var(--tx)';html+='<div class="lb-row" style="'+(isMe?'background:rgba(59,130,246,.08);border-left:3px solid #3b82f6;':'')+'"><div class="lb-rank">'+(medals[i]||(i+1))+'</div>'+av+'<div class="lb-info"><div class="lb-name">'+(e.name||'Unknown')+(isMe?' <span style="font-size:.6rem;color:#3b82f6;font-weight:700">YOU</span>':'')+'</div><div class="lb-sub">'+(e.city||'India')+' • '+(e.total_tests||0)+' tests</div></div><div class="lb-score" style="color:'+sc+'">'+(e.best_score||0)+'%</div></div>';});html+='</div>';c.innerHTML=html;if(currentUser&&userProfile){var mr=$('myRankCard');var myRank=entries.findIndex(function(e){return e.uid===currentUser.id;});if(mr){mr.style.display='block';mr.innerHTML='<div style="display:flex;align-items:center;gap:10px"><div style="font-size:1.3rem">'+(myRank>=0?medals[myRank]||(myRank+1)+'th':'🎯')+'</div><div style="flex:1"><div style="font-size:.85rem;font-weight:700">'+userProfile.name+'</div><div style="font-size:.68rem;color:var(--tx2)">Best: '+(userProfile.best_score||0)+'%</div></div><div style="font-family:var(--fn2);font-size:1rem;font-weight:700;color:var(--blue)">'+(myRank>=0?'Rank #'+(myRank+1):'Register!')+'</div></div>';}}}catch(e){c.innerHTML='<div style="padding:20px;text-align:center;color:var(--tx2)">Load nahi hua <button onclick="renderLeaderboard()" style="margin-left:8px;padding:5px 12px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
+async function renderLeaderboard(){
+  var c=$('lbArea'); if(!c) return;
+  c.innerHTML='<div style="text-align:center;padding:30px;color:var(--tx2)"><div style="font-size:2rem;margin-bottom:8px">⏳</div><div style="font-size:.84rem">Loading...</div></div>';
+  try{
+    var entries=[];
+    // Firebase se fetch karo
+    if(db) entries=await fbQuery('users',null,null,'best_score',20);
+    // Fallback: localStorage
+    if(!entries||!entries.length){
+      var users=JSON.parse(localStorage.getItem('pnst_users')||'{}');
+      entries=Object.values(users);
+    }
+    // ── FIX: Sirf jinne test diye hon aur score > 0 unhe dikhao ──
+    entries=entries.filter(function(e){ return (e.total_tests||0)>0 && (e.best_score||0)>0; });
+    // ── High score pehle, 0% bilkul nahi ──
+    entries.sort(function(a,b){ return (b.best_score||0)-(a.best_score||0); });
+    entries=entries.slice(0,20);
+
+    if(!entries.length){
+      c.innerHTML='<div style="text-align:center;padding:40px;color:var(--tx2)"><div style="font-size:3rem">🏆</div><div style="margin-top:10px;font-size:.9rem;font-weight:700;color:var(--tx)">Abhi koi nahi!</div><div style="font-size:.78rem;margin-top:6px">Pehle test do aur leaderboard pe aao!</div></div>';
+      return;
+    }
+    var medals=['🥇','🥈','🥉'];
+    var html='<div class="lb-card">';
+    entries.forEach(function(e,i){
+      var isMe=currentUser&&e.uid===currentUser.id;
+      var photo=e.photo||'';
+      var avBorder=isMe?'2px solid #3b82f6':'2px solid rgba(255,255,255,.2)';
+      var av=photo
+        ?'<img src="'+photo+'" style="width:36px;height:36px;border-radius:50%;object-fit:cover;border:'+avBorder+'">'
+        :'<div class="lb-avatar" style="'+(isMe?'background:linear-gradient(135deg,#3b82f6,#06b6d4);':'')+'">'+(e.name||'U').charAt(0).toUpperCase()+'</div>';
+      var sc=e.best_score>=80?'#22c55e':e.best_score>=60?'#06b6d4':e.best_score>=40?'#f59e0b':'var(--tx)';
+      html+='<div class="lb-row" style="'+(isMe?'background:rgba(59,130,246,.08);border-left:3px solid #3b82f6;':'')
+        +'"><div class="lb-rank">'+(medals[i]||(i+1))+'</div>'
+        +av
+        +'<div class="lb-info"><div class="lb-name">'+(e.name||'Unknown')+(isMe?' <span style="font-size:.6rem;color:#3b82f6;font-weight:700">YOU</span>':'')+'</div>'
+        +'<div class="lb-sub">'+(e.city||'India')+' • '+(e.total_tests||0)+' tests</div></div>'
+        +'<div class="lb-score" style="color:'+sc+'">'+(e.best_score||0)+'%</div></div>';
+    });
+    html+='</div>';
+    c.innerHTML=html;
+
+    // My rank card
+    if(currentUser&&userProfile){
+      var mr=$('myRankCard');
+      var myRank=entries.findIndex(function(e){ return e.uid===currentUser.id; });
+      if(mr){
+        mr.style.display='block';
+        mr.innerHTML='<div style="display:flex;align-items:center;gap:10px">'
+          +'<div style="font-size:1.3rem">'+(myRank>=0?(medals[myRank]||(myRank+1)+'th'):'🎯')+'</div>'
+          +'<div style="flex:1"><div style="font-size:.85rem;font-weight:700">'+userProfile.name+'</div>'
+          +'<div style="font-size:.68rem;color:var(--tx2)">Best: '+(userProfile.best_score||0)+'% • '+(userProfile.total_tests||0)+' tests</div></div>'
+          +'<div style="font-family:var(--fn2);font-size:1rem;font-weight:700;color:var(--blue)">'
+          +(myRank>=0?'Rank #'+(myRank+1):(userProfile.best_score>0?'Rank dekho!':'Test do pehle!'))+'</div></div>';
+      }
+    }
+  }catch(e){
+    c.innerHTML='<div style="padding:20px;text-align:center;color:var(--tx2)">Load nahi hua <button onclick="renderLeaderboard()" style="margin-left:8px;padding:5px 12px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';
+  }
+}
 
 /* SECTION 16: DAILY QUIZ */
-async function loadDailyQuiz(){var card=$('dailyQuizCard');if(!card)return;var content=$('dqContent');if(!content)return;var daySubjects=['biology','chemistry','physics','gk','english','biology','chemistry'];var todaySub=daySubjects[new Date().getDay()]||'biology';var si=SINFO[todaySub];var dqKey='pnst_dq_'+new Date().toDateString();var dqDone=false;try{dqDone=localStorage.getItem(dqKey)==='done';}catch(e){}if($('dq-badge-el'))$('dq-badge-el').textContent='📅 आज का Quiz — '+si.icon+' '+si.name;content.innerHTML='<div style="text-align:center;padding:14px;color:var(--tx2);font-size:.8rem">⏳ Loading...</div>';try{var res=await fetch(FILES[todaySub]);if(!res.ok)throw new Error('File not found');var data=await res.json();if(!data.questions||!data.questions.length)throw new Error('No questions');var seed=new Date().toDateString().split('').reduce(function(a,c){return a+c.charCodeAt(0);},0);var q=data.questions[seed%data.questions.length];var correct=q.answer!==undefined?q.answer:q.c;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];if(dqDone){var saved=null;try{saved=JSON.parse(localStorage.getItem(dqKey+'_ans'));}catch(e){}var optsHtml='';qOpts.forEach(function(o,i){var iC=(i===correct),iU=(saved!==null&&i===saved);var bg=iC?'rgba(34,197,94,.2)':iU?'rgba(239,68,68,.2)':'rgba(255,255,255,.04)';var bc=iC?'#22c55e':iU?'#ef4444':'var(--card-border)';var tc=iC?'#22c55e':iU?'#ef4444':'var(--tx2)';optsHtml+='<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:'+bg+';border:1.5px solid '+bc+';border-radius:9px;margin-bottom:6px;font-size:.82rem;color:'+tc+'">'+ltrs[i]+') '+o+(iC?' ✅':'')+'</div>';});content.innerHTML='<div style="font-size:.82rem;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.6">'+si.icon+' '+(q.q||q.question||'')+'</div>'+optsHtml+'<div style="margin-top:8px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Aaj complete! Kal naya sawaal 🎯</div>';return;}var timerLeft=30;var optsHtml='';qOpts.forEach(function(o,i){optsHtml+='<button id="dqOpt_'+i+'" onclick="answerDQ('+i+','+correct+')" style="display:block;width:100%;text-align:left;padding:10px 13px;margin-bottom:7px;border-radius:10px;border:1.5px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.83rem;cursor:pointer;transition:all .2s">'+ltrs[i]+') '+o+'</button>';});content.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:.68rem;color:var(--tx2)">'+si.icon+' '+si.name+'</div><div id="dqTimer" style="font-family:var(--fn2);font-size:.85rem;font-weight:700;color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:3px 10px">⏱ 30s</div></div><div style="font-size:.85rem;font-weight:600;color:var(--tx);margin-bottom:12px;line-height:1.65">'+(q.q||q.question||'')+'</div>'+optsHtml+'<div id="dqResult" style="display:none;margin-top:8px;padding:10px 12px;border-radius:9px;font-size:.8rem;font-weight:700"></div><div id="dqAiBox" style="display:none;margin-top:10px"></div>';window._dqKey=dqKey;window._dqQ=q;window._dqSub=todaySub;window._dqCorrect=correct;window._dqTimerInterval=setInterval(function(){timerLeft--;var tel=$('dqTimer');if(tel){tel.textContent='⏱ '+timerLeft+'s';if(timerLeft<=10){tel.style.color='#ef4444';tel.style.borderColor='rgba(239,68,68,.4)';tel.style.background='rgba(239,68,68,.1)';}}if(timerLeft<=0){clearInterval(window._dqTimerInterval);answerDQ(-1,correct);}},1000);}catch(e){content.innerHTML='<div style="text-align:center;padding:14px;font-size:.8rem;color:var(--tx2)">❌ Quiz load nahi hui<br><button onclick="loadDailyQuiz()" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
-function answerDQ(chosen,correct){if(window._dqTimerInterval)clearInterval(window._dqTimerInterval);var tel=$('dqTimer');if(tel)tel.style.display='none';var ltrs=['A','B','C','D'];for(var i=0;i<4;i++){var btn=document.getElementById('dqOpt_'+i);if(!btn)continue;btn.disabled=true;btn.style.cursor='default';if(i===correct){btn.style.background='rgba(34,197,94,.2)';btn.style.borderColor='#22c55e';btn.style.color='#22c55e';}else if(i===chosen&&i!==correct){btn.style.background='rgba(239,68,68,.2)';btn.style.borderColor='#ef4444';btn.style.color='#ef4444';}else{btn.style.opacity='.5';}}var r=$('dqResult');if(r){r.style.display='block';if(chosen<0){r.innerHTML='⏰ Time out! Sahi: '+ltrs[correct];r.style.background='rgba(245,158,11,.1)';r.style.color='#f59e0b';}else if(chosen===correct){r.innerHTML='🎉 Sahi jawab! ✅';r.style.background='rgba(34,197,94,.1)';r.style.color='#22c55e';}else{var q2=window._dqQ;var opts2=q2?q2.options||q2.o||[]:[];r.innerHTML='❌ Galat! Sahi: '+ltrs[correct]+') '+(opts2[correct]||'');r.style.background='rgba(239,68,68,.1)';r.style.color='#ef4444';}}try{if(window._dqKey){localStorage.setItem(window._dqKey,'done');localStorage.setItem(window._dqKey+'_ans',JSON.stringify(chosen));}var streak=0;try{streak=parseInt(localStorage.getItem('pnst_dq_streak')||'0');}catch(e){}var lastDQ='';try{lastDQ=localStorage.getItem('pnst_dq_last')||'';}catch(e){}var yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);if(lastDQ===yesterday.toDateString())streak++;else if(lastDQ!==new Date().toDateString())streak=1;localStorage.setItem('pnst_dq_streak',streak);localStorage.setItem('pnst_dq_last',new Date().toDateString());}catch(e){}var aiBox=$('dqAiBox');if(aiBox){aiBox.style.display='block';aiBox.innerHTML='<button onclick="loadDQAI()" style="width:100%;padding:9px;border-radius:9px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-family:var(--fn);font-size:.78rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><span>✨</span><span>🤖 AI Explanation देखो</span></button><div id="dqAiResult" style="display:none;margin-top:8px;font-size:.8rem;line-height:1.7;color:var(--tx);padding:10px;background:rgba(168,85,247,.05);border:1px solid rgba(168,85,247,.15);border-radius:9px"></div>';}}
+async function loadDailyQuiz(){var card=$('dailyQuizCard');if(!card)return;var content=$('dqContent');if(!content)return;var daySubjects=['biology','chemistry','physics','gk','english','biology','chemistry'];var todaySub=daySubjects[new Date().getDay()]||'biology';var si=SINFO[todaySub];var dqKey=uKey('pnst_dq')+'_'+new Date().toDateString();var dqDone=false;try{dqDone=localStorage.getItem(dqKey)==='done';}catch(e){}if($('dq-badge-el'))$('dq-badge-el').textContent='📅 आज का Quiz — '+si.icon+' '+si.name;content.innerHTML='<div style="text-align:center;padding:14px;color:var(--tx2);font-size:.8rem">⏳ Loading...</div>';try{var res=await fetch(FILES[todaySub]);if(!res.ok)throw new Error('File not found');var data=await res.json();if(!data.questions||!data.questions.length)throw new Error('No questions');var seed=new Date().toDateString().split('').reduce(function(a,c){return a+c.charCodeAt(0);},0);var q=data.questions[seed%data.questions.length];var correct=q.answer!==undefined?q.answer:q.c;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];if(dqDone){var saved=null;try{saved=JSON.parse(localStorage.getItem(dqKey+'_ans'));}catch(e){}var optsHtml='';qOpts.forEach(function(o,i){var iC=(i===correct),iU=(saved!==null&&i===saved);var bg=iC?'rgba(34,197,94,.2)':iU?'rgba(239,68,68,.2)':'rgba(255,255,255,.04)';var bc=iC?'#22c55e':iU?'#ef4444':'var(--card-border)';var tc=iC?'#22c55e':iU?'#ef4444':'var(--tx2)';optsHtml+='<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:'+bg+';border:1.5px solid '+bc+';border-radius:9px;margin-bottom:6px;font-size:.82rem;color:'+tc+'">'+ltrs[i]+') '+o+(iC?' ✅':'')+'</div>';});content.innerHTML='<div style="font-size:.82rem;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.6">'+si.icon+' '+(q.q||q.question||'')+'</div>'+optsHtml+'<div style="margin-top:8px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Aaj complete! Kal naya sawaal 🎯</div>';return;}var timerLeft=30;var optsHtml='';qOpts.forEach(function(o,i){optsHtml+='<button id="dqOpt_'+i+'" onclick="answerDQ('+i+','+correct+')" style="display:block;width:100%;text-align:left;padding:10px 13px;margin-bottom:7px;border-radius:10px;border:1.5px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.83rem;cursor:pointer;transition:all .2s">'+ltrs[i]+') '+o+'</button>';});content.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:.68rem;color:var(--tx2)">'+si.icon+' '+si.name+'</div><div id="dqTimer" style="font-family:var(--fn2);font-size:.85rem;font-weight:700;color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:3px 10px">⏱ 30s</div></div><div style="font-size:.85rem;font-weight:600;color:var(--tx);margin-bottom:12px;line-height:1.65">'+(q.q||q.question||'')+'</div>'+optsHtml+'<div id="dqResult" style="display:none;margin-top:8px;padding:10px 12px;border-radius:9px;font-size:.8rem;font-weight:700"></div><div id="dqAiBox" style="display:none;margin-top:10px"></div>';window._dqKey=dqKey;window._dqQ=q;window._dqSub=todaySub;window._dqCorrect=correct;window._dqTimerInterval=setInterval(function(){timerLeft--;var tel=$('dqTimer');if(tel){tel.textContent='⏱ '+timerLeft+'s';if(timerLeft<=10){tel.style.color='#ef4444';tel.style.borderColor='rgba(239,68,68,.4)';tel.style.background='rgba(239,68,68,.1)';}}if(timerLeft<=0){clearInterval(window._dqTimerInterval);answerDQ(-1,correct);}},1000);}catch(e){content.innerHTML='<div style="text-align:center;padding:14px;font-size:.8rem;color:var(--tx2)">❌ Quiz load nahi hui<br><button onclick="loadDailyQuiz()" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
+function answerDQ(chosen,correct){if(window._dqTimerInterval)clearInterval(window._dqTimerInterval);var tel=$('dqTimer');if(tel)tel.style.display='none';var ltrs=['A','B','C','D'];for(var i=0;i<4;i++){var btn=document.getElementById('dqOpt_'+i);if(!btn)continue;btn.disabled=true;btn.style.cursor='default';if(i===correct){btn.style.background='rgba(34,197,94,.2)';btn.style.borderColor='#22c55e';btn.style.color='#22c55e';}else if(i===chosen&&i!==correct){btn.style.background='rgba(239,68,68,.2)';btn.style.borderColor='#ef4444';btn.style.color='#ef4444';}else{btn.style.opacity='.5';}}var r=$('dqResult');if(r){r.style.display='block';if(chosen<0){r.innerHTML='⏰ Time out! Sahi: '+ltrs[correct];r.style.background='rgba(245,158,11,.1)';r.style.color='#f59e0b';}else if(chosen===correct){r.innerHTML='🎉 Sahi jawab! ✅';r.style.background='rgba(34,197,94,.1)';r.style.color='#22c55e';}else{var q2=window._dqQ;var opts2=q2?q2.options||q2.o||[]:[];r.innerHTML='❌ Galat! Sahi: '+ltrs[correct]+') '+(opts2[correct]||'');r.style.background='rgba(239,68,68,.1)';r.style.color='#ef4444';}}try{if(window._dqKey){localStorage.setItem(window._dqKey,'done');localStorage.setItem(window._dqKey+'_ans',JSON.stringify(chosen));}var streak=0;try{streak=parseInt(localStorage.getItem(uKey('pnst_dq_streak'))||'0');}catch(e){}var lastDQ='';try{lastDQ=localStorage.getItem(uKey('pnst_dq_last'))||'';}catch(e){}var yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);if(lastDQ===yesterday.toDateString())streak++;else if(lastDQ!==new Date().toDateString())streak=1;localStorage.setItem(uKey('pnst_dq_streak'),streak);localStorage.setItem(uKey('pnst_dq_last'),new Date().toDateString());}catch(e){}var aiBox=$('dqAiBox');if(aiBox){aiBox.style.display='block';aiBox.innerHTML='<button onclick="loadDQAI()" style="width:100%;padding:9px;border-radius:9px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-family:var(--fn);font-size:.78rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><span>✨</span><span>🤖 AI Explanation देखो</span></button><div id="dqAiResult" style="display:none;margin-top:8px;font-size:.8rem;line-height:1.7;color:var(--tx);padding:10px;background:rgba(168,85,247,.05);border:1px solid rgba(168,85,247,.15);border-radius:9px"></div>';}}
 async function loadDQAI(){
   var q=window._dqQ; if(!q) return;
   var box=$('dqAiResult');
@@ -1802,7 +1891,6 @@ async function callAI(prompt){
     var r=await callGroq(prompt);
     if(r&&r.trim()) return r;
   }catch(e){
-    console.warn('Groq failed:',e.message);
   }
   // Groq fail → Gemini try karo
   if(GEMINI_KEY){
@@ -1810,7 +1898,6 @@ async function callAI(prompt){
       var r2=await callGemini(prompt);
       if(r2&&r2.trim()) return r2;
     }catch(e2){
-      console.warn('Gemini failed:',e2.message);
     }
   }
   throw new Error('AI unavailable. Internet check karo ya kal try karo.');
@@ -1916,7 +2003,7 @@ function showResult(cr,wr,sk,pct,sd,tm,ts){
   var ringC=301.6,ringOff=ringC*(1-pct/100);
   var subs=subject==='full'?SORDER:Object.keys(sd).filter(function(s){return sd[s]&&sd[s].total>0;});
   // Comparison
-  var compHtml='';try{var hist=JSON.parse(localStorage.getItem('pnst_history')||'[]');if(hist.length>=1){var prev=hist[0];var diff=pct-prev.pct;var dc=diff>0?'#22c55e':diff<0?'#ef4444':'#94a3b8';var di=diff>0?'▲':diff<0?'▼':'●';compHtml='<div style="background:rgba(255,255,255,.04);border:1px solid var(--card-border);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:12px"><div style="font-size:1.6rem">📊</div><div style="flex:1"><div style="font-size:.75rem;font-weight:700">Pichle Test se Comparison</div><div style="font-size:.68rem;color:var(--tx2);margin-top:2px">Pichla: '+prev.pct+'% → Abhi: '+pct+'%</div></div><div style="font-family:var(--fn2);font-size:1.2rem;font-weight:700;color:'+dc+'">'+di+' '+(diff>0?'+':'')+diff+'%</div></div>';}}catch(e){}
+  var compHtml='';try{var hist=JSON.parse(localStorage.getItem(uKey('pnst_hist'))||'[]');if(hist.length>=1){var prev=hist[0];var diff=pct-prev.pct;var dc=diff>0?'#22c55e':diff<0?'#ef4444':'#94a3b8';var di=diff>0?'▲':diff<0?'▼':'●';compHtml='<div style="background:rgba(255,255,255,.04);border:1px solid var(--card-border);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:12px"><div style="font-size:1.6rem">📊</div><div style="flex:1"><div style="font-size:.75rem;font-weight:700">Pichle Test se Comparison</div><div style="font-size:.68rem;color:var(--tx2);margin-top:2px">Pichla: '+prev.pct+'% → Abhi: '+pct+'%</div></div><div style="font-family:var(--fn2);font-size:1.2rem;font-weight:700;color:'+dc+'">'+di+' '+(diff>0?'+':'')+diff+'%</div></div>';}}catch(e){}
   // Weak subject
   var weakSub=null,weakPct=100;subs.forEach(function(s){var d=sd[s];if(!d||!d.total)return;var p=Math.round(d.cr/d.total*100);if(p<weakPct){weakPct=p;weakSub=s;}});
   var weakHtml='';if(weakSub&&weakPct<60){var wsi=SINFO[weakSub]||{icon:'📚',name:weakSub};weakHtml='<div style="background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.2);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;align-items:center;gap:12px"><div style="font-size:1.6rem">⚠️</div><div style="flex:1"><div style="font-size:.75rem;font-weight:700;color:#ef4444">Weak: '+wsi.icon+' '+wsi.name+'</div><div style="font-size:.68rem;color:var(--tx2);margin-top:2px">Score: '+weakPct+'% — Zyada practice karo!</div></div><button onclick="beginTest(\''+weakSub+'\')" style="padding:6px 12px;border-radius:8px;background:rgba(239,68,68,.15);border:1px solid rgba(239,68,68,.3);color:#ef4444;font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);flex-shrink:0">Practice →</button></div>';}
@@ -1963,10 +2050,9 @@ function toggleReview(){
       optsHtml+='<div style="display:flex;align-items:flex-start;gap:9px;padding:9px 12px;background:'+bg2+';border-radius:9px;border:1.5px solid '+brd+';margin-bottom:6px;font-size:.84rem;color:'+tc+'"><div style="width:22px;height:22px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:800;flex-shrink:0;'+dot+'">'+ltrs[j]+'</div><span>'+o+'</span>'+(iC?'<span style="margin-left:auto;font-size:.7rem;color:#22c55e;font-weight:700;flex-shrink:0">✅ Correct</span>':'')+(iU&&!iC?'<span style="margin-left:auto;font-size:.7rem;color:#ef4444;font-weight:700;flex-shrink:0">❌ Your Ans</span>':'')+'</div>';
     });
     // Voice + AI buttons for review
-    var reviewBtns=''
-      +'<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
-        +'<button class="voice-btn" onclick="voiceReadText(\''+i+'\',\''+((q.q||q.question||'').replace(/'/g,"\\'").replace(/\n/g,' ').substring(0,100))+'\')">🔊 सुनो</button>'
-        +'<button class="hint-btn" onclick="showHintText(\''+q._sub+'\')">💡 Hint</button>'
+    var reviewBtns='<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
+      +'<button class="voice-btn" onclick="voiceReadIdx('+i+')">🔊 सुनो</button>'
+      +'<button class="hint-btn" onclick="showHintText(\''+q._sub+'\')">💡 Hint</button>'
       +'</div>';
     var aiBtn='<button class="ai-sol-btn" id="raiBtn_'+i+'" onclick="toggleAISolution('+i+',true)"><span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span></button>'
       +'<div class="ai-sol-panel" id="raiPanel_'+i+'"><div id="raiBody_'+i+'"></div></div>';
@@ -2110,39 +2196,51 @@ function nlpClear(id){ var el=$(id); if(el){ el.style.display='none'; el.textCon
 
 function nlpCheckReg(){
   var n=$('rName'),p=$('rPhone'),pw=$('rPass'),b=$('rBtn');
-  if(b) b.disabled = !(n&&n.value.trim().length>=2 && p&&/^[0-9]{10}$/.test(p.value.trim()) && pw&&pw.value.length>=4);
+  if(!n||!p||!pw||!b) return;
+  var val=p.value.trim();
+  var validId=/^[0-9]{10}$/.test(val)||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  b.disabled=!(n.value.trim().length>=2 && validId && pw.value.length>=4);
 }
 function nlpCheckLogin(){
   var p=$('lPhone'),pw=$('lPass'),b=$('lBtn');
-  if(b) b.disabled = !(p&&/^[0-9]{10}$/.test(p.value.trim()) && pw&&pw.value.length>=4);
+  if(!p||!pw||!b) return;
+  var val=p.value.trim();
+  var validId=/^[0-9]{10}$/.test(val)||/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+  b.disabled=!(validId && pw.value.length>=4);
+}
+function detectInputType(inputId, iconId){
+  var el=$(inputId), ic=$(iconId); if(!el||!ic) return;
+  var val=el.value.trim();
+  if(val.includes('@')){ ic.textContent='📧'; }
+  else { ic.textContent='📱'; }
 }
 
 function nlpRegister(){
   nlpClear('rErr');
   var nm=$('rName'),ph=$('rPhone'),pw=$('rPass'),ct=$('rCity'),yr=$('rYear');
   if(!nm||!ph||!pw) return;
-  var num=ph.value.trim();
+  var inputVal=ph.value.trim();
   var btn=$('rBtn'); if(btn){ btn.disabled=true; btn.classList.add('loading'); }
+  var isEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputVal);
+  var isPhone=/^[0-9]{10}$/.test(inputVal);
+  if(!isEmail&&!isPhone){ nlpMsg('rErr','err','\u274C Valid mobile (10 digits) ya email daalo.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
+  var lookupKey=inputVal;
   var users={}; try{users=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){}
-  if(users[num]){
-    nlpMsg('rErr','inf','✅ Yeh number registered hai! Login tab mein jaao.');
+  if(users[lookupKey]){
+    nlpMsg('rErr','inf','\u2705 Pehle se registered! Login tab mein jaao.');
     if(btn){ btn.disabled=false; btn.classList.remove('loading'); }
-    setTimeout(function(){ nlpSwitch('login'); var lp=$('lPhone'); if(lp) lp.value=num; }, 1500);
+    setTimeout(function(){ nlpSwitch('login'); var lp=$('lPhone'); if(lp) lp.value=inputVal; }, 1500);
     return;
   }
-  var uniqueId='user_'+num+'_'+Date.now();
+  var uniqueId='user_'+Date.now()+'_'+Math.random().toString(36).substr(2,6);
   var profile={
-    name:nm.value.trim(), phone:num, city:ct?ct.value.trim():'',
-    uid:uniqueId, email:num+'@pnst.app',
-    target_year:yr?yr.value:'2026',
-    total_tests:0, best_score:0, total_score:0, target_score:75,
-    hash:nlpHash(num+pw.value),
-    joinDate:new Date().toLocaleDateString('hi-IN'),
-    createdAt:new Date().toISOString()
+    name:nm.value.trim(), phone:isPhone?inputVal:'', email:isEmail?inputVal:(inputVal+'@pnst.app'),
+    loginKey:lookupKey, city:ct?ct.value.trim():'', uid:uniqueId,
+    target_year:yr?yr.value:'2026', total_tests:0, best_score:0, total_score:0, target_score:75,
+    hash:nlpHash(lookupKey+pw.value), joinDate:new Date().toLocaleDateString('hi-IN'), createdAt:new Date().toISOString()
   };
-  users[num]=profile;
+  users[lookupKey]=profile;
   try{ localStorage.setItem('pnst_users',JSON.stringify(users)); localStorage.setItem('pnst_guest_profile',JSON.stringify(profile)); localStorage.removeItem('pnst_tc'); localStorage.removeItem('pnst_nv'); }catch(e){}
-  // Firebase save
   fbSet('users',profile.uid,profile);
   if(btn){ btn.disabled=false; btn.classList.remove('loading'); }
   userProfile=profile; currentUser={id:profile.uid,email:profile.email,isGuest:true};
@@ -2152,35 +2250,73 @@ function nlpRegister(){
 function nlpLogin(){
   nlpClear('lErr');
   var ph=$('lPhone'),pw=$('lPass'); if(!ph||!pw) return;
-  var num=ph.value.trim();
+  var inputVal=ph.value.trim();
   var btn=$('lBtn'); if(btn){ btn.disabled=true; btn.classList.add('loading'); }
+  var isEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputVal);
+  var isPhone=/^[0-9]{10}$/.test(inputVal);
+  if(!isEmail&&!isPhone){ nlpMsg('lErr','err','\u274C Valid mobile ya email daalo.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
+  var lookupKey=inputVal;
   var users={}; try{users=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){}
-  if(users[num]){
-    if(users[num].hash!==nlpHash(num+pw.value)){ nlpMsg('lErr','err','❌ Password galat hai!'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
-    var profile=users[num];
+  if(users[lookupKey]){
+    if(users[lookupKey].hash!==nlpHash(lookupKey+pw.value)){ nlpMsg('lErr','err','\u274C Password galat hai!'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
+    var profile=users[lookupKey];
     userProfile=profile; currentUser={id:profile.uid,email:profile.email,isGuest:true};
     try{ localStorage.setItem('pnst_guest_profile',JSON.stringify(profile)); localStorage.removeItem('pnst_tc'); localStorage.removeItem('pnst_nv'); }catch(e){}
-    // Firebase sync
     fbGet('users',profile.uid).then(function(fbData){ if(fbData&&fbData.best_score>=(userProfile.best_score||0)){ Object.assign(userProfile,{total_tests:fbData.total_tests||userProfile.total_tests,best_score:fbData.best_score,total_score:fbData.total_score||userProfile.total_score,photo:fbData.photo||userProfile.photo}); try{localStorage.setItem('pnst_guest_profile',JSON.stringify(userProfile));}catch(e){} updateBottomNavProfile(); } });
     if(btn){ btn.disabled=false; btn.classList.remove('loading'); }
     onLoginSuccess(); return;
   }
-  // Firebase search
   if(db){
-    db.collection('users').where('phone','==',num).limit(1).get()
+    var field=isPhone?'phone':'email';
+    db.collection('users').where(field,'==',inputVal).limit(1).get()
       .then(function(snap){
-        if(snap.empty){ nlpMsg('lErr','err','❌ Yeh number registered nahi hai. Pehle Register karein.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
+        if(snap.empty){ nlpMsg('lErr','err','\u274C Account nahi mila. Pehle Register karein.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
         var fbProfile=snap.docs[0].data();
-        if(fbProfile.hash!==nlpHash(num+pw.value)){ nlpMsg('lErr','err','❌ Password galat hai!'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
-        var users2={}; try{users2=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){} users2[num]=fbProfile;
-        try{ localStorage.setItem('pnst_users',JSON.stringify(users2)); localStorage.setItem('pnst_guest_profile',JSON.stringify(fbProfile)); localStorage.removeItem('pnst_tc'); localStorage.removeItem('pnst_nv'); }catch(e){}
+        var hashKey=fbProfile.loginKey||inputVal;
+        if(fbProfile.hash!==nlpHash(hashKey+pw.value)){ nlpMsg('lErr','err','\u274C Password galat hai!'); if(btn){btn.disabled=false;btn.classList.remove('loading');} return; }
+        var u2={}; try{u2=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){} u2[lookupKey]=fbProfile;
+        try{ localStorage.setItem('pnst_users',JSON.stringify(u2)); localStorage.setItem('pnst_guest_profile',JSON.stringify(fbProfile)); localStorage.removeItem('pnst_tc'); localStorage.removeItem('pnst_nv'); }catch(e){}
         userProfile=fbProfile; currentUser={id:fbProfile.uid,email:fbProfile.email,isGuest:true};
         if(btn){ btn.disabled=false; btn.classList.remove('loading'); }
         onLoginSuccess();
       })
-      .catch(function(){ nlpMsg('lErr','err','❌ Network error. Check internet.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} });
+      .catch(function(){ nlpMsg('lErr','err','\u274C Network error. Internet check karo.'); if(btn){btn.disabled=false;btn.classList.remove('loading');} });
   } else {
-    nlpMsg('lErr','err','❌ Yeh number registered nahi hai.'); if(btn){btn.disabled=false;btn.classList.remove('loading');}
+    nlpMsg('lErr','err','\u274C Account nahi mila. Pehle Register karein.'); if(btn){btn.disabled=false;btn.classList.remove('loading');}
+  }
+}
+
+async function googleLogin(){
+  if(!fbAuth){ toast('\u274C Firebase connect nahi hai'); return; }
+  try{
+    var provider=new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({prompt:'select_account'});
+    var result=await fbAuth.signInWithPopup(provider);
+    var user=result.user;
+    if(!user) throw new Error('Login fail');
+    var existingProfile=await fbGet('users',user.uid);
+    var profile;
+    if(existingProfile){
+      profile=existingProfile;
+    } else {
+      profile={
+        name:user.displayName||'User', email:user.email||'', phone:'',
+        loginKey:user.email||user.uid, uid:user.uid, photo:user.photoURL||'',
+        city:'', target_year:'2026', total_tests:0, best_score:0, total_score:0, target_score:75,
+        isGoogle:true, joinDate:new Date().toLocaleDateString('hi-IN'), createdAt:new Date().toISOString()
+      };
+      await fbSet('users',user.uid,profile);
+    }
+    var users={}; try{users=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){}
+    users[user.uid]=profile;
+    try{ localStorage.setItem('pnst_users',JSON.stringify(users)); localStorage.setItem('pnst_guest_profile',JSON.stringify(profile)); localStorage.removeItem('pnst_tc'); localStorage.removeItem('pnst_nv'); }catch(e){}
+    userProfile=profile; currentUser={id:user.uid,email:user.email||'',isGoogle:true};
+    onLoginSuccess();
+  }catch(e){
+    var msg=e.code==='auth/popup-closed-by-user'?'\u274C Popup band kar diya. Dobara try karo.':
+            e.code==='auth/popup-blocked'?'\u274C Popup block hua. Browser settings check karo.':
+            '\u274C Google login fail: '+(e.message||'Unknown');
+    toast(msg);
   }
 }
 
@@ -2189,7 +2325,7 @@ function nlpForgot(){ showLScreen('ls-forgot'); }
 function nlpResetPass(){
   var ph=$('forgotPhone'),npw=$('forgotNewPass'); if(!ph||!npw) return;
   var num=ph.value.trim();
-  if(!/^[0-9]{10}$/.test(num)){ nlpMsg('forgotErr','err','❌ Valid 10 digit number daalo.'); return; }
+  var isPhone10=/^[0-9]{10}$/.test(num); var isValidEmail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(num); if(!isPhone10&&!isValidEmail){ nlpMsg('forgotErr','err','❌ Valid mobile number ya email daalo.'); return; }
   if(npw.value.length<4){ nlpMsg('forgotErr','err','❌ Password min 4 characters.'); return; }
   var users={}; try{users=JSON.parse(localStorage.getItem('pnst_users')||'{}');}catch(e){}
   var newHash=nlpHash(num+npw.value);
@@ -2223,6 +2359,9 @@ function launchConfetti(){
 }
 
 function onLoginSuccess(){
+  // Naye user ke liye AI cache reset karo
+  aiCache={};
+  notesAiCache={};
   var nm=userProfile&&userProfile.name?userProfile.name:'User';
   var sw=$('successWelcome'); if(sw) sw.textContent='Welcome, '+nm+'! 🎉';
   showLScreen('ls-success'); launchConfetti();
@@ -2267,11 +2406,11 @@ function renderProfile(){
   }
   if($('profName'))    $('profName').textContent    = nm;
   if($('profHdrName')) $('profHdrName').textContent = nm;
-  if($('profEmail'))   $('profEmail').textContent   = userProfile.phone?'📱 '+userProfile.phone:'';
+  if($('profEmail'))   $('profEmail').textContent   = userProfile.phone?'📱 '+userProfile.phone:(userProfile.email&&!userProfile.email.includes('@pnst.app')?'📧 '+userProfile.email:'');
   if($('profCityBadge'))$('profCityBadge').textContent='📍 '+(userProfile.city||'--');
   if($('profYearBadge'))$('profYearBadge').textContent='🎯 PNST '+(userProfile.target_year||'2026');
   try{
-    var hist=JSON.parse(localStorage.getItem('pnst_history')||'[]');
+    var hist=JSON.parse(localStorage.getItem(uKey('pnst_hist'))||'[]');
     var tests=hist.length;
     var avg=tests>0?Math.round(hist.reduce(function(s,h){return s+h.pct;},0)/tests):0;
     var best=tests>0?Math.max.apply(null,hist.map(function(h){return h.pct;})):0;
@@ -2361,7 +2500,7 @@ function renderBadges(tests,best,streak){
   grid.innerHTML=html;
 }
 
-function openEditModal(){ if(!userProfile&&!currentUser){nav('login');return;} if($('editName'))$('editName').value=userProfile&&userProfile.name||''; if($('editCity'))$('editCity').value=userProfile&&userProfile.city||''; if($('editYear'))$('editYear').value=userProfile&&userProfile.target_year||'2026'; openModal('editModal'); }
+function openEditModal(){ if(!currentUser||!userProfile){nav('login');return;} if($('editName'))$('editName').value=userProfile.name||''; if($('editCity'))$('editCity').value=userProfile.city||''; if($('editYear'))$('editYear').value=userProfile.target_year||'2026'; openModal('editModal'); }
 
 function saveEditProfile(){
   var en=$('editName'),ec=$('editCity'),ey=$('editYear');
@@ -2419,6 +2558,10 @@ function requestNotifications(){
 
 function doLogout(){
   if(!confirm('Logout karna chahte hain?')) return;
+  // AI cache clear karo — doosre user ka data na dikhe
+  aiCache={};
+  notesAiCache={};
+  // localStorage se current user profile hatao
   try{ localStorage.removeItem('pnst_guest_profile'); }catch(e){}
   currentUser=null; userProfile=null;
   updateBottomNavProfile();
@@ -2548,8 +2691,8 @@ window.addEventListener('load',function(){
   // PWA Service Worker
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js',{scope:'./'})
-      .then(function(reg){console.log('[SW] Registered:',reg.scope);})
-      .catch(function(err){console.warn('[SW] Failed:',err);});
+      .then(function(reg){})
+      .catch(function(err){});
   }
 });
 </script>

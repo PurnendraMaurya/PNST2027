@@ -35,10 +35,10 @@ var FIREBASE_CONFIG = {
 };
 
 // 🤖 GROQ AI KEY — console.groq.com se milti hai (FREE)
-var GROQ_KEY = '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';
+var GROQ_KEY = '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';
 
 // 🤖 GEMINI AI KEY — aistudio.google.com se milti hai (FREE backup)
-var GEMINI_KEY = 'AIzaSyAtroLKsKKeWL0QL21UOiEla9CpK1GEQ6M'; // Yahan apni Gemini key daalo
+var GEMINI_KEY = 'AIzaSyAtroLKsKKeWL0QL21UOiEla9CpK1GEQ6M';
 
 // 📞 CONTACT — Apna number daalo
 var WHATSAPP_NUM = '919399564309';
@@ -49,7 +49,7 @@ var INSTAGRAM = 'https://www.instagram.com/pkmauryamp17';
 var LINKEDIN  = 'https://www.linkedin.com/in/purnendra-kumar-kushwaha-520409270';
 
 // 📅 PNST EXAM DATE — estimated date daalo
-var PNST_EXAM_DATE = '2026-07-15';
+var PNST_EXAM_DATE = '2026-06-15';
 
 /* ══════════════════════════════════════════════════════
    🔥 SECTION 2: FIREBASE INITIALIZE
@@ -1504,7 +1504,50 @@ async function beginTest(sub){
   }
 }
 function initTest(dur,badge){ans={};qi=0;timeLeft=dur;totalTime=dur;if($('exBadge'))$('exBadge').textContent=badge;if($('exQnum'))$('exQnum').textContent='Q 1/'+Qs.length;showLoad(false);Object.values(PAGES).forEach(function(id){var el=$(id);if(el)el.classList.remove('active');});var tp=$('pg-test');if(tp)tp.classList.add('active');window.scrollTo(0,0);history.pushState({p:'test'},'','#test');renderQ();buildPalette();startTimer();}
-function renderQ(){var q=Qs[qi];var s=q._sub;var si=SINFO[s]||{name:s,icon:'📚',color:'#3b82f6',bg:'#1d4ed8',light:'#dbeafe',ltx:'#1d4ed8'};var dark=document.documentElement.getAttribute('data-theme')==='dark';var sBg=dark?si.bg:si.light,sTx=dark?'#fff':si.ltx;var ltrs=['A','B','C','D'],opts='';var qOpts=q.options||q.o||[];qOpts.forEach(function(o,i){opts+='<button class="ex-opt'+(ans[qi]===i?' sel':'')+'" onclick="selAns('+i+')"><div class="ex-opt-dot">'+ltrs[i]+'</div><span>'+(o||'')+'</span></button>';});var isLast=qi===Qs.length-1;var navHtml='<div class="ex-nav">'+(qi>0?'<button class="ex-nbtn ex-prev" onclick="goQ(-1)">◀ Prev</button>':'')+'<button class="ex-nbtn '+(isLast?'ex-sub':'ex-next')+'" onclick="'+(isLast?'openSubmitModal()':'goQ(1)')+'">'+(isLast?'✅ Submit Exam':'Next ▶')+'</button></div>';var voiceBtn='<button class="voice-btn" id="voiceBtn_'+qi+'" onclick="voiceRead('+qi+')">🔊 सुनो</button>';var hintBtn='<button class="hint-btn" onclick="showHint('+qi+')">💡 Hint</button>';var qa=$('qArea');if(qa)qa.innerHTML='<div class="ex-card"><div class="ex-meta"><span class="ex-qno">प्रश्न '+(qi+1)+' / '+Qs.length+'</span><span class="ex-subj-tag" style="background:'+sBg+';color:'+sTx+'">'+si.icon+' '+si.name+'</span><div style="margin-left:auto;display:flex;gap:6px">'+voiceBtn+hintBtn+'</div></div><div class="ex-qtxt">'+(qi+1)+'. '+(q.q||q.question||'')+'</div><div class="hint-box" id="hintBox_'+qi+'"></div><div class="ex-opts">'+opts+'</div>'+navHtml+'</div>';if($('exQnum'))$('exQnum').textContent='Q '+(qi+1)+'/'+Qs.length;updatePalette();}
+function renderQ(){
+  var q=Qs[qi];var s=q._sub;
+  var si=SINFO[s]||{name:s,icon:'📚',color:'#3b82f6',bg:'#1d4ed8',light:'#dbeafe',ltx:'#1d4ed8'};
+  var dark=document.documentElement.getAttribute('data-theme')==='dark';
+  var sBg=dark?si.bg:si.light,sTx=dark?'#fff':si.ltx;
+  var ltrs=['A','B','C','D'],opts='';
+  var qOpts=q.options||q.o||[];
+  qOpts.forEach(function(o,i){
+    opts+='<button class="ex-opt'+(ans[qi]===i?' sel':'')+'" onclick="selAns('+i+')"><div class="ex-opt-dot">'+ltrs[i]+'</div><span>'+(o||'')+'</span></button>';
+  });
+  var isLast=qi===Qs.length-1;
+  var navHtml='<div class="ex-nav">'+(qi>0?'<button class="ex-nbtn ex-prev" onclick="goQ(-1)">◀ Prev</button>':'')+'<button class="ex-nbtn '+(isLast?'ex-sub':'ex-next')+'" onclick="'+(isLast?'openSubmitModal()':'goQ(1)')+'">'+(isLast?'✅ Submit Exam':'Next ▶')+'</button></div>';
+
+  // Action buttons row
+  var actionBtns='<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
+    +'<button class="voice-btn" id="voiceBtn_'+qi+'" onclick="voiceRead('+qi+')">🔊 सुनो</button>'
+    +'<button class="hint-btn" onclick="showHint('+qi+')">💡 Hint</button>'
+    +'</div>';
+
+  // AI solution panel (live during test too)
+  var aiPanel='<div style="margin-bottom:8px">'
+    +'<button class="ai-sol-btn" id="aiSolBtn_'+qi+'" onclick="toggleAISolution('+qi+',false)">'
+    +'<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span></button>'
+    +'<div class="ai-sol-panel" id="aiSolPanel_'+qi+'"><div id="aiSolBody_'+qi+'"></div></div>'
+    +'</div>';
+
+  var qa=$('qArea');
+  if(qa) qa.innerHTML=
+    '<div class="ex-card">'
+      +'<div class="ex-meta">'
+        +'<span class="ex-qno">प्रश्न '+(qi+1)+' / '+Qs.length+'</span>'
+        +'<span class="ex-subj-tag" style="background:'+sBg+';color:'+sTx+'">'+si.icon+' '+si.name+'</span>'
+      +'</div>'
+      +'<div class="ex-qtxt">'+(qi+1)+'. '+(q.q||q.question||'')+'</div>'
+      +actionBtns
+      +'<div class="hint-box" id="hintBox_'+qi+'"></div>'
+      +'<div class="ex-opts">'+opts+'</div>'
+      +navHtml
+      +aiPanel
+    +'</div>';
+
+  if($('exQnum')) $('exQnum').textContent='Q '+(qi+1)+'/'+Qs.length;
+  updatePalette();
+}
 function selAns(i){if(ans[qi]!==undefined)return;ans[qi]=i;var opts=document.querySelectorAll('#qArea .ex-opt');opts.forEach(function(btn,j){btn.className='ex-opt'+(j===i?' sel':'');});updatePalette();}
 function goQ(d){qi=Math.max(0,Math.min(Qs.length-1,qi+d));renderQ();}
 function jumpQ(i){qi=i;renderQ();}
@@ -1515,11 +1558,72 @@ function startTimer(){if(timerID)clearInterval(timerID);updTimer();timerID=setIn
 function updTimer(){var m=Math.floor(timeLeft/60),s=timeLeft%60;var el=$('exTimer');if(el){el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;el.className='ex-timer'+(timeLeft<300?' warn':'');}}
 
 /* SECTION 11: VOICE READ */
-var currentVoiceBtn=null;
-function voiceRead(idx){if(window.speechSynthesis&&window.speechSynthesis.speaking){window.speechSynthesis.cancel();if(currentVoiceBtn){currentVoiceBtn.textContent='🔊 सुनो';currentVoiceBtn.classList.remove('speaking');}if(currentVoiceBtn&&currentVoiceBtn.id==='voiceBtn_'+idx){currentVoiceBtn=null;return;}}if(!window.speechSynthesis){toast('❌ Voice support nahi hai');return;}var q=Qs[idx];if(!q)return;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];var text=(q.q||q.question||'')+'. Options: '+qOpts.map(function(o,i){return ltrs[i]+') '+o;}).join('. ');var utter=new SpeechSynthesisUtterance(text);utter.lang='hi-IN';utter.rate=0.9;utter.pitch=1;currentVoiceBtn=$('voiceBtn_'+idx);if(currentVoiceBtn){currentVoiceBtn.textContent='🔇 बंद करो';currentVoiceBtn.classList.add('speaking');}utter.onend=function(){if(currentVoiceBtn){currentVoiceBtn.textContent='🔊 सुनो';currentVoiceBtn.classList.remove('speaking');}currentVoiceBtn=null;};window.speechSynthesis.speak(utter);}
+var currentVoiceBtn=null, voiceSynth=window.speechSynthesis;
+
+function voiceRead(idx){
+  if(!voiceSynth){ toast('❌ Voice support nahi hai is browser mein'); return; }
+  // Stop existing
+  if(voiceSynth.speaking){
+    voiceSynth.cancel();
+    if(currentVoiceBtn){ currentVoiceBtn.textContent='🔊 सुनो'; currentVoiceBtn.classList.remove('speaking'); }
+    if(currentVoiceBtn&&currentVoiceBtn.id==='voiceBtn_'+idx){ currentVoiceBtn=null; return; }
+  }
+  var q=Qs[idx]; if(!q) return;
+  var ltrs=['A','B','C','D'];
+  var qOpts=q.options||q.o||[];
+  var text=(q.q||q.question||'')+'. Vikalp hain: '+qOpts.map(function(o,i){ return ltrs[i]+') '+o; }).join('. ');
+  speakText(text, $('voiceBtn_'+idx));
+}
+
+function voiceReadText(idx, text){
+  if(!voiceSynth){ toast('❌ Voice support nahi hai'); return; }
+  if(voiceSynth.speaking){ voiceSynth.cancel(); if(currentVoiceBtn){ currentVoiceBtn.textContent='🔊 सुनो'; currentVoiceBtn.classList.remove('speaking'); currentVoiceBtn=null; } return; }
+  speakText(text, null);
+}
+
+function voiceReadAI(text){
+  if(!voiceSynth){ toast('❌ Voice support nahi hai'); return; }
+  if(voiceSynth.speaking){ voiceSynth.cancel(); return; }
+  // Strip HTML tags
+  var plain=text.replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+  speakText(plain, null);
+}
+
+function speakText(text, btn){
+  var utter=new SpeechSynthesisUtterance(text);
+  utter.lang='hi-IN'; utter.rate=0.85; utter.pitch=1;
+  currentVoiceBtn=btn;
+  if(btn){ btn.textContent='🔇 बंद करो'; btn.classList.add('speaking'); }
+  utter.onend=function(){ if(currentVoiceBtn){ currentVoiceBtn.textContent='🔊 सुनो'; currentVoiceBtn.classList.remove('speaking'); } currentVoiceBtn=null; };
+  utter.onerror=function(){ if(currentVoiceBtn){ currentVoiceBtn.textContent='🔊 सुनो'; currentVoiceBtn.classList.remove('speaking'); } currentVoiceBtn=null; };
+  voiceSynth.speak(utter);
+}
 
 /* SECTION 12: HINT */
-function showHint(idx){var box=$('hintBox_'+idx);if(!box)return;if(box.style.display==='block'){box.style.display='none';return;}var q=Qs[idx];if(!q)return;var hints={biology:['NCERT Biology Class 12 mein dhundho','Cell, Genetics ya Ecology chapter check karo'],chemistry:['Reactions ya Periodic Table se related hai','NCERT Chemistry Class 12 mein dhundho'],physics:['Formula yaad karo — F=ma, V=IR etc.','NCERT Physics Class 12 mein dhundho'],gk:['Current Affairs ya MP GK mein dhundho','India ka history ya geography se related hai'],english:['Grammar rule yaad karo','Tenses ya Voice change rule check karo']};var subHints=hints[q._sub]||['NCERT mein dhundho'];var randomHint=subHints[Math.floor(Math.random()*subHints.length)];box.innerHTML='💡 <strong>Hint:</strong> '+randomHint;box.style.display='block';}
+function showHint(idx){
+  var box=$('hintBox_'+idx); if(!box) return;
+  if(box.style.display==='block'){ box.style.display='none'; return; }
+  var q=Qs[idx]; if(!q) return;
+  showHintText(q._sub, box);
+}
+
+function showHintText(sub, boxEl){
+  var hints={
+    biology:['NCERT Biology Class 12 mein dhundho','Cell, Genetics, Ecology chapter check karo','Scientific names yaad karo'],
+    chemistry:['Reactions ya Periodic Table se related hai','NCERT Chemistry Class 12 mein dhundho','Formula ya equation check karo'],
+    physics:['Formula yaad karo — F=ma, V=IR, P=VI etc.','NCERT Physics Class 12 mein dhundho','Units aur dimensions check karo'],
+    gk:['Current Affairs ya MP GK mein dhundho','India ka history ya geography se related hai','Dates aur facts yaad karo'],
+    english:['Grammar rule yaad karo','Tenses ya Voice change check karo','Vocabulary ya idioms dekho']
+  };
+  var subHints=hints[sub]||['NCERT mein dhundho','Concept samjho'];
+  var randomHint=subHints[Math.floor(Math.random()*subHints.length)];
+  if(boxEl){
+    boxEl.innerHTML='💡 <strong>Hint:</strong> '+randomHint;
+    boxEl.style.display='block';
+  } else {
+    toast('💡 '+randomHint);
+  }
+}
 
 /* SECTION 13: SUBMIT & RESULT */
 function doSubmit(){
@@ -1546,16 +1650,149 @@ async function renderLeaderboard(){var c=$('lbArea');if(!c)return;c.innerHTML='<
 /* SECTION 16: DAILY QUIZ */
 async function loadDailyQuiz(){var card=$('dailyQuizCard');if(!card)return;var content=$('dqContent');if(!content)return;var daySubjects=['biology','chemistry','physics','gk','english','biology','chemistry'];var todaySub=daySubjects[new Date().getDay()]||'biology';var si=SINFO[todaySub];var dqKey='pnst_dq_'+new Date().toDateString();var dqDone=false;try{dqDone=localStorage.getItem(dqKey)==='done';}catch(e){}if($('dq-badge-el'))$('dq-badge-el').textContent='📅 आज का Quiz — '+si.icon+' '+si.name;content.innerHTML='<div style="text-align:center;padding:14px;color:var(--tx2);font-size:.8rem">⏳ Loading...</div>';try{var res=await fetch(FILES[todaySub]);if(!res.ok)throw new Error('File not found');var data=await res.json();if(!data.questions||!data.questions.length)throw new Error('No questions');var seed=new Date().toDateString().split('').reduce(function(a,c){return a+c.charCodeAt(0);},0);var q=data.questions[seed%data.questions.length];var correct=q.answer!==undefined?q.answer:q.c;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];if(dqDone){var saved=null;try{saved=JSON.parse(localStorage.getItem(dqKey+'_ans'));}catch(e){}var optsHtml='';qOpts.forEach(function(o,i){var iC=(i===correct),iU=(saved!==null&&i===saved);var bg=iC?'rgba(34,197,94,.2)':iU?'rgba(239,68,68,.2)':'rgba(255,255,255,.04)';var bc=iC?'#22c55e':iU?'#ef4444':'var(--card-border)';var tc=iC?'#22c55e':iU?'#ef4444':'var(--tx2)';optsHtml+='<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:'+bg+';border:1.5px solid '+bc+';border-radius:9px;margin-bottom:6px;font-size:.82rem;color:'+tc+'">'+ltrs[i]+') '+o+(iC?' ✅':'')+'</div>';});content.innerHTML='<div style="font-size:.82rem;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.6">'+si.icon+' '+(q.q||q.question||'')+'</div>'+optsHtml+'<div style="margin-top:8px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Aaj complete! Kal naya sawaal 🎯</div>';return;}var timerLeft=30;var optsHtml='';qOpts.forEach(function(o,i){optsHtml+='<button id="dqOpt_'+i+'" onclick="answerDQ('+i+','+correct+')" style="display:block;width:100%;text-align:left;padding:10px 13px;margin-bottom:7px;border-radius:10px;border:1.5px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.83rem;cursor:pointer;transition:all .2s">'+ltrs[i]+') '+o+'</button>';});content.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:.68rem;color:var(--tx2)">'+si.icon+' '+si.name+'</div><div id="dqTimer" style="font-family:var(--fn2);font-size:.85rem;font-weight:700;color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:3px 10px">⏱ 30s</div></div><div style="font-size:.85rem;font-weight:600;color:var(--tx);margin-bottom:12px;line-height:1.65">'+(q.q||q.question||'')+'</div>'+optsHtml+'<div id="dqResult" style="display:none;margin-top:8px;padding:10px 12px;border-radius:9px;font-size:.8rem;font-weight:700"></div><div id="dqAiBox" style="display:none;margin-top:10px"></div>';window._dqKey=dqKey;window._dqQ=q;window._dqSub=todaySub;window._dqCorrect=correct;window._dqTimerInterval=setInterval(function(){timerLeft--;var tel=$('dqTimer');if(tel){tel.textContent='⏱ '+timerLeft+'s';if(timerLeft<=10){tel.style.color='#ef4444';tel.style.borderColor='rgba(239,68,68,.4)';tel.style.background='rgba(239,68,68,.1)';}}if(timerLeft<=0){clearInterval(window._dqTimerInterval);answerDQ(-1,correct);}},1000);}catch(e){content.innerHTML='<div style="text-align:center;padding:14px;font-size:.8rem;color:var(--tx2)">❌ Quiz load nahi hui<br><button onclick="loadDailyQuiz()" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
 function answerDQ(chosen,correct){if(window._dqTimerInterval)clearInterval(window._dqTimerInterval);var tel=$('dqTimer');if(tel)tel.style.display='none';var ltrs=['A','B','C','D'];for(var i=0;i<4;i++){var btn=document.getElementById('dqOpt_'+i);if(!btn)continue;btn.disabled=true;btn.style.cursor='default';if(i===correct){btn.style.background='rgba(34,197,94,.2)';btn.style.borderColor='#22c55e';btn.style.color='#22c55e';}else if(i===chosen&&i!==correct){btn.style.background='rgba(239,68,68,.2)';btn.style.borderColor='#ef4444';btn.style.color='#ef4444';}else{btn.style.opacity='.5';}}var r=$('dqResult');if(r){r.style.display='block';if(chosen<0){r.innerHTML='⏰ Time out! Sahi: '+ltrs[correct];r.style.background='rgba(245,158,11,.1)';r.style.color='#f59e0b';}else if(chosen===correct){r.innerHTML='🎉 Sahi jawab! ✅';r.style.background='rgba(34,197,94,.1)';r.style.color='#22c55e';}else{var q2=window._dqQ;var opts2=q2?q2.options||q2.o||[]:[];r.innerHTML='❌ Galat! Sahi: '+ltrs[correct]+') '+(opts2[correct]||'');r.style.background='rgba(239,68,68,.1)';r.style.color='#ef4444';}}try{if(window._dqKey){localStorage.setItem(window._dqKey,'done');localStorage.setItem(window._dqKey+'_ans',JSON.stringify(chosen));}var streak=0;try{streak=parseInt(localStorage.getItem('pnst_dq_streak')||'0');}catch(e){}var lastDQ='';try{lastDQ=localStorage.getItem('pnst_dq_last')||'';}catch(e){}var yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);if(lastDQ===yesterday.toDateString())streak++;else if(lastDQ!==new Date().toDateString())streak=1;localStorage.setItem('pnst_dq_streak',streak);localStorage.setItem('pnst_dq_last',new Date().toDateString());}catch(e){}var aiBox=$('dqAiBox');if(aiBox){aiBox.style.display='block';aiBox.innerHTML='<button onclick="loadDQAI()" style="width:100%;padding:9px;border-radius:9px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-family:var(--fn);font-size:.78rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><span>✨</span><span>🤖 AI Explanation देखो</span></button><div id="dqAiResult" style="display:none;margin-top:8px;font-size:.8rem;line-height:1.7;color:var(--tx);padding:10px;background:rgba(168,85,247,.05);border:1px solid rgba(168,85,247,.15);border-radius:9px"></div>';}}
-async function loadDQAI(){var q=window._dqQ;if(!q)return;var box=$('dqAiResult');var btn=document.querySelector('#dqAiBox button');if(!box)return;if(box.style.display==='block'){box.style.display='none';return;}if(btn)btn.style.opacity='.6';box.innerHTML='<span style="color:var(--tx2)">🤖 soch raha hai...</span>';box.style.display='block';var ltrs=['A','B','C','D'];var opts=q.options||q.o||[];var correct=q.answer!==undefined?q.answer:q.c;var correctAns=ltrs[correct]+') '+(opts[correct]||'');var prompt='PNST 2026 expert.\nQuestion: '+(q.q||q.question||'')+'\nSahi: '+correctAns+'\nSubject: '+(window._dqSub||'biology')+'\nShort explanation (Hindi+English, max 80 words): concept, reason, trick';try{var text=await callAI(prompt);box.innerHTML='<strong style="color:#c084fc">🤖 AI:</strong><br>'+text.replace(/\n/g,'<br>');if(btn){btn.innerHTML='<span>✨</span><span>AI बंद करो</span>';btn.style.opacity='1';}}catch(e){box.innerHTML='<span style="color:#ef4444">'+groqErr(e)+'</span>';if(btn)btn.style.opacity='1';}}
+async function loadDQAI(){
+  var q=window._dqQ; if(!q) return;
+  var box=$('dqAiResult');
+  var btn=document.querySelector('#dqAiBox button');
+  if(!box) return;
+  if(box.style.display==='block'){ box.style.display='none'; return; }
+  if(btn) btn.style.opacity='.6';
+  box.innerHTML='<span style="color:var(--tx2)">🤖 soch raha hai...</span>';
+  box.style.display='block';
+  var ltrs=['A','B','C','D'];
+  var opts=q.options||q.o||[];
+  var correct=q.answer!==undefined?q.answer:q.c;
+  var correctAns=ltrs[correct]+') '+(opts[correct]||'');
+  var prompt='PNST 2026 expert.\nQuestion: '+(q.q||q.question||'')+'\nSahi: '+correctAns+'\nSubject: '+(window._dqSub||'biology')+'\nShort explanation (Hindi+English, max 80 words):\n1. Concept kya hai\n2. Sahi answer kyun\n3. Yaad rakhne ki trick';
+  try{
+    var text=await callAI(prompt);
+    var sid='dqai_'+Date.now();
+    box.innerHTML='<strong style="color:#c084fc">🤖 AI Explanation:</strong>'
+      +'<div id="'+sid+'" style="margin-top:6px;font-size:.8rem;line-height:1.7">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div>'
+      +'<button onclick="voiceReadAI(document.getElementById(\''+sid+'\').textContent)" style="margin-top:8px;padding:5px 11px;border-radius:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cyan);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);display:inline-flex;align-items:center;gap:5px">🔊 सुनो</button>';
+    if(btn){ btn.innerHTML='<span>✨</span><span>AI बंद करो</span>'; btn.style.opacity='1'; }
+  }catch(e){
+    box.innerHTML='<span style="color:#ef4444">'+groqErr(e)+'</span>';
+    if(btn) btn.style.opacity='1';
+  }
+}
 
 /* SECTION 17: AI ENGINE */
 var aiCache={},notesAiCache={};
-async function callAI(prompt){try{return await callGroq(prompt);}catch(e){if(GEMINI_KEY){try{return await callGemini(prompt);}catch(e2){}}throw e;}}
-async function callGroq(prompt){var resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+GROQ_KEY},body:JSON.stringify({model:'llama-3.1-8b-instant',messages:[{role:'user',content:prompt}],max_tokens:512,temperature:0.4})});if(!resp.ok){var e=await resp.json();throw new Error(e.error&&e.error.message?e.error.message:'Groq error '+resp.status);}var data=await resp.json();return data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content?data.choices[0].message.content:null;}
-async function callGemini(prompt){var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key='+GEMINI_KEY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({contents:[{parts:[{text:prompt}]}]})});if(!resp.ok)throw new Error('Gemini error '+resp.status);var data=await resp.json();return data.candidates&&data.candidates[0]&&data.candidates[0].content&&data.candidates[0].content.parts&&data.candidates[0].content.parts[0]?data.candidates[0].content.parts[0].text:null;}
-function groqErr(e){var m=e.message||'';if(m.includes('429')||m.includes('quota'))return '⚠️ Daily limit. Kal try karo.';if(m.includes('401')||m.includes('key'))return '🔑 API Key galat.';return '❌ '+m;}
+async function callAI(prompt){
+  // Pehle Groq try karo
+  try{
+    var r=await callGroq(prompt);
+    if(r&&r.trim()) return r;
+  }catch(e){
+    console.warn('Groq failed:',e.message);
+  }
+  // Groq fail → Gemini try karo
+  if(GEMINI_KEY){
+    try{
+      var r2=await callGemini(prompt);
+      if(r2&&r2.trim()) return r2;
+    }catch(e2){
+      console.warn('Gemini failed:',e2.message);
+    }
+  }
+  throw new Error('AI unavailable. Internet check karo ya kal try karo.');
+}
 
-async function toggleAISolution(idx,fromReview){var bId=fromReview?'raiBtn_'+idx:'aiSolBtn_'+idx;var pId=fromReview?'raiPanel_'+idx:'aiSolPanel_'+idx;var bdId=fromReview?'raiBody_'+idx:'aiSolBody_'+idx;var btn=$(bId),panel=$(pId),body=$(bdId);if(!btn||!panel||!body)return;if(panel.style.display==='block'){panel.style.display='none';btn.innerHTML='<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span>';return;}if(aiCache[idx]){body.innerHTML=aiCache[idx];panel.style.display='block';btn.innerHTML='<span class="ai-ic">✨</span><span>Solution छुपाओ ▲</span>';return;}btn.classList.add('loading');btn.innerHTML='<span class="ai-ic">⟳</span><span>AI सोच रहा है...</span>';body.innerHTML='<div style="padding:8px 0;color:var(--tx2);font-size:.8rem">🤖 Solution generate ho raha hai...</div>';panel.style.display='block';var q=Qs[idx],qText=q.q||q.question||'',opts=q.options||q.o||[];var correctIdx=q.answer!==undefined?q.answer:q.c,ltrs=['A','B','C','D'];var correctAns=ltrs[correctIdx]+') '+(opts[correctIdx]||'');var subjectTips={biology:'Diagrams, life cycles, scientific names.',chemistry:'Reactions, formulas, balancing equations.',physics:'Laws, formulas, numerical problems.',gk:'Current affairs, MP facts, dates.',english:'Grammar rules, vocabulary.'};var isNum=/\d+[\.\d]*\s*(m\/s|km|kg|N|J|W|V|A|Ω|mol|g|L|cm|Hz|°C|K|Pa)/i.test(qText)||/calculat|formula|kitna|numerical/i.test(qText);var prompt='PNST 2026 MP nursing expert teacher ho.\nSubject: '+q._sub+' | '+(subjectTips[q._sub]||'')+'\nQuestion: '+qText+'\nOptions: '+opts.map(function(o,i){return ltrs[i]+') '+o;}).join(' | ')+'\nSahi Answer: '+correctAns+'\n\n'+(isNum?'NUMERICAL — solve karo:\n📐 Formula\n🔢 Values\n🧮 Calculate\n✅ Answer\n💡 Shortcut':'Explain karo (Hindi+English):\n💡 Concept\n✅ Sahi answer kyun\n❌ Galat kyun\n🧠 Trick')+'\nMax 160 words.';try{var text=await callAI(prompt);if(!text)throw new Error('Empty');var html='<div style="font-size:.82rem;line-height:1.8;color:var(--tx)">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div><div style="margin-top:10px;padding:8px 10px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Correct: '+correctAns+'</div>';aiCache[idx]=html;body.innerHTML=html;btn.classList.remove('loading');btn.innerHTML='<span class="ai-ic">✨</span><span>Solution छुपाओ ▲</span>';panel.scrollIntoView({behavior:'smooth',block:'nearest'});}catch(e){body.innerHTML='<div style="color:#ef4444;font-size:.8rem">'+groqErr(e)+'</div>';btn.classList.remove('loading');btn.innerHTML='<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span>';panel.style.display='none';}}
+async function callGroq(prompt){
+  var resp=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Authorization':'Bearer '+GROQ_KEY},
+    body:JSON.stringify({
+      model:'llama-3.1-8b-instant',
+      messages:[{role:'system',content:'Tum PNST 2026 MP Pre Nursing Selection Test ke expert teacher ho. Hindi aur English dono mein concise jawab do.'},{role:'user',content:prompt}],
+      max_tokens:600,
+      temperature:0.5
+    })
+  });
+  if(!resp.ok){
+    var err=await resp.json().catch(function(){return{};});
+    throw new Error(err.error&&err.error.message?err.error.message:'Groq '+resp.status);
+  }
+  var data=await resp.json();
+  var text=data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content;
+  if(!text) throw new Error('Empty response');
+  return text.trim();
+}
+
+async function callGemini(prompt){
+  var resp=await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key='+GEMINI_KEY,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      contents:[{parts:[{text:'Tum PNST 2026 MP nursing exam expert teacher ho.\n\n'+prompt}]}],
+      generationConfig:{maxOutputTokens:600,temperature:0.5}
+    })
+  });
+  if(!resp.ok) throw new Error('Gemini '+resp.status);
+  var data=await resp.json();
+  var text=data.candidates&&data.candidates[0]&&data.candidates[0].content&&data.candidates[0].content.parts&&data.candidates[0].content.parts[0]&&data.candidates[0].content.parts[0].text;
+  if(!text) throw new Error('Empty Gemini response');
+  return text.trim();
+}
+
+function groqErr(e){
+  var m=e&&e.message||'Unknown error';
+  if(m.includes('429')||m.includes('quota')||m.includes('limit')) return '⚠️ AI ki daily limit ho gayi. Kal try karo ya Gemini key add karo.';
+  if(m.includes('401')||m.includes('403')||m.includes('key')||m.includes('auth')) return '🔑 API Key galat hai. Section 1 mein check karo.';
+  if(m.includes('network')||m.includes('fetch')||m.includes('Failed')) return '🌐 Internet connection check karo.';
+  if(m.includes('unavailable')) return '⚠️ '+m;
+  return '❌ AI Error: '+m;
+}
+
+async function toggleAISolution(idx,fromReview){
+  var bId=fromReview?'raiBtn_'+idx:'aiSolBtn_'+idx;
+  var pId=fromReview?'raiPanel_'+idx:'aiSolPanel_'+idx;
+  var bdId=fromReview?'raiBody_'+idx:'aiSolBody_'+idx;
+  var btn=$(bId),panel=$(pId),body=$(bdId);
+  if(!btn||!panel||!body)return;
+  if(panel.style.display==='block'){
+    panel.style.display='none';
+    btn.innerHTML='<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span>';
+    return;
+  }
+  if(aiCache[idx]){
+    body.innerHTML=aiCache[idx];
+    panel.style.display='block';
+    btn.innerHTML='<span class="ai-ic">✨</span><span>Solution छुपाओ ▲</span>';
+    return;
+  }
+  btn.classList.add('loading');
+  btn.innerHTML='<span class="ai-ic">⟳</span><span>AI सोच रहा है...</span>';
+  body.innerHTML='<div style="padding:8px 0;color:var(--tx2);font-size:.8rem">🤖 Solution generate ho raha hai...</div>';
+  panel.style.display='block';
+  var q=Qs[idx],qText=q.q||q.question||'',opts=q.options||q.o||[];
+  var correctIdx=q.answer!==undefined?q.answer:q.c,ltrs=['A','B','C','D'];
+  var correctAns=ltrs[correctIdx]+') '+(opts[correctIdx]||'');
+  var subjectTips={biology:'Diagrams, life cycles, scientific names.',chemistry:'Reactions, formulas, balancing.',physics:'Laws, formulas, numericals.',gk:'Current affairs, MP facts.',english:'Grammar rules, vocabulary.'};
+  var isNum=/\d+[\.\d]*\s*(m\/s|km|kg|N|J|W|V|A|mol|g|L|cm|Hz|°C|K|Pa)/i.test(qText)||/calculat|formula|kitna|numerical/i.test(qText);
+  var prompt='PNST 2026 MP nursing expert teacher ho.\nSubject: '+q._sub+' | '+(subjectTips[q._sub]||'')+'\nQuestion: '+qText+'\nOptions: '+opts.map(function(o,i){return ltrs[i]+') '+o;}).join(' | ')+'\nSahi Answer: '+correctAns+'\n\n'+(isNum?'NUMERICAL — solve karo:\n📐 Formula\n🔢 Values\n🧮 Calculate karo\n✅ Final answer: '+correctAns+'\n💡 Shortcut trick':'Explain karo (Hindi+English mix):\n💡 Concept kya hai\n✅ Sahi answer kyun\n❌ Baaki galat kyun\n🧠 Yaad rakhne ki trick')+'\nMax 150 words.';
+  try{
+    var text=await callAI(prompt);
+    if(!text) throw new Error('Empty response');
+    var safeId='ait_'+idx+'_'+Date.now();
+    var html='<div id="'+safeId+'" style="font-size:.83rem;line-height:1.85;color:var(--tx)">'
+      +text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')
+      +'</div>'
+      +'<div style="margin-top:8px;padding:8px 10px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Sahi jawab: '+correctAns+'</div>'
+      +'<button onclick="voiceReadAI(document.getElementById(\''+safeId+'\').textContent)" style="margin-top:8px;padding:6px 12px;border-radius:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cyan);font-size:.72rem;font-weight:700;cursor:pointer;font-family:var(--fn);display:inline-flex;align-items:center;gap:5px">🔊 AI जवाब सुनो</button>';
+    aiCache[idx]=html;
+    body.innerHTML=html;
+    btn.classList.remove('loading');
+    btn.innerHTML='<span class="ai-ic">✨</span><span>Solution छुपाओ ▲</span>';
+    panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }catch(e){
+    body.innerHTML='<div style="color:#ef4444;font-size:.8rem;padding:8px">'+groqErr(e)+'</div>';
+    btn.classList.remove('loading');
+    btn.innerHTML='<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span>';
+    panel.style.display='none';
+  }
+}
 
 function showResult(cr,wr,sk,pct,sd,tm,ts){
   var grade=pct>=80?['🏆 Excellent!','#22c55e']:pct>=60?['👍 Good Job!','#06b6d4']:pct>=40?['📚 Average','#f59e0b']:['💪 Keep Trying','#ef4444'];
@@ -1609,8 +1846,25 @@ function toggleReview(){
       else{bg2='rgba(255,255,255,.03)';brd='transparent';tc='var(--tx2)';dot='';}
       optsHtml+='<div style="display:flex;align-items:flex-start;gap:9px;padding:9px 12px;background:'+bg2+';border-radius:9px;border:1.5px solid '+brd+';margin-bottom:6px;font-size:.84rem;color:'+tc+'"><div style="width:22px;height:22px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:800;flex-shrink:0;'+dot+'">'+ltrs[j]+'</div><span>'+o+'</span>'+(iC?'<span style="margin-left:auto;font-size:.7rem;color:#22c55e;font-weight:700;flex-shrink:0">✅ Correct</span>':'')+(iU&&!iC?'<span style="margin-left:auto;font-size:.7rem;color:#ef4444;font-weight:700;flex-shrink:0">❌ Your Ans</span>':'')+'</div>';
     });
-    var aiBtn='<button class="ai-sol-btn" id="raiBtn_'+i+'" onclick="toggleAISolution('+i+',true)" style="margin-top:10px"><span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span></button><div class="ai-sol-panel" id="raiPanel_'+i+'"><div id="raiBody_'+i+'"></div></div>';
-    html+='<div style="background:'+bg+';border:1px solid '+bd+';border-radius:14px;padding:14px;margin-bottom:10px"><div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap"><span style="font-size:.72rem;font-weight:700;background:'+sBg+';color:'+sTx+';padding:2px 9px;border-radius:6px">'+si.icon+' '+si.name+'</span><span style="font-size:.72rem;font-weight:700;color:var(--tx2)">Q.'+(i+1)+'</span><span style="font-size:.72rem;font-weight:700;color:'+col+'">'+lbl+'</span></div><div style="font-size:.9rem;font-weight:600;line-height:1.6;color:var(--tx);margin-bottom:10px">'+(i+1)+'. '+(q.q||q.question||'')+'</div>'+optsHtml+aiBtn+'</div>';
+    // Voice + AI buttons for review
+    var reviewBtns=''
+      +'<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
+        +'<button class="voice-btn" onclick="voiceReadText(\''+i+'\',\''+((q.q||q.question||'').replace(/'/g,"\\'").replace(/\n/g,' ').substring(0,100))+'\')">🔊 सुनो</button>'
+        +'<button class="hint-btn" onclick="showHintText(\''+q._sub+'\')">💡 Hint</button>'
+      +'</div>';
+    var aiBtn='<button class="ai-sol-btn" id="raiBtn_'+i+'" onclick="toggleAISolution('+i+',true)"><span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span></button>'
+      +'<div class="ai-sol-panel" id="raiPanel_'+i+'"><div id="raiBody_'+i+'"></div></div>';
+    html+='<div style="background:'+bg+';border:1px solid '+bd+';border-radius:14px;padding:14px;margin-bottom:10px">'
+      +'<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">'
+        +'<span style="font-size:.72rem;font-weight:700;background:'+sBg+';color:'+sTx+';padding:2px 9px;border-radius:6px">'+si.icon+' '+si.name+'</span>'
+        +'<span style="font-size:.72rem;font-weight:700;color:var(--tx2)">Q.'+(i+1)+'</span>'
+        +'<span style="font-size:.72rem;font-weight:700;color:'+col+'">'+lbl+'</span>'
+      +'</div>'
+      +'<div style="font-size:.9rem;font-weight:600;line-height:1.6;color:var(--tx);margin-bottom:10px">'+(i+1)+'. '+(q.q||q.question||'')+'</div>'
+      +reviewBtns
+      +optsHtml
+      +aiBtn
+    +'</div>';
   });
   area.innerHTML=html;area.style.display='block';
   btn.textContent='📋 सभी Questions के Answers छुपाएं ▲';
@@ -1641,7 +1895,9 @@ async function askNotesAI(topic,subject,containerId,btnEl){
   var prompt='Tum PNST 2026 MP nursing expert teacher ho.\nSubject: '+subject+' | Topic: '+topic+'\n\nQuick revision notes banao:\n\n📌 Key Points (4-5 important):\n- [points]\n\n🎯 PNST Exam mein kya puchha jaata hai:\n[1-2 lines]\n\n🧠 Yaad rakhne ki Trick:\n[mnemonic]\n\nMax 130 words. Hindi+English mix.';
   try{
     var text=await callAI(prompt); if(!text) throw new Error('Empty');
-    var fmt='<div style="font-size:.82rem;line-height:1.7;color:var(--tx)">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div>';
+    var sid='nai_'+Date.now();
+    var fmt='<div id="'+sid+'" style="font-size:.82rem;line-height:1.7;color:var(--tx)">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div>'
+      +'<button onclick="voiceReadAI(document.getElementById(\''+sid+'\').textContent)" style="margin-top:8px;padding:5px 11px;border-radius:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cyan);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);display:inline-flex;align-items:center;gap:5px">🔊 Notes सुनो</button>';
     notesAiCache[ck]=fmt; container.innerHTML=fmt;
     if(btnEl) btnEl.innerHTML='🤖 AI बंद करो';
   }catch(e){ container.innerHTML='<div style="color:#ef4444;font-size:.8rem">'+groqErr(e)+'</div>'; if(btnEl) btnEl.innerHTML='🤖 Biology पूछो'; container.style.display='none'; }
@@ -1746,9 +2002,10 @@ function nlpRegister(){
     setTimeout(function(){ nlpSwitch('login'); var lp=$('lPhone'); if(lp) lp.value=num; }, 1500);
     return;
   }
+  var uniqueId='user_'+num+'_'+Date.now();
   var profile={
     name:nm.value.trim(), phone:num, city:ct?ct.value.trim():'',
-    uid:'user_'+num, email:num+'@pnst.app',
+    uid:uniqueId, email:num+'@pnst.app',
     target_year:yr?yr.value:'2026',
     total_tests:0, best_score:0, total_score:0, target_score:75,
     hash:nlpHash(num+pw.value),

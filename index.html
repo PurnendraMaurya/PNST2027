@@ -19,12 +19,14 @@
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
 <script>
-/* ══════════════════════════════════════════════════════
-   ⚙️  SECTION 1: CONFIGURATION
-   Yahan apni keys daalo — sirf yahi edit karna hai!
-   ══════════════════════════════════════════════════════ */
+/* ╔══════════════════════════════════════════════════════╗
+   ║  🎛️  MASTER SETTINGS — SIRF YAHAN EDIT KARO!        ║
+   ║  Baaki kuch bhi mat chhedna.                         ║
+   ╚══════════════════════════════════════════════════════╝ */
 
-// 🔥 FIREBASE CONFIG — firebase.google.com se milti hai
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🔥 FIREBASE — firebase.google.com se milti hai
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 var FIREBASE_CONFIG = {
   apiKey:            "AIzaSyBSbyta6B1bxB6lNVhdhydcn7fdlgCD1Cs",
   authDomain:        "pnst-mock-test.firebaseapp.com",
@@ -34,22 +36,110 @@ var FIREBASE_CONFIG = {
   appId:             "1:744694561424:web:fc3e5b74ce409286787615"
 };
 
-// 🤖 GROQ AI KEY — console.groq.com se milti hai (FREE)
-var GROQ_KEY = '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';
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🤖 AI KEYS — Yahan apni keys daalo
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var GROQ_KEY   = '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'; // console.groq.com
+var GEMINI_KEY = 'AIzaSyAtroLKsKKeWL0QL21UOiEla9CpK1GEQ6M';                  // aistudio.google.com
 
-// 🤖 GEMINI AI KEY — aistudio.google.com se milti hai (FREE backup)
-var GEMINI_KEY = 'AIzaSyAtroLKsKKeWL0QL21UOiEla9CpK1GEQ6M';
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🤖 AI COMMANDS — Yahan AI ke instructions change karo
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var AI_SYSTEM_PROMPT = 'Tum PNST 2026 MP Pre Nursing Selection Test ke expert teacher ho. Hindi aur English dono mein concise jawab do.';
 
-// 📞 CONTACT — Apna number daalo
-var WHATSAPP_NUM = '919399564309';
-var PHONE_NUM    = '+91 93995 64309';
+// Question Solution ke liye AI command (Result page mein)
+var AI_SOLUTION_PROMPT = function(subject, question, options, correctAns, isNumerical) {
+  var tips = {
+    biology:   'Diagrams, life cycles, scientific names yaad karo.',
+    chemistry: 'Reactions, formulas, balancing equations.',
+    physics:   'Laws, formulas, numerical problems.',
+    gk:        'Current affairs, MP facts, dates.',
+    english:   'Grammar rules, vocabulary.'
+  };
+  if(isNumerical) {
+    return 'Subject: '+subject+' | '+( tips[subject]||'')+'\nQuestion: '+question+'\nOptions: '+options+'\nSahi Answer: '+correctAns+'\n\nNUMERICAL question — step by step solve karo:\n📐 Formula likho\n🔢 Values daalo\n🧮 Calculate karo\n✅ Final answer: '+correctAns+'\n💡 Shortcut trick\n\nMax 150 words.';
+  }
+  return 'Subject: '+subject+' | '+(tips[subject]||'')+'\nQuestion: '+question+'\nOptions: '+options+'\nSahi Answer: '+correctAns+'\n\nExplain karo (Hindi+English mix):\n💡 Concept kya hai\n✅ Sahi answer kyun correct hai\n❌ Baaki options kyun galat hain\n🧠 Yaad rakhne ki trick (mnemonic)\n\nMax 150 words.';
+};
 
-// 🔗 SOCIAL LINKS
-var INSTAGRAM = 'https://www.instagram.com/pkmauryamp17';
-var LINKEDIN  = 'https://www.linkedin.com/in/purnendra-kumar-kushwaha-520409270';
+// Notes AI command
+var AI_NOTES_PROMPT = function(subject, topic) {
+  return 'Subject: '+subject+' | Topic: '+topic+'\n\nPNST 2026 ke liye quick revision notes banao:\n\n📌 Key Points (4-5 important):\n\n🎯 PNST Exam mein kya puchha jaata hai:\n\n🧠 Yaad rakhne ki Trick (mnemonic):\n\nMax 130 words. Hindi+English mix mein likho.';
+};
 
-// 📅 PNST EXAM DATE — estimated date daalo
-var PNST_EXAM_DATE = '2026-06-15';
+// Custom Q&A command
+var AI_QA_PROMPT = function(subject, question) {
+  return 'Subject: '+subject+'\nStudent ka sawaal: '+question+'\n\nClear jawab do:\n💡 Explanation (simple Hindi+English)\n✅ Main Answer\n🎯 PNST ke liye important kya hai\n\nMax 130 words.';
+};
+
+// Daily Quiz AI command
+var AI_DAILY_PROMPT = function(question, correctAns, subject) {
+  return 'Question: '+question+'\nSahi Jawab: '+correctAns+'\nSubject: '+subject+'\n\nShort explanation (max 80 words):\n1. Concept kya hai\n2. Sahi answer kyun\n3. Yaad rakhne ki trick';
+};
+
+// Result AI Tips command
+var AI_TIPS_PROMPT = function(score, subject, weakSubject) {
+  return 'Student ka score: '+score+'%\nSubject: '+subject+(weakSubject?'\nWeak subject: '+weakSubject:'')+'\n\nPersonalized improvement tips do (max 120 words):\n1. Score ke hisab se honest feedback\n2. Weak area ke 2 specific tips\n3. Agle test ki strategy\n4. Ek motivational line';
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🎯 TEST SETTINGS — Exam ka time aur questions change karo
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var TEST_SETTINGS = {
+  full: {
+    questions_per_subject: 20,   // Har subject se kitne questions (20×5 = 100 total)
+    time_minutes:          90,   // Full test ka time (minutes mein)
+    label:                 'PNST Full Mock Test'
+  },
+  subject: {
+    questions:      20,          // Subject test mein kitne questions
+    time_minutes:   30           // Subject test ka time (minutes mein)
+  },
+  free_tests_limit: 3            // Login ke bina kitne free tests (0 = unlimited)
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 📞 CONTACT INFO — Apna number aur links daalo
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var CONTACT = {
+  phone:     '+91 93995 64309',
+  whatsapp:  '919399564309',
+  instagram: 'https://www.instagram.com/pkmauryamp17',
+  linkedin:  'https://www.linkedin.com/in/purnendra-kumar-kushwaha-520409270'
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 📅 EXAM DATE — PNST exam ki expected date
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var PNST_EXAM_DATE = '2026-06-15'; // Format: YYYY-MM-DD
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 📚 WEBSITE INFO — Naam aur title change karo
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var SITE = {
+  name:     'Purnendra Maurya',
+  subtitle: 'PNST Mock Test 2026',
+  tagline:  'MP Pre Nursing Selection Test की तैयारी — Real Exam Feel के साथ!'
+};
+
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// 🔒 TEST MEIN AI BAND HAI (Cheating rokne ke liye)
+// Sirf Result page mein AI dikhega
+// true  = Test mein AI band
+// false = Test mein AI dikhega (recommend nahi)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+var DISABLE_AI_DURING_TEST = true;
+
+/* ╔══════════════════════════════════════════════════╗
+   ║  ⬆️  SIRF UPAR WALA SECTION EDIT KARO          ║
+   ║  Neeche kuch mat chhedna!                        ║
+   ╚══════════════════════════════════════════════════╝ */
+
+// Old variables for backward compatibility
+var WHATSAPP_NUM = CONTACT.whatsapp;
+var PHONE_NUM    = CONTACT.phone;
+var INSTAGRAM    = CONTACT.instagram;
+var LINKEDIN     = CONTACT.linkedin;
 
 /* ══════════════════════════════════════════════════════
    🔥 SECTION 2: FIREBASE INITIALIZE
@@ -76,7 +166,7 @@ async function fbQuery(col, field, val, order, lim) {
     if(order) q = q.orderBy(order,'desc');
     if(lim)   q = q.limit(lim);
     var snap = await q.get();
-    return snap.docs.map(d => d.data());
+    return snap.docs.map(function(d){ return d.data(); });
   } catch(e) { return []; }
 }
 </script>
@@ -1492,15 +1582,47 @@ function clearSearch(){var i=$('searchInput');if(i)i.value='';var r=$('searchRes
 /* SECTION 10: EXAM ENGINE */
 async function beginTest(sub){
   closeMenu();
-  if(!currentUser){var tc=0;try{tc=parseInt(localStorage.getItem('pnst_tc')||'0');}catch(e){}if(tc>=3){showLimitModal('test');return;}try{localStorage.setItem('pnst_tc',tc+1);}catch(e){}}
+  // Free test limit check
+  var freeLimit=TEST_SETTINGS.free_tests_limit;
+  if(!currentUser&&freeLimit>0){
+    var tc=0;try{tc=parseInt(localStorage.getItem('pnst_tc')||'0');}catch(e){}
+    if(tc>=freeLimit){showLimitModal('test');return;}
+    try{localStorage.setItem('pnst_tc',tc+1);}catch(e){}
+  }
   subject=sub;mockNo++;
   if(sub==='full'){
     showLoad(true,'Questions load ho rahi hain...');
-    try{var allQ=[];for(var i=0;i<SORDER.length;i++){var s=SORDER[i];if($('loadingTxt'))$('loadingTxt').textContent=SINFO[s].name+' load ho rahi hai...';var res=await fetch(FILES[s]);if(!res.ok)throw new Error(s+' file not found!');var data=await res.json();var picked=shuf(data.questions).slice(0,20);picked.forEach(function(q){q._sub=s;});allQ=allQ.concat(picked);}Qs=allQ;initTest(5400,'PNST Full Mock Test #'+mockNo);}catch(e){showLoad(false);toast('❌ '+e.message);}
+    try{
+      var allQ=[];
+      var qPerSub=TEST_SETTINGS.full.questions_per_subject;
+      var fullSec=TEST_SETTINGS.full.time_minutes*60;
+      for(var i=0;i<SORDER.length;i++){
+        var s=SORDER[i];
+        if($('loadingTxt'))$('loadingTxt').textContent=SINFO[s].name+' load ho rahi hai...';
+        var res=await fetch(FILES[s]);
+        if(!res.ok)throw new Error(s+' file not found!');
+        var data=await res.json();
+        var picked=shuf(data.questions).slice(0,qPerSub);
+        picked.forEach(function(q){q._sub=s;});
+        allQ=allQ.concat(picked);
+      }
+      Qs=allQ;
+      initTest(fullSec,TEST_SETTINGS.full.label+' #'+mockNo);
+    }catch(e){showLoad(false);toast('❌ '+e.message);}
   } else {
     var si=SINFO[sub];if(!si){toast('❌ Invalid subject');return;}
     showLoad(true,si.name+' load ho rahi hai...');
-    try{var res=await fetch(FILES[sub]);if(!res.ok)throw new Error(FILES[sub]+' not found!');var data=await res.json();var picked=shuf(data.questions).slice(0,20);picked.forEach(function(q){q._sub=sub;});Qs=picked;initTest(1800,si.icon+' '+si.name+' Test #'+mockNo);}catch(e){showLoad(false);toast('❌ '+e.message);}
+    try{
+      var subQ=TEST_SETTINGS.subject.questions;
+      var subSec=TEST_SETTINGS.subject.time_minutes*60;
+      var res=await fetch(FILES[sub]);
+      if(!res.ok)throw new Error(FILES[sub]+' not found!');
+      var data=await res.json();
+      var picked=shuf(data.questions).slice(0,subQ);
+      picked.forEach(function(q){q._sub=sub;});
+      Qs=picked;
+      initTest(subSec,si.icon+' '+si.name+' Test #'+mockNo);
+    }catch(e){showLoad(false);toast('❌ '+e.message);}
   }
 }
 function initTest(dur,badge){ans={};qi=0;timeLeft=dur;totalTime=dur;if($('exBadge'))$('exBadge').textContent=badge;if($('exQnum'))$('exQnum').textContent='Q 1/'+Qs.length;showLoad(false);Object.values(PAGES).forEach(function(id){var el=$(id);if(el)el.classList.remove('active');});var tp=$('pg-test');if(tp)tp.classList.add('active');window.scrollTo(0,0);history.pushState({p:'test'},'','#test');renderQ();buildPalette();startTimer();}
@@ -1515,19 +1637,15 @@ function renderQ(){
     opts+='<button class="ex-opt'+(ans[qi]===i?' sel':'')+'" onclick="selAns('+i+')"><div class="ex-opt-dot">'+ltrs[i]+'</div><span>'+(o||'')+'</span></button>';
   });
   var isLast=qi===Qs.length-1;
-  var navHtml='<div class="ex-nav">'+(qi>0?'<button class="ex-nbtn ex-prev" onclick="goQ(-1)">◀ Prev</button>':'')+'<button class="ex-nbtn '+(isLast?'ex-sub':'ex-next')+'" onclick="'+(isLast?'openSubmitModal()':'goQ(1)')+'">'+(isLast?'✅ Submit Exam':'Next ▶')+'</button></div>';
+  var navHtml='<div class="ex-nav">'
+    +(qi>0?'<button class="ex-nbtn ex-prev" onclick="goQ(-1)">◀ Prev</button>':'')
+    +'<button class="ex-nbtn '+(isLast?'ex-sub':'ex-next')+'" onclick="'+(isLast?'openSubmitModal()':'goQ(1)')+'">'
+    +(isLast?'✅ Submit Exam':'Next ▶')+'</button></div>';
 
-  // Action buttons row
+  // Sirf Voice + Hint — NO AI during test (cheating rokne ke liye)
   var actionBtns='<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
     +'<button class="voice-btn" id="voiceBtn_'+qi+'" onclick="voiceRead('+qi+')">🔊 सुनो</button>'
     +'<button class="hint-btn" onclick="showHint('+qi+')">💡 Hint</button>'
-    +'</div>';
-
-  // AI solution panel (live during test too)
-  var aiPanel='<div style="margin-bottom:8px">'
-    +'<button class="ai-sol-btn" id="aiSolBtn_'+qi+'" onclick="toggleAISolution('+qi+',false)">'
-    +'<span class="ai-ic">✨</span><span>🤖 AI Solution देखो</span></button>'
-    +'<div class="ai-sol-panel" id="aiSolPanel_'+qi+'"><div id="aiSolBody_'+qi+'"></div></div>'
     +'</div>';
 
   var qa=$('qArea');
@@ -1542,10 +1660,9 @@ function renderQ(){
       +'<div class="hint-box" id="hintBox_'+qi+'"></div>'
       +'<div class="ex-opts">'+opts+'</div>'
       +navHtml
-      +aiPanel
     +'</div>';
 
-  if($('exQnum')) $('exQnum').textContent='Q '+(qi+1)+'/'+Qs.length;
+  if($('exQnum'))$('exQnum').textContent='Q '+(qi+1)+'/'+Qs.length;
   updatePalette();
 }
 function selAns(i){if(ans[qi]!==undefined)return;ans[qi]=i;var opts=document.querySelectorAll('#qArea .ex-opt');opts.forEach(function(btn,j){btn.className='ex-opt'+(j===i?' sel':'');});updatePalette();}
@@ -1663,7 +1780,7 @@ async function loadDQAI(){
   var opts=q.options||q.o||[];
   var correct=q.answer!==undefined?q.answer:q.c;
   var correctAns=ltrs[correct]+') '+(opts[correct]||'');
-  var prompt='PNST 2026 expert.\nQuestion: '+(q.q||q.question||'')+'\nSahi: '+correctAns+'\nSubject: '+(window._dqSub||'biology')+'\nShort explanation (Hindi+English, max 80 words):\n1. Concept kya hai\n2. Sahi answer kyun\n3. Yaad rakhne ki trick';
+  var prompt=AI_DAILY_PROMPT(q.q||q.question||'', correctAns, window._dqSub||'biology');
   try{
     var text=await callAI(prompt);
     var sid='dqai_'+Date.now();
@@ -1705,7 +1822,7 @@ async function callGroq(prompt){
     headers:{'Content-Type':'application/json','Authorization':'Bearer '+GROQ_KEY},
     body:JSON.stringify({
       model:'llama-3.1-8b-instant',
-      messages:[{role:'system',content:'Tum PNST 2026 MP Pre Nursing Selection Test ke expert teacher ho. Hindi aur English dono mein concise jawab do.'},{role:'user',content:prompt}],
+      messages:[{role:'system',content:AI_SYSTEM_PROMPT},{role:'user',content:prompt}],
       max_tokens:600,
       temperature:0.5
     })
@@ -1769,9 +1886,8 @@ async function toggleAISolution(idx,fromReview){
   var q=Qs[idx],qText=q.q||q.question||'',opts=q.options||q.o||[];
   var correctIdx=q.answer!==undefined?q.answer:q.c,ltrs=['A','B','C','D'];
   var correctAns=ltrs[correctIdx]+') '+(opts[correctIdx]||'');
-  var subjectTips={biology:'Diagrams, life cycles, scientific names.',chemistry:'Reactions, formulas, balancing.',physics:'Laws, formulas, numericals.',gk:'Current affairs, MP facts.',english:'Grammar rules, vocabulary.'};
   var isNum=/\d+[\.\d]*\s*(m\/s|km|kg|N|J|W|V|A|mol|g|L|cm|Hz|°C|K|Pa)/i.test(qText)||/calculat|formula|kitna|numerical/i.test(qText);
-  var prompt='PNST 2026 MP nursing expert teacher ho.\nSubject: '+q._sub+' | '+(subjectTips[q._sub]||'')+'\nQuestion: '+qText+'\nOptions: '+opts.map(function(o,i){return ltrs[i]+') '+o;}).join(' | ')+'\nSahi Answer: '+correctAns+'\n\n'+(isNum?'NUMERICAL — solve karo:\n📐 Formula\n🔢 Values\n🧮 Calculate karo\n✅ Final answer: '+correctAns+'\n💡 Shortcut trick':'Explain karo (Hindi+English mix):\n💡 Concept kya hai\n✅ Sahi answer kyun\n❌ Baaki galat kyun\n🧠 Yaad rakhne ki trick')+'\nMax 150 words.';
+  var prompt=AI_SOLUTION_PROMPT(q._sub, qText, opts.map(function(o,i){return ltrs[i]+') '+o;}).join(' | '), correctAns, isNum);
   try{
     var text=await callAI(prompt);
     if(!text) throw new Error('Empty response');
@@ -1873,16 +1989,22 @@ function toggleReview(){
 
 async function loadResultAITips(pct,weakSub){
   var box=$('aiTipsBox'),btn=$('aiTipsBtn'); if(!box) return;
-  if(box.style.display==='block'){box.style.display='none';return;}
+  if(box.style.display==='block'){box.style.display='none';if(btn)btn.innerHTML='<span>🤖</span><span>AI Improvement Tips लो</span>';return;}
   if(btn){btn.style.opacity='.6';btn.innerHTML='<span>⟳</span><span>AI soch raha hai...</span>';}
   box.innerHTML='<span style="color:var(--tx2)">🤖 Tips generate ho rahi hain...</span>'; box.style.display='block';
   var weakName=weakSub&&SINFO[weakSub]?SINFO[weakSub].name:null;
-  var prompt='PNST 2026 MP nursing exam expert.\nScore: '+pct+'%\n'+(weakName?'Weak subject: '+weakName+'\n':'')+'Subject: '+subject+'\n\nPersonalized tips do (Hindi+English, max 120 words):\n1. Score ke hisab se feedback\n2. '+(weakName||'Weak areas')+' improve karne ke 2 tips\n3. Agle test ki strategy\n4. Motivational line';
+  var prompt=AI_TIPS_PROMPT(pct, subject, weakName);
   try{
     var text=await callAI(prompt);
-    box.innerHTML='<strong style="color:#c084fc;font-size:.84rem">🤖 AI Tips:</strong><br><br>'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#a78bfa">$1</strong>').replace(/\n/g,'<br>');
+    var sid='tips_'+Date.now();
+    box.innerHTML='<strong style="color:#c084fc;font-size:.84rem">🤖 AI Personalized Tips:</strong>'
+      +'<div id="'+sid+'" style="margin-top:8px;line-height:1.8">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#a78bfa">$1</strong>').replace(/\n/g,'<br>')+'</div>'
+      +'<button onclick="voiceReadAI(document.getElementById(\''+sid+'\').textContent)" style="margin-top:8px;padding:5px 11px;border-radius:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cyan);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);display:inline-flex;align-items:center;gap:5px">🔊 Tips सुनो</button>';
     if(btn){btn.style.opacity='1';btn.innerHTML='<span>🤖</span><span>Tips छुपाओ</span>';}
-  }catch(e){ box.innerHTML='<span style="color:#ef4444">'+groqErr(e)+'</span>'; if(btn){btn.style.opacity='1';btn.innerHTML='<span>🤖</span><span>AI Improvement Tips लो</span>';} }
+  }catch(e){
+    box.innerHTML='<span style="color:#ef4444">'+groqErr(e)+'</span>';
+    if(btn){btn.style.opacity='1';btn.innerHTML='<span>🤖</span><span>AI Improvement Tips लो</span>';}
+  }
 }
 
 async function askNotesAI(topic,subject,containerId,btnEl){
@@ -1892,7 +2014,7 @@ async function askNotesAI(topic,subject,containerId,btnEl){
   if(notesAiCache[ck]){container.innerHTML=notesAiCache[ck];container.style.display='block';return;}
   if(btnEl) btnEl.innerHTML='⟳ AI सोच रहा है...';
   container.innerHTML='<div style="padding:8px 0;color:var(--tx2);font-size:.8rem">🤖 Notes generate ho rahi hain...</div>'; container.style.display='block';
-  var prompt='Tum PNST 2026 MP nursing expert teacher ho.\nSubject: '+subject+' | Topic: '+topic+'\n\nQuick revision notes banao:\n\n📌 Key Points (4-5 important):\n- [points]\n\n🎯 PNST Exam mein kya puchha jaata hai:\n[1-2 lines]\n\n🧠 Yaad rakhne ki Trick:\n[mnemonic]\n\nMax 130 words. Hindi+English mix.';
+  var prompt=AI_NOTES_PROMPT(subject, topic);
   try{
     var text=await callAI(prompt); if(!text) throw new Error('Empty');
     var sid='nai_'+Date.now();
@@ -1909,14 +2031,20 @@ function askNotesAITopic(topic,subject,containerId,btnEl){
 }
 
 async function askCustomNotesQ(){
-  var q=$('notesAskInput'),sub=$('notesAskSubject'); if(!q||!q.value.trim()){ toast('Sawaal likho!'); return; }
+  var q=$('notesAskInput'),sub=$('notesAskSubject');
+  if(!q||!q.value.trim()){ toast('Sawaal likho!'); return; }
   var panel=$('nb-custom'); if(!panel) return;
-  panel.innerHTML='<div style="padding:8px 0;color:var(--tx2);font-size:.8rem">🤖 Jawab dhoondh raha hai...</div>'; panel.style.display='block';
-  var prompt='Tum PNST 2026 MP nursing expert teacher ho.\nSubject: '+(sub?sub.value:'general')+'\nStudent ka sawaal: '+q.value.trim()+'\n\nClear jawab do:\n💡 Explanation (Hindi+English)\n✅ Main Answer\n🎯 PNST ke liye important kya hai\n\nMax 130 words.';
+  panel.innerHTML='<div style="padding:8px 0;color:var(--tx2);font-size:.8rem">🤖 Jawab dhoondh raha hai...</div>';
+  panel.style.display='block';
+  var prompt=AI_QA_PROMPT(sub?sub.value:'general', q.value.trim());
   try{
     var text=await callAI(prompt); if(!text) throw new Error('Empty');
-    panel.innerHTML='<div style="font-size:.82rem;line-height:1.7;color:var(--tx)">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div>';
-  }catch(e){ panel.innerHTML='<div style="color:#ef4444;font-size:.8rem">'+groqErr(e)+'</div>'; }
+    var sid='cq_'+Date.now();
+    panel.innerHTML='<div id="'+sid+'" style="font-size:.82rem;line-height:1.7;color:var(--tx)">'+text.replace(/\*\*(.*?)\*\*/g,'<strong style="color:#c084fc">$1</strong>').replace(/\n/g,'<br>')+'</div>'
+      +'<button onclick="voiceReadAI(document.getElementById(\''+sid+'\').textContent)" style="margin-top:8px;padding:5px 11px;border-radius:8px;background:rgba(6,182,212,.1);border:1px solid rgba(6,182,212,.25);color:var(--cyan);font-size:.7rem;font-weight:700;cursor:pointer;font-family:var(--fn);display:inline-flex;align-items:center;gap:5px">🔊 जवाब सुनो</button>';
+  }catch(e){
+    panel.innerHTML='<div style="color:#ef4444;font-size:.8rem">'+groqErr(e)+'</div>';
+  }
 }
 
 /* ══════════════════════════════════════════════════════

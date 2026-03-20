@@ -221,6 +221,9 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 @keyframes glow      { 0%,100%{opacity:.6} 50%{opacity:1} }
 @keyframes slideUp   { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
 @keyframes modalIn   { from{opacity:0;transform:scale(.93)} to{opacity:1;transform:scale(1)} }
+@keyframes chatPulseAnim { 0%{transform:scale(1);opacity:.7} 70%{transform:scale(1.6);opacity:0} 100%{transform:scale(1.6);opacity:0} }
+@keyframes tooltipAnim  { from{opacity:0;transform:translateY(6px)} to{opacity:1;transform:translateY(0)} }
+@keyframes chatBounce   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
 @keyframes popIn     { from{opacity:0;transform:scale(.75)} to{opacity:1;transform:scale(1)} }
 @keyframes fall      { from{transform:translateY(-10px) rotate(0);opacity:1} to{transform:translateY(102vh) rotate(720deg);opacity:0} }
 @keyframes nlp-drift { 0%,100%{transform:translate(0,0) scale(1)} 33%{transform:translate(30px,-20px) scale(1.05)} 66%{transform:translate(-20px,25px) scale(.95)} }
@@ -496,7 +499,7 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
 .dq-badge     { display:inline-block; background:rgba(6,182,212,.2); border:1px solid rgba(6,182,212,.4); border-radius:20px; font-size:.62rem; font-weight:700; padding:3px 10px; color:var(--cyan); margin-bottom:10px; text-transform:uppercase; letter-spacing:.7px; }
 
 /* PWA BUTTON */
-.pwa-btn      { display:none; position:fixed; bottom:74px; right:14px; z-index:500; background:linear-gradient(135deg,var(--blue),var(--cyan)); color:#fff; border:none; border-radius:14px; padding:10px 16px; font-family:var(--fn2); font-size:.82rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(59,130,246,.45); align-items:center; gap:7px; transition:transform .2s; }
+.pwa-btn      { display:none; position:fixed; bottom:74px; left:14px; z-index:399; background:linear-gradient(135deg,var(--blue),var(--cyan)); color:#fff; border:none; border-radius:14px; padding:10px 16px; font-family:var(--fn2); font-size:.82rem; font-weight:700; cursor:pointer; box-shadow:0 4px 20px rgba(59,130,246,.45); align-items:center; gap:7px; transition:transform .2s; }
 .pwa-btn:hover{ transform:translateY(-2px); }
 .pwa-btn.show { display:flex; }
 
@@ -1048,6 +1051,35 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
       </div>
     </div>
   </div><!-- /wrap -->
+
+  <!-- ✨ FLOATING CHAT BUBBLE — Sirf Home Page Pe -->
+  <div id="chatBubble" onclick="openTawkChat()"
+    style="position:fixed;bottom:76px;right:16px;z-index:398;cursor:pointer;touch-action:manipulation;display:none">
+    <!-- Bubble -->
+    <div style="position:relative">
+      <!-- Pulse ring animation -->
+      <div id="chatPulse" style="position:absolute;inset:-6px;border-radius:50%;background:rgba(37,211,102,.3);animation:chatPulseAnim 2s ease-out infinite"></div>
+      <!-- Main button -->
+      <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .2s"
+        onmousedown="this.style.transform='scale(.92)'" onmouseup="this.style.transform='scale(1)'" ontouchstart="this.style.transform='scale(.92)'" ontouchend="this.style.transform='scale(1)'">
+        <!-- WhatsApp-style chat icon -->
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+          <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+      </div>
+      <!-- Notification dot -->
+      <div style="position:absolute;top:-2px;right:-2px;width:14px;height:14px;background:#ef4444;border-radius:50%;border:2px solid var(--bg);display:flex;align-items:center;justify-content:center">
+        <span style="font-size:8px;color:#fff;font-weight:700;line-height:1">1</span>
+      </div>
+    </div>
+    <!-- Tooltip -->
+    <div id="chatTooltip" style="position:absolute;bottom:64px;right:0;background:var(--bg2);border:1px solid var(--card-border);border-radius:12px;padding:10px 14px;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.3);animation:tooltipAnim .3s ease">
+      <div style="font-size:.75rem;font-weight:700;color:var(--tx)">💬 Koi sawaal hai?</div>
+      <div style="font-size:.62rem;color:var(--tx2);margin-top:2px">Hum yahan hain! 😊</div>
+      <!-- Arrow -->
+      <div style="position:absolute;bottom:-6px;right:20px;width:12px;height:12px;background:var(--bg2);border-right:1px solid var(--card-border);border-bottom:1px solid var(--card-border);transform:rotate(45deg)"></div>
+    </div>
+  </div>
 
   <div class="bottom-nav">
     <button class="bnav on"           id="bn-home"    onclick="nav('home')">       <span class="bnav-ic">🏠</span><span class="bnav-lb">होम</span></button>
@@ -1671,6 +1703,8 @@ function nav(page){
   pg.classList.add('active');
   document.querySelectorAll('.bnav').forEach(function(b){b.classList.remove('on');});
   if(NAV_MAP[page]){var nb=$(NAV_MAP[page]);if(nb)nb.classList.add('on');}
+  // Chat bubble sirf Home pe dikhao
+  showChatBubble(page==='home');
   window.scrollTo(0,0);
   history.pushState({p:page},'','#'+page);
 }
@@ -1704,6 +1738,7 @@ function clearSearch(){var i=$('searchInput');if(i)i.value='';var r=$('searchRes
 
 /* SECTION 10: EXAM ENGINE */
 async function beginTest(sub){
+  showChatBubble(false); // Chat bubble hide karo test mein
   closeMenu();
   // Free test limit check
   var freeLimit=TEST_SETTINGS.free_tests_limit;
@@ -2800,6 +2835,47 @@ function doLogout(){
 /* ══════════════════════════════════════════════════════
    SECTION 21: PWA INSTALL
    ══════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════
+   CHAT BUBBLE — Sirf Home Page Pe
+   ══════════════════════════════════════════════════════ */
+function showChatBubble(show){
+  var bubble=$('chatBubble');
+  if(!bubble) return;
+  if(show){
+    bubble.style.display='block';
+    bubble.style.animation='chatBounce 2s ease-in-out 1s 3';
+    setTimeout(function(){
+      var tip=$('chatTooltip'); if(tip) tip.style.display='none';
+    }, 5000);
+    if(window.Tawk_API && window.Tawk_API.hideWidget) window.Tawk_API.hideWidget();
+  } else {
+    bubble.style.display='none';
+    if(window.Tawk_API && window.Tawk_API.hideWidget) window.Tawk_API.hideWidget();
+  }
+}
+
+function openTawkChat(){
+  var tip=$('chatTooltip'); if(tip) tip.style.display='none';
+  if(window.Tawk_API){
+    // User info set karo (agar abhi login hua ho)
+    try{
+      if(userProfile && userProfile.name){
+        Tawk_API.setAttributes({
+          'name' : userProfile.name,
+          'email': userProfile.email || (userProfile.phone+'@pnst.app'),
+          'hash' : userProfile.uid || ''
+        }, function(error){});
+      }
+    }catch(e){}
+    // Chat window kholo
+    if(window.Tawk_API.maximize) window.Tawk_API.maximize();
+    else if(window.Tawk_API.toggle) window.Tawk_API.toggle();
+  } else {
+    // Tawk load nahi hua — contact form fallback
+    openContactForm();
+  }
+}
+
 function installPWA(){
   if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone){ toast('✅ App pehle se install hai!'); return; }
   if(deferredInstallPrompt){
@@ -2909,6 +2985,9 @@ window.addEventListener('load',function(){
   // Daily quiz load
   loadDailyQuiz();
 
+  // Chat bubble — Home page pe show karo
+  setTimeout(function(){ showChatBubble(true); }, 2000);
+
   // PWA Service Worker
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('./sw.js',{scope:'./'})
@@ -2921,10 +3000,50 @@ window.addEventListener('load',function(){
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+
+// Tawk load hone ke baad user info set karo
+Tawk_API.onLoad=function(){
+
+  // 1. Default widget hide karo — custom bubble use karenge
+  Tawk_API.hideWidget();
+
+  // 2. User logged in hai to uska naam aur ID set karo
+  try{
+    var gp=localStorage.getItem('pnst_guest_profile');
+    if(gp){
+      var profile=JSON.parse(gp);
+      var userName = profile.name || 'PNST Student';
+      var userEmail= profile.email || '';
+      var userPhone= profile.phone || '';
+      var userId   = profile.uid   || '';
+
+      // Tawk mein visitor info set karo
+      // Ab notification mein naam dikhega!
+      Tawk_API.setAttributes({
+        'name' : userName,
+        'email': userEmail || (userPhone ? userPhone+'@pnst.app' : ''),
+        'hash' : userId   // Unique ID — isi se har baar same chat milegi
+      }, function(error){});
+
+    } else {
+      // Guest user — basic info
+      Tawk_API.setAttributes({
+        'name' : 'PNST Guest',
+        'email': 'guest@pnst.app'
+      }, function(error){});
+    }
+  }catch(e){}
+
+};
+
+// 3. Chat band hone ke baad bhi same chat rakho
+// Tawk automatically visitor ID se track karta hai
+// Koi extra setting nahi chahiye ✅
+
 (function(){
 var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
 s1.async=true;
-s1.src='https://embed.tawk.to/69bd54f00940ad1c353092c6/1i2k0c5ap';
+s1.src='https://embed.tawk.to/69bd54f00940ad1c353092c6/1jk5p7jdn';
 s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);

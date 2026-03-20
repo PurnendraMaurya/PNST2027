@@ -135,11 +135,7 @@ var DISABLE_AI_DURING_TEST = true;
    ║  Neeche kuch mat chhedna!                        ║
    ╚══════════════════════════════════════════════════╝ */
 
-// Old variables for backward compatibility
-var WHATSAPP_NUM = CONTACT.whatsapp;
-var PHONE_NUM    = CONTACT.phone;
-var INSTAGRAM    = CONTACT.instagram;
-var LINKEDIN     = CONTACT.linkedin;
+// Social links available via CONTACT.instagram / CONTACT.linkedin
 
 /* ══════════════════════════════════════════════════════
    🔥 SECTION 2: FIREBASE INITIALIZE
@@ -1171,7 +1167,8 @@ body { font-family: var(--fn); background: var(--bg); color: var(--tx); min-heig
           <option value="gk">🌍 GK</option>
           <option value="english">📝 English</option>
         </select>
-        <button onclick="askCustomNotesQ()" style="padding:9px 16px;border-radius:9px;background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border:none;font-family:var(--fn2);font-size:.88rem;font-weight:700;cursor:pointer;flex-shrink:0">🤖 पूछो</button>
+        <button onclick="startSpeechInput()" style="padding:9px 11px;border-radius:9px;background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-size:.9rem;cursor:pointer;flex-shrink:0;touch-action:manipulation" title="Voice se poocho">🎤</button>
+        <button onclick="askCustomNotesQ()" style="padding:9px 16px;border-radius:9px;background:linear-gradient(135deg,var(--purple),var(--blue));color:#fff;border:none;font-family:var(--fn2);font-size:.88rem;font-weight:700;cursor:pointer;flex-shrink:0;touch-action:manipulation">🤖 पूछो</button>
       </div>
       <div class="notes-ai-panel" id="nb-custom" style="margin-top:10px"></div>
     </div>
@@ -2222,6 +2219,27 @@ function askNotesAITopic(topic,subject,containerId,btnEl){
   askNotesAI(topic,subject,containerId,btnEl);
 }
 
+
+/* SECTION 18: SPEECH TO TEXT — Notes mein voice input */
+var speechRecog=null;
+function startSpeechInput(){
+  if(!('webkitSpeechRecognition' in window)&&!('SpeechRecognition' in window)){
+    toast('❌ Voice input support nahi hai is browser mein'); return;
+  }
+  if(speechRecog){ try{speechRecog.stop();}catch(e){} speechRecog=null; return; }
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  speechRecog=new SR();
+  speechRecog.lang='hi-IN'; speechRecog.continuous=false; speechRecog.interimResults=false;
+  speechRecog.onresult=function(e){
+    var inp=$('notesAskInput');
+    if(inp){ inp.value=e.results[0][0].transcript; toast('✅ Sawaal record ho gaya!'); }
+    speechRecog=null;
+  };
+  speechRecog.onerror=function(){ toast('❌ Voice nahi suna. Dobara try karo.'); speechRecog=null; };
+  speechRecog.onend=function(){ speechRecog=null; };
+  speechRecog.start();
+  toast('🎤 Bol rahe hain...');
+}
 async function askCustomNotesQ(){
   var q=$('notesAskInput'),sub=$('notesAskSubject');
   if(!q||!q.value.trim()){ toast('Sawaal likho!'); return; }
@@ -2242,19 +2260,6 @@ async function askCustomNotesQ(){
 /* ══════════════════════════════════════════════════════
    SECTION 18: SPEECH TO TEXT (FREE!)
    ══════════════════════════════════════════════════════ */
-var speechRecog=null;
-function startSpeechInput(){
-  if(!('webkitSpeechRecognition' in window)&&!('SpeechRecognition' in window)){
-    toast('❌ Speech input support nahi hai'); return;
-  }
-  var SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
-  speechRecog=new SpeechRecognition();
-  speechRecog.lang='hi-IN'; speechRecog.continuous=false; speechRecog.interimResults=false;
-  speechRecog.onresult=function(e){ var inp=$('notesAskInput'); if(inp){ inp.value=e.results[0][0].transcript; toast('✅ Sawaal sun liya!'); } };
-  speechRecog.onerror=function(){ toast('❌ Speech nahi suna. Dobara try karo.'); };
-  speechRecog.start();
-  toast('🎤 Bol rahe hain... sunna shuru...');
-}
 
 /* ══════════════════════════════════════════════════════
    SECTION 19: LOGIN SYSTEM
@@ -2912,5 +2917,20 @@ window.addEventListener('load',function(){
   }
 });
 </script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69bd54f00940ad1c353092c6/1i2k0c5ap';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 </html>

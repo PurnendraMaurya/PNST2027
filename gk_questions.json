@@ -1,7 +1,9 @@
 {
   "_info": {
     "subject": "GK",
-    "total_questions": 942
+    "total_questions": 942,
+    "bilingual": true,
+    "format": "Hindi (q, options) + English (q_en, options_en)"
   },
   "questions": [
     {
@@ -334,7 +336,7 @@
         "विदिशा",
         "टीकमगढ़ उज्जैन",
         "राजस्थान",
-        "सीधी शिकायती प्रश्न देखें"
+        "राजस्थान"
       ],
       "options_en": [
         "Vidisha",
@@ -467,7 +469,7 @@
         "अकबर",
         "जहांगीर शाहजहाँ",
         "राजस्थान",
-        "बहादुर शाह ज़फ़र"
+        "राजस्थान"
       ],
       "options_en": [
         "Akbar",
@@ -1015,9 +1017,9 @@
       "q": "कारोपनी प्राकृ तिक हिरण पार्क मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Karopani Natural Deer park is located in which of the following district of Madhya Pradesh?",
       "options": [
-        "हरदा दतिया",
+        "हरदा",
         "राजस्थान",
-        "बैतूल",
+        "राजस्थान",
         "डिंडौरी"
       ],
       "options_en": [
@@ -1037,7 +1039,7 @@
         "अशोकनगर",
         "विदिशा",
         "बुरहानपुर",
-        "ग्वालियर शिकायती प्रश्न देखें                                                                                                                                                                                Logout"
+        "ग्वालियर"
       ],
       "options_en": [
         "Ashoknagar",
@@ -1092,7 +1094,7 @@
       "q_en": "In which of the following states is the Bihula festival very popular?",
       "options": [
         "महाराष्ट्र",
-        "मध्यप्रदेश",
+        "मध्य प्रदेश",
         "गुजरात",
         "बिहार"
       ],
@@ -1243,9 +1245,9 @@
       "q": "फरवरी 2024 में, प्रधानमंत्री नरें द्र मोदी ने ______ में स्थापित विश्व की पहली वैदिक घड़ी का उद् घाटन किया, जिसे समय गणना का कें द्र माना जाता है।",
       "q_en": "In February 2024, Prime Minister Narendra Modi inaugurated the world's first Vedic clock installed in ______, considered the center of time calculation.",
       "options": [
-        "उज्जैन भोपाल",
+        "उज्जैन",
         "राजस्थान",
-        "इंदौर",
+        "राजस्थान",
         "जबलपुर"
       ],
       "options_en": [
@@ -1338,7 +1340,7 @@
       "q": "अगस्त 2024 के अनुसार, मध्य प्रदेश राज्य में कितने संभाग हैं?",
       "q_en": "As of August 2024, how Many divisions are there in Madhya Pradesh State?",
       "options": [
-        "15",
+        "15 वां",
         "15 12",
         "12 6",
         "6 10"
@@ -1358,9 +1360,9 @@
       "q_en": "Balaji Puram is famous for the huge temple of Lord Balaji. It is located in which of the following district of Madhya Pradesh?",
       "options": [
         "बालाघाट",
-        "बैतूल बड़वानी",
+        "बैतूल",
         "राजस्थान",
-        "हरदा"
+        "राजस्थान"
       ],
       "options_en": [
         "Balaghat",
@@ -1398,7 +1400,7 @@
         "ग्वालियर",
         "जबलपुर",
         "इंदौर",
-        "भोपाल शिकायती प्रश्न देखें"
+        "भोपाल"
       ],
       "options_en": [
         "Gwalior",
@@ -1550,7 +1552,7 @@
         "उषा ठाकु र",
         "किरण देसाई खुशवंत सिंह",
         "राजस्थान",
-        "अरुं धति रॉय"
+        "राजस्थान"
       ],
       "options_en": [
         "Usha Thakur",
@@ -1604,9 +1606,9 @@
       "q": "मार्च 2024 में भारत की पहली लघु स्तरीय एलएनजी इकाई का उद् घाटन निम्नलिखित में से किस राज्य में किया गया?",
       "q_en": "In which of the following state was India's first small scale LNG unit inaugurated in March 2024?",
       "options": [
-        "आंध्र प्रदेश कर्नाटक",
+        "आंध्र प्रदेश",
         "गुजरात",
-        "मध्य प्रदेश",
+        "गुजरात",
         "राजस्थान"
       ],
       "options_en": [
@@ -1796,7 +1798,7 @@
       "options": [
         "इलाहाबाद बैंक",
         "राजस्थान",
-        "भारतीय स्टेट बैंक",
+        "स्टेट बैंक ऑफ इंडिया",
         "पंजाब नेशनल बैंक"
       ],
       "options_en": [
@@ -2061,9 +2063,9 @@
       "q_en": "Which state became the first to adopt Unified Pension Scheme in August 2024?",
       "options": [
         "हिमाचल प्रदेश",
-        "गुजरात कर्नाटक",
+        "गुजरात",
         "राजस्थान",
-        "महाराष्ट्र"
+        "राजस्थान"
       ],
       "options_en": [
         "Himachal Pradesh",
@@ -2253,7 +2255,7 @@
         "सुधा मिश्रा",
         "अनुजा चौहान चित्रा बनर्जी दिवाकरुनी",
         "राजस्थान",
-        "भावी मेहता"
+        "राजस्थान"
       ],
       "options_en": [
         "Sudha Mishra",
@@ -2307,9 +2309,9 @@
       "q": "मई 2024 में 10वें विश्व जल फोरम की मेजबानी किस देश ने की?",
       "q_en": "Which country hosted the 10th World Water Forum in May 2024 ?",
       "options": [
-        "भारत संयुक्त राज्य अमेरिका",
+        "भारत",
         "राजस्थान",
-        "फ्रांस",
+        "राजस्थान",
         "इंडोनेशिया"
       ],
       "options_en": [
@@ -2537,7 +2539,7 @@
       "options": [
         "भारत के मुख्य न्यायाधीश",
         "गृहमंत्री",
-        "प्रधान मंत्री",
+        "प्रधानमंत्री",
         "भारत के महान्यायवादी"
       ],
       "options_en": [
@@ -2839,7 +2841,7 @@
       "q": "सिंगाजी थर्मल पावर परियोजना मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Singaji Thermal Power Project is located in which of the following district of Madhya Pradesh?",
       "options": [
-        "इंदर",
+        "इंदौर",
         "सागर",
         "खण्डवा",
         "ग्वालियर"
@@ -2859,9 +2861,9 @@
       "q_en": "Rani Talab is located in which of the following districts of Madhya Pradesh?",
       "options": [
         "रायसेन",
-        "राजगढ़ रतलाम",
+        "राजगढ़",
         "राजस्थान",
-        "रीवा"
+        "राजस्थान"
       ],
       "options_en": [
         "Raisen",
@@ -2975,7 +2977,7 @@
         "मरियम शरीफ़",
         "आसिफ अली जरदारी नवाज शरीफ",
         "राजस्थान",
-        "मुफ्ती अब्दुल्ला"
+        "राजस्थान"
       ],
       "options_en": [
         "Maryam Sharif",
@@ -3031,7 +3033,7 @@
       "options": [
         "टो लाम एडम फु क",
         "राजस्थान",
-        "फाम मिन्ह चीन्ह",
+        "राजस्थान",
         "गुयेन डुंग"
       ],
       "options_en": [
@@ -3486,9 +3488,9 @@
       "q_en": "Which of the following country announced visa-free access to India and 34 other nations from October 1, 2024?",
       "options": [
         "श्रीलंका",
-        "भूटान नेपाल",
+        "भूटान",
         "राजस्थान",
-        "इंडोनेशिया"
+        "राजस्थान"
       ],
       "options_en": [
         "Sri Lanka",
@@ -3542,9 +3544,9 @@
       "q": "प्राकृ तिक सौंदर्य वाला भेड़ाघाट मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Scenic beauty Bhedaghat is located in which of the following district of Madhya Pradesh?",
       "options": [
-        "ग्वालियर इंदौर",
+        "ग्वालियर",
         "राजस्थान",
-        "जबलपुर",
+        "राजस्थान",
         "सीहोर"
       ],
       "options_en": [
@@ -3637,10 +3639,10 @@
       "q": "WHO का मुख्यालय कहाँ है?",
       "q_en": "Where is WHO headquarters?",
       "options": [
-        "New York",
-        "London",
-        "Geneva",
-        "Paris"
+        "न्यूयॉर्क",
+        "लंदन",
+        "जिनेवा",
+        "पेरिस"
       ],
       "options_en": [
         "New York",
@@ -3677,7 +3679,7 @@
       "options": [
         "विंध्याचल",
         "अमरकंटक",
-        "सतपुड़ा",
+        "सतपुरा",
         "पचमढ़ी"
       ],
       "options_en": [
@@ -3714,7 +3716,7 @@
       "q_en": "When is International Nurses Day?",
       "options": [
         "10 May",
-        "12 May",
+        "12 मई",
         "14 May",
         "20 May"
       ],
@@ -3789,7 +3791,7 @@
       "q": "ICMR का पूरा नाम क्या है?",
       "q_en": "Full form of ICMR?",
       "options": [
-        "Indian Council of Medical Research",
+        "भारतीय आयुर्विज्ञान अनुसंधान परिषद",
         "International Council for Medical Research",
         "Indian Committee of Medical Records",
         "Indian Centre for Medical Remedy"
@@ -3827,10 +3829,10 @@
       "q": "World Health Day कब मनाया जाता है?",
       "q_en": "When is World Health Day?",
       "options": [
-        "7 April",
-        "14 April",
+        "7 अप्रैल",
+        "14 अप्रैल",
         "7 May",
-        "31 May"
+        "31 मई"
       ],
       "options_en": [
         "7 April",
@@ -3904,7 +3906,7 @@
       "q_en": "Total number of SDGs?",
       "options": [
         "12",
-        "15",
+        "15 वां",
         "17",
         "20"
       ],
@@ -3998,10 +4000,10 @@
       "q": "World TB Day कब मनाया जाता है?",
       "q_en": "When is World TB Day?",
       "options": [
-        "24 March",
-        "7 April",
-        "12 May",
-        "1 December"
+        "24 मार्च",
+        "7 अप्रैल",
+        "12 मई",
+        "1 दिसंबर"
       ],
       "options_en": [
         "24 March",
@@ -4017,10 +4019,10 @@
       "q": "मध्यप्रदेश की राजधानी है:",
       "q_en": "Capital of Madhya Pradesh is:",
       "options": [
-        "Indore",
-        "Bhopal",
-        "Gwalior",
-        "Jabalpur"
+        "इंदौर",
+        "भोपाल",
+        "ग्वालियर",
+        "जबलपुर"
       ],
       "options_en": [
         "Indore",
@@ -4036,10 +4038,10 @@
       "q": "MP का राज्य पुष्प है:",
       "q_en": "State flower of MP is:",
       "options": [
-        "Rose",
-        "Lotus",
+        "गुलाब",
+        "कमल",
         "White Lily",
-        "Marigold"
+        "गेंदा"
       ],
       "options_en": [
         "Rose",
@@ -4074,10 +4076,10 @@
       "q": "Florence Nightingale किस देश की थीं?",
       "q_en": "Florence Nightingale was from:",
       "options": [
-        "France",
-        "USA",
+        "फ्रांस",
+        "यूएसए",
         "Britain",
-        "Germany"
+        "जर्मनी"
       ],
       "options_en": [
         "France",
@@ -4112,10 +4114,10 @@
       "q": "Ayushman Bharat Yojana में कितने रुपये का बीमा मिलता है?",
       "q_en": "Insurance amount under Ayushman Bharat Yojana:",
       "options": [
-        "₹2 lakh",
-        "₹5 lakh",
-        "₹3 lakh",
-        "₹10 lakh"
+        "₹2 लाख",
+        "₹5 लाख",
+        "₹3 लाख",
+        "₹10 लाख"
       ],
       "options_en": [
         "₹2 lakh",
@@ -4131,10 +4133,10 @@
       "q": "MP का राज्य पशु है:",
       "q_en": "State animal of MP is:",
       "options": [
-        "Tiger",
-        "Lion",
-        "Barasingha",
-        "Elephant"
+        "बाघ",
+        "शेर",
+        "बारहसिंगा",
+        "हाथी"
       ],
       "options_en": [
         "Tiger",
@@ -4151,9 +4153,9 @@
       "q_en": "India's first female Prime Minister:",
       "options": [
         "Sonia Gandhi",
-        "Indira Gandhi",
-        "Pratibha Patil",
-        "Sarojini Naidu"
+        "इंदिरा गांधी",
+        "प्रतिभा पाटिल",
+        "सरोजिनी नायडू"
       ],
       "options_en": [
         "Sonia Gandhi",
@@ -4226,9 +4228,9 @@
       "q": "'Janani Suraksha Yojana' का उद्देश्य:",
       "q_en": "Objective of Janani Suraksha Yojana:",
       "options": [
-        "Child education",
+        "बाल शिक्षा",
         "Reduce maternal and infant mortality",
-        "Old age pension",
+        "वृद्धावस्था पेंशन",
         "Free medicines"
       ],
       "options_en": [
@@ -4264,10 +4266,10 @@
       "q": "भारतीय संविधान का अनुच्छेद 21 किससे संबंधित है?",
       "q_en": "Article 21 of Indian Constitution is related to:",
       "options": [
-        "Education",
-        "Right to Life and Personal Liberty",
-        "Freedom of speech",
-        "Right to equality"
+        "शिक्षा",
+        "जीवन और व्यक्तिगत स्वतंत्रता का अधिकार",
+        "वाक् स्वतंत्रता",
+        "समानता का अधिकार"
       ],
       "options_en": [
         "Education",
@@ -4283,7 +4285,7 @@
       "q": "SDG (Sustainable Development Goals) की संख्या:",
       "q_en": "Number of SDGs:",
       "options": [
-        "15",
+        "15 वां",
         "17",
         "20",
         "12"
@@ -4299,12 +4301,12 @@
       "id": 226
     },
     {
-      "q": "Narmada नदी का उद्गम स्थल:",
+      "q": "नर्मदा नदी का उद्गम कहाँ से है?",
       "q_en": "Origin of Narmada river:",
       "options": [
-        "Vindhya Range",
-        "Amarkantak",
-        "Satpura Range",
+        "विंध्य श्रेणी",
+        "अमरकंटक",
+        "सतपुड़ा श्रेणी",
         "Maikal Hills only"
       ],
       "options_en": [
@@ -4322,7 +4324,7 @@
       "q_en": "India's National Health Policy was first formed in:",
       "options": [
         "1983",
-        "1991",
+        "1991 में",
         "2002",
         "1947"
       ],
@@ -4342,7 +4344,7 @@
       "options": [
         "Tuberculosis",
         "Polio",
-        "Malaria",
+        "मलेरिया",
         "Measles"
       ],
       "options_en": [
@@ -4359,10 +4361,10 @@
       "q": "MP का सबसे बड़ा शहर:",
       "q_en": "Largest city of MP:",
       "options": [
-        "Bhopal",
-        "Gwalior",
-        "Jabalpur",
-        "Indore"
+        "भोपाल",
+        "ग्वालियर",
+        "जबलपुर",
+        "इंदौर"
       ],
       "options_en": [
         "Bhopal",
@@ -4397,8 +4399,8 @@
       "q": "Article 21A किससे संबंधित है?",
       "q_en": "Article 21A किससे संबंधित है?",
       "options": [
-        "Right to work",
-        "Right to Education",
+        "काम का अधिकार",
+        "शिक्षा का अधिकार",
         "Right to life",
         "Right to vote"
       ],
@@ -4419,7 +4421,7 @@
         "Polio",
         "Tetanus",
         "Tuberculosis",
-        "Typhoid"
+        "टाइफाइड"
       ],
       "options_en": [
         "Polio",
@@ -4475,7 +4477,7 @@
       "options": [
         "NRHM",
         "ICDS (Integrated Child Development Services)",
-        "Ayushman Bharat",
+        "आयुष्मान भारत",
         "PMJAY"
       ],
       "options_en": [
@@ -4492,10 +4494,10 @@
       "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP की सबसे लंबी नदी:",
       "options": [
-        "Tapti",
-        "Chambal",
-        "Betwa",
-        "Narmada"
+        "ताप्ती",
+        "चंबल",
+        "बेतवा",
+        "नर्मदा"
       ],
       "options_en": [
         "Tapti",
@@ -4552,7 +4554,7 @@
         "Anaemia",
         "Goitre",
         "Rickets",
-        "Scurvy"
+        "स्कर्वी"
       ],
       "options_en": [
         "Anaemia",
@@ -4584,13 +4586,13 @@
       "id": 241
     },
     {
-      "q": "MP का उच्च न्यायालय कहाँ है?",
+      "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP का उच्च न्यायालय कहाँ है?",
       "options": [
-        "Bhopal",
-        "Indore",
-        "Jabalpur",
-        "Gwalior"
+        "भोपाल",
+        "इंदौर",
+        "जबलपुर",
+        "ग्वालियर"
       ],
       "options_en": [
         "Bhopal",
@@ -4660,13 +4662,13 @@
       "id": 245
     },
     {
-      "q": "Sanchi Stupa किस जिले में है?",
+      "q": "सांची का स्तूप",
       "q_en": "Sanchi Stupa किस जिले में है?",
       "options": [
-        "Bhopal",
-        "Raisen",
-        "Vidisha",
-        "Sagar"
+        "भोपाल",
+        "रायसेन",
+        "विदिशा",
+        "सागर"
       ],
       "options_en": [
         "Bhopal",
@@ -4778,9 +4780,9 @@
       "q_en": "Pradhan Mantri Suraksha Bima Yojana में बीमा राशि:",
       "options": [
         "₹1 lakh",
-        "₹2 lakh",
-        "₹5 lakh",
-        "₹10 lakh"
+        "₹2 लाख",
+        "₹5 लाख",
+        "₹10 लाख"
       ],
       "options_en": [
         "₹1 lakh",
@@ -4793,13 +4795,13 @@
       "id": 252
     },
     {
-      "q": "MP का राज्य पक्षी है:",
+      "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP का राज्य पक्षी है:",
       "options": [
-        "Peacock",
-        "Parrot",
+        "मोर",
+        "तोता",
         "Indian Paradise Flycatcher (Dudhraj)",
-        "Crane"
+        "सारस"
       ],
       "options_en": [
         "Peacock",
@@ -4812,13 +4814,13 @@
       "id": 253
     },
     {
-      "q": "MP का राज्य वृक्ष है:",
+      "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP का राज्य वृक्ष है:",
       "options": [
-        "Neem",
-        "Banyan",
+        "नीम",
+        "बरगद",
         "Teak (Sagwan)",
-        "Peepal"
+        "पीपल"
       ],
       "options_en": [
         "Neem",
@@ -4831,7 +4833,7 @@
       "id": 254
     },
     {
-      "q": "Florence Nightingale का जन्म कब हुआ?",
+      "q": "फ्लोरेंस नाइटिंगेल",
       "q_en": "Florence Nightingale का जन्म कब हुआ?",
       "options": [
         "1820",
@@ -4853,10 +4855,10 @@
       "q": "Ayushman Bharat Yojana में बीमा राशि:",
       "q_en": "Ayushman Bharat Yojana में बीमा राशि:",
       "options": [
-        "₹2 lakh",
-        "₹5 lakh",
-        "₹3 lakh",
-        "₹10 lakh"
+        "₹2 लाख",
+        "₹5 लाख",
+        "₹3 लाख",
+        "₹10 लाख"
       ],
       "options_en": [
         "₹2 lakh",
@@ -4891,7 +4893,7 @@
       "q": "SDG की कुल संख्या:",
       "q_en": "SDG की कुल संख्या:",
       "options": [
-        "15",
+        "15 वां",
         "17",
         "20",
         "12"
@@ -4907,12 +4909,12 @@
       "id": 258
     },
     {
-      "q": "Janani Suraksha Yojana का उद्देश्य:",
+      "q": "जननी सुरक्षा योजना",
       "q_en": "Janani Suraksha Yojana का उद्देश्य:",
       "options": [
-        "Child education",
+        "बाल शिक्षा",
         "Maternal और infant mortality कम करना",
-        "Old age pension",
+        "वृद्धावस्था पेंशन",
         "Free medicines"
       ],
       "options_en": [
@@ -4930,9 +4932,9 @@
       "q_en": "India की पहली महिला PM:",
       "options": [
         "Sonia Gandhi",
-        "Indira Gandhi",
-        "Pratibha Patil",
-        "Sarojini Naidu"
+        "इंदिरा गांधी",
+        "प्रतिभा पाटिल",
+        "सरोजिनी नायडू"
       ],
       "options_en": [
         "Sonia Gandhi",
@@ -4945,13 +4947,13 @@
       "id": 260
     },
     {
-      "q": "Article 21 किससे संबंधित है?",
+      "q": "अनुच्छेद 21",
       "q_en": "Article 21 किससे संबंधित है?",
       "options": [
-        "Education",
-        "Right to Life and Personal Liberty",
-        "Freedom of speech",
-        "Right to equality"
+        "शिक्षा",
+        "जीवन और व्यक्तिगत स्वतंत्रता का अधिकार",
+        "वाक् स्वतंत्रता",
+        "समानता का अधिकार"
       ],
       "options_en": [
         "Education",
@@ -4968,7 +4970,7 @@
       "q_en": "India का राष्ट्रीय स्वास्थ्य नीति (NHP) पहली बार कब बनी?",
       "options": [
         "1983",
-        "1991",
+        "1991 में",
         "2002",
         "1947"
       ],
@@ -5002,7 +5004,7 @@
       "id": 263
     },
     {
-      "q": "MP में कुल जिले:",
+      "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP में कुल जिले:",
       "options": [
         "50",
@@ -5043,9 +5045,9 @@
       "q": "Poshan Abhiyan का लक्ष्य:",
       "q_en": "Poshan Abhiyan का लक्ष्य:",
       "options": [
-        "Education",
-        "Malnutrition कम करना",
-        "Housing",
+        "शिक्षा",
+        "कुपोषण",
+        "आवास",
         "Employment"
       ],
       "options_en": [
@@ -5081,10 +5083,10 @@
       "q": "Mission Indradhanush किसके लिए है?",
       "q_en": "Mission Indradhanush किसके लिए है?",
       "options": [
-        "Solar energy",
+        "सौर ऊर्जा",
         "Children और pregnant women का immunization",
         "Rural housing",
-        "Sanitation"
+        "स्वच्छता"
       ],
       "options_en": [
         "Solar energy",
@@ -5116,7 +5118,7 @@
       "id": 269
     },
     {
-      "q": "MP का स्थापना दिवस:",
+      "q": "MP की सबसे लंबी नदी:",
       "q_en": "MP का स्थापना दिवस:",
       "options": [
         "October 1",
@@ -5157,8 +5159,8 @@
       "q": "Vitamin A की कमी से:",
       "q_en": "Vitamin A की कमी से:",
       "options": [
-        "Scurvy",
-        "Night blindness",
+        "स्कर्वी",
+        "रतौंधी",
         "Rickets",
         "Pellagra"
       ],
@@ -5195,10 +5197,10 @@
       "q": "MP में Pachmarhi किस जिले में है?",
       "q_en": "MP में Pachmarhi किस जिले में है?",
       "options": [
-        "Narmadapuram",
-        "Chhindwara",
-        "Betul",
-        "Mandla"
+        "नर्मदापुरम",
+        "छिंदवाड़ा",
+        "बैतूल",
+        "मंडला"
       ],
       "options_en": [
         "Narmadapuram",
@@ -5211,7 +5213,7 @@
       "id": 274
     },
     {
-      "q": "Florence Nightingale का जन्म कब?",
+      "q": "फ्लोरेंस नाइटिंगेल",
       "q_en": "Florence Nightingale का जन्म कब?",
       "options": [
         "1820",
@@ -5233,10 +5235,10 @@
       "q": "Nirogi MP scheme किससे संबंधित है?",
       "q_en": "Nirogi MP scheme किससे संबंधित है?",
       "options": [
-        "Education",
+        "शिक्षा",
         "MP में health services",
         "Agriculture",
-        "Housing"
+        "आवास"
       ],
       "options_en": [
         "Education",
@@ -5287,7 +5289,7 @@
       "id": 278
     },
     {
-      "q": "How many cities were selected under Smart Cities Mission?",
+      "q": "स्मार्ट सिटी मिशन के अंतर्गत कितने शहरों का चयन किया गया था?",
       "q_en": "How many cities were selected under Smart Cities Mission?",
       "options": [
         "75",
@@ -5325,7 +5327,7 @@
       "id": 280
     },
     {
-      "q": "Choose the option that best fits the blank/s: ________ students who are disruptive in class be barred from going to school?",
+      "q": "रिक्त स्थान के लिए सबसे उपयुक्त विकल्प चुनें: ________ विद्यार्थी जो कक्षा में अव्यवस्था फैलाते हैं, उन्हें स्कूल जाने से रोका जाना चाहिए?",
       "q_en": "Choose the option that best fits the blank/s: ________ students who are disruptive in class be barred from going to school?",
       "options": [
         "Ought",
@@ -5344,7 +5346,7 @@
       "id": 281
     },
     {
-      "q": "Select the INCORRECTLY spelt word.",
+      "q": "गलत वर्तनी वाला शब्द चुनें।",
       "q_en": "Select the INCORRECTLY spelt word.",
       "options": [
         "Harridan",
@@ -5367,9 +5369,9 @@
       "q_en": "Which country is known as the 'Land of the Midnight Sun'?",
       "options": [
         "Norway",
-        "Sweden",
-        "Iceland",
-        "Finland"
+        "स्वीडन",
+        "आइसलैंड",
+        "फिनलैंड"
       ],
       "options_en": [
         "Norway",
@@ -5406,7 +5408,7 @@
       "options": [
         "Italy",
         "Hungary",
-        "France",
+        "फ्रांस",
         "Poland"
       ],
       "options_en": [
@@ -5426,7 +5428,7 @@
         "Tenth Schedule",
         "Ninth Schedule",
         "Second Schedule",
-        "Seventh Schedule"
+        "सातवीं अनुसूची"
       ],
       "options_en": [
         "Tenth Schedule",
@@ -5462,7 +5464,7 @@
       "q_en": "What was the Indian government's stance on profit and wealth creation as stated by Finance Minister Nirmala Sitharaman in 2025?",
       "options": [
         "Wealth creation should be discouraged",
-        "Only government enterprises should generate profit",
+        "Only सरकार enterprises should generate profit",
         "Profit is acceptable when earned ethically",
         "Profit is detrimental to society"
       ],
@@ -5500,9 +5502,9 @@
       "q_en": "Which one of the following is known as the failure of testes to descend into scrotum?",
       "options": [
         "Vasectomy",
-        "Cryptorchidism",
+        "गुप्तवृषणता (क्रिप्टोर्चिडिज्म)",
         "Impotency",
-        "Tubectomy"
+        "महिला नसबंदी"
       ],
       "options_en": [
         "Vasectomy",
@@ -5534,7 +5536,7 @@
       "id": 291
     },
     {
-      "q": "Select the word with INCORRECT spelling.",
+      "q": "गलत वर्तनी वाला शब्द चुनें।",
       "q_en": "Select the word with INCORRECT spelling.",
       "options": [
         "Ficsal",
@@ -5577,7 +5579,7 @@
       "options": [
         "Earthworm",
         "Mosquito",
-        "Housefly",
+        "घरे लू मक्खी",
         "Fleas"
       ],
       "options_en": [
@@ -5595,7 +5597,7 @@
       "q_en": "Which survivorship curve is typical of humans?",
       "options": [
         "Type III",
-        "None of these",
+        "इनमें से कोई नहीं",
         "Type I",
         "Type II"
       ],
@@ -5613,9 +5615,9 @@
       "q": "सत्ता के अंत के बाद, मध्य प्रदेश के किस क्षेत्र में कलचुरी राजवंश का शासन काफी समय तक कायम रहा?",
       "q_en": "After the end of power, in which region of Madhya Pradesh the Kalachuri dynasty seem to have lingered until a late date?",
       "options": [
-        "Bhopal",
-        "Chambal",
-        "Gwalior",
+        "भोपाल",
+        "चंबल",
+        "ग्वालियर",
         "Malwa"
       ],
       "options_en": [
@@ -5667,13 +5669,13 @@
       "id": 298
     },
     {
-      "q": "Choose the option that means the same as the given one: Many people believe that the government has made a mess of things.",
+      "q": "दिए गए वाक्य का समान अर्थ व्यक्त करने वाला विकल्प चुनें: कई लोगों का मानना है कि सरकार ने चीजों को बिगाड़ दिया है।",
       "q_en": "Choose the option that means the same as the given one: Many people believe that the government has made a mess of things.",
       "options": [
-        "Making a mess of things the government does.",
-        "A mess of things is been made by the government.",
-        "The government makes mess of things.",
-        "The government is making a mess of things."
+        "Making a mess of things the सरकार does.",
+        "A mess of things is been made by the सरकार.",
+        "The सरकार makes mess of things.",
+        "The सरकार is making a mess of things."
       ],
       "options_en": [
         "Making a mess of things the government does.",
@@ -5705,7 +5707,7 @@
       "id": 300
     },
     {
-      "q": "Choose the CORRECT option to complete the word given: ontain",
+      "q": "दिए गए शब्द को पूरा करने के लिए सही विकल्प चुनें: _ontain",
       "q_en": "Choose the CORRECT option to complete the word given: ontain",
       "options": [
         "cious",
@@ -5728,9 +5730,9 @@
       "q_en": "During the reign of which of the following Mughal emperors was the Fatawa-i-Alamgiri compiled?",
       "options": [
         "Babur",
-        "Jahangir",
-        "Akbar",
-        "Aurangzeb"
+        "जहांगीर शाहजहाँ",
+        "अकबर",
+        "औरंगजेब"
       ],
       "options_en": [
         "Babur",
@@ -5746,16 +5748,16 @@
       "q": "__________ is the only Indian state which is granted special privileges so a separate constitution has been provided to it. / __________ एकमात्र भारतीय राज्य है जिसे विशेष विशेषाधिकार प्राप्त हैं इसलिए इसे एक अलग संविधान प्रदान किया गया है।",
       "q_en": "__________ is the only Indian state which is granted special privileges so a separate constitution has been provided to it. / __________ एकमात्र भारतीय राज्य है जिसे विशेष विशेषाधिकार प्राप्त हैं इसलिए इसे एक अलग संविधान प्रदान किया गया है।",
       "options": [
-        "Himachal Pradesh / हिमाचल प्रदेश",
-        "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "Sikkim / सिक्किम",
-        "Jammu and Kashmir / जम्मू और कश्मीर"
+        "हिमाचल प्रदेश",
+        "अरुणाचल प्रदेश",
+        "सिक्किम",
+        "Jammu and Kashmir"
       ],
       "options_en": [
-        "Himachal Pradesh / हिमाचल प्रदेश",
-        "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "Sikkim / सिक्किम",
-        "Jammu and Kashmir / जम्मू और कश्मीर"
+        "Himachal Pradesh",
+        "Arunachal Pradesh",
+        "Sikkim",
+        "Jammu and Kashmir"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -5763,7 +5765,7 @@
     },
     {
       "q": "Which of the following industrial corridors passes through Madhya Pradesh which aims to boost industrial connectivity and development? / निम्नलिखित में से कौन-सा औद्योगिक गलियारा मध्य प्रदेश से होकर गुजरता है जिसका उद्देश्य औद्योगिक संपर्क और विकास को बढ़ावा देना है?",
-      "q_en": "Which of the following industrial corridors passes through Madhya Pradesh which aims to boost industrial connectivity and development? / निम्नलिखित में से कौन-सा औद्योगिक गलियारा मध्य प्रदेश से होकर गुजरता है जिसका उद्देश्य औद्योगिक संपर्क और विकास को बढ़ावा देना है?",
+      "q_en": "Which of the following industrial corridors passes through Madhya Pradesh which aims to boost industrial connectivity and development?",
       "options": [
         "Delhi-Mumbai Industrial Corridor (DMIC)",
         "Bengaluru-Hyderabad Industrial Corridor",
@@ -5782,18 +5784,18 @@
     },
     {
       "q": "Which organization promotes reproductive health and family planning worldwide? / कौन-सा संगठन दुनिया भर में प्रजनन स्वास्थ्य और परिवार नियोजन को बढ़ावा देता है?",
-      "q_en": "Which organization promotes reproductive health and family planning worldwide? / कौन-सा संगठन दुनिया भर में प्रजनन स्वास्थ्य और परिवार नियोजन को बढ़ावा देता है?",
+      "q_en": "Which organization promotes reproductive health and family planning worldwide?",
       "options": [
-        "UNESCO / यूनेस्को",
-        "UNICEF / यूनिसेफ",
-        "FAO / एफएओ",
-        "WHO / डब्ल्यूएचओ"
+        "यूनेस्को",
+        "UNICEF",
+        "FAO",
+        "WHO की स्थापना कब हुई?"
       ],
       "options_en": [
-        "UNESCO / यूनेस्को",
-        "UNICEF / यूनिसेफ",
-        "FAO / एफएओ",
-        "WHO / डब्ल्यूएचओ"
+        "UNESCO",
+        "UNICEF",
+        "FAO",
+        "WHO"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -5803,23 +5805,23 @@
       "q": "Which country became India's largest oil supplier in 2023? / 2023 में कौन-सा देश भारत का सबसे बड़ा तेल आपूर्तिकर्ता बन गया?",
       "q_en": "Which country became India's largest oil supplier in 2023? / 2023 में कौन-सा देश भारत का सबसे बड़ा तेल आपूर्तिकर्ता बन गया?",
       "options": [
-        "Russia / रूस",
-        "Saudi Arabia / सऊदी अरब",
-        "United Arab Emirates / संयुक्त अरब अमीरात",
-        "Iraq / इराक"
+        "रूस",
+        "Saudi Arabia",
+        "संयुक्त अरब अमीरात",
+        "Iraq"
       ],
       "options_en": [
-        "Russia / रूस",
-        "Saudi Arabia / सऊदी अरब",
-        "United Arab Emirates / संयुक्त अरब अमीरात",
-        "Iraq / इराक"
+        "Russia",
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Iraq"
       ],
       "answer": 0,
       "type": "PYQ",
       "id": 306
     },
     {
-      "q": "Educational TV programmes can be very ________ for children and the youth.",
+      "q": "शैक्षिक टीवी कार्यक्रम बच्चों और युवाओं के लिए अत्यंत ________ हो सकते हैं।",
       "q_en": "Educational TV programmes can be very ________ for children and the youth.",
       "options": [
         "overstimulate",
@@ -5838,7 +5840,7 @@
       "id": 307
     },
     {
-      "q": "_______ young people are overweight these days.",
+      "q": "आजकल _______ युवाओं का वजन अधिक है।",
       "q_en": "_______ young people are overweight these days.",
       "options": [
         "Much",
@@ -5858,18 +5860,18 @@
     },
     {
       "q": "Name the first Indian woman from Madhya Pradesh who won a bronze medal in pistol shooting in the 2024 Paralympics. / मध्य प्रदेश की पहली भारतीय महिला का नाम बताइए जिसने 2024 पैरालिंपिक में पिस्टल शूटिंग में कांस्य पदक जीता।",
-      "q_en": "Name the first Indian woman from Madhya Pradesh who won a bronze medal in pistol shooting in the 2024 Paralympics. / मध्य प्रदेश की पहली भारतीय महिला का नाम बताइए जिसने 2024 पैरालिंपिक में पिस्टल शूटिंग में कांस्य पदक जीता।",
+      "q_en": "Name the first Indian woman from Madhya Pradesh who won a bronze medal in pistol shooting in the 2024 Paralympics.",
       "options": [
-        "Rubica Francis / रुबिका फ्रांसिस",
-        "Prachi Kaurava / प्राची कौरव",
-        "Mantisha Aakil / मंतिशा आकिल",
-        "Nikita Shivhare / निकिता शिवहरे"
+        "Rubica Francis",
+        "Prachi Kaurava",
+        "Mantisha Aakil",
+        "Nikita Shivhare"
       ],
       "options_en": [
-        "Rubica Francis / रुबिका फ्रांसिस",
-        "Prachi Kaurava / प्राची कौरव",
-        "Mantisha Aakil / मंतिशा आकिल",
-        "Nikita Shivhare / निकिता शिवहरे"
+        "Rubica Francis",
+        "Prachi Kaurava",
+        "Mantisha Aakil",
+        "Nikita Shivhare"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -5877,11 +5879,11 @@
     },
     {
       "q": "Which of the following statements best describes the concept of 'Social Capital'? / निम्नलिखित में से कौन-सा कथन 'सामाजिक पूंजी' की अवधारणा का सबसे अच्छा वर्णन करता है?",
-      "q_en": "Which of the following statements best describes the concept of 'Social Capital'? / निम्नलिखित में से कौन-सा कथन 'सामाजिक पूंजी' की अवधारणा का सबसे अच्छा वर्णन करता है?",
+      "q_en": "Which of the following statements best describes the concept of 'Social Capital'?",
       "options": [
         "Wealth accumulated by a society over time",
         "Capital invested in social enterprises",
-        "Government spending on social sectors",
+        "सरकार spending on social sectors",
         "Networks and relationships that enhance cooperation in a society"
       ],
       "options_en": [
@@ -5896,18 +5898,18 @@
     },
     {
       "q": "Which desert is the largest in the world by area? / क्षेत्रफल के आधार पर, दुनिया का सबसे बड़ा रेगिस्तान कौन-सा है?",
-      "q_en": "Which desert is the largest in the world by area? / क्षेत्रफल के आधार पर, दुनिया का सबसे बड़ा रेगिस्तान कौन-सा है?",
+      "q_en": "Which desert is the largest in the world by area?",
       "options": [
-        "Arabian / अरब रेगिस्तान",
-        "Gobi / गोबी रेगिस्तान",
-        "Sahara / सहारा रेगिस्तान",
-        "Antarctic Desert / अंटार्कटिक रेगिस्तान"
+        "Arabian",
+        "Gobi",
+        "Sahara",
+        "Antarctic Desert"
       ],
       "options_en": [
-        "Arabian / अरब रेगिस्तान",
-        "Gobi / गोबी रेगिस्तान",
-        "Sahara / सहारा रेगिस्तान",
-        "Antarctic Desert / अंटार्कटिक रेगिस्तान"
+        "Arabian",
+        "Gobi",
+        "Sahara",
+        "Antarctic Desert"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -5915,7 +5917,7 @@
     },
     {
       "q": "Halogen and Derivatives: / हैलोजन और व्युत्पन्न. Which is the IUPAC name?",
-      "q_en": "Halogen and Derivatives: / हैलोजन और व्युत्पन्न. Which is the IUPAC name?",
+      "q_en": "Halogen and Derivatives:",
       "options": [
         "1-Chloro-2-methylpropane / 1-क्लोरो-2-मिथाइलप्रोपेन",
         "1-Bromobutane / 1-ब्रोमोब्यूटेन",
@@ -5934,18 +5936,18 @@
     },
     {
       "q": "During which movement did Mahatma Gandhi give the call for 'Do or Die'? / महात्मा गांधी ने 'करो या मरो' का आह्वान किस आंदोलन के दौरान किया था?",
-      "q_en": "During which movement did Mahatma Gandhi give the call for 'Do or Die'? / महात्मा गांधी ने 'करो या मरो' का आह्वान किस आंदोलन के दौरान किया था?",
+      "q_en": "During which movement did Mahatma Gandhi give the call for 'Do or Die'?",
       "options": [
-        "Non-Cooperation Movement / असहयोग आंदोलन",
-        "Champaran Satyagraha / चंपारण सत्याग्रह",
-        "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "Quit India Movement / भारत छोड़ो आंदोलन"
+        "Non-Cooperation Movement",
+        "Champaran Satyagraha",
+        "Civil Disobedience Movement",
+        "भारत छोड़ो आंदोलन"
       ],
       "options_en": [
-        "Non-Cooperation Movement / असहयोग आंदोलन",
-        "Champaran Satyagraha / चंपारण सत्याग्रह",
-        "Civil Disobedience Movement / सविनय अवज्ञा आंदोलन",
-        "Quit India Movement / भारत छोड़ो आंदोलन"
+        "Non-Cooperation Movement",
+        "Champaran Satyagraha",
+        "Civil Disobedience Movement",
+        "Quit India Movement"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -5953,18 +5955,18 @@
     },
     {
       "q": "In which of the following part of flower the four whorls are attached? / निम्नलिखित में से पुष्प के किस भाग में चार चक्र जुड़े होते हैं?",
-      "q_en": "In which of the following part of flower the four whorls are attached? / निम्नलिखित में से पुष्प के किस भाग में चार चक्र जुड़े होते हैं?",
+      "q_en": "In which of the following part of flower the four whorls are attached?",
       "options": [
-        "Thalamus / पुष्पासन (थैलेमस)",
-        "Pedicel / पुष्पवृंत (पेडिसेल)",
-        "Sepal / बाह्यदल (सेपल)",
-        "Ovaries / अंडाशय"
+        "Thalamus",
+        "Pedicel",
+        "Sepal",
+        "Ovaries"
       ],
       "options_en": [
-        "Thalamus / पुष्पासन (थैलेमस)",
-        "Pedicel / पुष्पवृंत (पेडिसेल)",
-        "Sepal / बाह्यदल (सेपल)",
-        "Ovaries / अंडाशय"
+        "Thalamus",
+        "Pedicel",
+        "Sepal",
+        "Ovaries"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -5972,18 +5974,18 @@
     },
     {
       "q": "Which Indian state established a nine-member committee to investigate the contamination of the Kaveri River in 2024? / किस भारतीय राज्य ने 2024 में कावेरी नदी के प्रदूषण की जांच के लिए नौ सदस्यीय समिति की स्थापना की?",
-      "q_en": "Which Indian state established a nine-member committee to investigate the contamination of the Kaveri River in 2024? / किस भारतीय राज्य ने 2024 में कावेरी नदी के प्रदूषण की जांच के लिए नौ सदस्यीय समिति की स्थापना की?",
+      "q_en": "Which Indian state established a nine-member committee to investigate the contamination of the Kaveri River in 2024?",
       "options": [
-        "Karnataka / कर्नाटक",
-        "Kerala / केरल",
-        "Tamil Nadu / तमिलनाडु",
-        "Maharashtra / महाराष्ट्र"
+        "कर्नाटक",
+        "के रल",
+        "तमिलनाडु",
+        "महाराष्ट्र"
       ],
       "options_en": [
-        "Karnataka / कर्नाटक",
-        "Kerala / केरल",
-        "Tamil Nadu / तमिलनाडु",
-        "Maharashtra / महाराष्ट्र"
+        "Karnataka",
+        "Kerala",
+        "Tamil Nadu",
+        "Maharashtra"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -5991,18 +5993,18 @@
     },
     {
       "q": "Which of the following countries is NOT a member of the European Union (EU)? / निम्नलिखित में से कौन-सा देश यूरोपीय संघ (EU) का सदस्य नहीं है?",
-      "q_en": "Which of the following countries is NOT a member of the European Union (EU)? / निम्नलिखित में से कौन-सा देश यूरोपीय संघ (EU) का सदस्य नहीं है?",
+      "q_en": "Which of the following countries is NOT a member of the European Union (EU)?",
       "options": [
-        "France / फ्रांस",
-        "Norway / नॉर्वे",
-        "Spain / स्पेन",
-        "Germany / जर्मनी"
+        "फ्रांस",
+        "Norway",
+        "स्पेन",
+        "जर्मनी"
       ],
       "options_en": [
-        "France / फ्रांस",
-        "Norway / नॉर्वे",
-        "Spain / स्पेन",
-        "Germany / जर्मनी"
+        "France",
+        "Norway",
+        "Spain",
+        "Germany"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6010,18 +6012,18 @@
     },
     {
       "q": "How many whorls are there in a complete flower? / एक पूर्ण पुष्प में कितने चक्र होते हैं?",
-      "q_en": "How many whorls are there in a complete flower? / एक पूर्ण पुष्प में कितने चक्र होते हैं?",
+      "q_en": "How many whorls are there in a complete flower?",
       "options": [
-        "Twelve / बारह",
-        "Eight / आठ",
-        "Two / दो",
-        "Four / चार"
+        "Twelve",
+        "Eight",
+        "दो",
+        "चार"
       ],
       "options_en": [
-        "Twelve / बारह",
-        "Eight / आठ",
-        "Two / दो",
-        "Four / चार"
+        "Twelve",
+        "Eight",
+        "Two",
+        "Four"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6048,18 +6050,18 @@
     },
     {
       "q": "Who among the following scientist postulated the theory of 'Survival of the fittest'? / निम्नलिखित में से किस वैज्ञानिक ने 'योग्यतम की उत्तरजीविता' का सिद्धांत प्रतिपादित किया?",
-      "q_en": "Who among the following scientist postulated the theory of 'Survival of the fittest'? / निम्नलिखित में से किस वैज्ञानिक ने 'योग्यतम की उत्तरजीविता' का सिद्धांत प्रतिपादित किया?",
+      "q_en": "Who among the following scientist postulated the theory of 'Survival of the fittest'?",
       "options": [
-        "Alfred Wallace / अल्फ्रेड वालेस",
-        "Louis Pasteur / लुई पास्चर",
-        "Charles Darwin / चार्ल्स डार्विन",
-        "Karl Ernst / कार्ल अर्न्स्ट"
+        "Alfred Wallace",
+        "लुई पाश्चर",
+        "चार्ल्स डार्विन",
+        "Karl Ernst"
       ],
       "options_en": [
-        "Alfred Wallace / अल्फ्रेड वालेस",
-        "Louis Pasteur / लुई पास्चर",
-        "Charles Darwin / चार्ल्स डार्विन",
-        "Karl Ernst / कार्ल अर्न्स्ट"
+        "Alfred Wallace",
+        "Louis Pasteur",
+        "Charles Darwin",
+        "Karl Ernst"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -6067,18 +6069,18 @@
     },
     {
       "q": "The major constituent of biogas is ______. / बायोगैस का प्रमुख घटक ______ है।",
-      "q_en": "The major constituent of biogas is ______. / बायोगैस का प्रमुख घटक ______ है।",
+      "q_en": "The major constituent of biogas is ______.",
       "options": [
         "carbon monoxide",
-        "methane / मीथेन",
+        "methane",
         "nitrous oxide",
-        "oxygen / ऑक्सीजन"
+        "ऑक्सीजन"
       ],
       "options_en": [
         "carbon monoxide",
-        "methane / मीथेन",
+        "methane",
         "nitrous oxide",
-        "oxygen / ऑक्सीजन"
+        "oxygen"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6086,7 +6088,7 @@
     },
     {
       "q": "Which of the following is a primary objective of the Madhya Pradesh Innovation & Incubation Policy? / निम्नलिखित में से मध्य प्रदेश नवाचार और ऊष्मायन (इनक्यूबेशन) नीति का प्राथमिक उद्देश्य क्या है?",
-      "q_en": "Which of the following is a primary objective of the Madhya Pradesh Innovation & Incubation Policy? / निम्नलिखित में से मध्य प्रदेश नवाचार और ऊष्मायन (इनक्यूबेशन) नीति का प्राथमिक उद्देश्य क्या है?",
+      "q_en": "Which of the following is a primary objective of the Madhya Pradesh Innovation & Incubation Policy?",
       "options": [
         "To increase agricultural production through subsidies",
         "To regulate industrial pollution standards",
@@ -6105,7 +6107,7 @@
     },
     {
       "q": "Madhya Pradesh is located between the geographic latitude of ____ and longitude of ____. / मध्य प्रदेश भौगोलिक अक्षांश ____ और देशांतर ____ के बीच स्थित है।",
-      "q_en": "Madhya Pradesh is located between the geographic latitude of ____ and longitude of ____. / मध्य प्रदेश भौगोलिक अक्षांश ____ और देशांतर ____ के बीच स्थित है।",
+      "q_en": "Madhya Pradesh is located between the geographic latitude of ____ and longitude of ____.",
       "options": [
         "Latitude 21.6°N-26.30°N, Longitude 74°E-82°48E",
         "Latitude 26.30°N-21.60°N, Longitude 74°E-82°48E",
@@ -6124,10 +6126,10 @@
     },
     {
       "q": "Which among the following is NOT a function of the NITI Aayog? / निम्नलिखित में से कौन-सा नीति आयोग का कार्य नहीं है?",
-      "q_en": "Which among the following is NOT a function of the NITI Aayog? / निम्नलिखित में से कौन-सा नीति आयोग का कार्य नहीं है?",
+      "q_en": "Which among the following is NOT a function of the NITI Aayog?",
       "options": [
         "Allocation of financial resources to states",
-        "Acting as a think tank for the Government of India",
+        "Acting as a think tank for the सरकार of भारत",
         "Fostering cooperative federalism",
         "Formulation of strategic and long-term policies"
       ],
@@ -6143,7 +6145,7 @@
     },
     {
       "q": "The standard for measuring Biochemical Oxygen Demand is _____. / जैव रासायनिक ऑक्सीजन मांग को मापने का मानक ______ है।",
-      "q_en": "The standard for measuring Biochemical Oxygen Demand is _____. / जैव रासायनिक ऑक्सीजन मांग को मापने का मानक ______ है।",
+      "q_en": "The standard for measuring Biochemical Oxygen Demand is _____.",
       "options": [
         "5 days at 25°C",
         "5 days at 20°C",
@@ -6183,16 +6185,16 @@
       "q": "Who presided over the historic 1924 Belgaum Session of the Indian National Congress? / 1924 के ऐतिहासिक बेलगाम अधिवेशन की अध्यक्षता किसने की थी?",
       "q_en": "Who presided over the historic 1924 Belgaum Session of the Indian National Congress? / 1924 के ऐतिहासिक बेलगाम अधिवेशन की अध्यक्षता किसने की थी?",
       "options": [
-        "Mahatma Gandhi / महात्मा गांधी",
-        "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "C. Rajagopalachari / सी. राजगोपालाचारी",
-        "Subhas Chandra Bose / सुभाष चंद्र बोस"
+        "महात्मा गांधी",
+        "जवाहरलाल नेहरू",
+        "सी. राजगोपालाचारी",
+        "सुभाष चंद्र बोस"
       ],
       "options_en": [
-        "Mahatma Gandhi / महात्मा गांधी",
-        "Jawaharlal Nehru / जवाहरलाल नेहरू",
-        "C. Rajagopalachari / सी. राजगोपालाचारी",
-        "Subhas Chandra Bose / सुभाष चंद्र बोस"
+        "Mahatma Gandhi",
+        "Jawaharlal Nehru",
+        "C. Rajagopalachari",
+        "Subhas Chandra Bose"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -6200,18 +6202,18 @@
     },
     {
       "q": "Who has the authority to alter the boundaries of a state in India? / भारत में किसी राज्य की सीमा में परिवर्तन करने का अधिकार किसके पास है?",
-      "q_en": "Who has the authority to alter the boundaries of a state in India? / भारत में किसी राज्य की सीमा में परिवर्तन करने का अधिकार किसके पास है?",
+      "q_en": "Who has the authority to alter the boundaries of a state in India?",
       "options": [
-        "President of India / भारत के राष्ट्रपति",
-        "Union Parliament / संघीय संसद",
-        "State Legislature / राज्य विधानमंडल",
-        "Prime Minister / प्रधान मंत्री"
+        "President of भारत",
+        "Union Parliament",
+        "राज्य Legislature",
+        "प्रधानमंत्री"
       ],
       "options_en": [
-        "President of India / भारत के राष्ट्रपति",
-        "Union Parliament / संघीय संसद",
-        "State Legislature / राज्य विधानमंडल",
-        "Prime Minister / प्रधान मंत्री"
+        "President of India",
+        "Union Parliament",
+        "State Legislature",
+        "Prime Minister"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6221,16 +6223,16 @@
       "q": "Who founded the Servants of India Society in 1905? / 1905 में सर्वेंट्स ऑफ इंडिया सोसाइटी की स्थापना किसने की?",
       "q_en": "Who founded the Servants of India Society in 1905? / 1905 में सर्वेंट्स ऑफ इंडिया सोसाइटी की स्थापना किसने की?",
       "options": [
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "M.G. Ranade / एम. जी. रानाडे"
+        "बाल गंगाधर तिलक",
+        "दादाभाई नौरोजी",
+        "गोपाल कृष्ण गोखले",
+        "M.G. Ranade"
       ],
       "options_en": [
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "Dadabhai Naoroji / दादाभाई नौरोजी",
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "M.G. Ranade / एम. जी. रानाडे"
+        "Bal Gangadhar Tilak",
+        "Dadabhai Naoroji",
+        "Gopal Krishna Gokhale",
+        "M.G. Ranade"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -6257,18 +6259,18 @@
     },
     {
       "q": "Hardy-Weinberg equilibrium is disrupted by: / हार्डी-वेनबर्ग संतुलन निम्न द्वारा बाधित होता है:",
-      "q_en": "Hardy-Weinberg equilibrium is disrupted by: / हार्डी-वेनबर्ग संतुलन निम्न द्वारा बाधित होता है:",
+      "q_en": "Hardy-Weinberg equilibrium is disrupted by:",
       "options": [
         "Large population",
         "No mutation",
-        "Natural selection / प्राकृतिक चयन",
-        "Random mating / यादृच्छिक समागम"
+        "प्राकृ तिक चयन",
+        "Random mating"
       ],
       "options_en": [
         "Large population",
         "No mutation",
-        "Natural selection / प्राकृतिक चयन",
-        "Random mating / यादृच्छिक समागम"
+        "Natural selection",
+        "Random mating"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -6276,7 +6278,7 @@
     },
     {
       "q": "Which of the following best explains the concept of 'Stagflation'? / निम्नलिखित में से कौन-सा कथन 'स्टेगफ्लेशन' की अवधारणा को सर्वोत्तम रूप से समझाता है?",
-      "q_en": "Which of the following best explains the concept of 'Stagflation'? / निम्नलिखित में से कौन-सा कथन 'स्टेगफ्लेशन' की अवधारणा को सर्वोत्तम रूप से समझाता है?",
+      "q_en": "Which of the following best explains the concept of 'Stagflation'?",
       "options": [
         "High inflation caused by increasing wages",
         "Low unemployment and low inflation",
@@ -6295,18 +6297,18 @@
     },
     {
       "q": "Which of the following noble gases is used for filling balloons and airships? / निम्नलिखित में से किस उत्कृष्ट गैस का उपयोग गुब्बारों और हवाई जहाजों को भरने के लिए किया जाता है?",
-      "q_en": "Which of the following noble gases is used for filling balloons and airships? / निम्नलिखित में से किस उत्कृष्ट गैस का उपयोग गुब्बारों और हवाई जहाजों को भरने के लिए किया जाता है?",
+      "q_en": "Which of the following noble gases is used for filling balloons and airships?",
       "options": [
-        "Xenon / ज़ेनॉन",
-        "Radon / रेडॉन",
-        "Argon / आर्गन",
-        "Helium / हीलियम"
+        "Xenon",
+        "Radon",
+        "Argon",
+        "Helium"
       ],
       "options_en": [
-        "Xenon / ज़ेनॉन",
-        "Radon / रेडॉन",
-        "Argon / आर्गन",
-        "Helium / हीलियम"
+        "Xenon",
+        "Radon",
+        "Argon",
+        "Helium"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6314,18 +6316,18 @@
     },
     {
       "q": "Which of the following is NOT an examples of aneuploidy? / निम्नलिखित में से कौन-सा एन्यूप्लॉईडी का उदाहरण नहीं है?",
-      "q_en": "Which of the following is NOT an examples of aneuploidy? / निम्नलिखित में से कौन-सा एन्यूप्लॉईडी का उदाहरण नहीं है?",
+      "q_en": "Which of the following is NOT an examples of aneuploidy?",
       "options": [
-        "Patau syndrome / पटाऊ सिंड्रोम",
-        "Phenylketonuria syndrome / फेनिलकेटोनुरिया सिंड्रोम",
-        "Down syndrome / डाउन सिंड्रोम",
-        "Klinefelter syndrome / क्लाइनफेल्टर सिंड्रोम"
+        "Patau syndrome",
+        "Phenylketonuria syndrome",
+        "Down syndrome",
+        "Klinefelter syndrome"
       ],
       "options_en": [
-        "Patau syndrome / पटाऊ सिंड्रोम",
-        "Phenylketonuria syndrome / फेनिलकेटोनुरिया सिंड्रोम",
-        "Down syndrome / डाउन सिंड्रोम",
-        "Klinefelter syndrome / क्लाइनफेल्टर सिंड्रोम"
+        "Patau syndrome",
+        "Phenylketonuria syndrome",
+        "Down syndrome",
+        "Klinefelter syndrome"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6335,16 +6337,16 @@
       "q": "The term 'biotechnology' was coined by: / 'बायोटेक्नोलॉजी' शब्द निम्न के द्वारा गढ़ा गया था:",
       "q_en": "The term 'biotechnology' was coined by: / 'बायोटेक्नोलॉजी' शब्द निम्न के द्वारा गढ़ा गया था:",
       "options": [
-        "Stanley Cohen / स्टेनली कोहेन",
-        "Karl Ereky / कार्ल ऐरेकी",
-        "Watson / वाटसन",
-        "Herbert Boyer / हर्बर्ट बोयर"
+        "Stanley Cohen",
+        "Karl Ereky",
+        "Watson",
+        "Herbert Boyer"
       ],
       "options_en": [
-        "Stanley Cohen / स्टेनली कोहेन",
-        "Karl Ereky / कार्ल ऐरेकी",
-        "Watson / वाटसन",
-        "Herbert Boyer / हर्बर्ट बोयर"
+        "Stanley Cohen",
+        "Karl Ereky",
+        "Watson",
+        "Herbert Boyer"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6352,18 +6354,18 @@
     },
     {
       "q": "Which is the southernmost point of India's mainland? / भारत की मुख्य भूमि का सबसे दक्षिणी बिन्दु कौन-सा है?",
-      "q_en": "Which is the southernmost point of India's mainland? / भारत की मुख्य भूमि का सबसे दक्षिणी बिन्दु कौन-सा है?",
+      "q_en": "Which is the southernmost point of India's mainland?",
       "options": [
-        "Nagercoil / नागरकोइल",
-        "Point Calimere / प्वाइंट केलिमेरे",
-        "Rameswaram / रामेश्वरम",
-        "Kanyakumari / कन्याकुमारी"
+        "Nagercoil",
+        "Point Calimere",
+        "Rameswaram",
+        "Kanyakumari"
       ],
       "options_en": [
-        "Nagercoil / नागरकोइल",
-        "Point Calimere / प्वाइंट केलिमेरे",
-        "Rameswaram / रामेश्वरम",
-        "Kanyakumari / कन्याकुमारी"
+        "Nagercoil",
+        "Point Calimere",
+        "Rameswaram",
+        "Kanyakumari"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6371,18 +6373,18 @@
     },
     {
       "q": "Which mountain range separates Europe from Asia? / कौन-सी पर्वत श्रृंखला, यूरोप और एशिया को विभाजित करती है?",
-      "q_en": "Which mountain range separates Europe from Asia? / कौन-सी पर्वत श्रृंखला, यूरोप और एशिया को विभाजित करती है?",
+      "q_en": "Which mountain range separates Europe from Asia?",
       "options": [
-        "Ural / यूराल",
-        "Caucasus / काकेशस",
-        "Alps / आल्प्स",
-        "Andes / एंडीज"
+        "Ural",
+        "Caucasus",
+        "Alps",
+        "Andes"
       ],
       "options_en": [
-        "Ural / यूराल",
-        "Caucasus / काकेशस",
-        "Alps / आल्प्स",
-        "Andes / एंडीज"
+        "Ural",
+        "Caucasus",
+        "Alps",
+        "Andes"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -6390,9 +6392,9 @@
     },
     {
       "q": "What was the focus of the 'Advantage Vidarbha - 2025' report launched by Union Minister Nitin Gadkari? / केंद्रीय मंत्री नितिन गडकरी द्वारा जारी 'एडवांटेज विदर्भ - 2025' रिपोर्ट का फोकस क्या था?",
-      "q_en": "What was the focus of the 'Advantage Vidarbha - 2025' report launched by Union Minister Nitin Gadkari? / केंद्रीय मंत्री नितिन गडकरी द्वारा जारी 'एडवांटेज विदर्भ - 2025' रिपोर्ट का फोकस क्या था?",
+      "q_en": "What was the focus of the 'Advantage Vidarbha - 2025' report launched by Union Minister Nitin Gadkari?",
       "options": [
-        "Establishing a new capital city in Vidarbha",
+        "Establishing a new capital शहर in Vidarbha",
         "Developing a Nagpur-centric industrial model",
         "Promoting tourism in Nagpur",
         "Encouraging inclusive regional development across Vidarbha"
@@ -6409,18 +6411,18 @@
     },
     {
       "q": "The Global Hunger Index (GHI) does NOT include which of the following indicators? / वैश्विक भूख सूचकांक (जीएचआई) में निम्नलिखित में से कौन-सा संकेतक शामिल नहीं है?",
-      "q_en": "The Global Hunger Index (GHI) does NOT include which of the following indicators? / वैश्विक भूख सूचकांक (जीएचआई) में निम्नलिखित में से कौन-सा संकेतक शामिल नहीं है?",
+      "q_en": "The Global Hunger Index (GHI) does NOT include which of the following indicators?",
       "options": [
-        "Child mortality / बाल मृत्यु दर",
-        "Income poverty / आय गरीबी",
-        "Child wasting / बाल दुर्बलता",
-        "Undernourishment / अल्पगोषण"
+        "Child mortality",
+        "Income poverty",
+        "Child wasting",
+        "Undernourishment"
       ],
       "options_en": [
-        "Child mortality / बाल मृत्यु दर",
-        "Income poverty / आय गरीबी",
-        "Child wasting / बाल दुर्बलता",
-        "Undernourishment / अल्पगोषण"
+        "Child mortality",
+        "Income poverty",
+        "Child wasting",
+        "Undernourishment"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6447,18 +6449,18 @@
     },
     {
       "q": "The outer concentric shell in fiber optic is called: / फाइबर ऑप्टिक में बाहरी संकेन्द्रीय आवरण को कहा जाता है:",
-      "q_en": "The outer concentric shell in fiber optic is called: / फाइबर ऑप्टिक में बाहरी संकेन्द्रीय आवरण को कहा जाता है:",
+      "q_en": "The outer concentric shell in fiber optic is called:",
       "options": [
-        "Core / मुख्य (कोर)",
-        "Coating / कलई करना",
-        "Mantle / आच्छादन (मेंटल)",
-        "Cladding / आवरण (क्लैडिंग)"
+        "Core",
+        "Coating",
+        "आवरण",
+        "Cladding"
       ],
       "options_en": [
-        "Core / मुख्य (कोर)",
-        "Coating / कलई करना",
-        "Mantle / आच्छादन (मेंटल)",
-        "Cladding / आवरण (क्लैडिंग)"
+        "Core",
+        "Coating",
+        "Mantle",
+        "Cladding"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6466,18 +6468,18 @@
     },
     {
       "q": "The area covered by present-day Madhya Pradesh includes the area of which ancient Mahajanapada, whose capital was Ujjain? / वर्तमान मध्य प्रदेश के अंतर्गत किस प्राचीन महाजनपद का क्षेत्र शामिल है, जिसकी राजधानी उज्जैन थी?",
-      "q_en": "The area covered by present-day Madhya Pradesh includes the area of which ancient Mahajanapada, whose capital was Ujjain? / वर्तमान मध्य प्रदेश के अंतर्गत किस प्राचीन महाजनपद का क्षेत्र शामिल है, जिसकी राजधानी उज्जैन थी?",
+      "q_en": "The area covered by present-day Madhya Pradesh includes the area of which ancient Mahajanapada, whose capital was Ujjain?",
       "options": [
-        "Kasi / काशी",
-        "Panchala / पांचाल",
-        "Magadha / मगध",
-        "Avanti / अवंती"
+        "Kasi",
+        "Panchala",
+        "Magadha",
+        "Avanti"
       ],
       "options_en": [
-        "Kasi / काशी",
-        "Panchala / पांचाल",
-        "Magadha / मगध",
-        "Avanti / अवंती"
+        "Kasi",
+        "Panchala",
+        "Magadha",
+        "Avanti"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6485,10 +6487,10 @@
     },
     {
       "q": "What is the primary responsibility of the Madhya Pradesh State Industrial Development Corporation (MPSIDC)? / मध्य प्रदेश राज्य औद्योगिक विकास निगम (एमपीएसआईडीसी) की प्राथमिक जिम्मेदारी क्या है?",
-      "q_en": "What is the primary responsibility of the Madhya Pradesh State Industrial Development Corporation (MPSIDC)? / मध्य प्रदेश राज्य औद्योगिक विकास निगम (एमपीएसआईडीसी) की प्राथमिक जिम्मेदारी क्या है?",
+      "q_en": "What is the primary responsibility of the Madhya Pradesh State Industrial Development Corporation (MPSIDC)?",
       "options": [
         "Disbursing agricultural subsidies",
-        "Developing and maintaining industrial infrastructure in the state",
+        "Developing and maintaining industrial infrastructure in the राज्य",
         "Managing water resources",
         "Overseeing the implementation of school education schemes"
       ],
@@ -6523,18 +6525,18 @@
     },
     {
       "q": "Which of the following leaders is associated with the newspaper The Commonweal? / निम्नलिखित में से कौन-सा नेता 'द कॉमनवील' समाचार पत्र से जुड़ा था?",
-      "q_en": "Which of the following leaders is associated with the newspaper The Commonweal? / निम्नलिखित में से कौन-सा नेता 'द कॉमनवील' समाचार पत्र से जुड़ा था?",
+      "q_en": "Which of the following leaders is associated with the newspaper The Commonweal?",
       "options": [
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "C. Rajagopalachari / सी. राजगोपालाचारी",
-        "Annie Besant / एनी बेसेंट"
+        "गोपाल कृष्ण गोखले",
+        "बाल गंगाधर तिलक",
+        "सी. राजगोपालाचारी",
+        "एनी बेसेंट"
       ],
       "options_en": [
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले",
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "C. Rajagopalachari / सी. राजगोपालाचारी",
-        "Annie Besant / एनी बेसेंट"
+        "Gopal Krishna Gokhale",
+        "Bal Gangadhar Tilak",
+        "C. Rajagopalachari",
+        "Annie Besant"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6542,7 +6544,7 @@
     },
     {
       "q": "In the 2005 Asian Wrestling Championships in China, Mukesh Khatri from Madhya Pradesh won a bronze medal in ______, wrestling. / चीन में 2005 में आयोजित एशियाई कुश्ती चैंपियनशिप में मध्य प्रदेश के मुकेश खत्री ने _____ कुश्ती में कांस्य पदक जीता था।",
-      "q_en": "In the 2005 Asian Wrestling Championships in China, Mukesh Khatri from Madhya Pradesh won a bronze medal in ______, wrestling. / चीन में 2005 में आयोजित एशियाई कुश्ती चैंपियनशिप में मध्य प्रदेश के मुकेश खत्री ने _____ कुश्ती में कांस्य पदक जीता था।",
+      "q_en": "In the 2005 Asian Wrestling Championships in China, Mukesh Khatri from Madhya Pradesh won a bronze medal in ______, wrestling.",
       "options": [
         "Men's freestyle: 57kg",
         "Greco-Roman: 55 kg",
@@ -6675,18 +6677,18 @@
     },
     {
       "q": "Which of the following weather phenomena is characterized by a sudden drop in temperature and strong winds? / निम्नलिखित में से कौन-सा मौसम संबंधी घटना अचानक तापमान गिरावट और तेज़ हवाओं की विशेषता रखती है?",
-      "q_en": "Which of the following weather phenomena is characterized by a sudden drop in temperature and strong winds? / निम्नलिखित में से कौन-सा मौसम संबंधी घटना अचानक तापमान गिरावट और तेज़ हवाओं की विशेषता रखती है?",
+      "q_en": "Which of the following weather phenomena is characterized by a sudden drop in temperature and strong winds?",
       "options": [
-        "Cyclone / चक्रवात",
-        "Thunderstorm / गरज के साथ तुफान",
-        "Monsoon / मानसून",
-        "Fog / कोहरा"
+        "Cyclone",
+        "Thunderstorm",
+        "Monsoon",
+        "Fog"
       ],
       "options_en": [
-        "Cyclone / चक्रवात",
-        "Thunderstorm / गरज के साथ तुफान",
-        "Monsoon / मानसून",
-        "Fog / कोहरा"
+        "Cyclone",
+        "Thunderstorm",
+        "Monsoon",
+        "Fog"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6694,18 +6696,18 @@
     },
     {
       "q": "Which among the following is an example of aquatic ecosystem? / निम्नलिखित में से कौन जलीय पारिस्थितिकी तंत्र का उदाहरण है?",
-      "q_en": "Which among the following is an example of aquatic ecosystem? / निम्नलिखित में से कौन जलीय पारिस्थितिकी तंत्र का उदाहरण है?",
+      "q_en": "Which among the following is an example of aquatic ecosystem?",
       "options": [
-        "Forest / जंगल",
-        "Grassland / घास का मैदान",
-        "Estuary / मुहाना",
-        "Desert / रेगिस्तान"
+        "Forest",
+        "Grassland",
+        "Estuary",
+        "Desert"
       ],
       "options_en": [
-        "Forest / जंगल",
-        "Grassland / घास का मैदान",
-        "Estuary / मुहाना",
-        "Desert / रेगिस्तान"
+        "Forest",
+        "Grassland",
+        "Estuary",
+        "Desert"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -6715,16 +6717,16 @@
       "q": "_______ administers the oath of office to the President of India. / ________ भारत के राष्ट्रपति को पद की शपथ दिलाते हैं।",
       "q_en": "_______ administers the oath of office to the President of India. / ________ भारत के राष्ट्रपति को पद की शपथ दिलाते हैं।",
       "options": [
-        "Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "Speaker / अध्यक्ष (स्पीकर)",
-        "Attorney General / महान्यायवादी",
-        "Vice President / उपाध्यक्ष"
+        "भारत के मुख्य न्यायाधीश",
+        "अध्यक्ष",
+        "Attorney General",
+        "उपराष्ट्रपति"
       ],
       "options_en": [
-        "Chief Justice of India / भारत के मुख्य न्यायाधीश",
-        "Speaker / अध्यक्ष (स्पीकर)",
-        "Attorney General / महान्यायवादी",
-        "Vice President / उपाध्यक्ष"
+        "Chief Justice of India",
+        "Speaker",
+        "Attorney General",
+        "Vice President"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -6732,18 +6734,18 @@
     },
     {
       "q": "Who among the following scientist demonstrated that life comes only from pre-existing life? / निम्नलिखित में से किस वैज्ञानिक ने यह प्रदर्शित किया कि जीवन केवल पूर्व-मौजूद जीवन से ही आता है?",
-      "q_en": "Who among the following scientist demonstrated that life comes only from pre-existing life? / निम्नलिखित में से किस वैज्ञानिक ने यह प्रदर्शित किया कि जीवन केवल पूर्व-मौजूद जीवन से ही आता है?",
+      "q_en": "Who among the following scientist demonstrated that life comes only from pre-existing life?",
       "options": [
-        "Robert Koch / रॉबर्ट कोच",
-        "Gregor Mandel / ग्रेगर मेंडेल",
-        "Charles Darwin / चार्ल्स डार्विन",
-        "Louis Pasteur / लुई पास्चर"
+        "Robert Koch",
+        "Gregor Mandel",
+        "चार्ल्स डार्विन",
+        "लुई पाश्चर"
       ],
       "options_en": [
-        "Robert Koch / रॉबर्ट कोच",
-        "Gregor Mandel / ग्रेगर मेंडेल",
-        "Charles Darwin / चार्ल्स डार्विन",
-        "Louis Pasteur / लुई पास्चर"
+        "Robert Koch",
+        "Gregor Mandel",
+        "Charles Darwin",
+        "Louis Pasteur"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6751,18 +6753,18 @@
     },
     {
       "q": "Which of the following type of malaria is caused by Plasmodium falciparum? / निम्नलिखित में से कौन-सा मलेरिया Plasmodium falciparum के कारण होता है?",
-      "q_en": "Which of the following type of malaria is caused by Plasmodium falciparum? / निम्नलिखित में से कौन-सा मलेरिया Plasmodium falciparum के कारण होता है?",
+      "q_en": "Which of the following type of malaria is caused by Plasmodium falciparum?",
       "options": [
-        "Benign tertian malaria / विनाइन टर्टियन मलेरिया",
-        "Malignant malaria / घातक (मैलिग्नेंट) मलेरिया",
-        "Mediterranean malaria / मेडिटेरेनियन मलेरिया",
-        "Relapsing malaria / रिलैप्सिंग मलेरिया"
+        "Benign tertian malaria",
+        "Malignant malaria",
+        "Mediterranean malaria",
+        "Relapsing malaria"
       ],
       "options_en": [
-        "Benign tertian malaria / विनाइन टर्टियन मलेरिया",
-        "Malignant malaria / घातक (मैलिग्नेंट) मलेरिया",
-        "Mediterranean malaria / मेडिटेरेनियन मलेरिया",
-        "Relapsing malaria / रिलैप्सिंग मलेरिया"
+        "Benign tertian malaria",
+        "Malignant malaria",
+        "Mediterranean malaria",
+        "Relapsing malaria"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6770,18 +6772,18 @@
     },
     {
       "q": "Which of the following is the CORRECT IUPAC name of CH₃-O-CH₂-CH₃? / निम्नलिखित में से CH₃-O-CH₂-CH₃ का सही IUPAC नाम कौन-सा है?",
-      "q_en": "Which of the following is the CORRECT IUPAC name of CH₃-O-CH₂-CH₃? / निम्नलिखित में से CH₃-O-CH₂-CH₃ का सही IUPAC नाम कौन-सा है?",
+      "q_en": "Which of the following is the CORRECT IUPAC name of CH₃-O-CH₂-CH₃?",
       "options": [
-        "Ethoxyethane / एथॉक्सीइथेन",
-        "Methylethyl ether / मिथाइल एथिल ईथर",
-        "Ethoxypropane / एथॉक्सी प्रोपेन",
-        "Methoxyethane / मेथॉक्सीइथेन"
+        "Ethoxyethane",
+        "Methylethyl ether",
+        "Ethoxypropane",
+        "Methoxyethane"
       ],
       "options_en": [
-        "Ethoxyethane / एथॉक्सीइथेन",
-        "Methylethyl ether / मिथाइल एथिल ईथर",
-        "Ethoxypropane / एथॉक्सी प्रोपेन",
-        "Methoxyethane / मेथॉक्सीइथेन"
+        "Ethoxyethane",
+        "Methylethyl ether",
+        "Ethoxypropane",
+        "Methoxyethane"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6789,18 +6791,18 @@
     },
     {
       "q": "In the context of Panchayati Raj, which of the following institutions is responsible for district-level planning? / पंचायती राज के संदर्भ में, निम्नलिखित में से कौन-सा संस्थान जिला स्तरीय योजना के लिए उत्तरदायी है?",
-      "q_en": "In the context of Panchayati Raj, which of the following institutions is responsible for district-level planning? / पंचायती राज के संदर्भ में, निम्नलिखित में से कौन-सा संस्थान जिला स्तरीय योजना के लिए उत्तरदायी है?",
+      "q_en": "In the context of Panchayati Raj, which of the following institutions is responsible for district-level planning?",
       "options": [
-        "Gram Panchayat / ग्राम पंचायत",
-        "Panchayat Samiti / पंचायत समिति",
-        "Zila Parishad / जिला परिषद",
-        "Gram Sabha / ग्राम सभा"
+        "Gram Panchayat",
+        "Panchayat Samiti",
+        "Zila Parishad",
+        "Gram Sabha"
       ],
       "options_en": [
-        "Gram Panchayat / ग्राम पंचायत",
-        "Panchayat Samiti / पंचायत समिति",
-        "Zila Parishad / जिला परिषद",
-        "Gram Sabha / ग्राम सभा"
+        "Gram Panchayat",
+        "Panchayat Samiti",
+        "Zila Parishad",
+        "Gram Sabha"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -6808,18 +6810,18 @@
     },
     {
       "q": "Which of the following is a barrier method of contraception? / निम्नलिखित में से कौन-सी गर्भनिरोधक की बाधा विधि है?",
-      "q_en": "Which of the following is a barrier method of contraception? / निम्नलिखित में से कौन-सी गर्भनिरोधक की बाधा विधि है?",
+      "q_en": "Which of the following is a barrier method of contraception?",
       "options": [
-        "Tubectomy / महिला नसबंदी (ट्यूबेक्टोमी)",
-        "Condom / कंडोम",
-        "Oral pill / मौखिक गोली",
-        "IUD / आईयूडी"
+        "महिला नसबंदी",
+        "Condom",
+        "Oral pill",
+        "IUD"
       ],
       "options_en": [
-        "Tubectomy / महिला नसबंदी (ट्यूबेक्टोमी)",
-        "Condom / कंडोम",
-        "Oral pill / मौखिक गोली",
-        "IUD / आईयूडी"
+        "Tubectomy",
+        "Condom",
+        "Oral pill",
+        "IUD"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -6845,17 +6847,17 @@
       "id": 360
     },
     {
-      "q": "The 'Ek Zila – Ek Utpad Yojana' of Madhya Pradesh promotes:",
+      "q": "The 'Ek Zila – Ek Utpad Yojana' of मध्य प्रदेश promotes:",
       "q_en": "The 'Ek Zila – Ek Utpad Yojana' of Madhya Pradesh promotes:",
       "options": [
         "A single school in every district",
-        "One unique product from each district / प्रत्येक जिले से एक अद्वितीय उत्पाद",
+        "One unique product from each district",
         "Uniform tax for all businesses",
         "Free distribution of agricultural land"
       ],
       "options_en": [
         "A single school in every district",
-        "One unique product from each district / प्रत्येक जिले से एक अद्वितीय उत्पाद",
+        "One unique product from each district",
         "Uniform tax for all businesses",
         "Free distribution of agricultural land"
       ],
@@ -6867,15 +6869,15 @@
       "q": "The Great Barrier Reef is located off the coast of which country?",
       "q_en": "The Great Barrier Reef is located off the coast of which country?",
       "options": [
-        "South Africa",
-        "United States",
-        "Australia / ऑस्ट्रेलिया",
-        "India"
+        "दक्षिण अफ्रीका",
+        "संयुक्त राज्य अमेरिका",
+        "ऑस्ट्रेलिया",
+        "भारत"
       ],
       "options_en": [
         "South Africa",
         "United States",
-        "Australia / ऑस्ट्रेलिया",
+        "Australia",
         "India"
       ],
       "answer": 2,
@@ -6884,15 +6886,15 @@
     },
     {
       "q": "What is the main objective of the National Monetisation Pipeline (NMP)? / राष्ट्रीय मुद्रीकरण पाइपलाइन (NMP) का मुख्य उद्देश्य क्या है?",
-      "q_en": "What is the main objective of the National Monetisation Pipeline (NMP)? / राष्ट्रीय मुद्रीकरण पाइपलाइन (NMP) का मुख्य उद्देश्य क्या है?",
+      "q_en": "What is the main objective of the National Monetisation Pipeline (NMP)?",
       "options": [
-        "Leasing public infrastructure assets to raise capital / पुरानी सार्वजनिक संपत्तियों को पट्टे पर देना",
+        "Leasing public infrastructure assets to raise capital",
         "Monetizing public land for agricultural use",
-        "Selling off non-strategic government companies",
+        "Selling off non-strategic सरकार companies",
         "Reinvesting PSE profits for welfare schemes"
       ],
       "options_en": [
-        "Leasing public infrastructure assets to raise capital / पुरानी सार्वजनिक संपत्तियों को पट्टे पर देना",
+        "Leasing public infrastructure assets to raise capital",
         "Monetizing public land for agricultural use",
         "Selling off non-strategic government companies",
         "Reinvesting PSE profits for welfare schemes"
@@ -6902,17 +6904,17 @@
       "id": 363
     },
     {
-      "q": "Which state's border is NOT alongside the borders of Madhya Pradesh?",
+      "q": "Which राज्य's border is NOT alongside the borders of मध्य प्रदेश?",
       "q_en": "Which state's border is NOT alongside the borders of Madhya Pradesh?",
       "options": [
-        "Uttar Pradesh",
-        "Jharkhand / झारखंड",
-        "Maharashtra",
-        "Rajasthan"
+        "उत्तर प्रदेश",
+        "झारखंड",
+        "महाराष्ट्र",
+        "राजस्थान"
       ],
       "options_en": [
         "Uttar Pradesh",
-        "Jharkhand / झारखंड",
+        "Jharkhand",
         "Maharashtra",
         "Rajasthan"
       ],
@@ -6921,7 +6923,7 @@
       "id": 364
     },
     {
-      "q": "On which date was the Vikram Award, the highest sports award of Madhya Pradesh, instituted?",
+      "q": "On which date was the Vikram Award, the highest sports award of मध्य प्रदेश, instituted?",
       "q_en": "On which date was the Vikram Award, the highest sports award of Madhya Pradesh, instituted?",
       "options": [
         "15 May 1956",
@@ -6940,7 +6942,7 @@
       "id": 365
     },
     {
-      "q": "What was the primary goal of 'Krishi Rin Samadhan Yojana' launched in Madhya Pradesh?",
+      "q": "What was the primary goal of 'Krishi Rin Samadhan Yojana' launched in मध्य प्रदेश?",
       "q_en": "What was the primary goal of 'Krishi Rin Samadhan Yojana' launched in Madhya Pradesh?",
       "options": [
         "Waive defaulter loans and regularize farmers' credit history",
@@ -6960,18 +6962,18 @@
     },
     {
       "q": "Who is recognized as the father of biotechnology? / जैव प्रौद्योगिकी के जनक के रूप में किसे जाना जाता है?",
-      "q_en": "Who is recognized as the father of biotechnology? / जैव प्रौद्योगिकी के जनक के रूप में किसे जाना जाता है?",
+      "q_en": "Who is recognized as the father of biotechnology?",
       "options": [
-        "Louis Pasteur",
+        "लुई पाश्चर",
         "Kary Mullis",
         "Watson",
-        "Karoly Ereky / कैरोली एरेकी"
+        "Karoly Ereky"
       ],
       "options_en": [
         "Louis Pasteur",
         "Kary Mullis",
         "Watson",
-        "Karoly Ereky / कैरोली एरेकी"
+        "Karoly Ereky"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -6981,7 +6983,7 @@
       "q": "Choose the CORRECT option: It has rained very ____ this summer, that's why the grass is so brown.",
       "q_en": "Choose the CORRECT option: It has rained very ____ this summer, that's why the grass is so brown.",
       "options": [
-        "little",
+        "कम",
         "lots of",
         "high",
         "much"
@@ -7019,13 +7021,13 @@
       "q": "Which index incorporates environmental sustainability into measuring development?",
       "q_en": "Which index incorporates environmental sustainability into measuring development?",
       "options": [
-        "Sustainable Development Index (SDI) / सतत विकास सूचकांक",
+        "Sustainable Development Index (SDI)",
         "Gender Development Index (GDI)",
         "Human Development Index (HDI)",
         "Inequality-adjusted Human Development Index (I-HDI)"
       ],
       "options_en": [
-        "Sustainable Development Index (SDI) / सतत विकास सूचकांक",
+        "Sustainable Development Index (SDI)",
         "Gender Development Index (GDI)",
         "Human Development Index (HDI)",
         "Inequality-adjusted Human Development Index (I-HDI)"
@@ -7054,19 +7056,19 @@
       "id": 371
     },
     {
-      "q": "Which northeastern state launched the 'School in a Box' initiative in 2025 for flood-affected children?",
+      "q": "Which northeastern राज्य launched the 'School in a Box' initiative in 2025 for flood-affected children?",
       "q_en": "Which northeastern state launched the 'School in a Box' initiative in 2025 for flood-affected children?",
       "options": [
-        "Nagaland / नगालैंड",
-        "Manipur / मणिपुर",
-        "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "Assam / असम"
+        "नागालैंड",
+        "मणिपुर",
+        "अरुणाचल प्रदेश",
+        "असम"
       ],
       "options_en": [
-        "Nagaland / नगालैंड",
-        "Manipur / मणिपुर",
-        "Arunachal Pradesh / अरुणाचल प्रदेश",
-        "Assam / असम"
+        "Nagaland",
+        "Manipur",
+        "Arunachal Pradesh",
+        "Assam"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -7095,13 +7097,13 @@
       "q": "The title of 'Father of Indian Unrest' was given to:",
       "q_en": "The title of 'Father of Indian Unrest' was given to:",
       "options": [
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
-        "Lala Lajpat Rai",
-        "Mahatma Gandhi",
-        "Subhas Chandra Bose"
+        "बाल गंगाधर तिलक",
+        "लाला लाजपत राय",
+        "महात्मा गांधी",
+        "सुभाष चंद्र बोस"
       ],
       "options_en": [
-        "Bal Gangadhar Tilak / बाल गंगाधर तिलक",
+        "Bal Gangadhar Tilak",
         "Lala Lajpat Rai",
         "Mahatma Gandhi",
         "Subhas Chandra Bose"
@@ -7134,13 +7136,13 @@
       "q_en": "Which session of the Indian National Congress formally declared 'Purna Swaraj' as its goal?",
       "options": [
         "Karachi Session, 1931",
-        "Lahore Session, 1929 / लाहौर अधिवेशन, 1929",
+        "Lahore Session, 1929",
         "Calcutta Session, 1920",
         "Lucknow Session, 1916"
       ],
       "options_en": [
         "Karachi Session, 1931",
-        "Lahore Session, 1929 / लाहौर अधिवेशन, 1929",
+        "Lahore Session, 1929",
         "Calcutta Session, 1920",
         "Lucknow Session, 1916"
       ],
@@ -7152,16 +7154,16 @@
       "q": "Ozone layer depletion is mainly caused by which chemical?",
       "q_en": "Ozone layer depletion is mainly caused by which chemical?",
       "options": [
-        "Methane / मीथेन",
+        "Methane",
         "Carbon tetrachloride",
         "Carbon monoxide",
-        "Chloro fluoro carbon (CFC) / क्लोरो फ्लोरो कार्बन"
+        "Chloro fluoro carbon (CFC)"
       ],
       "options_en": [
-        "Methane / मीथेन",
+        "Methane",
         "Carbon tetrachloride",
         "Carbon monoxide",
-        "Chloro fluoro carbon (CFC) / क्लोरो फ्लोरो कार्बन"
+        "Chloro fluoro carbon (CFC)"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -7209,32 +7211,32 @@
       "q": "The pyramid of energy in any ecosystem is always ____________.",
       "q_en": "The pyramid of energy in any ecosystem is always ____________.",
       "options": [
-        "inverted / उल्टा",
+        "inverted",
         "spindle-shaped",
-        "upright / ऊर्धाधर",
-        "linear / रेखीय"
+        "upright",
+        "रै खिक"
       ],
       "options_en": [
-        "inverted / उल्टा",
+        "inverted",
         "spindle-shaped",
-        "upright / ऊर्धाधर",
-        "linear / रेखीय"
+        "upright",
+        "linear"
       ],
       "answer": 2,
       "type": "PYQ",
       "id": 380
     },
     {
-      "q": "What is the main goal of the National Rural Employment Guarantee Act (NREGA)?",
+      "q": "क्या है main goal of the National Rural Employment Guarantee Act (NREGA)?",
       "q_en": "What is the main goal of the National Rural Employment Guarantee Act (NREGA)?",
       "options": [
-        "Providing at least 100 days of wage employment to rural households / ग्रामीण परिवारों को कम से कम 100 दिन",
+        "Providing at least 100 days of wage employment to rural households",
         "Urban housing development",
         "Increasing agricultural exports",
         "Promoting industrial growth in rural areas"
       ],
       "options_en": [
-        "Providing at least 100 days of wage employment to rural households / ग्रामीण परिवारों को कम से कम 100 दिन",
+        "Providing at least 100 days of wage employment to rural households",
         "Urban housing development",
         "Increasing agricultural exports",
         "Promoting industrial growth in rural areas"
@@ -7244,17 +7246,17 @@
       "id": 381
     },
     {
-      "q": "Which of the following does NOT utilize polarization?",
+      "q": "निम्नलिखित में से कौन-सा does NOT utilize polarization?",
       "q_en": "Which of the following does NOT utilize polarization?",
       "options": [
         "3D cinema glasses",
-        "Spectrometers / स्पेक्ट्रोमीटर",
+        "Spectrometers",
         "LCD screens",
         "Sunglasses"
       ],
       "options_en": [
         "3D cinema glasses",
-        "Spectrometers / स्पेक्ट्रोमीटर",
+        "Spectrometers",
         "LCD screens",
         "Sunglasses"
       ],
@@ -7266,13 +7268,13 @@
       "q": "Which noble gas has the highest boiling point?",
       "q_en": "Which noble gas has the highest boiling point?",
       "options": [
-        "Xenon / ज़ेनॉन",
+        "Xenon",
         "Helium",
         "Krypton",
         "Argon"
       ],
       "options_en": [
-        "Xenon / ज़ेनॉन",
+        "Xenon",
         "Helium",
         "Krypton",
         "Argon"
@@ -7285,13 +7287,13 @@
       "q": "________ is NOT a writ covered under the Constitution.",
       "q_en": "________ is NOT a writ covered under the Constitution.",
       "options": [
-        "Writ of locus standi / सुने जाने के अधिकार की रिट",
+        "Writ of locus standi",
         "Writ of prohibition",
         "Writ of mandamus",
         "Writ of certiorari"
       ],
       "options_en": [
-        "Writ of locus standi / सुने जाने के अधिकार की रिट",
+        "Writ of locus standi",
         "Writ of prohibition",
         "Writ of mandamus",
         "Writ of certiorari"
@@ -7301,16 +7303,16 @@
       "id": 384
     },
     {
-      "q": "From where does the Indus River originate?",
+      "q": "From where does the Indus नदी originate?",
       "q_en": "From where does the Indus River originate?",
       "options": [
-        "Lake Mansarovar / मानसरोवर झील",
+        "Lake Mansarovar",
         "Amarkantak Plateau",
         "Mahabaleshwar",
         "Gangotri Glacier"
       ],
       "options_en": [
-        "Lake Mansarovar / मानसरोवर झील",
+        "Lake Mansarovar",
         "Amarkantak Plateau",
         "Mahabaleshwar",
         "Gangotri Glacier"
@@ -7342,14 +7344,14 @@
       "q": "Which vitamin deficiency results in scurvy?",
       "q_en": "Which vitamin deficiency results in scurvy?",
       "options": [
-        "Vitamin B12",
-        "Vitamin C / विटामिन C",
-        "Vitamin D",
-        "Vitamin A"
+        "Vitamin B12 की कमी से:",
+        "Vitamin C का रासायनिक नाम:",
+        "Vitamin D की कमी से बच्चों में:",
+        "Vitamin A की कमी से:"
       ],
       "options_en": [
         "Vitamin B12",
-        "Vitamin C / विटामिन C",
+        "Vitamin C",
         "Vitamin D",
         "Vitamin A"
       ],
@@ -7363,13 +7365,13 @@
       "options": [
         "Owl",
         "Grand Canyon squirrels",
-        "Apple maggot fly / एपल मैगॉट फ्लाई",
+        "Apple maggot fly",
         "Galapagos Island finches"
       ],
       "options_en": [
         "Owl",
         "Grand Canyon squirrels",
-        "Apple maggot fly / एपल मैगॉट फ्लाई",
+        "Apple maggot fly",
         "Galapagos Island finches"
       ],
       "answer": 2,
@@ -7380,14 +7382,14 @@
       "q": "Which level of Panchayati Raj acts as the link between Gram Panchayat and Zila Parishad?",
       "q_en": "Which level of Panchayati Raj acts as the link between Gram Panchayat and Zila Parishad?",
       "options": [
-        "State Election Commission",
-        "Panchayat Samiti / पंचायत समिति",
+        "राज्य Election Commission",
+        "Panchayat Samiti",
         "Gram Sabha",
         "Ward Committee"
       ],
       "options_en": [
         "State Election Commission",
-        "Panchayat Samiti / पंचायत समिति",
+        "Panchayat Samiti",
         "Gram Sabha",
         "Ward Committee"
       ],
@@ -7400,13 +7402,13 @@
       "q_en": "Which is NOT a component of the Human Development Index (HDI)?",
       "options": [
         "Life expectancy",
-        "Access to social security pensions / सामाजिक सुरक्षा पेंशन तक पहुंच",
+        "Access to social security pensions",
         "Education index",
         "Income per capita"
       ],
       "options_en": [
         "Life expectancy",
-        "Access to social security pensions / सामाजिक सुरक्षा पेंशन तक पहुंच",
+        "Access to social security pensions",
         "Education index",
         "Income per capita"
       ],
@@ -7419,13 +7421,13 @@
       "q_en": "Which major welfare scheme was expanded in 2024 to provide free ration to over 80 crore beneficiaries for five more years?",
       "options": [
         "Bharat Poshan Abhiyan",
-        "PM Garib Kalyan Anna Yojana / प्रधानमंत्री गरीब कल्याण अन्न योजना",
+        "PM Garib Kalyan Anna Yojana",
         "Antyodaya Anna Yojana",
         "National Food Security Mission"
       ],
       "options_en": [
         "Bharat Poshan Abhiyan",
-        "PM Garib Kalyan Anna Yojana / प्रधानमंत्री गरीब कल्याण अन्न योजना",
+        "PM Garib Kalyan Anna Yojana",
         "Antyodaya Anna Yojana",
         "National Food Security Mission"
       ],
@@ -7434,7 +7436,7 @@
       "id": 391
     },
     {
-      "q": "Mass of Hydrogen gas in 2.24 L at 1 atm and 273K is y g. What is the value of y?",
+      "q": "Mass of Hydrogen gas in 2.24 L at 1 atm and 273K is y g. क्या है value of y?",
       "q_en": "Mass of Hydrogen gas in 2.24 L at 1 atm and 273K is y g. What is the value of y?",
       "options": [
         "0.1",
@@ -7456,13 +7458,13 @@
       "q": "Which is the IUPAC name of dimethyl ether?",
       "q_en": "Which is the IUPAC name of dimethyl ether?",
       "options": [
-        "Methoxymethane / मेथॉक्सीमिथेन",
+        "Methoxymethane",
         "Methanol",
         "Ethoxyethane",
         "Dimethylether"
       ],
       "options_en": [
-        "Methoxymethane / मेथॉक्सीमिथेन",
+        "Methoxymethane",
         "Methanol",
         "Ethoxyethane",
         "Dimethylether"
@@ -7475,13 +7477,13 @@
       "q": "Which was NOT a demand of the Moderates in the early phase of Indian National Congress?",
       "q_en": "Which was NOT a demand of the Moderates in the early phase of Indian National Congress?",
       "options": [
-        "Complete independence from British rule / ब्रिटिश शासन से पूर्ण स्वतंत्रता",
+        "Complete independence from British rule",
         "Reduction of military expenditure",
         "Indianisation of civil services",
         "Expansion of Legislative Councils"
       ],
       "options_en": [
-        "Complete independence from British rule / ब्रिटिश शासन से पूर्ण स्वतंत्रता",
+        "Complete independence from British rule",
         "Reduction of military expenditure",
         "Indianisation of civil services",
         "Expansion of Legislative Councils"
@@ -7491,19 +7493,19 @@
       "id": 394
     },
     {
-      "q": "Which act is considered the first concrete step towards a responsible government in India?",
+      "q": "Which act is considered the first concrete step towards a responsible सरकार in भारत?",
       "q_en": "Which act is considered the first concrete step towards a responsible government in India?",
       "options": [
         "Indian Councils Act, 1892",
         "Indian Councils Act, 1861",
-        "Government of India Act, 1935",
-        "Government of India Act, 1919 / भारत सरकार अधिनियम, 1919"
+        "सरकार of भारत Act, 1935",
+        "सरकार of भारत Act, 1919"
       ],
       "options_en": [
         "Indian Councils Act, 1892",
         "Indian Councils Act, 1861",
         "Government of India Act, 1935",
-        "Government of India Act, 1919 / भारत सरकार अधिनियम, 1919"
+        "Government of India Act, 1919"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -7529,18 +7531,18 @@
       "id": 396
     },
     {
-      "q": "Which Indian state has the largest forest cover by area?",
+      "q": "Which Indian राज्य has the largest forest cover by area?",
       "q_en": "Which Indian state has the largest forest cover by area?",
       "options": [
-        "Odisha / ओडिशा",
-        "Chhattisgarh / छत्तीसगढ़",
-        "Madhya Pradesh / मध्य प्रदेश",
-        "Arunachal Pradesh"
+        "ओडिशा",
+        "Chhattisgarh",
+        "मध्य प्रदेश",
+        "अरुणाचल प्रदेश"
       ],
       "options_en": [
-        "Odisha / ओडिशा",
-        "Chhattisgarh / छत्तीसगढ़",
-        "Madhya Pradesh / मध्य प्रदेश",
+        "Odisha",
+        "Chhattisgarh",
+        "Madhya Pradesh",
         "Arunachal Pradesh"
       ],
       "answer": 2,
@@ -7567,18 +7569,18 @@
       "id": 398
     },
     {
-      "q": "Which Indian city launched the 'Climate Mission' in 2025 to become the world's first energy-literate city?",
+      "q": "Which Indian शहर launched the 'Climate Mission' in 2025 to become the world's first energy-literate शहर?",
       "q_en": "Which Indian city launched the 'Climate Mission' in 2025 to become the world's first energy-literate city?",
       "options": [
-        "Jaipur",
+        "जयपुर",
         "Ahmedabad",
-        "Indore / इंदौर",
-        "Bengaluru"
+        "इंदौर",
+        "बेंगलुरु"
       ],
       "options_en": [
         "Jaipur",
         "Ahmedabad",
-        "Indore / इंदौर",
+        "Indore",
         "Bengaluru"
       ],
       "answer": 2,
@@ -7605,17 +7607,17 @@
       "id": 400
     },
     {
-      "q": "Which scheme was launched by the Indian government to promote cleanliness and sanitation?",
+      "q": "Which scheme was launched by the Indian सरकार to promote cleanliness and sanitation?",
       "q_en": "Which scheme was launched by the Indian government to promote cleanliness and sanitation?",
       "options": [
         "Beti Bachao Beti Padhao",
-        "Swachh Bharat Abhiyan / स्वच्छ भारत अभियान",
-        "Digital India",
-        "Make in India"
+        "Swachh Bharat Abhiyan",
+        "Digital भारत",
+        "Make in भारत"
       ],
       "options_en": [
         "Beti Bachao Beti Padhao",
-        "Swachh Bharat Abhiyan / स्वच्छ भारत अभियान",
+        "Swachh Bharat Abhiyan",
         "Digital India",
         "Make in India"
       ],
@@ -7624,17 +7626,17 @@
       "id": 401
     },
     {
-      "q": "Which mountain range is known as the 'Blue Mountains' of India?",
+      "q": "Which mountain range is known as the 'Blue Mountains' of भारत?",
       "q_en": "Which mountain range is known as the 'Blue Mountains' of India?",
       "options": [
-        "Eastern Ghats",
-        "Nilgiri Hills / नीलगिरि पहाड़ियाँ",
+        "पूर्वी घाट",
+        "Nilgiri Hills",
         "Aravalli Range",
-        "Western Ghats"
+        "पश्चिमी घाट"
       ],
       "options_en": [
         "Eastern Ghats",
-        "Nilgiri Hills / नीलगिरि पहाड़ियाँ",
+        "Nilgiri Hills",
         "Aravalli Range",
         "Western Ghats"
       ],
@@ -7643,57 +7645,57 @@
       "id": 402
     },
     {
-      "q": "What is the name of India's nationwide railway safety system (3,500 km) to prevent train collisions?",
+      "q": "क्या है name of भारत's nationwide railway safety system (3,500 km) to prevent train collisions?",
       "q_en": "What is the name of India's nationwide railway safety system (3,500 km) to prevent train collisions?",
       "options": [
-        "Trinetra / त्रिनेत्र",
-        "Suraksha Setu / सुरक्षा सेतु",
-        "Raksha Kavach / रक्षा कवच",
-        "Kavach / कवच"
+        "Trinetra",
+        "Suraksha Setu",
+        "Raksha Kavach",
+        "Kavach"
       ],
       "options_en": [
-        "Trinetra / त्रिनेत्र",
-        "Suraksha Setu / सुरक्षा सेतु",
-        "Raksha Kavach / रक्षा कवच",
-        "Kavach / कवच"
+        "Trinetra",
+        "Suraksha Setu",
+        "Raksha Kavach",
+        "Kavach"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 403
     },
     {
-      "q": "Which government scheme reduced price volatility risks for farmers in Madhya Pradesh?",
+      "q": "Which सरकार scheme reduced price volatility risks for farmers in मध्य प्रदेश?",
       "q_en": "Which government scheme reduced price volatility risks for farmers in Madhya Pradesh?",
       "options": [
         "Kisan Credit Card Scheme",
-        "PM-AASHA / पीएम-आशा",
+        "PM-AASHA",
         "PM-KISAN Yojana",
-        "Bhavantar Bhugtan Yojana / भावांतर भुगतान योजना"
+        "Bhavantar Bhugtan Yojana"
       ],
       "options_en": [
         "Kisan Credit Card Scheme",
-        "PM-AASHA / पीएम-आशा",
+        "PM-AASHA",
         "PM-KISAN Yojana",
-        "Bhavantar Bhugtan Yojana / भावांतर भुगतान योजना"
+        "Bhavantar Bhugtan Yojana"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 404
     },
     {
-      "q": "Who was the President of the Indian National Congress at the time of the partition of Bengal in 1905?",
+      "q": "कौन थे the President of the Indian National Congress at the time of the partition of Bengal in 1905?",
       "q_en": "Who was the President of the Indian National Congress at the time of the partition of Bengal in 1905?",
       "options": [
-        "Dadabhai Naoroji",
+        "दादाभाई नौरोजी",
         "Surendranath Banerjee",
         "Badruddin Tyabji",
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले"
+        "गोपाल कृष्ण गोखले"
       ],
       "options_en": [
         "Dadabhai Naoroji",
         "Surendranath Banerjee",
         "Badruddin Tyabji",
-        "Gopal Krishna Gokhale / गोपाल कृष्ण गोखले"
+        "Gopal Krishna Gokhale"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -7703,15 +7705,15 @@
       "q": "Which is a vector-borne disease?",
       "q_en": "Which is a vector-borne disease?",
       "options": [
-        "Hepatitis",
+        "हेपेटाइटिस",
         "Tuberculosis",
-        "Malaria / मलेरिया",
+        "मलेरिया",
         "Tetanus"
       ],
       "options_en": [
         "Hepatitis",
         "Tuberculosis",
-        "Malaria / मलेरिया",
+        "Malaria",
         "Tetanus"
       ],
       "answer": 2,
@@ -7738,7 +7740,7 @@
       "id": 407
     },
     {
-      "q": "Which factor is NOT directly considered in the calculation of India's HDI?",
+      "q": "Which factor is NOT directly considered in the calculation of भारत's HDI?",
       "q_en": "Which factor is NOT directly considered in the calculation of India's HDI?",
       "options": [
         "Adult literacy and mean years of schooling",
@@ -7757,7 +7759,7 @@
       "id": 408
     },
     {
-      "q": "As per Forest Survey of India 2021, total forest area of Madhya Pradesh (density-wise) is _____ sq. km.",
+      "q": "As per Forest Survey of भारत 2021, total forest area of मध्य प्रदेश (density-wise) is _____ sq. km.",
       "q_en": "As per Forest Survey of India 2021, total forest area of Madhya Pradesh (density-wise) is _____ sq. km.",
       "options": [
         "66,431 sq.km",
@@ -7776,7 +7778,7 @@
       "id": 409
     },
     {
-      "q": "What is the primary aim of Deendayal Antyodaya Yojana – State Rural Livelihood Mission (DAY-SRLM) in Madhya Pradesh?",
+      "q": "क्या है primary aim of Deendayal Antyodaya Yojana – राज्य Rural Livelihood Mission (DAY-SRLM) in मध्य प्रदेश?",
       "q_en": "What is the primary aim of Deendayal Antyodaya Yojana – State Rural Livelihood Mission (DAY-SRLM) in Madhya Pradesh?",
       "options": [
         "Provide free education to girls",
@@ -7795,7 +7797,7 @@
       "id": 410
     },
     {
-      "q": "The office of the Comptroller and Auditor-General of India is established under Article ________ of the Constitution.",
+      "q": "The office of the Comptroller and Auditor-General of भारत is established under Article ________ of the Constitution.",
       "q_en": "The office of the Comptroller and Auditor-General of India is established under Article ________ of the Constitution.",
       "options": [
         "148",
@@ -7814,10 +7816,10 @@
       "id": 411
     },
     {
-      "q": "What is the prize money under the Eklavya Award, Madhya Pradesh, given to each eligible sport player?",
+      "q": "क्या है prize money under the Eklavya Award, मध्य प्रदेश, given to each eligible sport player?",
       "q_en": "What is the prize money under the Eklavya Award, Madhya Pradesh, given to each eligible sport player?",
       "options": [
-        "Rs. 3 lakh",
+        "3 लाख रु.",
         "Rs. 2 lakh",
         "Rs. 50 thousand",
         "Rs. 1 lakh / 1 लाख रुपये"
@@ -7838,13 +7840,13 @@
       "options": [
         "Tundra",
         "Grassland",
-        "Marine / समुद्री",
+        "Marine",
         "Forest"
       ],
       "options_en": [
         "Tundra",
         "Grassland",
-        "Marine / समुद्री",
+        "Marine",
         "Forest"
       ],
       "answer": 2,
@@ -7855,14 +7857,14 @@
       "q": "Which international body is responsible for coordinating global climate change efforts?",
       "q_en": "Which international body is responsible for coordinating global climate change efforts?",
       "options": [
-        "WHO",
-        "IPCC / आईपीसीसी",
+        "WHO की स्थापना कब हुई?",
+        "IPCC",
         "WTO",
         "UNICEF"
       ],
       "options_en": [
         "WHO",
-        "IPCC / आईपीसीसी",
+        "IPCC",
         "WTO",
         "UNICEF"
       ],
@@ -7894,13 +7896,13 @@
       "q_en": "Cocaine is commonly referred to as ______.",
       "options": [
         "Marijuana",
-        "Crack / क्रैक",
+        "Crack",
         "Heroine",
         "Charas"
       ],
       "options_en": [
         "Marijuana",
-        "Crack / क्रैक",
+        "Crack",
         "Heroine",
         "Charas"
       ],
@@ -7909,18 +7911,18 @@
       "id": 416
     },
     {
-      "q": "Which summit held in 2025 aimed to transform India's Northeast into a dynamic hub for investment and trade?",
+      "q": "Which summit held in 2025 aimed to transform भारत's Northeast into a dynamic hub for investment and trade?",
       "q_en": "Which summit held in 2025 aimed to transform India's Northeast into a dynamic hub for investment and trade?",
       "options": [
-        "Eastern India Business Summit",
+        "Eastern भारत Business Summit",
         "Northeast Economic Forum",
-        "Rising Northeast Investors Summit / उभरते पूर्वोत्तर निवेशक शिखर सम्मेलन",
+        "Rising Northeast Investors Summit",
         "Northeast Trade and Investment Conference"
       ],
       "options_en": [
         "Eastern India Business Summit",
         "Northeast Economic Forum",
-        "Rising Northeast Investors Summit / उभरते पूर्वोत्तर निवेशक शिखर सम्मेलन",
+        "Rising Northeast Investors Summit",
         "Northeast Trade and Investment Conference"
       ],
       "answer": 2,
@@ -7933,13 +7935,13 @@
       "options": [
         "Global Agro-Tech Initiative",
         "Digital Agriculture Mission",
-        "Prime Minister Dhan-Dhaanya Krishi Yojana / प्रधानमंत्री धन-धान्य कृषि योजना",
+        "Prime Minister Dhan-Dhaanya Krishi Yojana",
         "National Urban Farming Scheme"
       ],
       "options_en": [
         "Global Agro-Tech Initiative",
         "Digital Agriculture Mission",
-        "Prime Minister Dhan-Dhaanya Krishi Yojana / प्रधानमंत्री धन-धान्य कृषि योजना",
+        "Prime Minister Dhan-Dhaanya Krishi Yojana",
         "National Urban Farming Scheme"
       ],
       "answer": 2,
@@ -7947,13 +7949,12 @@
       "id": 418
     },
     {
-      "subject": "GK",
-      "q": "Sonal Mansingh is associated with which of the following? ? Painting",
+      "q": "सोनल मानसिंह निम्न में से किससे सम्बंधित हैं?",
       "q_en": "Sonal Mansingh is associated with which of the following? ? Painting",
       "options": [
-        "Astrologer",
-        "Classical Dancer",
-        "Classical Singer",
+        "ज्योतिषी",
+        "शास्त्रीय नृत्य",
+        "शास्त्रीय गायन",
         "राजस्थान"
       ],
       "options_en": [
@@ -7967,13 +7968,12 @@
       "id": 419
     },
     {
-      "subject": "GK",
-      "q": "'Nirmal painting’ belongs to which of the following state? ' ' ? Orissa",
+      "q": "'निर्मल चित्रकला' निम्न में से किस राज्य से संबंधित है?",
       "q_en": "'Nirmal painting’ belongs to which of the following state? ' ' ? Orissa",
       "options": [
-        "Bihar",
-        "Telangana",
-        "Tripura",
+        "बिहार",
+        "तेलंगाना",
+        "त्रिपुरा",
         "राजस्थान"
       ],
       "options_en": [
@@ -7987,13 +7987,12 @@
       "id": 420
     },
     {
-      "subject": "GK",
-      "q": "Where is the headquarters of the Indian Banks' Association situated? ( ) ? Kolkata",
+      "q": "भारतीय बैंक संघ (इंडियन बैंक्स एसोसिएशन) का मुख्यालय कहाँ स्थित है?",
       "q_en": "Where is the headquarters of the Indian Banks' Association situated? ( ) ? Kolkata",
       "options": [
-        "Delhi",
-        "Mumbai",
-        "Chennai",
+        "दिल्ली",
+        "मुंबई",
+        "चेन्नई",
         "राजस्थान"
       ],
       "options_en": [
@@ -8007,8 +8006,7 @@
       "id": 421
     },
     {
-      "subject": "GK",
-      "q": "Which of the following time duration matches with the reign of Sher Shah Suri? ?",
+      "q": "निम्नलिखित में से कौन सी समय अवधि शेर शाह सूरी के शासनकाल से मेल खाती है?",
       "q_en": "Which of the following time duration matches with the reign of Sher Shah Suri? ?",
       "options": [
         "1526-30 1530-35",
@@ -8027,8 +8025,7 @@
       "id": 422
     },
     {
-      "subject": "GK",
-      "q": "The first Battle of Panipat took place in which year? ? 1526",
+      "q": "पानीपत का प्रथम युद्ध किस वर्ष हुआ था ?",
       "q_en": "The first Battle of Panipat took place in which year? ? 1526",
       "options": [
         "1526 1629",
@@ -8047,8 +8044,7 @@
       "id": 423
     },
     {
-      "subject": "GK",
-      "q": "Which of the following articles of the Indian Constitution is related to the Right against Exploitation? ? Article 23 & 24",
+      "q": "भारतीय संविधान के निम्नलिखित में से कौन सा अनुच्छे द शोषण के विरुद्ध अधिकार से संबंधित है?",
       "q_en": "Which of the following articles of the Indian Constitution is related to the Right against Exploitation? ? Article 23 & 24",
       "options": [
         "23 24 Article 25",
@@ -8067,13 +8063,12 @@
       "id": 424
     },
     {
-      "subject": "GK",
-      "q": "Who has been appointed as the new CMD of SIDBI in July 2024? 2024 SIDBI CMD ? Rajat Verma",
+      "q": "जुलाई 2024 में SIDBI के नए CMD के रूप में किसे नियुक्त किया गया है?",
       "q_en": "Who has been appointed as the new CMD of SIDBI in July 2024? 2024 SIDBI CMD ? Rajat Verma",
       "options": [
-        "Manoj Mittal",
-        "Amitabh Chaudhry",
-        "Sandeep Bakhshi",
+        "मनोज मित्तल",
+        "अमिताभ चौधरी",
+        "संदीप बख्शी",
         "राजस्थान"
       ],
       "options_en": [
@@ -8087,13 +8082,12 @@
       "id": 425
     },
     {
-      "subject": "GK",
-      "q": "Which country Joined Colombo Security Conclave as 5th Full Member States in July 2024? 2024 5 ? Bangladesh",
+      "q": "जुलाई 2024 में कौन सा देश 5वें पूर्ण सदस्य देश के रूप में कोलंबो सुरक्षा कॉन्क्लेव में शामिल हुआ?",
       "q_en": "Which country Joined Colombo Security Conclave as 5th Full Member States in July 2024? 2024 5 ? Bangladesh",
       "options": [
-        "Bhutan",
-        "Nepal",
-        "South Korea",
+        "भूटान",
+        "नेपाल",
+        "दक्षिण कोरिया",
         "राजस्थान"
       ],
       "options_en": [
@@ -8107,13 +8101,12 @@
       "id": 426
     },
     {
-      "subject": "GK",
-      "q": "In August 2024, Sheikh Hasina resigned from her position as the Prime Minister of which country? 2024 , ? Afghanistan",
+      "q": "अगस्त 2024 में, शेख हसीना ने किस देश के प्रधान मंत्री के रूप में अपने पद से इस्तीफा दे दिया?",
       "q_en": "In August 2024, Sheikh Hasina resigned from her position as the Prime Minister of which country? 2024 , ? Afghanistan",
       "options": [
-        "Singapore",
-        "Bangladesh",
-        "South Africa",
+        "सिंगापुर",
+        "बांग्लादेश",
+        "दक्षिण अफ्रीका",
         "राजस्थान"
       ],
       "options_en": [
@@ -8127,13 +8120,12 @@
       "id": 427
     },
     {
-      "subject": "GK",
-      "q": "Which state Launched DRIMS portal for reporting damaged during disasters in May 2024? 2024 DRIMS ? Assam",
+      "q": "मई 2024 में किस राज्य ने आपदाओं के दौरान हुए नुकसान की रिपोर्टिंग के लिए DRIMS पोर्टल लॉन्च किया?",
       "q_en": "Which state Launched DRIMS portal for reporting damaged during disasters in May 2024? 2024 DRIMS ? Assam",
       "options": [
-        "Andhra Pradesh",
-        "Himachal Pradesh",
-        "Sikkim",
+        "आंध्र प्रदेश",
+        "हिमाचल प्रदेश",
+        "सिक्किम",
         "राजस्थान"
       ],
       "options_en": [
@@ -8147,13 +8139,12 @@
       "id": 428
     },
     {
-      "subject": "GK",
-      "q": "Who inaugurated the construction of the world’s highest tunnel by initiating the first blast in July 2024? 2024 ? Amit Shah",
+      "q": "जुलाई 2024 में पहला विस्फोट करके विश्व की सबसे ऊं ची सुरं ग के निर्माण का उद् घाटन किसने किया?",
       "q_en": "Who inaugurated the construction of the world’s highest tunnel by initiating the first blast in July 2024? 2024 ? Amit Shah",
       "options": [
-        "Piyush Goyal",
-        "Narendra Modi",
-        "H.D. Kumaraswamy",
+        "पीयूष गोयल",
+        "नरें द्र मोदी",
+        "एच.डी. कु मारस्वामी",
         "."
       ],
       "options_en": [
@@ -8167,14 +8158,13 @@
       "id": 429
     },
     {
-      "subject": "GK",
-      "q": "In which of the following district of Madhya Pradesh state, Dhrupad Kendra established in 1981? 1981 ? Ashoknagar",
+      "q": "In निम्नलिखित में से कौन-सा district of मध्य प्रदेश राज्य, Dhrupad Kendra established in 1981?",
       "q_en": "In which of the following district of Madhya Pradesh state, Dhrupad Kendra established in 1981? 1981 ? Ashoknagar",
       "options": [
-        "Balaghat",
-        "Ujjain",
+        "बालाघाट",
+        "उज्जैन",
         "राजस्थान",
-        "Bhopal"
+        "भोपाल"
       ],
       "options_en": [
         "Balaghat",
@@ -8187,13 +8177,12 @@
       "id": 430
     },
     {
-      "subject": "GK",
-      "q": "Where is headquarter of the Small industrial Development Bank of India (SIDBI) located? (SIDBI) ? Lucknow",
+      "q": "भारतीय लघु औद्योगिक विकास बैंक (SIDBI) का मुख्यालय कहाँ स्थित है?",
       "q_en": "Where is headquarter of the Small industrial Development Bank of India (SIDBI) located? (SIDBI) ? Lucknow",
       "options": [
-        "Mumbai",
-        "Kolkata",
-        "Bengaluru",
+        "मुंबई",
+        "कोलकाता",
+        "बेंगलुरु",
         "राजस्थान"
       ],
       "options_en": [
@@ -8207,13 +8196,12 @@
       "id": 431
     },
     {
-      "subject": "GK",
       "q": "Chandrasekhara Venkata Raman was an Indian ______ who won the 1930 Nobel Prize for his work. _______ 1930 Physicist",
       "q_en": "Chandrasekhara Venkata Raman was an Indian ______ who won the 1930 Nobel Prize for his work. _______ 1930 Physicist",
       "options": [
-        "Chemist",
-        "Literaturist",
-        "Biologist",
+        "रसायनज्ञ",
+        "साहित्यकार",
+        "जीवविज्ञानी",
         "राजस्थान"
       ],
       "options_en": [
@@ -8227,13 +8215,12 @@
       "id": 432
     },
     {
-      "subject": "GK",
-      "q": "Chief Justice of the Supreme Court is appointed by which of the following? ? President",
+      "q": "सर्वोच्च न्यायालय के मुख्य न्यायाधीश की नियुक्ति निम्नलिखित में से किसके द्वारा की जाती है?",
       "q_en": "Chief Justice of the Supreme Court is appointed by which of the following? ? President",
       "options": [
-        "Prime Minister",
-        "Governor of RBI",
-        "Chief Minister",
+        "प्रधानमंत्री",
+        "आरबीआई के गवर्नर",
+        "मुख्यमंत्री",
         "राजस्थान"
       ],
       "options_en": [
@@ -8247,12 +8234,11 @@
       "id": 433
     },
     {
-      "subject": "GK",
-      "q": "Who sets fiscal deficit target for the respective Financial Year? ? President",
+      "q": "वित्तीय वर्ष के राजकोषीय घाटे का लक्ष्य कौन निर्धारित करता है?",
       "q_en": "Who sets fiscal deficit target for the respective Financial Year? ? President",
       "options": [
-        "Finance Minister",
-        "RBI",
+        "वित्तमंत्री",
+        "भारतीय रिजर्व बैंक स्टेट बैंक ऑफ इंडिया",
         "राजस्थान",
         "SBI"
       ],
@@ -8267,13 +8253,12 @@
       "id": 434
     },
     {
-      "subject": "GK",
-      "q": "Where is the headquarters of ATP (Association of Tennis Professionals) located? . . . ( ) ? Switzerland",
+      "q": "ए.टी.पी. (टेनिस पेशेवर संघ) का मुख्यालय कहाँ स्थित है?",
       "q_en": "Where is the headquarters of ATP (Association of Tennis Professionals) located? . . . ( ) ? Switzerland",
       "options": [
-        "London",
-        "Paris",
-        "New York",
+        "लंदन",
+        "पेरिस",
+        "न्यूयॉर्क",
         "राजस्थान"
       ],
       "options_en": [
@@ -8287,13 +8272,12 @@
       "id": 435
     },
     {
-      "subject": "GK",
-      "q": "Who out of the following inaugurated the 19th CII India-Africa Business Conclave in August 2024? 2024 19 CII - ? Droupadi Murmu",
+      "q": "अगस्त 2024 में 19वें CII भारत-अफ्रीका व्यापार सम्मेलन का उद् घाटन निम्नलिखित में से किसने किया?",
       "q_en": "Who out of the following inaugurated the 19th CII India-Africa Business Conclave in August 2024? 2024 19 CII - ? Droupadi Murmu",
       "options": [
-        "Narendra Modi",
-        "Jagdeep Dhankhar",
-        "Subrahmanyam Jaishankar",
+        "नरें द्र मोदी",
+        "जगदीप धनखड़",
+        "सुब्रह्मण्यम जयशंकर",
         "राजस्थान"
       ],
       "options_en": [
@@ -8307,8 +8291,7 @@
       "id": 436
     },
     {
-      "subject": "GK",
-      "q": "Indian Government has declared which date as Samvidhaan Hatya Diwas in July 2024? 2024 ? June 24",
+      "q": "Indian सरकार has declared which date as Samvidhaan Hatya Diwas in July 2024?",
       "q_en": "Indian Government has declared which date as Samvidhaan Hatya Diwas in July 2024? 2024 ? June 24",
       "options": [
         "24",
@@ -8327,13 +8310,12 @@
       "id": 437
     },
     {
-      "subject": "GK",
-      "q": "Which of the following city has hosted the Global India AI Summit 2024? AI 2024 ? New Delhi",
+      "q": "निम्नलिखित में से किस शहर ने ग्लोबल इंडिया AI शिखर सम्मेलन 2024 की मेजबानी की है?",
       "q_en": "Which of the following city has hosted the Global India AI Summit 2024? AI 2024 ? New Delhi",
       "options": [
-        "Surat",
-        "Gandhinagar",
-        "Bengaluru",
+        "सूरत",
+        "गांधीनगर",
+        "बेंगलुरु",
         "राजस्थान"
       ],
       "options_en": [
@@ -8347,13 +8329,12 @@
       "id": 438
     },
     {
-      "subject": "GK",
-      "q": "Which country has devalued its currency in March 2024? 2024 ? Bangladesh",
+      "q": "किस देश ने मार्च 2024 में अपनी मुद्रा का अवमूल्यन किया है?",
       "q_en": "Which country has devalued its currency in March 2024? 2024 ? Bangladesh",
       "options": [
-        "Thailand",
-        "Egypt",
-        "Netherland",
+        "थाईलैंड",
+        "मिस्र",
+        "नीदरलैंड",
         "राजस्थान"
       ],
       "options_en": [
@@ -8367,13 +8348,12 @@
       "id": 439
     },
     {
-      "subject": "GK",
-      "q": "Who became the 1st Indian space tourist on Blue Origin's private astronaut launch in May 2024? 2024 ? Shalini Kapoor",
+      "q": "मई 2024 में ब्लू ओरिजिन के निजी अंतरिक्ष यात्री प्रक्षेपण पर पहला भारतीय अंतरिक्ष पर्यटक कौन बना?",
       "q_en": "Who became the 1st Indian space tourist on Blue Origin's private astronaut launch in May 2024? 2024 ? Shalini Kapoor",
       "options": [
-        "Gopi Thotakura",
-        "Aditi Krishnan",
-        "Gunjan Agarwal",
+        "गोपी थोटाकु रा",
+        "अदिति कृ ष्णन",
+        "गुंजन अग्रवाल",
         "राजस्थान"
       ],
       "options_en": [
@@ -8387,13 +8367,12 @@
       "id": 440
     },
     {
-      "subject": "GK",
-      "q": "Which country is set to host the 2030 Winter Olympics? 2030 ? India",
+      "q": "कौन सा देश 2030 शीतकालीन ओलंपिक की मेजबानी करने वाला है?",
       "q_en": "Which country is set to host the 2030 Winter Olympics? 2030 ? India",
       "options": [
-        "United Arab Emirates",
-        "France",
-        "Russia",
+        "संयुक्त अरब अमीरात",
+        "फ्रांस",
+        "रूस",
         "राजस्थान"
       ],
       "options_en": [
@@ -8407,8 +8386,7 @@
       "id": 441
     },
     {
-      "subject": "GK",
-      "q": "When was the Bretton Woods Conference, officially known as the United Nations Monetary and Financial Conference held? , , ? 1944",
+      "q": "ब्रेटन वुड्स सम्मेलन, जिसे आधिकारिक तौर पर संयुक्त राष्ट्र मौद्रिक और वित्तीय सम्मेलन के नाम से जाना जाता है, कब आयोजित किया गया था?",
       "q_en": "When was the Bretton Woods Conference, officially known as the United Nations Monetary and Financial Conference held? , , ? 1944",
       "options": [
         "1944 1966",
@@ -8427,8 +8405,7 @@
       "id": 442
     },
     {
-      "subject": "GK",
-      "q": "How many total digits are there in a PAN card? ?",
+      "q": "पैन कार्ड में कु ल कितने डिजिट होते हैं?",
       "q_en": "How many total digits are there in a PAN card? ?",
       "options": [
         "10 12",
@@ -8447,13 +8424,12 @@
       "id": 443
     },
     {
-      "subject": "GK",
-      "q": "On which of the following mountains foothills are the caves of Bhimbetka situated? ? Satpura",
+      "q": "निम्नलिखित में से किस पर्वत की तलहटी पर भीमबेटका की गुफाएँ स्थित हैं?",
       "q_en": "On which of the following mountains foothills are the caves of Bhimbetka situated? ? Satpura",
       "options": [
-        "Western Ghats",
-        "Vindhya",
-        "Eastern Ghats",
+        "पश्चिमी घाट",
+        "विन्ध्य",
+        "पूर्वी घाट",
         "राजस्थान"
       ],
       "options_en": [
@@ -8467,8 +8443,7 @@
       "id": 444
     },
     {
-      "subject": "GK",
-      "q": "Under which of the following act, NBFC is registered? (Only from of the given options) , - ? ( ) Companies Act, 1956",
+      "q": "Under निम्नलिखित में से कौन-सा act, NBFC is registered?",
       "q_en": "Under which of the following act, NBFC is registered? (Only from of the given options) , - ? ( ) Companies Act, 1956",
       "options": [
         ", 1956 Companies Act, 1970",
@@ -8487,13 +8462,12 @@
       "id": 445
     },
     {
-      "subject": "GK",
-      "q": "Which of the following rivers originates from a glacier near Bokhar Chu in the Tibetan region? ? Ravi",
+      "q": "निम्नलिखित में से किस नदी का उद्गम तिब्बती क्षेत्र में बोखर छु के निकट एक हिमनद से होता है?",
       "q_en": "Which of the following rivers originates from a glacier near Bokhar Chu in the Tibetan region? ? Ravi",
       "options": [
-        "Chenab",
-        "Indus",
-        "Brahmaputra",
+        "चेनाब",
+        "सिन्धु",
+        "ब्रह्मपुत्र",
         "राजस्थान"
       ],
       "options_en": [
@@ -8507,8 +8481,7 @@
       "id": 446
     },
     {
-      "subject": "GK",
-      "q": "In which year was the Bahmani kingdom established? ? 1325",
+      "q": "बहमनी साम्राज्य किस वर्ष स्थापित हुआ था?",
       "q_en": "In which year was the Bahmani kingdom established? ? 1325",
       "options": [
         "1325 1339",
@@ -8527,13 +8500,12 @@
       "id": 447
     },
     {
-      "subject": "GK",
-      "q": "Which out of the following was awarded the Nobel Prize for Medicine in 1968? 1968 ? Subrahmanyan Chandrasekhar",
+      "q": "निम्नलिखित में से किसे 1968 में चिकित्सा के लिए नोबेल पुरस्कार से सम्मानित किया गया था?",
       "q_en": "Which out of the following was awarded the Nobel Prize for Medicine in 1968? 1968 ? Subrahmanyan Chandrasekhar",
       "options": [
-        "Hargobind Khorana",
-        "Amartya Sen",
-        "Chandrashekhar Venkataraman",
+        "हरगोबिंद खुराना",
+        "अमर्त्य सेन",
+        "चंद्रशेखर वेंकटरमन",
         "राजस्थान"
       ],
       "options_en": [
@@ -8547,13 +8519,12 @@
       "id": 448
     },
     {
-      "subject": "GK",
-      "q": "Which team had won the first men's Cricket World Cup in the year 1975? 1975 ? Australia",
+      "q": "1975 में पहला पुरुष क्रिके ट विश्व कप किस टीम ने जीता था?",
       "q_en": "Which team had won the first men's Cricket World Cup in the year 1975? 1975 ? Australia",
       "options": [
-        "West Indies",
-        "India",
-        "Pakistan",
+        "वेस्ट इंडीज",
+        "भारत",
+        "पाकिस्तान",
         "राजस्थान"
       ],
       "options_en": [
@@ -8567,13 +8538,12 @@
       "id": 449
     },
     {
-      "subject": "GK",
-      "q": "What is the name of the Multinational Military Exercise scheduled to be conducted from July 27 to August 9, 2024, at Ulaanbaatar, Mongolia? 27 9 2024 ? Khaan Quest",
+      "q": "मंगोलिया के उलानबटार में 27 जुलाई से 9 अगस्त 2024 तक आयोजित होने वाले बहुराष्ट्रीय सैन्य अभ्यास का नाम क्या है?",
       "q_en": "What is the name of the Multinational Military Exercise scheduled to be conducted from July 27 to August 9, 2024, at Ulaanbaatar, Mongolia? 27 9 2024 ? Khaan Quest",
       "options": [
-        "Mountain Quest",
-        "Nomadic Elephant",
-        "Vijay Prahar",
+        "माउंटेन क्वे स्ट",
+        "नोमैडिक एलीफें ट",
+        "विजय प्रहार",
         "राजस्थान"
       ],
       "options_en": [
@@ -8587,13 +8557,12 @@
       "id": 450
     },
     {
-      "subject": "GK",
-      "q": "Which of the following institution released Sustainable Development Goal SDG India Index 2023-24? 2023-24 ? Asian Development Bank",
+      "q": "निम्नलिखित में से किस संस्था ने सतत विकास लक्ष्य एसडीजी इंडिया इंडेक्स 2023-24 जारी किया हैं?",
       "q_en": "Which of the following institution released Sustainable Development Goal SDG India Index 2023-24? 2023-24 ? Asian Development Bank",
       "options": [
-        "NITI Aayog",
-        "Reserve Bank of India",
-        "Securities and Exchange Board of India",
+        "नीति आयोग",
+        "भारतीय रिजर्व बैंक",
+        "भारतीय प्रतिभूति और विनिमय बोर्ड",
         "राजस्थान"
       ],
       "options_en": [
@@ -8607,13 +8576,12 @@
       "id": 451
     },
     {
-      "subject": "GK",
-      "q": "Which bank has Launched MSME Sahaj Online Loan Solution in July 2024? 2024 ? Bank of Maharashtra",
+      "q": "जुलाई 2024 में किस बैंक ने एमएसएमई सहज ऑनलाइन ऋण समाधान लॉन्च किया है?",
       "q_en": "Which bank has Launched MSME Sahaj Online Loan Solution in July 2024? 2024 ? Bank of Maharashtra",
       "options": [
-        "State Bank of India",
-        "Axis Bank",
-        "Union Bank of India",
+        "स्टेट बैंक ऑफ इंडिया",
+        "एक्सिस बैंक",
+        "यूनियन बैंक ऑफ इंडिया",
         "राजस्थान"
       ],
       "options_en": [
@@ -8627,14 +8595,13 @@
       "id": 452
     },
     {
-      "subject": "GK",
-      "q": "In which state of India was the world's longest twin-lane tunnel 'Sela Tunnel' inaugurated in March 2024? 2024 - ' ' ? Kerala",
+      "q": "In which राज्य of भारत was the world's longest twin-lane tunnel 'Sela Tunnel' inaugurated in March 2024?",
       "q_en": "In which state of India was the world's longest twin-lane tunnel 'Sela Tunnel' inaugurated in March 2024? 2024 - ' ' ? Kerala",
       "options": [
-        "Andhra Pradesh",
-        "Karnataka",
+        "आंध्र प्रदेश",
+        "कर्नाटक",
         "राजस्थान",
-        "Arunachal Pradesh"
+        "अरुणाचल प्रदेश"
       ],
       "options_en": [
         "Andhra Pradesh",
@@ -8647,14 +8614,13 @@
       "id": 453
     },
     {
-      "subject": "GK",
-      "q": "In which of the following state was Sansad Khel Mahakumbh 3.0 organised in March 2024? 2024 3.0 ? Himachal Pradesh",
+      "q": "मार्च 2024 में संसद खेल महाकुं भ 3.0 का आयोजन निम्नलिखित में से किस राज्य में किया गया था?",
       "q_en": "In which of the following state was Sansad Khel Mahakumbh 3.0 organised in March 2024? 2024 3.0 ? Himachal Pradesh",
       "options": [
-        "Andhra Pradesh",
-        "Karnataka",
-        "Rajasthan",
-        "राजस्थान"
+        "आंध्र प्रदेश",
+        "कर्नाटक",
+        "राजस्थान",
+        "गुजरात"
       ],
       "options_en": [
         "Andhra Pradesh",
@@ -8667,11 +8633,10 @@
       "id": 454
     },
     {
-      "subject": "GK",
-      "q": "In July 2024, Rohan Bopanna retired from international play,he represented India in which sport? 2024 , , ? Badminton",
+      "q": "In July 2024, Rohan Bopanna retired from international play,he represented भारत in which sport?",
       "q_en": "In July 2024, Rohan Bopanna retired from international play,he represented India in which sport? 2024 , , ? Badminton",
       "options": [
-        "Squash",
+        "स्क्वाश",
         "राजस्थान",
         "Tennis Javelin Throw",
         "गुजरात"
@@ -8687,13 +8652,12 @@
       "id": 455
     },
     {
-      "subject": "GK",
-      "q": "Where was Garuda Stambha established? ? Ashoknagar",
+      "q": "गरुड़ स्तम्भ की स्थापना कहाँ हुई थी?",
       "q_en": "Where was Garuda Stambha established? ? Ashoknagar",
       "options": [
-        "Vidisha",
-        "Burhanpur",
-        "Gwalior",
+        "विदिशा",
+        "बुरहानपुर",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -8707,13 +8671,12 @@
       "id": 456
     },
     {
-      "subject": "GK",
-      "q": "Who out of the following was the first Governor General of Bengal? ? Warren Hastings",
+      "q": "निम्नलिखित में से बंगाल के पहले गवर्नर जनरल कौन थे?",
       "q_en": "Who out of the following was the first Governor General of Bengal? ? Warren Hastings",
       "options": [
-        "William Bentick",
-        "Wellesley",
-        "Lord Mountbatten",
+        "विलियम बेंटिक",
+        "वेलेजली",
+        "लॉर्ड माउंटबेटन",
         "राजस्थान"
       ],
       "options_en": [
@@ -8727,8 +8690,7 @@
       "id": 457
     },
     {
-      "subject": "GK",
-      "q": "In which year, Unorganized Workers Social Security Act was passed? ? 2006",
+      "q": "असंगठित श्रमिक सामाजिक सुरक्षा अधिनियम किस वर्ष में पारित किया गया था?",
       "q_en": "In which year, Unorganized Workers Social Security Act was passed? ? 2006",
       "options": [
         "2006 2000",
@@ -8747,8 +8709,7 @@
       "id": 458
     },
     {
-      "subject": "GK",
-      "q": "In which year was the construction of the Rashtrapati Bhavan completed? ? 1927",
+      "q": "राष्ट्र पति भवन का निर्माण किस वर्ष पूरा हुआ था?",
       "q_en": "In which year was the construction of the Rashtrapati Bhavan completed? ? 1927",
       "options": [
         "1927 1928",
@@ -8767,14 +8728,13 @@
       "id": 459
     },
     {
-      "subject": "GK",
-      "q": "Indian Army conducted 'Parvat Prahaar' exercise in which state / UT in August 2024? 2024 / ' ' ? Puducherry",
+      "q": "Indian Army conducted 'Parvat Prahaar' exercise in which राज्य / UT in August 2024?",
       "q_en": "Indian Army conducted 'Parvat Prahaar' exercise in which state / UT in August 2024? 2024 / ' ' ? Puducherry",
       "options": [
-        "Ladakh",
-        "Rajasthan",
-        "Arunachal Pradesh",
-        "राजस्थान"
+        "लद्दाख",
+        "राजस्थान",
+        "अरुणाचल प्रदेश",
+        "गुजरात"
       ],
       "options_en": [
         "Ladakh",
@@ -8787,13 +8747,12 @@
       "id": 460
     },
     {
-      "subject": "GK",
-      "q": "Who has been appointed as the new Chairperson of UPSC in July 2024? 2024 ? Dr Manoj Soni",
+      "q": "जुलाई 2024 में यूपीएससी के नए अध्यक्ष के रूप में किसे नियुक्त किया गया है?",
       "q_en": "Who has been appointed as the new Chairperson of UPSC in July 2024? 2024 ? Dr Manoj Soni",
       "options": [
-        ". Preeti Sudan",
-        "Gurdeep Singh",
-        "Deepak Ballani",
+        "प्रीति सूदन",
+        "गुरदीप सिंह",
+        "दीपक बल्लानी",
         "राजस्थान"
       ],
       "options_en": [
@@ -8807,8 +8766,7 @@
       "id": 461
     },
     {
-      "subject": "GK",
-      "q": "As of August 2024, how Many divisions are there in Madhya Pradesh State? 2024 , ? 15",
+      "q": "अगस्त 2024 के अनुसार, मध्य प्रदेश राज्य में कितने संभाग हैं?",
       "q_en": "As of August 2024, how Many divisions are there in Madhya Pradesh State? 2024 , ? 15",
       "options": [
         "15 12",
@@ -8827,8 +8785,7 @@
       "id": 462
     },
     {
-      "subject": "GK",
-      "q": "In what year was the Reserve Bank of India established? ? 1950",
+      "q": "भारतीय रिजर्व बैंक की स्थापना किस वर्ष में हुई थी?",
       "q_en": "In what year was the Reserve Bank of India established? ? 1950",
       "options": [
         "1950 1955",
@@ -8847,8 +8804,7 @@
       "id": 463
     },
     {
-      "subject": "GK",
-      "q": "What is the atomic number of Chlorine? ? 10",
+      "q": "क्लोरीन का परमाणु क्रमांक क्या है?",
       "q_en": "What is the atomic number of Chlorine? ? 10",
       "options": [
         "10 15",
@@ -8867,8 +8823,7 @@
       "id": 464
     },
     {
-      "subject": "GK",
-      "q": "By which constitutional amendment was Puducherry made a Union Territory? ? 12th",
+      "q": "पुदुचेरी को किस संवैधानिक संशोधन द्वारा कें द्र शासित प्रदेश बनाया गया था?",
       "q_en": "By which constitutional amendment was Puducherry made a Union Territory? ? 12th",
       "options": [
         "12 13th",
@@ -8887,13 +8842,12 @@
       "id": 465
     },
     {
-      "subject": "GK",
-      "q": "Former cricketer Graham Thorpe Passes Away at 55 in August 2024, he played for which country? 2024 55 , ? Australia",
+      "q": "पूर्व क्रिके टर ग्राहम थोरपे का अगस्त 2024 में 55 वर्ष की उम्र में निधन हो गया, वह किस देश के लिए खेलते थे?",
       "q_en": "Former cricketer Graham Thorpe Passes Away at 55 in August 2024, he played for which country? 2024 55 , ? Australia",
       "options": [
-        "New Zealand",
-        "England",
-        "South Africa",
+        "न्यूजीलैंड",
+        "इंग्लैंड",
+        "दक्षिण अफ्रीका",
         "राजस्थान"
       ],
       "options_en": [
@@ -8907,13 +8861,12 @@
       "id": 466
     },
     {
-      "subject": "GK",
-      "q": "Who has been awarded the 12th Vishwa Hindi Samman at the Hindi Samvad Event in June 2024? 2024 12 ? Usha Thakur",
+      "q": "जून 2024 में हिंदी संवाद कार्यक्रम में किसे 12वें विश्व हिंदी सम्मान से सम्मानित किया गया है?",
       "q_en": "Who has been awarded the 12th Vishwa Hindi Samman at the Hindi Samvad Event in June 2024? 2024 12 ? Usha Thakur",
       "options": [
-        "Kiran Desai",
+        "किरण देसाई खुशवंत सिंह",
         "राजस्थान",
-        "Khushwant Singh Arundhati Roy",
+        "राजस्थान",
         "गुजरात"
       ],
       "options_en": [
@@ -8927,13 +8880,12 @@
       "id": 467
     },
     {
-      "subject": "GK",
-      "q": "Who took oath as judicial member of Lokpal in March 2024? 2024 ? Sanjiv Khanna",
+      "q": "मार्च 2024 में लोकपाल के न्यायिक सदस्य के रूप में किसने शपथ ली?",
       "q_en": "Who took oath as judicial member of Lokpal in March 2024? 2024 ? Sanjiv Khanna",
       "options": [
-        "Bhushan Ramkrishna Gavai",
-        "Rituraj Awasthi",
-        "Aniruddha Bose",
+        "भूषण रामकृ ष्ण गवई",
+        "ऋतुराज अवस्थी",
+        "अनिरुद्ध बोस",
         "राजस्थान"
       ],
       "options_en": [
@@ -8947,13 +8899,12 @@
       "id": 468
     },
     {
-      "subject": "GK",
-      "q": "Who took the charge as the Commandant of National Defense Academy in May 2024 ? 2024 ? Gurcharan Singh",
+      "q": "मई 2024 में राष्ट्रीय रक्षा अकादमी के कमांडेंट के रूप में किसने पदभार ग्रहण किया?",
       "q_en": "Who took the charge as the Commandant of National Defense Academy in May 2024 ? 2024 ? Gurcharan Singh",
       "options": [
-        "Ajay Bhanatagar",
-        "Sanjay Mukherjee",
-        "Nalin Prabhat",
+        "अजय भनाटागर",
+        "संजय मुखर्जी",
+        "नलिन प्रभात",
         "राजस्थान"
       ],
       "options_en": [
@@ -8967,14 +8918,13 @@
       "id": 469
     },
     {
-      "subject": "GK",
-      "q": "In which of the following state was India's first small scale LNG unit inaugurated in March 2024? 2024 ? Andhra Pradesh",
+      "q": "मार्च 2024 में भारत की पहली लघु स्तरीय एलएनजी इकाई का उद् घाटन निम्नलिखित में से किस राज्य में किया गया?",
       "q_en": "In which of the following state was India's first small scale LNG unit inaugurated in March 2024? 2024 ? Andhra Pradesh",
       "options": [
+        "गुजरात",
+        "गुजरात",
         "राजस्थान",
-        "Karnataka Madhya Pradesh",
-        "Rajasthan",
-        "गुजरात"
+        "महाराष्ट्र"
       ],
       "options_en": [
         "Gujarat",
@@ -8987,8 +8937,7 @@
       "id": 470
     },
     {
-      "subject": "GK",
-      "q": "TRAI has issued recommendations on 'Use of Embedded SIM for Machine-to-Machine Communication', when was TRAI established? TRAI ' - - ' ' , TRAI ? 2002",
+      "q": "TRAI ने 'मशीन-टू -मशीन' संचार के लिए एं बेडेड सिम के उपयोग' पर सिफारिशें जारी की हैं, TRAI की स्थापना कब हुई थी?",
       "q_en": "TRAI has issued recommendations on 'Use of Embedded SIM for Machine-to-Machine Communication', when was TRAI established? TRAI ' - - ' ' , TRAI ? 2002",
       "options": [
         "2002 2007",
@@ -9007,13 +8956,12 @@
       "id": 471
     },
     {
-      "subject": "GK",
-      "q": "In March 2024, who has been appointed as the Group President of 'One Kotak' by Kotak Mahindra Bank? 2024 , ' ' ? Vikram Singh",
+      "q": "मार्च 2024 में, कोटक महिंद्रा बैंक द्वारा 'वन कोटक' का समूह अध्यक्ष किसे नियुक्त किया गया है?",
       "q_en": "In March 2024, who has been appointed as the Group President of 'One Kotak' by Kotak Mahindra Bank? 2024 , ' ' ? Vikram Singh",
       "options": [
-        "Vijay Anand",
-        "Jaideep Hansraj",
-        "Ashwini Kumar",
+        "विजय आनंद",
+        "जयदीप हंसराज",
+        "अश्विनी कु मार",
         "राजस्थान"
       ],
       "options_en": [
@@ -9027,13 +8975,12 @@
       "id": 472
     },
     {
-      "subject": "GK",
-      "q": "Which Union Minister launched the credit assistance program for Jan Aushadhi Kendras in March 2024? 2024 ?",
+      "q": "मार्च 2024 में किस कें द्रीय मंत्री ने जन औषधि कें द्रों के लिए ऋण सहायता कार्यक्रम शुरू किया? डॉ. मनसुख मंडाविया",
       "q_en": "Which Union Minister launched the credit assistance program for Jan Aushadhi Kendras in March 2024? 2024 ?",
       "options": [
         "Dr. Mansukh Mandaviya . Amit shah",
-        "Suresh Prabhu",
-        "Giriraj Singh",
+        "सुरे श प्रभु",
+        "गिरिराज सिंह",
         "राजस्थान"
       ],
       "options_en": [
@@ -9047,13 +8994,12 @@
       "id": 473
     },
     {
-      "subject": "GK",
-      "q": "Which of the following is the largest public sector bank of India? ?",
+      "q": "निम्नलिखित में से भारत का सबसे बड़ा सार्वजनिक बैंक कौन सा है? इंडियन बैंक",
       "q_en": "Which of the following is the largest public sector bank of India? ?",
       "options": [
         "Indian Bank Allahabad Bank",
-        "State Bank of India",
-        "Punjab National Bank",
+        "स्टेट बैंक ऑफ इंडिया",
+        "पंजाब नेशनल बैंक",
         "राजस्थान"
       ],
       "options_en": [
@@ -9067,13 +9013,12 @@
       "id": 474
     },
     {
-      "subject": "GK",
-      "q": "Do or Die' slogan was given during which National movement? ’ ? Non-Corporation movement",
+      "q": "करो या मरो ’का नारा किस राष्ट्रीय आंदोलन के दौरान दिया गया था?",
       "q_en": "Do or Die' slogan was given during which National movement? ’ ? Non-Corporation movement",
       "options": [
-        "Civil Disobidience movement",
-        "Quit India Movement",
-        "Revolt of 1857",
+        "नागरिक अवज्ञा आंदोलन",
+        "भारत छोड़ो आंदोलन",
+        "1857 का विद्रोह",
         "1857"
       ],
       "options_en": [
@@ -9087,13 +9032,12 @@
       "id": 475
     },
     {
-      "subject": "GK",
-      "q": "In July 2024, which Power Generation Company has Launched ‘Ghar Ghar Solar’ Initiative in Uttar Pradesh? 2024 , ' - ' ? Adani Power",
+      "q": "जुलाई 2024 में, किस विद्युत उत्पादन कं पनी ने उत्तर प्रदेश में 'घर-घर सोलर' पहल शुरू की है?",
       "q_en": "In July 2024, which Power Generation Company has Launched ‘Ghar Ghar Solar’ Initiative in Uttar Pradesh? 2024 , ' - ' ? Adani Power",
       "options": [
-        "Reliance Power",
-        "Tata Power",
-        "Jaiprakash Power",
+        "रिलायंस पावर",
+        "टाटा पावर",
+        "जयप्रकाश पावर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9107,13 +9051,12 @@
       "id": 476
     },
     {
-      "subject": "GK",
-      "q": "Who has been appointed as the new chairman of Staff Selection Commission in May 2024? 2024 ? Sandeep Batra",
+      "q": "मई 2024 में कर्मचारी चयन आयोग के नए अध्यक्ष के रूप में किसे नियुक्त किया गया है?",
       "q_en": "Who has been appointed as the new chairman of Staff Selection Commission in May 2024? 2024 ? Sandeep Batra",
       "options": [
-        "Rakesh Ranjan",
-        "Rishiraj Singh Sisodia",
-        "Varsha L Kasturkar",
+        "राके श रं जन",
+        "ऋषिराज सिंह सिसोदिया",
+        "वर्षा एल कस्तूरकर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9127,13 +9070,12 @@
       "id": 477
     },
     {
-      "subject": "GK",
-      "q": "In March 2024, which app was launched to make the election process easier for the disabled? 2024 ? ‘VIJAY'",
+      "q": "मार्च 2024 में दिव्यांगों के लिए चुनाव प्रक्रिया को आसान बनाने के लिए कौन सा ऐप लॉन्च किया गया था?",
       "q_en": "In March 2024, which app was launched to make the election process easier for the disabled? 2024 ? ‘VIJAY'",
       "options": [
-        "' ' 'VIKASH'",
-        "' ' ‘SAKSHAM'",
-        "' ' 'VISHWAS'",
+        "'विकास'",
+        "'सक्षम'",
+        "'विश्वास'",
         "'"
       ],
       "options_en": [
@@ -9147,13 +9089,12 @@
       "id": 478
     },
     {
-      "subject": "GK",
-      "q": "Where was the 4th Shanghai Cooperation Organization Startup Forum organized in March 2024? 2024 ? Dubai",
+      "q": "मार्च 2024 में चौथा शंघाई सहयोग संगठन स्टार्टअप फोरम कहाँ आयोजित किया गया था?",
       "q_en": "Where was the 4th Shanghai Cooperation Organization Startup Forum organized in March 2024? 2024 ? Dubai",
       "options": [
-        "Dhaka",
-        "New Delhi",
-        "Paris",
+        "ढाका",
+        "नई दिल्ली",
+        "पेरिस",
         "राजस्थान"
       ],
       "options_en": [
@@ -9167,12 +9108,11 @@
       "id": 479
     },
     {
-      "subject": "GK",
-      "q": "Which player holds the record for the fastest century in T20 International cricket history? T20 ? S Wickramasekara",
+      "q": "T20 अंतर्राष्ट्रीय क्रिके ट इतिहास में सबसे तेज़ शतक का रिकॉर्ड किस खिलाड़ी ने बनाया?",
       "q_en": "Which player holds the record for the fastest century in T20 International cricket history? T20 ? S Wickramasekara",
       "options": [
-        "Jan Nicole Lofty-Eaton",
-        "- S Periyalwar",
+        "जान निकोल लॉफ्टी-ईटन",
+        "एस पेरियालवार रोहित शर्मा",
         "राजस्थान",
         "Rohit Sharma"
       ],
@@ -9187,13 +9127,12 @@
       "id": 480
     },
     {
-      "subject": "GK",
-      "q": "Leo Varadkar was the Prime Minister of which country, who resigned in March 2024? , 2024 ? Ireland",
+      "q": "लियो वराडकर किस देश के प्रधान मंत्री थे, जिन्होंने मार्च 2024 में इस्तीफा दे दिया?",
       "q_en": "Leo Varadkar was the Prime Minister of which country, who resigned in March 2024? , 2024 ? Ireland",
       "options": [
-        "Singapore",
-        "Portugal",
-        "Spain",
+        "सिंगापुर",
+        "पुर्तगाल",
+        "स्पेन",
         "राजस्थान"
       ],
       "options_en": [
@@ -9207,14 +9146,13 @@
       "id": 481
     },
     {
-      "subject": "GK",
-      "q": "When is the foundation day of Madhya Pradesh celebrated? ? 1 December",
+      "q": "मध्यप्रदेश का स्थापना दिवस कब मनाया जाता है?",
       "q_en": "When is the foundation day of Madhya Pradesh celebrated? ? 1 December",
       "options": [
-        "1 August",
-        "1 October",
-        "1 November",
-        "1"
+        "1 अगस्त",
+        "1 अक्टू बर",
+        "1 नवंबर शिकायती प्रश्न देखें",
+        "हमेशा 1"
       ],
       "options_en": [
         "1 August",
@@ -9227,8 +9165,7 @@
       "id": 482
     },
     {
-      "subject": "GK",
-      "q": "What is the playing time for the short duration of the National Anthem of India? ? 59 seconds",
+      "q": "भारत के राष्ट्र गान के संक्षिप्‍त संस्‍करण को चलाने की अवधि क्या है?",
       "q_en": "What is the playing time for the short duration of the National Anthem of India? ? 59 seconds",
       "options": [
         "59 40 seconds",
@@ -9247,8 +9184,7 @@
       "id": 483
     },
     {
-      "subject": "GK",
-      "q": "In which year did Sher Shah Suri defeated Humayun and took over the Mughal empire? ? 1525",
+      "q": "शेरशाह सूरी ने हुमायूँ को किस वर्ष पराजित कर मुग़ल साम्राज्य पर अधिकार कर लिया था?",
       "q_en": "In which year did Sher Shah Suri defeated Humayun and took over the Mughal empire? ? 1525",
       "options": [
         "1525 1532",
@@ -9267,13 +9203,12 @@
       "id": 484
     },
     {
-      "subject": "GK",
-      "q": "Under whose reign was the Konark Sun Temple built? ? King Narasimhadeva-I",
+      "q": "कोणार्क का सूर्य मंदिर किसके शासन काल में बनवाया गया था?",
       "q_en": "Under whose reign was the Konark Sun Temple built? ? King Narasimhadeva-I",
       "options": [
         "-I King Vairisimha",
-        "King Vikramaditya",
-        "King Pulakeshin I",
+        "राजा विक्रमादित्य",
+        "राजा पुलके शिन I",
         "I"
       ],
       "options_en": [
@@ -9287,8 +9222,7 @@
       "id": 485
     },
     {
-      "subject": "GK",
-      "q": "When does Goa Statehood Day celebrated every year? ? 29 May",
+      "q": "गोवा राज्य दिवस प्रतिवर्ष कब मनाया जाता है?",
       "q_en": "When does Goa Statehood Day celebrated every year? ? 29 May",
       "options": [
         "29 28 May",
@@ -9307,13 +9241,12 @@
       "id": 486
     },
     {
-      "subject": "GK",
-      "q": "University of Tokyo inaugurated the world’s highest observatory in which country in May 2024? 2024 ? Chile",
+      "q": "मई 2024 में टोक्यो विश्वविद्यालय ने किस देश में विश्व की सबसे ऊं ची वेधशाला का उद् घाटन किया?",
       "q_en": "University of Tokyo inaugurated the world’s highest observatory in which country in May 2024? 2024 ? Chile",
       "options": [
-        "Russia",
-        "Mongolia",
-        "Netherlands",
+        "रूस",
+        "मंगोलिया",
+        "नीदरलैंड",
         "राजस्थान"
       ],
       "options_en": [
@@ -9327,13 +9260,12 @@
       "id": 487
     },
     {
-      "subject": "GK",
-      "q": "Who has been appointed as the new Ambassador of India to Russia in March 2024? 2024 , ? Vinay Kumar",
+      "q": "मार्च 2024 में रूस में, भारत के नए राजदू त के रूप में किसे नियुक्त किया गया है?",
       "q_en": "Who has been appointed as the new Ambassador of India to Russia in March 2024? 2024 , ? Vinay Kumar",
       "options": [
-        "Sujit Banerjee",
-        "Vipul Kumar",
-        "R K Aggarwal",
+        "सुजीत बनर्जी",
+        "विपुल कु मार",
+        "आर के अग्रवाल",
         "राजस्थान"
       ],
       "options_en": [
@@ -9347,13 +9279,12 @@
       "id": 488
     },
     {
-      "subject": "GK",
-      "q": "The 8th BRICS Industry Ministers Meeting was chaired by which country in August 2024 ? 2024 8 ? Russia",
+      "q": "अगस्त 2024 में 8वीं ब्रिक्स उद्योग मंत्रियों की बैठक की अध्यक्षता किस देश द्वारा की गई?",
       "q_en": "The 8th BRICS Industry Ministers Meeting was chaired by which country in August 2024 ? 2024 8 ? Russia",
       "options": [
-        "India",
-        "China",
-        "Egypt",
+        "भारत",
+        "चीन",
+        "मिस्र",
         "राजस्थान"
       ],
       "options_en": [
@@ -9367,13 +9298,12 @@
       "id": 489
     },
     {
-      "subject": "GK",
-      "q": "Vijayraghavgarh Fort is located in which of the following district of Madhya Pradesh? ? Indore",
+      "q": "विजयराघवगढ़ किला निम्नलिखित में से मध्य प्रदेश के किस जिले में स्थित है?",
       "q_en": "Vijayraghavgarh Fort is located in which of the following district of Madhya Pradesh? ? Indore",
       "options": [
-        "Sagar",
-        "Katni",
-        "Gwalior",
+        "सागर",
+        "कटनी",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9387,13 +9317,12 @@
       "id": 490
     },
     {
-      "subject": "GK",
-      "q": "Which of the following is the Ex-Officio Chairperson of the NITI Aayog? ? Chief Justice of India",
+      "q": "निम्नलिखित में से कौन नीति आयोग का पदेन अध्यक्ष है?",
       "q_en": "Which of the following is the Ex-Officio Chairperson of the NITI Aayog? ? Chief Justice of India",
       "options": [
-        "Home Minister",
-        "Prime Minister",
-        "Attorney general of India",
+        "गृहमंत्री",
+        "प्रधानमंत्री",
+        "भारत के महान्यायवादी",
         "राजस्थान"
       ],
       "options_en": [
@@ -9407,8 +9336,7 @@
       "id": 491
     },
     {
-      "subject": "GK",
-      "q": "In which year Union Budget was Zero-Budget Natural Farming mentioned for the first time? ? 2017",
+      "q": "किस वर्ष के के न्द्रीय बजट में जीरो बजट प्राकृ तिक खेती पहली बार दर्शाया गया था?",
       "q_en": "In which year Union Budget was Zero-Budget Natural Farming mentioned for the first time? ? 2017",
       "options": [
         "2017",
@@ -9427,13 +9355,12 @@
       "id": 492
     },
     {
-      "subject": "GK",
-      "q": "From which of the following texts do we get the phrase “Satyamev Jayate”? “ ” ? Kena Upanishad",
+      "q": "निम्नलिखित में से किस ग्रंथ से हमें सत्यमेव “जयते वाक्यांश” प्राप्त हुआ है?",
       "q_en": "From which of the following texts do we get the phrase “Satyamev Jayate”? “ ” ? Kena Upanishad",
       "options": [
-        "Mundaka Upanishad",
-        "Chandogya Upanishad",
-        "Maitri Upanishad",
+        "मुण्डक उपनिषद",
+        "छान्दोग्य उपनिषद",
+        "मैत्री उपनिषद",
         "राजस्थान"
       ],
       "options_en": [
@@ -9447,8 +9374,7 @@
       "id": 493
     },
     {
-      "subject": "GK",
-      "q": "In which of the following years had the UN adopted the UN Guidelines for Consumer Protection? - ? 1983",
+      "q": "संयुक्त राष्ट्र ने किस वर्ष में उपभोक्ता सुरक्षा के लिए संयुक्त राष्ट्र के दिशा-निर्देशों को अपनाया?",
       "q_en": "In which of the following years had the UN adopted the UN Guidelines for Consumer Protection? - ? 1983",
       "options": [
         "1983 1984",
@@ -9467,13 +9393,12 @@
       "id": 494
     },
     {
-      "subject": "GK",
-      "q": "Kolkata Knight Riders won the IPL 2024 title, defeating which team in the final? 2024 ?",
+      "q": "कोलकाता नाइट राइडर्स ने फाइनल में किस टीम को हराकर आईपीएल 2024 का खिताब जीता? सनराइजर्स हैदराबाद",
       "q_en": "Kolkata Knight Riders won the IPL 2024 title, defeating which team in the final? 2024 ?",
       "options": [
         "Sunrisers Hyderabad Rajasthan Royals",
-        "Kings XI Punjab",
-        "Royal Challengers Bangalore",
+        "किं ग्स इलेवन पंजाब",
+        "रॉयल चैलेंजर्स बैंगलोर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9487,14 +9412,13 @@
       "id": 495
     },
     {
-      "subject": "GK",
-      "q": "Which state’s government has launched Pirul Lao Paise Pao Campaign in May 2024 ? 2024 ? Jharkhand",
+      "q": "किस राज्य की सरकार ने मई 2024 में पिरूल लाओ पैसे पाओ अभियान शुरू किया है?",
       "q_en": "Which state’s government has launched Pirul Lao Paise Pao Campaign in May 2024 ? 2024 ? Jharkhand",
       "options": [
-        "Madhya Pradesh",
-        "Uttarakhand",
-        "Rajasthan",
-        "राजस्थान"
+        "मध्य प्रदेश",
+        "उत्तराखंड",
+        "राजस्थान",
+        "गुजरात"
       ],
       "options_en": [
         "Madhya Pradesh",
@@ -9507,13 +9431,12 @@
       "id": 496
     },
     {
-      "subject": "GK",
-      "q": "Joint military Exercise ‘Shakti’ between the Indian and the French forces was held in which State in May 2024? 2024 ‘ ’ ? Rajasthan",
+      "q": "मई 2024 में भारतीय और फ्रांसीसी सेनाओं के बीच संयुक्त सैन्य अभ्यास ‘शक्ति’ किस राज्य में आयोजित किया गया था?",
       "q_en": "Joint military Exercise ‘Shakti’ between the Indian and the French forces was held in which State in May 2024? 2024 ‘ ’ ? Rajasthan",
       "options": [
-        "Manipur",
-        "Meghalaya",
-        "Maharashtra",
+        "मणिपुर",
+        "मेघालय",
+        "महाराष्ट्र",
         "राजस्थान"
       ],
       "options_en": [
@@ -9527,13 +9450,12 @@
       "id": 497
     },
     {
-      "subject": "GK",
-      "q": "Which team/football club won the 2023-24 UEFA Europa League in May 2024? 2024 / 2023-24 ? Atalanta BC",
+      "q": "Which team/football club won the 2023-24 UEFA Europa League in May 2024?",
       "q_en": "Which team/football club won the 2023-24 UEFA Europa League in May 2024? 2024 / 2023-24 ? Atalanta BC",
       "options": [
-        "Bayer Leverkusen",
-        "Union Berlin",
-        "SC Freiburg",
+        "बेयर लीवरकु सेन",
+        "यूनियन बर्लिन",
+        "एससी फ्रीबर्ग",
         "राजस्थान"
       ],
       "options_en": [
@@ -9547,13 +9469,12 @@
       "id": 498
     },
     {
-      "subject": "GK",
-      "q": "According to the World Happiness Report 2024, which is the happiest country in the world? 2024 , ? Singapore",
+      "q": "वर्ल्ड हैप्पीनेस रिपोर्ट 2024 के अनुसार, विश्‍व का सबसे खुशहाल देश कौन सा है?",
       "q_en": "According to the World Happiness Report 2024, which is the happiest country in the world? 2024 , ? Singapore",
       "options": [
-        "Netherland",
-        "Finland",
-        "Iceland",
+        "नीदरलैंड",
+        "फिनलैंड",
+        "आइसलैंड",
         "राजस्थान"
       ],
       "options_en": [
@@ -9567,14 +9488,13 @@
       "id": 499
     },
     {
-      "subject": "GK",
-      "q": "Which of the following district of Madhya Pradesh is the Birth place of Babasaheb Ambedkar? ? Gwalior",
+      "q": "निम्नलिखित में से कौन-सा district of मध्य प्रदेश is the Birth place of Babasaheb Ambedkar?",
       "q_en": "Which of the following district of Madhya Pradesh is the Birth place of Babasaheb Ambedkar? ? Gwalior",
       "options": [
-        "Sagar",
-        "Betul",
+        "सागर",
+        "बैतूल",
         "राजस्थान",
-        "Indore"
+        "इंदौर"
       ],
       "options_en": [
         "Sagar",
@@ -9587,13 +9507,12 @@
       "id": 500
     },
     {
-      "subject": "GK",
-      "q": "Kishore Kumar belongs to which of the following district of Madhya Pradesh? ? Indore",
+      "q": "किशोर कु मार मध्य प्रदेश के निम्नलिखित में से किस जिले से है?",
       "q_en": "Kishore Kumar belongs to which of the following district of Madhya Pradesh? ? Indore",
       "options": [
-        "Khandwa",
-        "Katni",
-        "Gwalior",
+        "खण्डवा",
+        "कटनी",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9607,13 +9526,12 @@
       "id": 501
     },
     {
-      "subject": "GK",
-      "q": "Singaji Thermal Power Project is located in which of the following district of Madhya Pradesh? ? Indore",
+      "q": "सिंगाजी थर्मल पावर परियोजना मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Singaji Thermal Power Project is located in which of the following district of Madhya Pradesh? ? Indore",
       "options": [
-        "Sagar",
-        "Khandwa",
-        "Gwalior",
+        "सागर",
+        "खण्डवा",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9627,8 +9545,7 @@
       "id": 502
     },
     {
-      "subject": "GK",
-      "q": "Tropic of Cancer, also known as Kark Rekha passes through ________of Madhya Pradesh. , ____ 8 districts",
+      "q": "Tropic of Cancer, also known as Kark Rekha passes through ________of मध्य प्रदेश. , ____ 8 districts",
       "q_en": "Tropic of Cancer, also known as Kark Rekha passes through ________of Madhya Pradesh. , ____ 8 districts",
       "options": [
         "8 10 districts",
@@ -9647,13 +9564,12 @@
       "id": 503
     },
     {
-      "subject": "GK",
-      "q": "In which state is the Kaziranga National Park situated? ? Odisha",
+      "q": "काजीरं गा राष्ट्रीय उद्यान किस राज्य में स्थित है?",
       "q_en": "In which state is the Kaziranga National Park situated? ? Odisha",
       "options": [
-        "West Bengal",
-        "Assam",
-        "Arunachal Pradesh",
+        "पश्चिम बंगाल",
+        "असम",
+        "अरुणाचल प्रदेश",
         "राजस्थान"
       ],
       "options_en": [
@@ -9667,13 +9583,12 @@
       "id": 504
     },
     {
-      "subject": "GK",
-      "q": "Which of the following dynasties does Mihir Bhoja belong to? ? Palas",
+      "q": "मिहिर भोज निम्नलिखित में से किस राजवंश से संबंधित हैं?",
       "q_en": "Which of the following dynasties does Mihir Bhoja belong to? ? Palas",
       "options": [
-        "Senas",
-        "Pratiharas",
-        "Rashtrakutas",
+        "सेन",
+        "प्रतिहार",
+        "राष्ट्र कु ट",
         "राजस्थान"
       ],
       "options_en": [
@@ -9687,14 +9602,13 @@
       "id": 505
     },
     {
-      "subject": "GK",
-      "q": "Who out of the following Mughal emperors was also called the Architect King? ? Aurangazeb",
+      "q": "Who out of the following Mughal emperors was also called the Architect King?",
       "q_en": "Who out of the following Mughal emperors was also called the Architect King? ? Aurangazeb",
       "options": [
-        "Akbar",
+        "अकबर",
         "Jehangir",
         "राजस्थान",
-        "Shah Jahan"
+        "शाहजहाँ"
       ],
       "options_en": [
         "Akbar",
@@ -9707,13 +9621,12 @@
       "id": 506
     },
     {
-      "subject": "GK",
-      "q": "Which country won the Men’s AFC U-23 Asian Cup for the second time in May 2024? 2024 AFC U-23 ? Japan",
+      "q": "मई 2024 में दू सरी बार पुरुषों का AFC U-23 एशियाई कप किस देश ने जीता?",
       "q_en": "Which country won the Men’s AFC U-23 Asian Cup for the second time in May 2024? 2024 AFC U-23 ? Japan",
       "options": [
-        "United States",
-        "France",
-        "Russia",
+        "संयुक्त राज्य अमेरिका",
+        "फ्रांस",
+        "रूस",
         "राजस्थान"
       ],
       "options_en": [
@@ -9727,13 +9640,12 @@
       "id": 507
     },
     {
-      "subject": "GK",
-      "q": "Which country is to host the AFC Women’s Asian Cup 2026? 2026 ? Australia",
+      "q": "एएफसी महिला एशियाई कप 2026 की मेजबानी कौन सा देश करे गा?",
       "q_en": "Which country is to host the AFC Women’s Asian Cup 2026? 2026 ? Australia",
       "options": [
-        "Japan",
-        "United States",
-        "Germany",
+        "जापान",
+        "संयुक्त राज्य अमेरिका",
+        "जर्मनी",
         "राजस्थान"
       ],
       "options_en": [
@@ -9747,13 +9659,12 @@
       "id": 508
     },
     {
-      "subject": "GK",
-      "q": "Who has been named as the new Ambassador of India to Myanmar, in March 2024? 2024 ? Abhay Thakur",
+      "q": "मार्च 2024 में म्यांमार में भारत के नए राजदू त के रूप में किसे नामित किया गया है?",
       "q_en": "Who has been named as the new Ambassador of India to Myanmar, in March 2024? 2024 ? Abhay Thakur",
       "options": [
-        "Vinay Saxena",
-        "Jatin tiwari",
-        "Syed Akbaruddin",
+        "विनय सक्सैना",
+        "जतिन तिवारी",
+        "सैयद अकबरुद्दीन",
         "राजस्थान"
       ],
       "options_en": [
@@ -9767,13 +9678,12 @@
       "id": 509
     },
     {
-      "subject": "GK",
-      "q": "Which state police launched the digital platform 'Trinetra' App 2.0 in March 2024? 2024 ' ' 2.0 ? Himachal Pradesh",
+      "q": "मार्च 2024 में किस राज्य की पुलिस ने डिजिटल प्लेटफ़ॉर्म 'त्रिनेत्र' ऐप 2.0 लॉन्च किया?",
       "q_en": "Which state police launched the digital platform 'Trinetra' App 2.0 in March 2024? 2024 ' ' 2.0 ? Himachal Pradesh",
       "options": [
-        "Karnataka",
-        "Uttar Pradesh",
-        "Haryana",
+        "कर्नाटक",
+        "उत्तर प्रदेश",
+        "हरियाणा",
         "राजस्थान"
       ],
       "options_en": [
@@ -9787,13 +9697,12 @@
       "id": 510
     },
     {
-      "subject": "GK",
-      "q": "Which of the following insurance company launches 'Sampoorna Raksha Promise' product in August 2024? 2024 ' ' ? Tata AIA Life Insurance",
+      "q": "निम्नलिखित में से किस बीमा कं पनी ने अगस्त 2024 में 'संपूर्ण रक्षा प्रॉमिस' प्रोडक्ट लॉन्च किया?",
       "q_en": "Which of the following insurance company launches 'Sampoorna Raksha Promise' product in August 2024? 2024 ' ' ? Tata AIA Life Insurance",
       "options": [
-        "Life Insurance Corporation of India",
-        "Bajaj Allianz Life Insurance",
-        "Kotak Mahindra Life Insurance",
+        "भारतीय जीवन बीमा निगम",
+        "बजाज आलियांज लाइफ इंश्योरें स",
+        "कोटक महिंद्रा लाइफ इंश्योरें स",
         "राजस्थान"
       ],
       "options_en": [
@@ -9807,13 +9716,12 @@
       "id": 511
     },
     {
-      "subject": "GK",
-      "q": "Pashupatinath temple is situated in which of the following districts of Madhya Pradesh? ? Indore",
+      "q": "पशुपतिनाथ मंदिर मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Pashupatinath temple is situated in which of the following districts of Madhya Pradesh? ? Indore",
       "options": [
-        "Sagar",
-        "Mandsaur",
-        "Gwalior",
+        "सागर",
+        "मन्दसौर",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9827,8 +9735,7 @@
       "id": 512
     },
     {
-      "subject": "GK",
-      "q": "Kargil Vijay Diwas is observed every year on? ? July 26",
+      "q": "कारगिल विजय दिवस प्रत्येक वर्ष कब मनाया जाता है?",
       "q_en": "Kargil Vijay Diwas is observed every year on? ? July 26",
       "options": [
         "26 July 27",
@@ -9847,7 +9754,6 @@
       "id": 513
     },
     {
-      "subject": "GK",
       "q": "The draft of the First Five Year Plan and then the actual Plan Document, released in December ________. , ________ 1951",
       "q_en": "The draft of the First Five Year Plan and then the actual Plan Document, released in December ________. , ________ 1951",
       "options": [
@@ -9867,13 +9773,12 @@
       "id": 514
     },
     {
-      "subject": "GK",
-      "q": "Which country unveiled a AI-generated foreign ministry spokesperson in May 2024? 2024 AI- ? Ukraine",
+      "q": "मई 2024 में किस देश ने AI-जनित विदेश मंत्रालय के प्रवक्ता का अनावरण किया?",
       "q_en": "Which country unveiled a AI-generated foreign ministry spokesperson in May 2024? 2024 AI- ? Ukraine",
       "options": [
-        "Russia",
-        "United States",
-        "Germany",
+        "रूस",
+        "संयुक्त राज्य अमेरिका",
+        "जर्मनी",
         "राजस्थान"
       ],
       "options_en": [
@@ -9887,13 +9792,12 @@
       "id": 515
     },
     {
-      "subject": "GK",
-      "q": "Shahbaz Nadeem has announced his retirement in March 2024. He is associated with which of the following sports? 2024 ? Hockey",
+      "q": "शाहबाज नदीम ने मार्च 2024 में अपने संन्‍यास लेने की घोषणा की है। वह निम्नलिखित में से किस खेल से जुड़े हैं?",
       "q_en": "Shahbaz Nadeem has announced his retirement in March 2024. He is associated with which of the following sports? 2024 ? Hockey",
       "options": [
-        "Football",
-        "Cricket",
-        "Kabaddi",
+        "फु टबॉल",
+        "क्रिके ट",
+        "कबड्डी",
         "राजस्थान"
       ],
       "options_en": [
@@ -9907,13 +9811,12 @@
       "id": 516
     },
     {
-      "subject": "GK",
-      "q": "India's first automobile in-plant railway siding project was inaugurated, in which of the following states, in March 2024? 2024 - ? Andhra Pradesh",
+      "q": "मार्च 2024 में भारत की पहली ऑटोमोबाइल इन-प्लांट रे लवे साइडिंग परियोजना का उद् घाटन निम्नलिखित में से किस राज्य में किया गया?",
       "q_en": "India's first automobile in-plant railway siding project was inaugurated, in which of the following states, in March 2024? 2024 - ? Andhra Pradesh",
       "options": [
-        "Kerala",
-        "Gujarat",
-        "Karnataka",
+        "के रल",
+        "गुजरात",
+        "कर्नाटक",
         "राजस्थान"
       ],
       "options_en": [
@@ -9927,13 +9830,12 @@
       "id": 517
     },
     {
-      "subject": "GK",
-      "q": "Which of the following state’s CM has announced Subhadra scheme for women in August 2024? 2024 ? Odisha",
+      "q": "निम्नलिखित में से किस राज्य के मुख्यमंत्री ने अगस्त 2024 में महिलाओं के लिए सुभद्रा योजना की घोषणा की है?",
       "q_en": "Which of the following state’s CM has announced Subhadra scheme for women in August 2024? 2024 ? Odisha",
       "options": [
-        "Haryana",
-        "Kerala",
-        "Sikkim",
+        "हरियाणा",
+        "के रल",
+        "सिक्किम",
         "राजस्थान"
       ],
       "options_en": [
@@ -9947,13 +9849,12 @@
       "id": 518
     },
     {
-      "subject": "GK",
-      "q": "The historic town of Orchha, nestled on the banks of river Betwa is fall under which of the following districts of Madhya Pradesh? ? Niwari",
+      "q": "बेतवा नदी के तट पर बसा ऐतिहासिक शहर ओरछा मध्य प्रदेश के निम्नलिखित में से किस जिले के अंतर्गत आता है?",
       "q_en": "The historic town of Orchha, nestled on the banks of river Betwa is fall under which of the following districts of Madhya Pradesh? ? Niwari",
       "options": [
-        "Sagar",
-        "Katni",
-        "Gwalior",
+        "सागर",
+        "कटनी",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9967,13 +9868,12 @@
       "id": 519
     },
     {
-      "subject": "GK",
-      "q": "Ajaygarh fort is located in which of the following districts of Madhya Pradesh? ? Panna",
+      "q": "अजयगढ़ किला मध्य प्रदेश के निम्नलिखित में से किस जिले में स्थित है?",
       "q_en": "Ajaygarh fort is located in which of the following districts of Madhya Pradesh? ? Panna",
       "options": [
-        "Sagar",
-        "Katni",
-        "Gwalior",
+        "सागर",
+        "कटनी",
+        "ग्वालियर",
         "राजस्थान"
       ],
       "options_en": [
@@ -9987,13 +9887,12 @@
       "id": 520
     },
     {
-      "subject": "GK",
-      "q": "Which of the following is the state fish of Madhya Pradesh? - ? Catla",
+      "q": "निम्‍न में से मध्‍यप्रदेश की राज्‍य मछली कौन-सी है?",
       "q_en": "Which of the following is the state fish of Madhya Pradesh? - ? Catla",
       "options": [
-        "Bombay duck",
-        "Mahaseer",
-        "Wallago attu",
+        "बॉम्बे डक",
+        "महासीर",
+        "वालागो अत्तु",
         "राजस्थान"
       ],
       "options_en": [
@@ -10493,7 +10392,7 @@
       "options": [
         "समुद्रगुप्त",
         "विक्रमादित्य",
-        "स्कंदगुप्त",
+        "स्कन्दगुप्त",
         "कुमारगुप्त"
       ],
       "answer": 1,
@@ -10874,7 +10773,7 @@
         "कुमारगुप्त प्रथम",
         "चंद्रगुप्त द्वितीय",
         "समुद्रगुप्त",
-        "स्कंदगुप्त"
+        "स्कन्दगुप्त"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -10986,7 +10885,7 @@
       ],
       "options": [
         "6",
-        "7",
+        "7 से अधिक",
         "8",
         "10"
       ],
@@ -11007,7 +10906,7 @@
         "अनुच्छेद 14",
         "अनुच्छेद 17",
         "अनुच्छेद 21",
-        "अनुच्छेद 25"
+        "अनुच्छे द 25"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -11023,7 +10922,7 @@
         "Australia"
       ],
       "options": [
-        "अमेरिका",
+        "यूएसए",
         "ब्रिटेन",
         "कनाडा",
         "ऑस्ट्रेलिया"
@@ -11137,7 +11036,7 @@
         "Prime Minister"
       ],
       "options": [
-        "राष्ट्रपति",
+        "राष्ट्र पति",
         "लोकसभा सदस्य",
         "दोनों सदनों के सदस्य",
         "प्रधानमंत्री"
@@ -11194,7 +11093,7 @@
         "Canada"
       ],
       "options": [
-        "अमेरिका",
+        "यूएसए",
         "आयरलैंड",
         "ब्रिटेन",
         "कनाडा"
@@ -11251,7 +11150,7 @@
         "Speaker"
       ],
       "options": [
-        "राष्ट्रपति",
+        "राष्ट्र पति",
         "प्रधानमंत्री",
         "उपराष्ट्रपति",
         "अध्यक्ष"
@@ -11272,7 +11171,7 @@
       "options": [
         "अनुच्छेद 19",
         "अनुच्छेद 21",
-        "अनुच्छेद 25",
+        "अनुच्छे द 25",
         "अनुच्छेद 29"
       ],
       "answer": 2,
@@ -11365,7 +11264,7 @@
         "Weimar Constitution of Germany"
       ],
       "options": [
-        "अमेरिका",
+        "यूएसए",
         "ब्रिटेन",
         "जर्मनी",
         "जर्मनी का वाइमर संविधान"
@@ -11443,7 +11342,7 @@
       "options": [
         "प्रधानमंत्री",
         "मुख्य न्यायाधीश",
-        "राष्ट्रपति",
+        "राष्ट्र पति",
         "उपराष्ट्रपति"
       ],
       "answer": 2,
@@ -11575,8 +11474,8 @@
       ],
       "options": [
         "प्रधानमंत्री",
-        "वित्त मंत्री",
-        "राष्ट्रपति",
+        "वित्तमंत्री",
+        "राष्ट्र पति",
         "संसद"
       ],
       "answer": 2,
@@ -11612,7 +11511,7 @@
         "France"
       ],
       "options": [
-        "अमेरिका",
+        "यूएसए",
         "सोवियत संघ",
         "ब्रिटेन",
         "फ्रांस"
@@ -11745,7 +11644,7 @@
         "Prime Minister"
       ],
       "options": [
-        "राष्ट्रपति",
+        "राष्ट्र पति",
         "उपराष्ट्रपति",
         "लोकसभा अध्यक्ष",
         "प्रधानमंत्री"
@@ -11938,7 +11837,7 @@
         "गंगा",
         "ब्रह्मपुत्र",
         "गोदावरी",
-        "सिंधु"
+        "सिन्धु"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -11974,7 +11873,7 @@
       ],
       "options": [
         "6",
-        "7",
+        "7 से अधिक",
         "8",
         "9"
       ],
@@ -11993,7 +11892,7 @@
       ],
       "options": [
         "महाराष्ट्र",
-        "मध्यप्रदेश",
+        "मध्य प्रदेश",
         "राजस्थान",
         "उत्तर प्रदेश"
       ],
@@ -12011,7 +11910,7 @@
         "Mahanadi"
       ],
       "options": [
-        "कृष्णा",
+        "कृ ष्णा",
         "कावेरी",
         "गोदावरी",
         "महानदी"
@@ -12030,7 +11929,7 @@
         "West Bengal"
       ],
       "options": [
-        "केरल",
+        "के रल",
         "असम",
         "मेघालय",
         "पश्चिम बंगाल"
@@ -12412,8 +12311,8 @@
       "options": [
         "सह्याद्रि",
         "अरावली",
-        "विंध्य",
-        "सतपुड़ा"
+        "विन्ध्य",
+        "सतपुरा"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -12470,7 +12369,7 @@
         "गोदावरी",
         "नर्मदा",
         "महानदी",
-        "कृष्णा"
+        "कृ ष्णा"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -12545,7 +12444,7 @@
       "options": [
         "तमिलनाडु",
         "महाराष्ट्र",
-        "केरल",
+        "के रल",
         "गोवा"
       ],
       "answer": 2,
@@ -12600,7 +12499,7 @@
         "Penganga"
       ],
       "options": [
-        "कृष्णा",
+        "कृ ष्णा",
         "गोदावरी",
         "वर्धा",
         "पेंगंगा"
@@ -12638,7 +12537,7 @@
         "Godavari"
       ],
       "options": [
-        "कृष्णा",
+        "कृ ष्णा",
         "कावेरी",
         "तुंगभद्रा",
         "गोदावरी"
@@ -12831,7 +12730,7 @@
         "हिमाचल प्रदेश",
         "उत्तराखंड",
         "उत्तर प्रदेश",
-        "मध्यप्रदेश"
+        "मध्य प्रदेश"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -12868,7 +12767,7 @@
       "options": [
         "गुजरात",
         "राजस्थान",
-        "मध्यप्रदेश",
+        "मध्य प्रदेश",
         "महाराष्ट्र"
       ],
       "answer": 2,
@@ -13172,7 +13071,7 @@
       "options": [
         "1962",
         "1969",
-        "1972",
+        "1972 में",
         "1975"
       ],
       "answer": 1,
@@ -13189,9 +13088,9 @@
         "1983"
       ],
       "options": [
-        "1972",
+        "1972 में",
         "1975",
-        "1980",
+        "1980 में",
         "1983"
       ],
       "answer": 1,
@@ -13246,9 +13145,9 @@
         "1998"
       ],
       "options": [
-        "1972",
+        "1972 में",
         "1974",
-        "1980",
+        "1980 में",
         "1998"
       ],
       "answer": 1,
@@ -13382,7 +13281,7 @@
         "4",
         "5",
         "6",
-        "7"
+        "7 से अधिक"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -13532,7 +13431,7 @@
       ],
       "options": [
         "न्यूयॉर्क",
-        "वाशिंगटन डीसी",
+        "वाशिंगटन डी.सी.",
         "जिनेवा",
         "पेरिस"
       ],
@@ -13799,7 +13698,7 @@
       "options": [
         "SBI",
         "NPCI",
-        "RBI",
+        "भारतीय रिजर्व बैंक स्टेट बैंक ऑफ इंडिया",
         "SEBI"
       ],
       "answer": 1,
@@ -13855,7 +13754,7 @@
       ],
       "options": [
         "चीन",
-        "USA",
+        "यूएसए",
         "ग्रेट ब्रिटेन",
         "ऑस्ट्रेलिया"
       ],
@@ -13987,7 +13886,7 @@
         "Ministry of Finance"
       ],
       "options": [
-        "RBI",
+        "भारतीय रिजर्व बैंक स्टेट बैंक ऑफ इंडिया",
         "SBI",
         "सिक्योरिटी प्रिंटिंग एंड मिंटिंग कॉर्पोरेशन",
         "वित्त मंत्रालय"
@@ -14083,7 +13982,7 @@
       ],
       "options": [
         "अफगानिस्तान",
-        "यूक्रेन",
+        "यूक्रे न",
         "इजरायल",
         "यमन"
       ],
@@ -14218,7 +14117,7 @@
         "NSE",
         "BSE",
         "DSE",
-        "CSE"
+        "सीएसई"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -14254,7 +14153,7 @@
       ],
       "options": [
         "चीन",
-        "USA",
+        "यूएसए",
         "भारत",
         "जर्मनी"
       ],
@@ -14351,7 +14250,7 @@
         "1970",
         "1973",
         "1975",
-        "1980"
+        "1980 में"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -14538,8 +14437,8 @@
         "24 March"
       ],
       "options": [
-        "1 अक्टूबर",
-        "1 नवंबर",
+        "1 अक्टू बर",
+        "1 नवंबर शिकायती प्रश्न देखें",
         "1 दिसंबर",
         "24 मार्च"
       ],
@@ -14633,7 +14532,7 @@
         "Ministry of Health"
       ],
       "options": [
-        "WHO",
+        "WHO की स्थापना कब हुई?",
         "भारतीय रेड क्रॉस सोसायटी",
         "ICMR",
         "स्वास्थ्य मंत्रालय"
@@ -14845,7 +14744,7 @@
         "महाराष्ट्र",
         "पंजाब",
         "गुजरात",
-        "मध्यप्रदेश"
+        "मध्य प्रदेश"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -15034,7 +14933,7 @@
       "options": [
         "सागर",
         "छतरपुर",
-        "टीकमगढ़",
+        "टीकमगढ़ उज्जैन",
         "दमोह"
       ],
       "answer": 1,
@@ -15127,7 +15026,7 @@
         "26 January"
       ],
       "options": [
-        "1 नवंबर",
+        "1 नवंबर शिकायती प्रश्न देखें",
         "1 दिसंबर",
         "15 नवंबर",
         "26 जनवरी"
@@ -15148,7 +15047,7 @@
       "options": [
         "मंडला",
         "अनुपुर",
-        "डिंडोरी",
+        "डिंडौरी",
         "जबलपुर"
       ],
       "answer": 1,
@@ -15166,7 +15065,7 @@
       ],
       "options": [
         "बाघ",
-        "बारासिंगा",
+        "बारहसिंगा",
         "हाथी",
         "तेंदुआ"
       ],
@@ -15223,7 +15122,7 @@
       ],
       "options": [
         "बैतूल",
-        "होशंगाबाद (नर्मदापुरम)",
+        "होशंगाबाद",
         "छिंदवाड़ा",
         "जबलपुर"
       ],
@@ -15528,7 +15427,7 @@
       "options": [
         "मंडला",
         "अनुपुर",
-        "डिंडोरी",
+        "डिंडौरी",
         "जबलपुर"
       ],
       "answer": 1,
@@ -15546,7 +15445,7 @@
       ],
       "options": [
         "उज्जैन",
-        "खंडवा",
+        "खण्डवा",
         "इंदौर",
         "बड़वानी"
       ],
@@ -15964,9 +15863,9 @@
       ],
       "options": [
         "1970",
-        "1972",
+        "1972 में",
         "1975",
-        "1980"
+        "1980 में"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -16002,7 +15901,7 @@
       ],
       "options": [
         "गोवा",
-        "केरल",
+        "के रल",
         "तमिलनाडु",
         "महाराष्ट्र"
       ],
@@ -16134,7 +16033,7 @@
         "4"
       ],
       "options": [
-        "1",
+        "हमेशा 1",
         "2",
         "3",
         "4"
@@ -16248,7 +16147,7 @@
         "Chess"
       ],
       "options": [
-        "क्रिकेट",
+        "क्रिके ट",
         "हॉकी",
         "कबड्डी",
         "शतरंज"
@@ -16419,7 +16318,7 @@
         "Russia"
       ],
       "options": [
-        "अमेरिका",
+        "यूएसए",
         "चीन",
         "कनाडा",
         "रूस"
@@ -16517,7 +16416,7 @@
         "महाराष्ट्र",
         "राजस्थान",
         "गुजरात",
-        "मध्यप्रदेश"
+        "मध्य प्रदेश"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -16629,7 +16528,7 @@
       ],
       "options": [
         "प्रणब मुखर्जी",
-        "रामनाथ कोविंद",
+        "रामनाथ कोविन्द",
         "द्रौपदी मुर्मू",
         "ए.पी.जे. अब्दुल कलाम"
       ],
@@ -17105,7 +17004,7 @@
       "options": [
         "बैडमिंटन",
         "शतरंज",
-        "क्रिकेट",
+        "क्रिके ट",
         "टेनिस"
       ],
       "answer": 1,
@@ -17597,9 +17496,9 @@
         "RBI Governor"
       ],
       "options": [
-        "वित्त मंत्री",
+        "वित्तमंत्री",
         "प्रधानमंत्री",
-        "राष्ट्रपति",
+        "राष्ट्र पति",
         "RBI गवर्नर"
       ],
       "answer": 1,
@@ -17731,9 +17630,9 @@
       ],
       "options": [
         "हिमालय",
-        "विंध्य",
+        "विन्ध्य",
         "अरावली",
-        "सतपुड़ा"
+        "सतपुरा"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -17844,7 +17743,7 @@
         "Uttar Pradesh"
       ],
       "options": [
-        "मध्यप्रदेश",
+        "मध्य प्रदेश",
         "महाराष्ट्र",
         "राजस्थान",
         "उत्तर प्रदेश"
@@ -17865,7 +17764,7 @@
       "options": [
         "गोवा",
         "तमिलनाडु",
-        "केरल",
+        "के रल",
         "महाराष्ट्र"
       ],
       "answer": 2,

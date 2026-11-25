@@ -480,6 +480,31 @@ img,table,video{max-width:100%}
   .bnav-btn span:last-child{display:none}
 }
 </style>
+
+<style id="pnst-notes-upgrade-css">
+.pnst-toolbar{display:flex;gap:7px;flex-wrap:wrap;align-items:center;margin:10px 0 12px;padding:10px;background:var(--card);border:1px solid var(--card-border);border-radius:14px}
+.pnst-search{flex:1;min-width:170px;padding:8px 12px;border-radius:10px;border:1px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.82rem;outline:none}
+.pnst-tbtn{padding:7px 11px;border-radius:9px;border:1px solid var(--card-border);background:rgba(255,255,255,.05);color:var(--tx);font-family:var(--fn);font-size:.74rem;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+.pnst-tbtn.on{background:rgba(34,197,94,.18);border-color:#22c55e;color:#22c55e}
+.pnst-prog-bar{width:100%;height:7px;background:var(--card-border);border-radius:6px;overflow:hidden;margin-top:6px}
+.pnst-prog-fill{height:100%;width:0%;background:linear-gradient(90deg,#22c55e,#06b6d4,#3b82f6);transition:width .3s ease}
+.pnst-ch-actions{margin-left:auto;display:flex;gap:6px;align-items:center}
+.pnst-mini-btn{padding:4px 8px;border-radius:7px;border:1px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx2);font-size:.68rem;font-weight:700;cursor:pointer}
+.pnst-mini-btn.done{background:rgba(34,197,94,.2);border-color:#22c55e;color:#22c55e}
+.pnst-mini-btn.bm{background:rgba(245,158,11,.2);border-color:#f59e0b;color:#f59e0b}
+.pnst-jump-strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.pnst-jump-pill{padding:5px 10px;border-radius:20px;border:1px solid var(--card-border);background:var(--card);color:var(--tx2);font-size:.7rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.pnst-jump-pill.done{border-color:#22c55e;color:#22c55e}
+.pnst-bottom-cta{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 28px}
+.pnst-cta-btn{flex:1;min-width:150px;padding:12px 16px;border-radius:12px;border:none;font-family:var(--fn2);font-size:.95rem;font-weight:700;cursor:pointer;text-decoration:none;text-align:center;color:#fff;background:linear-gradient(135deg,#2563eb,#06b6d4)}
+@media print{
+  .hdr,.pnst-toolbar,.pnst-jump-strip,.pnst-ch-actions,.pnst-bottom-cta,.tab-bar{display:none!important}
+  .ch-body{display:block!important}
+  .tab-pane{display:block!important}
+  body{background:#fff!important;color:#000!important}
+}
+</style>
+
 </head>
 <body>
 
@@ -1878,5 +1903,167 @@ window.addEventListener('load',()=>{
   document.getElementById('themeBtn').textContent=isDark?'🌙':'☀️';
 });
 </script>
+
+<script id="pnst-notes-upgrade-js">
+(function(){
+  var SUB_KEY = 'physics';
+  var SUB_LABEL = 'Physics';
+  var doneKey = 'pnst_rev_' + SUB_KEY;
+  var bmKey = 'pnst_bm_' + SUB_KEY;
+  var fontKey = 'pnst_note_font';
+  var revSet = {};
+  var bmSet = {};
+  var fontScale = 1.0;
+
+  try{ revSet = JSON.parse(localStorage.getItem(doneKey) || '{}'); }catch(e){}
+  try{ bmSet = JSON.parse(localStorage.getItem(bmKey) || '{}'); }catch(e){}
+  try{ fontScale = parseFloat(localStorage.getItem(fontKey) || '1.0') || 1.0; }catch(e){}
+
+  function saveState(){
+    try{
+      localStorage.setItem(doneKey, JSON.stringify(revSet));
+      localStorage.setItem(bmKey, JSON.stringify(bmSet));
+      localStorage.setItem(fontKey, String(fontScale));
+    }catch(e){}
+  }
+
+  function updateProgressUI(){
+    var items = Array.from(document.querySelectorAll('.ch-item'));
+    var total = items.length || 1;
+    var doneCount = items.filter(function(el){ return !!revSet[el.id]; }).length;
+    var pct = Math.round((doneCount / total) * 100);
+    var txt = document.getElementById('pnstRevCount');
+    var fill = document.getElementById('pnstRevFill');
+    if(txt) txt.textContent = 'Revised: ' + doneCount + '/' + total + ' (' + pct + '%)';
+    if(fill) fill.style.width = pct + '%';
+    document.querySelectorAll('.pnst-jump-pill').forEach(function(p){
+      var cid = p.getAttribute('data-ch');
+      p.classList.toggle('done', !!revSet[cid]);
+    });
+  }
+
+  window.pnstToggleDone = function(ev, cid){
+    if(ev) ev.stopPropagation();
+    if(revSet[cid]) delete revSet[cid]; else revSet[cid] = true;
+    saveState();
+    var btn = document.getElementById('btnDone_' + cid);
+    if(btn) btn.classList.toggle('done', !!revSet[cid]);
+    updateProgressUI();
+  };
+
+  window.pnstToggleBm = function(ev, cid){
+    if(ev) ev.stopPropagation();
+    if(bmSet[cid]) delete bmSet[cid]; else bmSet[cid] = true;
+    saveState();
+    var btn = document.getElementById('btnBm_' + cid);
+    if(btn) btn.classList.toggle('bm', !!bmSet[cid]);
+  };
+
+  window.pnstFilterNotes = function(){
+    var q = (document.getElementById('pnstNoteSearch').value || '').toLowerCase().trim();
+    var onlyBm = document.getElementById('pnstBmFilter').classList.contains('on');
+    document.querySelectorAll('.ch-item').forEach(function(item){
+      var matchText = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
+      var matchBm = !onlyBm || !!bmSet[item.id];
+      item.style.display = (matchText && matchBm) ? '' : 'none';
+    });
+  };
+
+  window.pnstToggleBmFilter = function(){
+    var b = document.getElementById('pnstBmFilter');
+    if(b) b.classList.toggle('on');
+    pnstFilterNotes();
+  };
+
+  window.pnstAdjustFont = function(delta){
+    fontScale = Math.min(1.35, Math.max(0.85, parseFloat((fontScale + delta).toFixed(2))));
+    document.querySelectorAll('.ch-body').forEach(function(b){
+      b.style.fontSize = fontScale + 'em';
+    });
+    saveState();
+  };
+
+  window.pnstSpeakCurrent = function(){
+    if(!('speechSynthesis' in window)) return;
+    if(window.speechSynthesis.speaking){ window.speechSynthesis.cancel(); return; }
+    var openCh = document.querySelector('.ch-item.open') || document.querySelector('.ch-item');
+    if(!openCh) return;
+    var activePane = openCh.querySelector('.tab-pane.active') || openCh.querySelector('.ch-body');
+    var clean = (activePane.innerText || '').replace(/\s+/g, ' ').trim().slice(0, 1400);
+    var u = new SpeechSynthesisUtterance(clean);
+    u.lang = 'hi-IN';
+    u.rate = 0.92;
+    window.speechSynthesis.speak(u);
+  };
+
+  window.addEventListener('load', function(){
+    var wrap = document.querySelector('.wrap');
+    if(!wrap) return;
+    var chapters = Array.from(document.querySelectorAll('.ch-item'));
+    var bar = document.createElement('div');
+    bar.className = 'pnst-toolbar';
+    bar.innerHTML =
+      '<input type="text" id="pnstNoteSearch" class="pnst-search" placeholder="🔍 ' + SUB_LABEL + ' topic/keyword search..." oninput="pnstFilterNotes()">' +
+      '<button type="button" id="pnstBmFilter" class="pnst-tbtn" onclick="pnstToggleBmFilter()">⭐ Bookmarked</button>' +
+      '<button type="button" class="pnst-tbtn" onclick="pnstAdjustFont(-0.1)">A-</button>' +
+      '<button type="button" class="pnst-tbtn" onclick="pnstAdjustFont(0.1)">A+</button>' +
+      '<button type="button" class="pnst-tbtn" onclick="pnstSpeakCurrent()">🔊 सुनो</button>' +
+      '<button type="button" class="pnst-tbtn" onclick="window.print()">🖨️ PDF</button>' +
+      '<div style="width:100%;display:flex;justify-content:space-between;align-items:center;font-size:.72rem;font-weight:700;color:var(--tx2)">' +
+      '<span id="pnstRevCount">Revised: 0/' + chapters.length + '</span>' +
+      '<span>PNST High-Yield Notes</span></div>' +
+      '<div class="pnst-prog-bar"><div id="pnstRevFill" class="pnst-prog-fill"></div></div>';
+
+    var strip = document.createElement('div');
+    strip.className = 'pnst-jump-strip';
+    chapters.forEach(function(ch, idx){
+      var pill = document.createElement('button');
+      pill.type = 'button';
+      pill.className = 'pnst-jump-pill';
+      pill.setAttribute('data-ch', ch.id);
+      pill.textContent = 'Ch ' + (idx + 1);
+      pill.onclick = function(){
+        if(typeof toggleCh === 'function' && !ch.classList.contains('open')) toggleCh(ch.id);
+        ch.scrollIntoView({behavior:'smooth', block:'start'});
+      };
+      strip.appendChild(pill);
+    });
+
+    var firstSec = wrap.querySelector('.sec-t');
+    if(firstSec){
+      firstSec.parentNode.insertBefore(bar, firstSec.nextSibling);
+      bar.parentNode.insertBefore(strip, bar.nextSibling);
+    } else {
+      wrap.prepend(strip);
+      wrap.prepend(bar);
+    }
+
+    chapters.forEach(function(ch){
+      var hdr = ch.querySelector('.ch-header');
+      var arr = hdr ? hdr.querySelector('.ch-arr') : null;
+      if(hdr && arr && !document.getElementById('btnDone_' + ch.id)){
+        var act = document.createElement('div');
+        act.className = 'pnst-ch-actions';
+        act.innerHTML =
+          '<button type="button" id="btnBm_' + ch.id + '" class="pnst-mini-btn' + (bmSet[ch.id]?' bm':'') + '" onclick="pnstToggleBm(event,\'' + ch.id + '\')">⭐</button>' +
+          '<button type="button" id="btnDone_' + ch.id + '" class="pnst-mini-btn' + (revSet[ch.id]?' done':'') + '" onclick="pnstToggleDone(event,\'' + ch.id + '\')">✓</button>';
+        hdr.insertBefore(act, arr);
+      }
+      var body = ch.querySelector('.ch-body');
+      if(body) body.style.fontSize = fontScale + 'em';
+    });
+
+    var cta = document.createElement('div');
+    cta.className = 'pnst-bottom-cta';
+    cta.innerHTML =
+      '<a href="index.html" class="pnst-cta-btn">🎯 ' + SUB_LABEL + ' Mock Test / Home</a>' +
+      '<button type="button" class="pnst-cta-btn" style="background:linear-gradient(135deg,#16a34a,#059669)" onclick="window.print()">📄 Print / Save Notes PDF</button>';
+    wrap.appendChild(cta);
+
+    updateProgressUI();
+  });
+})();
+</script>
+
 </body>
 </html>

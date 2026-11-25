@@ -1,7 +1,9 @@
 {
   "_info": {
     "subject": "Chemistry",
-    "total_questions": 469
+    "total_questions": 469,
+    "bilingual": true,
+    "format": "Hindi (q, options) + English (q_en, options_en)"
   },
   "questions": [
     {
@@ -257,7 +259,7 @@
       "options": [
         "रै ने निकल लिथियम ऐलुमिनियम हाइड्राइड",
         "हाइड्रोजन",
-        "सोडियम बोरोहाइड्राइड",
+        "हाइड्रोजन",
         "यशद रज"
       ],
       "options_en": [
@@ -581,7 +583,7 @@
         "राउल्ट का नियम",
         "चार्ल्स का नियम आंशिक दाब का नियम",
         "हाइड्रोजन",
-        "बॉयल का नियम"
+        "हाइड्रोजन"
       ],
       "options_en": [
         "Raoult’s law",
@@ -597,7 +599,7 @@
       "q": "किसी द्रव में गैस का विलयन किस नियम से दिया गया है?",
       "q_en": "Which law given the dissolution of a gas in a liquid?",
       "options": [
-        "चार्ल्स का नियम",
+        "चार्ल्स का नियम आंशिक दाब का नियम",
         "बॉयल का नियम",
         "राउल्ट का नियम",
         "हेनरी का नियम"
@@ -657,7 +659,7 @@
         "किया गया विद्युत कार्य = मुक्त ऊर्जा में कमी",
         "किया गया विद्युत कार्य = मुक्त ऊर्जा में वृद्धि",
         "किया गया विद्युत कार्य = उत्पादित विद्युत ऊर्जा",
-        "विद्युत ऊर्जा संरक्षण"
+        "किया गया विद्युत कार्य = मुक्त ऊर्जा में कमी"
       ],
       "options_en": [
         "Electrical work done = decrease in free energy",
@@ -676,7 +678,7 @@
         "इनके गलनांक उच्च होते है",
         "इनके आयनन विभव का मान उच्च होता है इनका घनत्व उच्च होता है",
         "हाइड्रोजन",
-        "ये परिवर्तनशील ऑक्सीकरण अवस्थाऐं प्रदर्शित कर सकते है"
+        "हाइड्रोजन"
       ],
       "options_en": [
         "They have high melting points.",
@@ -714,7 +716,7 @@
         "p-हाइड्रॉक्सीऐज़ोबेंजीन",
         "डाइफिनाइल ईथर",
         "क्लोरोबेंजीन",
-        "बेंजीन"
+        "बेन्जीन"
       ],
       "options_en": [
         "p-hydroxyazobenzene",
@@ -901,7 +903,7 @@
       "q": "किसी भी समाधान के लिए समाधान में प्रत्येक अस्थिर घटक का आंशिक वाष्प दबाव सीधे उसके _________ के समानुपाती होता है।",
       "q_en": "For any solution the partial vapour pressure of each volatile component in the solution is directly proportional to its _________-.",
       "options": [
-        "परमाणु संख्या",
+        "परमाणु क्रमांक",
         "मोल - अंश",
         "मोलैलिटी",
         "तापमान"
@@ -1015,7 +1017,7 @@
       "q": "एसीटैल्डिहाइड का अपघटन प्रतिक्रिया के किस क्रम का उदाहरण है?",
       "q_en": "The decomposition of acetaldehyde is an example of which order of a reaction?",
       "options": [
-        "0",
+        "हमेशा 0",
         "0 1",
         "1 1.5",
         "1.5 2"
@@ -1036,7 +1038,7 @@
       "options": [
         "लोहा",
         "सोना",
-        "एल्यूमिनियम",
+        "ऐलुमिनियम",
         "दिए गए विकल्पों में से कोई नहीं"
       ],
       "options_en": [
@@ -1301,7 +1303,7 @@
       "q_en": "Two molecules of an aldehyde reacts with a concentrated solution of NaOH and produces one molecule of an alcohol and acid each, which one is the aldehyde :",
       "options": [
         "एसीटैल्डिहाइड",
-        "फॉर्मेल्डिहाइड",
+        "फार्मऐल्डिहाइड",
         "प्रोपियोनैल्डिहाईड",
         "ब्यूटायरे ल्डिहाईड"
       ],
@@ -1320,7 +1322,7 @@
       "q_en": "Which of the following compounds forms the compounds belonging to the carbohydrate family on keeping it in the aqueous solution of barium hydroxide?",
       "options": [
         "बेन्जैल्डिहाइड",
-        "फॉर्मेल्डिहाइड",
+        "फार्मऐल्डिहाइड",
         "ऐसीटैल्डिाइड",
         "ऐसीटोन"
       ],
@@ -1339,7 +1341,7 @@
       "q_en": "The product formed by the reaction of an aldehyde with a primary amine is",
       "options": [
         "शिफक्षार",
-        "कीटोन",
+        "के टोन",
         "कार्बोक्सिलिक अम्‍ल",
         "एरोमेटिक अम्ल"
       ],
@@ -1436,7 +1438,7 @@
         "लान्थेनम और गैडोलिनियम",
         "सेरियम और टेरबियम यूरोपियम और येटरबियम",
         "हाइड्रोजन",
-        "लान्थेनम और ल्यूटेटियम"
+        "हाइड्रोजन"
       ],
       "options_en": [
         "Lanthanum and Gadolinium",
@@ -1452,7 +1454,7 @@
       "q": "ऑक्सीजन परमाणु के माध्यम से दो मोनोसैके राइड इकाइयों के बीच की कड़ी को क्या कहा जाता है?",
       "q_en": "What is known as the link between two monosaccharide units through oxygen atom?",
       "options": [
-        "पेप्टाइड लिंके ज",
+        "पेप्टाइड बंध",
         "ग्लाइकोसिडिक लिंके ज",
         "बीटा-डी-गैलेक्टोज़",
         "वैद"
@@ -1700,7 +1702,7 @@
       "q_en": "With an increase in atomic number the melting point _____.",
       "options": [
         "बढ़ती है",
-        "कम हो जाती है",
+        "घटती है",
         "0 हो जाता है",
         "वैसा ही रहता है।"
       ],
@@ -1889,7 +1891,7 @@
       "q": "Van't Hoff Factor (i) के आधार पर NaCl के लिए i का मान क्या होगा?",
       "q_en": "Van't Hoff factor (i) for NaCl (fully dissociated) is:",
       "options": [
-        "1",
+        "हमेशा 1",
         "2",
         "3",
         "0.5"
@@ -1911,7 +1913,7 @@
         "बढ़ती है",
         "घटती है",
         "अपरिवर्तित रहती है",
-        "0 हो जाती है"
+        "0 हो जाता है"
       ],
       "options_en": [
         "Increases",
@@ -1943,7 +1945,7 @@
       "id": 102
     },
     {
-      "q": "Faraday के Electrolysis के 1st Law के अनुसार: यदि 2 Faraday विद्युत प्रवाहित की जाए तो Cu²⁺ से कितना Cu जमा होगा? (Cu=64 g/mol)",
+      "q": "Faraday के Electrolysis के 1st Law के अनुसार: यदि 2 Faraday विद्युत प्रवाहित की जाए तो Cu²⁺ से कितना Cu जमा होगा? (Cu=64 g",
       "q_en": "By Faraday's 1st Law: 2 Faradays of electricity deposits how much Cu from Cu²⁺? (Cu=64 g/mol)",
       "options": [
         "32 g",
@@ -2044,7 +2046,7 @@
         "Large size",
         "Unpaired electrons",
         "High melting point",
-        "Variable oxidation state"
+        "परिवर्तनशील ऑक्सीजन अवस्था"
       ],
       "options_en": [
         "Large size",
@@ -2060,7 +2062,7 @@
       "q": "[Fe(CN)₆]⁴⁻ में Fe की Oxidation State क्या है?",
       "q_en": "What is the Oxidation State of Fe in [Fe(CN)₆]⁴⁻?",
       "options": [
-        "0",
+        "हमेशा 0",
         "+2",
         "+3",
         "+4"
@@ -2099,9 +2101,9 @@
       "q_en": "Which test distinguishes Aldehydes from Ketones?",
       "options": [
         "Iodoform Test",
-        "Tollens' Test (Silver Mirror Test)",
+        "Tollens' Test",
         "Fehling's Test — दोनों b और c",
-        "Lucas Test"
+        "Lucas test किसके लिए है?"
       ],
       "options_en": [
         "Iodoform Test",
@@ -2120,7 +2122,7 @@
         "Methanoic acid",
         "Ethanoic acid",
         "Propanoic acid",
-        "Butanoic acid"
+        "ब्यूटेनोइक अम्ल"
       ],
       "options_en": [
         "Methanoic acid",
@@ -2136,9 +2138,9 @@
       "q": "Nylon-6,6 किस प्रकार का Polymer है?",
       "q_en": "Nylon-6,6 is which type of Polymer?",
       "options": [
-        "Addition Polymer",
-        "Condensation Polymer",
-        "Natural Polymer",
+        "Addition बहुलक",
+        "Condensation बहुलक",
+        "Natural बहुलक",
         "Biopolymer"
       ],
       "options_en": [
@@ -2157,7 +2159,7 @@
       "options": [
         "Ethylene",
         "Vinyl Chloride (CH₂=CHCl)",
-        "Styrene",
+        "स्टाइरीन",
         "Propylene"
       ],
       "options_en": [
@@ -2195,7 +2197,7 @@
       "options": [
         "0.05 m",
         "0.1 m",
-        "0.5 m",
+        "0.5 मी",
         "1.0 m"
       ],
       "options_en": [
@@ -2232,8 +2234,8 @@
       "q_en": "Nernst Eq: E = E° - (0.0592/n)×log Q. If n=2, E°=1.10V, Q=1 then E = ?",
       "options": [
         "0.55V",
-        "1.10V",
-        "2.20V",
+        "110 वोल्ट",
+        "220 वोल्ट",
         "0V"
       ],
       "options_en": [
@@ -2307,9 +2309,9 @@
       "q": "Lyophilic Colloid (द्रवस्नेही) का उदाहरण है:",
       "q_en": "Example of Lyophilic Colloid is:",
       "options": [
-        "Gold sol",
+        "सोना sol",
         "Ferric hydroxide sol",
-        "Starch sol",
+        "स्टार्च sol",
         "Arsenic sulphide sol"
       ],
       "options_en": [
@@ -2326,10 +2328,10 @@
       "q": "Zone Refining विधि किस धातु को शुद्ध करने के लिए प्रयुक्त होती है?",
       "q_en": "Zone Refining method is used to purify which metal?",
       "options": [
-        "Copper",
-        "Aluminium",
+        "तांबा",
+        "एल्युमीनियम (Aluminium)",
         "Silicon (Semiconductors)",
-        "Iron"
+        "लोहा"
       ],
       "options_en": [
         "Copper",
@@ -2402,10 +2404,10 @@
       "q": "Sucrose (Table Sugar) किन दो monosaccharides से बना है?",
       "q_en": "Sucrose (Table Sugar) is made of which two monosaccharides?",
       "options": [
-        "Glucose + Fructose",
-        "Glucose + Galactose",
-        "Glucose + Glucose",
-        "Fructose + Galactose"
+        "ग्लूकोज + फ्रुक्टोज",
+        "ग्लूकोज + Galactose",
+        "ग्लूकोज + ग्लूकोज",
+        "फ्रुक्टोज + Galactose"
       ],
       "options_en": [
         "Glucose + Fructose",
@@ -2440,10 +2442,10 @@
       "q": "आवर्त सारणी में तत्वों को किस क्रम में रखा गया है?",
       "q_en": "Elements in periodic table are arranged in order of:",
       "options": [
-        "Atomic mass",
-        "Atomic number",
+        "परमाणु द्रव्यमान",
+        "परमाणु क्रमांक",
         "Density",
-        "Valency"
+        "संयोजकता"
       ],
       "options_en": [
         "Atomic mass",
@@ -2480,7 +2482,7 @@
       "options": [
         "H2O2",
         "HO",
-        "H2O",
+        "केवल H2O",
         "H3O"
       ],
       "options_en": [
@@ -2497,9 +2499,9 @@
       "q": "Electrolysis में cathode पर कौनसी reaction होती है?",
       "q_en": "At cathode in electrolysis:",
       "options": [
-        "Oxidation",
-        "Reduction",
-        "Neutralisation",
+        "ऑक्सीकरण",
+        "अपचयन",
+        "उदासीनीकरण",
         "Decomposition"
       ],
       "options_en": [
@@ -2518,8 +2520,8 @@
       "options": [
         "Helium",
         "Lithium",
-        "Hydrogen",
-        "Carbon"
+        "हाइड्रोजन",
+        "कार्बन"
       ],
       "options_en": [
         "Helium",
@@ -2535,8 +2537,8 @@
       "q": "Acid + Base → Salt + Water यह reaction कहलाती है:",
       "q_en": "Acid + Base → Salt + Water is called:",
       "options": [
-        "Oxidation",
-        "Neutralisation",
+        "ऑक्सीकरण",
+        "उदासीनीकरण",
         "Decomposition",
         "Displacement"
       ],
@@ -2592,9 +2594,9 @@
       "q": "'Noble gases' की संयोजकता होती है:",
       "q_en": "Valency of Noble gases is:",
       "options": [
-        "1",
+        "हमेशा 1",
         "2",
-        "0",
+        "हमेशा 0",
         "4"
       ],
       "options_en": [
@@ -2612,8 +2614,8 @@
       "q_en": "NaOH is used as:",
       "options": [
         "Acid",
-        "Strong base",
-        "Salt",
+        "प्रबल क्षार",
+        "केवल Salt",
         "Indicator"
       ],
       "options_en": [
@@ -2646,13 +2648,13 @@
       "id": 139
     },
     {
-      "q": "Oxidation number of Oxygen in H2O2:",
+      "q": "ऑक्सीकरण संख्या of ऑक्सीजन in H2O2:",
       "q_en": "Oxidation number of Oxygen in H2O2:",
       "options": [
         "+2",
         "-2",
-        "-1",
-        "+1"
+        "हमेशा 1",
+        "हमेशा 1"
       ],
       "options_en": [
         "+2",
@@ -2668,10 +2670,10 @@
       "q": "Esterification reaction में क्या बनता है?",
       "q_en": "Esterification reaction produces:",
       "options": [
-        "Alcohol + Acid",
-        "Ester + Water",
-        "Salt + Water",
-        "Aldehyde + Acid"
+        "ऐल्कोहॉल + Acid",
+        "एस्टर + जल",
+        "लवण + जल",
+        "ऐल्डिहाइड + Acid"
       ],
       "options_en": [
         "Alcohol + Acid",
@@ -2687,8 +2689,8 @@
       "q": "Catalyst की reaction में भूमिका:",
       "q_en": "Role of catalyst in a reaction:",
       "options": [
-        "Increases activation energy",
-        "Decreases activation energy",
+        "बढ़ता है activation energy",
+        "घटता है activation energy",
         "Changes products",
         "Consumed in reaction"
       ],
@@ -2728,7 +2730,7 @@
         "Reaction rate",
         "Vapour pressure of solution",
         "Osmosis",
-        "Electrolysis"
+        "विद्युत अपघटन"
       ],
       "options_en": [
         "Reaction rate",
@@ -2744,9 +2746,9 @@
       "q": "Nylon-6,6 किस type का polymer है?",
       "q_en": "Nylon-6,6 is what type of polymer?",
       "options": [
-        "Addition polymer",
-        "Condensation polymer",
-        "Natural polymer",
+        "Addition बहुलक",
+        "Condensation बहुलक",
+        "Natural बहुलक",
         "Elastomer"
       ],
       "options_en": [
@@ -2782,7 +2784,7 @@
       "q": "Dry ice किसका ठोस रूप है?",
       "q_en": "Dry ice is solid form of:",
       "options": [
-        "Water",
+        "पानी",
         "CO2",
         "SO2",
         "N2"
@@ -2804,7 +2806,7 @@
         "Proteins",
         "Reducing sugars",
         "Fats",
-        "Starch"
+        "स्टार्च"
       ],
       "options_en": [
         "Proteins",
@@ -2822,8 +2824,8 @@
       "options": [
         "Ester",
         "Soap and Glycerol",
-        "Alcohol",
-        "Aldehyde"
+        "ऐल्कोहॉल",
+        "एल्डिहाइड"
       ],
       "options_en": [
         "Ester",
@@ -2840,8 +2842,8 @@
       "q_en": "Fehling's solution reacts with:",
       "options": [
         "Ketones",
-        "Aldehydes",
-        "Alcohols",
+        "ऐल्डिहाइड",
+        "ऐल्कोहॉल",
         "Carboxylic acids"
       ],
       "options_en": [
@@ -2860,7 +2862,7 @@
       "options": [
         "CH4",
         "CCl4",
-        "H2O",
+        "केवल H2O",
         "CO2"
       ],
       "options_en": [
@@ -2880,7 +2882,7 @@
         "Colour",
         "Intermolecular forces",
         "Density only",
-        "Atomic number"
+        "परमाणु क्रमांक"
       ],
       "options_en": [
         "Colour",
@@ -2896,10 +2898,10 @@
       "q": "Bleaching powder का रासायनिक नाम:",
       "q_en": "Chemical name of Bleaching powder:",
       "options": [
-        "Calcium carbonate",
-        "Calcium hypochlorite",
-        "Calcium chloride",
-        "Calcium oxide"
+        "कैल्शियम carbonate",
+        "कैल्शियम hypochlorite",
+        "कैल्शियम chloride",
+        "कैल्शियम oxide"
       ],
       "options_en": [
         "Calcium carbonate",
@@ -2912,7 +2914,7 @@
       "id": 153
     },
     {
-      "q": "Atomic mass of Sodium (Na):",
+      "q": "परमाणु द्रव्यमान of सोडियम (Na):",
       "q_en": "Atomic mass of Sodium (Na):",
       "options": [
         "11",
@@ -2935,9 +2937,9 @@
       "q_en": "Which compound is in antiseptic Dettol?",
       "options": [
         "Chloroxylenol",
-        "Iodine",
-        "Phenol",
-        "Alcohol"
+        "Iodine की कमी से कौन सा रोग:",
+        "फीनॉल",
+        "ऐल्कोहॉल"
       ],
       "options_en": [
         "Chloroxylenol",
@@ -2953,10 +2955,10 @@
       "q": "Iodoform test किसके लिए positive होता है?",
       "q_en": "Iodoform test is positive for:",
       "options": [
-        "Primary alcohol",
-        "Methyl ketone",
-        "Aldehyde",
-        "Carboxylic acid"
+        "Primary ऐल्कोहॉल",
+        "Methyl कीटोन",
+        "एल्डिहाइड",
+        "कार्बोक्सिलिक अम्‍ल"
       ],
       "options_en": [
         "Primary alcohol",
@@ -3011,9 +3013,9 @@
       "q_en": "Which metal is coated in Galvanization?",
       "options": [
         "Tin",
-        "Zinc",
-        "Copper",
-        "Silver"
+        "जिंक",
+        "तांबा",
+        "चाँदी"
       ],
       "options_en": [
         "Tin",
@@ -3048,7 +3050,7 @@
       "q": "Hydrogen bonding सबसे मजबूत किसमें है?",
       "q_en": "Hydrogen bonding सबसे मजबूत किसमें है?",
       "options": [
-        "HCl",
+        "एचसीएल",
         "HF",
         "HBr",
         "HI"
@@ -3067,10 +3069,10 @@
       "q": "Electrochemical series में सबसे अधिक reactive metal:",
       "q_en": "Electrochemical series में सबसे अधिक reactive metal:",
       "options": [
-        "Iron",
-        "Zinc",
+        "लोहा",
+        "जिंक",
         "Lithium",
-        "Sodium"
+        "सोडियम"
       ],
       "options_en": [
         "Iron",
@@ -3086,10 +3088,10 @@
       "q": "Tollens reagent किससे positive होता है?",
       "q_en": "Tollens reagent किससे positive होता है?",
       "options": [
-        "Ketone",
-        "Aldehyde",
-        "Alcohol",
-        "Carboxylic acid"
+        "के टोन",
+        "एल्डिहाइड",
+        "ऐल्कोहॉल",
+        "कार्बोक्सिलिक अम्‍ल"
       ],
       "options_en": [
         "Ketone",
@@ -3125,8 +3127,8 @@
       "q_en": "HCl के जलीय विलयन में pH होगा:",
       "options": [
         "7 से अधिक",
-        "7 के बराबर",
-        "7 से कम",
+        "7 से अधिक",
+        "7 से अधिक",
         "14"
       ],
       "options_en": [
@@ -3162,9 +3164,9 @@
       "q": "Electronegativity सबसे अधिक किसकी है?",
       "q_en": "Electronegativity सबसे अधिक किसकी है?",
       "options": [
-        "Oxygen",
+        "ऑक्सीजन",
         "Chlorine",
-        "Nitrogen",
+        "नाइट्रोजन",
         "Fluorine"
       ],
       "options_en": [
@@ -3181,9 +3183,9 @@
       "q": "SN1 reaction किस substrate में होती है?",
       "q_en": "SN1 reaction किस substrate में होती है?",
       "options": [
-        "Primary",
-        "Secondary",
-        "Tertiary",
+        "प्राथमिक",
+        "माध्यमिक",
+        "तृतीयक",
         "Methyl"
       ],
       "options_en": [
@@ -3200,10 +3202,10 @@
       "q": "Zone Refining किसके शुद्धिकरण में है?",
       "q_en": "Zone Refining किसके शुद्धिकरण में है?",
       "options": [
-        "Aluminium",
+        "एल्युमीनियम (Aluminium)",
         "Semiconductors (Si, Ge)",
-        "Iron",
-        "Copper"
+        "लोहा",
+        "तांबा"
       ],
       "options_en": [
         "Aluminium",
@@ -3238,7 +3240,7 @@
       "q": "Acid Rain में कौन सा अम्ल होता है?",
       "q_en": "Acid Rain में कौन सा अम्ल होता है?",
       "options": [
-        "HCl",
+        "एचसीएल",
         "HF",
         "H2SO4 और HNO3",
         "H3PO4"
@@ -3257,10 +3259,10 @@
       "q": "Grignard reagent में कौन सा element होता है?",
       "q_en": "Grignard reagent में कौन सा element होता है?",
       "options": [
-        "Sodium",
-        "Magnesium",
+        "सोडियम",
+        "मैग्नीशियम",
         "Lithium",
-        "Potassium"
+        "पोटेशियम"
       ],
       "options_en": [
         "Sodium",
@@ -3277,7 +3279,7 @@
       "q_en": "Haber process में कौन सा catalyst है?",
       "options": [
         "Platinum",
-        "Iron with promoters",
+        "लोहा with promoters",
         "Vanadium pentoxide",
         "Nickel"
       ],
@@ -3295,10 +3297,10 @@
       "q": "Sucrose का hydrolysis होने पर बनता है:",
       "q_en": "Sucrose का hydrolysis होने पर बनता है:",
       "options": [
-        "Glucose + Fructose",
-        "Glucose + Glucose",
-        "Fructose + Fructose",
-        "Galactose + Glucose"
+        "ग्लूकोज + फ्रुक्टोज",
+        "ग्लूकोज + ग्लूकोज",
+        "फ्रुक्टोज + फ्रुक्टोज",
+        "Galactose + ग्लूकोज"
       ],
       "options_en": [
         "Glucose + Fructose",
@@ -3353,8 +3355,8 @@
       "q_en": "Lucas test किसके लिए है?",
       "options": [
         "Primary Secondary Tertiary alcohols identification",
-        "Aldehyde test",
-        "Ketone test",
+        "ऐल्डिहाइड test",
+        "कीटोन test",
         "Acid test"
       ],
       "options_en": [
@@ -3368,13 +3370,13 @@
       "id": 177
     },
     {
-      "q": "Normality = ?",
+      "q": "नॉर्मलता (Normality) = ?",
       "q_en": "Normality = ?",
       "options": [
-        "Moles of solute/Litre",
-        "Gram equivalents of solute/Litre",
-        "Moles/kg",
-        "Mass/Volume"
+        "विलेय के मोल / लीटर",
+        "विलेय के ग्राम तुल्यांक / लीटर",
+        "मोल / किग्रा",
+        "द्रव्यमान / आयतन"
       ],
       "options_en": [
         "Moles of solute/Litre",
@@ -3428,7 +3430,7 @@
       "q": "Contact process किसके निर्माण में है?",
       "q_en": "Contact process किसके निर्माण में है?",
       "options": [
-        "HCl",
+        "एचसीएल",
         "H2SO4",
         "HNO3",
         "NH3"
@@ -3582,7 +3584,7 @@
       "options": [
         "Reaction rate",
         "Limiting molar conductivity",
-        "Osmotic pressure",
+        "परासरण दाब",
         "Vapour pressure"
       ],
       "options_en": [
@@ -3600,9 +3602,9 @@
       "q_en": "Galvanization में किस metal का coat लगता है?",
       "options": [
         "Tin",
-        "Zinc",
-        "Copper",
-        "Silver"
+        "जिंक",
+        "तांबा",
+        "चाँदी"
       ],
       "options_en": [
         "Tin",
@@ -3639,8 +3641,8 @@
       "options": [
         "+2",
         "-2",
-        "-1",
-        "+1"
+        "हमेशा 1",
+        "हमेशा 1"
       ],
       "options_en": [
         "+2",
@@ -3656,8 +3658,8 @@
       "q": "Catalyst की reaction में क्या भूमिका है?",
       "q_en": "Catalyst की reaction में क्या भूमिका है?",
       "options": [
-        "Activation energy बढ़ाता है",
-        "Activation energy घटाता है",
+        "सक्रियण ऊर्जा",
+        "सक्रियण ऊर्जा",
         "Products बदलता है",
         "Reaction में consume होता है"
       ],
@@ -3694,9 +3696,9 @@
       "q": "Noble gases की valency होती है:",
       "q_en": "Noble gases की valency होती है:",
       "options": [
-        "1",
+        "हमेशा 1",
         "2",
-        "0",
+        "हमेशा 0",
         "4"
       ],
       "options_en": [
@@ -3714,8 +3716,8 @@
       "q_en": "NaOH है:",
       "options": [
         "Acid",
-        "Strong base",
-        "Salt",
+        "प्रबल क्षार",
+        "केवल Salt",
         "Indicator"
       ],
       "options_en": [
@@ -3770,10 +3772,10 @@
       "q": "आवर्त सारणी में elements को किस क्रम में रखा है?",
       "q_en": "आवर्त सारणी में elements को किस क्रम में रखा है?",
       "options": [
-        "Atomic mass",
-        "Atomic number",
+        "परमाणु द्रव्यमान",
+        "परमाणु क्रमांक",
         "Density",
-        "Valency"
+        "संयोजकता"
       ],
       "options_en": [
         "Atomic mass",
@@ -3786,13 +3788,13 @@
       "id": 199
     },
     {
-      "q": "Acid + Base → ? (Neutralisation)",
+      "q": "Acid + Base → ?",
       "q_en": "Acid + Base → ? (Neutralisation)",
       "options": [
-        "Oxide + Water",
-        "Salt + Water",
-        "Ester + Water",
-        "Nothing"
+        "ऑक्साइड + जल",
+        "लवण + जल",
+        "एस्टर + जल",
+        "कुछ नहीं"
       ],
       "options_en": [
         "Oxide + Water",
@@ -3810,8 +3812,8 @@
       "options": [
         "Helium",
         "Lithium",
-        "Hydrogen",
-        "Carbon"
+        "हाइड्रोजन",
+        "कार्बन"
       ],
       "options_en": [
         "Helium",
@@ -3865,9 +3867,9 @@
       "q": "Brass में क्या होता है?",
       "q_en": "Brass में क्या होता है?",
       "options": [
-        "Iron + Carbon",
-        "Copper + Zinc",
-        "Copper + Tin",
+        "लोहा + कार्बन",
+        "ताँबा + जिंक",
+        "ताँबा + Tin",
         "Lead + Tin"
       ],
       "options_en": [
@@ -3884,10 +3886,10 @@
       "q": "Steel में मुख्य components:",
       "q_en": "Steel में मुख्य components:",
       "options": [
-        "Iron + Copper",
-        "Iron + Carbon",
-        "Iron + Zinc",
-        "Iron + Aluminium"
+        "लोहा + ताँबा",
+        "लोहा + कार्बन",
+        "लोहा + जिंक",
+        "लोहा + ऐलुमिनियम"
       ],
       "options_en": [
         "Iron + Copper",
@@ -3904,8 +3906,8 @@
       "q_en": "Diamond और Graphite किसके allotropes हैं?",
       "options": [
         "Silicon",
-        "Carbon",
-        "Sulphur",
+        "कार्बन",
+        "सल्फर",
         "Phosphorus"
       ],
       "options_en": [
@@ -3923,8 +3925,8 @@
       "q_en": "Vinegar का scientific name:",
       "options": [
         "Formic acid",
-        "Acetic acid",
-        "Lactic acid",
+        "ऐसीटिक अम्ल",
+        "लेक्टिक अम्ल",
         "Citric acid"
       ],
       "options_en": [
@@ -3998,10 +4000,10 @@
       "q": "Quicklime का chemical name:",
       "q_en": "Quicklime का chemical name:",
       "options": [
-        "Calcium carbonate",
-        "Calcium hydroxide",
-        "Calcium oxide",
-        "Calcium sulphate"
+        "कैल्शियम carbonate",
+        "कैल्शियम hydroxide",
+        "कैल्शियम oxide",
+        "कैल्शियम sulphate"
       ],
       "options_en": [
         "Calcium carbonate",
@@ -4056,8 +4058,8 @@
       "q_en": "Fehling solution किससे react करता है?",
       "options": [
         "Ketones",
-        "Aldehydes",
-        "Alcohols",
+        "ऐल्डिहाइड",
+        "ऐल्कोहॉल",
         "Carboxylic acids"
       ],
       "options_en": [
@@ -4109,13 +4111,13 @@
       "id": 216
     },
     {
-      "q": "तत्वों के किस समूह की आयनीकरण ऊर्जा सबसे कम है?",
+      "q": "तत्वों के किस समूह की आयनन ऊर्जा सबसे कम है?",
       "q_en": "Which group of elements has the lowest ionization energy?",
       "options": [
-        "Alkaline Earth Metals",
-        "Alkali Metals",
-        "Noble gases",
-        "Halogens"
+        "क्षारीय मृदा धातुएँ",
+        "क्षार धातुएँ",
+        "उत्कृष्ट गैसें",
+        "हैलोजन"
       ],
       "options_en": [
         "Alkaline Earth Metals",
@@ -4128,13 +4130,13 @@
       "id": 217
     },
     {
-      "q": "पॉलिमर की संख्या औसत आणविक द्रव्यमान किस विधि द्वारा निर्धारित किया जाता है?",
+      "q": "बहुलक का संख्या औसत आणविक द्रव्यमान किस विधि से निर्धारित किया जाता है?",
       "q_en": "Number average molecular mass of a polymer is determined by:",
       "options": [
-        "Osmotic pressure",
-        "Depression of freezing point",
-        "Light scattering and ultracentrifuge method",
-        "Elevation in boiling point"
+        "परासरण दाब",
+        "हिमांक में अवनमन",
+        "प्रकाश प्रकीर्णन और अल्ट्रासेंट्रीफ्यूज विधि",
+        "क्वथनांक में उन्नयन"
       ],
       "options_en": [
         "Osmotic pressure",
@@ -4147,13 +4149,13 @@
       "id": 218
     },
     {
-      "q": "निम्नलिखित में से कौन-सा यौगिक तृतीयक अमीन है?",
+      "q": "निम्नलिखित में से कौन-सा यौगिक तृतीयक ऐमीन है?",
       "q_en": "Which of the following compounds is a tertiary amine?",
       "options": [
-        "Aniline (C₆H₅NH₂)",
-        "Methylamine (CH₃NH₂)",
-        "Trimethylamine (CH₃N(CH₃)₂)",
-        "Dimethylamine (CH₃NHCH₃)"
+        "ऐनिलीन (C₆H₅NH₂)",
+        "मेथिलऐमीन (CH₃NH₂)",
+        "ट्राइमेथिलऐमीन (CH₃N(CH₃)₂)",
+        "डाइमेथिलऐमीन (CH₃NHCH₃)"
       ],
       "options_en": [
         "Aniline (C₆H₅NH₂)",
@@ -4166,13 +4168,13 @@
       "id": 219
     },
     {
-      "q": "हाइड्रोजन वर्णक्रम में दिखने वाली वर्णक्रमीय रेखाएँ निम्नलिखित में से किसके कारण उत्पन्न होती हैं?",
+      "q": "हाइड्रोजन स्पेक्ट्रम में स्पेक्ट्रमी रेखाएँ इलेक्ट्रॉनों के किसके बीच संक्रमण के कारण उत्पन्न होती हैं?",
       "q_en": "The spectral lines in the hydrogen spectrum are due to transitions of electrons between:",
       "options": [
-        "Different atoms",
-        "Different subshells of the same energy level",
-        "Different isotopes of hydrogen",
-        "Different energy levels of the same atom"
+        "भिन्न परमाणुओं",
+        "समान ऊर्जा स्तर के भिन्न उपकोशों",
+        "हाइड्रोजन के भिन्न समस्थानिकों",
+        "एक ही परमाणु के भिन्न ऊर्जा स्तरों"
       ],
       "options_en": [
         "Different atoms",
@@ -4204,13 +4206,13 @@
       "id": 221
     },
     {
-      "q": "निम्नलिखित में से कौन-सा अभिकारक, एल्डिहाइड या कीटोन से इमाइन बनाने में उपयोग किया जाता है?",
+      "q": "ऐल्डिहाइड या कीटोन से इमीन बनाने में निम्नलिखित में से किस अभिकर्मक का उपयोग किया जाता है?",
       "q_en": "Which of the following reagents is used in the formation of an imine from an aldehyde or ketone?",
       "options": [
-        "Sodium bisulfite",
-        "Tollen's reagent",
-        "Ammonia (NH₃)",
-        "Sodium hydroxide (NaOH)"
+        "सोडियम बाइसल्फाइट",
+        "टॉलेन अभिकर्मक",
+        "अमोनिया (NH₃)",
+        "सोडियम हाइड्रॉक्साइड (NaOH)"
       ],
       "options_en": [
         "Sodium bisulfite",
@@ -4223,13 +4225,13 @@
       "id": 222
     },
     {
-      "q": "जब एल्डिहाइड को सोडियम बाइसल्फाइट (NaHSO₃) के साथ प्रतिक्रिया कराई जाती है, तो कौन-सा उत्पाद बनता है?",
+      "q": "ऐल्डिहाइड की सोडियम बाइसल्फाइट के साथ अभिक्रिया का उत्पाद क्या है?",
       "q_en": "What is the product of the reaction of an aldehyde with sodium bisulfite?",
       "options": [
-        "Alcohol",
-        "Cyanohydrin",
-        "Bisulfite addition product",
-        "Aldehyde hydrate"
+        "ऐल्कोहॉल",
+        "सायनोहाइड्रिन",
+        "बाइसल्फाइट योगात्मक उत्पाद",
+        "ऐल्डिहाइड हाइड्रेट"
       ],
       "options_en": [
         "Alcohol",
@@ -4242,7 +4244,7 @@
       "id": 223
     },
     {
-      "q": "मोल एक मात्रा है, जिसमें किसी पदार्थ के ________ कण होते हैं।",
+      "q": "मोल वह मात्रा है, जिसमें किसी पदार्थ के ________ कण होते हैं।",
       "q_en": "Mole is a quantity, which has ________ particles of a substance.",
       "options": [
         "6.023 x 10²³",
@@ -4261,13 +4263,13 @@
       "id": 224
     },
     {
-      "q": "बेन्जोइक एसिड के संश्लेषण के लिए निम्नलिखित में से कौन-सी विधि का उपयोग किया जाता है?",
+      "q": "बेन्जोइक अम्ल के संश्लेषण के लिए निम्नलिखित में से किस विधि का उपयोग किया जाता है?",
       "q_en": "Which of the following methods is used to synthesize benzoic acid?",
       "options": [
-        "Ozonolysis of alkenes",
-        "Friedel-Crafts acylation of benzene with acetyl chloride",
-        "Hydrolysis of benzyl chloride with aqueous NaOH",
-        "Oxidation of toluene using potassium permanganate (KMnO₄)"
+        "ऐल्कीनों का ओजोनीकरण",
+        "ऐसीटिल क्लोराइड के साथ बेन्जीन का फ्रिडेल-क्राफ्ट्स ऐसीलीकरण",
+        "जलीय NaOH के साथ बेन्जिल क्लोराइड का जल-अपघटन",
+        "पोटेशियम परमैंगनेट (KMnO₄) द्वारा टॉलुईन का ऑक्सीकरण"
       ],
       "options_en": [
         "Ozonolysis of alkenes",
@@ -4284,7 +4286,7 @@
       "q_en": "A chemist finds that the rate of a reaction remains constant even as the reactant is consumed. What does this indicate?",
       "options": [
         "Reaction is at equilibrium",
-        "Catalyst deactivation",
+        "उत्प्रेरक deactivation",
         "Zero-order nature",
         "First-order behavior"
       ],
@@ -4305,7 +4307,7 @@
         "It can be recharged many more times with less loss of capacity over time",
         "Cadmium is less reactive, so it doesn't take part in the redox reaction",
         "The nickel-cadmium cell produces a higher voltage than a lead battery",
-        "It uses acid-free electrolytes, so it cannot undergo oxidation or reduction"
+        "It uses acid-free electrolytes, so it cannot undergo ऑक्सीकरण or अपचयन"
       ],
       "options_en": [
         "It can be recharged many more times with less loss of capacity over time",
@@ -4318,13 +4320,13 @@
       "id": 227
     },
     {
-      "q": "निम्नलिखित में से कौन-सा तत्व समूह IIIA तत्वों में सबसे प्रचुर मात्रा में है?",
+      "q": "वर्ग IIIA के तत्वों में से कौन-सा तत्व सबसे अधिक प्रचुर मात्रा में पाया जाता है?",
       "q_en": "Which of the following elements is the most abundant among Group IIIA elements?",
       "options": [
-        "Aluminum",
-        "Gallium",
-        "Thallium",
-        "Boron"
+        "ऐलुमिनियम",
+        "गैलियम",
+        "थैलियम",
+        "बोरॉन"
       ],
       "options_en": [
         "Aluminum",
@@ -4337,13 +4339,13 @@
       "id": 228
     },
     {
-      "q": "कौन-सा कारक समन्वय यौगिक की गतिज स्थिरता को बढ़ाता है?",
+      "q": "कौन-सा कारक उपसहसंयोजन यौगिक की गतिक स्थिरता को बढ़ाता है?",
       "q_en": "Which factor enhances the kinetic stability of a coordination compound?",
       "options": [
-        "Weak metal-ligand bond",
-        "High ionic radius of the central metal",
-        "High ligand field strength",
-        "Large activation energy for ligand exchange"
+        "दुर्बल धातु-लिगैंड बंध",
+        "केंद्रीय धातु की उच्च आयनिक त्रिज्या",
+        "उच्च लिगैंड क्षेत्र प्रबलता",
+        "लिगैंड विनिमय के लिए उच्च सक्रियण ऊर्जा"
       ],
       "options_en": [
         "Weak metal-ligand bond",
@@ -4356,13 +4358,13 @@
       "id": 229
     },
     {
-      "q": "निम्नलिखित में से कौन-सा हेलोऐल्केन SN2 प्रतिस्थापन सबसे धीमी गति से करेगा?",
+      "q": "निम्नलिखित में से कौन-सा हैलोऐल्केन SN2 प्रतिस्थापन सबसे धीमी गति से करेगा?",
       "q_en": "Which of the following haloalkanes will undergo SN2 substitution the slowest?",
       "options": [
-        "Ethyl chloride (C₂H₅Cl)",
-        "Methyl chloride (CH₃Cl)",
-        "Chloromethane (CH₂Cl)",
-        "Tert-butyl chloride (C₄H₉Cl)"
+        "एथिल क्लोराइड (C₂H₅Cl)",
+        "मेथिल क्लोराइड (CH₃Cl)",
+        "क्लोरोमेथेन",
+        "टर्ट-ब्यूटिल क्लोराइड (C₄H₉Cl)"
       ],
       "options_en": [
         "Ethyl chloride (C₂H₅Cl)",
@@ -4375,13 +4377,13 @@
       "id": 230
     },
     {
-      "q": "प्रोटीन में बनने वाले लिंकेज का सही आईयूपीएसी नाम क्या है?",
+      "q": "प्रोटीनों में बनने वाले बंध का सही IUPAC नाम क्या है?",
       "q_en": "What is the CORRECT IUPAC name of the linkage formed in proteins?",
       "options": [
-        "Glycosidic bond",
-        "Amide bond",
-        "Phosphodiester bond",
-        "Peptide bond"
+        "ग्लाइकोसिडिक बंध",
+        "ऐमाइड बंध",
+        "फॉस्फोडाइएस्टर बंध",
+        "पेप्टाइड बंध"
       ],
       "options_en": [
         "Glycosidic bond",
@@ -4395,18 +4397,18 @@
     },
     {
       "q": "Because of large atomic sizes and weak metallic bonding, alkali metals have / बड़े परमाणु आकार और दुर्बल धातु बंधन के कारण, क्षार धातुओं में निम्न होता है:",
-      "q_en": "Because of large atomic sizes and weak metallic bonding, alkali metals have / बड़े परमाणु आकार और दुर्बल धातु बंधन के कारण, क्षार धातुओं में निम्न होता है:",
+      "q_en": "Because of large atomic sizes and weak metallic bonding, alkali metals have",
       "options": [
-        "Low density / निम्न घनत्व",
-        "High boiling points / उच्च क्वथनांक",
-        "High melting points / उच्च गलनांक",
-        "High density / उच्च घनत्व"
+        "Low density",
+        "High boiling points",
+        "High melting points",
+        "High density"
       ],
       "options_en": [
-        "Low density / निम्न घनत्व",
-        "High boiling points / उच्च क्वथनांक",
-        "High melting points / उच्च गलनांक",
-        "High density / उच्च घनत्व"
+        "Low density",
+        "High boiling points",
+        "High melting points",
+        "High density"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -4414,28 +4416,28 @@
     },
     {
       "q": "What is the product of the reaction between a diazonium salt and copper (I) chloride (CuCl)? / डायज़ोनियम लवण और कॉपर (I) क्लोराइड (CuCl) के बीच अभिक्रिया का उत्पाद क्या है?",
-      "q_en": "What is the product of the reaction between a diazonium salt and copper (I) chloride (CuCl)? / डायज़ोनियम लवण और कॉपर (I) क्लोराइड (CuCl) के बीच अभिक्रिया का उत्पाद क्या है?",
+      "q_en": "What is the product of the reaction between a diazonium salt and copper (I) chloride (CuCl)?",
       "options": [
-        "Toluene / टोल्यूनि",
-        "Benzoic acid / बेंज़ोइक एसिड",
-        "Benzene / बेंज़ीन",
-        "Chlorobenzene / क्लोरोबेंज़ीन"
+        "Toluene",
+        "बेन्जोइक अम्ल",
+        "बेन्जीन",
+        "क्लोरोबेंजीन"
       ],
       "options_en": [
-        "Toluene / टोल्यूनि",
-        "Benzoic acid / बेंज़ोइक एसिड",
-        "Benzene / बेंज़ीन",
-        "Chlorobenzene / क्लोरोबेंज़ीन"
+        "Toluene",
+        "Benzoic acid",
+        "Benzene",
+        "Chlorobenzene"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 233
     },
     {
-      "q": "What is the functional group present in carboxylic acids? / कार्बोक्सिलिक अम्ल में उपस्थित कार्यात्मक समूह कौन सा है?",
-      "q_en": "What is the functional group present in carboxylic acids? / कार्बोक्सिलिक अम्ल में उपस्थित कार्यात्मक समूह कौन सा है?",
+      "q": "कार्बोक्सिलिक अम्लों में उपस्थित क्रियात्मक समूह कौन-सा है?",
+      "q_en": "What is the functional group present in carboxylic acids?",
       "options": [
-        "-COOH",
+        "केवल -COOH",
         "-C=O",
         "-OH",
         "-CHO"
@@ -4451,19 +4453,19 @@
       "id": 234
     },
     {
-      "q": "Bohr's model of the atom was proposed to explain: / बोहर का परमाणु मॉडल निम्नलिखित में से किसे समझाने के लिए प्रस्तावित किया गया था?",
-      "q_en": "Bohr's model of the atom was proposed to explain: / बोहर का परमाणु मॉडल निम्नलिखित में से किसे समझाने के लिए प्रस्तावित किया गया था?",
+      "q": "बोहर का परमाणु मॉडल किसे समझाने के लिए प्रस्तावित किया गया था?",
+      "q_en": "Bohr's model of the atom was proposed to explain:",
       "options": [
-        "The atomic spectra of hydrogen / हाइड्रोजन के परमाणु वर्णक्रम",
-        "The Rutherford model / रदरफोर्ड मॉडल",
-        "The stability of the atom / परमाणु की स्थिरता",
-        "The motion of electrons in orbitals / कक्षाओं में इलेक्ट्रॉनों की गति"
+        "हाइड्रोजन का परमाणु स्पेक्ट्रम",
+        "रदरफोर्ड मॉडल",
+        "परमाणु का स्थायित्व",
+        "कक्षकों में इलेक्ट्रॉनों की गति"
       ],
       "options_en": [
-        "The atomic spectra of hydrogen / हाइड्रोजन के परमाणु वर्णक्रम",
-        "The Rutherford model / रदरफोर्ड मॉडल",
-        "The stability of the atom / परमाणु की स्थिरता",
-        "The motion of electrons in orbitals / कक्षाओं में इलेक्ट्रॉनों की गति"
+        "The atomic spectra of hydrogen",
+        "The Rutherford model",
+        "The stability of the atom",
+        "The motion of electrons in orbitals"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -4471,7 +4473,7 @@
     },
     {
       "q": "Which of the following statements CORRECTLY explains the contradiction between classical electromagnetic theory and observed atomic spectra that led to Bohr's postulates? / निम्नलिखित में से कौन-सा कथन शास्त्रीय विद्युतचुंबकीय सिद्धांत और प्रेक्षित परमाणु स्पेक्ट्रा के बीच विरोधाभास को सही ढंग से समझाता है?",
-      "q_en": "Which of the following statements CORRECTLY explains the contradiction between classical electromagnetic theory and observed atomic spectra that led to Bohr's postulates? / निम्नलिखित में से कौन-सा कथन शास्त्रीय विद्युतचुंबकीय सिद्धांत और प्रेक्षित परमाणु स्पेक्ट्रा के बीच विरोधाभास को सही ढंग से समझाता है?",
+      "q_en": "Which of the following statements CORRECTLY explains the contradiction between classical electromagnetic theory and observed atomic spectra that led to Bohr's postulates?",
       "options": [
         "Classical theory predicted electrons should not emit radiation in circular orbit, yet atoms emit continuous spectra",
         "Bohr's model replaced centrifugal force with gravitational force to stabilize atoms",
@@ -4489,19 +4491,19 @@
       "id": 236
     },
     {
-      "q": "Monomers of natural rubber will be: / प्राकृतिक रबर के मोनोमर्स (एकलक) होंगे:",
-      "q_en": "Monomers of natural rubber will be: / प्राकृतिक रबर के मोनोमर्स (एकलक) होंगे:",
+      "q": "प्राकृतिक रबर के एकलक (monomers) होंगे:",
+      "q_en": "Monomers of natural rubber will be:",
       "options": [
-        "1,3-Butadiene / 1,3-ब्यूटाडीन",
-        "Isoprene / आइसोप्रीन",
-        "Styrene / स्टाइरीन",
-        "Chloroprene / क्लोरोप्रीन"
+        "1,3-ब्यूटाडीन",
+        "आइसोप्रीन",
+        "स्टाइरीन",
+        "क्लोरोप्रीन"
       ],
       "options_en": [
         "1,3-Butadiene / 1,3-ब्यूटाडीन",
-        "Isoprene / आइसोप्रीन",
-        "Styrene / स्टाइरीन",
-        "Chloroprene / क्लोरोप्रीन"
+        "Isoprene",
+        "Styrene",
+        "Chloroprene"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -4509,9 +4511,9 @@
     },
     {
       "q": "Why does doping a pure silicon crystal with phosphorus drastically increase its conductivity? / शुद्ध सिलिकॉन क्रिस्टल को फॉस्फोरस के साथ मिलाने से इसकी चालकता में अत्यधिक वृद्धि क्यों हो जाती है?",
-      "q_en": "Why does doping a pure silicon crystal with phosphorus drastically increase its conductivity? / शुद्ध सिलिकॉन क्रिस्टल को फॉस्फोरस के साथ मिलाने से इसकी चालकता में अत्यधिक वृद्धि क्यों हो जाती है?",
+      "q_en": "Why does doping a pure silicon crystal with phosphorus drastically increase its conductivity?",
       "options": [
-        "It increases hole mobility in the valence band",
+        "It बढ़ता है hole mobility in the valence band",
         "Phosphorus breaks Si-Si bonds and makes the structure weak",
         "It raises the temperature of the crystal and thus enhances current",
         "The extra valence electron becomes a free carrier with minimal energy input"
@@ -4528,7 +4530,7 @@
     },
     {
       "q": "If one drop of water has 0.018 g mass. How many moles of atoms present in one drop of water? / यदि पानी की एक बूंद का द्रव्यमान 0.018 ग्राम है, तो पानी की एक बूंद में कितने मोल परमाणु मौजूद हैं?",
-      "q_en": "If one drop of water has 0.018 g mass. How many moles of atoms present in one drop of water? / यदि पानी की एक बूंद का द्रव्यमान 0.018 ग्राम है, तो पानी की एक बूंद में कितने मोल परमाणु मौजूद हैं?",
+      "q_en": "If one drop of water has 0.018 g mass. How many moles of atoms present in one drop of water?",
       "options": [
         "0.03 mol",
         "0.001 mol",
@@ -4547,11 +4549,11 @@
     },
     {
       "q": "On diluting a 1.0 M solution of a weak electrolyte to 0.01 M, its molar conductivity increases dramatically. This is because: / एक कमज़ोर इलेक्ट्रोलाइट के 1.0 M घोल को 0.01 M तक पतला करने पर, इसकी मोलर चालकता नाटकीय रूप से बढ़ जाती है।",
-      "q_en": "On diluting a 1.0 M solution of a weak electrolyte to 0.01 M, its molar conductivity increases dramatically. This is because: / एक कमज़ोर इलेक्ट्रोलाइट के 1.0 M घोल को 0.01 M तक पतला करने पर, इसकी मोलर चालकता नाटकीय रूप से बढ़ जाती है।",
+      "q_en": "On diluting a 1.0 M solution of a weak electrolyte to 0.01 M, its molar conductivity increases dramatically. This is because:",
       "options": [
-        "Degree of dissociation increases, producing more free ions",
+        "Degree of dissociation बढ़ता है, producing more free ions",
         "Ion pairing becomes significant at low concentration",
-        "The number of ions increases due to higher volume",
+        "The number of ions बढ़ता है due to higher volume",
         "Conductivity is not affected by dilution in weak electrolytes"
       ],
       "options_en": [
@@ -4566,7 +4568,7 @@
     },
     {
       "q": "Which of the following biodegradable polymers is commonly used in the medical field for sutures and drug delivery systems? / इनमें से कौन-सा जैव अपघटनीय पॉलिमर चिकित्सा क्षेत्र में टांकों (स्यूचर) और दवा वितरण प्रणाली में आमतौर पर उपयोग किया जाता है?",
-      "q_en": "Which of the following biodegradable polymers is commonly used in the medical field for sutures and drug delivery systems? / इनमें से कौन-सा जैव अपघटनीय पॉलिमर चिकित्सा क्षेत्र में टांकों (स्यूचर) और दवा वितरण प्रणाली में आमतौर पर उपयोग किया जाता है?",
+      "q_en": "Which of the following biodegradable polymers is commonly used in the medical field for sutures and drug delivery systems?",
       "options": [
         "Polycaprolactone (PCL)",
         "Polylactic acid (PLA)",
@@ -4585,31 +4587,31 @@
     },
     {
       "q": "Phenol is heated with CHCl3 and alcoholic KOH when salicylaldehyde is produced. This reaction is known as: / फिनोल को CHCl3 और एल्कोहॉल KOH के साथ गर्म करने पर सैलिसिल्डिहाइड बनता है। इस अभिक्रिया को क्या कहते हैं?",
-      "q_en": "Phenol is heated with CHCl3 and alcoholic KOH when salicylaldehyde is produced. This reaction is known as: / फिनोल को CHCl3 और एल्कोहॉल KOH के साथ गर्म करने पर सैलिसिल्डिहाइड बनता है। इस अभिक्रिया को क्या कहते हैं?",
+      "q_en": "Phenol is heated with CHCl3 and alcoholic KOH when salicylaldehyde is produced. This reaction is known as:",
       "options": [
-        "Reimer Tiemann reaction / रीमर टिएमैन प्रतिक्रिया",
-        "Friedel crafts reaction / फ्रिडेल शिल्प प्रतिक्रिया",
-        "Sommelet reaction / सोम्मलेट अभिक्रिया",
-        "Rosenmund's reaction / रोसेनमुंड की प्रतिक्रिया"
+        "Reimer Tiemann reaction",
+        "Friedel crafts reaction",
+        "Sommelet reaction",
+        "Rosenmund's reaction"
       ],
       "options_en": [
-        "Reimer Tiemann reaction / रीमर टिएमैन प्रतिक्रिया",
-        "Friedel crafts reaction / फ्रिडेल शिल्प प्रतिक्रिया",
-        "Sommelet reaction / सोम्मलेट अभिक्रिया",
-        "Rosenmund's reaction / रोसेनमुंड की प्रतिक्रिया"
+        "Reimer Tiemann reaction",
+        "Friedel crafts reaction",
+        "Sommelet reaction",
+        "Rosenmund's reaction"
       ],
       "answer": 0,
       "type": "PYQ",
       "id": 242
     },
     {
-      "q": "Select the INCORRECTLY spelt word.",
+      "q": "गलत वर्तनी वाला शब्द चुनें।",
       "q_en": "Select the INCORRECTLY spelt word.",
       "options": [
         "Cataract",
         "Catalogue",
         "Catastroph",
-        "Catalyst"
+        "उत्प्रेरक"
       ],
       "options_en": [
         "Cataract",
@@ -4623,18 +4625,18 @@
     },
     {
       "q": "Which of the following compounds has the highest boiling point? / निम्नलिखित में से किस यौगिक का क्वथनांक सबसे अधिक है?",
-      "q_en": "Which of the following compounds has the highest boiling point? / निम्नलिखित में से किस यौगिक का क्वथनांक सबसे अधिक है?",
+      "q_en": "Which of the following compounds has the highest boiling point?",
       "options": [
-        "Acetone / एसीटोन",
-        "Formaldehyde / फॉर्मिल्डिहाइड",
-        "Butanone / ब्यूटेनोन",
-        "Methanol / मेथेनॉल"
+        "ऐसीटोन",
+        "फार्मऐल्डिहाइड",
+        "Butanone",
+        "मेथेनॉल"
       ],
       "options_en": [
-        "Acetone / एसीटोन",
-        "Formaldehyde / फॉर्मिल्डिहाइड",
-        "Butanone / ब्यूटेनोन",
-        "Methanol / मेथेनॉल"
+        "Acetone",
+        "Formaldehyde",
+        "Butanone",
+        "Methanol"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -4642,18 +4644,18 @@
     },
     {
       "q": "Which amino acid lacks a chiral center? / किस अमीनो एसिड में किरल (चिरल) केंद्र नहीं होता?",
-      "q_en": "Which amino acid lacks a chiral center? / किस अमीनो एसिड में किरल (चिरल) केंद्र नहीं होता?",
+      "q_en": "Which amino acid lacks a chiral center?",
       "options": [
-        "Glycine / ग्लाइसिन",
-        "Serine / सेरीन",
-        "Valine / वेलिन",
-        "Alanine / एलानिन"
+        "Glycine",
+        "सेरीन",
+        "वेलिन",
+        "Alanine"
       ],
       "options_en": [
-        "Glycine / ग्लाइसिन",
-        "Serine / सेरीन",
-        "Valine / वेलिन",
-        "Alanine / एलानिन"
+        "Glycine",
+        "Serine",
+        "Valine",
+        "Alanine"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -4661,12 +4663,12 @@
     },
     {
       "q": "Which of the following is true about the boiling point of ethers compared to alcohols? / अल्कोहल की तुलना में ईथर के क्वथनांक के बारे में निम्नलिखित में से कौन-सा कथन सत्य है?",
-      "q_en": "Which of the following is true about the boiling point of ethers compared to alcohols? / अल्कोहल की तुलना में ईथर के क्वथनांक के बारे में निम्नलिखित में से कौन-सा कथन सत्य है?",
+      "q_en": "Which of the following is true about the boiling point of ethers compared to alcohols?",
       "options": [
         "Ethers have a much higher boiling point than alcohols",
-        "Ethers have a higher boiling point than alcohols due to hydrogen bonding",
+        "Ethers have a higher boiling point than alcohols due to हाइड्रोजन bonding",
         "Ethers and alcohols have the same boiling point",
-        "Ethers have a lower boiling point than alcohols due to the absence of hydrogen bonding"
+        "Ethers have a lower boiling point than alcohols due to the absence of हाइड्रोजन bonding"
       ],
       "options_en": [
         "Ethers have a much higher boiling point than alcohols",
@@ -4680,7 +4682,7 @@
     },
     {
       "q": "Which of the following statement is correct regarding high ionization potentials? / उच्च आयनन विभव के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
-      "q_en": "Which of the following statement is correct regarding high ionization potentials? / उच्च आयनन विभव के संबंध में निम्नलिखित में से कौन सा कथन सही है?",
+      "q_en": "Which of the following statement is correct regarding high ionization potentials?",
       "options": [
         "Only completely filled subshells",
         "Only half-filled subshells",
@@ -4699,9 +4701,9 @@
     },
     {
       "q": "Which change would most reduce the effectiveness of a solid catalyst in a gas-phase reaction? / कौन-सा परिवर्तन गैस-चरण प्रतिक्रिया में ठोस उत्प्रेरक की प्रभावशीलता को सबसे अधिक कम कर देगा?",
-      "q_en": "Which change would most reduce the effectiveness of a solid catalyst in a gas-phase reaction? / कौन-सा परिवर्तन गैस-चरण प्रतिक्रिया में ठोस उत्प्रेरक की प्रभावशीलता को सबसे अधिक कम कर देगा?",
+      "q_en": "Which change would most reduce the effectiveness of a solid catalyst in a gas-phase reaction?",
       "options": [
-        "Grinding the catalyst",
+        "Grinding the उत्प्रेरक",
         "Covering it with an inert layer",
         "Increasing pressure",
         "Lowering temperature slightly"
@@ -4718,7 +4720,7 @@
     },
     {
       "q": "Which of the following experimental changes would least affect the rate of a gas-phase reaction involving only elementary steps? / निम्नलिखित में से कौन-सा प्रायोगिक परिवर्तन केवल प्रारंभिक चरणों वाली गैस-चरण प्रतिक्रिया की दर को सबसे कम प्रभावित करेगा?",
-      "q_en": "Which of the following experimental changes would least affect the rate of a gas-phase reaction involving only elementary steps? / निम्नलिखित में से कौन-सा प्रायोगिक परिवर्तन केवल प्रारंभिक चरणों वाली गैस-चरण प्रतिक्रिया की दर को सबसे कम प्रभावित करेगा?",
+      "q_en": "Which of the following experimental changes would least affect the rate of a gas-phase reaction involving only elementary steps?",
       "options": [
         "Using a smaller vessel",
         "Cooling the reaction flask",
@@ -4737,7 +4739,7 @@
     },
     {
       "q": "Rutherford's Atomic Model suggests that: / रदरफोर्ड का परमाणु मॉडल निम्नलिखित में से क्या सुझाता है?",
-      "q_en": "Rutherford's Atomic Model suggests that: / रदरफोर्ड का परमाणु मॉडल निम्नलिखित में से क्या सुझाता है?",
+      "q_en": "Rutherford's Atomic Model suggests that:",
       "options": [
         "The nucleus and electrons are randomly distributed",
         "Electrons revolve around the nucleus in fixed orbits",
@@ -4756,10 +4758,10 @@
     },
     {
       "q": "Which of the following statements best explains why a redox reaction in an electrochemical cell can be used to power a device like a flashlight? / निम्नलिखित में से कौन-सा कथन सबसे अच्छे ढंग से यह बताता है कि विद्युत-रासायनिक सेल में रेडॉक्स प्रतिक्रिया का उपयोग टॉर्च जैसे उपकरण को शक्ति प्रदान करने के लिए क्यों किया जा सकता है?",
-      "q_en": "Which of the following statements best explains why a redox reaction in an electrochemical cell can be used to power a device like a flashlight? / निम्नलिखित में से कौन-सा कथन सबसे अच्छे ढंग से यह बताता है कि विद्युत-रासायनिक सेल में रेडॉक्स प्रतिक्रिया का उपयोग टॉर्च जैसे उपकरण को शक्ति प्रदान करने के लिए क्यों किया जा सकता है?",
+      "q_en": "Which of the following statements best explains why a redox reaction in an electrochemical cell can be used to power a device like a flashlight?",
       "options": [
         "The reaction has a positive Gibbs free energy, making it efficient",
-        "The reaction increases entropy, which lights the bulb",
+        "The reaction बढ़ता है entropy, which lights the bulb",
         "The cell potential becomes zero, allowing electricity to flow",
         "The reaction is spontaneous, meaning it can release energy to do work"
       ],
@@ -4775,18 +4777,18 @@
     },
     {
       "q": "In Polymerase Chain Reaction, number of oligonucleotide primers used are _______. / पॉलीमरेज़ चेन रिएक्शन में प्रयुक्त ओलिगोन्यूक्लियोटाइड प्राइमर्स की संख्या ________ होती है।",
-      "q_en": "In Polymerase Chain Reaction, number of oligonucleotide primers used are _______. / पॉलीमरेज़ चेन रिएक्शन में प्रयुक्त ओलिगोन्यूक्लियोटाइड प्राइमर्स की संख्या ________ होती है।",
+      "q_en": "In Polymerase Chain Reaction, number of oligonucleotide primers used are _______.",
       "options": [
-        "four / चार",
-        "six / छह",
-        "two / दो",
-        "one / एक"
+        "चार",
+        "छह",
+        "दो",
+        "एक"
       ],
       "options_en": [
-        "four / चार",
-        "six / छह",
-        "two / दो",
-        "one / एक"
+        "four",
+        "six",
+        "two",
+        "one"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -4794,25 +4796,25 @@
     },
     {
       "q": "During which movement did Mahatma Gandhi give the call for 'Do or Die'? Which of the following chemical compound causes Bio-magnification? / निम्नलिखित में से कौन-सा रासायनिक यौगिक जैव-आवर्धन का कारण बनता है?",
-      "q_en": "During which movement did Mahatma Gandhi give the call for 'Do or Die'? Which of the following chemical compound causes Bio-magnification? / निम्नलिखित में से कौन-सा रासायनिक यौगिक जैव-आवर्धन का कारण बनता है?",
+      "q_en": "During which movement did Mahatma Gandhi give the call for 'Do or Die'? Which of the following chemical compound causes Bio-magnification?",
       "options": [
-        "D.D.T / डी.डी.टी",
-        "Sulphur dioxide / सल्फर डाइऑक्साइड",
-        "Carbon dioxide / कार्बन डाईऑक्साइड",
-        "Methane / मीथेन"
+        "डी.डी.टी. (DDT)",
+        "सल्फर डाइऑक्साइड",
+        "कार्बन डाइऑक्साइड",
+        "मेथेन"
       ],
       "options_en": [
-        "D.D.T / डी.डी.टी",
-        "Sulphur dioxide / सल्फर डाइऑक्साइड",
-        "Carbon dioxide / कार्बन डाईऑक्साइड",
-        "Methane / मीथेन"
+        "D.D.T",
+        "Sulphur dioxide",
+        "Carbon dioxide",
+        "Methane"
       ],
       "answer": 0,
       "type": "PYQ",
       "id": 253
     },
     {
-      "q": "Choose an antonym for the word given from the options given below. strategic",
+      "q": "'Strategic' का विलोम शब्द चुनें।",
       "q_en": "Choose an antonym for the word given from the options given below. strategic",
       "options": [
         "baseless",
@@ -4832,7 +4834,7 @@
     },
     {
       "q": "Mass of two atoms of calcium will be ____. / कैल्शियम के दो परमाणुओं का द्रव्यमान ____ होगा।",
-      "q_en": "Mass of two atoms of calcium will be ____. / कैल्शियम के दो परमाणुओं का द्रव्यमान ____ होगा।",
+      "q_en": "Mass of two atoms of calcium will be ____.",
       "options": [
         "80 u",
         "40 u",
@@ -4851,11 +4853,11 @@
     },
     {
       "q": "Which of these CORRECTLY explains why high temperatures do NOT always speed up every reaction? / इनमें से कौन-सा सही ढंग से बताता है कि उच्च तापमान हमेशा हर प्रतिक्रिया को तेज़ क्यों नहीं करता है?",
-      "q_en": "Which of these CORRECTLY explains why high temperatures do NOT always speed up every reaction? / इनमें से कौन-सा सही ढंग से बताता है कि उच्च तापमान हमेशा हर प्रतिक्रिया को तेज़ क्यों नहीं करता है?",
+      "q_en": "Which of these CORRECTLY explains why high temperatures do NOT always speed up every reaction?",
       "options": [
         "The rate becomes independent of temperature beyond a point",
-        "High temperature increases only the reverse reaction",
-        "Some reactions depend only on catalyst",
+        "High temperature बढ़ता है only the reverse reaction",
+        "Some reactions depend only on उत्प्रेरक",
         "Some reactions have their fastest rate at moderate temperatures and high temperature may deactivate catalysts"
       ],
       "options_en": [
@@ -4869,38 +4871,38 @@
       "id": 256
     },
     {
-      "q": "What is the majority charge carrier in a p-type semiconductor? / पी-टाइप अर्धचालक में मुख्य आवेश वाहक कौन होता है?",
-      "q_en": "What is the majority charge carrier in a p-type semiconductor? / पी-टाइप अर्धचालक में मुख्य आवेश वाहक कौन होता है?",
+      "q": "p-प्रकार अर्धचालक में मुख्य आवेश वाहक कौन होता है?",
+      "q_en": "What is the majority charge carrier in a p-type semiconductor?",
       "options": [
-        "Electrons / इलेक्ट्रॉन",
-        "Both electrons and holes in equal numbers",
-        "Protons / प्रोटॉन",
-        "Holes / छिद्र"
+        "इलेक्ट्रॉन",
+        "समान संख्या में इलेक्ट्रॉन और होल दोनों",
+        "प्रोटॉन",
+        "होल"
       ],
       "options_en": [
-        "Electrons / इलेक्ट्रॉन",
+        "Electrons",
         "Both electrons and holes in equal numbers",
-        "Protons / प्रोटॉन",
-        "Holes / छिद्र"
+        "Protons",
+        "Holes"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 257
     },
     {
-      "q": "Lucas test is used for distinction of: / लुकास परीक्षण का उपयोग किसके भेद के लिए किया जाता है?",
-      "q_en": "Lucas test is used for distinction of: / लुकास परीक्षण का उपयोग किसके भेद के लिए किया जाता है?",
+      "q": "लुकास परीक्षण किसके विभेद के लिए प्रयुक्त होता है?",
+      "q_en": "Lucas test is used for distinction of:",
       "options": [
-        "Phenols / फिनोल",
-        "Aldehydes / एल्डीहाइड",
-        "Alkyl halides / एल्काइल हैलाइड",
-        "Alcohols / अल्कोहल"
+        "फीनॉल",
+        "ऐल्डिहाइड",
+        "ऐल्काइल हैलाइड",
+        "ऐल्कोहॉल"
       ],
       "options_en": [
-        "Phenols / फिनोल",
-        "Aldehydes / एल्डीहाइड",
-        "Alkyl halides / एल्काइल हैलाइड",
-        "Alcohols / अल्कोहल"
+        "Phenols",
+        "Aldehydes",
+        "Alkyl halides",
+        "Alcohols"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -4908,7 +4910,7 @@
     },
     {
       "q": "Why do extrinsic semiconductors exhibit higher conductivity than intrinsic semiconductors at room temperature? / कमरे के तापमान पर बाह्य अर्धचालक आंतरिक अर्धचालकों की तुलना में उच्च चालकता क्यों प्रदर्शित करते हैं?",
-      "q_en": "Why do extrinsic semiconductors exhibit higher conductivity than intrinsic semiconductors at room temperature? / कमरे के तापमान पर बाह्य अर्धचालक आंतरिक अर्धचालकों की तुलना में उच्च चालकता क्यों प्रदर्शित करते हैं?",
+      "q_en": "Why do extrinsic semiconductors exhibit higher conductivity than intrinsic semiconductors at room temperature?",
       "options": [
         "Free electrons or holes are generated by photon excitation",
         "The valence band merges with conduction band",
@@ -4927,7 +4929,7 @@
     },
     {
       "q": "Which of the following is the correct order of acid strength for the given acids? / निम्नलिखित में से कौन-सा दिए गए अम्लों के लिए अम्ल शक्ति का सही क्रम है?",
-      "q_en": "Which of the following is the correct order of acid strength for the given acids? / निम्नलिखित में से कौन-सा दिए गए अम्लों के लिए अम्ल शक्ति का सही क्रम है?",
+      "q_en": "Which of the following is the correct order of acid strength for the given acids?",
       "options": [
         "Benzoic acid (C₆H₅COOH) > Acetic acid (CH₃COOH) > Formic acid (HCOOH) > Carbonic acid (H₂CO₃)",
         "Acetic acid (CH₃COOH) > Formic acid (HCOOH) > Benzoic acid (C₆H₅COOH) > Carbonic acid (H₂CO₃)",
@@ -4946,7 +4948,7 @@
     },
     {
       "q": "According to Bohr's second postulate, which of the following CORRECTLY represents the allowed angular momentum of an electron in a hydrogen atom? / बोहर की दूसरी अभिधारणा के अनुसार, निम्नलिखित में से क्या हाइड्रोजन परमाणु में इलेक्ट्रॉन के अनुमत कोणीय संवेग को सही ढंग से दर्शाता है?",
-      "q_en": "According to Bohr's second postulate, which of the following CORRECTLY represents the allowed angular momentum of an electron in a hydrogen atom? / बोहर की दूसरी अभिधारणा के अनुसार, निम्नलिखित में से क्या हाइड्रोजन परमाणु में इलेक्ट्रॉन के अनुमत कोणीय संवेग को सही ढंग से दर्शाता है?",
+      "q_en": "According to Bohr's second postulate, which of the following CORRECTLY represents the allowed angular momentum of an electron in a hydrogen atom?",
       "options": [
         "L = n h/2n (correct: L=nh/2π)",
         "L = h/n",
@@ -4964,19 +4966,19 @@
       "id": 261
     },
     {
-      "q": "On moving from left to right across a period ionization energy / किसी आवर्त में बाएं से दाएं जाने पर आयनन ऊर्जा:",
-      "q_en": "On moving from left to right across a period ionization energy / किसी आवर्त में बाएं से दाएं जाने पर आयनन ऊर्जा:",
+      "q": "किसी आवर्त में बाएँ से दाएँ जाने पर आयनन ऊर्जा:",
+      "q_en": "On moving from left to right across a period ionization energy",
       "options": [
-        "Remains the same / वही रहती है",
-        "First increases then decreases / पहले बढ़ती है फिर घटती है",
-        "Decreases / घट जाती है",
-        "Increases / बढ़ जाती है"
+        "समान रहती है",
+        "पहले बढ़ती है फिर घटती है",
+        "घटती है",
+        "बढ़ती है"
       ],
       "options_en": [
-        "Remains the same / वही रहती है",
-        "First increases then decreases / पहले बढ़ती है फिर घटती है",
-        "Decreases / घट जाती है",
-        "Increases / बढ़ जाती है"
+        "Remains the same",
+        "First increases then decreases",
+        "Decreases",
+        "Increases"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -4984,12 +4986,12 @@
     },
     {
       "q": "Which of the following reagents is used to distinguish between an aldehyde and a ketone? / निम्नलिखित में से कौन-सा अभिकारक, एल्डिहाइड और कीटोन में अंतर करने के लिए उपयोग किया जाता है?",
-      "q_en": "Which of the following reagents is used to distinguish between an aldehyde and a ketone? / निम्नलिखित में से कौन-सा अभिकारक, एल्डिहाइड और कीटोन में अंतर करने के लिए उपयोग किया जाता है?",
+      "q_en": "Which of the following reagents is used to distinguish between an aldehyde and a ketone?",
       "options": [
         "Tollen's reagent (AgNO₃ in NH₃)",
-        "Potassium permanganate (KMnO₄)",
-        "Sodium hydroxide (NaOH)",
-        "Hydrogen gas (H₂) with nickel"
+        "पोटेशियम permanganate (KMnO₄)",
+        "सोडियम हाइड्रॉक्साइड (NaOH)",
+        "हाइड्रोजन gas (H₂) with nickel"
       ],
       "options_en": [
         "Tollen's reagent (AgNO₃ in NH₃)",
@@ -5003,37 +5005,37 @@
     },
     {
       "q": "Which of the following haloalkanes will undergo E2 elimination when treated with a strong base? / निम्नलिखित में से कौन-सा हैलोऐल्केन प्रबल क्षार के साथ उपचारित करने पर E2 उन्मूलन करेगा?",
-      "q_en": "Which of the following haloalkanes will undergo E2 elimination when treated with a strong base? / निम्नलिखित में से कौन-सा हैलोऐल्केन प्रबल क्षार के साथ उपचारित करने पर E2 उन्मूलन करेगा?",
+      "q_en": "Which of the following haloalkanes will undergo E2 elimination when treated with a strong base?",
       "options": [
-        "Bromomethane / ब्रोमोमेथेन",
+        "Bromomethane",
         "2-Bromoethane / 2-ब्रोमोइथेन",
         "1-Bromoethane / 1-ब्रोमोइथेन",
-        "Tert-butyl bromide / टर्ट-ब्यूटाइल ब्रोमाइड"
+        "Tert-butyl bromide"
       ],
       "options_en": [
-        "Bromomethane / ब्रोमोमेथेन",
+        "Bromomethane",
         "2-Bromoethane / 2-ब्रोमोइथेन",
         "1-Bromoethane / 1-ब्रोमोइथेन",
-        "Tert-butyl bromide / टर्ट-ब्यूटाइल ब्रोमाइड"
+        "Tert-butyl bromide"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 264
     },
     {
-      "q": "Which of the following is a cross linked polymer? / निम्नलिखित में से कौन-सा एक क्रॉस लिंक्ड पॉलिमर है?",
-      "q_en": "Which of the following is a cross linked polymer? / निम्नलिखित में से कौन-सा एक क्रॉस लिंक्ड पॉलिमर है?",
+      "q": "निम्नलिखित में से कौन-सा एक क्रॉस-लिंक्ड बहुलक है?",
+      "q_en": "Which of the following is a cross linked polymer?",
       "options": [
-        "Bakelite / बेकलाइट",
-        "High density polythene / उच्च घनत्व पॉलिथीन",
-        "PVC / पीवीसी",
-        "Low density polythene / निम्न घनत्व पॉलिथीन"
+        "बैकेलाइट",
+        "उच्च घनत्व पॉलिथीन",
+        "पीवीसी (PVC)",
+        "निम्न घनत्व पॉलिथीन"
       ],
       "options_en": [
-        "Bakelite / बेकलाइट",
-        "High density polythene / उच्च घनत्व पॉलिथीन",
-        "PVC / पीवीसी",
-        "Low density polythene / निम्न घनत्व पॉलिथीन"
+        "Bakelite",
+        "High density polythene",
+        "PVC",
+        "Low density polythene"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -5041,9 +5043,9 @@
     },
     {
       "q": "During a reaction, the amount of product rises quickly at the beginning but then gradually slows down and stabilizes. What is the most accurate explanation for this pattern? / किसी प्रतिक्रिया के दौरान, उत्पाद की मात्रा शुरुआत में तेज़ी से बढ़ती है लेकिन फिर धीरे-धीरे थीमी हो जाती है।",
-      "q_en": "During a reaction, the amount of product rises quickly at the beginning but then gradually slows down and stabilizes. What is the most accurate explanation for this pattern? / किसी प्रतिक्रिया के दौरान, उत्पाद की मात्रा शुरुआत में तेज़ी से बढ़ती है लेकिन फिर धीरे-धीरे थीमी हो जाती है।",
+      "q_en": "During a reaction, the amount of product rises quickly at the beginning but then gradually slows down and stabilizes. What is the most accurate explanation for this pattern?",
       "options": [
-        "The temperature increases",
+        "The temperature बढ़ता है",
         "The products start reacting backward",
         "The reaction becomes zero order",
         "The reactants are nearly used up"
@@ -5060,7 +5062,7 @@
     },
     {
       "q": "According to the dual nature of matter, when electrons are accelerated, they: / पदार्थ की द्वि-प्रकृति के अनुसार, जब इलेक्ट्रॉन लारित (एक्सेलरेट) होते हैं, तो वे:",
-      "q_en": "According to the dual nature of matter, when electrons are accelerated, they: / पदार्थ की द्वि-प्रकृति के अनुसार, जब इलेक्ट्रॉन लारित (एक्सेलरेट) होते हैं, तो वे:",
+      "q_en": "According to the dual nature of matter, when electrons are accelerated, they:",
       "options": [
         "Move in a straight line",
         "Exhibit both wave and particle properties",
@@ -5097,16 +5099,16 @@
       "id": 268
     },
     {
-      "q": "Which of the following chemical compound causes Bio-magnification? / निम्नलिखित में से कौन-सा रासायनिक यौगिक जैव-आवर्धन का कारण बनता है?",
-      "q_en": "Which of the following chemical compound causes Bio-magnification? / निम्नलिखित में से कौन-सा रासायनिक यौगिक जैव-आवर्धन का कारण बनता है?",
+      "q": "निम्नलिखित में से कौन-सा रासायनिक यौगिक जैव-आवर्धन (biomagnification) का कारण बनता है?",
+      "q_en": "Which of the following chemical compound causes Bio-magnification?",
       "options": [
-        "D.D.T / डी.डी.टी",
-        "Sulphur dioxide",
-        "Carbon dioxide",
-        "Methane"
+        "डी.डी.टी. (DDT)",
+        "सल्फर डाइऑक्साइड",
+        "कार्बन डाइऑक्साइड",
+        "मेथेन"
       ],
       "options_en": [
-        "D.D.T / डी.डी.टी",
+        "D.D.T",
         "Sulphur dioxide",
         "Carbon dioxide",
         "Methane"
@@ -5117,37 +5119,37 @@
     },
     {
       "q": "Which of the following type of malaria is caused by Plasmodium falciparum? Which of the following type of malaria is caused by Plasmodium falciparum? Which fungus is used for the production of citric acid in industries? / उद्योगों में साइट्रिक एसिड के उत्सादन के लिए किस कवक के उपयोग किया जाता है?",
-      "q_en": "Which of the following type of malaria is caused by Plasmodium falciparum? Which of the following type of malaria is caused by Plasmodium falciparum? Which fungus is used for the production of citric acid in industries? / उद्योगों में साइट्रिक एसिड के उत्सादन के लिए किस कवक के उपयोग किया जाता है?",
+      "q_en": "Which of the following type of malaria is caused by Plasmodium falciparum? Which of the following type of malaria is caused by Plasmodium falciparum? Which fungus is used for the production of citric acid in industries?",
       "options": [
-        "Trichoderma / ट्राइकोडर्म",
-        "Saccharomyces / सैकरोमाइसेस",
-        "Aspergillus niger / एस्परगिलस नाइगर",
-        "Rhizopus stolonifer / राइज़ोपस स्टोलोनिफर"
+        "ट्राइकोडर्मा",
+        "Saccharomyces",
+        "Aspergillus niger",
+        "Rhizopus stolonifer"
       ],
       "options_en": [
-        "Trichoderma / ट्राइकोडर्म",
-        "Saccharomyces / सैकरोमाइसेस",
-        "Aspergillus niger / एस्परगिलस नाइगर",
-        "Rhizopus stolonifer / राइज़ोपस स्टोलोनिफर"
+        "Trichoderma",
+        "Saccharomyces",
+        "Aspergillus niger",
+        "Rhizopus stolonifer"
       ],
       "answer": 2,
       "type": "PYQ",
       "id": 270
     },
     {
-      "q": "Which of the following amines can undergo Hofmann degradation? / निम्नलिखित में से कौन-सा एमीन हॉफमैन अपघटन से गुज़र सकता है?",
-      "q_en": "Which of the following amines can undergo Hofmann degradation? / निम्नलिखित में से कौन-सा एमीन हॉफमैन अपघटन से गुज़र सकता है?",
+      "q": "निम्नलिखित में से कौन-सा ऐमीन हॉफमैन निम्नीकरण (Hofmann degradation) से गुजर सकता है?",
+      "q_en": "Which of the following amines can undergo Hofmann degradation?",
       "options": [
-        "Tertiary amine (R₃N) / तृतीयक अमीन (R₃N)",
-        "Aniline (C₆H₅NH₂) / एनिलीन (C₆H₅NH₂)",
-        "Secondary amine (R₂NH) / द्वितीयक अमीन (R₂NH)",
-        "Primary alkylamine (R-NH₂) / प्राथमिक एल्केलामाइन (R-NH₂)"
+        "तृतीयक ऐमीन (R₃N)",
+        "ऐनिलीन (C₆H₅NH₂)",
+        "द्वितीयक ऐमीन (R₂NH)",
+        "प्राथमिक ऐल्किलऐमीन (R-NH₂)"
       ],
       "options_en": [
-        "Tertiary amine (R₃N) / तृतीयक अमीन (R₃N)",
-        "Aniline (C₆H₅NH₂) / एनिलीन (C₆H₅NH₂)",
-        "Secondary amine (R₂NH) / द्वितीयक अमीन (R₂NH)",
-        "Primary alkylamine (R-NH₂) / प्राथमिक एल्केलामाइन (R-NH₂)"
+        "Tertiary amine (R₃N)",
+        "Aniline (C₆H₅NH₂)",
+        "Secondary amine (R₂NH)",
+        "Primary alkylamine (R-NH₂)"
       ],
       "answer": 3,
       "type": "PYQ",
@@ -5155,7 +5157,7 @@
     },
     {
       "q": "Which of the following correctly identifies the monomers of Glyptal and Thermocol? / निम्नलिखित में से क्या ग्लाइप्टल और थर्मोकोल के मोनोमर्स की सही पहचान करता है?",
-      "q_en": "Which of the following correctly identifies the monomers of Glyptal and Thermocol? / निम्नलिखित में से क्या ग्लाइप्टल और थर्मोकोल के मोनोमर्स की सही पहचान करता है?",
+      "q_en": "Which of the following correctly identifies the monomers of Glyptal and Thermocol?",
       "options": [
         "Glyptal - Ethylene glycol and vinyl chloride; Thermocol - Styrene",
         "Glyptal - Phthalic acid and ethylene glycol; Thermocol - Styrene",
@@ -5173,26 +5175,26 @@
       "id": 272
     },
     {
-      "q": "Which of the following methods is commonly used for the degradation of biodegradable polymers?",
+      "q": "जैव-अपघटनीय बहुलकों के अपघटन के लिए सामान्यतः किस विधि का उपयोग किया जाता है?",
       "q_en": "Which of the following methods is commonly used for the degradation of biodegradable polymers?",
       "options": [
-        "Combustion / दहन",
-        "Radiation / विकिरण",
-        "Oxidation / ऑक्सीकरण",
-        "Hydrolysis / हाइड्रोलिसिस"
+        "दहन",
+        "विकिरण",
+        "ऑक्सीकरण",
+        "जल-अपघटन"
       ],
       "options_en": [
-        "Combustion / दहन",
-        "Radiation / विकिरण",
-        "Oxidation / ऑक्सीकरण",
-        "Hydrolysis / हाइड्रोलिसिस"
+        "Combustion",
+        "Radiation",
+        "Oxidation",
+        "Hydrolysis"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 273
     },
     {
-      "q": "Which best explains why an intrinsic semiconductor maintains equal electron and hole concentrations at thermal equilibrium?",
+      "q": "Which best explains क्यों an intrinsic semiconductor maintains equal electron and hole concentrations at thermal equilibrium?",
       "q_en": "Which best explains why an intrinsic semiconductor maintains equal electron and hole concentrations at thermal equilibrium?",
       "options": [
         "Recombination removes excess carriers uniformly",
@@ -5211,13 +5213,13 @@
       "id": 274
     },
     {
-      "q": "Which statement is true about the solubility of aldehydes and ketones in water?",
+      "q": "Which statement is true about the solubility of aldehydes and ketones in जल?",
       "q_en": "Which statement is true about the solubility of aldehydes and ketones in water?",
       "options": [
-        "Neither aldehydes nor ketones are soluble in water",
-        "Aldehydes and ketones are insoluble in water",
-        "Only aldehydes are soluble in water; ketones are not",
-        "Aldehydes and ketones are soluble in water due to hydrogen bonding"
+        "Neither aldehydes nor ketones are soluble in जल",
+        "Aldehydes and ketones are insoluble in जल",
+        "Only aldehydes are soluble in जल; ketones are not",
+        "Aldehydes and ketones are soluble in जल due to हाइड्रोजन bonding"
       ],
       "options_en": [
         "Neither aldehydes nor ketones are soluble in water",
@@ -5230,17 +5232,17 @@
       "id": 275
     },
     {
-      "q": "Which is the correct method for reducing a carboxylic acid to an alcohol?",
+      "q": "Which is the correct method for reducing a कार्बोक्सिलिक अम्ल to an ऐल्कोहॉल?",
       "q_en": "Which is the correct method for reducing a carboxylic acid to an alcohol?",
       "options": [
-        "Sodium borohydride reduction",
-        "Catalytic hydrogenation / उद्रेरक हाइड्रोजनीकरण",
-        "Sodium metal reduction",
-        "Lithium aluminium hydride (LiAlH₄)"
+        "सोडियम borohydride अपचयन",
+        "Catalytic hydrogenation",
+        "सोडियम metal अपचयन",
+        "Lithium ऐलुमिनियम hydride (LiAlH₄)"
       ],
       "options_en": [
         "Sodium borohydride reduction",
-        "Catalytic hydrogenation / उद्रेरक हाइड्रोजनीकरण",
+        "Catalytic hydrogenation",
         "Sodium metal reduction",
         "Lithium aluminium hydride (LiAlH₄)"
       ],
@@ -5268,18 +5270,18 @@
       "id": 277
     },
     {
-      "q": "What is the main purpose of the Sandmeyer reaction?",
+      "q": "क्या है the main purpose of the Sandmeyer reaction?",
       "q_en": "What is the main purpose of the Sandmeyer reaction?",
       "options": [
         "To form a hydroxyl group on an aromatic ring",
         "To form an alkyl group on an aromatic ring",
-        "To replace the diazonium group with a halogen / डायज़ोनियम समूह को हैलोजेन से प्रतिस्थापित करना",
+        "To replace the diazonium group with a halogen",
         "To form an amino group on an aromatic ring"
       ],
       "options_en": [
         "To form a hydroxyl group on an aromatic ring",
         "To form an alkyl group on an aromatic ring",
-        "To replace the diazonium group with a halogen / डायज़ोनियम समूह को हैलोजेन से प्रतिस्थापित करना",
+        "To replace the diazonium group with a halogen",
         "To form an amino group on an aromatic ring"
       ],
       "answer": 2,
@@ -5287,18 +5289,18 @@
       "id": 278
     },
     {
-      "q": "When gas A reacts with gas B in a sealed container, increasing only A's pressure increases the rate. What can we infer?",
+      "q": "When gas A reacts with gas B in a sealed container, increasing only A's pressure बढ़ता है the rate. What can we infer?",
       "q_en": "When gas A reacts with gas B in a sealed container, increasing only A's pressure increases the rate. What can we infer?",
       "options": [
-        "Gas B is a catalyst",
+        "Gas B is a उत्प्रेरक",
         "The reaction depends on both gases equally",
-        "Gas B is in excess / गैस B अधिक मात्रा में है",
+        "Gas B is in excess",
         "Gas A is the product"
       ],
       "options_en": [
         "Gas B is a catalyst",
         "The reaction depends on both gases equally",
-        "Gas B is in excess / गैस B अधिक मात्रा में है",
+        "Gas B is in excess",
         "Gas A is the product"
       ],
       "answer": 2,
@@ -5325,7 +5327,7 @@
       "id": 280
     },
     {
-      "q": "No. of moles of Oxygen needed for complete oxidation of 1 mol CₓHᵧ gaseous hydrocarbon is:",
+      "q": "No. of moles of ऑक्सीजन needed for complete ऑक्सीकरण of 1 mol CₓHᵧ gaseous hydrocarbon is:",
       "q_en": "No. of moles of Oxygen needed for complete oxidation of 1 mol CₓHᵧ gaseous hydrocarbon is:",
       "options": [
         "x+y",
@@ -5367,13 +5369,13 @@
       "q_en": "In a ferromagnetic material, magnetisation persists after the external field is removed due to:",
       "options": [
         "Free electrons in the material",
-        "Alignment of magnetic domains / चुंबकीय डोमेन का संरेखण",
+        "Alignment of magnetic domains",
         "High electrical conductivity",
         "Strong electric dipoles"
       ],
       "options_en": [
         "Free electrons in the material",
-        "Alignment of magnetic domains / चुंबकीय डोमेन का संरेखण",
+        "Alignment of magnetic domains",
         "High electrical conductivity",
         "Strong electric dipoles"
       ],
@@ -5382,11 +5384,11 @@
       "id": 283
     },
     {
-      "q": "Which statement is most accurate regarding a catalyst's role in the energy profile of a reaction?",
+      "q": "Which statement is most accurate regarding a उत्प्रेरक's role in the energy profile of a reaction?",
       "q_en": "Which statement is most accurate regarding a catalyst's role in the energy profile of a reaction?",
       "options": [
-        "It decreases the enthalpy change",
-        "It increases the energy of products",
+        "It घटता है the enthalpy change",
+        "It बढ़ता है the energy of products",
         "It changes both energy of reactants and products",
         "The energy of the activated complex is reduced"
       ],
@@ -5401,17 +5403,17 @@
       "id": 284
     },
     {
-      "q": "Which is the product when an aldehyde is treated with Tollen's reagent?",
+      "q": "जब ऐल्डिहाइड की टॉलेन अभिकर्मक से अभिक्रिया कराई जाती है तो कौन-सा उत्पाद बनता है?",
       "q_en": "Which is the product when an aldehyde is treated with Tollen's reagent?",
       "options": [
-        "Benzene",
-        "Silver mirror / सिल्वर मिरर",
-        "Alcohol",
-        "Carboxylic acid"
+        "बेन्जीन",
+        "रजत दर्पण (Silver mirror)",
+        "ऐल्कोहॉल",
+        "कार्बोक्सिलिक अम्‍ल"
       ],
       "options_en": [
         "Benzene",
-        "Silver mirror / सिल्वर मिरर",
+        "Silver mirror",
         "Alcohol",
         "Carboxylic acid"
       ],
@@ -5420,17 +5422,17 @@
       "id": 285
     },
     {
-      "q": "On moving from left to right in a period, the ionic radius of isoelectronic cations:",
+      "q": "किसी आवर्त में बाएँ से दाएँ जाने पर सम-इलेक्ट्रॉनी धनायनों की आयनिक त्रिज्या:",
       "q_en": "On moving from left to right in a period, the ionic radius of isoelectronic cations:",
       "options": [
-        "Remains the same",
-        "Decreases / घट जाती है",
-        "First increases then decreases",
-        "Increases"
+        "समान रहती है",
+        "घटती है",
+        "पहले बढ़ती है फिर घटती है",
+        "बढ़ती है"
       ],
       "options_en": [
         "Remains the same",
-        "Decreases / घट जाती है",
+        "Decreases",
         "First increases then decreases",
         "Increases"
       ],
@@ -5439,16 +5441,16 @@
       "id": 286
     },
     {
-      "q": "Catalytic converters in automobiles change un-burnt hydrocarbon into:",
+      "q": "स्वचालित वाहनों में उत्प्रेरकीय परिवर्तक (catalytic converters) अधजले हाइड्रोकार्बन को किसमें बदलते हैं?",
       "q_en": "Catalytic converters in automobiles change un-burnt hydrocarbon into:",
       "options": [
-        "Carbon dioxide and water / कार्बन डाइऑक्साइड और जल",
-        "Methanol",
-        "Carbon monoxide",
-        "Carbon dioxide and methane"
+        "कार्बन डाइऑक्साइड और जल",
+        "मेथेनॉल",
+        "कार्बन मोनोऑक्साइड",
+        "कार्बन डाइऑक्साइड और मेथेन"
       ],
       "options_en": [
-        "Carbon dioxide and water / कार्बन डाइऑक्साइड और जल",
+        "Carbon dioxide and water",
         "Methanol",
         "Carbon monoxide",
         "Carbon dioxide and methane"
@@ -5477,7 +5479,7 @@
       "id": 288
     },
     {
-      "q": "10 kg ethene is used for polymerization to produce y kg polythene. What is the value of y?",
+      "q": "10 kg ethene is used for polymerization to produce y kg polythene. क्या है the value of y?",
       "q_en": "10 kg ethene is used for polymerization to produce y kg polythene. What is the value of y?",
       "options": [
         "y = 0",
@@ -5496,13 +5498,13 @@
       "id": 289
     },
     {
-      "q": "Which haloalkane is most reactive in nucleophilic substitution?",
+      "q": "नाभिकरागी प्रतिस्थापन में कौन-सा हैलोऐल्केन सबसे अधिक क्रियाशील है?",
       "q_en": "Which haloalkane is most reactive in nucleophilic substitution?",
       "options": [
-        "1-Chloropropane",
-        "1-Iodobutane / 1-आयोडोब्यूटेन",
-        "2-Bromopropane",
-        "3-Bromo-3-methylbutane"
+        "1-क्लोरोप्रोपेन",
+        "1-आयोडोब्यूटेन",
+        "2-ब्रोमोप्रोपेन",
+        "3-ब्रोमो-3-मेथिलब्यूटेन"
       ],
       "options_en": [
         "1-Chloropropane",
@@ -5534,13 +5536,13 @@
       "id": 291
     },
     {
-      "q": "Which compound will NOT react with sodium bicarbonate?",
+      "q": "कौन-सा यौगिक सोडियम बाइकार्बोनेट के साथ अभिक्रिया नहीं करेगा?",
       "q_en": "Which compound will NOT react with sodium bicarbonate?",
       "options": [
-        "Acetic acid (CH₃COOH)",
-        "Formic acid (HCOOH)",
-        "Butanoic acid",
-        "Phenol (C₆H₅OH)"
+        "ऐसीटिक अम्ल (CH₃COOH)",
+        "फॉर्मिक अम्ल (HCOOH)",
+        "ब्यूटेनोइक अम्ल",
+        "फीनॉल (C₆H₅OH)"
       ],
       "options_en": [
         "Acetic acid (CH₃COOH)",
@@ -5553,13 +5555,13 @@
       "id": 292
     },
     {
-      "q": "A catalyst speeds up a reaction but rate does NOT increase further beyond a certain amount of catalyst because:",
+      "q": "A उत्प्रेरक speeds up a reaction but rate does NOT बढ़ता है further beyond a certain amount of उत्प्रेरक because:",
       "q_en": "A catalyst speeds up a reaction but rate does NOT increase further beyond a certain amount of catalyst because:",
       "options": [
-        "The reaction reaches a stage where catalyst is no longer the limiting factor",
-        "Too much catalyst slows the reaction",
+        "The reaction reaches a stage where उत्प्रेरक is no longer the limiting factor",
+        "Too much उत्प्रेरक slows the reaction",
         "The reactants are fully consumed",
-        "The catalyst gets saturated and stops working"
+        "The उत्प्रेरक gets saturated and stops working"
       ],
       "options_en": [
         "The reaction reaches a stage where catalyst is no longer the limiting factor",
@@ -5575,10 +5577,10 @@
       "q": "Which statement is incorrect about Aldehydes and Ketones?",
       "q_en": "Which statement is incorrect about Aldehydes and Ketones?",
       "options": [
-        "Ketones have the general formula R-CO-OH",
+        "Ketones have the सामान्य सूत्र R-CO-OH",
         "Both aldehydes and ketones contain a carbonyl group (C=O)",
         "Aldehydes are more reactive than ketones",
-        "Aldehydes have the general formula R-CHO"
+        "Aldehydes have the सामान्य सूत्र R-CHO"
       ],
       "options_en": [
         "Ketones have the general formula R-CO-OH",
@@ -5591,18 +5593,18 @@
       "id": 294
     },
     {
-      "q": "Electron affinity values are determined indirectly with the help of:",
+      "q": "इलेक्ट्रॉन बंधुता के मान किसकी सहायता से अप्रत्यक्ष रूप से निर्धारित किए जाते हैं?",
       "q_en": "Electron affinity values are determined indirectly with the help of:",
       "options": [
-        "Electronegativity",
-        "Ionization potential",
-        "Born-Haber Cycle / बोर्न-हेबर चक्र",
-        "Metallic character"
+        "विद्युत ऋणात्मकता",
+        "आयनन विभव",
+        "बॉर्न-हेबर चक्र",
+        "धात्विक गुण"
       ],
       "options_en": [
         "Electronegativity",
         "Ionization potential",
-        "Born-Haber Cycle / बोर्न-हेबर चक्र",
+        "Born-Haber Cycle",
         "Metallic character"
       ],
       "answer": 2,
@@ -5648,51 +5650,51 @@
       "id": 297
     },
     {
-      "q": "Which is a condensation polymer?",
+      "q": "कौन-सा एक संघनन बहुलक है?",
       "q_en": "Which is a condensation polymer?",
       "options": [
-        "PVC / पीवीसी",
-        "PAN / पैन",
-        "Dacron / डेक्रॉन",
-        "Teflon / टेफ्लान"
+        "पीवीसी (PVC)",
+        "पैन (PAN)",
+        "डेक्रॉन",
+        "टेफ्लॉन"
       ],
       "options_en": [
-        "PVC / पीवीसी",
-        "PAN / पैन",
-        "Dacron / डेक्रॉन",
-        "Teflon / टेफ्लान"
+        "PVC",
+        "PAN",
+        "Dacron",
+        "Teflon"
       ],
       "answer": 2,
       "type": "PYQ",
       "id": 298
     },
     {
-      "q": "The number of tripeptides formed by 3 different amino acids is:",
+      "q": "3 भिन्न अमीनो अम्लों से बनने वाले ट्राइपेप्टाइड्स की संख्या है:",
       "q_en": "The number of tripeptides formed by 3 different amino acids is:",
       "options": [
-        "Five / पाँच",
-        "Three / तीन",
-        "Four / चार",
-        "Six / छह"
+        "पाँच",
+        "तीन",
+        "चार",
+        "छह"
       ],
       "options_en": [
-        "Five / पाँच",
-        "Three / तीन",
-        "Four / चार",
-        "Six / छह"
+        "Five",
+        "Three",
+        "Four",
+        "Six"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 299
     },
     {
-      "q": "Which reaction is an example of nucleophilic addition to an aldehyde or ketone?",
+      "q": "Which reaction is an example of nucleophilic addition to an ऐल्डिहाइड or कीटोन?",
       "q_en": "Which reaction is an example of nucleophilic addition to an aldehyde or ketone?",
       "options": [
-        "Oxidation of aldehydes to carboxylic acids",
-        "Reduction of aldehydes to alcohols",
+        "ऑक्सीकरण of aldehydes to carboxylic acids",
+        "अपचयन of aldehydes to alcohols",
         "Dehydration of alcohols to alkenes",
-        "Addition of hydrogen cyanide to aldehydes or ketones"
+        "Addition of हाइड्रोजन cyanide to aldehydes or ketones"
       ],
       "options_en": [
         "Oxidation of aldehydes to carboxylic acids",
@@ -5705,11 +5707,11 @@
       "id": 300
     },
     {
-      "q": "In Bohr's theory, why does the electron NOT spiral into the nucleus?",
+      "q": "In Bohr's theory, क्यों does the electron NOT spiral into the nucleus?",
       "q_en": "In Bohr's theory, why does the electron NOT spiral into the nucleus?",
       "options": [
         "Bohr introduced quantized orbits where electrons do not radiate energy",
-        "The mass of the electron increases with speed",
+        "The mass of the electron बढ़ता है with speed",
         "The electrostatic attraction is exactly balanced by centrifugal force",
         "The nucleus exerts no net force on the electron in Bohr's model"
       ],
@@ -5724,17 +5726,17 @@
       "id": 301
     },
     {
-      "q": "Which reagent converts benzoic acid into benzene?",
+      "q": "कौन-सा अभिकर्मक बेन्जोइक अम्ल को बेन्जीन में परिवर्तित करता है?",
       "q_en": "Which reagent converts benzoic acid into benzene?",
       "options": [
         "LiAlH₄",
         "Zn/Heat / Zn/ऊष्मा",
-        "H₂/Pd-C",
-        "Conc. H₂SO₄"
+        "H₂ / Pd-C",
+        "सांद्र H₂SO₄"
       ],
       "options_en": [
         "LiAlH₄",
-        "Zn/Heat / Zn/ऊष्मा",
+        "Zn/Heat / Zn",
         "H₂/Pd-C",
         "Conc. H₂SO₄"
       ],
@@ -5743,17 +5745,17 @@
       "id": 302
     },
     {
-      "q": "In Rutherford's atomic model, the size of the nucleus is:",
+      "q": "रदरफोर्ड के परमाणु मॉडल में नाभिक का आकार होता है:",
       "q_en": "In Rutherford's atomic model, the size of the nucleus is:",
       "options": [
-        "Equal to the size of the atom",
-        "Small compared to the size of the atom / परमाणु के आकार की तुलना में छोटा",
-        "Negligible",
-        "Large compared to the size of the atom"
+        "परमाणु के आकार के बराबर",
+        "परमाणु के आकार की तुलना में छोटा",
+        "नगण्य",
+        "परमाणु के आकार की तुलना में बड़ा"
       ],
       "options_en": [
         "Equal to the size of the atom",
-        "Small compared to the size of the atom / परमाणु के आकार की तुलना में छोटा",
+        "Small compared to the size of the atom",
         "Negligible",
         "Large compared to the size of the atom"
       ],
@@ -5762,13 +5764,13 @@
       "id": 303
     },
     {
-      "q": "Which carboxylic acid has the highest acidity?",
+      "q": "किस कार्बोक्सिलिक अम्ल की अम्लता सबसे अधिक है?",
       "q_en": "Which carboxylic acid has the highest acidity?",
       "options": [
-        "Trifluoroacetic acid (C₂H₂F₃COOH)",
-        "Formic acid (HCOOH)",
-        "Acetic acid (CH₃COOH)",
-        "Benzoic acid (C₆H₅COOH)"
+        "ट्राइफ्लुओरोऐसीटिक अम्ल",
+        "फॉर्मिक अम्ल (HCOOH)",
+        "ऐसीटिक अम्ल (CH₃COOH)",
+        "बेन्जोइक अम्ल (C₆H₅COOH)"
       ],
       "options_en": [
         "Trifluoroacetic acid (C₂H₂F₃COOH)",
@@ -5781,16 +5783,16 @@
       "id": 304
     },
     {
-      "q": "Why are first-order reactions ideal for radioactive decay studies?",
+      "q": "क्यों are first-order reactions ideal for radioactive decay studies?",
       "q_en": "Why are first-order reactions ideal for radioactive decay studies?",
       "options": [
-        "Their rate depends only on how much is left / उनकी दर केवल इस बात पर निर्भर करती है कि कितना बचा है",
+        "Their rate depends only on कैसे much is left",
         "They require catalysts",
         "They involve multiple reactants",
         "They are influenced by pressure"
       ],
       "options_en": [
-        "Their rate depends only on how much is left / उनकी दर केवल इस बात पर निर्भर करती है कि कितना बचा है",
+        "Their rate depends only on how much is left",
         "They require catalysts",
         "They involve multiple reactants",
         "They are influenced by pressure"
@@ -5800,17 +5802,17 @@
       "id": 305
     },
     {
-      "q": "The chelate effect is mainly attributed to:",
+      "q": "कीलेट प्रभाव मुख्यतः किसके कारण होता है?",
       "q_en": "The chelate effect is mainly attributed to:",
       "options": [
-        "Lower ionic potential of metal",
-        "Increase in entropy during complex formation / जटिल निर्माण के समय एन्ट्रॉपी में वृद्धि",
-        "Increase in volume",
-        "Decrease in lattice energy"
+        "धातु का निम्न आयनिक विभव",
+        "संकुल निर्माण के दौरान एन्ट्रॉपी में वृद्धि",
+        "आयतन में वृद्धि",
+        "जालक ऊर्जा में कमी"
       ],
       "options_en": [
         "Lower ionic potential of metal",
-        "Increase in entropy during complex formation / जटिल निर्माण के समय एन्ट्रॉपी में वृद्धि",
+        "Increase in entropy during complex formation",
         "Increase in volume",
         "Decrease in lattice energy"
       ],
@@ -5838,16 +5840,16 @@
       "id": 307
     },
     {
-      "q": "Atomic as well as ionic radii of alkali metals increases from:",
+      "q": "क्षार धातुओं की परमाण्विक तथा आयनिक त्रिज्याएँ किस क्रम में बढ़ती हैं:",
       "q_en": "Atomic as well as ionic radii of alkali metals increases from:",
       "options": [
-        "Lithium to Caesium / लिथियम से सीज़ियम",
-        "Caesium to Lithium",
-        "Caesium to Sodium",
-        "Potassium to Sodium"
+        "लिथियम से सीज़ियम",
+        "सीज़ियम से लिथियम",
+        "सीज़ियम से सोडियम",
+        "पोटेशियम से सोडियम"
       ],
       "options_en": [
-        "Lithium to Caesium / लिथियम से सीज़ियम",
+        "Lithium to Caesium",
         "Caesium to Lithium",
         "Caesium to Sodium",
         "Potassium to Sodium"
@@ -5857,13 +5859,12 @@
       "id": 308
     },
     {
-      "subject": "Chemistry",
       "q": "Orlon is formed by polymerisation of: : Vinyl chloride",
       "q_en": "Orlon is formed by polymerisation of: : Vinyl chloride",
       "options": [
-        "Tetrafluoroethylene",
-        "Acerylonitrile",
-        "Styrene",
+        "टेट्राफ्लुओरोएथिलीन",
+        "एक्रिलोनाइट्राइल",
+        "स्टाइरीन",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -5877,13 +5878,12 @@
       "id": 309
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following contains 42% fructose, 50% glucose, 6% maltose and 2% maltotriose? 42% , 50% , 6% 2% ? Glucose Isomerase",
+      "q": "निम्नलिखित में से किसमें 42% फ्रु क्टोज, 50% ग्लूकोज, 6% माल्टोज और 2% माल्टोट्रोज होता है?",
       "q_en": "Which of the following contains 42% fructose, 50% glucose, 6% maltose and 2% maltotriose? 42% , 50% , 6% 2% ? Glucose Isomerase",
       "options": [
-        "Lipase",
-        "Acrylamide",
-        "Fructose",
+        "लाइपेस",
+        "एक्रिलामाइड",
+        "फ्रु क्टोज",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -5897,11 +5897,10 @@
       "id": 310
     },
     {
-      "subject": "Chemistry",
       "q": "Nitration of acetanilide followed by hydrolysis gives : : o-Nitroaniline",
       "q_en": "Nitration of acetanilide followed by hydrolysis gives : : o-Nitroaniline",
       "options": [
-        "o- p-Nitroaniline",
+        "o व p-नाइट्रो ऐनिलीन",
         "p- o & p-Nitroaniline",
         "o p- o-Nitroanilinium ion",
         "o-"
@@ -5917,7 +5916,6 @@
       "id": 311
     },
     {
-      "subject": "Chemistry",
       "q": "TriammineChlorocyanonitro cobalt (III)",
       "q_en": "TriammineChlorocyanonitro cobalt (III)",
       "options": [
@@ -5937,13 +5935,12 @@
       "id": 312
     },
     {
-      "subject": "Chemistry",
       "q": "For isotonic solutions _________ should be same. _________ Temperature",
       "q_en": "For isotonic solutions _________ should be same. _________ Temperature",
       "options": [
-        "Pressure",
-        "Volume",
-        "Viscosity",
+        "दाब",
+        "आयतन",
+        "श्यानता",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -5957,13 +5954,12 @@
       "id": 313
     },
     {
-      "subject": "Chemistry",
-      "q": "In the industrial preparation of ethanol from starch by fermentation processes, a small amount of inferior liquor called “fusel oil” is obtained, This is chemically a mixture of. ‘‘ ” , ? Propyl alcoh",
+      "q": "किण्वन विधि द्वारा स्टार्च से एथेनॉल के निर्माण में कु छ मात्रा में एक द्रव जिसे ‘‘फ्यूजेल तेल” कहते हैं, प्राप्त होता है। यह किसका रासायनिक मिश्रण होता है?",
       "q_en": "In the industrial preparation of ethanol from starch by fermentation processes, a small amount of inferior liquor called “fusel oil” is obtained, This is chemically a mixture of. ‘‘ ” , ? Propyl alcoh",
       "options": [
-        ", , Propyl alcohol, ispropyl alcohol and isopentyl alcohol",
-        ", Methanol, ethanol and 1–propanol",
-        ", 1-",
+        "प्रोपिल ऐल्कोहॉल, आइसोप्रोपिल ऐल्कोहॉल और आइसोपेंटिल ऐल्कोहॉल का",
+        "मेथेनॉल, एथेनॉल और 1-प्रोपेनॉल का मेथेनैल, एथेनॉल और प्रोपेनैल का",
+        "हमेशा 1",
         "Methanal + ethanal + propanal ,"
       ],
       "options_en": [
@@ -5977,13 +5973,12 @@
       "id": 314
     },
     {
-      "subject": "Chemistry",
-      "q": "Lanthanoid contraction implies- Decrease in density",
+      "q": "Lanthanoid contraction implies- घटता है in density",
       "q_en": "Lanthanoid contraction implies- Decrease in density",
       "options": [
-        "Decrease in mass",
-        "Decrease in ionic radii",
-        "Decrease in radioactivity",
+        "द्रव्यमान में कमी होती है",
+        "आयनिक त्रिज्या में कमी होती है",
+        "रे डियोएक्टिवता में कमी होती है",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -5997,13 +5992,12 @@
       "id": 315
     },
     {
-      "subject": "Chemistry",
       "q": "The lanthanide contraction is responsible for the fact that - – Zr and Y have almost the same radius",
       "q_en": "The lanthanide contraction is responsible for the fact that - – Zr and Y have almost the same radius",
       "options": [
-        "Zr Y Zr and Nb have similar oxidation state",
+        "Zr Y Zr and Nb have similar ऑक्सीकरण अवस्था",
         "Zr Nb Zr and Hf have almost the same radius",
-        "Zr Hf Zr and Zn have the same oxidation state",
+        "Zr Hf Zr and Zn have the same ऑक्सीकरण अवस्था",
         "Zr Zn"
       ],
       "options_en": [
@@ -6017,13 +6011,12 @@
       "id": 316
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following diseases is due to the deficiency of vitamin A?",
+      "q": "निम्नलिखित में से कौनसा रोग विटामिन A की कमी से होता है?",
       "q_en": "Which of the following diseases is due to the deficiency of vitamin A?",
       "options": [
-        "? Scurvy A Nightblindness",
-        "Beri-beri",
-        "Anemia",
+        "?",
+        "बेरीबेरी",
+        "रक्ताल्पता",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6037,13 +6030,12 @@
       "id": 317
     },
     {
-      "subject": "Chemistry",
-      "q": "Sugars having which group are known as aldoses and depending on the number of carbon atoms Monosaccharides are named as triose, tetrose, pentose etc? , , ? Aldehyde",
+      "q": "किस समूह वाले शक्कर को ऐल्डोज के रूप में जाना जाता है और कार्बन परमाणुओं की संख्या के आधार पर मोनोसेके राइड को ट्रायोज़, टेट्रोज़, पेन्टोज़ आदि नाम दिया जाता है?",
       "q_en": "Sugars having which group are known as aldoses and depending on the number of carbon atoms Monosaccharides are named as triose, tetrose, pentose etc? , , ? Aldehyde",
       "options": [
-        "Alkyl",
-        "Ketone",
-        "Hydroxyl",
+        "अल्काइल",
+        "के टोन",
+        "हाइड्रोक्साइल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6057,7 +6049,6 @@
       "id": 318
     },
     {
-      "subject": "Chemistry",
       "q": "Diphenylurea, ethane",
       "q_en": "Diphenylurea, ethane",
       "options": [
@@ -6077,7 +6068,6 @@
       "id": 319
     },
     {
-      "subject": "Chemistry",
       "q": "Potassiumammine dicyanodioxoperoxo chromate (VI)",
       "q_en": "Potassiumammine dicyanodioxoperoxo chromate (VI)",
       "options": [
@@ -6097,11 +6087,10 @@
       "id": 320
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is the simplest form of amino acid which has a single hydrogen atom as side chain? ? Methionine",
+      "q": "निम्नलिखित में से कौन-सा is the simplest form of अमीनो अम्ल which has a single हाइड्रोजन atom as side chain?",
       "q_en": "Which of the following is the simplest form of amino acid which has a single hydrogen atom as side chain? ? Methionine",
       "options": [
-        "Proline",
+        "प्रोलाइन",
         "हाइड्रोजन",
         "Glycine Leucine",
         "नाइट्रोजन"
@@ -6117,11 +6106,10 @@
       "id": 321
     },
     {
-      "subject": "Chemistry",
       "q": "Choose correct option related to Nicad cell. (i) Reactions can be reversed during charging. (ii) No gases are produced during charging. (iii) No gases are produced during discharging. (iv) Reactions c",
       "q_en": "Choose correct option related to Nicad cell. (i) Reactions can be reversed during charging. (ii) No gases are produced during charging. (iii) No gases are produced during discharging. (iv) Reactions c",
       "options": [
-        "(i) (ii) (ii) and (iv)",
+        "(ii), (iii) और (iv)",
         "(ii) (iv) (i), (ii) and (iii)",
         "(i), (ii) (iii) (ii), (iii) and (iv)",
         "(ii), (iii) (iv)"
@@ -6137,13 +6125,12 @@
       "id": 322
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is not a characteristic property of transition metal? - High enthalpy of atomisation",
+      "q": "निम्न में से कौनसा संक्रमण धातुओं का अभिलाक्षणिक गुण नहीं है-",
       "q_en": "Which of the following is not a characteristic property of transition metal? - High enthalpy of atomisation",
       "options": [
-        "Formation of interstitial compounds",
-        "Diamagnetism",
-        "Variable oxidation state",
+        "अन्तराकाशी यौगिको का निर्माण",
+        "प्रति चुम्बकत्व",
+        "परिवर्तनशील ऑक्सीजन अवस्था",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6157,13 +6144,12 @@
       "id": 323
     },
     {
-      "subject": "Chemistry",
-      "q": "Lanthanide contraction is due to increase in- – Shielding by 4f electrons",
+      "q": "Lanthanide contraction is due to बढ़ता है in- – Shielding by 4f electrons",
       "q_en": "Lanthanide contraction is due to increase in- – Shielding by 4f electrons",
       "options": [
-        "4f Atomic number",
-        "Effective nuclear charge",
-        "Size of 4 f-orbital",
+        "4f परमाणु क्रमांक",
+        "प्रभावी नाभिकीय आवेश",
+        "4 f-कक्षकों का आकार",
         "4 f-"
       ],
       "options_en": [
@@ -6177,7 +6163,6 @@
       "id": 324
     },
     {
-      "subject": "Chemistry",
       "q": "Equal number of paired electrons",
       "q_en": "Equal number of paired electrons",
       "options": [
@@ -6197,11 +6182,10 @@
       "id": 325
     },
     {
-      "subject": "Chemistry",
       "q": "Aniline can be obtained by:- : Benzoyl chloride and ammonia",
       "q_en": "Aniline can be obtained by:- : Benzoyl chloride and ammonia",
       "options": [
-        "Reduction of benzamide",
+        "अपचयन of benzamide",
         "हाइड्रोजन",
         "Benzoic anhydride and ammonia",
         "नाइट्रोजन"
@@ -6217,13 +6201,12 @@
       "id": 326
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following acts as a biocatalyst? ? Enzyme",
+      "q": "निम्नलिखित में से कौन जैव उत्प्रेरक के रूप में कार्य करता है?",
       "q_en": "Which of the following acts as a biocatalyst? ? Enzyme",
       "options": [
-        "Amino acid",
-        "Nitrogen molecule",
-        "Carbohydrate",
+        "ऐमीनो अम्ल",
+        "नाइट्रोजन अणु",
+        "कार्बोहाइड्रेट",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6237,7 +6220,6 @@
       "id": 327
     },
     {
-      "subject": "Chemistry",
       "q": "Pentaammine (thiocyanato-N) cobalt (III) chloride",
       "q_en": "Pentaammine (thiocyanato-N) cobalt (III) chloride",
       "options": [
@@ -6257,13 +6239,12 @@
       "id": 328
     },
     {
-      "subject": "Chemistry",
       "q": "Aromatic aldehydes react with aromatic primary amines to give ________. _______ Urea",
       "q_en": "Aromatic aldehydes react with aromatic primary amines to give ________. _______ Urea",
       "options": [
-        "Amide",
-        "Schiff’s base",
-        "Oxime",
+        "एमाइड",
+        "शिफ क्षार",
+        "ऑक्सीम",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6277,7 +6258,6 @@
       "id": 329
     },
     {
-      "subject": "Chemistry",
       "q": "intensive, extensive",
       "q_en": "intensive, extensive",
       "options": [
@@ -6297,13 +6277,12 @@
       "id": 330
     },
     {
-      "subject": "Chemistry",
       "q": "Transition metals ions form interstitial compounds because- , - Interstices are available in their crystal lattice",
       "q_en": "Transition metals ions form interstitial compounds because- , - Interstices are available in their crystal lattice",
       "options": [
-        "They have empty d-orbitals",
+        "इनमें रिक्त d-कक्षक होते है",
         "d- They have high value of ionic potential",
-        "They show variable oxidation states",
+        "ये परिवर्तनशील ऑक्सीकरण अवस्थाऐं दर्शाते है",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6317,8 +6296,7 @@
       "id": 331
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following reagent attacks the carbonyl group of carboxylic acid? ?",
+      "q": "निम्नलिखित में से कौन-सा reagent attacks the carbonyl group of कार्बोक्सिलिक अम्ल?",
       "q_en": "Which of the following reagent attacks the carbonyl group of carboxylic acid? ?",
       "options": [
         "हाइड्रोजन",
@@ -6337,13 +6315,12 @@
       "id": 332
     },
     {
-      "subject": "Chemistry",
       "q": "The electrical resistance of any object is directly proportional to its _______, and inversely proportional to its ___________. _______ , _______ length, area of cross section.",
       "q_en": "The electrical resistance of any object is directly proportional to its _______, and inversely proportional to its ___________. _______ , _______ length, area of cross section.",
       "options": [
-        ", resistivity, length",
-        ", area of cross section, length",
-        ", length, resistivity",
+        "प्रतिरोधकता, लंबाई",
+        "क्रॉस सेक्शन का क्षेत्रफल, लंबाई",
+        "लंबाई, प्रतिरोधकता",
         ","
       ],
       "options_en": [
@@ -6357,8 +6334,7 @@
       "id": 333
     },
     {
-      "subject": "Chemistry",
-      "q": "Zymase can convert I. Glucose to ethanol II. Fructose to ethanol Zymase I. II. Only II",
+      "q": "Zymase can convert I. ग्लूकोज to ethanol II. फ्रुक्टोज to ethanol Zymase I. II. Only II",
       "q_en": "Zymase can convert I. Glucose to ethanol II. Fructose to ethanol Zymase I. II. Only II",
       "options": [
         "II Only I",
@@ -6377,13 +6353,12 @@
       "id": 334
     },
     {
-      "subject": "Chemistry",
-      "q": "The linkage which holds various amino acid units in primary structure of proteins is Glycoside linkage",
+      "q": "The linkage which holds various अमीनो अम्ल units in primary structure of proteins is Glycoside linkage",
       "q_en": "The linkage which holds various amino acid units in primary structure of proteins is Glycoside linkage",
       "options": [
-        "Peptide linkage",
-        "Ionic linkage",
-        "Hydrogen linkage",
+        "पेप्टाइड बंध",
+        "आयनिक बंध",
+        "हाइड्रोजन बंध",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6397,13 +6372,12 @@
       "id": 335
     },
     {
-      "subject": "Chemistry",
-      "q": "Potassium pentachloroazidoosmate (VIII)",
+      "q": "पोटेशियम pentachloroazidoosmate (VIII)",
       "q_en": "Potassium pentachloroazidoosmate (VIII)",
       "options": [
-        "(VIII) Potassium pentachloroazidoosmate (VI)",
-        "(VI) Potassium pentachloronitridoosmate (VI)",
-        "(VI) Potassium nitroosmate (III)",
+        "(VIII) पोटेशियम pentachloroazidoosmate (VI)",
+        "(VI) पोटेशियम pentachloronitridoosmate (VI)",
+        "(VI) पोटेशियम nitroosmate (III)",
         "(III)"
       ],
       "options_en": [
@@ -6417,7 +6391,6 @@
       "id": 336
     },
     {
-      "subject": "Chemistry",
       "q": "Only (a) and (b)",
       "q_en": "Only (a) and (b)",
       "options": [
@@ -6437,13 +6410,12 @@
       "id": 337
     },
     {
-      "subject": "Chemistry",
-      "q": "Ethylene glycol on oxidation with periodic acid give: : Glyoxal",
+      "q": "Ethylene glycol on ऑक्सीकरण with periodic acid give: : Glyoxal",
       "q_en": "Ethylene glycol on oxidation with periodic acid give: : Glyoxal",
       "options": [
-        "Oxalic acid",
-        "Formaldehyde",
-        "Glycolic acid",
+        "आक्सेलिक अम्ल",
+        "फार्मऐल्डिहाइड",
+        "ग्लाइकोलिक अम्ल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6457,13 +6429,12 @@
       "id": 338
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is known as the Hell-Volhard-Zelinsky reaction? - - ? Salt formation from carboxylic acids",
+      "q": "निम्नलिखित में से किसे हेल-वोल्हार्ड-ज़ेलिंस्की अभिक्रिया के रूप में जाना जाता है?",
       "q_en": "Which of the following is known as the Hell-Volhard-Zelinsky reaction? - - ? Salt formation from carboxylic acids",
       "options": [
-        "Conversion of carboxylic acids into acid chlorides",
-        "Alpha-halogenation of aliphatic carboxylic acids",
-        "- Conversion of carboxylic acids into amides",
+        "कार्बोक्जिलिक अम्ल का एसिड क्लोराइड में रूपांतरण",
+        "एलिफै टिक कार्बोक्जिलिक अम्ल का अल्फा-हैलोजेनेशन",
+        "कार्बोक्जिलिक अम्ल का एमाइड्स में रूपांतरण",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6477,13 +6448,12 @@
       "id": 339
     },
     {
-      "subject": "Chemistry",
       "q": "For flow of same quantity of electricity through different solution connected in _____ , the weights deposited are in the ratio of their _____. _____ , _____ series, total weight",
       "q_en": "For flow of same quantity of electricity through different solution connected in _____ , the weights deposited are in the ratio of their _____. _____ , _____ series, total weight",
       "options": [
-        ", parallel, total weight",
-        ", series, equivalent weight",
-        ", parallel, equivalent weight",
+        "समानांतर, कु ल वजन",
+        "श्रृंखला, समकक्ष वजन",
+        "समानांतर, बराबर वजन।",
         ","
       ],
       "options_en": [
@@ -6497,7 +6467,6 @@
       "id": 340
     },
     {
-      "subject": "Chemistry",
       "q": "-2FE, -2FE",
       "q_en": "-2FE, -2FE",
       "options": [
@@ -6517,13 +6486,12 @@
       "id": 341
     },
     {
-      "subject": "Chemistry",
-      "q": "Choose wrong statement: : Electrical work done = decrease in free energy",
+      "q": "Choose wrong statement: : Electrical work done = घटता है in free energy",
       "q_en": "Choose wrong statement: : Electrical work done = decrease in free energy",
       "options": [
-        "= Electrical work done = increase in free energy",
-        "= Electrical work done = electrical energy conservation",
-        "= Electrical work done = decrease in free energy",
+        "किया गया विद्युत कार्य = मुक्त ऊर्जा में वृद्धि",
+        "किया गया विद्युत कार्य = उत्पादित विद्युत ऊर्जा",
+        "किया गया विद्युत कार्य = मुक्त ऊर्जा में कमी",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6537,13 +6505,12 @@
       "id": 342
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following product is formed in a reaction between benzenediazonium chloride and phenol in a weakly basic medium? - ? p-hydroxyazobenzene",
+      "q": "कमजोर क्षारीय माध्यम में बेंजीनडायज़ोनियम क्लोराइड और फिनोल के बीच की प्रतिक्रिया में निम्नलिखित में से कौन-सा उत्पाद बनता है?",
       "q_en": "Which of the following product is formed in a reaction between benzenediazonium chloride and phenol in a weakly basic medium? - ? p-hydroxyazobenzene",
       "options": [
-        "p- Diphenyl ether",
-        "Chlorobenzene",
-        "Benzene",
+        "p- Diphenyl ईथर",
+        "क्लोरोबेंजीन",
+        "बेन्जीन",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6557,13 +6524,12 @@
       "id": 343
     },
     {
-      "subject": "Chemistry",
       "q": "Invert sugar is: - Variety of cane sugar",
       "q_en": "Invert sugar is: - Variety of cane sugar",
       "options": [
-        "Optically inactive form of sugar",
-        "Mixture of glucose and Fructose in equimolar proportion",
-        "Mixture of glucose and galactose",
+        "शर्क रा का वैकल्पिक रूप से निष्क्रिय रूप",
+        "ग्लूकोज और फ्रु क्टोज का सममोलर अनुपात में मिश्रण",
+        "ग्लूकोज और गैलेक्टोज का मिश्रण",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6577,7 +6543,6 @@
       "id": 344
     },
     {
-      "subject": "Chemistry",
       "q": "Dichlorotetraaquachromium (III) nitrate",
       "q_en": "Dichlorotetraaquachromium (III) nitrate",
       "options": [
@@ -6597,13 +6562,12 @@
       "id": 345
     },
     {
-      "subject": "Chemistry",
-      "q": "Which is classified as a neutral amino acid, but has weakly acidic side chains that can be deprotonated in a strong base solution? , ? Tyrosine",
+      "q": "किसे एक तटस्थ अमीनो एसिड के रूप में वर्गीकृ त किया गया है, लेकिन इसमें कमजोर अम्लीय पक्ष श्रृंखलाएं हैं जिन्हें एक मजबूत क्षार समाधान में अवक्षेपित किया जा सकता है?",
       "q_en": "Which is classified as a neutral amino acid, but has weakly acidic side chains that can be deprotonated in a strong base solution? , ? Tyrosine",
       "options": [
-        "Lysine",
-        "Valine",
-        "Leucine",
+        "लाइसिन",
+        "वेलिन",
+        "ल्यूसीन",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6617,7 +6581,6 @@
       "id": 346
     },
     {
-      "subject": "Chemistry",
       "q": "3-amino-2-formly butane-1, 4-dioic acid",
       "q_en": "3-amino-2-formly butane-1, 4-dioic acid",
       "options": [
@@ -6637,12 +6600,11 @@
       "id": 347
     },
     {
-      "subject": "Chemistry",
       "q": "Trichloroacetaldehyde was subjected to cannizzaro's reaction by using NaOH the mixture of the products contains sodiumtrichloro acetate ion and another compound. The Other compound is NaOH , 2,2,2 Tri",
       "q_en": "Trichloroacetaldehyde was subjected to cannizzaro's reaction by using NaOH the mixture of the products contains sodiumtrichloro acetate ion and another compound. The Other compound is NaOH , 2,2,2 Tri",
       "options": [
         "2,2,2 Tri chloromethanol",
-        "2,2,2-Trichloro propanol",
+        "2,2,2-ट्राइक्लोरो प्रोपेनोल",
         "2,2,2- Chloroform",
         "हाइड्रोजन"
       ],
@@ -6657,13 +6619,12 @@
       "id": 348
     },
     {
-      "subject": "Chemistry",
-      "q": "The sulphur analogue of phenol is not called: Phenyl mercaptan",
+      "q": "The सल्फर analogue of फीनॉल is not called: Phenyl mercaptan",
       "q_en": "The sulphur analogue of phenol is not called: Phenyl mercaptan",
       "options": [
-        "Thiophenol",
-        "Phenyl hydrogen sulphide",
-        "Benzenethiol",
+        "थायोफीनॉल",
+        "फे निल हाइड्रोजन सल्फाइड",
+        "बेन्जीन थायोल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6677,7 +6638,6 @@
       "id": 349
     },
     {
-      "subject": "Chemistry",
       "q": "(i) and (iii)",
       "q_en": "(i) and (iii)",
       "options": [
@@ -6697,13 +6657,12 @@
       "id": 350
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following reagent does not contain d-block elements? d- ? Baeyer's reagent",
+      "q": "निम्नलिखित में से किस अभिकर्मक में d-ब्लॉक तत्व नहीं होते हैं?",
       "q_en": "Which of the following reagent does not contain d-block elements? d- ? Baeyer's reagent",
       "options": [
-        "Fehling solution",
-        "Grignard reagent",
-        "Tollen's reagent",
+        "फे हलिंग विलयन",
+        "ग्रिन्यार अभिकर्मक",
+        "टॉलेन अभिकर्मक",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6717,14 +6676,13 @@
       "id": 351
     },
     {
-      "subject": "Chemistry",
-      "q": "The common oxidation state of the elements of the lanthanide series is- – + 2",
+      "q": "The common ऑक्सीकरण अवस्था of the elements of the lanthanide series is- – + 2",
       "q_en": "The common oxidation state of the elements of the lanthanide series is- – + 2",
       "options": [
         "+ 2 + 3",
         "+ 3 + 4",
         "+ 4 + 1",
-        "+ 1"
+        "हमेशा 1"
       ],
       "options_en": [
         "+ 2 + 3",
@@ -6737,7 +6695,6 @@
       "id": 352
     },
     {
-      "subject": "Chemistry",
       "q": "Arrange formic acid (I), benzoic acid (II), acetic acid (III) and phenylacetic acid (IV) in order of acidity (I), (II), (III) (IV) I > II > III > IV",
       "q_en": "Arrange formic acid (I), benzoic acid (II), acetic acid (III) and phenylacetic acid (IV) in order of acidity (I), (II), (III) (IV) I > II > III > IV",
       "options": [
@@ -6757,8 +6714,7 @@
       "id": 353
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following theories explains the colour of coordination compounds? ? Valence bond theory",
+      "q": "निम्नलिखित में से कौन-सा theories explains the colour of coordination compounds?",
       "q_en": "Which of the following theories explains the colour of coordination compounds? ? Valence bond theory",
       "options": [
         "हाइड्रोजन",
@@ -6777,13 +6733,12 @@
       "id": 354
     },
     {
-      "subject": "Chemistry",
-      "q": "With which of the following the oxidation of glucose results in the formation of saccharic acid? ? Bromine-water",
+      "q": "निम्नलिखित में से किसके द्वारा ग्लूकोस के ऑक्सीकरण से सैके रिक अम्ल बनता है?",
       "q_en": "With which of the following the oxidation of glucose results in the formation of saccharic acid? ? Bromine-water",
       "options": [
-        "Nitric acid",
-        "Sodium amalgam",
-        "Hydrochloric acid",
+        "नाइट्रि क अम्ल",
+        "सोडियम अमलगम",
+        "हाइड्रोक्लोरिक अम्ल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6797,11 +6752,10 @@
       "id": 355
     },
     {
-      "subject": "Chemistry",
       "q": "It gives brown ring test for nitrates",
       "q_en": "It gives brown ring test for nitrates",
       "options": [
-        "Oxidation state of Fe is + 1",
+        "ऑक्सीकरण अवस्था of Fe is + 1",
         "Fe +1 It exhibits geometrical isomerism",
         "Charge on NO is +1",
         "NO +1"
@@ -6817,13 +6771,12 @@
       "id": 356
     },
     {
-      "subject": "Chemistry",
-      "q": "During the process of conversion of acids into amides, which of the following reactions takes place? , - ? The reaction of ammonia with an acid chloride",
+      "q": "अम्लों के एमाइड्स में परिवर्तन की प्रक्रिया के दौरान, निम्नलिखित में से कौन-सी अभिक्रिया होती है?",
       "q_en": "During the process of conversion of acids into amides, which of the following reactions takes place? , - ? The reaction of ammonia with an acid chloride",
       "options": [
-        "Reduction of esters",
-        "The reaction of chlorine in the presence of phosphorus",
-        "Heating of acid with an alcohol in the presence of mineral acid",
+        "एस्टर में कमी",
+        "फास्फोरस की उपस्थिति में क्लोरीन की अभिक्रिया",
+        "अम्ल को ऐल्कोहॉल के साथ खनिज अम्ल की उपस्थिति में गर्म करना",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6837,13 +6790,12 @@
       "id": 357
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following gives an aldehyde on dry distillation? ? Calcium Acetate + calcium benzoate",
+      "q": "निम्न में से कौन शुष्क आसवन पर एल्डिहाइड देता है?",
       "q_en": "Which of the following gives an aldehyde on dry distillation? ? Calcium Acetate + calcium benzoate",
       "options": [
-        "+ Calcium formate + calcium Acetate",
-        "+ Calcium benzoate",
-        "Calcium acetate",
+        "कै ल्शियम फॉर्मेट + कै ल्शियम एसीटेट",
+        "कै ल्शियम बेंजोएट",
+        "कै ल्शियम एसीटेट",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6857,7 +6809,6 @@
       "id": 358
     },
     {
-      "subject": "Chemistry",
       "q": "If value of change in free energy is negative value then the reaction will be",
       "q_en": "If value of change in free energy is negative value then the reaction will be",
       "options": [
@@ -6877,13 +6828,12 @@
       "id": 359
     },
     {
-      "subject": "Chemistry",
       "q": "The minimum amount of energy required to transform any reactant into product is called _______. ________ \" Kinetic energy",
       "q_en": "The minimum amount of energy required to transform any reactant into product is called _______. ________ \" Kinetic energy",
       "options": [
-        "Potential energy",
-        "Activation energy",
-        "Heat",
+        "संभावित ऊर्जा",
+        "सक्रियण ऊर्जा",
+        "ऊष्मा",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6897,12 +6847,11 @@
       "id": 360
     },
     {
-      "subject": "Chemistry",
-      "q": "The decomposition of acetaldehyde is an example of which order of a reaction? ? 0",
+      "q": "एसीटैल्डिहाइड का अपघटन प्रतिक्रिया के किस क्रम का उदाहरण है?",
       "q_en": "The decomposition of acetaldehyde is an example of which order of a reaction? ? 0",
       "options": [
         "0 1",
-        "1.5",
+        "15 वां",
         "1.5 2",
         "2"
       ],
@@ -6917,13 +6866,12 @@
       "id": 361
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following metals is NOT typically found in a pure form in nature? ? Iron",
+      "q": "निम्नलिखित में से कौन सी धातु आमतौर पर प्रकृ ति में शुद्ध रूप में नहीं पाई जाती है?",
       "q_en": "Which of the following metals is NOT typically found in a pure form in nature? ? Iron",
       "options": [
-        "Gold",
-        "Aluminum",
-        "None of the given options",
+        "सोना",
+        "ऐलुमिनियम",
+        "दिए गए विकल्पों में से कोई नहीं",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6937,14 +6885,13 @@
       "id": 362
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following non-metals is essential for combustion? ? Oxygen",
+      "q": "निम्नलिखित में से कौन सी अधातु दहन के लिए आवश्यक है?",
       "q_en": "Which of the following non-metals is essential for combustion? ? Oxygen",
       "options": [
-        "Nitrogen",
-        "Hydrogen",
-        "Carbon",
-        "हाइड्रोजन"
+        "नाइट्रोजन",
+        "हाइड्रोजन",
+        "कार्बन",
+        "सल्फर"
       ],
       "options_en": [
         "Nitrogen",
@@ -6957,13 +6904,12 @@
       "id": 363
     },
     {
-      "subject": "Chemistry",
       "q": "Benzaldehyde and formaldehyde give a common reaction: , : Cannizzaro’s reaction",
       "q_en": "Benzaldehyde and formaldehyde give a common reaction: , : Cannizzaro’s reaction",
       "options": [
-        "Benzoin condensation",
-        "Claisen condensation",
-        "Perkin’s reaction",
+        "बेन्जोइन अभिक्रिया",
+        "क्लैजन संघनन",
+        "पार्कि न अभिक्रिया",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6977,13 +6923,12 @@
       "id": 364
     },
     {
-      "subject": "Chemistry",
-      "q": "In Werner's coordination theory, the secondary valency of a metal ion corresponds to: , : Oxidation state",
+      "q": "In Werner's coordination theory, the secondary संयोजकता of a metal ion corresponds to: , : ऑक्सीकरण अवस्था",
       "q_en": "In Werner's coordination theory, the secondary valency of a metal ion corresponds to: , : Oxidation state",
       "options": [
-        "Coordination number",
-        "Charge on the complex",
-        "Ligand field strength",
+        "समन्वय संख्या",
+        "संकर पर आवेश",
+        "लिगैंड क्षेत्र की शक्ति",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -6997,7 +6942,6 @@
       "id": 365
     },
     {
-      "subject": "Chemistry",
       "q": "Meso compound",
       "q_en": "Meso compound",
       "options": [
@@ -7017,13 +6961,12 @@
       "id": 366
     },
     {
-      "subject": "Chemistry",
-      "q": "Reaction of carbonyl compound with one of the following reagents involves nucleophilic addition followed by elimination of water. The reagent is Grignards reagent",
+      "q": "Reaction of carbonyl compound with one of the following reagents involves nucleophilic addition followed by elimination of जल. The reagent is Grignards reagent",
       "q_en": "Reaction of carbonyl compound with one of the following reagents involves nucleophilic addition followed by elimination of water. The reagent is Grignards reagent",
       "options": [
-        "Hydrazine in presence of feebly acidic solution",
-        "Hydrocyanic acid",
-        "Sodium hydrogen sulphite",
+        "हाइड्राज़ीन दुर्बल अम्लीय विलयन की उपस्थिति में",
+        "हाइड्रोसायनिक एसिड",
+        "सोडियम हाइड्रोजन सल्फाइट",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7037,12 +6980,11 @@
       "id": 367
     },
     {
-      "subject": "Chemistry",
-      "q": "Benzaldehyde",
+      "q": "बेन्जैल्डिहाइड",
       "q_en": "Benzaldehyde",
       "options": [
-        "Benzyl alcohol",
-        "Benzene",
+        "Benzyl ऐल्कोहॉल",
+        "बेन्जीन",
         "Toluene",
         "हाइड्रोजन"
       ],
@@ -7057,13 +6999,12 @@
       "id": 368
     },
     {
-      "subject": "Chemistry",
-      "q": "What is the minimum amount of energy required to transform any reactant in to product is _______ ________ Kinetic energy",
+      "q": "क्या है the minimum amount of energy required to transform any reactant in to product is _______ ________ Kinetic energy",
       "q_en": "What is the minimum amount of energy required to transform any reactant in to product is _______ ________ Kinetic energy",
       "options": [
-        "Potential energy",
-        "Activation energy",
-        "Heat",
+        "संभावित ऊर्जा",
+        "सक्रियण ऊर्जा",
+        "ऊष्मा",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7077,13 +7018,12 @@
       "id": 369
     },
     {
-      "subject": "Chemistry",
-      "q": "For the reactions of which order, the half-life period is independent of the initial concentration? , ? First-order",
+      "q": "किस क्रम की प्रतिक्रियाओं के लिए, आधा जीवन काल प्रारं भिक एकाग्रता से स्वतंत्र है?",
       "q_en": "For the reactions of which order, the half-life period is independent of the initial concentration? , ? First-order",
       "options": [
-        "Zero-order",
-        "Third-order",
-        "Second-order",
+        "शून्य क्रम",
+        "तीसरा क्रम",
+        "द्वितीय क्रम",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7097,12 +7037,11 @@
       "id": 370
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following will not give iodoform test- - Ethanal",
+      "q": "निम्नलिखित में से कौन-सा will not give iodoform test- - Ethanal",
       "q_en": "Which of the following will not give iodoform test- - Ethanal",
       "options": [
-        "Ethanol",
-        "2-propanone",
+        "एथेनॉल",
+        "2-प्रोपेनॉन",
         "2- 3-pentanone",
         "3-"
       ],
@@ -7117,7 +7056,6 @@
       "id": 371
     },
     {
-      "subject": "Chemistry",
       "q": "Functional isomers",
       "q_en": "Functional isomers",
       "options": [
@@ -7137,13 +7075,12 @@
       "id": 372
     },
     {
-      "subject": "Chemistry",
-      "q": "Glucose is also known as _____. _____ Oxime",
+      "q": "ग्लूकोज is also known as _____. _____ Oxime",
       "q_en": "Glucose is also known as _____. _____ Oxime",
       "options": [
-        "Dextrose",
-        "Gloconic acid",
-        "Ketoheptose",
+        "डेक्सट्रोज",
+        "ग्लोकोनिक एसिड",
+        "के टोहेप्टोज़",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7157,7 +7094,6 @@
       "id": 373
     },
     {
-      "subject": "Chemistry",
       "q": "Outer orbital complex",
       "q_en": "Outer orbital complex",
       "options": [
@@ -7177,13 +7113,12 @@
       "id": 374
     },
     {
-      "subject": "Chemistry",
       "q": "Diamagnetic substances are _______ by the applied field. _______ Attracted",
       "q_en": "Diamagnetic substances are _______ by the applied field. _______ Attracted",
       "options": [
-        "Repelled",
-        "No change in the applied field.",
-        "Pull towards each other",
+        "विकर्षित",
+        "लागू फ़ील्ड में कोई बदलाव नहीं",
+        "एक दू सरे की ओर खींचें",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7197,13 +7132,12 @@
       "id": 375
     },
     {
-      "subject": "Chemistry",
-      "q": "What is the characteristic of the compound, sulfanilic acid, formed by the sulfonation of aniline? ? It is soluble in organic solvents.",
+      "q": "ऐनिलीन के सल्फोनीकरण से बनने वाले सल्फ़ानिलिक अम्ल यौगिक का क्या अभिलक्षण है?",
       "q_en": "What is the characteristic of the compound, sulfanilic acid, formed by the sulfonation of aniline? ? It is soluble in organic solvents.",
       "options": [
-        "It melts on being heated.",
-        "It is soluble in aqueous bases.",
-        "It is soluble in aqueous acids.",
+        "गर्म करने पर यह पिघल जाता है।",
+        "यह जलीय क्षारों में घुलनशील है।",
+        "यह जलीय अम्लो में घुलनशील है।",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7217,13 +7151,12 @@
       "id": 376
     },
     {
-      "subject": "Chemistry",
-      "q": "Two molecules of an aldehyde reacts with a concentrated solution of NaOH and produces one molecule of an alcohol and acid each, which one is the aldehyde : NaOH - : Acetaldehyde",
+      "q": "Two molecules of an ऐल्डिहाइड reacts with a concentrated solution of NaOH and produces one molecule of an ऐल्कोहॉल and acid each, which one is the ऐल्डिहाइड : NaOH - : Acetaldehyde",
       "q_en": "Two molecules of an aldehyde reacts with a concentrated solution of NaOH and produces one molecule of an alcohol and acid each, which one is the aldehyde : NaOH - : Acetaldehyde",
       "options": [
-        "Formaldehyde",
-        "Propionaldehyde",
-        "Butyraldehyde",
+        "फार्मऐल्डिहाइड",
+        "प्रोपियोनैल्डिहाईड",
+        "ब्यूटायरे ल्डिहाईड",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7237,13 +7170,12 @@
       "id": 377
     },
     {
-      "subject": "Chemistry",
-      "q": "The product formed by the reaction of an aldehyde with a primary amine is : Schiff base",
+      "q": "The product formed by the reaction of an ऐल्डिहाइड with a primary amine is : Schiff base",
       "q_en": "The product formed by the reaction of an aldehyde with a primary amine is : Schiff base",
       "options": [
-        "Ketone",
-        "Carboxylic acid",
-        "Aromatic acid",
+        "के टोन",
+        "कार्बोक्सिलिक अम्‍ल",
+        "एरोमेटिक अम्ल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7257,8 +7189,7 @@
       "id": 378
     },
     {
-      "subject": "Chemistry",
-      "q": "Among the following compounds the most acidic is? ? p- Nitrophenol",
+      "q": "निम्नलिखित यौगिकों में सबसे अधिक अम्लीय है?",
       "q_en": "Among the following compounds the most acidic is? ? p- Nitrophenol",
       "options": [
         "p- p-Hydroxy benzoic acid",
@@ -7277,7 +7208,6 @@
       "id": 379
     },
     {
-      "subject": "Chemistry",
       "q": "Heat of formation",
       "q_en": "Heat of formation",
       "options": [
@@ -7297,13 +7227,12 @@
       "id": 380
     },
     {
-      "subject": "Chemistry",
-      "q": "Using which of the following methods, substitution and graphical techniques are employed to determine the order of a reaction? ? Integral rate equation method",
+      "q": "प्रतिक्रिया के क्रम को निर्धारित करने के लिए निम्नलिखित में से किस विधि का उपयोग करके प्रतिस्थापन और ग्राफिकल तकनीकों का उपयोग किया जाता है?",
       "q_en": "Using which of the following methods, substitution and graphical techniques are employed to determine the order of a reaction? ? Integral rate equation method",
       "options": [
-        "Differential rate equation method",
-        "Fractional change (half-life) method",
-        "( - ) Ostwald’s dilution method",
+        "विभेदक दर समीकरण विधि",
+        "भिन्नात्मक परिवर्तन (अर्ध-आयु) विधि",
+        "ओस्टवाल्ड तनुकरण विधि",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7317,8 +7246,7 @@
       "id": 381
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following d-block elements exhibits a maximum oxidation state of +7? - +7 ? Fe",
+      "q": "निम्नलिखित में से कौन सा डी-ब्लॉक तत्व अधिकतम ऑक्सीकरण अवस्था +7 प्रदर्शित करता है?",
       "q_en": "Which of the following d-block elements exhibits a maximum oxidation state of +7? - +7 ? Fe",
       "options": [
         "Fe Mn",
@@ -7337,13 +7265,12 @@
       "id": 382
     },
     {
-      "subject": "Chemistry",
       "q": "Identify the name of the given structure. . Primary alkyl halide",
       "q_en": "Identify the name of the given structure. . Primary alkyl halide",
       "options": [
-        "Tertiary alkyl halide",
-        "Secondary alkyl halide",
-        "Quaternary alkyl halide",
+        "तृतीयक एल्काइल हैलाइड",
+        "द्वितीयक एल्काइल हैलाइड",
+        "चतुर्धातुक एल्काइल हैलाइड",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7357,7 +7284,6 @@
       "id": 383
     },
     {
-      "subject": "Chemistry",
       "q": "The type of isomerism found in urea molecule is - - Chain",
       "q_en": "The type of isomerism found in urea molecule is - - Chain",
       "options": [
@@ -7377,13 +7303,12 @@
       "id": 384
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following products should be formed on the reactions of formaldehyde with concentrated NaOH solution? NaOH ? Ethanol + sodium formate",
+      "q": "निम्नलिखित में से कौन सा उत्पाद फॉर्मेल्डिहाइड की क्रिया सान्द्र NaOH के साथ करवाने पर बनता है?",
       "q_en": "Which of the following products should be formed on the reactions of formaldehyde with concentrated NaOH solution? NaOH ? Ethanol + sodium formate",
       "options": [
-        "+ Methanol + sodium methanoate",
-        "+ Methanol + sodium acetate",
-        "+ Ethanol + sodium acetate",
+        "मेथेनॉल + सोडियम मेथेनोएट",
+        "मेथेनॉल + सोडियम ऐसीटेट",
+        "एथेनॉल + सोडियम ऐसीटेट",
         "+"
       ],
       "options_en": [
@@ -7397,13 +7322,12 @@
       "id": 385
     },
     {
-      "subject": "Chemistry",
-      "q": "On Boiling with conc. HBr ethyl phenyl ether yields: Conc. HBr : Phenol and ethyl bromide",
+      "q": "On Boiling with conc. HBr ethyl phenyl ईथर yields: Conc. HBr : फीनॉल and ethyl bromide",
       "q_en": "On Boiling with conc. HBr ethyl phenyl ether yields: Conc. HBr : Phenol and ethyl bromide",
       "options": [
-        "Bromobenzene and ethanol",
-        "Phenol and ethane",
-        "Bromobenzene and ethane",
+        "ब्रोमोबेन्जीन तथा एथेनॉल",
+        "फिनॉल तथा एथेन",
+        "ब्रोमोबेन्जीन तथा एथेन",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7417,12 +7341,11 @@
       "id": 386
     },
     {
-      "subject": "Chemistry",
       "q": "It is an extracting solvent",
       "q_en": "It is an extracting solvent",
       "options": [
         "It is an anaesthetic",
-        "It is more reactive than alcohol",
+        "It is more reactive than ऐल्कोहॉल",
         "It shows dipole moment",
         "हाइड्रोजन"
       ],
@@ -7437,13 +7360,12 @@
       "id": 387
     },
     {
-      "subject": "Chemistry",
-      "q": "During electrolysis, the species discharged at cathode are- - Ions",
+      "q": "During विद्युत अपघटन, the species discharged at कैथोड are- - Ions",
       "q_en": "During electrolysis, the species discharged at cathode are- - Ions",
       "options": [
-        "Cation",
-        "Anion",
-        "All of the given options",
+        "धनायन",
+        "ऋणायन",
+        "दिए गए सभी विकल्प",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7457,13 +7379,12 @@
       "id": 388
     },
     {
-      "subject": "Chemistry",
-      "q": "Taking reference from the Arrhenius equation, what is the characteristic of the plot of log k versus 1/T? , k 1/T ?",
+      "q": "Taking reference from the Arrhenius equation, क्या है the characteristic of the plot of log k versus 1/T?",
       "q_en": "Taking reference from the Arrhenius equation, what is the characteristic of the plot of log k versus 1/T? , k 1/T ?",
       "options": [
         "declining straight line A An inclining straight line",
-        "A straight line parallel to the x-axis",
-        "- A straight line parallel to the y-axis",
+        "एक्स-अक्ष के समानांतर एक सीधी रे खा",
+        "y-अक्ष के समानांतर एक सीधी रे खा",
         "y-"
       ],
       "options_en": [
@@ -7477,13 +7398,12 @@
       "id": 389
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is a consequence of lanthanoid contraction? - ? Increase in the basic strength of lanthanoid oxides with an increase in atomic numbers.",
+      "q": "निम्नलिखित में से कौन-सा लैन्थेनाइड संकु चन का परिणाम है?",
       "q_en": "Which of the following is a consequence of lanthanoid contraction? - ? Increase in the basic strength of lanthanoid oxides with an increase in atomic numbers.",
       "options": [
-        "Decrease in electronegativity of trivalent ions.",
-        "Exhibition of similar properties among all the lanthanoid elements.",
-        "Increase in ionic size of the lanthanoid elements.",
+        "त्रिसंयोजी आयनों की विद्युत ऋणात्मकता में कमी।",
+        "सभी लैन्थेनाइड तत्वों के बीच समान गुण प्रदर्शित करना।",
+        "लैंथेनॉयड तत्वों के आयनिक आकार में वृद्धि।",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7497,13 +7417,12 @@
       "id": 390
     },
     {
-      "subject": "Chemistry",
       "q": "In the ion exchange method used to separate lanthanoids, the solution of several lanthanoid ions is dropped down a column of synthetic ion exchange resin. Then the ions are eluted from the column usin",
       "q_en": "In the ion exchange method used to separate lanthanoids, the solution of several lanthanoid ions is dropped down a column of synthetic ion exchange resin. Then the ions are eluted from the column usin",
       "options": [
-        "Ammonium citrate",
-        "Ammonium acetate",
-        "Ammonium oxide",
+        "अमोनियम साइट्रेट",
+        "अम्मोणिउम असेटट",
+        "अमोनियम ऑक्साइड",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7517,7 +7436,6 @@
       "id": 391
     },
     {
-      "subject": "Chemistry",
       "q": ". n–Propylbenzene",
       "q_en": ". n–Propylbenzene",
       "options": [
@@ -7537,8 +7455,7 @@
       "id": 392
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is the correct sequence to form alcohols from the catalyst. 1. Nucleophilic attack of water on carbocation. 2. Deprotonation to form an alcohol. ? 1. 2. 3, 1, 2",
+      "q": "निम्नलिखित में से कौन-सा is the correct sequence to form alcohols from the उत्प्रेरक. 1. Nucleophilic attack of जल on carbocation. 2. Deprotonation to form an ऐल्कोहॉल. ?",
       "q_en": "Which of the following is the correct sequence to form alcohols from the catalyst. 1. Nucleophilic attack of water on carbocation. 2. Deprotonation to form an alcohol. ? 1. 2. 3, 1, 2",
       "options": [
         "3, 1, 2 1, 2, 3",
@@ -7557,8 +7474,7 @@
       "id": 393
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following compounds can be formed from simplest aldehyde? [A] Bakelite [B] Metaldehyde [C] Urotropine [D] Formamint [E] Paraldehyde ? [A] [B] [C] [D] [E] ABC",
+      "q": "निम्न में से किस यौगिक का निर्माण सरलतम ऐल्डिहाइड से हो सकता है? [A] बैके लाइट [B] मेटाऐल्डिहाइड [C] यूरोट्रोपीन [D] फार्मेमेन्ट [E] पैराऐल्डिहाइड",
       "q_en": "Which of the following compounds can be formed from simplest aldehyde? [A] Bakelite [B] Metaldehyde [C] Urotropine [D] Formamint [E] Paraldehyde ? [A] [B] [C] [D] [E] ABC",
       "options": [
         "ABC ABE",
@@ -7577,7 +7493,6 @@
       "id": 394
     },
     {
-      "subject": "Chemistry",
       "q": "Benzyl chloride",
       "q_en": "Benzyl chloride",
       "options": [
@@ -7597,13 +7512,12 @@
       "id": 395
     },
     {
-      "subject": "Chemistry",
-      "q": "Pure water does not conduct electricity because it- - Has a low boiling point",
+      "q": "Pure जल does not conduct electricity because it- - Has a low boiling point",
       "q_en": "Pure water does not conduct electricity because it- - Has a low boiling point",
       "options": [
-        "Is almost totally unionized",
-        "Is neutral",
-        "Is readily decomposed",
+        "यह लगभग पूर्णता अनआयनित होता है",
+        "यह उदासीन होता है",
+        "यह शीघ्रता से विघटित होता है",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7617,13 +7531,12 @@
       "id": 396
     },
     {
-      "subject": "Chemistry",
       "q": "The reaction is spontaneous if the cell potential is- : , - Positive",
       "q_en": "The reaction is spontaneous if the cell potential is- : , - Positive",
       "options": [
-        "Negative",
-        "Zero",
-        "Infinite",
+        "ऋणात्मक",
+        "शून्य",
+        "अनन्त",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -7637,13 +7550,12 @@
       "id": 397
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following are summed up to find the emf of a cell? ? Oxidation and reduction potentials.",
+      "q": "किसी सेल का विद्युत वाहक बल ज्ञात करने के लिए निम्नलिखित में से किसका योग किया जाता है?",
       "q_en": "Which of the following are summed up to find the emf of a cell? ? Oxidation and reduction potentials.",
       "options": [
-        "Reduction and junction potentials.",
-        "Oxidation and junction potentials.",
-        "Oxidation, reduction, and junction potentials.",
+        "रिडक्शन और जंक्शन विभव",
+        "ऑक्सीकरण और जंक्शन विभव",
+        "ऑक्सीकरण, रिडक्शन और जंक्शन विभव",
         ","
       ],
       "options_en": [
@@ -7657,12 +7569,11 @@
       "id": 398
     },
     {
-      "subject": "Chemistry",
-      "q": "Zero order",
+      "q": "शून्य क्रम",
       "q_en": "Zero order",
       "options": [
-        "First order",
-        "Second order",
+        "पहला क्रम",
+        "द्वितीय क्रम",
         "Fractional order",
         "हाइड्रोजन"
       ],
@@ -7677,8 +7588,7 @@
       "id": 399
     },
     {
-      "subject": "Chemistry",
-      "q": "Lanthanide contraction is observed in ? Gd",
+      "q": "लैंथेनाइड संकु चन किस में देखा जाता है?",
       "q_en": "Lanthanide contraction is observed in ? Gd",
       "options": [
         "Gd At",
@@ -7697,8 +7607,7 @@
       "id": 400
     },
     {
-      "subject": "Chemistry",
-      "q": "Calculate the magnetic moment of a divalent ion in aqueous solution if its atomic number is 26. 26 5.82",
+      "q": "Calculate the magnetic moment of a divalent ion in aqueous solution if its परमाणु क्रमांक is 26. 26 5.82",
       "q_en": "Calculate the magnetic moment of a divalent ion in aqueous solution if its atomic number is 26. 26 5.82",
       "options": [
         "5.82 6.90",
@@ -7717,8 +7626,7 @@
       "id": 401
     },
     {
-      "subject": "Chemistry",
-      "q": "Only (i)",
+      "q": "के वल I",
       "q_en": "Only (i)",
       "options": [
         "(i) Only (ii)",
@@ -7737,13 +7645,12 @@
       "id": 402
     },
     {
-      "subject": "Chemistry",
-      "q": "In Haber’s process, _____ is used as promoter and _____ is used as catalyst to attain equilibrium rapidly. , _____ _____ molybdenum, divided iron",
+      "q": "In Haber’s process, _____ is used as promoter and _____ is used as उत्प्रेरक to attain equilibrium rapidly. , _____ _____ molybdenum, divided लोहा",
       "q_en": "In Haber’s process, _____ is used as promoter and _____ is used as catalyst to attain equilibrium rapidly. , _____ _____ molybdenum, divided iron",
       "options": [
-        ", divided iron, molybdenum",
-        ", copper chips, lead",
-        ", lead, copper chips",
+        ", divided लोहा, molybdenum",
+        ", ताँबा chips, lead",
+        ", lead, ताँबा chips",
         ","
       ],
       "options_en": [
@@ -7757,8 +7664,7 @@
       "id": 403
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following is true regarding spatial orientation of orbitals? ( ) ? Only (i)",
+      "q": "निम्नलिखित में से कौन-सा is true regarding spatial orientation of orbitals?",
       "q_en": "Which of the following is true regarding spatial orientation of orbitals? ( ) ? Only (i)",
       "options": [
         "(i)",
@@ -7777,8 +7683,7 @@
       "id": 404
     },
     {
-      "subject": "Chemistry",
-      "q": "Which is the correct ascending order of acid strength? ? HF << HCl << HBr << HI",
+      "q": "Which is the correct ascending order of acid strength?",
       "q_en": "Which is the correct ascending order of acid strength? ? HF << HCl << HBr << HI",
       "options": [
         "HF << HCl << HBr << HI HCl << HF << HBr << HI",
@@ -7797,14 +7702,13 @@
       "id": 405
     },
     {
-      "subject": "Chemistry",
-      "q": "What is the effect on pH of solubility of salts of weak acids? pH ? Increases at lower pH",
+      "q": "क्या है the effect on pH of solubility of salts of weak acids?",
       "q_en": "What is the effect on pH of solubility of salts of weak acids? pH ? Increases at lower pH",
       "options": [
-        "pH Increases at higher pH",
-        "pH Decreases at lower pH",
-        "pH",
-        "Neither increase nor decrease"
+        "pH बढ़ता है at higher pH",
+        "pH घटता है at lower pH",
+        "पीएच",
+        "Neither बढ़ता है nor घटता है"
       ],
       "options_en": [
         "pH Increases at higher pH",
@@ -7817,7 +7721,6 @@
       "id": 406
     },
     {
-      "subject": "Chemistry",
       "q": "Henderson’s equation is I. pH=pKa+log salt acid II. pH+pOH=pKw III. pH=pKa+log = conjugate base acid - I. pH=pKa+ II. pH+pOH=pKw III. pH=pKa+ = Only II",
       "q_en": "Henderson’s equation is I. pH=pKa+log salt acid II. pH+pOH=pKw III. pH=pKa+log = conjugate base acid - I. pH=pKa+ II. pH+pOH=pKw III. pH=pKa+ = Only II",
       "options": [
@@ -7837,8 +7740,7 @@
       "id": 407
     },
     {
-      "subject": "Chemistry",
-      "q": "What will be the pH of resulting solution if a salt of strong base and weak acid is Hydrolysed ? pH ? pH = 7",
+      "q": "What will be the pH of resulting solution if a salt of प्रबल क्षार and दुर्बल अम्ल is Hydrolysed ?",
       "q_en": "What will be the pH of resulting solution if a salt of strong base and weak acid is Hydrolysed ? pH ? pH = 7",
       "options": [
         "pH = 7 pH = 0",
@@ -7857,7 +7759,6 @@
       "id": 408
     },
     {
-      "subject": "Chemistry",
       "q": "If (n + l) values for any two values will be same, then lower value of _______ will have lower energy and hence will be filled ______ (n + l) , _______ _____ n, earlier",
       "q_en": "If (n + l) values for any two values will be same, then lower value of _______ will have lower energy and hence will be filled ______ (n + l) , _______ _____ n, earlier",
       "options": [
@@ -7877,7 +7778,6 @@
       "id": 409
     },
     {
-      "subject": "Chemistry",
       "q": "Choose wrong statement for ‘Auffbau’ principle: ' ' : In ground state of the atoms, the orbitals are filled in order of their increasing energy",
       "q_en": "Choose wrong statement for ‘Auffbau’ principle: ' ' : In ground state of the atoms, the orbitals are filled in order of their increasing energy",
       "options": [
@@ -7897,8 +7797,7 @@
       "id": 410
     },
     {
-      "subject": "Chemistry",
-      "q": "Why electronic configuration elements like chromium and copper diviate from rules of electronic configuration as stated by Aufbau principle? ? Half filled and completely filled orbital are more stable",
+      "q": "क्यों electronic configuration elements like chromium and ताँबा diviate from rules of electronic configuration as stated by Aufbau principle?",
       "q_en": "Why electronic configuration elements like chromium and copper diviate from rules of electronic configuration as stated by Aufbau principle? ? Half filled and completely filled orbital are more stable",
       "options": [
         "( ) Its more convient to have easier electronic configuration",
@@ -7917,8 +7816,7 @@
       "id": 411
     },
     {
-      "subject": "Chemistry",
-      "q": "Sodium hexametaphosphate is known as - - Calgon",
+      "q": "सोडियम hexametaphosphate is known as - - Calgon",
       "q_en": "Sodium hexametaphosphate is known as - - Calgon",
       "options": [
         "Permutit",
@@ -7937,12 +7835,11 @@
       "id": 412
     },
     {
-      "subject": "Chemistry",
-      "q": "HCl cannot form H2Cl2, so how can HF form hydrogen bonds? HCl H2Cl2 , HF ? Fluorine is more reactive",
+      "q": "HCl cannot form H2Cl2, so कैसे can HF form हाइड्रोजन bonds?",
       "q_en": "HCl cannot form H2Cl2, so how can HF form hydrogen bonds? HCl H2Cl2 , HF ? Fluorine is more reactive",
       "options": [
         "HF is more reactive",
-        "HF Fluorine atom is small and can form hydrogen bonds",
+        "HF Fluorine atom is small and can form हाइड्रोजन bonds",
         "HF is less reactive",
         "HF"
       ],
@@ -7957,7 +7854,6 @@
       "id": 413
     },
     {
-      "subject": "Chemistry",
       "q": "Aqueous solution of Potash Alum is - ( ) - Acidic",
       "q_en": "Aqueous solution of Potash Alum is - ( ) - Acidic",
       "options": [
@@ -7977,8 +7873,7 @@
       "id": 414
     },
     {
-      "subject": "Chemistry",
-      "q": "How many p-orbitals are possible for l=1? l=1 p- ( ) ? 3 p-orbitals",
+      "q": "कैसे many p-orbitals are possible for l=1?",
       "q_en": "How many p-orbitals are possible for l=1? l=1 p- ( ) ? 3 p-orbitals",
       "options": [
         "3 p- 2 p-orbitals",
@@ -7997,8 +7892,7 @@
       "id": 415
     },
     {
-      "subject": "Chemistry",
-      "q": "What does R and V in VSEPR theory stands for? VSEPR R V ? Retract, Valid",
+      "q": "What does R and V in VSEPR theory stands for?",
       "q_en": "What does R and V in VSEPR theory stands for? VSEPR R V ? Retract, Valid",
       "options": [
         ", Repulsion, Valid",
@@ -8017,8 +7911,7 @@
       "id": 416
     },
     {
-      "subject": "Chemistry",
-      "q": "What is false for VSEPR theory? (i) It’s used for predicting geometrical shape of molecule. (ii) It’s based on assumption that electron pairs repel each other. (iii) It is based on assumption that ele",
+      "q": "क्या है false for VSEPR theory?",
       "q_en": "What is false for VSEPR theory? (i) It’s used for predicting geometrical shape of molecule. (ii) It’s based on assumption that electron pairs repel each other. (iii) It is based on assumption that ele",
       "options": [
         "(i) Both (ii) and (iii)",
@@ -8037,7 +7930,6 @@
       "id": 417
     },
     {
-      "subject": "Chemistry",
       "q": "Less the ionisation enthalpy, _____ will chances of formation of _____ bonds. , _____ _____",
       "q_en": "Less the ionisation enthalpy, _____ will chances of formation of _____ bonds. , _____ _____",
       "options": [
@@ -8057,7 +7949,6 @@
       "id": 418
     },
     {
-      "subject": "Chemistry",
       "q": "The solubility product of sparingly soluble univalent salt is defined as the product of ionic concentration in a- - 1M solution",
       "q_en": "The solubility product of sparingly soluble univalent salt is defined as the product of ionic concentration in a- - 1M solution",
       "options": [
@@ -8077,7 +7968,6 @@
       "id": 419
     },
     {
-      "subject": "Chemistry",
       "q": "(i), (ii)",
       "q_en": "(i), (ii)",
       "options": [
@@ -8097,7 +7987,6 @@
       "id": 420
     },
     {
-      "subject": "Chemistry",
       "q": "But-1-ene and cyclobutane exhibit - -1- - Ring Chain isomerism",
       "q_en": "But-1-ene and cyclobutane exhibit - -1- - Ring Chain isomerism",
       "options": [
@@ -8117,7 +8006,6 @@
       "id": 421
     },
     {
-      "subject": "Chemistry",
       "q": "Anion of Prussic (HCN) acid is – (HCN) – Only (i)",
       "q_en": "Anion of Prussic (HCN) acid is – (HCN) – Only (i)",
       "options": [
@@ -8137,9 +8025,8 @@
       "id": 422
     },
     {
-      "subject": "Chemistry",
-      "q": "What was the purpose of introducing concept of hybridization of atomic orbitals? (i) To explain characteristic shapes of mono-atomic elements. (ii) To explain characteristics stability of mono-atomic ",
-      "q_en": "What was the purpose of introducing concept of hybridization of atomic orbitals? (i) To explain characteristic shapes of mono-atomic elements. (ii) To explain characteristics stability of mono-atomic ",
+      "q": "What was the purpose of introducing concept of hybridization of atomic orbitals?",
+      "q_en": "What was the purpose of introducing concept of hybridization of atomic orbitals? (i) To explain characteristic shapes of mono-atomic elements. (ii) To explain characteristics stability of mono-atomic",
       "options": [
         "(i) Both (ii) and (iii)",
         "(ii) (iii) Only (iii)",
@@ -8157,8 +8044,7 @@
       "id": 423
     },
     {
-      "subject": "Chemistry",
-      "q": "In oxygen, monovalent ion is accompanied by_______ of energy but addition of second electron to monovalent ion _____ energy. , _______ _____ absorb, repulse",
+      "q": "In ऑक्सीजन, monovalent ion is accompanied by_______ of energy but addition of second electron to monovalent ion _____ energy. , _______ _____ absorb, repulse",
       "q_en": "In oxygen, monovalent ion is accompanied by_______ of energy but addition of second electron to monovalent ion _____ energy. , _______ _____ absorb, repulse",
       "options": [
         ",",
@@ -8177,8 +8063,7 @@
       "id": 424
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following concentrations has the largest degree of dissociation for a weak acid? ?",
+      "q": "निम्नलिखित में से कौन-सा concentrations has the largest degree of dissociation for a दुर्बल अम्ल?",
       "q_en": "Which of the following concentrations has the largest degree of dissociation for a weak acid? ?",
       "options": [
         "0.0008M 0.0008M 0.008",
@@ -8197,8 +8082,7 @@
       "id": 425
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following are exception to electronic configuration of electrons according to Aufbau’s principle? I. Copper II. Chromium III. Argon ' ' ? I. ( ) II. III. Only II",
+      "q": "निम्नलिखित में से कौन-सा are exception to electronic configuration of electrons according to Aufbau’s principle?",
       "q_en": "Which of the following are exception to electronic configuration of electrons according to Aufbau’s principle? I. Copper II. Chromium III. Argon ' ' ? I. ( ) II. III. Only II",
       "options": [
         "II Both (I) and (III)",
@@ -8217,7 +8101,6 @@
       "id": 426
     },
     {
-      "subject": "Chemistry",
       "q": "1.36, 1.40, 1.71",
       "q_en": "1.36, 1.40, 1.71",
       "options": [
@@ -8237,12 +8120,11 @@
       "id": 427
     },
     {
-      "subject": "Chemistry",
       "q": "Highest ionisation potential in a period is shown by - - Alkali metals",
       "q_en": "Highest ionisation potential in a period is shown by - - Alkali metals",
       "options": [
-        "Noble gases",
-        "Halogens",
+        "उत्कृष्ट गैसें",
+        "हैलोजन",
         "Representative elements",
         "हाइड्रोजन"
       ],
@@ -8257,7 +8139,6 @@
       "id": 428
     },
     {
-      "subject": "Chemistry",
       "q": "Sulphuric acid is a dibasic acid in nature, hence it forms - : – Acidic salt",
       "q_en": "Sulphuric acid is a dibasic acid in nature, hence it forms - : – Acidic salt",
       "options": [
@@ -8277,7 +8158,6 @@
       "id": 429
     },
     {
-      "subject": "Chemistry",
       "q": "The molecule 3-peneten-2-ol can exhibit - (a) Optical isomerism (b) Geometrical isomerism (c) Metamerism (d) Tautomerism The correct answer is - 3- -2- - (a) (b) (c) (d) - a and b",
       "q_en": "The molecule 3-peneten-2-ol can exhibit - (a) Optical isomerism (b) Geometrical isomerism (c) Metamerism (d) Tautomerism The correct answer is - 3- -2- - (a) (b) (c) (d) - a and b",
       "options": [
@@ -8297,11 +8177,10 @@
       "id": 430
     },
     {
-      "subject": "Chemistry",
-      "q": "Oxidation reaction",
+      "q": "ऑक्सीकरण reaction",
       "q_en": "Oxidation reaction",
       "options": [
-        "Reduction reaction",
+        "अपचयन reaction",
         "Disproportionation reaction",
         "Decomposition reaction",
         "हाइड्रोजन"
@@ -8317,7 +8196,6 @@
       "id": 431
     },
     {
-      "subject": "Chemistry",
       "q": "The F–F bond is weak because - F–F - The repulsion between the nonbonding pairs of electrons of two fluorine atoms is large",
       "q_en": "The F–F bond is weak because - F–F - The repulsion between the nonbonding pairs of electrons of two fluorine atoms is large",
       "options": [
@@ -8337,8 +8215,7 @@
       "id": 432
     },
     {
-      "subject": "Chemistry",
-      "q": "What is true about X-ray analysis of Crystal structure of ionic compound? (i) they exist as ions (ii) they exist as molecules (iii) they are arranged in regular pattern to form lattice (iv) they do no",
+      "q": "क्या है true about X-ray analysis of Crystal structure of ionic compound?",
       "q_en": "What is true about X-ray analysis of Crystal structure of ionic compound? (i) they exist as ions (ii) they exist as molecules (iii) they are arranged in regular pattern to form lattice (iv) they do no",
       "options": [
         "(i) (iii) (ii) and (iv)",
@@ -8357,7 +8234,6 @@
       "id": 433
     },
     {
-      "subject": "Chemistry",
       "q": "Match the following- (i) – (a) (ii) – (b) (iii) – (d) (iv) – (c)",
       "q_en": "Match the following- (i) – (a) (ii) – (b) (iii) – (d) (iv) – (c)",
       "options": [
@@ -8377,7 +8253,6 @@
       "id": 434
     },
     {
-      "subject": "Chemistry",
       "q": "Resonance hybrid is _____ stable than any of contributing structure because it has _____ energy than any of its contributing structures. _____ _____ less, less",
       "q_en": "Resonance hybrid is _____ stable than any of contributing structure because it has _____ energy than any of its contributing structures. _____ _____ less, less",
       "options": [
@@ -8397,7 +8272,6 @@
       "id": 435
     },
     {
-      "subject": "Chemistry",
       "q": "The Arrhenius concept of acids and bases is only limited to- - Aqueous solution",
       "q_en": "The Arrhenius concept of acids and bases is only limited to- - Aqueous solution",
       "options": [
@@ -8417,7 +8291,6 @@
       "id": 436
     },
     {
-      "subject": "Chemistry",
       "q": "Unpaired electrons in Ne and Na are _____ and ______. Ne Na _____ ______ 0, 1",
       "q_en": "Unpaired electrons in Ne and Na are _____ and ______. Ne Na _____ ______ 0, 1",
       "options": [
@@ -8437,8 +8310,7 @@
       "id": 437
     },
     {
-      "subject": "Chemistry",
-      "q": "The second ionisation potentials in electron volts of oxygen and fluorine atoms are respectively given by - - 35.1, 38.3",
+      "q": "The second ionisation potentials in electron volts of ऑक्सीजन and fluorine atoms are respectively given by - - 35.1, 38.3",
       "q_en": "The second ionisation potentials in electron volts of oxygen and fluorine atoms are respectively given by - - 35.1, 38.3",
       "options": [
         "35.1., 38.3 38.3, 38.3",
@@ -8457,12 +8329,11 @@
       "id": 438
     },
     {
-      "subject": "Chemistry",
-      "q": "Positive",
+      "q": "धनात्मक",
       "q_en": "Positive",
       "options": [
-        "Negative",
-        "Zero",
+        "ऋणात्मक",
+        "शून्य",
         "Constant",
         "हाइड्रोजन"
       ],
@@ -8477,7 +8348,6 @@
       "id": 439
     },
     {
-      "subject": "Chemistry",
       "q": "Caliche is- – Impure nitre",
       "q_en": "Caliche is- – Impure nitre",
       "options": [
@@ -8497,7 +8367,6 @@
       "id": 440
     },
     {
-      "subject": "Chemistry",
       "q": "Arrange the following compounds in decreasing order of acidity I > II > III > IV",
       "q_en": "Arrange the following compounds in decreasing order of acidity I > II > III > IV",
       "options": [
@@ -8517,8 +8386,7 @@
       "id": 441
     },
     {
-      "subject": "Chemistry",
-      "q": "Which atomic mass of uranium is most radioactive? - ? 238",
+      "q": "Which परमाणु द्रव्यमान of uranium is most radioactive?",
       "q_en": "Which atomic mass of uranium is most radioactive? - ? 238",
       "options": [
         "238 235",
@@ -8537,7 +8405,6 @@
       "id": 442
     },
     {
-      "subject": "Chemistry",
       "q": "Choose correct statement regarding to V.B.T.- . . .(VBT) - It could not explain the shape of molecules containing covalent bond",
       "q_en": "Choose correct statement regarding to V.B.T.- . . .(VBT) - It could not explain the shape of molecules containing covalent bond",
       "options": [
@@ -8557,7 +8424,6 @@
       "id": 443
     },
     {
-      "subject": "Chemistry",
       "q": "According to VBT, strength of bond depends upon strength of overlapping. ________ the overlapping, _______ is the bond. , _____ , _____ less, stronger",
       "q_en": "According to VBT, strength of bond depends upon strength of overlapping. ________ the overlapping, _______ is the bond. , _____ , _____ less, stronger",
       "options": [
@@ -8577,8 +8443,7 @@
       "id": 444
     },
     {
-      "subject": "Chemistry",
-      "q": "Bond-order of T-atom with a particular ‘X’-atom when the bonds are 2, 2 and 1 respectively in the three structures and number of resonating structures is 3.Find bond order? 'X'- T- - 2, 2 1 3 - ? 1.57",
+      "q": "Bond-order of T-atom with a particular ‘X’-atom when the bonds are 2, 2 and 1 respectively in the three structures and number of resonating structures is 3.Find bond order?",
       "q_en": "Bond-order of T-atom with a particular ‘X’-atom when the bonds are 2, 2 and 1 respectively in the three structures and number of resonating structures is 3.Find bond order? 'X'- T- - 2, 2 1 3 - ? 1.57",
       "options": [
         "1.57 1.67",
@@ -8597,9 +8462,8 @@
       "id": 445
     },
     {
-      "subject": "Chemistry",
-      "q": "Choose the correct statement. (i) Hydrogen bond is represented by dotted lines. (ii) Hydrogen bond is a weak bond. (iii) H-atom links two electro-negative atom simultaneously, one by covalent & other ",
-      "q_en": "Choose the correct statement. (i) Hydrogen bond is represented by dotted lines. (ii) Hydrogen bond is a weak bond. (iii) H-atom links two electro-negative atom simultaneously, one by covalent & other ",
+      "q": "Choose the correct statement. (i) हाइड्रोजन bond is represented by dotted lines. (ii) हाइड्रोजन bond is a weak bond. (iii) H-atom links two electro-negative atom simultaneously, one by covalent & other",
+      "q_en": "Choose the correct statement. (i) Hydrogen bond is represented by dotted lines. (ii) Hydrogen bond is a weak bond. (iii) H-atom links two electro-negative atom simultaneously, one by covalent & other",
       "options": [
         "(i) and (iv) only (i) (iv) (i) and (ii) only",
         "(i) (ii) (i), (ii) and (iii)",
@@ -8617,7 +8481,6 @@
       "id": 446
     },
     {
-      "subject": "Chemistry",
       "q": "many, four",
       "q_en": "many, four",
       "options": [
@@ -8637,7 +8500,6 @@
       "id": 447
     },
     {
-      "subject": "Chemistry",
       "q": "Buffer solutions are used in- a. Qualitative analysis of mixture b. Quantitative analysis of mixture c. Digestion of food d. Preservation of food and fruits a. b. c. d.",
       "q_en": "Buffer solutions are used in- a. Qualitative analysis of mixture b. Quantitative analysis of mixture c. Digestion of food d. Preservation of food and fruits a. b. c. d.",
       "options": [
@@ -8657,8 +8519,7 @@
       "id": 448
     },
     {
-      "subject": "Chemistry",
-      "q": "495 - / 2.3 ? 4.95 J",
+      "q": "495 - / 2.3 ?",
       "q_en": "495 - / 2.3 ? 4.95 J",
       "options": [
         "4.95 J 49.5 J",
@@ -8677,13 +8538,12 @@
       "id": 449
     },
     {
-      "subject": "Chemistry",
       "q": "Reaction with HCl",
       "q_en": "Reaction with HCl",
       "options": [
-        "HCl",
+        "एचसीएल",
         "By iodoform test",
-        "By solubility in water",
+        "By solubility in जल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -8697,7 +8557,6 @@
       "id": 450
     },
     {
-      "subject": "Chemistry",
       "q": "IV > III > II > I",
       "q_en": "IV > III > II > I",
       "options": [
@@ -8717,7 +8576,6 @@
       "id": 451
     },
     {
-      "subject": "Chemistry",
       "q": "3-Methyl-3-N, N-dimethyl amino pentane",
       "q_en": "3-Methyl-3-N, N-dimethyl amino pentane",
       "options": [
@@ -8737,7 +8595,6 @@
       "id": 452
     },
     {
-      "subject": "Chemistry",
       "q": "P–O–P bond is present in – P–O–P –",
       "q_en": "P–O–P bond is present in – P–O–P –",
       "options": [
@@ -8757,7 +8614,6 @@
       "id": 453
     },
     {
-      "subject": "Chemistry",
       "q": "The rocky and siliceous matter associated with an ore is called – , - Slag",
       "q_en": "The rocky and siliceous matter associated with an ore is called – , - Slag",
       "options": [
@@ -8777,13 +8633,12 @@
       "id": 454
     },
     {
-      "subject": "Chemistry",
-      "q": "Leaching is a process of– , - Reduction",
+      "q": "Leaching is a process of– , - अपचयन",
       "q_en": "Leaching is a process of– , - Reduction",
       "options": [
-        "Concentration",
+        "संकें द्रण",
         "Refining",
-        "Oxidation",
+        "ऑक्सीकरण",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -8797,7 +8652,6 @@
       "id": 455
     },
     {
-      "subject": "Chemistry",
       "q": "Ethyl chloride",
       "q_en": "Ethyl chloride",
       "options": [
@@ -8817,13 +8671,12 @@
       "id": 456
     },
     {
-      "subject": "Chemistry",
-      "q": "When an alcohol reacts with the following in the presence of dry HCl, the acetal is obtained. HCl - Aldehyde",
+      "q": "When an ऐल्कोहॉल reacts with the following in the presence of dry HCl, the acetal is obtained. HCl - ऐल्डिहाइड",
       "q_en": "When an alcohol reacts with the following in the presence of dry HCl, the acetal is obtained. HCl - Aldehyde",
       "options": [
-        "Ketone",
-        "Ether",
-        "Carboxylic acid",
+        "के टोन",
+        "ईथर",
+        "कार्बोक्सिलिक अम्‍ल",
         "हाइड्रोजन"
       ],
       "options_en": [
@@ -8837,7 +8690,6 @@
       "id": 457
     },
     {
-      "subject": "Chemistry",
       "q": "covalent bond, electrovalent bond.",
       "q_en": "covalent bond, electrovalent bond.",
       "options": [
@@ -8857,8 +8709,7 @@
       "id": 458
     },
     {
-      "subject": "Chemistry",
-      "q": "A. Orbitals involved in overlap are different B. Extent of overlap is different C. Valency is different A. B. C. Both (A) and (C)",
+      "q": "A. Orbitals involved in overlap are different B. Extent of overlap is different C. संयोजकता is different A. B. C. Both (A) and (C)",
       "q_en": "A. Orbitals involved in overlap are different B. Extent of overlap is different C. Valency is different A. B. C. Both (A) and (C)",
       "options": [
         "(A) (C) Both (C) and (B)",
@@ -8877,7 +8728,6 @@
       "id": 459
     },
     {
-      "subject": "Chemistry",
       "q": ". Only (iii)",
       "q_en": ". Only (iii)",
       "options": [
@@ -8897,8 +8747,7 @@
       "id": 460
     },
     {
-      "subject": "Chemistry",
-      "q": "Which one of the following is incorrect? ? An element which has high electronegativity always has high electron gain enthalpy",
+      "q": "Which one of the following is incorrect?",
       "q_en": "Which one of the following is incorrect? ? An element which has high electronegativity always has high electron gain enthalpy",
       "options": [
         "Electron gain enthalpy is the property of an isolated atom",
@@ -8917,8 +8766,7 @@
       "id": 461
     },
     {
-      "subject": "Chemistry",
-      "q": "Absolute alcohol is prepared from rectified spirit by: : Steam distillation",
+      "q": "Absolute ऐल्कोहॉल is prepared from rectified spirit by: : Steam distillation",
       "q_en": "Absolute alcohol is prepared from rectified spirit by: : Steam distillation",
       "options": [
         "Azeotropic distillation",
@@ -8937,12 +8785,11 @@
       "id": 462
     },
     {
-      "subject": "Chemistry",
-      "q": "Benzylidene acetone is the product of the reaction of an orgnaic compound (A) with acetone in the presence of ethanolic sodium hydroxide. The organic compounds (A) is: (A) (A) : Benzylalcohol",
+      "q": "Benzylidene acetone is the product of the reaction of an orgnaic compound (A) with acetone in the presence of ethanolic सोडियम hydroxide. The organic compounds (A) is: (A) (A) : Benzylalcohol",
       "q_en": "Benzylidene acetone is the product of the reaction of an orgnaic compound (A) with acetone in the presence of ethanolic sodium hydroxide. The organic compounds (A) is: (A) (A) : Benzylalcohol",
       "options": [
-        "Benzaldehyde",
-        "Benzoic acid",
+        "बेन्जैल्डिहाइड",
+        "बेन्जोइक अम्ल",
         "हाइड्रोजन",
         "Acetophenone"
       ],
@@ -8957,12 +8804,11 @@
       "id": 463
     },
     {
-      "subject": "Chemistry",
       "q": "Aniline is purified by ............. .......... | Azeotropic distillation",
       "q_en": "Aniline is purified by ............. .......... | Azeotropic distillation",
       "options": [
         "Steam distillation",
-        "Distillation in presence of magnesium",
+        "Distillation in presence of मैग्नीशियम",
         "Fractional crystallisation",
         "हाइड्रोजन"
       ],
@@ -8977,7 +8823,6 @@
       "id": 464
     },
     {
-      "subject": "Chemistry",
       "q": "C, O and S",
       "q_en": "C, O and S",
       "options": [
@@ -8997,7 +8842,6 @@
       "id": 465
     },
     {
-      "subject": "Chemistry",
       "q": "The purpose of the smelting of one ore is To oxidise it",
       "q_en": "The purpose of the smelting of one ore is To oxidise it",
       "options": [
@@ -9017,13 +8861,12 @@
       "id": 466
     },
     {
-      "subject": "Chemistry",
-      "q": "Which of the following has the highest rate of nuclear decay? ?",
+      "q": "निम्नलिखित में से कौन-सा has the highest rate of nuclear decay?",
       "q_en": "Which of the following has the highest rate of nuclear decay? ?",
       "options": [
         "हाइड्रोजन",
         "नाइट्रोजन",
-        "positron",
+        "पॉज़िट्रॉन",
         "सल्फर"
       ],
       "options_en": [
@@ -9037,8 +8880,7 @@
       "id": 467
     },
     {
-      "subject": "Chemistry",
-      "q": "Oxygen atom in ether is- - Very active",
+      "q": "ऑक्सीजन atom in ईथर is- - Very active",
       "q_en": "Oxygen atom in ether is- - Very active",
       "options": [
         "Replaceable",
@@ -9057,12 +8899,11 @@
       "id": 468
     },
     {
-      "subject": "Chemistry",
-      "q": "The reaction in which sodium cyanide is used is- - Perkin reaction",
+      "q": "The reaction in which सोडियम cyanide is used is- - Perkin reaction",
       "q_en": "The reaction in which sodium cyanide is used is- - Perkin reaction",
       "options": [
         "Reimer-Tiemann reaction",
-        "Benzoin condensation",
+        "बेन्जोइन अभिक्रिया",
         "Rosenmund reaction",
         "हाइड्रोजन"
       ],

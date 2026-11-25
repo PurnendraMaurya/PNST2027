@@ -1,7 +1,8 @@
 {
   "_info": {
     "subject": "Physics",
-    "total_questions": 429
+    "total_questions": 429,
+    "bilingual": true
   },
   "questions": [
     {
@@ -103,7 +104,7 @@
       "q": "चुंबकीय याम्योत्तर क्या है?",
       "q_en": "What is the magnetic meridian?",
       "options": [
-        "बिन्दु",
+        "बिंदु",
         "क्षैतिज तल",
         "ऊर्ध्वाधर तल",
         "N-S के अनुदिश रे खा"
@@ -161,7 +162,7 @@
       "q_en": "What is the neutral particle found in a nucleus alongside protons?",
       "options": [
         "इलेक्ट्रॉन",
-        "न्यूट्रि नो",
+        "न्यूट्रिनो",
         "न्यूट्रॉन",
         "पॉज़िट्रॉन"
       ],
@@ -217,10 +218,10 @@
       "q": "विभवमापी के तार में निम्नलिखित में से किस पदार्थ का उपयोग किया जाता है?",
       "q_en": "Which of the following materials is used in the wire of potentiometer?",
       "options": [
-        "तांबा",
+        "ताँबा",
         "स्टील",
-        "मैगनीन",
-        "एल्युमीनियम (Aluminium)"
+        "मैंगनीन",
+        "एल्युमीनियम"
       ],
       "options_en": [
         "Copper",
@@ -447,7 +448,7 @@
       "options": [
         "सिर्फ धनात्मक रूप से आवेशित कण",
         "धनात्मक और ऋणात्मक दोनों आवेशित कण",
-        "न्यूट्रान",
+        "न्यूट्रॉन",
         "सिर्फ ऋणात्मक आवेशित कण"
       ],
       "options_en": [
@@ -618,7 +619,7 @@
       "options": [
         "सॉफ्ट आयरन स्टील",
         "वेग",
-        "आयरन",
+        "वेग",
         "अल्निको"
       ],
       "options_en": [
@@ -714,7 +715,7 @@
         "वेग",
         "तीव्रता",
         "आवृत्ति",
-        "ध्रुवता"
+        "ध्रुवण"
       ],
       "options_en": [
         "Velocity",
@@ -732,7 +733,7 @@
       "options": [
         "आवेश की हमेशा एक दिशा होती है। आवेश सदैव धनात्मक होता है।",
         "वेग",
-        "आवेश या तो धनात्मक या ऋणात्मक हो सकता है।",
+        "वेग",
         "आवेश को किलोग्राम की इकाइयों में मापा जाता है।"
       ],
       "options_en": [
@@ -1112,7 +1113,7 @@
       "options": [
         "बेकरे ल (Becquerel) क्यूरी (B. Curie)",
         "वेग",
-        "रे डीयन   (C. Radian)",
+        "वेग",
         "सीवेर्ट (D. Sievert)"
       ],
       "options_en": [
@@ -1207,7 +1208,7 @@
       "options": [
         "वे धनात्मक आवेश से शुरू होते हैं और ऋणात्मक आवेश पर समाप्त होते हैं वे स्पेस तक जाते हैं",
         "वेग",
-        "वे बंद लूप बनाते हैं",
+        "वेग",
         "वे सीधी रे खाएँ बनाते हैं"
       ],
       "options_en": [
@@ -1376,7 +1377,7 @@
       "q": "x-किरणों की भेदन क्षमता किस पर निर्भर नहीं करती है ?",
       "q_en": "Penetrating power of x-rays does not depend on",
       "options": [
-        "तरं गदैर्ध्‍य",
+        "तरंगदैर्ध्य",
         "ऊर्जा",
         "विभवान्तर",
         "फिलामेंट में धारा"
@@ -1395,7 +1396,7 @@
       "q": "स्पर्शज्या धारामापी को उपयोग करने से पहले, इसकी कु ण्डली को समंजित किया जाता है-",
       "q_en": "Before using the tangent galvanometer, its coil is set in-",
       "options": [
-        "चुम्बकीय याम्योतर में",
+        "चुम्बकीय मेरिडियन",
         "चुम्बकीय याम्योतर के लम्ब्बत",
         "वेग",
         "किसी प्रकार के समंजन की आवश्यकता नहीं होती है"
@@ -1682,7 +1683,7 @@
       "options": [
         "अतिचालक",
         "चालक",
-        "कु चालक",
+        "कुचालक",
         "अर्धचालक"
       ],
       "options_en": [
@@ -1719,7 +1720,7 @@
       "q_en": "Light wave travel from optically rarer medium to optically denser medium, Its velocity decreases because of change in:",
       "options": [
         "आवृत्ति",
-        "तरं गदैर्ध्‍य",
+        "तरंगदैर्ध्य",
         "आयाम",
         "कला"
       ],
@@ -1775,8 +1776,8 @@
       "q": "X-ray बीम विचिलित हो सकती है इससे",
       "q_en": "X-ray beam can be deflected by",
       "options": [
-        "चुम्बकीय क्षेत्र से",
-        "विद्युत क्षेत्र से",
+        "चुंबकीय क्षेत्र",
+        "विद्युत क्षेत्र",
         "विद्युत क्षेत्र व चुम्बकीय क्षेत्र से",
         "न तो विद्युत क्षेत्र से और न ही चुम्बकीय क्षेत्र से क्योंकि इसमें आवेश नहीं है।"
       ],
@@ -1832,10 +1833,10 @@
       "q": "विद्युत चुंबकीय प्रेरण की खोज किसने की थी?",
       "q_en": "Who discovered the phenomenon of electromagnetic induction.",
       "options": [
-        "फै राडे",
+        "फैराडे",
         "ओम",
         "कू लॉम",
-        "मैक्सर्बैल"
+        "मैक्सवेल"
       ],
       "options_en": [
         "Faraday",
@@ -1851,7 +1852,7 @@
       "q": "गोसियल सतह के क्षेत्रफल को दोगुना करने पर पलक्स हो जायेगा-",
       "q_en": "On doubling the size of gaussian surface, the flux will become -",
       "options": [
-        "दोग्रना",
+        "दोगुना",
         "आधा",
         "तीन गुना",
         "अप्रभवित रहेगा"
@@ -1870,7 +1871,7 @@
       "q": "गोसियन पृष्ठ के अंदर आवेश के परिमाण को दोगुना करने पर फ्लक्स हो जायेगा -",
       "q_en": "On doubling the magnitude of charge inside a gaussian surface the flux will become",
       "options": [
-        "दोग्रना",
+        "दोगुना",
         "आधा",
         "तीन गुना",
         "अप्रभवित रहेगा"
@@ -1891,7 +1892,7 @@
       "options": [
         "टेस्ला (T) की इकाइयों में",
         "हेनरी (H) की इकाइयों में",
-        "एम्पीयर प्रति मीटर की इकाइयों में (A/m)",
+        "एम्पीयर प्रति मीटर की इकाइयों में (A",
         "दिए गए विकल्पों में से कोई नहीं"
       ],
       "options_en": [
@@ -1908,7 +1909,7 @@
       "q": "दिये गये परिपथ में सभी डायोड आदर्श है। बैटरी से प्रवाहित धारा है (चित्र में देखे):",
       "q_en": "In the given circuit all diodes are ideal. The current through battery (shown in figure) is:",
       "options": [
-        "2A",
+        "2 एम्पियर",
         "2A 1A",
         "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
@@ -1948,7 +1949,7 @@
       "options": [
         "स्त्रोत का विभव परिपथ में धारा से अग्रगामी होगा",
         "प्रत्येक अवयव के सिरों पर विभव पतन आरोपित विभव से कम होगा",
-        "परिपथ का शक्ति गुणांक 4/3 होगा",
+        "परिपथ का शक्ति गुणांक 4",
         "दिए गए विकल्पों में से कोई नहीं"
       ],
       "options_en": [
@@ -1967,8 +1968,8 @@
       "options": [
         "शून्य",
         "अनंत",
-        "1",
-        "1"
+        "हमेशा 1",
+        "हमेशा 1"
       ],
       "options_en": [
         "Zero",
@@ -2003,9 +2004,9 @@
       "q": "x- किरणों की तीव्रता, इसकी संख्या पर निर्भर करती है -",
       "q_en": "Intensity of x-rays depends upon the number of",
       "options": [
-        "इलेक्ट्रानों की",
-        "प्रोटॉनों की",
-        "न्यूट्रॉनों की",
+        "इलेक्ट्रॉन",
+        "प्रोटॉन",
+        "न्यूट्रॉन",
         "पोसिट्रॉनों की"
       ],
       "options_en": [
@@ -2120,7 +2121,7 @@
         "हाइगेन्स",
         "यंग फ्रे नल",
         "वेग",
-        "मैक्सवेल"
+        "वेग"
       ],
       "options_en": [
         "Huygen",
@@ -2171,10 +2172,10 @@
       "id": 114
     },
     {
-      "q": "किसी Capacitor की Capacitance C = ε₀A/d। यदि d दोगुना हो जाए तो C पर क्या प्रभाव पड़ेगा?",
+      "q": "किसी Capacitor की Capacitance C = ε₀A",
       "q_en": "Capacitance C=ε₀A/d. If d doubles, C will:",
       "options": [
-        "दोगुना हो जाएगी",
+        "दोगुना",
         "आधा हो जाएगी",
         "चौगुना हो जाएगी",
         "अपरिवर्तित"
@@ -2196,7 +2197,7 @@
         "किसी junction पर Voltage योग = 0",
         "किसी junction पर आने वाली और जाने वाली Current का योग = 0",
         "EMF का योग = 0",
-        "Power = 0"
+        "शक्ति = 0"
       ],
       "options_en": [
         "Sum of voltages at a junction = 0",
@@ -2209,7 +2210,7 @@
       "id": 116
     },
     {
-      "q": "3 Ω, 6 Ω और 9 Ω को Parallel में जोड़ा जाए। कुल प्रतिरोध का व्युत्क्रम (1/Req) = ?",
+      "q": "3 Ω, 6 Ω और 9 Ω को Parallel में जोड़ा जाए। कुल प्रतिरोध का व्युत्क्रम (1",
       "q_en": "3Ω, 6Ω, 9Ω in parallel. 1/Req = ?",
       "options": [
         "1/18",
@@ -2231,7 +2232,7 @@
       "q": "Biot-Savart Law में चुंबकीय क्षेत्र (B) की SI Unit क्या है?",
       "q_en": "SI unit of Magnetic field (B) by Biot-Savart Law is:",
       "options": [
-        "Gauss",
+        "गॉस",
         "Tesla",
         "Weber",
         "Ampere-meter"
@@ -2247,7 +2248,7 @@
       "id": 118
     },
     {
-      "q": "एक Proton की Velocity v = 10⁶ m/s और Magnetic field B = 0.1 T है। Magnetic Force F = qvB पर आधारित F = ? (q = 1.6×10⁻¹⁹C)",
+      "q": "एक Proton की Velocity v = 10⁶ m",
       "q_en": "Proton velocity v=10⁶ m/s, B=0.1T. Magnetic Force F=qvB, q=1.6×10⁻¹⁹C. Find F.",
       "options": [
         "1.6×10⁻¹⁴ N",
@@ -2323,12 +2324,12 @@
       "id": 122
     },
     {
-      "q": "Young's Double Slit Experiment में Fringe Width (β) = λD/d। यदि λ दोगुना हो तो β पर क्या प्रभाव पड़ेगा?",
+      "q": "Young's Double Slit Experiment में Fringe Width (β) = λD",
       "q_en": "In YDSE, Fringe Width β=λD/d. If λ doubles, β will:",
       "options": [
         "आधा हो जाएगी",
-        "दोगुना हो जाएगी",
-        "चौगुना",
+        "दोगुना",
+        "चौगुना हो जाएगी",
         "अपरिवर्तित"
       ],
       "options_en": [
@@ -2345,10 +2346,10 @@
       "q": "Photoelectric Effect में 'Work Function' क्या है?",
       "q_en": "In Photoelectric Effect, 'Work Function' is:",
       "options": [
-        "Maximum Kinetic Energy of electrons",
-        "Minimum energy needed to eject electrons from metal",
-        "Speed of light",
-        "Frequency of light"
+        "अधिकतम Kinetic ऊर्जा of electrons",
+        "न्यूनतम ऊर्जा needed to eject electrons from metal",
+        "प्रकाश की चाल",
+        "आवृत्ति of प्रकाश"
       ],
       "options_en": [
         "Maximum Kinetic Energy of electrons",
@@ -2364,9 +2365,9 @@
       "q": "de Broglie Wavelength: λ = h/mv। यदि particle की velocity दोगुनी हो तो λ पर क्या प्रभाव?",
       "q_en": "de Broglie Wavelength λ=h/mv. If velocity doubles, λ will:",
       "options": [
-        "दोगुना हो जाएगी",
+        "दोगुना",
         "आधा हो जाएगी",
-        "चौगुना",
+        "चौगुना हो जाएगी",
         "अपरिवर्तित"
       ],
       "options_en": [
@@ -2421,10 +2422,10 @@
       "q": "Nuclear Fission में कौन सा कण Uranium-235 को विखंडित करता है?",
       "q_en": "Which particle causes Fission of Uranium-235?",
       "options": [
-        "Alpha particle",
+        "Alpha particle में होते हैं:",
         "Beta particle",
-        "Slow Neutron",
-        "Proton"
+        "Slow न्यूट्रॉन",
+        "प्रोटॉन"
       ],
       "options_en": [
         "Alpha particle",
@@ -2480,8 +2481,8 @@
       "options": [
         "Signal की strength",
         "Highest और lowest frequency का अंतर",
-        "Wavelength",
-        "Amplitude"
+        "तरंगदैर्ध्य",
+        "आयाम"
       ],
       "options_en": [
         "Signal strength",
@@ -2513,7 +2514,7 @@
       "id": 132
     },
     {
-      "q": "Einstein का Mass-Energy Relation E = mc²। यदि 1 g mass convert हो तो Energy = ? (c=3×10⁸ m/s)",
+      "q": "Einstein का Mass-Energy Relation E = mc²। यदि 1 g mass convert हो तो Energy = ? (c=3×10⁸ m",
       "q_en": "Einstein E=mc². If 1g mass converts to energy (c=3×10⁸ m/s), E = ?",
       "options": [
         "9×10¹³ J",
@@ -2589,7 +2590,7 @@
       "id": 136
     },
     {
-      "q": "Solenoid के अंदर चुंबकीय क्षेत्र B = μ₀nI। 1000 turns/m और I=2A पर B = ? (μ₀=4π×10⁻⁷)",
+      "q": "Solenoid के अंदर चुंबकीय क्षेत्र B = μ₀nI। 1000 turns",
       "q_en": "B = μ₀nI in solenoid. n=1000/m, I=2A. B = ? (μ₀=4π×10⁻⁷)",
       "options": [
         "4π×10⁻⁴ T",
@@ -2612,8 +2613,8 @@
       "q_en": "In Electromagnetic Waves, Electric and Magnetic fields are:",
       "options": [
         "Parallel to each other",
-        "Perpendicular to each other and to direction of propagation",
-        "Antiparallel",
+        "Perpendicular to each other and to propagation",
+        "प्रतिसमांतर",
         "Along propagation direction"
       ],
       "options_en": [
@@ -2649,10 +2650,10 @@
       "q": "Hydrogen Spectrum में Balmer Series किस region में होती है?",
       "q_en": "Balmer Series of Hydrogen Spectrum is in which region?",
       "options": [
-        "Infrared",
-        "Ultraviolet",
-        "Visible light",
-        "X-ray"
+        "अवरक्त",
+        "पराबैंगनी",
+        "दृश्य प्रकाश",
+        "x- रै स (किरणें)!"
       ],
       "options_en": [
         "Infrared",
@@ -2687,10 +2688,10 @@
       "q": "n-type Semiconductor में majority charge carriers हैं:",
       "q_en": "In n-type Semiconductor, majority charge carriers are:",
       "options": [
-        "Holes",
-        "Electrons",
-        "Both equally",
-        "Protons"
+        "होल",
+        "इलेक्ट्रॉन",
+        "दोनों बराबर",
+        "प्रोटॉन"
       ],
       "options_en": [
         "Holes",
@@ -2741,7 +2742,7 @@
       "id": 144
     },
     {
-      "q": "Ohm's Law: V = ?",
+      "q": "ओम का नियम: V = ?",
       "q_en": "Ohm's Law: V = ?",
       "options": [
         "I/R",
@@ -2760,12 +2761,12 @@
       "id": 145
     },
     {
-      "q": "SI unit of Force:",
+      "q": "बल का SI मात्रक:",
       "q_en": "SI unit of Force:",
       "options": [
         "Joule",
         "Watt",
-        "Newton",
+        "Newton का तीसरा नियम कहता है:",
         "Pascal"
       ],
       "options_en": [
@@ -2801,10 +2802,10 @@
       "q": "Convex lens को कहते हैं:",
       "q_en": "Convex lens is also called:",
       "options": [
-        "Diverging lens",
-        "Converging lens",
-        "Concave lens",
-        "Biconcave lens"
+        "Diverging लेंस",
+        "Converging लेंस",
+        "अवतल लेंस (Concave lens)",
+        "Biconcave लेंस"
       ],
       "options_en": [
         "Diverging lens",
@@ -2820,8 +2821,8 @@
       "q": "Electromagnetic spectrum में सबसे कम wavelength:",
       "q_en": "Shortest wavelength in electromagnetic spectrum:",
       "options": [
-        "Radio waves",
-        "Infrared",
+        "Radio waves जितनी",
+        "अवरक्त",
         "X-rays",
         "Gamma rays"
       ],
@@ -2836,7 +2837,7 @@
       "id": 149
     },
     {
-      "q": "Power = ? (electrical)",
+      "q": "विद्युत शक्ति =",
       "q_en": "Electrical Power =",
       "options": [
         "V/I",
@@ -2861,7 +2862,7 @@
         "Self induction",
         "Mutual induction",
         "Static electricity",
-        "Thermoelectric effect"
+        "थर्मोइलेक्ट्रि क प्रभाव"
       ],
       "options_en": [
         "Self induction",
@@ -2879,7 +2880,7 @@
       "options": [
         "30cm",
         "60cm",
-        "10cm",
+        "10 सेमी",
         "40cm"
       ],
       "options_en": [
@@ -2896,10 +2897,10 @@
       "q": "Capacitor किस quantity को store करता है?",
       "q_en": "Capacitor stores:",
       "options": [
-        "Current",
-        "Charge",
-        "Resistance",
-        "Inductance"
+        "धारा",
+        "आवेश",
+        "प्रतिरोध",
+        "प्रेरकत्व"
       ],
       "options_en": [
         "Current",
@@ -2912,13 +2913,13 @@
       "id": 153
     },
     {
-      "q": "SI unit of Electric charge:",
+      "q": "विद्युत आवेश का SI मात्रक:",
       "q_en": "SI unit of Electric charge:",
       "options": [
-        "Ampere",
+        "ऐम्पियर",
         "Volt",
         "Coulomb",
-        "Ohm"
+        "ओम"
       ],
       "options_en": [
         "Ampere",
@@ -2934,10 +2935,10 @@
       "q": "Radioactive decay में Alpha particle में होते हैं:",
       "q_en": "Alpha particle contains:",
       "options": [
-        "2 protons + 2 neutrons",
-        "1 proton + 1 neutron",
-        "2 protons only",
-        "4 neutrons"
+        "2 प्रोटॉन + 2 न्यूट्रॉन",
+        "1 प्रोटॉन + 1 न्यूट्रॉन",
+        "केवल 2 प्रोटॉन",
+        "4 न्यूट्रॉन"
       ],
       "options_en": [
         "2 protons + 2 neutrons",
@@ -2953,10 +2954,10 @@
       "q": "Semiconductor में current किससे flow होती है?",
       "q_en": "Current in semiconductor flows through:",
       "options": [
-        "Only electrons",
-        "Only holes",
-        "Both electrons and holes",
-        "Neither"
+        "केवल इलेक्ट्रॉन",
+        "केवल होल",
+        "इलेक्ट्रॉन और होल दोनों",
+        "कोई नहीं"
       ],
       "options_en": [
         "Only electrons",
@@ -2969,11 +2970,11 @@
       "id": 156
     },
     {
-      "q": "Work done W = F×d×cos θ. If θ=90°, W =",
+      "q": "W = F×d×cos θ. If θ=90°, W =",
       "q_en": "W = F×d×cos θ. If θ=90°, W =",
       "options": [
         "F×d",
-        "0",
+        "हमेशा 0",
         "F/d",
         "F+d"
       ],
@@ -2988,7 +2989,7 @@
       "id": 157
     },
     {
-      "q": "Kinetic Energy = ?",
+      "q": "गतिज ऊर्जा का सूत्र:",
       "q_en": "Kinetic Energy formula:",
       "options": [
         "mgh",
@@ -3010,9 +3011,9 @@
       "q": "Total Internal Reflection कब होता है?",
       "q_en": "Total Internal Reflection occurs when:",
       "options": [
-        "Light goes from rare to dense",
-        "Light goes from dense to rare beyond critical angle",
-        "Light is parallel to surface",
+        "प्रकाश goes from rare to dense",
+        "प्रकाश goes from dense to rare beyond critical angle",
+        "प्रकाश is parallel to surface",
         "Angle of incidence = 0"
       ],
       "options_en": [
@@ -3026,7 +3027,7 @@
       "id": 159
     },
     {
-      "q": "de Broglie wavelength λ = ?",
+      "q": "डी ब्रोग्ली तरंगदैर्ध्य λ = ?",
       "q_en": "de Broglie wavelength λ = ?",
       "options": [
         "h/mv",
@@ -3045,13 +3046,13 @@
       "id": 160
     },
     {
-      "q": "Resistance of a wire doubles if:",
+      "q": "तार का प्रतिरोध दोगुना हो जाता है यदि:",
       "q_en": "Resistance of a wire doubles if:",
       "options": [
-        "Length is halved",
-        "Length is doubled",
-        "Area is doubled",
-        "Both length doubled and area doubled"
+        "लंबाई आधी कर दी जाए",
+        "लंबाई दोगुनी कर दी जाए",
+        "क्षेत्रफल दोगुना कर दिया जाए",
+        "लंबाई और क्षेत्रफल दोनों दोगुने किए जाएँ"
       ],
       "options_en": [
         "Length is halved",
@@ -3067,10 +3068,10 @@
       "q": "E = mc² में c क्या है?",
       "q_en": "In E = mc², c represents:",
       "options": [
-        "Charge",
-        "Speed of light",
+        "आवेश",
+        "प्रकाश की चाल",
         "Coulomb",
-        "Capacitance"
+        "धारिता"
       ],
       "options_en": [
         "Charge",
@@ -3086,10 +3087,10 @@
       "q": "p-n junction में depletion layer बनती है क्योंकि:",
       "q_en": "Depletion layer in p-n junction forms because of:",
       "options": [
-        "Applied voltage",
-        "Diffusion of carriers",
-        "Temperature",
-        "Doping concentration only"
+        "Applied voltage से",
+        "वाहकों का विसरण",
+        "तापमान",
+        "केवल डोपिंग सांद्रता"
       ],
       "options_en": [
         "Applied voltage",
@@ -3105,10 +3106,10 @@
       "q": "Magnetic field की SI unit है:",
       "q_en": "SI unit of Magnetic field is:",
       "options": [
-        "Ampere",
+        "ऐम्पियर",
         "Weber",
         "Tesla",
-        "Gauss"
+        "गॉस"
       ],
       "options_en": [
         "Ampere",
@@ -3124,10 +3125,10 @@
       "q": "Young's Double Slit Experiment किससे संबंधित है?",
       "q_en": "Young's Double Slit Experiment demonstrates:",
       "options": [
-        "Reflection",
-        "Refraction",
-        "Interference of light",
-        "Diffraction only"
+        "परावर्तन",
+        "अपवर्तन",
+        "प्रकाश का व्यतिकरण",
+        "केवल विवर्तन"
       ],
       "options_en": [
         "Reflection",
@@ -3143,10 +3144,10 @@
       "q": "Bohr model के अनुसार electron किस orbit में stable है?",
       "q_en": "According to Bohr model, electron is stable in:",
       "options": [
-        "Any orbit",
-        "Stationary orbits with fixed energy",
-        "Elliptical orbits only",
-        "Spiral orbits"
+        "किसी भी कक्षा में",
+        "निश्चित ऊर्जा वाली स्थायी कक्षाओं में",
+        "केवल दीर्घवृत्ताकार कक्षाओं में",
+        "Spiral orbits में"
       ],
       "options_en": [
         "Any orbit",
@@ -3159,7 +3160,7 @@
       "id": 166
     },
     {
-      "q": "Half-life of a radioactive element is 10 years. After 20 years, remaining fraction =",
+      "q": "Half-life = 10 years. After 20 years, remaining fraction =",
       "q_en": "Half-life = 10 years. After 20 years, remaining fraction =",
       "options": [
         "1/2",
@@ -3181,10 +3182,10 @@
       "q": "Lenz's Law किस principle पर आधारित है?",
       "q_en": "Lenz's Law is based on:",
       "options": [
-        "Conservation of charge",
-        "Conservation of energy",
-        "Newton's law",
-        "Coulomb's law"
+        "आवेश संरक्षण",
+        "ऊर्जा संरक्षण",
+        "न्यूटन का नियम",
+        "कूलॉम का नियम"
       ],
       "options_en": [
         "Conservation of charge",
@@ -3197,7 +3198,7 @@
       "id": 168
     },
     {
-      "q": "Frequency of AC current in India:",
+      "q": "भारत में प्रत्यावर्ती धारा (AC) की आवृत्ति:",
       "q_en": "Frequency of AC current in India:",
       "options": [
         "50 Hz",
@@ -3219,10 +3220,10 @@
       "q": "Photoelectric effect में ejected electrons की energy बढ़ती है जब:",
       "q_en": "In photoelectric effect, energy of ejected electrons increases when:",
       "options": [
-        "Intensity increases",
-        "Frequency increases",
-        "Wavelength increases",
-        "Area increases"
+        "तीव्रता बढ़ती है",
+        "आवृत्ति बढ़ती है",
+        "तरंगदैर्ध्य बढ़ती है",
+        "क्षेत्रफल बढ़ता है"
       ],
       "options_en": [
         "Intensity increases",
@@ -3276,10 +3277,10 @@
       "q": "Alpha particle में होते हैं:",
       "q_en": "Alpha particle में होते हैं:",
       "options": [
-        "2 protons + 2 neutrons",
-        "1 proton + 1 neutron",
-        "2 protons only",
-        "4 neutrons"
+        "2 प्रोटॉन + 2 न्यूट्रॉन",
+        "1 प्रोटॉन + 1 न्यूट्रॉन",
+        "केवल 2 प्रोटॉन",
+        "4 न्यूट्रॉन"
       ],
       "options_en": [
         "2 protons + 2 neutrons",
@@ -3314,9 +3315,9 @@
       "q": "Photoelectric effect में electron की energy बढ़ती है जब:",
       "q_en": "Photoelectric effect में electron की energy बढ़ती है जब:",
       "options": [
-        "Intensity बढ़े",
-        "Frequency बढ़े",
-        "Wavelength बढ़े",
+        "तीव्रता",
+        "आवृत्ति",
+        "तरंगदैर्ध्य",
         "Area बढ़े"
       ],
       "options_en": [
@@ -3333,10 +3334,10 @@
       "q": "Solenoid के अंदर magnetic field होता है:",
       "q_en": "Solenoid के अंदर magnetic field होता है:",
       "options": [
-        "Zero",
-        "Non-uniform",
-        "Uniform",
-        "Infinite"
+        "शून्य",
+        "असमान",
+        "समान",
+        "अनन्त"
       ],
       "options_en": [
         "Zero",
@@ -3352,10 +3353,10 @@
       "q": "Snell's law: n1 sinθ1 = n2 sinθ2 — यह किससे संबंधित है?",
       "q_en": "Snell's law: n1 sinθ1 = n2 sinθ2 — यह किससे संबंधित है?",
       "options": [
-        "Reflection",
-        "Refraction",
-        "Diffraction",
-        "Polarization"
+        "परावर्तन",
+        "अपवर्तन",
+        "विवर्तन",
+        "ध्रुवण"
       ],
       "options_en": [
         "Reflection",
@@ -3371,10 +3372,10 @@
       "q": "p-type semiconductor में majority carriers:",
       "q_en": "p-type semiconductor में majority carriers:",
       "options": [
-        "Electrons",
-        "Holes",
+        "इलेक्ट्रॉन",
+        "होल",
         "दोनों बराबर",
-        "Neutrons"
+        "न्यूट्रॉन"
       ],
       "options_en": [
         "Electrons",
@@ -3428,10 +3429,10 @@
       "q": "Fleming's Left Hand Rule किसके लिए है?",
       "q_en": "Fleming's Left Hand Rule किसके लिए है?",
       "options": [
-        "Generator",
-        "Motor (force on current-carrying conductor)",
-        "Transformer",
-        "Capacitor"
+        "जनित्र",
+        "मोटर (धारावाही चालक पर बल)",
+        "ट्रांसफार्मर",
+        "संधारित्र"
       ],
       "options_en": [
         "Generator",
@@ -3447,10 +3448,10 @@
       "q": "Huygen's principle किससे संबंधित है?",
       "q_en": "Huygen's principle किससे संबंधित है?",
       "options": [
-        "Particle nature of light",
-        "Wave nature of light",
-        "Quantum mechanics",
-        "Relativity"
+        "प्रकाश की कण प्रकृति",
+        "प्रकाश की तरंग प्रकृति",
+        "क्वांटम यांत्रिकी",
+        "सापेक्षता"
       ],
       "options_en": [
         "Particle nature of light",
@@ -3485,10 +3486,10 @@
       "q": "Balmer series किस region में होती है?",
       "q_en": "Balmer series किस region में होती है?",
       "options": [
-        "Infrared",
-        "Visible light",
-        "Ultraviolet",
-        "X-ray"
+        "अवरक्त",
+        "दृश्य प्रकाश",
+        "पराबैंगनी",
+        "x- रै स (किरणें)!"
       ],
       "options_en": [
         "Infrared",
@@ -3501,7 +3502,7 @@
       "id": 184
     },
     {
-      "q": "1 eV = ? Joules",
+      "q": "1 eV = ?",
       "q_en": "1 eV = ? Joules",
       "options": [
         "1.6×10⁻¹⁹ J",
@@ -3523,10 +3524,10 @@
       "q": "Davisson-Germer experiment ने prove किया:",
       "q_en": "Davisson-Germer experiment ने prove किया:",
       "options": [
-        "Wave nature of X-rays",
-        "Wave nature of electrons",
-        "Particle nature of light",
-        "Photoelectric effect"
+        "एक्स-किरणों की तरंग प्रकृति",
+        "इलेक्ट्रॉनों की तरंग प्रकृति",
+        "प्रकाश की कण प्रकृति",
+        "फोटोइलेक्ट्रि क प्रभाव"
       ],
       "options_en": [
         "Wave nature of X-rays",
@@ -3539,13 +3540,13 @@
       "id": 186
     },
     {
-      "q": "Nuclear fission में क्या होता है?",
+      "q": "परमाणु विखंडन",
       "q_en": "Nuclear fission में क्या होता है?",
       "options": [
-        "Small → Large nucleus",
-        "Large → Smaller nuclei + Energy",
-        "Neutrons combine",
-        "Protons emit"
+        "हल्के → भारी नाभिक",
+        "भारी → छोटे नाभिक + ऊर्जा",
+        "न्यूट्रॉन जुड़ते हैं",
+        "प्रोटॉन उत्सर्जित होते हैं"
       ],
       "options_en": [
         "Small → Large nucleus",
@@ -3561,10 +3562,10 @@
       "q": "Wheatstone bridge किसके measure के लिए है?",
       "q_en": "Wheatstone bridge किसके measure के लिए है?",
       "options": [
-        "Voltage",
-        "Current",
-        "Unknown resistance",
-        "Power"
+        "वोल्टता",
+        "धारा",
+        "अज्ञात प्रतिरोध",
+        "शक्ति"
       ],
       "options_en": [
         "Voltage",
@@ -3596,13 +3597,13 @@
       "id": 189
     },
     {
-      "q": "Electromagnetic induction का नियम किसने दिया?",
+      "q": "विद्युत चुम्बकीय प्रेरण",
       "q_en": "Electromagnetic induction का नियम किसने दिया?",
       "options": [
-        "Maxwell",
-        "Faraday",
-        "Ampere",
-        "Gauss"
+        "मैक्सवेल",
+        "फैराडे",
+        "ऐम्पियर",
+        "गॉस"
       ],
       "options_en": [
         "Maxwell",
@@ -3618,10 +3619,10 @@
       "q": "Coulomb law: distance दोगुनी हो जाए तो force:",
       "q_en": "Coulomb law: distance दोगुनी हो जाए तो force:",
       "options": [
-        "Double",
-        "Half",
-        "One-fourth",
-        "Four times"
+        "दोगुना",
+        "आधा",
+        "एक-चौथाई",
+        "चार गुना"
       ],
       "options_en": [
         "Double",
@@ -3694,10 +3695,10 @@
       "q": "Stefan-Boltzmann law किससे संबंधित है?",
       "q_en": "Stefan-Boltzmann law किससे संबंधित है?",
       "options": [
-        "Sound",
-        "Thermal radiation",
-        "Electrical conductance",
-        "Magnetism"
+        "ध्वनि",
+        "तापीय विकिरण",
+        "विद्युत चालकता",
+        "चुंबकत्व"
       ],
       "options_en": [
         "Sound",
@@ -3732,9 +3733,9 @@
       "q": "Curie temperature पर ferromagnetic material:",
       "q_en": "Curie temperature पर ferromagnetic material:",
       "options": [
-        "Superconductor बन जाता है",
+        "अतिचालक",
         "Ferromagnetism खो देता है",
-        "और magnetic हो जाता है",
+        "चुंबकीय",
         "Melt हो जाता है"
       ],
       "options_en": [
@@ -3754,7 +3755,7 @@
         "जुड़ता है",
         "सभी branches में same रहता है",
         "Equally divide होता है",
-        "Zero होता है"
+        "शून्य"
       ],
       "options_en": [
         "जुड़ता है",
@@ -3810,7 +3811,7 @@
       "options": [
         "Applied voltage से",
         "Carriers के diffusion से",
-        "Temperature से",
+        "तापमान",
         "केवल Doping से"
       ],
       "options_en": [
@@ -3827,10 +3828,10 @@
       "q": "Power = V²/R यह किसके लिए सही है?",
       "q_en": "Power = V²/R यह किसके लिए सही है?",
       "options": [
-        "Capacitor",
-        "Resistor",
-        "Inductor",
-        "Semiconductor"
+        "संधारित्र",
+        "प्रतिरोधक",
+        "प्रेरक",
+        "अर्धचालक"
       ],
       "options_en": [
         "Capacitor",
@@ -3847,7 +3848,7 @@
       "q_en": "Work done W = Fd cosθ। θ=90° तो W =",
       "options": [
         "F×d",
-        "0",
+        "हमेशा 0",
         "F/d",
         "F+d"
       ],
@@ -3884,10 +3885,10 @@
       "q": "Refractive index = ?",
       "q_en": "Refractive index = ?",
       "options": [
-        "Speed in vacuum / Speed in medium",
-        "Speed in medium / Speed in vacuum",
-        "Wavelength × Frequency",
-        "None of these"
+        "निर्वात में चाल / माध्यम में चाल",
+        "माध्यम में चाल / निर्वात में चाल",
+        "तरंगदैर्ध्य × आवृत्ति",
+        "इनमें से कोई नहीं"
       ],
       "options_en": [
         "Speed in vacuum / Speed in medium",
@@ -3919,7 +3920,7 @@
       "id": 206
     },
     {
-      "q": "Gravitational potential energy = ?",
+      "q": "Gravitational potential ऊर्जा = ?",
       "q_en": "Gravitational potential energy = ?",
       "options": [
         "mv²",
@@ -3941,10 +3942,10 @@
       "q": "Resonance में circuit का impedance होता है:",
       "q_en": "Resonance में circuit का impedance होता है:",
       "options": [
-        "Maximum",
-        "Minimum (= R only)",
-        "Zero",
-        "Infinite"
+        "अधिकतम",
+        "न्यूनतम (= केवल R)",
+        "शून्य",
+        "अनन्त"
       ],
       "options_en": [
         "Maximum",
@@ -3960,10 +3961,10 @@
       "q": "Brewster's law: tan θ_p = n2/n1। θ_p को कहते हैं:",
       "q_en": "Brewster's law: tan θ_p = n2/n1। θ_p को कहते हैं:",
       "options": [
-        "Critical angle",
-        "Polarizing angle",
-        "Refractive angle",
-        "Incident angle"
+        "क्रांतिक कोण",
+        "ध्रुवण कोण",
+        "अपवर्तन कोण",
+        "आपतन कोण"
       ],
       "options_en": [
         "Critical angle",
@@ -3995,11 +3996,11 @@
       "id": 210
     },
     {
-      "q": "Newton का तीसरा नियम:",
+      "q": "Newton का तीसरा नियम कहता है:",
       "q_en": "Newton का तीसरा नियम:",
       "options": [
         "F=ma",
-        "हर action का equal opposite reaction होता है",
+        "हर action का equal और opposite reaction होता है",
         "v=u+at",
         "Energy conserved रहती है"
       ],
@@ -4017,10 +4018,10 @@
       "q": "Induced EMF = -NΔΦ/Δt — यह किसका नियम है?",
       "q_en": "Induced EMF = -NΔΦ/Δt — यह किसका नियम है?",
       "options": [
-        "Ampere",
-        "Lenz",
-        "Faraday",
-        "Maxwell"
+        "ऐम्पियर",
+        "लेंज",
+        "फैराडे",
+        "मैक्सवेल"
       ],
       "options_en": [
         "Ampere",
@@ -4036,10 +4037,10 @@
       "q": "Zener diode किसके लिए use होता है?",
       "q_en": "Zener diode किसके लिए use होता है?",
       "options": [
-        "Amplification",
-        "Voltage regulation",
-        "Rectification",
-        "Oscillation"
+        "प्रवर्धन",
+        "वोल्टता नियमन",
+        "दिष्टकरण",
+        "दोलन"
       ],
       "options_en": [
         "Amplification",
@@ -4052,7 +4053,7 @@
       "id": 213
     },
     {
-      "q": "Escape velocity of Earth (approx):",
+      "q": "Escape वेग of Earth (approx):",
       "q_en": "Escape velocity of Earth (approx):",
       "options": [
         "7.9 km/s",
@@ -4074,10 +4075,10 @@
       "q": "Glass slab से light गुजरने पर क्या नहीं बदलता?",
       "q_en": "Glass slab से light गुजरने पर क्या नहीं बदलता?",
       "options": [
-        "Speed",
-        "Wavelength",
-        "Frequency",
-        "Direction"
+        "चाल",
+        "तरंगदैर्ध्य",
+        "आवृत्ति",
+        "दिशा"
       ],
       "options_en": [
         "Speed",
@@ -4090,13 +4091,13 @@
       "id": 215
     },
     {
-      "q": "SI unit of Magnetic flux:",
+      "q": "चुंबकीय फ्लक्स का SI मात्रक:",
       "q_en": "SI unit of Magnetic flux:",
       "options": [
         "Tesla",
         "Weber",
-        "Gauss",
-        "Ampere"
+        "गॉस",
+        "ऐम्पियर"
       ],
       "options_en": [
         "Tesla",
@@ -4109,12 +4110,12 @@
       "id": 216
     },
     {
-      "q": "Heisenberg uncertainty principle:",
+      "q": "हाइजेनबर्ग अनिश्चितता सिद्धांत:",
       "q_en": "Heisenberg uncertainty principle:",
       "options": [
         "Electron की position exact है",
         "Position और momentum एक साथ exact नहीं हो सकते",
-        "Energy conserved है",
+        "Energy conserved रहती है",
         "Charge conserved है"
       ],
       "options_en": [
@@ -4131,10 +4132,10 @@
       "q": "Power = V²/R — यह किसके लिए सही है?",
       "q_en": "Power = V²/R — यह किसके लिए सही है?",
       "options": [
-        "Capacitor",
-        "Resistor",
-        "Inductor",
-        "Semiconductor"
+        "संधारित्र",
+        "प्रतिरोधक",
+        "प्रेरक",
+        "अर्धचालक"
       ],
       "options_en": [
         "Capacitor",
@@ -4151,9 +4152,9 @@
       "q_en": "Lens maker equation में f को क्या कहते हैं?",
       "options": [
         "Radius of curvature",
-        "Focal length",
+        "फोकस दूरी",
         "Refractive index",
-        "Power"
+        "शक्ति"
       ],
       "options_en": [
         "Radius of curvature",
@@ -4188,7 +4189,7 @@
       "q": "एक स्टेप-अप ट्रांसफार्मर का उपयोग वोल्टेज को 220 V से 22,000 V तक बढ़ाने के लिए किया जाता है। यदि दक्षता 100% है और प्राथमिक धारा 10 A है, तो द्वितीयक धारा क्या है?",
       "q_en": "A step-up transformer is used to increase the voltage from 220 V to 22,000 V. If the efficiency is 100%, and the primary current is 10 A, what is the secondary current?",
       "options": [
-        "1.0 A",
+        "10 एम्पियर",
         "100 A",
         "0.1 A",
         "0.01 A"
@@ -4226,10 +4227,10 @@
       "q": "रिवर्स बायस स्थिति में पी-एन जंक्शन डायोड का प्रतिरोध कितना होता है?",
       "q_en": "The resistance of a p-n junction diode in the reverse bias condition is:",
       "options": [
-        "Depends on the current",
-        "Zero",
-        "Very high",
-        "Low"
+        "धारा पर निर्भर करता है",
+        "शून्य",
+        "बहुत अधिक",
+        "कम"
       ],
       "options_en": [
         "Depends on the current",
@@ -4245,10 +4246,10 @@
       "q": "प्रिज्म में विचलन कोण सबसे छोटा होता है जब प्रकाश प्रिज्म से गुजरता है:",
       "q_en": "The angle of deviation in a prism is smallest when the light passes through the prism at:",
       "options": [
-        "The critical angle",
-        "The maximum angle of incidence",
-        "The minimum angle of deviation",
-        "The angle of incidence"
+        "क्रांतिक कोण पर",
+        "अधिकतम आपतन कोण पर",
+        "न्यूनतम विचलन कोण पर",
+        "आपतन कोण पर"
       ],
       "options_en": [
         "The critical angle",
@@ -4284,7 +4285,7 @@
       "q_en": "The magnitude of magnetic moment (spin only) of [NiCl₄]²⁻ will be:",
       "options": [
         "1.23 V.M.",
-        "0",
+        "हमेशा 0",
         "5.64 B.M.",
         "2.82 B.M."
       ],
@@ -4302,10 +4303,10 @@
       "q": "एन-टाइप सेमीकंडक्टर बनाने के लिए सबसे सामान्य डोपिंग सामग्री कौन-सी होती है?",
       "q_en": "Which of the following is the most common doping material used to create n-type semiconductors?",
       "options": [
-        "Boron",
-        "Phosphorus",
-        "Gallium",
-        "Arsenic"
+        "बोरॉन",
+        "फॉस्फोरस",
+        "गैलियम",
+        "आर्सेनिक"
       ],
       "options_en": [
         "Boron",
@@ -4318,7 +4319,7 @@
       "id": 227
     },
     {
-      "q": "पृथ्वी के 5.00 × 10⁻⁵ T चुंबकीय क्षेत्र के लंबवत 7.80 km/s की कक्षीय गति से घूम रहे 20.0 km लंबे कंडक्टर के अनुदिश प्रेरित गतिशील emf की गणना करें।",
+      "q": "पृथ्वी के 5.00 × 10⁻⁵ T चुंबकीय क्षेत्र के लंबवत 7.80 km",
       "q_en": "Calculate the motional emf induced along a 20.0 km long conductor moving at an orbital speed of 7.80 km/s perpendicular to the Earth's 5.00 × 10⁻⁵ T magnetic field.",
       "options": [
         "7.80×10³ V",
@@ -4340,10 +4341,10 @@
       "q": "फोटॉन अवधारणा को निम्नलिखित में से किस घटना के द्वारा समर्थित किया गया था?",
       "q_en": "The photon concept of light was supported by the observation of:",
       "options": [
-        "Interference",
-        "Photoelectric effect",
-        "Diffraction",
-        "Reflection"
+        "व्यतिकरण",
+        "फोटोइलेक्ट्रि क प्रभाव",
+        "विवर्तन",
+        "परावर्तन"
       ],
       "options_en": [
         "Interference",
@@ -4357,18 +4358,18 @@
     },
     {
       "q": "The amount of energy dissipated per unit time in a current carrying conductor is called: / किसी धारावाही चालक में प्रति इकाई समय में क्षय होने वाली ऊर्जा की मात्रा को क्या कहते हैं?",
-      "q_en": "The amount of energy dissipated per unit time in a current carrying conductor is called: / किसी धारावाही चालक में प्रति इकाई समय में क्षय होने वाली ऊर्जा की मात्रा को क्या कहते हैं?",
+      "q_en": "The amount of energy dissipated per unit time in a current carrying conductor is called:",
       "options": [
-        "Power / शक्ति",
-        "Energy / ऊर्जा",
-        "Heat / गर्मी",
-        "Work done / किया गया कार्य"
+        "शक्ति",
+        "ऊर्जा",
+        "ऊष्मा",
+        "कार्य done"
       ],
       "options_en": [
-        "Power / शक्ति",
-        "Energy / ऊर्जा",
-        "Heat / गर्मी",
-        "Work done / किया गया कार्य"
+        "Power",
+        "Energy",
+        "Heat",
+        "Work done"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -4376,18 +4377,18 @@
     },
     {
       "q": "Which of the following is a real image produced by a concave mirror? / निम्नलिखित में से कौन-सा प्रतिबिंब अवतल दर्पण (कॉन्केव मिरर) द्वारा वास्तविक रूप से निर्मित होता है?",
-      "q_en": "Which of the following is a real image produced by a concave mirror? / निम्नलिखित में से कौन-सा प्रतिबिंब अवतल दर्पण (कॉन्केव मिरर) द्वारा वास्तविक रूप से निर्मित होता है?",
+      "q_en": "Which of the following is a real image produced by a concave mirror?",
       "options": [
-        "Image formed by a concave mirror when the object is beyond 2f",
-        "Image formed by a concave mirror when the object is between the focus and the mirror",
-        "Image formed by a concave mirror when the object is at the focus",
-        "Image of a distant object / दूरस्थ वस्तु का प्रतिबिंब"
+        "प्रतिबिंब formed by a concave दर्पण when the वस्तु is beyond 2f",
+        "प्रतिबिंब formed by a concave दर्पण when the वस्तु is between the focus and the दर्पण",
+        "प्रतिबिंब formed by a concave दर्पण when the वस्तु is at the focus",
+        "प्रतिबिंब of a distant वस्तु"
       ],
       "options_en": [
         "Image formed by a concave mirror when the object is beyond 2f",
         "Image formed by a concave mirror when the object is between the focus and the mirror",
         "Image formed by a concave mirror when the object is at the focus",
-        "Image of a distant object / दूरस्थ वस्तु का प्रतिबिंब"
+        "Image of a distant object"
       ],
       "answer": 0,
       "type": "PYQ",
@@ -4395,7 +4396,7 @@
     },
     {
       "q": "There are N number of turns in an ideal toroid. Let r be the average radius of the toroid and n be the number of turns per unit length, then magnetic field inside the toroid is: / एक आदर्श टोरॉयड में N संख्या में घुमाव होते हैं।",
-      "q_en": "There are N number of turns in an ideal toroid. Let r be the average radius of the toroid and n be the number of turns per unit length, then magnetic field inside the toroid is: / एक आदर्श टोरॉयड में N संख्या में घुमाव होते हैं।",
+      "q_en": "There are N number of turns in an ideal toroid. Let r be the average radius of the toroid and n be the number of turns per unit length, then magnetic field inside the toroid is:",
       "options": [
         "μ₀NI/2r",
         "NI/2μ₀r",
@@ -4414,7 +4415,7 @@
     },
     {
       "q": "A conductor of length 0.4 m is moving with a speed of 7 m/s perpendicular to a magnetic field of intensity 0.9 Wb/m². The induced e.m.f. across the conductor is: / 0.4 मीटर लम्बाई वाला एक चालक 0.9 Wb/m² तीव्रता वाले चुंबकीय क्षेत्र के लंबवत 7 मीटर/सेकेंड की गति से घूम रहा है।",
-      "q_en": "A conductor of length 0.4 m is moving with a speed of 7 m/s perpendicular to a magnetic field of intensity 0.9 Wb/m². The induced e.m.f. across the conductor is: / 0.4 मीटर लम्बाई वाला एक चालक 0.9 Wb/m² तीव्रता वाले चुंबकीय क्षेत्र के लंबवत 7 मीटर/सेकेंड की गति से घूम रहा है।",
+      "q_en": "A conductor of length 0.4 m is moving with a speed of 7 m/s perpendicular to a magnetic field of intensity 0.9 Wb/m². The induced e.m.f. across the conductor is: / 0.4 मीटर लम्बाई वाला एक चालक 0.9 Wb/m² तीव्रता वाले चुंबकीय क्षेत्र के लंबवत 7 मीटर",
       "options": [
         "2.52V",
         "1.26V",
@@ -4433,12 +4434,12 @@
     },
     {
       "q": "Which of the following is a characteristic of the quantum theory of light? / प्रकाश के क्वांटम सिद्धांत की विशेषता निम्नलिखित में से कौन-सी है?",
-      "q_en": "Which of the following is a characteristic of the quantum theory of light? / प्रकाश के क्वांटम सिद्धांत की विशेषता निम्नलिखित में से कौन-सी है?",
+      "q_en": "Which of the following is a characteristic of the quantum theory of light?",
       "options": [
-        "The frequency of light is constant",
-        "Energy is emitted or absorbed in discrete packets",
-        "Light behaves as a longitudinal wave",
-        "Light travels as a continuous wave"
+        "The आवृत्ति of प्रकाश is constant",
+        "ऊर्जा is emitted or absorbed in discrete packets",
+        "प्रकाश behaves as a longitudinal तरंग",
+        "प्रकाश travels as a continuous तरंग"
       ],
       "options_en": [
         "The frequency of light is constant",
@@ -4452,25 +4453,25 @@
     },
     {
       "q": "Two point charges +Q and -Q are placed at fixed positions. At the midpoint between them, the net electric field is: / दो बिन्दु आवेश +Q तथा -Q स्थिर स्थानों पर रखे गए हैं। उनके बीच मध्य बिन्दु पर, नेट विद्युत क्षेत्र निम्न है:",
-      "q_en": "Two point charges +Q and -Q are placed at fixed positions. At the midpoint between them, the net electric field is: / दो बिन्दु आवेश +Q तथा -Q स्थिर स्थानों पर रखे गए हैं। उनके बीच मध्य बिन्दु पर, नेट विद्युत क्षेत्र निम्न है:",
+      "q_en": "Two point charges +Q and -Q are placed at fixed positions. At the midpoint between them, the net electric field is:",
       "options": [
-        "Directed toward -Q",
-        "Directed toward +Q",
-        "Directed perpendicular to the line joining them",
-        "Zero / शून्य"
+        "-Q की ओर दिष्ट",
+        "+Q की ओर दिष्ट",
+        "मिलाने वाली रेखा के लंबवत दिष्ट",
+        "शून्य"
       ],
       "options_en": [
         "Directed toward -Q",
         "Directed toward +Q",
         "Directed perpendicular to the line joining them",
-        "Zero / शून्य"
+        "Zero"
       ],
       "answer": 0,
       "type": "PYQ",
       "id": 235
     },
     {
-      "q": "A series LCR circuit has a resistance of 10Ω, an inductive reactance of 40Ω, and a capacitive reactance of 25Ω at a given frequency. What is the impedance of the circuit?",
+      "q": "A series LCR परिपथ has a प्रतिरोध of 10Ω, an inductive reactance of 40Ω, and a capacitive reactance of 25Ω at a given आवृत्ति. क्या है the impedance of the परिपथ?",
       "q_en": "A series LCR circuit has a resistance of 10Ω, an inductive reactance of 40Ω, and a capacitive reactance of 25Ω at a given frequency. What is the impedance of the circuit?",
       "options": [
         "36.03 Ω",
@@ -4490,12 +4491,12 @@
     },
     {
       "q": "Which of the following statements is NOT TRUE about a convex mirror? / उत्तल दर्पण (कॉन्वेक्स मिरर) के बारे में निम्नलिखित में से कौन-सा कथन सत्य नहीं है?",
-      "q_en": "Which of the following statements is NOT TRUE about a convex mirror? / उत्तल दर्पण (कॉन्वेक्स मिरर) के बारे में निम्नलिखित में से कौन-सा कथन सत्य नहीं है?",
+      "q_en": "Which of the following statements is NOT TRUE about a convex mirror?",
       "options": [
-        "The image is always upright.",
-        "The image is always diminished.",
-        "The image formed is always virtual.",
-        "The image formed is real and inverted."
+        "प्रतिबिंब सदैव सीधा बनता है।",
+        "प्रतिबिंब सदैव छोटा बनता है।",
+        "प्रतिबिंब सदैव आभासी बनता है।",
+        "प्रतिबिंब वास्तविक और उल्टा बनता है।"
       ],
       "options_en": [
         "The image is always upright.",
@@ -4509,11 +4510,11 @@
     },
     {
       "q": "Which of the following indicators is NOT used to compute India's official unemployment rate (as per PLFS)? / निम्नलिखित में से कौन-सा संकेतक भारत की आधिकारिक बेरोजगारी दर (पीएलएफएस के अनुसार) की गणना के लिए उपयोग नहीं किया जाता है?",
-      "q_en": "Which of the following indicators is NOT used to compute India's official unemployment rate (as per PLFS)? / निम्नलिखित में से कौन-सा संकेतक भारत की आधिकारिक बेरोजगारी दर (पीएलएफएस के अनुसार) की गणना के लिए उपयोग नहीं किया जाता है?",
+      "q_en": "Which of the following indicators is NOT used to compute India's official unemployment rate (as per PLFS)?",
       "options": [
         "Monthly Household Expenditure",
-        "Current Weekly Status (CWS)",
-        "Current Daily Status (CDS)",
+        "धारा Weekly Status (CWS)",
+        "धारा Daily Status (CDS)",
         "Usual Principal Status (UPS)"
       ],
       "options_en": [
@@ -4528,12 +4529,12 @@
     },
     {
       "q": "What does a negative magnetic susceptibility indicate about a material? / किसी पदार्थ के बारे में ऋणात्मक चुम्बकीय प्रवृत्ति क्या संकेत देती है?",
-      "q_en": "What does a negative magnetic susceptibility indicate about a material? / किसी पदार्थ के बारे में ऋणात्मक चुम्बकीय प्रवृत्ति क्या संकेत देती है?",
+      "q_en": "What does a negative magnetic susceptibility indicate about a material?",
       "options": [
-        "It enhances magnetic fields",
-        "It is paramagnetic",
-        "It is diamagnetic",
-        "It has high magnetisation"
+        "यह चुंबकीय क्षेत्र को बढ़ाता है",
+        "यह अनुचुंबकीय है",
+        "यह प्रतिचुंबकीय है",
+        "इसमें उच्च चुंबकन होता है"
       ],
       "options_en": [
         "It enhances magnetic fields",
@@ -4547,12 +4548,12 @@
     },
     {
       "q": "Which of the following is the main characteristic of the common-emitter configuration in a transistor amplifier? / ट्रांजिस्टर एम्पलीफायर में कॉमन-एमिटर कॉन्फ़िगरेशन की मुख्य विशेषता निम्नलिखित में से कौन-सी है?",
-      "q_en": "Which of the following is the main characteristic of the common-emitter configuration in a transistor amplifier? / ट्रांजिस्टर एम्पलीफायर में कॉमन-एमिटर कॉन्फ़िगरेशन की मुख्य विशेषता निम्नलिखित में से कौन-सी है?",
+      "q_en": "Which of the following is the main characteristic of the common-emitter configuration in a transistor amplifier?",
       "options": [
         "Low input impedance and high output impedance",
         "High input impedance and low output impedance",
-        "High voltage gain and high current gain",
-        "High voltage gain and low current gain"
+        "High वोल्टता gain and high धारा gain",
+        "High वोल्टता gain and low धारा gain"
       ],
       "options_en": [
         "Low input impedance and high output impedance",
@@ -4566,12 +4567,12 @@
     },
     {
       "q": "The electric field due to a point charge is: / एक बिन्दु आवेश के कारण विद्युत क्षेत्र निम्न होता है:",
-      "q_en": "The electric field due to a point charge is: / एक बिन्दु आवेश के कारण विद्युत क्षेत्र निम्न होता है:",
+      "q_en": "The electric field due to a point charge is:",
       "options": [
-        "Varies linearly with distance",
-        "Inversely proportional to r",
-        "Inversely proportional to r²",
-        "Constant throughout space"
+        "दूरी के साथ रैखिक रूप से बदलता है",
+        "r के व्युत्क्रमानुपाती",
+        "r² के व्युत्क्रमानुपाती",
+        "संपूर्ण स्थान में नियत"
       ],
       "options_en": [
         "Varies linearly with distance",
@@ -4585,18 +4586,18 @@
     },
     {
       "q": "In Young's double-slit experiment, if the wavelength of light is doubled and the slit separation is halved, the fringe width ________. / यंग के डि-स्लिट प्रयोग में, यदि प्रकाश की तरंगदेर्घ्य दोगुनी कर दी जाए और स्लिट पृथक्करण आधा कर दिया जाए, तो फ्रिंज की चौड़ाई _________ होगी।",
-      "q_en": "In Young's double-slit experiment, if the wavelength of light is doubled and the slit separation is halved, the fringe width ________. / यंग के डि-स्लिट प्रयोग में, यदि प्रकाश की तरंगदेर्घ्य दोगुनी कर दी जाए और स्लिट पृथक्करण आधा कर दिया जाए, तो फ्रिंज की चौड़ाई _________ होगी।",
+      "q_en": "In Young's double-slit experiment, if the wavelength of light is doubled and the slit separation is halved, the fringe width ________.",
       "options": [
-        "halves / आधी हो जाती है",
-        "quadruples / चार गुना हो जाती है",
-        "doubles / दोगुना हो जाती है",
-        "remains unchanged / अपरिवर्तित रहती है"
+        "halves",
+        "quadruples",
+        "doubles",
+        "अपरिवर्तित रहती है"
       ],
       "options_en": [
-        "halves / आधी हो जाती है",
-        "quadruples / चार गुना हो जाती है",
-        "doubles / दोगुना हो जाती है",
-        "remains unchanged / अपरिवर्तित रहती है"
+        "halves",
+        "quadruples",
+        "doubles",
+        "remains unchanged"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -4604,18 +4605,18 @@
     },
     {
       "q": "Which of the following phenomena could NOT be explained by the classical theory of light? / निम्नलिखित में से कौन-सी घटना वलासिकल प्रकाश सिद्धांत द्वारा नहीं समझाई जा सकती है?",
-      "q_en": "Which of the following phenomena could NOT be explained by the classical theory of light? / निम्नलिखित में से कौन-सी घटना वलासिकल प्रकाश सिद्धांत द्वारा नहीं समझाई जा सकती है?",
+      "q_en": "Which of the following phenomena could NOT be explained by the classical theory of light?",
       "options": [
-        "Refraction / अपवर्तन",
-        "Reflection / परावर्तन",
-        "Photoelectric effect / फोटोइलेक्ट्रिक प्रभाव",
-        "Diffraction / विवर्तन"
+        "अपवर्तन",
+        "परावर्तन",
+        "फोटोइलेक्ट्रि क प्रभाव",
+        "विवर्तन"
       ],
       "options_en": [
-        "Refraction / अपवर्तन",
-        "Reflection / परावर्तन",
-        "Photoelectric effect / फोटोइलेक्ट्रिक प्रभाव",
-        "Diffraction / विवर्तन"
+        "Refraction",
+        "Reflection",
+        "Photoelectric effect",
+        "Diffraction"
       ],
       "answer": 2,
       "type": "PYQ",
@@ -4623,12 +4624,12 @@
     },
     {
       "q": "Why was Volta's experiment with dissimilar metals and a moist conductor significant in the context of electrostatic potential? / स्थिर वैद्युत विभव के संदर्भ में असमान धातुओं और नम चालक के साथ वोल्टा का प्रयोग महत्वपूर्ण क्यों था?",
-      "q_en": "Why was Volta's experiment with dissimilar metals and a moist conductor significant in the context of electrostatic potential? / स्थिर वैद्युत विभव के संदर्भ में असमान धातुओं और नम चालक के साथ वोल्टा का प्रयोग महत्वपूर्ण क्यों था?",
+      "q_en": "Why was Volta's experiment with dissimilar metals and a moist conductor significant in the context of electrostatic potential?",
       "options": [
         "It showed electrostatic potential can arise without friction",
-        "It confirmed that batteries are sources of kinetic energy",
+        "It confirmed that batteries are sources of kinetic ऊर्जा",
         "It proved that all living tissue generates electricity",
-        "It demonstrated that electric potential differences can be maintained chemically"
+        "It demonstrated that विद्युत potential differences can be maintained chemically"
       ],
       "options_en": [
         "It showed electrostatic potential can arise without friction",
@@ -4642,7 +4643,7 @@
     },
     {
       "q": "The primary winding of a transformer has 100 turns and its secondary winding has 200 turns. The primary is connected to an A.C. supply of 120 V and the current flowing in it is 10 A. The voltage and the current in the secondary are: / एक ट्रांसफार्मर की प्राथमिक वाइंडिंग में 100 टर्न हैं और इसकी द्वितीयक वाइंडिंग में 200 टर्न हैं।",
-      "q_en": "The primary winding of a transformer has 100 turns and its secondary winding has 200 turns. The primary is connected to an A.C. supply of 120 V and the current flowing in it is 10 A. The voltage and the current in the secondary are: / एक ट्रांसफार्मर की प्राथमिक वाइंडिंग में 100 टर्न हैं और इसकी द्वितीयक वाइंडिंग में 200 टर्न हैं।",
+      "q_en": "The primary winding of a transformer has 100 turns and its secondary winding has 200 turns. The primary is connected to an A.C. supply of 120 V and the current flowing in it is 10 A. The voltage and the current in the secondary are:",
       "options": [
         "120 V, 20 A",
         "240 V, 5 A",
@@ -4661,29 +4662,29 @@
     },
     {
       "q": "What is the main cause of the monsoon winds in India? / भारत में मानसूनी हवाओं का मुख्य कारण क्या है?",
-      "q_en": "What is the main cause of the monsoon winds in India? / भारत में मानसूनी हवाओं का मुख्य कारण क्या है?",
+      "q_en": "What is the main cause of the monsoon winds in India?",
       "options": [
-        "Changes in atmospheric pressure between land and sea",
-        "Solar flares / सौर ज्वालाएँ",
-        "Ocean currents / महासागरीय धाराएँ",
-        "Earth's rotation / पृथ्वी का घूर्णन"
+        "Changes in atmospheric दाब between land and sea",
+        "Solar flares",
+        "Ocean currents",
+        "Earth's rotation"
       ],
       "options_en": [
         "Changes in atmospheric pressure between land and sea",
-        "Solar flares / सौर ज्वालाएँ",
-        "Ocean currents / महासागरीय धाराएँ",
-        "Earth's rotation / पृथ्वी का घूर्णन"
+        "Solar flares",
+        "Ocean currents",
+        "Earth's rotation"
       ],
       "answer": 0,
       "type": "PYQ",
       "id": 246
     },
     {
-      "q": "A factory receives 100 kW of electrical power through a transmission line with resistance 5 Ω. If the transmission voltage is doubled without changing the power requirement of the factory, what happens to the power loss in the transmission line?",
+      "q": "A factory receives 100 kW of विद्युत शक्ति through a transmission line with resistance 5 Ω. If the transmission voltage is doubled without changing the power requirement of the factory, what happens to the power loss in the transmission line?",
       "q_en": "A factory receives 100 kW of electrical power through a transmission line with resistance 5 Ω. If the transmission voltage is doubled without changing the power requirement of the factory, what happens to the power loss in the transmission line?",
       "options": [
         "It becomes one-half of the original",
-        "It remains the same",
+        "It remains the समान",
         "It becomes four times the original",
         "It becomes one-fourth of the original"
       ],
@@ -4702,13 +4703,13 @@
       "q_en": "The directions of electric field (E), magnetic field (B), and wave propagation (k) in an EM wave are: / EM तरंग में विद्युत क्षेत्र (E), चुंबकीय क्षेत्र (B) और तरंग संचरण (k) की दिशाएँ हैं:",
       "options": [
         "E⊥B∥k",
-        "All parallel / सभी समानांतर",
+        "All parallel",
         "E∥B∥k",
         "E⊥B⊥k"
       ],
       "options_en": [
         "E⊥B∥k",
-        "All parallel / सभी समानांतर",
+        "All parallel",
         "E∥B∥k",
         "E⊥B⊥k"
       ],
@@ -4718,7 +4719,7 @@
     },
     {
       "q": "For a metallic conductor, if τ (mean collision time) halves due to a temperature increase while n remains constant, what happens to resistivity? / किसी धातु चालक के लिए, यदि τ तापमान में वृद्धि के कारण (औसत टक्कर समय) आधा हो जाता है जबकि n स्थिर रहता है, तो प्रतिरोधकता पर क्या प्रभाव पड़ता है?",
-      "q_en": "For a metallic conductor, if τ (mean collision time) halves due to a temperature increase while n remains constant, what happens to resistivity? / किसी धातु चालक के लिए, यदि τ तापमान में वृद्धि के कारण (औसत टक्कर समय) आधा हो जाता है जबकि n स्थिर रहता है, तो प्रतिरोधकता पर क्या प्रभाव पड़ता है?",
+      "q_en": "For a metallic conductor, if τ (mean collision time) halves due to a temperature increase while n remains constant, what happens to resistivity?",
       "options": [
         "It becomes one-fourth",
         "It remains unchanged",
@@ -4737,7 +4738,7 @@
     },
     {
       "q": "The Mukhya Mantri Solar Pump Yojana aims to: / मुख्यमंत्री सोलर पंप योजना का लक्ष्य निम्न है:",
-      "q_en": "The Mukhya Mantri Solar Pump Yojana aims to: / मुख्यमंत्री सोलर पंप योजना का लक्ष्य निम्न है:",
+      "q_en": "The Mukhya Mantri Solar Pump Yojana aims to:",
       "options": [
         "Provide solar-powered irrigation pumps to farmers to reduce electricity costs",
         "Promote installation of solar panels in urban households",
@@ -4756,31 +4757,31 @@
     },
     {
       "q": "The dispersion of light through a prism results in: / प्रिज्म के माध्यम से प्रकाश के विवर्तन का परिणाम होता है:",
-      "q_en": "The dispersion of light through a prism results in: / प्रिज्म के माध्यम से प्रकाश के विवर्तन का परिणाम होता है:",
+      "q_en": "The dispersion of light through a prism results in:",
       "options": [
-        "Only red light passing through the prism",
-        "The formation of a rainbow / इंद्रधनुष का निर्माण",
-        "Decrease in the wavelength of light",
-        "The formation of a spectrum / स्पेक्ट्रम का निर्माण"
+        "Only red प्रकाश passing through the prism",
+        "The formation of a rainbow",
+        "घटता है in the तरंगदैर्ध्य of प्रकाश",
+        "The formation of a spectrum"
       ],
       "options_en": [
         "Only red light passing through the prism",
-        "The formation of a rainbow / इंद्रधनुष का निर्माण",
+        "The formation of a rainbow",
         "Decrease in the wavelength of light",
-        "The formation of a spectrum / स्पेक्ट्रम का निर्माण"
+        "The formation of a spectrum"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 251
     },
     {
-      "q": "A vibration magnetometer is placed with its axis at 30° to the magnetic meridian. The observed time period is 3 s. What will be the actual magnetic field strength B if the magnetic moment and moment of inertia are known?",
+      "q": "A vibration magnetometer is placed with its axis at 30° to the चुंबकीय meridian. The observed time period is 3 s. What will be the actual चुंबकीय क्षेत्र strength B if the चुंबकीय moment and moment of inertia are known?",
       "q_en": "A vibration magnetometer is placed with its axis at 30° to the magnetic meridian. The observed time period is 3 s. What will be the actual magnetic field strength B if the magnetic moment and moment of inertia are known?",
       "options": [
         "No change",
-        "Increases by a factor of 2/√2",
-        "Decreases by cos30°",
-        "Increases by sec30°"
+        "बढ़ता है by a factor of 2/√2",
+        "घटता है by cos30°",
+        "बढ़ता है by sec30°"
       ],
       "options_en": [
         "No change",
@@ -4794,12 +4795,12 @@
     },
     {
       "q": "Which of the following statements about the photoelectric effect is FALSE? / फोटोइलेक्ट्रिक प्रभाव के बारे में निम्नलिखित में से कौन-सा कथन गलत है?",
-      "q_en": "Which of the following statements about the photoelectric effect is FALSE? / फोटोइलेक्ट्रिक प्रभाव के बारे में निम्नलिखित में से कौन-सा कथन गलत है?",
+      "q_en": "Which of the following statements about the photoelectric effect is FALSE?",
       "options": [
-        "The frequency of light affects the kinetic energy of the emitted electrons",
-        "The intensity of light affects the number of photoelectrons emitted",
-        "Electrons are emitted only if the frequency of light exceeds a certain threshold frequency",
-        "The photoelectric current increases with the frequency of the incident light"
+        "The आवृत्ति of प्रकाश affects the kinetic ऊर्जा of the emitted electrons",
+        "The intensity of प्रकाश affects the number of photoelectrons emitted",
+        "Electrons are emitted only if the आवृत्ति of प्रकाश exceeds a certain threshold आवृत्ति",
+        "The photoelectric धारा बढ़ता है with the आवृत्ति of the incident प्रकाश"
       ],
       "options_en": [
         "The frequency of light affects the kinetic energy of the emitted electrons",
@@ -4813,12 +4814,12 @@
     },
     {
       "q": "Why is a potentiometer preferred over a voltmeter for comparing EMFs? / ईएमएफ की तुलना के लिए वोल्टमीटर की अपेक्षा पोटेंशियोमीटर को क्यों प्राथमिकता दी जाती है?",
-      "q_en": "Why is a potentiometer preferred over a voltmeter for comparing EMFs? / ईएमएफ की तुलना के लिए वोल्टमीटर की अपेक्षा पोटेंशियोमीटर को क्यों प्राथमिकता दी जाती है?",
+      "q_en": "Why is a potentiometer preferred over a voltmeter for comparing EMFs?",
       "options": [
-        "It can measure power",
+        "It can measure शक्ति",
         "It is cheap",
-        "It gives more accurate readings without drawing current",
-        "It has higher resistance"
+        "It gives more accurate readings without drawing धारा",
+        "It has higher प्रतिरोध"
       ],
       "options_en": [
         "It can measure power",
@@ -4832,7 +4833,7 @@
     },
     {
       "q": "In an ideal transformer, the input voltage is 220 V and the number of turns in the primary and secondary coils are 1000 and 500, respectively. If the input current is 2 A, what is the power output and the secondary current? / एक आदर्श ट्रांसफार्मर में, इनपुट वोल्टेज 220 V है।",
-      "q_en": "In an ideal transformer, the input voltage is 220 V and the number of turns in the primary and secondary coils are 1000 and 500, respectively. If the input current is 2 A, what is the power output and the secondary current? / एक आदर्श ट्रांसफार्मर में, इनपुट वोल्टेज 220 V है।",
+      "q_en": "In an ideal transformer, the input voltage is 220 V and the number of turns in the primary and secondary coils are 1000 and 500, respectively. If the input current is 2 A, what is the power output and the secondary current?",
       "options": [
         "440 W, 1 A",
         "440 W, 4 A",
@@ -4851,17 +4852,17 @@
     },
     {
       "q": "In an electromagnetic waves, the electric and magnetic fields are: / विद्युत चुंबकीय तरंगों में, विद्युत और चुंबकीय क्षेत्र होते हैं:",
-      "q_en": "In an electromagnetic waves, the electric and magnetic fields are: / विद्युत चुंबकीय तरंगों में, विद्युत और चुंबकीय क्षेत्र होते हैं:",
+      "q_en": "In an electromagnetic waves, the electric and magnetic fields are:",
       "options": [
         "At 45° to each other",
         "Parallel to each other",
-        "Perpendicular to each other / एक दूसरे के लंबवत",
+        "Perpendicular to each other",
         "In phase but not perpendicular"
       ],
       "options_en": [
         "At 45° to each other",
         "Parallel to each other",
-        "Perpendicular to each other / एक दूसरे के लंबवत",
+        "Perpendicular to each other",
         "In phase but not perpendicular"
       ],
       "answer": 2,
@@ -4870,7 +4871,7 @@
     },
     {
       "q": "Ampere's Circuital law is give by: / एम्पियर का परिपथीय (सर्किटल) नियम इस प्रकार दिया गया है:",
-      "q_en": "Ampere's Circuital law is give by: / एम्पियर का परिपथीय (सर्किटल) नियम इस प्रकार दिया गया है:",
+      "q_en": "Ampere's Circuital law is give by:",
       "options": [
         "∮B.dl = μ₀I²",
         "∮B.dl = μ₀I",
@@ -4889,7 +4890,7 @@
     },
     {
       "q": "For a parallel plate capacitor with air as dielectric and plate separation of 1 cm, what is the maximum potential difference it can handle without dielectric breakdown? / एक समान्तर प्लेट संधारित्र के लिए, जिसमें वायु परावैद्युत है तथा प्लेट पृथक्करण 1 सेमी है, वह अधिकतम विभवान्तर क्या है?",
-      "q_en": "For a parallel plate capacitor with air as dielectric and plate separation of 1 cm, what is the maximum potential difference it can handle without dielectric breakdown? / एक समान्तर प्लेट संधारित्र के लिए, जिसमें वायु परावैद्युत है तथा प्लेट पृथक्करण 1 सेमी है, वह अधिकतम विभवान्तर क्या है?",
+      "q_en": "For a parallel plate capacitor with air as dielectric and plate separation of 1 cm, what is the maximum potential difference it can handle without dielectric breakdown?",
       "options": [
         "3×10⁴ V",
         "3×10⁹ V",
@@ -4908,7 +4909,7 @@
     },
     {
       "q": "If incident light of frequency v results in stopping potential V₀, the relation is: / यदि आवृत्ति v का आपतित प्रकाश निरोधक विभव V₀ उत्पन्न करता है, तो संबंध है:",
-      "q_en": "If incident light of frequency v results in stopping potential V₀, the relation is: / यदि आवृत्ति v का आपतित प्रकाश निरोधक विभव V₀ उत्पन्न करता है, तो संबंध है:",
+      "q_en": "If incident light of frequency v results in stopping potential V₀, the relation is:",
       "options": [
         "hv = φ - e²V₀",
         "hv = eV₀",
@@ -4927,7 +4928,7 @@
     },
     {
       "q": "A lamp consumes only 50% of peak power in an A.C. circuit. What is the phase difference between the applied voltage and the circuit current? / एक लैंप ए.सी सर्किट में केवल 50% पीक पावर का उपभोग करता है। लागू वोल्टेज और सर्किट करंट के बीच फेज अंतर क्या है?",
-      "q_en": "A lamp consumes only 50% of peak power in an A.C. circuit. What is the phase difference between the applied voltage and the circuit current? / एक लैंप ए.सी सर्किट में केवल 50% पीक पावर का उपभोग करता है। लागू वोल्टेज और सर्किट करंट के बीच फेज अंतर क्या है?",
+      "q_en": "A lamp consumes only 50% of peak power in an A.C. circuit. What is the phase difference between the applied voltage and the circuit current?",
       "options": [
         "π/6",
         "π/2",
@@ -4946,18 +4947,18 @@
     },
     {
       "q": "Which law states that the total electric charge in an isolated system remains constant? / कौन-सा नियम बताता है कि एक पृथक प्रणाली में कुल विद्युत आवेश स्थिर रहता है?",
-      "q_en": "Which law states that the total electric charge in an isolated system remains constant? / कौन-सा नियम बताता है कि एक पृथक प्रणाली में कुल विद्युत आवेश स्थिर रहता है?",
+      "q_en": "Which law states that the total electric charge in an isolated system remains constant?",
       "options": [
-        "Coulomb's Law / कूलॉम्ब का नियम",
-        "Law of Conservation of Charge / आवेश संरक्षण का नियम",
-        "Faraday's Law / फैराडे का नियम",
-        "Gauss's Law / गॉस का नियम"
+        "कूलॉम का नियम",
+        "Law of Conservation of आवेश",
+        "Faraday's Law",
+        "Gauss's Law"
       ],
       "options_en": [
-        "Coulomb's Law / कूलॉम्ब का नियम",
-        "Law of Conservation of Charge / आवेश संरक्षण का नियम",
-        "Faraday's Law / फैराडे का नियम",
-        "Gauss's Law / गॉस का नियम"
+        "Coulomb's Law",
+        "Law of Conservation of Charge",
+        "Faraday's Law",
+        "Gauss's Law"
       ],
       "answer": 1,
       "type": "PYQ",
@@ -4965,12 +4966,12 @@
     },
     {
       "q": "Induced emf in the coil depends upon: / कुंडली में प्रेरित ईएमएफ इस पर निर्भर करता है:",
-      "q_en": "Induced emf in the coil depends upon: / कुंडली में प्रेरित ईएमएफ इस पर निर्भर करता है:",
+      "q_en": "Induced emf in the coil depends upon:",
       "options": [
-        "Resistance of coil",
-        "Conductivity of coil",
-        "Amount of flux",
-        "Rate of change of linked flux"
+        "प्रतिरोध of कुंडली",
+        "Conductivity of कुंडली",
+        "Amount of फ्लक्स",
+        "Rate of change of linked फ्लक्स"
       ],
       "options_en": [
         "Resistance of coil",
@@ -4983,12 +4984,12 @@
       "id": 262
     },
     {
-      "q": "The magnetic moment of a current-carrying circular loop is:",
+      "q": "The चुंबकीय moment of a धारा-carrying circular loop is:",
       "q_en": "The magnetic moment of a current-carrying circular loop is:",
       "options": [
-        "Zero",
-        "Proportional to current only",
-        "Proportional to area of loop × current",
+        "शून्य",
+        "Proportional to धारा only",
+        "Proportional to area of loop × धारा",
         "Proportional to square of radius"
       ],
       "options_en": [
@@ -5002,18 +5003,18 @@
       "id": 263
     },
     {
-      "q": "The SI unit of magnetic flux is:",
+      "q": "The चुंबकीय फ्लक्स का SI मात्रक is:",
       "q_en": "The SI unit of magnetic flux is:",
       "options": [
         "Tesla (T)",
         "Henry (H)",
-        "Weber (Wb) / वेबर",
+        "Weber (Wb)",
         "Ampere (A)"
       ],
       "options_en": [
         "Tesla (T)",
         "Henry (H)",
-        "Weber (Wb) / वेबर",
+        "Weber (Wb)",
         "Ampere (A)"
       ],
       "answer": 2,
@@ -5021,16 +5022,16 @@
       "id": 264
     },
     {
-      "q": "A transformer is employed to:",
+      "q": "ट्रांसफार्मर का उपयोग किसलिए किया जाता है?:",
       "q_en": "A transformer is employed to:",
       "options": [
-        "Obtain a suitable A.C. voltage / उपयुक्त ए.सी. वोल्टेज प्राप्त करना",
-        "Obtain a suitable D.C. voltage",
+        "Obtain a suitable A.C. वोल्टता",
+        "Obtain a suitable D.C. वोल्टता",
         "Convert A.C. into D.C.",
         "Convert D.C. into A.C."
       ],
       "options_en": [
-        "Obtain a suitable A.C. voltage / उपयुक्त ए.सी. वोल्टेज प्राप्त करना",
+        "Obtain a suitable A.C. voltage",
         "Obtain a suitable D.C. voltage",
         "Convert A.C. into D.C.",
         "Convert D.C. into A.C."
@@ -5040,7 +5041,7 @@
       "id": 265
     },
     {
-      "q": "A straight conductor of length 2m moves at 20 m/s at 30° with a magnetic field of 0.1 wbm². The induced emf is:",
+      "q": "A straight conductor of length 2m moves at 20 m/s at 30° with a चुंबकीय क्षेत्र of 0.1 wbm². The induced emf is:",
       "q_en": "A straight conductor of length 2m moves at 20 m/s at 30° with a magnetic field of 0.1 wbm². The induced emf is:",
       "options": [
         "3V",
@@ -5063,13 +5064,13 @@
       "q_en": "The focal length of an eyepiece in an astronomical telescope is typically:",
       "options": [
         "Very long",
-        "Very short / बहुत छोटी",
-        "Zero",
-        "Equal to the focal length of the objective lens"
+        "Very short",
+        "शून्य",
+        "Equal to the focal length of the objective लेंस"
       ],
       "options_en": [
         "Very long",
-        "Very short / बहुत छोटी",
+        "Very short",
         "Zero",
         "Equal to the focal length of the objective lens"
       ],
@@ -5078,13 +5079,13 @@
       "id": 267
     },
     {
-      "q": "The wave-particle duality of matter means:",
+      "q": "The तरंग-particle duality of matter means:",
       "q_en": "The wave-particle duality of matter means:",
       "options": [
         "Matter behaves like a particle in all situations",
-        "Matter behaves only as a particle",
-        "Matter behaves only as a wave",
-        "Matter has both wave and particle properties under different conditions"
+        "द्रव्य केवल कण जैसा व्यवहार करता है",
+        "द्रव्य केवल तरंग जैसा व्यवहार करता है",
+        "Matter has both तरंग and particle properties under भिन्न conditions"
       ],
       "options_en": [
         "Matter behaves like a particle in all situations",
@@ -5097,16 +5098,16 @@
       "id": 268
     },
     {
-      "q": "A cut diamond sparkles because of its:",
+      "q": "तराशा हुआ हीरा किस कारण चमकता है?:",
       "q_en": "A cut diamond sparkles because of its:",
       "options": [
-        "high refractive index / उच्च अपवर्तनांक",
-        "hardness",
-        "emission of light",
-        "absorption of light"
+        "high refractive index",
+        "कठोरता",
+        "प्रकाश का उत्सर्जन",
+        "प्रकाश का अवशोषण"
       ],
       "options_en": [
-        "high refractive index / उच्च अपवर्तनांक",
+        "high refractive index",
         "hardness",
         "emission of light",
         "absorption of light"
@@ -5116,13 +5117,13 @@
       "id": 269
     },
     {
-      "q": "Which CORRECTLY compares the distance dependence of electric field from a point charge vs. a point dipole at large distances?",
+      "q": "कौन-सा CORRECTLY compares the distance dependence of विद्युत क्षेत्र from a point आवेश vs. a point dipole at large distances?",
       "q_en": "Which CORRECTLY compares the distance dependence of electric field from a point charge vs. a point dipole at large distances?",
       "options": [
-        "Point charge: 1/r², Dipole: 1/r³",
-        "Both fall as 1/r²",
-        "Point charge: 1/r³, Dipole: 1/r²",
-        "Both fall as 1/r³"
+        "बिंदु आवेश: 1/r², द्विध्रुव: 1/r³",
+        "दोनों 1/r² के अनुसार घटते हैं",
+        "बिंदु आवेश: 1/r³, द्विध्रुव: 1/r²",
+        "दोनों 1/r³ के अनुसार घटते हैं"
       ],
       "options_en": [
         "Point charge: 1/r², Dipole: 1/r³",
@@ -5135,13 +5136,13 @@
       "id": 270
     },
     {
-      "q": "Which definition CORRECTLY describes the electrostatic potential at a point?",
+      "q": "किसी बिंदु पर स्थिरवैद्युत विभव की सही परिभाषा क्या है?",
       "q_en": "Which definition CORRECTLY describes the electrostatic potential at a point?",
       "options": [
-        "The force experienced by a unit charge at that point",
-        "The total energy stored in the electric field around a point",
-        "The work done by an external agent in bringing a unit positive test charge from infinity to that point",
-        "The work done by the electrostatic field in moving a charge around that point"
+        "The बल experienced by a unit आवेश at that point",
+        "The total ऊर्जा stored in the विद्युत क्षेत्र around a point",
+        "The कार्य done by an external agent in bringing a unit positive test आवेश from अनंत to that point",
+        "The कार्य done by the electrostatic field in moving a आवेश around that point"
       ],
       "options_en": [
         "The force experienced by a unit charge at that point",
@@ -5154,18 +5155,18 @@
       "id": 271
     },
     {
-      "q": "In the photoelectric effect, the energy of the ejected electron will be maximum when:",
+      "q": "In the photoelectric effect, the ऊर्जा of the ejected इलेक्ट्रॉन will be अधिकतम when:",
       "q_en": "In the photoelectric effect, the energy of the ejected electron will be maximum when:",
       "options": [
-        "The frequency of light is below the threshold frequency",
-        "The intensity of light is maximum",
-        "The frequency of light is above the threshold frequency / प्रकाश की आवृत्ति दहलीज आवृत्ति से अधिक होगी",
-        "The intensity of light is zero"
+        "The आवृत्ति of प्रकाश is below the threshold आवृत्ति",
+        "The intensity of प्रकाश is अधिकतम",
+        "The आवृत्ति of प्रकाश is above the threshold आवृत्ति",
+        "The intensity of प्रकाश is शून्य"
       ],
       "options_en": [
         "The frequency of light is below the threshold frequency",
         "The intensity of light is maximum",
-        "The frequency of light is above the threshold frequency / प्रकाश की आवृत्ति दहलीज आवृत्ति से अधिक होगी",
+        "The frequency of light is above the threshold frequency",
         "The intensity of light is zero"
       ],
       "answer": 2,
@@ -5173,7 +5174,7 @@
       "id": 272
     },
     {
-      "q": "A solenoid contains 500 turns per unit length. If a current of 5 A is supplied, magnetic field at center is:",
+      "q": "A solenoid contains 500 turns per unit length. If a धारा of 5 A is supplied, चुंबकीय क्षेत्र at center is:",
       "q_en": "A solenoid contains 500 turns per unit length. If a current of 5 A is supplied, magnetic field at center is:",
       "options": [
         "6×10⁻³ T",
@@ -5192,7 +5193,7 @@
       "id": 273
     },
     {
-      "q": "A coil L=2H, R=4Ω, current 3A, battery disconnected at t=0. Current at t=ln(2)s is:",
+      "q": "A कुंडली L=2H, R=4Ω, धारा 3A, बैटरी disconnected at t=0. धारा at t=ln(2)s is:",
       "q_en": "A coil L=2H, R=4Ω, current 3A, battery disconnected at t=0. Current at t=ln(2)s is:",
       "options": [
         "0.75 A",
@@ -5211,18 +5212,18 @@
       "id": 274
     },
     {
-      "q": "The entire light is reflected into the denser medium. This is called __________ of light.",
+      "q": "The entire प्रकाश is reflected into the denser medium. This is called __________ of प्रकाश.",
       "q_en": "The entire light is reflected into the denser medium. This is called __________ of light.",
       "options": [
-        "external refraction",
-        "internal reflection",
-        "total internal reflection / कुल आंतरिक परावर्तन",
-        "external reflection"
+        "बाह्य अपवर्तन",
+        "आंतरिक परावर्तन",
+        "total internal reflection",
+        "बाह्य परावर्तन"
       ],
       "options_en": [
         "external refraction",
         "internal reflection",
-        "total internal reflection / कुल आंतरिक परावर्तन",
+        "total internal reflection",
         "external reflection"
       ],
       "answer": 2,
@@ -5230,12 +5231,12 @@
       "id": 275
     },
     {
-      "q": "Which CORRECTLY explains why vacuum tubes require a heated cathode, but semiconductor devices do NOT?",
+      "q": "कौन-सा CORRECTLY explains क्यों vacuum tubes require a heated cathode, but अर्धचालक devices do NOT?",
       "q_en": "Which CORRECTLY explains why vacuum tubes require a heated cathode, but semiconductor devices do NOT?",
       "options": [
-        "Vacuum tubes are made of insulators which require external heating",
-        "Heating increases the resistance of semiconductor materials",
-        "Semiconductors have mobile charge carriers within the solid structure",
+        "Vacuum tubes are made of insulators कौन-सा require external heating",
+        "Heating बढ़ता है the प्रतिरोध of अर्धचालक materials",
+        "Semiconductors have mobile आवेश carriers within the solid structure",
         "Electrons in vacuum tubes are lighter than those in semiconductors"
       ],
       "options_en": [
@@ -5249,7 +5250,7 @@
       "id": 276
     },
     {
-      "q": "A parallel plate capacitor has capacitance C₀. When a dielectric of constant K is inserted fully, new capacitance C is:",
+      "q": "A parallel plate संधारित्र has धारिता C₀. When a dielectric of constant K is inserted fully, new धारिता C is:",
       "q_en": "A parallel plate capacitor has capacitance C₀. When a dielectric of constant K is inserted fully, new capacitance C is:",
       "options": [
         "C = C₀ + K",
@@ -5268,13 +5269,13 @@
       "id": 277
     },
     {
-      "q": "What happens to the torque on a rectangular current loop when its magnetic moment becomes antiparallel to the magnetic field?",
+      "q": "What happens to the torque on a rectangular धारा loop when its चुंबकीय moment becomes antiparallel to the चुंबकीय क्षेत्र?",
       "q_en": "What happens to the torque on a rectangular current loop when its magnetic moment becomes antiparallel to the magnetic field?",
       "options": [
-        "Torque reverses direction but remains non-zero",
-        "Torque becomes zero and equilibrium is unstable",
-        "Torque becomes zero and equilibrium is stable",
-        "Torque becomes maximum"
+        "Torque reverses direction but remains non-शून्य",
+        "Torque becomes शून्य and equilibrium is unstable",
+        "Torque becomes शून्य and equilibrium is stable",
+        "Torque becomes अधिकतम"
       ],
       "options_en": [
         "Torque reverses direction but remains non-zero",
@@ -5287,13 +5288,13 @@
       "id": 278
     },
     {
-      "q": "What happens when a p-n junction diode is reverse-biased beyond its breakdown voltage?",
+      "q": "What happens when a p-n junction डायोड is reverse-biased beyond its breakdown वोल्टता?",
       "q_en": "What happens when a p-n junction diode is reverse-biased beyond its breakdown voltage?",
       "options": [
-        "It behaves like an open circuit",
-        "It conducts current normally",
-        "It emits light",
-        "It enters reverse breakdown and conducts a large current"
+        "It behaves like an open परिपथ",
+        "It conducts धारा normally",
+        "It emits प्रकाश",
+        "It enters reverse breakdown and conducts a large धारा"
       ],
       "options_en": [
         "It behaves like an open circuit",
@@ -5306,7 +5307,7 @@
       "id": 279
     },
     {
-      "q": "Two solenoids of same cross-sectional area have lengths and turns in ratio 1:2 each. Ratio of self-inductance is:",
+      "q": "Two solenoids of समान cross-sectional area have lengths and turns in ratio 1:2 each. Ratio of self-प्रेरकत्व is:",
       "q_en": "Two solenoids of same cross-sectional area have lengths and turns in ratio 1:2 each. Ratio of self-inductance is:",
       "options": [
         "1:4",
@@ -5325,11 +5326,11 @@
       "id": 280
     },
     {
-      "q": "A student connects R, C, L in series to AC source and current leads voltage. Which must be TRUE?",
+      "q": "A student connects R, C, L in series to AC source and धारा leads वोल्टता. कौन-सा must be सत्य?",
       "q_en": "A student connects R, C, L in series to AC source and current leads voltage. Which must be TRUE?",
       "options": [
-        "The resistance is greater than both reactances",
-        "The capacitive resistance is greater than inductive reactance",
+        "The प्रतिरोध is greater than both reactances",
+        "The capacitive प्रतिरोध is greater than inductive reactance",
         "The impedance is purely resistive",
         "The inductive reactance is greater than capacitive reactance"
       ],
@@ -5347,10 +5348,10 @@
       "q": "Choose an antonym for 'Plight':",
       "q_en": "Choose an antonym for 'Plight':",
       "options": [
-        "Scrape",
-        "Boon",
-        "Quandary",
-        "Trouble"
+        "संकट",
+        "वरदान",
+        "दुविधा",
+        "परेशानी"
       ],
       "options_en": [
         "Scrape",
@@ -5363,7 +5364,7 @@
       "id": 282
     },
     {
-      "q": "A current of 2 A flows through a 4 ohm resistor. The power dissipated is:",
+      "q": "A धारा of 2 A flows through a 4 ohm resistor. The शक्ति dissipated is:",
       "q_en": "A current of 2 A flows through a 4 ohm resistor. The power dissipated is:",
       "options": [
         "16 W",
@@ -5382,17 +5383,17 @@
       "id": 283
     },
     {
-      "q": "Magnetisation of a material can be zero even in a magnetic field if:",
+      "q": "Magnetisation of a material can be शून्य even in a चुंबकीय क्षेत्र if:",
       "q_en": "Magnetisation of a material can be zero even in a magnetic field if:",
       "options": [
         "The field is time-varying",
-        "The temperature is above Curie temperature / तापमान क्यूरी तापमान से ऊपर है",
+        "The ताप is above Curie ताप",
         "The material is a ferromagnet",
         "The field is very strong"
       ],
       "options_en": [
         "The field is time-varying",
-        "The temperature is above Curie temperature / तापमान क्यूरी तापमान से ऊपर है",
+        "The temperature is above Curie temperature",
         "The material is a ferromagnet",
         "The field is very strong"
       ],
@@ -5401,16 +5402,16 @@
       "id": 284
     },
     {
-      "q": "If the frequency of incident light is doubled, the kinetic energy of emitted electron will:",
+      "q": "If the आवृत्ति of incident प्रकाश is doubled, the kinetic ऊर्जा of emitted इलेक्ट्रॉन will:",
       "q_en": "If the frequency of incident light is doubled, the kinetic energy of emitted electron will:",
       "options": [
-        "Increase, but by a constant amount / एक निश्चित मात्रा से बढ़ेगी",
+        "बढ़ता है, but by a constant amount",
         "Become four times larger",
         "Become twice as large",
         "Not change"
       ],
       "options_en": [
-        "Increase, but by a constant amount / एक निश्चित मात्रा से बढ़ेगी",
+        "Increase, but by a constant amount",
         "Become four times larger",
         "Become twice as large",
         "Not change"
@@ -5420,13 +5421,13 @@
       "id": 285
     },
     {
-      "q": "Which describes the dual nature of matter?",
+      "q": "द्रव्य की द्वैत प्रकृति का वर्णन कौन करता है?",
       "q_en": "Which describes the dual nature of matter?",
       "options": [
-        "Matter exhibits both particle and wave properties",
-        "Matter behaves only as a particle",
-        "Matter behaves only as a wave",
-        "Matter is completely wave-like"
+        "द्रव्य कण और तरंग दोनों गुण प्रदर्शित करता है",
+        "द्रव्य केवल कण जैसा व्यवहार करता है",
+        "द्रव्य केवल तरंग जैसा व्यवहार करता है",
+        "द्रव्य पूर्णतः तरंग जैसा है"
       ],
       "options_en": [
         "Matter exhibits both particle and wave properties",
@@ -5439,16 +5440,16 @@
       "id": 286
     },
     {
-      "q": "Which change will NOT affect the capacitance C of a capacitor?",
+      "q": "कौन-सा change will NOT affect the धारिता C of a संधारित्र?",
       "q_en": "Which change will NOT affect the capacitance C of a capacitor?",
       "options": [
-        "Doubling the charge on both plates / दोनों प्लेटों पर आवेश दोगुना करना",
+        "Doubling the आवेश on both plates",
         "Changing the material of the dielectric",
         "Increasing the surface area of the plates",
         "Decreasing the distance between the plates"
       ],
       "options_en": [
-        "Doubling the charge on both plates / दोनों प्लेटों पर आवेश दोगुना करना",
+        "Doubling the charge on both plates",
         "Changing the material of the dielectric",
         "Increasing the surface area of the plates",
         "Decreasing the distance between the plates"
@@ -5458,7 +5459,7 @@
       "id": 287
     },
     {
-      "q": "At the same distance r (r>>a) from center of a dipole, electric fields on axial and equatorial lines are in ratio:",
+      "q": "At the समान distance r (r>>a) from center of a dipole, विद्युत fields on axial and equatorial lines are in ratio:",
       "q_en": "At the same distance r (r>>a) from center of a dipole, electric fields on axial and equatorial lines are in ratio:",
       "options": [
         "1:1",
@@ -5477,7 +5478,7 @@
       "id": 288
     },
     {
-      "q": "A magnetic field 2×10⁻² T, coil area 100 cm², 50 turns, average emf 0.1 V when removed in t sec. Value of t is:",
+      "q": "A चुंबकीय क्षेत्र 2×10⁻² T, कुंडली area 100 cm², 50 turns, average emf 0.1 V when removed in t sec. Value of t is:",
       "q_en": "A magnetic field 2×10⁻² T, coil area 100 cm², 50 turns, average emf 0.1 V when removed in t sec. Value of t is:",
       "options": [
         "1s",
@@ -5496,17 +5497,17 @@
       "id": 289
     },
     {
-      "q": "Which index uses satellite data to assess night-time light intensity as a proxy for economic activity?",
+      "q": "आर्थिक गतिविधि के संकेतक के रूप में रात्रि प्रकाश तीव्रता का आकलन कौन-सा सूचकांक करता है?",
       "q_en": "Which index uses satellite data to assess night-time light intensity as a proxy for economic activity?",
       "options": [
         "Human Development Index",
-        "Night Lights Index / रात्रि प्रकाश सूचकांक",
+        "Night Lights Index",
         "Ease of Doing Business Index",
         "Consumer Confidence Index"
       ],
       "options_en": [
         "Human Development Index",
-        "Night Lights Index / रात्रि प्रकाश सूचकांक",
+        "Night Lights Index",
         "Ease of Doing Business Index",
         "Consumer Confidence Index"
       ],
@@ -5515,16 +5516,16 @@
       "id": 290
     },
     {
-      "q": "A coil is in a magnetic field increasing in time. The induced current will:",
+      "q": "A कुंडली is in a चुंबकीय क्षेत्र increasing in time. The induced धारा will:",
       "q_en": "A coil is in a magnetic field increasing in time. The induced current will:",
       "options": [
-        "Oppose the increase in field / क्षेत्र की वृद्धि का विरोध करेगी",
-        "Strengthen the magnetic field",
-        "Decrease the field to zero",
-        "Be zero"
+        "Oppose the बढ़ता है in field",
+        "चुंबकीय क्षेत्र को प्रबल करेगी",
+        "क्षेत्र को शून्य करेगी",
+        "शून्य होगी"
       ],
       "options_en": [
-        "Oppose the increase in field / क्षेत्र की वृद्धि का विरोध करेगी",
+        "Oppose the increase in field",
         "Strengthen the magnetic field",
         "Decrease the field to zero",
         "Be zero"
@@ -5534,16 +5535,16 @@
       "id": 291
     },
     {
-      "q": "The blue color of the sky is due to:",
+      "q": "आकाश का रंग नीला किस कारण होता है?:",
       "q_en": "The blue color of the sky is due to:",
       "options": [
-        "Scattering of sunlight by air molecules / वायु अणुओं द्वारा सूर्य के प्रकाश का प्रकीर्णन",
-        "Diffusion of sunlight by air molecules",
-        "Refraction of sunlight by the atmosphere",
-        "Reflection of sunlight by dust particles"
+        "Scattering of sunlight by air molecules",
+        "वायु अणुओं द्वारा सूर्य के प्रकाश का विसरण",
+        "वायुमंडल द्वारा प्रकाश का अपवर्तन",
+        "धूल कणों द्वारा प्रकाश का परावर्तन"
       ],
       "options_en": [
-        "Scattering of sunlight by air molecules / वायु अणुओं द्वारा सूर्य के प्रकाश का प्रकीर्णन",
+        "Scattering of sunlight by air molecules",
         "Diffusion of sunlight by air molecules",
         "Refraction of sunlight by the atmosphere",
         "Reflection of sunlight by dust particles"
@@ -5553,32 +5554,31 @@
       "id": 292
     },
     {
-      "q": "What is the role of a diode in a rectifier circuit?",
+      "q": "क्या है the role of a डायोड in a rectifier परिपथ?",
       "q_en": "What is the role of a diode in a rectifier circuit?",
       "options": [
-        "It blocks current flow completely",
-        "It allows current to flow in both directions",
-        "It stores energy",
-        "It allows current to flow only in one direction / यह केवल एक दिशा में विद्युत धारा प्रवाहित होने देता है"
+        "यह धारा प्रवाह को पूर्णतः रोकता है",
+        "यह दोनों दिशाओं में धारा बहने देता है",
+        "यह ऊर्जा संचित करता है",
+        "It allows धारा to flow only in one direction"
       ],
       "options_en": [
         "It blocks current flow completely",
         "It allows current to flow in both directions",
         "It stores energy",
-        "It allows current to flow only in one direction / यह केवल एक दिशा में विद्युत धारा प्रवाहित होने देता है"
+        "It allows current to flow only in one direction"
       ],
       "answer": 3,
       "type": "PYQ",
       "id": 293
     },
     {
-      "subject": "Physics",
-      "q": "The self-inductance of a long solenoid cannot be increased by Increasing its area of cross section.",
+      "q": "The self-प्रेरकत्व of a long solenoid cannot be increased by Increasing its area of cross section.",
       "q_en": "The self-inductance of a long solenoid cannot be increased by Increasing its area of cross section.",
       "options": [
-        "Increasing its length.",
-        "Changing the medium with greater permeability",
-        "Increasing the number of turns in it.",
+        "इसकी लम्बाई बढ़ाने से",
+        "माध्यम को बदलते हुये अधिक भेद्यता के साथ",
+        "इसमें चक्करों की संख्या बढ़ाने से",
         "वेग"
       ],
       "options_en": [
@@ -5592,13 +5592,12 @@
       "id": 294
     },
     {
-      "subject": "Physics",
-      "q": "What is the self inductance of a straight conductor? ? Zero",
+      "q": "क्या है the self प्रेरकत्व of a straight conductor?",
       "q_en": "What is the self inductance of a straight conductor? ? Zero",
       "options": [
-        "Very large",
-        "Infinity",
-        "Very small",
+        "बहुत बड़ी",
+        "अनंत",
+        "बहुत छोटी",
         "वेग"
       ],
       "options_en": [
@@ -5612,13 +5611,12 @@
       "id": 295
     },
     {
-      "subject": "Physics",
-      "q": "What is the magnetic meridian? ? Point",
+      "q": "क्या है the चुंबकीय meridian?",
       "q_en": "What is the magnetic meridian? ? Point",
       "options": [
-        "Horizontal plane",
-        "Vertical plane",
-        "Line along N-S",
+        "क्षैतिज तल",
+        "ऊर्ध्वाधर तल",
+        "N-S के अनुदिश रे खा",
         "N-S"
       ],
       "options_en": [
@@ -5632,13 +5630,12 @@
       "id": 296
     },
     {
-      "subject": "Physics",
-      "q": "What is the neutral particle found in a nucleus alongside protons? ? Electron",
+      "q": "क्या है the neutral particle found in a नाभिक alongside protons?",
       "q_en": "What is the neutral particle found in a nucleus alongside protons? ? Electron",
       "options": [
-        "Neutrino",
-        "Neutron",
-        "Positron",
+        "न्यूट्रिनो",
+        "न्यूट्रॉन",
+        "पॉज़िट्रॉन",
         "वेग"
       ],
       "options_en": [
@@ -5652,8 +5649,7 @@
       "id": 297
     },
     {
-      "subject": "Physics",
-      "q": "What is the ratio of hydrogen atom's radius in 2nd excited state to 1st excited state? ? 4 : 1",
+      "q": "क्या है the ratio of hydrogen परमाणु's radius in 2nd excited state to 1st excited state?",
       "q_en": "What is the ratio of hydrogen atom's radius in 2nd excited state to 1st excited state? ? 4 : 1",
       "options": [
         "4 : 1 2 : 1",
@@ -5672,14 +5668,13 @@
       "id": 298
     },
     {
-      "subject": "Physics",
-      "q": "Which of the following materials is used in the wire of potentiometer? ? Copper",
+      "q": "निम्नलिखित में से कौन-सा materials is used in the wire of potentiometer?",
       "q_en": "Which of the following materials is used in the wire of potentiometer? ? Copper",
       "options": [
-        "Steel",
-        "Manganin",
-        "Aluminium",
-        "(Aluminium)"
+        "स्टील",
+        "मैंगनीन",
+        "एल्युमीनियम",
+        "एल्युमीनियम"
       ],
       "options_en": [
         "Steel",
@@ -5692,11 +5687,10 @@
       "id": 299
     },
     {
-      "subject": "Physics",
-      "q": "The mutual inductance of two coils placed opposite is 1.5 H. If the current in one coil increases from zero to 20",
+      "q": "The mutual प्रेरकत्व of two coils placed opposite is 1.5 H. If the धारा in one कुंडली बढ़ता है from शून्य to 20",
       "q_en": "The mutual inductance of two coils placed opposite is 1.5 H. If the current in one coil increases from zero to 20",
       "options": [
-        "in 0.5 seconds, then what will be the flux binding to the other coil? 1.5 H 0.5 20A ? 30 weber A 30 20 weber",
+        "in 0.5 seconds, then what will be the फ्लक्स binding to the other कुंडली?",
         "20 40 weber",
         "40 50 weber",
         "50"
@@ -5712,13 +5706,12 @@
       "id": 300
     },
     {
-      "subject": "Physics",
-      "q": "Which one of the following statement is wrong in the context of x rays generated from a x-ray tube? x - (x- ) x - , ?",
+      "q": "कौन-सा one of the following statement is wrong in the context of x rays generated from a x-ray tube?",
       "q_en": "Which one of the following statement is wrong in the context of x rays generated from a x-ray tube? x - (x- ) x - , ?",
       "options": [
-        "Wavelength of characteristic x rays decreases when the atomic number of the target increases. x- , ! Cut-off wavelength of the continuous x rays depends on the atomic number of the target.",
-        "x- ! Intensity of the characteristic x-rays depends on the electrical power given to the x ray tube.",
-        "x- , x- ! Cut off wavelength of the continuous x rays depends on the energy of the electrons in the x ray tube.",
+        "तरंगदैर्ध्य of characteristic x rays घटता है when the atomic number of the target बढ़ता है. x- , ! Cut-off तरंगदैर्ध्य of the continuous x rays depends on the atomic number of the target.",
+        "x- ! Intensity of the characteristic x-rays depends on the विद्युत शक्ति given to the x ray tube.",
+        "x- , x- ! Cut off तरंगदैर्ध्य of the continuous x rays depends on the ऊर्जा of the electrons in the x ray tube.",
         "x- , x- !"
       ],
       "options_en": [
@@ -5732,13 +5725,12 @@
       "id": 301
     },
     {
-      "subject": "Physics",
-      "q": "Which of the following statements regarding the additivity of charges is correct? ? Charges add up vectorially in a system.",
+      "q": "निम्नलिखित में से कौन-सा statements regarding the additivity of charges is correct?",
       "q_en": "Which of the following statements regarding the additivity of charges is correct? ? Charges add up vectorially in a system.",
       "options": [
-        "The total charge of a system is obtained by multiplying the charges.",
-        ", Charges add up algebraically in a system.",
-        "The total charge of a system is always zero.",
+        "किसी सिस्टम का कु ल आवेश, आवेशों को गुणा करके प्राप्त किया जाता है।",
+        "किसी निकाय में आवेश बीजगणितीय रूप से जुड़ते हैं।",
+        "किसी निकाय का कु ल आवेश हमेशा शून्य होता है।",
         "वेग"
       ],
       "options_en": [
@@ -5752,8 +5744,7 @@
       "id": 302
     },
     {
-      "subject": "Physics",
-      "q": "Below circuit gate will work as: ?",
+      "q": "निम्न परिपथ निम्न में से किसकी तरह कार्य करे गा?",
       "q_en": "Below circuit gate will work as: ?",
       "options": [
         "AND OR",
@@ -5772,8 +5763,7 @@
       "id": 303
     },
     {
-      "subject": "Physics",
-      "q": "An hydrogen atom in ground state having energy (-13.6eV). It's energy in first excited state will be. -13.6eV , - -13.6eV",
+      "q": "An hydrogen परमाणु in ground state having ऊर्जा (-13.6eV). It's ऊर्जा in first excited state will be. -13.6eV , - -13.6eV",
       "q_en": "An hydrogen atom in ground state having energy (-13.6eV). It's energy in first excited state will be. -13.6eV , - -13.6eV",
       "options": [
         "-13.6eV -3.4eV",
@@ -5792,8 +5782,7 @@
       "id": 304
     },
     {
-      "subject": "Physics",
-      "q": "What is the magnitude difference between Hydrogen atom's energy in 1st orbit to energy in 2nd Orbit? ? 13.6 eV",
+      "q": "क्या है the magnitude difference between Hydrogen परमाणु's ऊर्जा in 1st orbit to ऊर्जा in 2nd Orbit?",
       "q_en": "What is the magnitude difference between Hydrogen atom's energy in 1st orbit to energy in 2nd Orbit? ? 13.6 eV",
       "options": [
         "13.6 eV 3.4 eV",
@@ -5812,13 +5801,12 @@
       "id": 305
     },
     {
-      "subject": "Physics",
-      "q": "The magnitude of electric force experienced by a charge particle in an electric field depends on- , - Charge of the particle",
+      "q": "The magnitude of विद्युत बल experienced by a आवेश particle in an विद्युत क्षेत्र depends on- , - आवेश of the particle",
       "q_en": "The magnitude of electric force experienced by a charge particle in an electric field depends on- , - Charge of the particle",
       "options": [
-        "Velocity of the particle",
-        "Direction of the electric field",
-        "Mass of the particle",
+        "कण का वेग",
+        "विद्युत क्षेत्र की दिशा",
+        "कण का द्रव्‍यमान",
         "वेग"
       ],
       "options_en": [
@@ -5832,11 +5820,10 @@
       "id": 306
     },
     {
-      "subject": "Physics",
-      "q": "The self-inductance of a coil is 20 H. To generate an induced electromotive force of 100 V, what should be the value of a current of 10",
+      "q": "The self-प्रेरकत्व of a कुंडली is 20 H. To generate an induced electromotive बल of 100 V, what should be the value of a धारा of 10",
       "q_en": "The self-inductance of a coil is 20 H. To generate an induced electromotive force of 100 V, what should be the value of a current of 10",
       "options": [
-        "in 1 s? 20 H 100 V 1 s 10 A ? 10 A 10 5 A",
+        "in 1 s?",
         "5 3 A",
         "3 2 A",
         "2"
@@ -5852,13 +5839,12 @@
       "id": 307
     },
     {
-      "subject": "Physics",
-      "q": "In which of the following systems will the radius of the first orbit (n = 1) be maximum? (n = 1) - Doubly ionized lithium",
+      "q": "In निम्नलिखित में से कौन-सा systems will the radius of the first orbit (n = 1) be अधिकतम?",
       "q_en": "In which of the following systems will the radius of the first orbit (n = 1) be maximum? (n = 1) - Doubly ionized lithium",
       "options": [
-        "Singly ionized lithium",
-        "Deuterium atom",
-        "Hydrogen atom",
+        "एकाकी आयनिक लिथियम",
+        "ड्यूटीरियम परमाणु",
+        "हाइड्रोजन परमाणु",
         "वेग"
       ],
       "options_en": [
@@ -5872,13 +5858,12 @@
       "id": 308
     },
     {
-      "subject": "Physics",
-      "q": "For the measurement of which of the following, tangent galvanometer is used? ? Charge",
+      "q": "For the measurement of निम्नलिखित में से कौन-सा, tangent galvanometer is used?",
       "q_en": "For the measurement of which of the following, tangent galvanometer is used? ? Charge",
       "options": [
-        "Angle",
-        "Current",
-        "Magnetic intensity",
+        "कोण",
+        "धारा",
+        "चुम्बकीय तीव्रता",
         "वेग"
       ],
       "options_en": [
@@ -5892,13 +5877,12 @@
       "id": 309
     },
     {
-      "subject": "Physics",
       "q": "When a glass rod is rubbed with silk, it - receive electrons from silk",
       "q_en": "When a glass rod is rubbed with silk, it - receive electrons from silk",
       "options": [
-        "give electrons to the silk",
-        "receive protons from silk",
-        "give proton to the silk",
+        "सिल्क को इलेक्ट्रॉन देगी",
+        "सिल्क से प्रोटॉन प्राप्त करे गी",
+        "सिल्क को प्रोटॉन देगी",
         "वेग"
       ],
       "options_en": [
@@ -5912,8 +5896,7 @@
       "id": 310
     },
     {
-      "subject": "Physics",
-      "q": "If a system contains three point charges with values +3, -2, and +5 respectively, what is the total charge of the system? +3, -2 +5 , ?",
+      "q": "If a system contains three point charges with values +3, -2, and +5 respectively, क्या है the total आवेश of the system?",
       "q_en": "If a system contains three point charges with values +3, -2, and +5 respectively, what is the total charge of the system? +3, -2 +5 , ?",
       "options": [
         "10 6",
@@ -5932,8 +5915,7 @@
       "id": 311
     },
     {
-      "subject": "Physics",
-      "q": "Total energy of the Helium atom in first excited state will be: : -3.4 eV",
+      "q": "Total ऊर्जा of the Helium परमाणु in first excited state will be: : -3.4 eV",
       "q_en": "Total energy of the Helium atom in first excited state will be: : -3.4 eV",
       "options": [
         "-3.4 eV -13.6 eV",
@@ -5952,13 +5934,12 @@
       "id": 312
     },
     {
-      "subject": "Physics",
-      "q": "How does the size of the image/jpg formed by a plane mirror compare to that of the object? ? The size of the image/jpg is smaller than that of the object",
+      "q": "कैसे does the size of the प्रतिबिंब/jpg formed by a plane दर्पण compare to that of the वस्तु?",
       "q_en": "How does the size of the image/jpg formed by a plane mirror compare to that of the object? ? The size of the image/jpg is smaller than that of the object",
       "options": [
-        "The size of the image/jpg is larger than that of the object",
-        "The size of the image/jpg is equal to that of the object",
-        "1 The size of the image/jpg varies depending on the mirror's curvature",
+        "प्रतिबिम्ब का आकार वस्तु से बड़ा होता है",
+        "प्रतिबिम्ब का आकार वस्तु के बराबर होता है        1",
+        "1 The size of the प्रतिबिंब/jpg varies depending on the दर्पण's curvature",
         "वेग"
       ],
       "options_en": [
@@ -5972,13 +5953,12 @@
       "id": 313
     },
     {
-      "subject": "Physics",
-      "q": "Which one of the following is correct? ? An ammeter is a galvanometer connected with a low resistance in parallel.",
+      "q": "कौन-सा one of the following is correct?",
       "q_en": "Which one of the following is correct? ? An ammeter is a galvanometer connected with a low resistance in parallel.",
       "options": [
-        ", , ! An ammeter is a galvanometer connected with a high resistance in parallel.",
-        ", , An ammeter is a galvanometer connected with a low resistance in series.",
-        ", An ammeter is a galvanometer connected with a high resistance in series.",
+        "एक एमीटर, वह गैल्वेनोमीटर है, जिसमें उच्च प्रतिरोध समांतर में जुड़ा हो",
+        "एक एमीटर वह गैल्वेनोंमीटर है, जिसमें निम्न प्रतिरोध श्रेणी में जुड़ा हो",
+        "एक एमीटर वह गैल्वेनोमीटर है, जिसमें उच्च प्रतिरोध श्रेंणी में जुड़ा हो",
         ","
       ],
       "options_en": [
@@ -5992,8 +5972,7 @@
       "id": 314
     },
     {
-      "subject": "Physics",
-      "q": "The energy required to excite an electron in hydrogen atom to its first excited state is- - 8.5 eV",
+      "q": "The ऊर्जा required to excite an इलेक्ट्रॉन in hydrogen परमाणु to its first excited state is- - 8.5 eV",
       "q_en": "The energy required to excite an electron in hydrogen atom to its first excited state is- - 8.5 eV",
       "options": [
         "8.5 eV",
@@ -6012,13 +5991,12 @@
       "id": 315
     },
     {
-      "subject": "Physics",
-      "q": "What is the difference between soft and hard x-rays? ( ) ( ) x- ? Velocity",
+      "q": "क्या है the difference between soft and hard x-rays?",
       "q_en": "What is the difference between soft and hard x-rays? ( ) ( ) x- ? Velocity",
       "options": [
-        "Intensity",
-        "Frequency",
-        "Polarization",
+        "तीव्रता",
+        "आवृत्ति",
+        "ध्रुवण",
         "वेग"
       ],
       "options_en": [
@@ -6032,8 +6010,7 @@
       "id": 316
     },
     {
-      "subject": "Physics",
-      "q": "Resultant capacitance of below circuit is - 4.5 f",
+      "q": "Resultant धारिता of below परिपथ is - 4.5 f",
       "q_en": "Resultant capacitance of below circuit is - 4.5 f",
       "options": [
         "4.5 f 6 f",
@@ -6052,13 +6029,12 @@
       "id": 317
     },
     {
-      "subject": "Physics",
-      "q": "When electron reaches to ground state from 1st excited state, what happens? , ? It emits photon",
+      "q": "When इलेक्ट्रॉन reaches to ground state from 1st excited state, what happens?",
       "q_en": "When electron reaches to ground state from 1st excited state, what happens? , ? It emits photon",
       "options": [
-        "It absorbs photon",
-        "It emits positron",
-        "It absorbs position",
+        "फोटॉन अवशोषित होता है",
+        "पोजीट्रॉन उत्सर्जित होता है",
+        "पोजीट्रॉन अवशोषित होता है",
         "वेग"
       ],
       "options_en": [
@@ -6072,14 +6048,13 @@
       "id": 318
     },
     {
-      "subject": "Physics",
-      "q": "What is the point on the reflecting surface of a spherical mirror called? ? Centre of curvature",
+      "q": "क्या है the point on the reflecting surface of a spherical दर्पण called?",
       "q_en": "What is the point on the reflecting surface of a spherical mirror called? ? Centre of curvature",
       "options": [
         "(Centre of curvature) Principal axis",
         "(Principal axis) Pole",
         "(Pole) Centre of reflection",
-        "(Centre of reflection)"
+        "प्रतिबिंब का कें द्र (Centre of reflection)"
       ],
       "options_en": [
         "(Centre of curvature) Principal axis",
@@ -6092,8 +6067,7 @@
       "id": 319
     },
     {
-      "subject": "Physics",
-      "q": "In how many ways can three identical capacitors be grouped so that the effective capacitance is different? , ? 8",
+      "q": "In कैसे many ways can three identical capacitors be grouped so that the effective धारिता is भिन्न?",
       "q_en": "In how many ways can three identical capacitors be grouped so that the effective capacitance is different? , ? 8",
       "options": [
         "8 6",
@@ -6112,13 +6086,12 @@
       "id": 320
     },
     {
-      "subject": "Physics",
-      "q": "The ultimate individual unit of magnetism in any magnet is called North pole",
+      "q": "The ultimate individual unit of magnetism in any चुंबक is called North pole",
       "q_en": "The ultimate individual unit of magnetism in any magnet is called North pole",
       "options": [
-        "South pole",
-        "Dipole",
-        "Quadrupole",
+        "दक्षिणी ध्रुव",
+        "द्विध्रुव",
+        "चर्तुध्रुव",
         "वेग"
       ],
       "options_en": [
@@ -6132,13 +6105,12 @@
       "id": 321
     },
     {
-      "subject": "Physics",
-      "q": "If a magnet is hanged with its magnetic axis then it stops in Magnetic meridian",
+      "q": "If a चुंबक is hanged with its चुंबकीय axis then it stops in चुंबकीय meridian",
       "q_en": "If a magnet is hanged with its magnetic axis then it stops in Magnetic meridian",
       "options": [
-        "Geometric meridian",
-        "Angle of dip",
-        "( ) Magnetic and Geometric meridian",
+        "ज्यामितीय मेरिडियन",
+        "डिप का कोण (एं गल ऑफ डिप)",
+        "चुम्बकीय और ज्यामितीय मेरिडियन",
         "वेग"
       ],
       "options_en": [
@@ -6152,8 +6124,7 @@
       "id": 322
     },
     {
-      "subject": "Physics",
-      "q": "The electric intensity E, current density J and specific resistance k are related to each other by the relation- E, J k -",
+      "q": "The विद्युत intensity E, धारा density J and specific प्रतिरोध k are related to each other by the relation- E, J k -",
       "q_en": "The electric intensity E, current density J and specific resistance k are related to each other by the relation- E, J k -",
       "options": [
         "E = Jk",
@@ -6172,12 +6143,11 @@
       "id": 323
     },
     {
-      "subject": "Physics",
       "q": "We have two wires",
       "q_en": "We have two wires",
       "options": [
         "and",
-        "of same mass and same material. The diameter of the wire A is half of that B. If the resistance of wire A is 24 ohm then the resistance of wire B will be- A B A , B A 24 B - 12 ohm A 12 3.0 ohm B 3.0",
+        "of समान mass and समान material. The diameter of the wire A is half of that B. If the प्रतिरोध of wire A is 24 ohm then the प्रतिरोध of wire B will be- A B A , B A 24 B - 12 ohm A 12 3.0 ohm B 3.0",
         "1.5 6 ohm",
         "6"
       ],
@@ -6192,13 +6162,12 @@
       "id": 324
     },
     {
-      "subject": "Physics",
-      "q": "What does the green-insulated wire in household electric supply represent? - ? Live wire",
+      "q": "What does the green-insulated wire in household विद्युत supply represent?",
       "q_en": "What does the green-insulated wire in household electric supply represent? - ? Live wire",
       "options": [
         "(Live wire) Neutral wire",
         "(Neutral wire) Earth wire",
-        "(Earth wire) None of the given options",
+        "(Earth wire) दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -6212,8 +6181,7 @@
       "id": 325
     },
     {
-      "subject": "Physics",
-      "q": "What is a characteristic property of magnetic field lines of a magnet or solenoid? ? They form discontinuous open loops",
+      "q": "क्या है a characteristic property of चुंबकीय क्षेत्र lines of a चुंबक or solenoid?",
       "q_en": "What is a characteristic property of magnetic field lines of a magnet or solenoid? ? They form discontinuous open loops",
       "options": [
         "वेग",
@@ -6232,8 +6200,7 @@
       "id": 326
     },
     {
-      "subject": "Physics",
-      "q": "What is the value of kinetic energy of a hydrogen atom in its ground state? ? -13.6 eV",
+      "q": "क्या है the value of kinetic ऊर्जा of a hydrogen परमाणु in its ground state?",
       "q_en": "What is the value of kinetic energy of a hydrogen atom in its ground state? ? -13.6 eV",
       "options": [
         "-13.6 eV 13.6 eV",
@@ -6252,13 +6219,12 @@
       "id": 327
     },
     {
-      "subject": "Physics",
-      "q": "What is the radius of curvature of a spherical mirror? ? The distance between the pole and the principal axis",
+      "q": "क्या है the radius of curvature of a spherical दर्पण?",
       "q_en": "What is the radius of curvature of a spherical mirror? ? The distance between the pole and the principal axis",
       "options": [
-        "The distance between the pole and the centre of curvature",
-        "The diameter of the reflecting surface",
-        "The distance between the mirror and the object",
+        "ध्रुव और वक्रता कें द्र के बीच की दू री",
+        "परावर्तक सतह का व्यास",
+        "दर्पण और वस्तु के बीच की दू री",
         "वेग"
       ],
       "options_en": [
@@ -6272,13 +6238,12 @@
       "id": 328
     },
     {
-      "subject": "Physics",
-      "q": "The ratings of two electric bulbs",
+      "q": "The ratings of two विद्युत bulbs",
       "q_en": "The ratings of two electric bulbs",
       "options": [
         "and",
-        "are 60 W and 100 W respectively, if they are connected in parallel with the same source, then- A B 60 W 100 W - Both draw the same current A draws more current than B A B draws more current than",
-        "B A Current drawn are in the ratio of their resistances",
+        "are 60 W and 100 W respectively, if they are connected in parallel with the समान source, then- A B 60 W 100 W - Both draw the समान धारा A draws more धारा than B A B draws more धारा than",
+        "B A धारा drawn are in the ratio of their resistances",
         "वेग"
       ],
       "options_en": [
@@ -6292,8 +6257,7 @@
       "id": 329
     },
     {
-      "subject": "Physics",
-      "q": "An electric bulb of 220 V, 100 W is connected in series with another electric bulb of 220 V, 60 W. How much power will be consumed by a 100 W bulb for voltage 220 V on this combination? 220 V, 100 W 2",
+      "q": "An विद्युत bulb of 220 V, 100 W is connected in series with another विद्युत bulb of 220 V, 60 W. कैसे much शक्ति will be consumed by a 100 W bulb for वोल्टता 220 V on this combination?",
       "q_en": "An electric bulb of 220 V, 100 W is connected in series with another electric bulb of 220 V, 60 W. How much power will be consumed by a 100 W bulb for voltage 220 V on this combination? 220 V, 100 W 2",
       "options": [
         "25 W 14 W",
@@ -6312,13 +6276,12 @@
       "id": 330
     },
     {
-      "subject": "Physics",
       "q": "According to Lenz’s law of electromagnetic induction",
       "q_en": "According to Lenz’s law of electromagnetic induction",
       "options": [
-        "The induced e.m.f. is not in the direction opposing the change in magnetic flux. , The relative motion between the coil and magnet produces change in magnetic flux.",
-        "Only the magnet should be moved towards coil.",
-        "Only the coil should be moved towards magnet.",
+        "The induced e.m.f. is not in the direction opposing the change in चुंबकीय फ्लक्स. , The relative motion between the कुंडली and चुंबक produces change in चुंबकीय फ्लक्स.",
+        "Only the चुंबक should be moved towards कुंडली.",
+        "Only the कुंडली should be moved towards चुंबक.",
         "वेग"
       ],
       "options_en": [
@@ -6332,13 +6295,12 @@
       "id": 331
     },
     {
-      "subject": "Physics",
-      "q": "Eddy currents are produced when ,",
+      "q": "एड्डी धाराएँ उत्पन्न होती है, जब",
       "q_en": "Eddy currents are produced when ,",
       "options": [
-        "metal is kept in varying magnetic field. A metal is kept in the steady magnetic field.",
-        "A circular coil is place in a magnetic field.",
-        "Through a circular coil, current is passed.",
+        "metal is kept in varying चुंबकीय क्षेत्र. A metal is kept in the steady चुंबकीय क्षेत्र.",
+        "चुम्बकीय क्षेत्र में एक वृत्ताकार कु ण्डली के रखने पर",
+        "वृत्ताकार कु ण्डली से, धारा गुरजती है।",
         ","
       ],
       "options_en": [
@@ -6352,14 +6314,13 @@
       "id": 332
     },
     {
-      "subject": "Physics",
-      "q": "What is the unit of activity of a radioactive sample? ? Becquerel",
+      "q": "क्या है the unit of activity of a radioactive sample?",
       "q_en": "What is the unit of activity of a radioactive sample? ? Becquerel",
       "options": [
-        "(Becquerel)",
+        "बेकरे ल (Becquerel) क्यूरी (B. Curie)",
         "B. Curie (B. Curie) C. Rad",
         "(C. Radian) D. Sievert",
-        "(D. Sievert)"
+        "सीवेर्ट (D. Sievert)"
       ],
       "options_en": [
         "(Becquerel)",
@@ -6372,13 +6333,12 @@
       "id": 333
     },
     {
-      "subject": "Physics",
-      "q": "In order to increase the sensitivity galvanometer The suspension wire should be made stiff",
+      "q": "In order to बढ़ता है the sensitivity galvanometer The suspension wire should be made stiff",
       "q_en": "In order to increase the sensitivity galvanometer The suspension wire should be made stiff",
       "options": [
-        "Area of the coil should be reduced",
-        "The magnetic field should be increased",
-        "The number of turns in the coil should be reduced.",
+        "कोइल का क्षेत्रफल कम होना है",
+        "चुंबकीय क्षेत्र को बढ़ाना है",
+        "कोइल में घुमाव की संख्या कम होना है",
         "वेग"
       ],
       "options_en": [
@@ -6392,7 +6352,6 @@
       "id": 334
     },
     {
-      "subject": "Physics",
       "q": "What should be value of Inputs",
       "q_en": "What should be value of Inputs",
       "options": [
@@ -6412,13 +6371,12 @@
       "id": 335
     },
     {
-      "subject": "Physics",
-      "q": "What type of electric power is typically received in households? ? DC electric power",
+      "q": "What type of विद्युत शक्ति is typically received in households?",
       "q_en": "What type of electric power is typically received in households? ? DC electric power",
       "options": [
-        "DC AC electric power",
-        "AC Static electric power",
-        "Magnetic electric power",
+        "DC AC विद्युत शक्ति",
+        "AC Static विद्युत शक्ति",
+        "चुंबकीय विद्युत शक्ति",
         "वेग"
       ],
       "options_en": [
@@ -6432,13 +6390,12 @@
       "id": 336
     },
     {
-      "subject": "Physics",
-      "q": "In comparison to electric dipole field lines, how do magnetic field lines behave? , ? They start from a positive charge and end on a negative charge",
+      "q": "In comparison to विद्युत dipole field lines, कैसे do चुंबकीय क्षेत्र lines behave?",
       "q_en": "In comparison to electric dipole field lines, how do magnetic field lines behave? , ? They start from a positive charge and end on a negative charge",
       "options": [
         "वेग",
-        "They escape to infinity They form closed loops",
-        "They form straight lines",
+        "वेग",
+        "वे सीधी रे खाएँ बनाते हैं",
         "त्वरण"
       ],
       "options_en": [
@@ -6452,13 +6409,12 @@
       "id": 337
     },
     {
-      "subject": "Physics",
-      "q": "What is the image/jpg formed from a curved reflecting surface? (curved reflecting surface) ? The image/jpg is always virtual and erect.",
+      "q": "क्या है the प्रतिबिंब/jpg formed from a curved reflecting surface?",
       "q_en": "What is the image/jpg formed from a curved reflecting surface? (curved reflecting surface) ? The image/jpg is always virtual and erect.",
       "options": [
-        "The image/jpg is always real and inverted.",
-        "The properties of the image/jpg depend on the type of curved surface.",
-        "1 The image/jpg is laterally inverted but remains the same size as the object.",
+        "प्रतिबिम्ब हमेशा वास्तविक और उल्टा होता है।",
+        "प्रतिबिम्ब के गुण घुमावदार सतह के प्रकार पर निर्भर करते हैं।        1",
+        "1 The प्रतिबिंब/jpg is laterally inverted but remains the समान size as the वस्तु.",
         "वेग"
       ],
       "options_en": [
@@ -6472,13 +6428,12 @@
       "id": 338
     },
     {
-      "subject": "Physics",
-      "q": "In charging a battery of motor-car, the following effect of electric current is used- - - Magnetic",
+      "q": "In charging a बैटरी of motor-car, the following effect of विद्युत धारा is used- - - चुंबकीय",
       "q_en": "In charging a battery of motor-car, the following effect of electric current is used- - - Magnetic",
       "options": [
-        "Heating",
-        "Chemical",
-        "Induction",
+        "ऊष्मीय",
+        "रासायनिक",
+        "प्रेरण",
         "वेग"
       ],
       "options_en": [
@@ -6492,13 +6447,12 @@
       "id": 339
     },
     {
-      "subject": "Physics",
-      "q": "On what does the mass of the substance liberated during electrolysis in a given time depend? ? Current",
+      "q": "On what does the mass of the substance liberated during electrolysis in a given time depend?",
       "q_en": "On what does the mass of the substance liberated during electrolysis in a given time depend? ? Current",
       "options": [
-        "Resistance",
-        "Temperature",
-        "Electric power",
+        "प्रतिरोध",
+        "तापमान",
+        "विद्युत शक्ति",
         "वेग"
       ],
       "options_en": [
@@ -6512,13 +6466,12 @@
       "id": 340
     },
     {
-      "subject": "Physics",
-      "q": "The core of a transformer is laminated so that Ratio of voltage in the primary and secondary may be increased.",
+      "q": "The core of a transformer is laminated so that Ratio of वोल्टता in the primary and secondary may be increased.",
       "q_en": "The core of a transformer is laminated so that Ratio of voltage in the primary and secondary may be increased.",
       "options": [
-        "Rusting of core may be stopped.",
-        "Energy loss due to eddy currents may be reduced.",
-        "Change in flux is increased.",
+        "कोर को जंग लगने से बचाया जाय।",
+        "एड्डी धाराओं के कारण ऊर्जा ह्रास कम किश्स जस सके",
+        "फ्लक्स में बदलाव को बढ़ाया जाय।",
         "वेग"
       ],
       "options_en": [
@@ -6532,13 +6485,12 @@
       "id": 341
     },
     {
-      "subject": "Physics",
-      "q": "X rays when incident on a metal X - , Exert a force on it.",
+      "q": "X rays when incident on a metal X - , Exert a बल on it.",
       "q_en": "X rays when incident on a metal X - , Exert a force on it.",
       "options": [
-        "Transfer energy on it.",
-        "Transfer pressure to it.",
-        "Exert force transfer energy and pressure.",
+        "इस पर ऊर्जा स्थानांतरित करती है।",
+        "इस पर दबाव स्थानांतरित करती है।",
+        "बल लगाती है, ऊर्जा व दबाव स्थानांतरित करती है।",
         ","
       ],
       "options_en": [
@@ -6552,13 +6504,12 @@
       "id": 342
     },
     {
-      "subject": "Physics",
-      "q": "Before using the tangent galvanometer, its coil is set in- , - Magnetic meridian",
+      "q": "Before using the tangent galvanometer, its कुंडली is set in- , - चुंबकीय meridian",
       "q_en": "Before using the tangent galvanometer, its coil is set in- , - Magnetic meridian",
       "options": [
-        "Perpendicular to magnetic meridian",
+        "चुम्बकीय याम्योतर के लम्ब्बत",
         "वेग",
-        "It does not require any setting",
+        "किसी प्रकार के समंजन की आवश्यकता नहीं होती है",
         "त्वरण"
       ],
       "options_en": [
@@ -6572,8 +6523,7 @@
       "id": 343
     },
     {
-      "subject": "Physics",
-      "q": "What is the potential difference between the live wire and the neutral wire in household electric supply? (Live wire) (Neutral wire) ? 110 V",
+      "q": "क्या है the potential difference between the live wire and the neutral wire in household विद्युत supply?",
       "q_en": "What is the potential difference between the live wire and the neutral wire in household electric supply? (Live wire) (Neutral wire) ? 110 V",
       "options": [
         "110 220 V",
@@ -6592,13 +6542,12 @@
       "id": 344
     },
     {
-      "subject": "Physics",
-      "q": "What does the tangent to a magnetic field line at a given point represent? ? Electric field strength",
+      "q": "What does the tangent to a चुंबकीय क्षेत्र line at a given point represent?",
       "q_en": "What does the tangent to a magnetic field line at a given point represent? ? Electric field strength",
       "options": [
-        "Magnetic field strength",
-        "Direction of the net magnetic field",
-        "1 Direction of the net electric field",
+        "चुंबकीय क्षेत्र की ताकत",
+        "नेट चुंबकीय क्षेत्र की दिशा     1",
+        "1 Direction of the net विद्युत क्षेत्र",
         "वेग"
       ],
       "options_en": [
@@ -6612,13 +6561,12 @@
       "id": 345
     },
     {
-      "subject": "Physics",
-      "q": "Where does the centre of curvature lie of a concave mirror? ? On the reflecting surface of the mirror",
+      "q": "Where does the centre of curvature lie of a concave दर्पण?",
       "q_en": "Where does the centre of curvature lie of a concave mirror? ? On the reflecting surface of the mirror",
       "options": [
-        "Behind the mirror",
-        "In front of the mirror",
-        "Inside the mirror",
+        "दर्पण के पीछे",
+        "दर्पण के सामने",
+        "दर्पण के अंदर",
         "वेग"
       ],
       "options_en": [
@@ -6632,8 +6580,7 @@
       "id": 346
     },
     {
-      "subject": "Physics",
-      "q": "What will be the wavelength of the radiation emitted when the electron in hydrogen atom makes transition from n = infinity to n = 3 orbit? n = n = 3 ? 700 nm",
+      "q": "What will be the तरंगदैर्ध्य of the radiation emitted when the इलेक्ट्रॉन in hydrogen परमाणु makes transition from n = अनंत to n = 3 orbit?",
       "q_en": "What will be the wavelength of the radiation emitted when the electron in hydrogen atom makes transition from n = infinity to n = 3 orbit? n = n = 3 ? 700 nm",
       "options": [
         "700 822.51 nm",
@@ -6652,13 +6599,12 @@
       "id": 347
     },
     {
-      "subject": "Physics",
-      "q": "Equal currents are passing through two very long and straight parallel wires in the same directions. They will - Repel each other",
+      "q": "Equal currents are passing through two very long and straight parallel wires in the समान directions. They will - Repel each other",
       "q_en": "Equal currents are passing through two very long and straight parallel wires in the same directions. They will - Repel each other",
       "options": [
-        "! Attract each other.",
-        "! Lean towards each other",
-        "! Neither attract nor repel each other",
+        "आकर्षित होंगे!",
+        "एक दू सरे की तरफ झुकें गे!",
+        "न तो आकर्षित और न ही विकर्षित होंगे!",
         "!"
       ],
       "options_en": [
@@ -6672,7 +6618,6 @@
       "id": 348
     },
     {
-      "subject": "Physics",
       "q": "On converting 1 1 1 0 into decimal number will give value: 1 1 1 0 : 11",
       "q_en": "On converting 1 1 1 0 into decimal number will give value: 1 1 1 0 : 11",
       "options": [
@@ -6692,13 +6637,12 @@
       "id": 349
     },
     {
-      "subject": "Physics",
-      "q": "What pattern do the magnetic field lines around a wire carrying electric current form? ? Straight lines",
+      "q": "What pattern do the चुंबकीय क्षेत्र lines around a wire carrying विद्युत धारा form?",
       "q_en": "What pattern do the magnetic field lines around a wire carrying electric current form? ? Straight lines",
       "options": [
-        "Concentric circles",
-        "Elliptical shapes",
-        "Zigzag lines",
+        "संकें द्रित वृत्त",
+        "अण्डाकार आकृ तियाँ",
+        "टेढ़ी-मेढ़ी रे खाएँ",
         "-"
       ],
       "options_en": [
@@ -6712,13 +6656,12 @@
       "id": 350
     },
     {
-      "subject": "Physics",
-      "q": "What phenomenon does a generator rely on to produce electricity? ? Electrostatic induction",
+      "q": "What phenomenon does a generator rely on to produce electricity?",
       "q_en": "What phenomenon does a generator rely on to produce electricity? ? Electrostatic induction",
       "options": [
-        "Electromagnetic induction",
-        "Photoelectric effect",
-        "Thermoelectric effect",
+        "विद्युत चुम्बकीय प्रेरण",
+        "फोटोइलेक्ट्रि क प्रभाव",
+        "थर्मोइलेक्ट्रि क प्रभाव",
         "वेग"
       ],
       "options_en": [
@@ -6732,13 +6675,12 @@
       "id": 351
     },
     {
-      "subject": "Physics",
-      "q": "Why do magnetic field lines not intersect? ? Because of the unique magnetic properties of the material",
+      "q": "क्यों do चुंबकीय क्षेत्र lines not intersect?",
       "q_en": "Why do magnetic field lines not intersect? ? Because of the unique magnetic properties of the material",
       "options": [
         "Because they are infinitely long",
         "वेग",
-        "Because the direction of the magnetic field would not be unique at the point of intersection Because they repel each other",
+        "Because the direction of the चुंबकीय क्षेत्र would not be unique at the point of intersection Because they repel each other",
         "त्वरण"
       ],
       "options_en": [
@@ -6752,8 +6694,7 @@
       "id": 352
     },
     {
-      "subject": "Physics",
-      "q": "Ratio of Angular momentum in 3rd orbit to 1st orbit in a Hydrogen atom is : : 9 : 1",
+      "q": "Ratio of Angular momentum in 3rd orbit to 1st orbit in a Hydrogen परमाणु is : : 9 : 1",
       "q_en": "Ratio of Angular momentum in 3rd orbit to 1st orbit in a Hydrogen atom is : : 9 : 1",
       "options": [
         "9 : 1 : 9",
@@ -6772,13 +6713,12 @@
       "id": 353
     },
     {
-      "subject": "Physics",
-      "q": "How do pure germanium and silicon behave at absolute zero temperature? Superconductor",
+      "q": "कैसे do pure germanium and silicon behave at absolute शून्य ताप?",
       "q_en": "How do pure germanium and silicon behave at absolute zero temperature? Superconductor",
       "options": [
-        "Conductor",
-        "Insulator",
-        "Semiconductor",
+        "चालक",
+        "कुचालक",
+        "अर्धचालक",
         "वेग"
       ],
       "options_en": [
@@ -6792,8 +6732,7 @@
       "id": 354
     },
     {
-      "subject": "Physics",
-      "q": "The measurement of voltmeter in the following circuit is: - 2.4 v",
+      "q": "The measurement of voltmeter in the following परिपथ is: - 2.4 v",
       "q_en": "The measurement of voltmeter in the following circuit is: - 2.4 v",
       "options": [
         "2.4 v 3.4v",
@@ -6812,13 +6751,12 @@
       "id": 355
     },
     {
-      "subject": "Physics",
-      "q": "The energy of the e-m waves is of the order of 15 keV. To which part of the spectrum does it belong: 15 keV ! -",
+      "q": "The ऊर्जा of the e-m waves is of the order of 15 keV. To कौन-सा part of the spectrum does it belong: 15 keV ! -",
       "q_en": "The energy of the e-m waves is of the order of 15 keV. To which part of the spectrum does it belong: 15 keV ! -",
       "options": [
         "Infrared rays ! Ultraviolet rays",
         "!",
-        "x-ray",
+        "x- रै स (किरणें)!",
         "x- ( )!"
       ],
       "options_en": [
@@ -6832,13 +6770,12 @@
       "id": 356
     },
     {
-      "subject": "Physics",
-      "q": "The dominant mechanisms for motion of charge carriers in forward and reverse biased silicon p-n junctions are: - : Drift in forward bias, diffusion in reverse bias",
+      "q": "The dominant mechanisms for motion of आवेश carriers in forward and reverse biased silicon p-n junctions are: - : Drift in forward bias, diffusion in reverse bias",
       "q_en": "The dominant mechanisms for motion of charge carriers in forward and reverse biased silicon p-n junctions are: - : Drift in forward bias, diffusion in reverse bias",
       "options": [
-        ", Diffusion in forward bias, drift in reverse bias",
-        ", Diffusion in both forward and reverse bias",
-        "Drift in both forward and reverse bias",
+        "फारवर्ड में डिफ्यूजन, रिर्वस में ड्रि फ्ट",
+        "फारवर्ड व रिर्वस दोनों में डिफ्यूजन",
+        "फारवर्ड व रिर्वस दोनों में ड्रि फ्ट",
         "वेग"
       ],
       "options_en": [
@@ -6852,13 +6789,12 @@
       "id": 357
     },
     {
-      "subject": "Physics",
-      "q": "In Rutherford’s model of the atom, where are most of the mass and all the positive charge concentrated? , ? Spread uniformly throughout the atom.",
+      "q": "In Rutherford’s model of the परमाणु, where are most of the mass and all the positive आवेश concentrated?",
       "q_en": "In Rutherford’s model of the atom, where are most of the mass and all the positive charge concentrated? , ? Spread uniformly throughout the atom.",
       "options": [
-        "Concentrated in the electrons.",
-        "Concentrated in a tiny nucleus.",
-        "Distributed equally between electrons and nucleus.",
+        "इलेक्ट्रॉनों में संकें द्रित।",
+        "एक छोटे के न्द्रक में संकें द्रित",
+        "इलेक्ट्रॉनों और नाभिक के बीच समान रूप से वितरित।",
         "वेग"
       ],
       "options_en": [
@@ -6872,13 +6808,12 @@
       "id": 358
     },
     {
-      "subject": "Physics",
-      "q": "Who discovered the phenomenon of electromagnetic induction. ? Faraday",
+      "q": "Who discovered the phenomenon of electromagnetic induction. ?",
       "q_en": "Who discovered the phenomenon of electromagnetic induction. ? Faraday",
       "options": [
-        "Ohm",
-        "Coulomb's",
-        "Maxwell",
+        "ओम",
+        "कू लॉम",
+        "मैक्सवेल",
         "वेग"
       ],
       "options_en": [
@@ -6892,13 +6827,12 @@
       "id": 359
     },
     {
-      "subject": "Physics",
-      "q": "On doubling the magnitude of charge inside a gaussian surface the flux will become - Double",
+      "q": "On doubling the magnitude of आवेश inside a gaussian surface the फ्लक्स will become - Double",
       "q_en": "On doubling the magnitude of charge inside a gaussian surface the flux will become - Double",
       "options": [
-        "Halt",
-        "Triple",
-        "Remain same",
+        "आधा",
+        "तीन गुना",
+        "अप्रभवित रहेगा",
         "वेग"
       ],
       "options_en": [
@@ -6912,13 +6846,12 @@
       "id": 360
     },
     {
-      "subject": "Physics",
-      "q": "What is the definition of magnetization (M) of a sample? (M) ? The total number of magnetic moments in the sample",
+      "q": "क्या है the definition of magnetization (M) of a sample?",
       "q_en": "What is the definition of magnetization (M) of a sample? (M) ? The total number of magnetic moments in the sample",
       "options": [
         "वेग",
-        "The net magnetic moment per unit volume of the sample The strength of the magnetic field inside the sample",
-        "The total current passing through the sample",
+        "The net चुंबकीय moment per unit volume of the sample The strength of the चुंबकीय क्षेत्र inside the sample",
+        "The total धारा passing through the sample",
         "त्वरण"
       ],
       "options_en": [
@@ -6932,13 +6865,12 @@
       "id": 361
     },
     {
-      "subject": "Physics",
-      "q": "How is the magnetization (M) of a sample measured? (M) ? In units of Tesla (T)",
+      "q": "कैसे is the magnetization (M) of a sample measured?",
       "q_en": "How is the magnetization (M) of a sample measured? (M) ? In units of Tesla (T)",
       "options": [
         "(T) In units of Henry (H)",
         "(H) In units of Amperes per meter (A/m)",
-        "(A/m) None of the given options",
+        "(A/m) दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -6952,14 +6884,13 @@
       "id": 362
     },
     {
-      "subject": "Physics",
-      "q": "In the given circuit all diodes are ideal. The current through battery (shown in figure) is: ( ): 2A",
+      "q": "In the given परिपथ all diodes are ideal. The धारा through बैटरी (shown in figure) is: ( ): 2A",
       "q_en": "In the given circuit all diodes are ideal. The current through battery (shown in figure) is: ( ): 2A",
       "options": [
         "2A 1A",
-        "1A 3A",
-        "3A",
-        "None of the given option"
+        "दिए गए विकल्पों में से कोई नहीं",
+        "3 एम्पियर",
+        "दिए गए विकल्पों में से कोई नहीं"
       ],
       "options_en": [
         "2A 1A",
@@ -6972,12 +6903,11 @@
       "id": 363
     },
     {
-      "subject": "Physics",
       "q": "Two nuclei have their mass numbers in the ratio of 1 : 3. The ratio of their nuclear densities would be - 1 : 3 - 5 : 1",
       "q_en": "Two nuclei have their mass numbers in the ratio of 1 : 3. The ratio of their nuclear densities would be - 1 : 3 - 5 : 1",
       "options": [
         "5 : 1 : 1",
-        "1 :",
+        "हमेशा 1",
         "1 : 3 : 1",
         "3 : 1"
       ],
@@ -6992,8 +6922,7 @@
       "id": 364
     },
     {
-      "subject": "Physics",
-      "q": "Two lenses of power +12 and -2 dioptres are placed in contact. What will be the focal length of combination? , ( ) +12 -2 , ! : 10 cm",
+      "q": "Two lenses of शक्ति +12 and -2 dioptres are placed in contact. What will be the focal length of combination?",
       "q_en": "Two lenses of power +12 and -2 dioptres are placed in contact. What will be the focal length of combination? , ( ) +12 -2 , ! : 10 cm",
       "options": [
         "10 12.5 cm",
@@ -7012,13 +6941,12 @@
       "id": 365
     },
     {
-      "subject": "Physics",
       "q": "Intensity of x-rays depends upon the number of x- , - Electrons",
       "q_en": "Intensity of x-rays depends upon the number of x- , - Electrons",
       "options": [
-        "Protons",
-        "Neutrons",
-        "Positrons",
+        "प्रोटॉन",
+        "न्यूट्रॉन",
+        "पोसिट्रॉनों की",
         "वेग"
       ],
       "options_en": [
@@ -7032,13 +6960,12 @@
       "id": 366
     },
     {
-      "subject": "Physics",
       "q": "X rays are produced due to x- Break up of molecules",
       "q_en": "X rays are produced due to x- Break up of molecules",
       "options": [
-        "Changing of atomic energy level",
-        "Changing in nuclear energy level",
-        "Radioactive disintegration.",
+        "परमाणु ऊर्जा स्तर में बदलाव",
+        "नाभिकीय ऊर्जा स्तर में बदलाव",
+        "रे डियोधर्मी विघटन",
         "वेग"
       ],
       "options_en": [
@@ -7052,13 +6979,12 @@
       "id": 367
     },
     {
-      "subject": "Physics",
-      "q": "According to Thomson’s model of the atom, how are the positive and negative charges arranged? , ?",
+      "q": "According to Thomson’s model of the परमाणु, कैसे are the positive and negative charges arranged?",
       "q_en": "According to Thomson’s model of the atom, how are the positive and negative charges arranged? , ?",
       "options": [
-        "Electrons orbit around a central positive nucleus. Positive charges are spread out in a spherical cloud with electrons embedded in it.",
+        "Electrons orbit around a central positive नाभिक. Positive charges are spread out in a spherical cloud with electrons embedded in it.",
         "Electrons are stationary and positive charges move around them.",
-        "Positive and negative charges are uniformly mixed throughout the atom.",
+        "Positive and negative charges are uniformly mixed throughout the परमाणु.",
         "वेग"
       ],
       "options_en": [
@@ -7072,14 +6998,13 @@
       "id": 368
     },
     {
-      "subject": "Physics",
       "q": "-13.6 eV",
       "q_en": "-13.6 eV",
       "options": [
         "-13.6 eV +13.6 eV",
         "+13.6 eV",
-        "0",
-        "0"
+        "हमेशा 0",
+        "हमेशा 0"
       ],
       "options_en": [
         "-13.6 eV +13.6 eV",
@@ -7092,13 +7017,12 @@
       "id": 369
     },
     {
-      "subject": "Physics",
-      "q": "Lenz’s law is bared on which of the following? ? Charge conservation",
+      "q": "Lenz’s law is bared on निम्नलिखित में से कौन-सा?",
       "q_en": "Lenz’s law is bared on which of the following? ? Charge conservation",
       "options": [
-        "Mas conservation",
-        "Energy conservation",
-        "Momentum conservation",
+        "द्रवयमान सरं क्षण",
+        "ऊर्जा सरं क्षण",
+        "संवेग संरक्ण",
         "वेग"
       ],
       "options_en": [
@@ -7112,14 +7036,13 @@
       "id": 370
     },
     {
-      "subject": "Physics",
-      "q": "Which one of the followings arrangement's electric field can-not be calculated by gauss law - Point charge",
+      "q": "कौन-सा one of the followings arrangement's विद्युत क्षेत्र can-not be calculated by gauss law - Point आवेश",
       "q_en": "Which one of the followings arrangement's electric field can-not be calculated by gauss law - Point charge",
       "options": [
         "Insulating sphere",
         "Conducting sphere",
         "वेग",
-        "Dipole"
+        "द्विध्रुव"
       ],
       "options_en": [
         "Insulating sphere",
@@ -7132,13 +7055,12 @@
       "id": 371
     },
     {
-      "subject": "Physics",
-      "q": "When a diamagnetic substance is placed in an external magnetic field, what is the direction of its movement? , ? Towards the stronger part of the magnetic field",
+      "q": "When a diamagnetic substance is placed in an external चुंबकीय क्षेत्र, क्या है the direction of its movement?",
       "q_en": "When a diamagnetic substance is placed in an external magnetic field, what is the direction of its movement? , ? Towards the stronger part of the magnetic field",
       "options": [
-        "Away from the stronger part of the magnetic field",
-        "Opposite to the direction of the magnetic field lines",
-        "None of the given options",
+        "चुंबकीय क्षेत्र के मजबूत हिस्से से दू र",
+        "चुंबकीय क्षेत्र रे खाओं की दिशा के विपरीत",
+        "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -7152,13 +7074,12 @@
       "id": 372
     },
     {
-      "subject": "Physics",
-      "q": "Wave nature of light was proposed by - - Huygen",
+      "q": "तरंग nature of प्रकाश was proposed by - - Huygen",
       "q_en": "Wave nature of light was proposed by - - Huygen",
       "options": [
-        "Young",
+        "यंग फ्रे नल",
         "वेग",
-        "Fresnel Maxwell",
+        "वेग",
         "त्वरण"
       ],
       "options_en": [
@@ -7172,13 +7093,12 @@
       "id": 373
     },
     {
-      "subject": "Physics",
       "q": "Both 'a' and 'b' represent correction in volume",
       "q_en": "Both 'a' and 'b' represent correction in volume",
       "options": [
-        "'a' 'b' Both 'a' and 'b' represent adhesive force between molecules",
-        "'a' 'b' ‘a’ represent adhesive force between molecules and b correction in volume",
-        "‘a’ b ‘a’ represent correction in volume and 'b' represent adhesive force between molecules",
+        "'a' 'b' Both 'a' and 'b' represent adhesive बल between molecules",
+        "'a' 'b' ‘a’ represent adhesive बल between molecules and b correction in volume",
+        "‘a’ b ‘a’ represent correction in volume and 'b' represent adhesive बल between molecules",
         "‘a’ 'b'"
       ],
       "options_en": [
@@ -7192,11 +7112,10 @@
       "id": 374
     },
     {
-      "subject": "Physics",
-      "q": "When a Vander Waals gas undergoes free expansion then its temperature- - Decrease",
+      "q": "When a Vander Waals gas undergoes free expansion then its ताप- - घटता है",
       "q_en": "When a Vander Waals gas undergoes free expansion then its temperature- - Decrease",
       "options": [
-        "Increases",
+        "बढ़ती है",
         "Does not change",
         "Depends upon the nature of the gas",
         "वेग"
@@ -7212,13 +7131,12 @@
       "id": 375
     },
     {
-      "subject": "Physics",
-      "q": "Three charges 2q, -q, -q are located of the vertices of an equilateral triangle. At the centre of the triangle: 2q, -q, -q The field is zero but potential is non – zero",
+      "q": "Three charges 2q, -q, -q are located of the vertices of an equilateral triangle. At the centre of the triangle: 2q, -q, -q The field is शून्य but potential is non – शून्य",
       "q_en": "Three charges 2q, -q, -q are located of the vertices of an equilateral triangle. At the centre of the triangle: 2q, -q, -q The field is zero but potential is non – zero",
       "options": [
-        "The field is non – zero but potential is zero",
-        "Both field and potential are zero",
-        "Both field and potential are non – zero",
+        "The field is non – शून्य but potential is शून्य",
+        "Both field and potential are शून्य",
+        "Both field and potential are non – शून्य",
         "वेग"
       ],
       "options_en": [
@@ -7232,13 +7150,12 @@
       "id": 376
     },
     {
-      "subject": "Physics",
-      "q": "Photon energy E = hv, where v is the frequency and h is the Planck constant. Which of the following physical quantities has the same dimension as h? E = hv, v h h ? Linear impulse",
+      "q": "Photon ऊर्जा E = hv, where v is the आवृत्ति and h is the Planck constant. निम्नलिखित में से कौन-सा physical quantities has the समान dimension as h?",
       "q_en": "Photon energy E = hv, where v is the frequency and h is the Planck constant. Which of the following physical quantities has the same dimension as h? E = hv, v h h ? Linear impulse",
       "options": [
         "Linear momentum",
         "Angular momentum",
-        "Kinetic energy",
+        "गतिज ऊर्जा",
         "वेग"
       ],
       "options_en": [
@@ -7252,13 +7169,12 @@
       "id": 377
     },
     {
-      "subject": "Physics",
       "q": "The layers of atmosphere are heated through- - Convection",
       "q_en": "The layers of atmosphere are heated through- - Convection",
       "options": [
         "Conduction",
         "Radiation",
-        "None of the given option",
+        "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -7272,8 +7188,7 @@
       "id": 378
     },
     {
-      "subject": "Physics",
-      "q": "The initial temperature of a ball and a disc of the same mass, radius and same metal are the same, the ratio of their rates of cooling in the same environment will be- , - 1 : 4",
+      "q": "The initial ताप of a ball and a disc of the समान mass, radius and समान metal are the समान, the ratio of their rates of cooling in the समान environment will be- , - 1 : 4",
       "q_en": "The initial temperature of a ball and a disc of the same mass, radius and same metal are the same, the ratio of their rates of cooling in the same environment will be- , - 1 : 4",
       "options": [
         "1 : 4 4 : 1",
@@ -7292,13 +7207,12 @@
       "id": 379
     },
     {
-      "subject": "Physics",
-      "q": "Which of the following phenomenon is used in optical fibre? ? total internal reflection",
+      "q": "निम्नलिखित में से कौन-सा phenomenon is used in optical fibre?",
       "q_en": "Which of the following phenomenon is used in optical fibre? ? total internal reflection",
       "options": [
-        "diffraction",
+        "विवर्तन",
         "scattering",
-        "refraction",
+        "अपवर्तन",
         "वेग"
       ],
       "options_en": [
@@ -7312,7 +7226,6 @@
       "id": 380
     },
     {
-      "subject": "Physics",
       "q": "The number of degrees of freedom for a rigid diatomic molecule is. - 3",
       "q_en": "The number of degrees of freedom for a rigid diatomic molecule is. - 3",
       "options": [
@@ -7332,13 +7245,12 @@
       "id": 381
     },
     {
-      "subject": "Physics",
-      "q": "Volume of gas becomes four times if- - Temperature becomes four time at constant pressure",
+      "q": "Volume of gas becomes four times if- - ताप becomes four time at constant दाब",
       "q_en": "Volume of gas becomes four times if- - Temperature becomes four time at constant pressure",
       "options": [
-        ", Temperature becomes one fourth at constant pressure",
-        ", Temperature becomes two times at constant pressure",
-        ", Temperature becomes half at constant pressure",
+        ", ताप becomes one fourth at constant दाब",
+        ", ताप becomes two times at constant दाब",
+        ", ताप becomes half at constant दाब",
         ","
       ],
       "options_en": [
@@ -7352,13 +7264,12 @@
       "id": 382
     },
     {
-      "subject": "Physics",
-      "q": "Magnetic flux",
+      "q": "चुंबकीय फ्लक्स",
       "q_en": "Magnetic flux",
       "options": [
-        "Magnetic intensity",
-        "Magnetic dipole moment",
-        "Current density",
+        "चुम्बकीय तीव्रता",
+        "चुंबकीय dipole moment",
+        "धारा density",
         "वेग"
       ],
       "options_en": [
@@ -7372,8 +7283,7 @@
       "id": 383
     },
     {
-      "subject": "Physics",
-      "q": "What is the maximum value of static friction called? ?",
+      "q": "क्या है the अधिकतम value of static friction called?",
       "q_en": "What is the maximum value of static friction called? ?",
       "options": [
         "Limiting friction Rolling friction",
@@ -7392,8 +7302,7 @@
       "id": 384
     },
     {
-      "subject": "Physics",
-      "q": "10 cm long wire is placed horizontally on the surface of water and is gently pulled up with a force of 2 ×10-2 N to keep the wire in equilibrium. What will be the surface tension of water in Nm-1? 0.0",
+      "q": "10 cm long wire is placed horizontally on the surface of water and is gently pulled up with a बल of 2 ×10-2 N to keep the wire in equilibrium. What will be the surface tension of water in Nm-1?",
       "q_en": "10 cm long wire is placed horizontally on the surface of water and is gently pulled up with a force of 2 ×10-2 N to keep the wire in equilibrium. What will be the surface tension of water in Nm-1? 0.0",
       "options": [
         "0.002 0.001",
@@ -7412,7 +7321,6 @@
       "id": 385
     },
     {
-      "subject": "Physics",
       "q": "The ratio of specific heats (Cp/Cv) for diatomic gas molecules is- (Cp/Cv) - 1.4",
       "q_en": "The ratio of specific heats (Cp/Cv) for diatomic gas molecules is- (Cp/Cv) - 1.4",
       "options": [
@@ -7432,8 +7340,7 @@
       "id": 386
     },
     {
-      "subject": "Physics",
-      "q": "An object is placed 10 cm away in front of a concave mirror of radius of curvature 40 cm. What will be the distance of the image/jpg? 40 10 ? 20 cm",
+      "q": "An वस्तु is placed 10 cm away in front of a concave दर्पण of radius of curvature 40 cm. What will be the distance of the प्रतिबिंब/jpg?",
       "q_en": "An object is placed 10 cm away in front of a concave mirror of radius of curvature 40 cm. What will be the distance of the image/jpg? 40 10 ? 20 cm",
       "options": [
         "20 40 cm",
@@ -7452,8 +7359,7 @@
       "id": 387
     },
     {
-      "subject": "Physics",
-      "q": "What will be the distance of an object from a concave mirror of focal length 20 cm for unit magnification? 20 ? 20 cm",
+      "q": "What will be the distance of an वस्तु from a concave दर्पण of focal length 20 cm for unit magnification?",
       "q_en": "What will be the distance of an object from a concave mirror of focal length 20 cm for unit magnification? 20 ? 20 cm",
       "options": [
         "20 10 cm",
@@ -7472,13 +7378,12 @@
       "id": 388
     },
     {
-      "subject": "Physics",
-      "q": "Where is the image/jpg formed for a person suffering from myopia? ? At Retina",
+      "q": "Where is the प्रतिबिंब/jpg formed for a person suffering from myopia?",
       "q_en": "Where is the image/jpg formed for a person suffering from myopia? ? At Retina",
       "options": [
-        "Between retina and eye lens",
+        "Between retina and eye लेंस",
         "Behind the retina",
-        "None of the given options",
+        "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -7492,13 +7397,12 @@
       "id": 389
     },
     {
-      "subject": "Physics",
-      "q": "On increasing the length of a microscope, what will be its magnifying power? ? Decrease",
+      "q": "On increasing the length of a microscope, what will be its magnifying शक्ति?",
       "q_en": "On increasing the length of a microscope, what will be its magnifying power? ? Decrease",
       "options": [
-        "Increases",
-        "Remain unchanged",
-        "None of the given options",
+        "बढ़ती है",
+        "अपरिवर्तित",
+        "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -7512,13 +7416,12 @@
       "id": 390
     },
     {
-      "subject": "Physics",
-      "q": "LEDs are made from which of the following types of materials? LED ? Excipient Silicon",
+      "q": "LEDs are made from निम्नलिखित में से कौन-सा types of materials?",
       "q_en": "LEDs are made from which of the following types of materials? LED ? Excipient Silicon",
       "options": [
         "Excipient Germanium",
         "Galium phosphide",
-        "All of the given options",
+        "दिए गए सभी विकल्प",
         "वेग"
       ],
       "options_en": [
@@ -7532,13 +7435,12 @@
       "id": 391
     },
     {
-      "subject": "Physics",
-      "q": "The magnetic field produced in a current carrying long solenoid does not depend on? ? Number of turns per unit length",
+      "q": "The चुंबकीय क्षेत्र produced in a धारा carrying long solenoid does not depend on?",
       "q_en": "The magnetic field produced in a current carrying long solenoid does not depend on? ? Number of turns per unit length",
       "options": [
-        "Current flowing",
+        "धारा flowing",
         "Radius of the solenoid",
-        "All of the given options",
+        "दिए गए सभी विकल्प",
         "वेग"
       ],
       "options_en": [
@@ -7552,8 +7454,7 @@
       "id": 392
     },
     {
-      "subject": "Physics",
-      "q": "What is the mass of 2 liters of nitrogen at 22.4 atmosphere pressure and 273 k? 22.4 273 k 2 - 28 g",
+      "q": "क्या है the mass of 2 liters of nitrogen at 22.4 atmosphere दाब and 273 k?",
       "q_en": "What is the mass of 2 liters of nitrogen at 22.4 atmosphere pressure and 273 k? 22.4 273 k 2 - 28 g",
       "options": [
         "28",
@@ -7572,11 +7473,10 @@
       "id": 393
     },
     {
-      "subject": "Physics",
       "q": "Kinetic theory of gases provided a base for- - Charles’s law",
       "q_en": "Kinetic theory of gases provided a base for- - Charles’s law",
       "options": [
-        "Boyle’s law",
+        "बॉयल का नियम",
         "Charles’s law and Boyle’s law",
         "Gay Lucca’s law",
         "वेग"
@@ -7592,13 +7492,12 @@
       "id": 394
     },
     {
-      "subject": "Physics",
-      "q": "Large transformer when used for some time, become hot and are cooled by circulating oil. The heating of transformer is due to - Heating effect of current alone",
+      "q": "Large transformer when used for some time, become hot and are cooled by circulating oil. The heating of transformer is due to - Heating effect of धारा alone",
       "q_en": "Large transformer when used for some time, become hot and are cooled by circulating oil. The heating of transformer is due to - Heating effect of current alone",
       "options": [
         "Hysteresis loss alone",
         "वेग",
-        "Both the Hysteresis loss and heating effect of current Chemical effect of current alone",
+        "Both the Hysteresis loss and heating effect of धारा Chemical effect of धारा alone",
         "त्वरण"
       ],
       "options_en": [
@@ -7612,8 +7511,7 @@
       "id": 395
     },
     {
-      "subject": "Physics",
-      "q": "An athlete completes one round of a circular track of radius R in 40 sec. What will be his displacement at the end of 2 min. 20 sec? ‘R’ 40 2 20 ? Zero",
+      "q": "An athlete completes one round of a circular track of radius R in 40 sec. What will be his displacement at the end of 2 min. 20 sec?",
       "q_en": "An athlete completes one round of a circular track of radius R in 40 sec. What will be his displacement at the end of 2 min. 20 sec? ‘R’ 40 2 20 ? Zero",
       "options": [
         "2R",
@@ -7632,8 +7530,7 @@
       "id": 396
     },
     {
-      "subject": "Physics",
-      "q": "The value of molar specific heat of an atomic gas at constant pressure is- -",
+      "q": "The value of molar specific ऊष्मा of an atomic gas at constant दाब is- -",
       "q_en": "The value of molar specific heat of an atomic gas at constant pressure is- -",
       "options": [
         "3/2 R",
@@ -7652,8 +7549,7 @@
       "id": 397
     },
     {
-      "subject": "Physics",
-      "q": "The radius of curvature of a concave mirror is 40 cm and the size of the real image/jpg is double that of the object, then what is the distance of the object? 40 , ? -60 cm",
+      "q": "The radius of curvature of a concave दर्पण is 40 cm and the size of the real प्रतिबिंब/jpg is double that of the वस्तु, then क्या है the distance of the वस्तु?",
       "q_en": "The radius of curvature of a concave mirror is 40 cm and the size of the real image/jpg is double that of the object, then what is the distance of the object? 40 , ? -60 cm",
       "options": [
         "-60 -20 cm",
@@ -7672,9 +7568,8 @@
       "id": 398
     },
     {
-      "subject": "Physics",
-      "q": "An object of height 1.5 cm is placed on the axis of a convex lens of focal length 25 cm. The real image/jpg is formed at a distance of 75 cm from the lens. What will be the size of the image/jpg? 1.5 ",
-      "q_en": "An object of height 1.5 cm is placed on the axis of a convex lens of focal length 25 cm. The real image/jpg is formed at a distance of 75 cm from the lens. What will be the size of the image/jpg? 1.5 ",
+      "q": "An वस्तु of height 1.5 cm is placed on the axis of a convex लेंस of focal length 25 cm. The real प्रतिबिंब/jpg is formed at a distance of 75 cm from the लेंस. What will be the size of the प्रतिबिंब/jpg?",
+      "q_en": "An object of height 1.5 cm is placed on the axis of a convex lens of focal length 25 cm. The real image/jpg is formed at a distance of 75 cm from the lens. What will be the size of the image/jpg? 1.5",
       "options": [
         "4.5 -3.0 cm",
         "-3.0 -0.75 cm",
@@ -7692,9 +7587,8 @@
       "id": 399
     },
     {
-      "subject": "Physics",
-      "q": "If the magnification capacity of the objective of a compound microscope is 8 and the magnification capacity of the eyepiece is 4, then what will be the magnification capacity of the microscope? 8 4 ? ",
-      "q_en": "If the magnification capacity of the objective of a compound microscope is 8 and the magnification capacity of the eyepiece is 4, then what will be the magnification capacity of the microscope? 8 4 ? ",
+      "q": "If the magnification capacity of the objective of a compound microscope is 8 and the magnification capacity of the eyepiece is 4, then what will be the magnification capacity of the microscope?",
+      "q_en": "If the magnification capacity of the objective of a compound microscope is 8 and the magnification capacity of the eyepiece is 4, then what will be the magnification capacity of the microscope? 8 4 ?",
       "options": [
         "-32 -26",
         "-26 20",
@@ -7712,14 +7606,13 @@
       "id": 400
     },
     {
-      "subject": "Physics",
-      "q": "If the maximum kinetic energy of the emitted electrons in the photo cell is 5 eV, then what will be the value of the stopping potential? 5 eV ? 5V",
+      "q": "If the अधिकतम kinetic ऊर्जा of the emitted electrons in the photo cell is 5 eV, then what will be the value of the stopping potential?",
       "q_en": "If the maximum kinetic energy of the emitted electrons in the photo cell is 5 eV, then what will be the value of the stopping potential? 5 eV ? 5V",
       "options": [
         "5 7V",
         "7 6V",
         "6 1V",
-        "1"
+        "हमेशा 1"
       ],
       "options_en": [
         "5 7V",
@@ -7732,13 +7625,12 @@
       "id": 401
     },
     {
-      "subject": "Physics",
-      "q": "The majority charge carriers in P-type semiconductor are- P- - Electrons",
+      "q": "The majority आवेश carriers in P-type अर्धचालक are- P- - Electrons",
       "q_en": "The majority charge carriers in P-type semiconductor are- P- - Electrons",
       "options": [
-        "Protons",
-        "Holes",
-        "Neutrons",
+        "प्रोटॉन",
+        "होल",
+        "न्यूट्रॉन",
         "वेग"
       ],
       "options_en": [
@@ -7752,13 +7644,12 @@
       "id": 402
     },
     {
-      "subject": "Physics",
-      "q": "Solids having highest energy level partially filled with electrons are- - Semiconductor",
+      "q": "Solids having highest ऊर्जा level partially filled with electrons are- - अर्धचालक",
       "q_en": "Solids having highest energy level partially filled with electrons are- - Semiconductor",
       "options": [
-        "Conductor",
-        "Insulator",
-        "None of the given options",
+        "चालक",
+        "कुचालक",
+        "दिए गए विकल्पों में से कोई नहीं",
         "वेग"
       ],
       "options_en": [
@@ -7772,7 +7663,6 @@
       "id": 403
     },
     {
-      "subject": "Physics",
       "q": "1 : 2 : 3",
       "q_en": "1 : 2 : 3",
       "options": [
@@ -7792,7 +7682,6 @@
       "id": 404
     },
     {
-      "subject": "Physics",
       "q": "172.6 ml",
       "q_en": "172.6 ml",
       "options": [
@@ -7812,14 +7701,13 @@
       "id": 405
     },
     {
-      "subject": "Physics",
-      "q": "The focal length of a concave mirror is 20 cm. Where should the object be placed to produce an image/jpg magnified twice when the image/jpg is real? 20 ? 30 cm from the mirror",
+      "q": "The focal length of a concave दर्पण is 20 cm. Where should the वस्तु be placed to produce an प्रतिबिंब/jpg magnified twice when the प्रतिबिंब/jpg is real?",
       "q_en": "The focal length of a concave mirror is 20 cm. Where should the object be placed to produce an image/jpg magnified twice when the image/jpg is real? 20 ? 30 cm from the mirror",
       "options": [
-        "30 10 cm from the mirror",
-        "10 20 cm from the mirror",
-        "20 15 cm from the mirror",
-        "15"
+        "30 10 cm from the दर्पण",
+        "10 20 cm from the दर्पण",
+        "20 15 cm from the दर्पण",
+        "15 वां"
       ],
       "options_en": [
         "30 10 cm from the mirror",
@@ -7832,13 +7720,12 @@
       "id": 406
     },
     {
-      "subject": "Physics",
-      "q": "Kinetic energy of all the emitted electrons",
+      "q": "Kinetic ऊर्जा of all the emitted electrons",
       "q_en": "Kinetic energy of all the emitted electrons",
       "options": [
-        "Mean kinetic energy of the emitted electrons",
-        "Maximum kinetic energy of the emitted electrons",
-        "Minimum kinetic energy of the emitted electrons",
+        "Mean kinetic ऊर्जा of the emitted electrons",
+        "अधिकतम kinetic ऊर्जा of the emitted electrons",
+        "न्यूनतम kinetic ऊर्जा of the emitted electrons",
         "वेग"
       ],
       "options_en": [
@@ -7852,8 +7739,7 @@
       "id": 407
     },
     {
-      "subject": "Physics",
-      "q": "The energy of an electron in the first Bohr orbit of a hydrogen isotope is - 27.2 eV. What will be its energy in the third Bohr orbit? - 27.2 eV . ? -3.02 eV",
+      "q": "The ऊर्जा of an इलेक्ट्रॉन in the first Bohr orbit of a hydrogen isotope is - 27.2 eV. What will be its ऊर्जा in the third Bohr orbit?",
       "q_en": "The energy of an electron in the first Bohr orbit of a hydrogen isotope is - 27.2 eV. What will be its energy in the third Bohr orbit? - 27.2 eV . ? -3.02 eV",
       "options": [
         "-3.02 eV",
@@ -7872,12 +7758,11 @@
       "id": 408
     },
     {
-      "subject": "Physics",
-      "q": "When a semiconductor is heated, its resistance- , -",
+      "q": "When a अर्धचालक is heated, its प्रतिरोध- , -",
       "q_en": "When a semiconductor is heated, its resistance- , -",
       "options": [
-        "Decreases Increases",
-        "Remains unchanged",
+        "घटता है बढ़ता है",
+        "अपरिवर्तित रहती है",
         "Nothing is definite",
         "वेग"
       ],
@@ -7892,8 +7777,7 @@
       "id": 409
     },
     {
-      "subject": "Physics",
-      "q": "The PN junction diode is used as- PN - An amplifier",
+      "q": "The PN junction डायोड is used as- PN - An amplifier",
       "q_en": "The PN junction diode is used as- PN - An amplifier",
       "options": [
         "A rectifier",
@@ -7912,13 +7796,12 @@
       "id": 410
     },
     {
-      "subject": "Physics",
-      "q": "If current is passed through a spring, then the spring- ( ) - Gets compressed",
+      "q": "If धारा is passed through a spring, then the spring- ( ) - Gets compressed",
       "q_en": "If current is passed through a spring, then the spring- ( ) - Gets compressed",
       "options": [
         "Gets expanded",
         "Oscillates",
-        "Remains unchanged",
+        "अपरिवर्तित रहती है",
         "वेग"
       ],
       "options_en": [
@@ -7932,11 +7815,10 @@
       "id": 411
     },
     {
-      "subject": "Physics",
-      "q": "What is Lenz's law related to? ? law of Conservation of charge",
+      "q": "क्या है Lenz's law related to?",
       "q_en": "What is Lenz's law related to? ? law of Conservation of charge",
       "options": [
-        "law of Conservation of energy",
+        "law of Conservation of ऊर्जा",
         "law of conservation of mass",
         "law of conservation of momentum",
         "वेग"
@@ -7952,7 +7834,6 @@
       "id": 412
     },
     {
-      "subject": "Physics",
       "q": "The breaking stress of a wire depend upon- ( ) - Length of the wire",
       "q_en": "The breaking stress of a wire depend upon- ( ) - Length of the wire",
       "options": [
@@ -7972,13 +7853,12 @@
       "id": 413
     },
     {
-      "subject": "Physics",
-      "q": "The equation of a progressive wave is y = 25 sin (20t + 5x) where y is the displacement. Which of the following statement is not correct? y = 25 sin (20t + 5x) y - The amplitude of the wave is 25 unit",
+      "q": "The equation of a progressive तरंग is y = 25 sin (20t + 5x) where y is the displacement. निम्नलिखित में से कौन-सा statement is not correct?",
       "q_en": "The equation of a progressive wave is y = 25 sin (20t + 5x) where y is the displacement. Which of the following statement is not correct? y = 25 sin (20t + 5x) y - The amplitude of the wave is 25 unit",
       "options": [
-        "25 The wave is moving in the positive x- direction",
-        "x- The velocity of the wave is 4 units",
-        "4 The maximum velocity of the particle is 500 units",
+        "25 The तरंग is moving in the positive x- direction",
+        "x- The वेग of the तरंग is 4 units",
+        "4 The अधिकतम वेग of the particle is 500 units",
         "500"
       ],
       "options_en": [
@@ -7992,8 +7872,7 @@
       "id": 414
     },
     {
-      "subject": "Physics",
-      "q": "At what distance should an object be placed in front of a concave mirror of distance 10 cm so that its real image/jpg becomes five times the size of the object? 10 ? -10 cm",
+      "q": "At what distance should an वस्तु be placed in front of a concave दर्पण of distance 10 cm so that its real प्रतिबिंब/jpg becomes five times the size of the वस्तु?",
       "q_en": "At what distance should an object be placed in front of a concave mirror of distance 10 cm so that its real image/jpg becomes five times the size of the object? 10 ? -10 cm",
       "options": [
         "-10 -12 cm",
@@ -8012,8 +7891,7 @@
       "id": 415
     },
     {
-      "subject": "Physics",
-      "q": "What is the momentum of a photon? (h = plank's constant, v = frequecny, c = speed of light) ? (h = , v = , c = ) hv",
+      "q": "क्या है the momentum of a photon?",
       "q_en": "What is the momentum of a photon? (h = plank's constant, v = frequecny, c = speed of light) ? (h = , v = , c = ) hv",
       "options": [
         "hv hc",
@@ -8032,9 +7910,8 @@
       "id": 416
     },
     {
-      "subject": "Physics",
-      "q": "In the Bohr model of the hydrogen atom, let R, V and E represent the radius of the orbit, the speed of electron and the total energy of the electron respectively. Which of the following quantities is ",
-      "q_en": "In the Bohr model of the hydrogen atom, let R, V and E represent the radius of the orbit, the speed of electron and the total energy of the electron respectively. Which of the following quantities is ",
+      "q": "In the Bohr model of the hydrogen परमाणु, let R, V and E represent the radius of the orbit, the speed of इलेक्ट्रॉन and the total ऊर्जा of the इलेक्ट्रॉन respectively. निम्नलिखित में से कौन-सा quantities is",
+      "q_en": "In the Bohr model of the hydrogen atom, let R, V and E represent the radius of the orbit, the speed of electron and the total energy of the electron respectively. Which of the following quantities is",
       "options": [
         "वेग",
         "RE",
@@ -8052,13 +7929,12 @@
       "id": 417
     },
     {
-      "subject": "Physics",
-      "q": "What is the angle between the magnetic meridian and the geographic meridian called? ? Angle of dip",
+      "q": "क्या है the angle between the चुंबकीय meridian and the geographic meridian called?",
       "q_en": "What is the angle between the magnetic meridian and the geographic meridian called? ? Angle of dip",
       "options": [
         "Angle of declination",
-        "Magnetic Moment",
-        "Magnetic field intensity",
+        "चुंबकीय Moment",
+        "चुंबकीय क्षेत्र intensity",
         "वेग"
       ],
       "options_en": [
@@ -8072,8 +7948,7 @@
       "id": 418
     },
     {
-      "subject": "Physics",
-      "q": "Three capacitors are placed in series, each of which has a capacitance of 2F. What will be the resulting capacitance? 2F ? 6F",
+      "q": "Three capacitors are placed in series, each of कौन-सा has a धारिता of 2F. What will be the resulting धारिता?",
       "q_en": "Three capacitors are placed in series, each of which has a capacitance of 2F. What will be the resulting capacitance? 2F ? 6F",
       "options": [
         "6F",
@@ -8092,8 +7967,7 @@
       "id": 419
     },
     {
-      "subject": "Physics",
-      "q": "The force existing between two parallel current carrying conductors is F. If the current in each conductor is doubled, then what will be the value of the force? F , ? 2F",
+      "q": "The बल existing between two parallel धारा carrying conductors is F. If the धारा in each conductor is doubled, then what will be the value of the बल?",
       "q_en": "The force existing between two parallel current carrying conductors is F. If the current in each conductor is doubled, then what will be the value of the force? F , ? 2F",
       "options": [
         "2F 4F",
@@ -8112,8 +7986,7 @@
       "id": 420
     },
     {
-      "subject": "Physics",
-      "q": "Which law states that effect of pressure is same for all portion? - Pascal’s law",
+      "q": "कौन-सा law states that effect of दाब is समान for all portion?",
       "q_en": "Which law states that effect of pressure is same for all portion? - Pascal’s law",
       "options": [
         "Gay Lussac’s law",
@@ -8132,8 +8005,7 @@
       "id": 421
     },
     {
-      "subject": "Physics",
-      "q": "Given below is a list of electromagnetic spectrum and its mode of production. Which one does not match? ? Gamma rays- Radioactive of the nucleus",
+      "q": "Given below is a list of electromagnetic spectrum and its mode of production. कौन-सा one does not match?",
       "q_en": "Given below is a list of electromagnetic spectrum and its mode of production. Which one does not match? ? Gamma rays- Radioactive of the nucleus",
       "options": [
         "- Ultraviolet – Magnetron value",
@@ -8152,14 +8024,13 @@
       "id": 422
     },
     {
-      "subject": "Physics",
       "q": "Characteristic x-rays are produced due to x- Transfer of momentum in collision of electrons with target atoms.",
       "q_en": "Characteristic x-rays are produced due to x- Transfer of momentum in collision of electrons with target atoms.",
       "options": [
-        ", Transition of electrons from higher to lower electronic orbits in an atom",
+        ", Transition of electrons from higher to lower electronic orbits in an परमाणु",
         "Heating of the target",
         "वेग",
-        "Transfer of the energy in collision of electrons with atoms in the target."
+        "Transfer of the ऊर्जा in collision of electrons with atoms in the target."
       ],
       "options_en": [
         ", Transition of electrons from higher to lower electronic orbits in an atom",
@@ -8172,8 +8043,7 @@
       "id": 423
     },
     {
-      "subject": "Physics",
-      "q": "The velocity of a body of mass 20 kg decreases from 20 m/s to 5 m/s in a distance of 100 m. What will be the force on the body? 20 100 20 ./ . 5 ./ . ? -27.5 N",
+      "q": "The वेग of a body of mass 20 kg घटता है from 20 m/s to 5 m/s in a distance of 100 m. What will be the बल on the body?",
       "q_en": "The velocity of a body of mass 20 kg decreases from 20 m/s to 5 m/s in a distance of 100 m. What will be the force on the body? 20 100 20 ./ . 5 ./ . ? -27.5 N",
       "options": [
         "-27.5 -47.5 N",
@@ -8192,8 +8062,7 @@
       "id": 424
     },
     {
-      "subject": "Physics",
-      "q": "The potential energy of a spring when stretched through a distance 'S' is 10 joules. How much work (in joules) is required to stretch the spring an additional distance 'S'? 'S' 10 'S' ( ) ? 30 joule",
+      "q": "The potential ऊर्जा of a spring when stretched through a distance 'S' is 10 joules. कैसे much कार्य (in joules) is required to stretch the spring an additional distance 'S'?",
       "q_en": "The potential energy of a spring when stretched through a distance 'S' is 10 joules. How much work (in joules) is required to stretch the spring an additional distance 'S'? 'S' 10 'S' ( ) ? 30 joule",
       "options": [
         "30 40 joule",
@@ -8212,8 +8081,7 @@
       "id": 425
     },
     {
-      "subject": "Physics",
-      "q": "What is the escape velocity of a projectile from the earth approximately? 11.2 m/sec",
+      "q": "क्या है the escape वेग of a projectile from the earth approximately?",
       "q_en": "What is the escape velocity of a projectile from the earth approximately? 11.2 m/sec",
       "options": [
         "11.2 ./ . 112 km/sec",
@@ -8232,11 +8100,10 @@
       "id": 426
     },
     {
-      "subject": "Physics",
-      "q": "What is the focal length of a plane mirror? ? Zero",
+      "q": "क्या है the focal length of a plane दर्पण?",
       "q_en": "What is the focal length of a plane mirror? ? Zero",
       "options": [
-        "Infinite",
+        "अनन्त",
         "Very less",
         "Indefinite",
         "वेग"
@@ -8252,13 +8119,12 @@
       "id": 427
     },
     {
-      "subject": "Physics",
-      "q": "To increase the sensitivity of a moving coil galvanometer, which has to be decreased? ? The value of its magnetic field",
+      "q": "To बढ़ता है the sensitivity of a moving कुंडली galvanometer, कौन-सा has to be decreased?",
       "q_en": "To increase the sensitivity of a moving coil galvanometer, which has to be decreased? ? The value of its magnetic field",
       "options": [
         "वेग",
-        "The torsional constant The number of turns in its coil",
-        "The area of its coil",
+        "The torsional constant The number of turns in its कुंडली",
+        "The area of its कुंडली",
         "त्वरण"
       ],
       "options_en": [
@@ -8272,14 +8138,13 @@
       "id": 428
     },
     {
-      "subject": "Physics",
-      "q": "The length of a solenoid with 1000 turns is 25 cm and the cross-sectional area is 5 cm 2, calculate its self- inductance- 1000 25 5 2 - - 2.51mH",
+      "q": "The length of a solenoid with 1000 turns is 25 cm and the cross-sectional area is 5 cm 2, calculate its self- प्रेरकत्व- 1000 25 5 2 - - 2.51mH",
       "q_en": "The length of a solenoid with 1000 turns is 25 cm and the cross-sectional area is 5 cm 2, calculate its self- inductance- 1000 25 5 2 - - 2.51mH",
       "options": [
         "2.51 4mH",
         "4 5.5mH",
         "5.5 1mH",
-        "1"
+        "हमेशा 1"
       ],
       "options_en": [
         "2.51 4mH",

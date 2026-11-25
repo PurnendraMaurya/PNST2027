@@ -1803,7 +1803,7 @@ function renderQ(){
   var ltrs=['A','B','C','D'],opts='';
   var qOpts=q.options||q.o||[];
   qOpts.forEach(function(o,i){
-    opts+='<button class="ex-opt'+(ans[qi]===i?' sel':'')+'" onclick="selAns('+i+')"><div class="ex-opt-dot">'+ltrs[i]+'</div><span>'+(o||'')+'</span></button>';
+    opts+='<button class="ex-opt'+(ans[qi]===i?' sel':'')+'" onclick="selAns('+i+')"><div class="ex-opt-dot">'+ltrs[i]+'</div><span>'+formatBilingualOpt(q,i)+'</span></button>';
   });
   var isLast=qi===Qs.length-1;
   var navHtml='<div class="ex-nav">'
@@ -1811,10 +1811,13 @@ function renderQ(){
     +'<button class="ex-nbtn '+(isLast?'ex-sub':'ex-next')+'" onclick="'+(isLast?'openSubmitModal()':'goQ(1)')+'">'
     +(isLast?'✅ Submit Exam':'Next ▶')+'</button></div>';
 
-  // Sirf Voice + Hint — NO AI during test (cheating rokne ke liye)
+  var isMarked=!!markedForReview[qi];
   var actionBtns='<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
     +'<button class="voice-btn" id="voiceBtn_'+qi+'" onclick="voiceRead('+qi+')">🔊 सुनो</button>'
     +'<button class="hint-btn" onclick="showHint('+qi+')">💡 Hint</button>'
+    +'<button class="hint-btn" onclick="toggleMarkReview('+qi+')" style="'+(isMarked?'border-color:#f59e0b;color:#f59e0b;':'')+'">'+(isMarked?'🔖 Marked':'🔖 Mark Review')+'</button>'
+    +'<button class="hint-btn" id="negBadgeBtn" onclick="toggleNegMarking()">'+(negMarkingEnabled?'⚖️ Neg: -1/3 ON':'⚖️ Neg: OFF')+'</button>'
+    +'<button class="hint-btn" onclick="setDisplayMode(getDisplayMode()==='both'?'hi':(getDisplayMode()==='hi'?'en':'both'))">🌐 '+getDisplayMode().toUpperCase()+'</button>'
     +'</div>';
 
   var qa=$('qArea');
@@ -1824,7 +1827,7 @@ function renderQ(){
         +'<span class="ex-qno">प्रश्न '+(qi+1)+' / '+Qs.length+'</span>'
         +'<span class="ex-subj-tag" style="background:'+sBg+';color:'+sTx+'">'+si.icon+' '+si.name+'</span>'
       +'</div>'
-      +'<div class="ex-qtxt">'+(qi+1)+'. '+(q.q||q.question||'')+'</div>'
+      +'<div class="ex-qtxt">'+formatBilingualQ(q,qi)+'</div>'
       +actionBtns
       +'<div class="hint-box" id="hintBox_'+qi+'"></div>'
       +'<div class="ex-opts">'+opts+'</div>'
@@ -1837,8 +1840,8 @@ function renderQ(){
 function selAns(i){ans[qi]=i;var opts=document.querySelectorAll('#qArea .ex-opt');opts.forEach(function(btn,j){btn.className='ex-opt'+(j===i?' sel':'');});updatePalette();}
 function goQ(d){qi=Math.max(0,Math.min(Qs.length-1,qi+d));renderQ();}
 function jumpQ(i){qi=i;renderQ();}
-function buildPalette(){var g=$('palGrid');if(!g)return;g.innerHTML='';var lastSub=null;Qs.forEach(function(q,i){var s=q._sub;if(s!==lastSub){var lbl=document.createElement('div');lbl.className='pal-sub-lbl';lbl.textContent=(SINFO[s]&&SINFO[s].icon?SINFO[s].icon+' ':'')+s.charAt(0).toUpperCase()+s.slice(1);g.appendChild(lbl);lastSub=s;}var b=document.createElement('button');b.id='pb'+i;b.className='pbn'+(ans[i]!==undefined?' ans':'')+(i===qi?' cur':'');b.textContent=i+1;(function(x){b.onclick=function(){jumpQ(x);};})(i);g.appendChild(b);});updatePalCnt();}
-function updatePalette(){Qs.forEach(function(_,i){var b=$('pb'+i);if(b)b.className='pbn'+(ans[i]!==undefined?' ans':'')+(i===qi?' cur':'');});updatePalCnt();}
+function buildPalette(){var g=$('palGrid');if(!g)return;g.innerHTML='';var fBar=document.createElement('div');fBar.style.cssText='display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px;width:100%';fBar.innerHTML='<button type="button" class="hint-btn" onclick="filterPalette(\'all\')">All</button><button type="button" class="hint-btn" onclick="filterPalette(\'ans\')">Answered</button><button type="button" class="hint-btn" onclick="filterPalette(\'unans\')">Unanswered</button><button type="button" class="hint-btn" onclick="filterPalette(\'marked\')">Marked</button>';g.appendChild(fBar);var lastSub=null;Qs.forEach(function(q,i){var s=q._sub;if(s!==lastSub){var lbl=document.createElement('div');lbl.className='pal-sub-lbl';lbl.textContent=(SINFO[s]&&SINFO[s].icon?SINFO[s].icon+' ':'')+s.charAt(0).toUpperCase()+s.slice(1);g.appendChild(lbl);lastSub=s;}var b=document.createElement('button');b.id='pb'+i;b.className='pbn'+(ans[i]!==undefined?' ans':'')+(i===qi?' cur':'')+(markedForReview[i]?' rev':'');b.textContent=i+1;(function(x){b.onclick=function(){jumpQ(x);};})(i);g.appendChild(b);});updatePalCnt();}
+function updatePalette(){Qs.forEach(function(_,i){var b=$('pb'+i);if(b)b.className='pbn'+(ans[i]!==undefined?' ans':'')+(i===qi?' cur':'')+(markedForReview[i]?' rev':'');});updatePalCnt();}
 function updatePalCnt(){var a=Object.keys(ans).length;if($('palCnt'))$('palCnt').textContent='Answered: '+a+' | Remaining: '+(Qs.length-a);if($('progStat'))$('progStat').textContent='✅ '+a+' | ⬜ '+(Qs.length-a)+' | 🎯 '+Qs.length;if($('progFill'))$('progFill').style.width=(a/Qs.length*100)+'%';}
 function startTimer(){if(timerID)clearInterval(timerID);updTimer();timerID=setInterval(function(){timeLeft--;updTimer();if(timeLeft<=0){clearInterval(timerID);doSubmit();}},1000);}
 function updTimer(){var m=Math.floor(timeLeft/60),s=timeLeft%60;var el=$('exTimer');if(el){el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;el.className='ex-timer'+(timeLeft<300?' warn':'');}}
@@ -1925,10 +1928,13 @@ function showHintText(sub, boxEl){
 function doSubmit(){
   if(timerID)clearInterval(timerID);
   if(window.speechSynthesis)window.speechSynthesis.cancel();
-  var cr=0,wr=0,sk=0,sd={};
+  var cr=0,wr=0,sk=0,sd={},wrongList=[];
   SORDER.forEach(function(s){sd[s]={cr:0,wr:0,sk:0,total:0};});
-  Qs.forEach(function(q,i){var s=q._sub;if(!sd[s])sd[s]={cr:0,wr:0,sk:0,total:0};sd[s].total++;var correct=q.answer!==undefined?q.answer:q.c;if(ans[i]===undefined){sk++;sd[s].sk++;}else if(ans[i]===correct){cr++;sd[s].cr++;}else{wr++;sd[s].wr++;}});
-  var pct=Math.round(cr/Qs.length*100);
+  Qs.forEach(function(q,i){var s=q._sub;if(!sd[s])sd[s]={cr:0,wr:0,sk:0,total:0};sd[s].total++;var correct=q.answer!==undefined?q.answer:q.c;if(ans[i]===undefined){sk++;sd[s].sk++;}else if(ans[i]===correct){cr++;sd[s].cr++;}else{wr++;sd[s].wr++;wrongList.push({q:q.q||q.question||'',q_en:q.q_en||'',options:q.options||q.o||[],options_en:q.options_en||[],answer:correct,userAns:ans[i],sub:s,date:new Date().toLocaleDateString('hi-IN')});}});
+  saveMistakeBank(wrongList);
+  var rawNet=negMarkingEnabled?(cr-(wr/3)):cr;
+  var netScore=Math.max(0,parseFloat(rawNet.toFixed(2)));
+  var pct=Math.max(0,Math.round((netScore/Qs.length)*100));
   var tt=totalTime-timeLeft,tm=Math.floor(tt/60),ts=tt%60;
   var entry={mn:mockNo,label:subject==='full'?'🎯 Full Mock Test #'+mockNo:(SINFO[subject]?SINFO[subject].icon+' '+SINFO[subject].name+' Test #'+mockNo:subject+' Test #'+mockNo),subject:subject,cr:cr,wr:wr,sk:sk,total:Qs.length,pct:pct,sd:sd,timeTaken:tm+'m '+ts+'s',date:new Date().toLocaleDateString('hi-IN'),time:new Date().toLocaleTimeString('hi-IN',{hour:'2-digit',minute:'2-digit'})};
   try{var h=JSON.parse(localStorage.getItem(uKey('pnst_hist'))||'[]');h.unshift(entry);if(h.length>100)h=h.slice(0,100);localStorage.setItem(uKey('pnst_hist'),JSON.stringify(h));}catch(e){}
@@ -2003,7 +2009,7 @@ async function renderLeaderboard(){
 }
 
 /* SECTION 16: DAILY QUIZ */
-async function loadDailyQuiz(){var card=$('dailyQuizCard');if(!card)return;var content=$('dqContent');if(!content)return;var daySubjects=['biology','chemistry','physics','gk','english','biology','chemistry'];var todaySub=daySubjects[new Date().getDay()]||'biology';var si=SINFO[todaySub];var dqKey=uKey('pnst_dq')+'_'+new Date().toDateString();var dqDone=false;try{dqDone=localStorage.getItem(dqKey)==='done';}catch(e){}if($('dq-badge-el'))$('dq-badge-el').textContent='📅 आज का Quiz — '+si.icon+' '+si.name;content.innerHTML='<div style="text-align:center;padding:14px;color:var(--tx2);font-size:.8rem">⏳ Loading...</div>';try{var res=await fetch(FILES[todaySub]);if(!res.ok)throw new Error('File not found');var data=await res.json();if(!data.questions||!data.questions.length)throw new Error('No questions');var seed=new Date().toDateString().split('').reduce(function(a,c){return a+c.charCodeAt(0);},0);var q=data.questions[seed%data.questions.length];var correct=q.answer!==undefined?q.answer:q.c;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];if(dqDone){var saved=null;try{saved=JSON.parse(localStorage.getItem(dqKey+'_ans'));}catch(e){}var optsHtml='';qOpts.forEach(function(o,i){var iC=(i===correct),iU=(saved!==null&&i===saved);var bg=iC?'rgba(34,197,94,.2)':iU?'rgba(239,68,68,.2)':'rgba(255,255,255,.04)';var bc=iC?'#22c55e':iU?'#ef4444':'var(--card-border)';var tc=iC?'#22c55e':iU?'#ef4444':'var(--tx2)';optsHtml+='<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:'+bg+';border:1.5px solid '+bc+';border-radius:9px;margin-bottom:6px;font-size:.82rem;color:'+tc+'">'+ltrs[i]+') '+o+(iC?' ✅':'')+'</div>';});content.innerHTML='<div style="font-size:.82rem;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.6">'+si.icon+' '+(q.q||q.question||'')+'</div>'+optsHtml+'<div style="margin-top:8px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Aaj complete! Kal naya sawaal 🎯</div>';return;}var timerLeft=30;var optsHtml='';qOpts.forEach(function(o,i){optsHtml+='<button id="dqOpt_'+i+'" onclick="answerDQ('+i+','+correct+')" style="display:block;width:100%;text-align:left;padding:10px 13px;margin-bottom:7px;border-radius:10px;border:1.5px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.83rem;cursor:pointer;transition:all .2s">'+ltrs[i]+') '+o+'</button>';});content.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:.68rem;color:var(--tx2)">'+si.icon+' '+si.name+'</div><div id="dqTimer" style="font-family:var(--fn2);font-size:.85rem;font-weight:700;color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:3px 10px">⏱ 30s</div></div><div style="font-size:.85rem;font-weight:600;color:var(--tx);margin-bottom:12px;line-height:1.65">'+(q.q||q.question||'')+'</div>'+optsHtml+'<div id="dqResult" style="display:none;margin-top:8px;padding:10px 12px;border-radius:9px;font-size:.8rem;font-weight:700"></div><div id="dqAiBox" style="display:none;margin-top:10px"></div>';window._dqKey=dqKey;window._dqQ=q;window._dqSub=todaySub;window._dqCorrect=correct;window._dqTimerInterval=setInterval(function(){timerLeft--;var tel=$('dqTimer');if(tel){tel.textContent='⏱ '+timerLeft+'s';if(timerLeft<=10){tel.style.color='#ef4444';tel.style.borderColor='rgba(239,68,68,.4)';tel.style.background='rgba(239,68,68,.1)';}}if(timerLeft<=0){clearInterval(window._dqTimerInterval);answerDQ(-1,correct);}},1000);}catch(e){content.innerHTML='<div style="text-align:center;padding:14px;font-size:.8rem;color:var(--tx2)">❌ Quiz load nahi hui<br><button onclick="loadDailyQuiz()" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
+async function loadDailyQuiz(){var card=$('dailyQuizCard');if(!card)return;var content=$('dqContent');if(!content)return;var daySubjects=['biology','chemistry','physics','gk','english','biology','chemistry'];var todaySub=daySubjects[new Date().getDay()]||'biology';var si=SINFO[todaySub];var dqKey=uKey('pnst_dq')+'_'+new Date().toDateString();var dqDone=false;try{dqDone=localStorage.getItem(dqKey)==='done';}catch(e){}if($('dq-badge-el'))$('dq-badge-el').textContent='📅 आज का Quiz — '+si.icon+' '+si.name;content.innerHTML='<div style="text-align:center;padding:14px;color:var(--tx2);font-size:.8rem">⏳ Loading...</div>';try{var res=await fetch(FILES[todaySub]);if(!res.ok)throw new Error('File not found');var data=await res.json();if(!data.questions||!data.questions.length)throw new Error('No questions');var seed=new Date().toDateString().split('').reduce(function(a,c){return a+c.charCodeAt(0);},0);var q=data.questions[seed%data.questions.length];var correct=q.answer!==undefined?q.answer:q.c;var ltrs=['A','B','C','D'];var qOpts=q.options||q.o||[];if(dqDone){var saved=null;try{saved=JSON.parse(localStorage.getItem(dqKey+'_ans'));}catch(e){}var optsHtml='';qOpts.forEach(function(o,i){var iC=(i===correct),iU=(saved!==null&&i===saved);var bg=iC?'rgba(34,197,94,.2)':iU?'rgba(239,68,68,.2)':'rgba(255,255,255,.04)';var bc=iC?'#22c55e':iU?'#ef4444':'var(--card-border)';var tc=iC?'#22c55e':iU?'#ef4444':'var(--tx2)';optsHtml+='<div style="display:flex;align-items:center;gap:9px;padding:9px 12px;background:'+bg+';border:1.5px solid '+bc+';border-radius:9px;margin-bottom:6px;font-size:.82rem;color:'+tc+'">'+ltrs[i]+') '+o+(iC?' ✅':'')+'</div>';});q._sub=todaySub;content.innerHTML='<div style="font-size:.82rem;font-weight:600;color:var(--tx);margin-bottom:10px;line-height:1.6">'+si.icon+' '+formatBilingualQ(q)+'</div>'+optsHtml+'<div style="margin-top:8px;padding:8px 12px;background:rgba(34,197,94,.1);border-radius:9px;font-size:.78rem;color:#22c55e;font-weight:700">✅ Aaj complete! Kal naya sawaal 🎯</div>';return;}var timerLeft=30;var optsHtml='';qOpts.forEach(function(o,i){optsHtml+='<button id="dqOpt_'+i+'" onclick="answerDQ('+i+','+correct+')" style="display:block;width:100%;text-align:left;padding:10px 13px;margin-bottom:7px;border-radius:10px;border:1.5px solid var(--card-border);background:rgba(255,255,255,.04);color:var(--tx);font-family:var(--fn);font-size:.83rem;cursor:pointer;transition:all .2s">'+ltrs[i]+') '+o+'</button>';});content.innerHTML='<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px"><div style="font-size:.68rem;color:var(--tx2)">'+si.icon+' '+si.name+'</div><div id="dqTimer" style="font-family:var(--fn2);font-size:.85rem;font-weight:700;color:var(--amber);background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);border-radius:8px;padding:3px 10px">⏱ 30s</div></div><div style="font-size:.85rem;font-weight:600;color:var(--tx);margin-bottom:12px;line-height:1.65">'+formatBilingualQ(q)+'</div>'+optsHtml+'<div id="dqResult" style="display:none;margin-top:8px;padding:10px 12px;border-radius:9px;font-size:.8rem;font-weight:700"></div><div id="dqAiBox" style="display:none;margin-top:10px"></div>';window._dqKey=dqKey;window._dqQ=q;window._dqSub=todaySub;window._dqCorrect=correct;window._dqTimerInterval=setInterval(function(){timerLeft--;var tel=$('dqTimer');if(tel){tel.textContent='⏱ '+timerLeft+'s';if(timerLeft<=10){tel.style.color='#ef4444';tel.style.borderColor='rgba(239,68,68,.4)';tel.style.background='rgba(239,68,68,.1)';}}if(timerLeft<=0){clearInterval(window._dqTimerInterval);answerDQ(-1,correct);}},1000);}catch(e){content.innerHTML='<div style="text-align:center;padding:14px;font-size:.8rem;color:var(--tx2)">❌ Quiz load nahi hui<br><button onclick="loadDailyQuiz()" style="margin-top:8px;padding:6px 14px;border-radius:8px;background:var(--blue);color:#fff;border:none;font-size:.76rem;cursor:pointer;font-family:var(--fn)">🔄 Retry</button></div>';}}
 function answerDQ(chosen,correct){if(window._dqTimerInterval)clearInterval(window._dqTimerInterval);var tel=$('dqTimer');if(tel)tel.style.display='none';var ltrs=['A','B','C','D'];for(var i=0;i<4;i++){var btn=document.getElementById('dqOpt_'+i);if(!btn)continue;btn.disabled=true;btn.style.cursor='default';if(i===correct){btn.style.background='rgba(34,197,94,.2)';btn.style.borderColor='#22c55e';btn.style.color='#22c55e';}else if(i===chosen&&i!==correct){btn.style.background='rgba(239,68,68,.2)';btn.style.borderColor='#ef4444';btn.style.color='#ef4444';}else{btn.style.opacity='.5';}}var r=$('dqResult');if(r){r.style.display='block';if(chosen<0){r.innerHTML='⏰ Time out! Sahi: '+ltrs[correct];r.style.background='rgba(245,158,11,.1)';r.style.color='#f59e0b';}else if(chosen===correct){r.innerHTML='🎉 Sahi jawab! ✅';r.style.background='rgba(34,197,94,.1)';r.style.color='#22c55e';}else{var q2=window._dqQ;var opts2=q2?q2.options||q2.o||[]:[];r.innerHTML='❌ Galat! Sahi: '+ltrs[correct]+') '+(opts2[correct]||'');r.style.background='rgba(239,68,68,.1)';r.style.color='#ef4444';}}try{if(window._dqKey){localStorage.setItem(window._dqKey,'done');localStorage.setItem(window._dqKey+'_ans',JSON.stringify(chosen));}var streak=0;try{streak=parseInt(localStorage.getItem(uKey('pnst_dq_streak'))||'0');}catch(e){}var lastDQ='';try{lastDQ=localStorage.getItem(uKey('pnst_dq_last'))||'';}catch(e){}var yesterday=new Date();yesterday.setDate(yesterday.getDate()-1);if(lastDQ===yesterday.toDateString())streak++;else if(lastDQ!==new Date().toDateString())streak=1;localStorage.setItem(uKey('pnst_dq_streak'),streak);localStorage.setItem(uKey('pnst_dq_last'),new Date().toDateString());}catch(e){}var aiBox=$('dqAiBox');if(aiBox){aiBox.style.display='block';aiBox.innerHTML='<button onclick="loadDQAI()" style="width:100%;padding:9px;border-radius:9px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#a855f7;font-family:var(--fn);font-size:.78rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px"><span>✨</span><span>🤖 AI Explanation देखो</span></button><div id="dqAiResult" style="display:none;margin-top:8px;font-size:.8rem;line-height:1.7;color:var(--tx);padding:10px;background:rgba(168,85,247,.05);border:1px solid rgba(168,85,247,.15);border-radius:9px"></div>';}}
 async function loadDQAI(){
   var q=window._dqQ; if(!q) return;
@@ -2030,6 +2036,114 @@ async function loadDQAI(){
     box.innerHTML='<span style="color:#ef4444">'+groqErr(e)+'</span>';
     if(btn) btn.style.opacity='1';
   }
+}
+
+
+/* ── Bilingual & Enhanced Exam Helpers ── */
+var markedForReview = {};
+var negMarkingEnabled = true;
+
+function getDisplayMode(){
+  var m = 'both';
+  try{ m = localStorage.getItem('pnst_display_mode') || 'both'; }catch(e){}
+  return m;
+}
+function setDisplayMode(m){
+  try{ localStorage.setItem('pnst_display_mode', m); }catch(e){}
+  toast(m==='both'?'🌐 Bilingual (हिंदी + English)':(m==='hi'?'🇮🇳 केवल हिंदी':'🇬🇧 English Only'));
+  if(typeof Qs !== 'undefined' && Qs && Qs.length){ renderQ(); }
+}
+function toggleNegMarking(){
+  negMarkingEnabled = !negMarkingEnabled;
+  var el = $('negBadgeBtn');
+  if(el) el.textContent = negMarkingEnabled ? '⚖️ Neg: -1/3 ON' : '⚖️ Neg: OFF';
+  toast(negMarkingEnabled ? '⚖️ 1/3 Negative Marking चालू' : '⚖️ Negative Marking बंद');
+}
+function toggleMarkReview(idx){
+  var target = (typeof idx === 'number') ? idx : qi;
+  if(markedForReview[target]) delete markedForReview[target];
+  else markedForReview[target] = true;
+  updatePalette();
+  renderQ();
+  toast(markedForReview[target] ? '🔖 Question #'+(target+1)+' Review के लिए चिह्नित' : '🔖 Mark हटाया गया');
+}
+function filterPalette(mode){
+  var g = $('palGrid');
+  if(!g || typeof Qs === 'undefined') return;
+  var btns = g.querySelectorAll('.pbn');
+  btns.forEach(function(b){
+    var idx = parseInt((b.id||'').replace('pb',''), 10);
+    if(isNaN(idx)) return;
+    var isAns = (ans[idx] !== undefined);
+    var isMrk = !!markedForReview[idx];
+    var show = true;
+    if(mode === 'ans') show = isAns;
+    else if(mode === 'unans') show = !isAns;
+    else if(mode === 'marked') show = isMrk;
+    b.style.display = show ? '' : 'none';
+  });
+}
+function formatBilingualQ(q, qIdx){
+  var hi = (q.q || q.question || '').trim();
+  var en = (q.q_en || '').trim();
+  var prefix = (typeof qIdx === 'number') ? ((qIdx + 1) + '. ') : '';
+  var mode = getDisplayMode();
+  if(q._sub === 'english' || !en || hi === en || hi.indexOf(en) !== -1){
+    return prefix + hi;
+  }
+  if(mode === 'en') return prefix + en;
+  if(mode === 'hi') return prefix + hi;
+  return prefix + hi + '<br><span style="color:var(--tx2);font-size:0.86em;font-weight:500;display:inline-block;margin-top:3px;">' + en + '</span>';
+}
+function formatBilingualOpt(q, idx){
+  var optsHi = q.options || q.o || [];
+  var optsEn = q.options_en || [];
+  var hi = (optsHi[idx] || '').trim();
+  var en = (optsEn[idx] || '').trim();
+  var mode = getDisplayMode();
+  if(q._sub === 'english' || !en || hi === en || hi.indexOf(en) !== -1){
+    return hi;
+  }
+  if(mode === 'en') return en;
+  if(mode === 'hi') return hi;
+  return hi + ' / ' + en;
+}
+function saveMistakeBank(wrongItems){
+  if(!wrongItems || !wrongItems.length) return;
+  try{
+    var key = (typeof uKey === 'function') ? uKey('pnst_mistakes') : 'pnst_mistakes';
+    var existing = JSON.parse(localStorage.getItem(key) || '[]');
+    var seen = {};
+    existing.forEach(function(it){ seen[(it.q_en || it.q || '').trim()] = true; });
+    wrongItems.forEach(function(it){
+      var sig = (it.q_en || it.q || '').trim();
+      if(sig && !seen[sig]){
+        seen[sig] = true;
+        existing.unshift(it);
+      }
+    });
+    if(existing.length > 300) existing = existing.slice(0, 300);
+    localStorage.setItem(key, JSON.stringify(existing));
+  }catch(e){}
+}
+if(!window._pnstKeyListenerAdded){
+  window._pnstKeyListenerAdded = true;
+  document.addEventListener('keydown', function(ev){
+    var qa = $('qArea');
+    if(!qa || !qa.innerHTML || !qa.innerHTML.trim()) return;
+    if(ev.target && ['INPUT','TEXTAREA','SELECT'].indexOf(ev.target.tagName) !== -1) return;
+    var k = ev.key;
+    if(['1','2','3','4'].indexOf(k) !== -1 && typeof selAns === 'function'){
+      selAns(parseInt(k,10)-1);
+    }else if(['a','b','c','d','A','B','C','D'].indexOf(k) !== -1 && typeof selAns === 'function'){
+      var mapL = {'a':0,'A':0,'b':1,'B':1,'c':2,'C':2,'d':3,'D':3};
+      selAns(mapL[k]);
+    }else if((k === 'ArrowRight' || k === 'n' || k === 'N') && typeof goQ === 'function'){
+      goQ(1);
+    }else if((k === 'ArrowLeft' || k === 'p' || k === 'P') && typeof goQ === 'function'){
+      goQ(-1);
+    }
+  });
 }
 
 /* SECTION 17: AI ENGINE */
@@ -2196,7 +2310,7 @@ function toggleReview(){
       else if(iC){bg2='rgba(34,197,94,.14)';brd='#16a34a';tc='#22c55e';dot='background:#16a34a;border-color:#16a34a;color:#fff';}
       else if(iU){bg2='rgba(239,68,68,.14)';brd='#dc2626';tc='#ef4444';dot='background:#dc2626;border-color:#dc2626;color:#fff';}
       else{bg2='rgba(255,255,255,.03)';brd='transparent';tc='var(--tx2)';dot='';}
-      optsHtml+='<div style="display:flex;align-items:flex-start;gap:9px;padding:9px 12px;background:'+bg2+';border-radius:9px;border:1.5px solid '+brd+';margin-bottom:6px;font-size:.84rem;color:'+tc+'"><div style="width:22px;height:22px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:800;flex-shrink:0;'+dot+'">'+ltrs[j]+'</div><span>'+o+'</span>'+(iC?'<span style="margin-left:auto;font-size:.7rem;color:#22c55e;font-weight:700;flex-shrink:0">✅ Correct</span>':'')+(iU&&!iC?'<span style="margin-left:auto;font-size:.7rem;color:#ef4444;font-weight:700;flex-shrink:0">❌ Your Ans</span>':'')+'</div>';
+      optsHtml+='<div style="display:flex;align-items:flex-start;gap:9px;padding:9px 12px;background:'+bg2+';border-radius:9px;border:1.5px solid '+brd+';margin-bottom:6px;font-size:.84rem;color:'+tc+'"><div style="width:22px;height:22px;border-radius:50%;border:2px solid var(--card-border);display:flex;align-items:center;justify-content:center;font-size:.67rem;font-weight:800;flex-shrink:0;'+dot+'">'+ltrs[j]+'</div><span>'+formatBilingualOpt(q,j)+'</span>'+(iC?'<span style="margin-left:auto;font-size:.7rem;color:#22c55e;font-weight:700;flex-shrink:0">✅ Correct</span>':'')+(iU&&!iC?'<span style="margin-left:auto;font-size:.7rem;color:#ef4444;font-weight:700;flex-shrink:0">❌ Your Ans</span>':'')+'</div>';
     });
     // Voice + AI buttons for review
     var reviewBtns='<div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px">'
